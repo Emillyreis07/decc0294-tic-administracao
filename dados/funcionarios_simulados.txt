@@ -1,0 +1,323 @@
+SIMULACAO DE DADOS DE RECURSOS HUMANOS - 40 FUNCIONARIOS
+====================================================================================================
+
+ID: 1 | Nome: Ana Beatriz Souza | Idade: 28
+Funcao atual: Assistente Administrativo (Administrativa)
+Formacao: Administração | Experiencia: 4 anos
+Perfil profissional: Organizada, metódica, boa comunicação escrita
+Competencias: Excel avançado / organização / atendimento
+Area mais adequada: Administrativa
+Motivo: Perfil operacional-organizatcional forte, rende melhor em rotinas e processos
+----------------------------------------------------------------------------------------------------
+ID: 2 | Nome: Carlos Eduardo Lima | Idade: 35
+Funcao atual: Analista Financeiro Jr (Financeira)
+Formacao: Ciências Contábeis | Experiencia: 7 anos
+Perfil profissional: Analítico, detalhista, avesso a risco
+Competencias: Contabilidade / conciliação / ERP
+Area mais adequada: Financeira
+Motivo: Formação e experiência alinhadas à função atual
+----------------------------------------------------------------------------------------------------
+ID: 3 | Nome: Fernanda Oliveira | Idade: 26
+Funcao atual: Vendedora Interna (Comercial)
+Formacao: Marketing | Experiencia: 3 anos
+Perfil profissional: Comunicativa, persuasiva, orientada a meta
+Competencias: Negociação / CRM / prospecção
+Area mais adequada: Comercial/Vendas
+Motivo: Alta sociabilidade e foco em resultado
+----------------------------------------------------------------------------------------------------
+ID: 4 | Nome: João Pedro Santos | Idade: 41
+Funcao atual: Coordenador de Logística (Operações)
+Formacao: Logística | Experiencia: 14 anos
+Perfil profissional: Prático, liderança operacional, resolve problemas
+Competencias: Gestão de frota / estoque / liderança
+Area mais adequada: Operações/Logística
+Motivo: Experiência sólida e perfil de campo
+----------------------------------------------------------------------------------------------------
+ID: 5 | Nome: Mariana Costa | Idade: 30
+Funcao atual: Analista de RH (Recursos Humanos)
+Formacao: Psicologia | Experiencia: 6 anos
+Perfil profissional: Empática, discreta, mediadora
+Competencias: Recrutamento / avaliação / legislação
+Area mais adequada: Recursos Humanos
+Motivo: Formação e perfil interpessoal adequados
+----------------------------------------------------------------------------------------------------
+ID: 6 | Nome: Rafael Almeida | Idade: 29
+Funcao atual: Suporte de TI (TI)
+Formacao: Sistemas de Informação | Experiencia: 5 anos
+Perfil profissional: Técnico, lógico, paciente
+Competencias: Redes / helpdesk / SQL básico
+Area mais adequada: TI/Sistemas
+Motivo: Perfil técnico e formação na área
+----------------------------------------------------------------------------------------------------
+ID: 7 | Nome: Patrícia Gomes | Idade: 38
+Funcao atual: Assistente Jurídico (Administrativa)
+Formacao: Direito (incompleto) | Experiencia: 9 anos
+Perfil profissional: Cautelosa, normativa, atenta a prazos
+Competencias: Contratos / prazos / redação oficial
+Area mais adequada: Jurídico/Compliance
+Motivo: Perfil normativo, melhor aproveitada em compliance
+----------------------------------------------------------------------------------------------------
+ID: 8 | Nome: Thiago Ferreira | Idade: 24
+Funcao atual: Auxiliar de Marketing (Marketing)
+Formacao: Publicidade | Experiencia: 2 anos
+Perfil profissional: Criativo, antenado, visual
+Competencias: Redes sociais / Canva / copy
+Area mais adequada: Marketing
+Motivo: Perfil criativo puro
+----------------------------------------------------------------------------------------------------
+ID: 9 | Nome: Luciana Ribeiro | Idade: 45
+Funcao atual: Gerente Financeira (Financeira)
+Formacao: Administração + MBA Finanças | Experiencia: 18 anos
+Perfil profissional: Liderança, visão estratégica, controle
+Competencias: Orçamento / fluxo de caixa / liderança
+Area mais adequada: Financeira
+Motivo: Experiência e liderança financeira
+----------------------------------------------------------------------------------------------------
+ID: 10 | Nome: Diego Martins | Idade: 32
+Funcao atual: Analista de Dados (TI)
+Formacao: Engenharia de Produção | Experiencia: 8 anos
+Perfil profissional: Analítico, curioso, data-driven
+Competencias: Python / Power BI / estatística
+Area mais adequada: TI/Sistemas
+Motivo: Perfil analítico-técnico
+----------------------------------------------------------------------------------------------------
+ID: 11 | Nome: Camila Rodrigues | Idade: 27
+Funcao atual: Atendente Comercial (Comercial)
+Formacao: Administração | Experiencia: 4 anos
+Perfil profissional: Simpática, ágil, resiliente
+Competencias: Atendimento / pós-venda / sistema
+Area mais adequada: Comercial/Vendas
+Motivo: Perfil relacional e de atendimento
+----------------------------------------------------------------------------------------------------
+ID: 12 | Nome: Bruno Carvalho | Idade: 36
+Funcao atual: Comprador (Administrativa)
+Formacao: Logística | Experiencia: 10 anos
+Perfil profissional: Negociador, controlado, organizado
+Competencias: Cotação / fornecedores / ERP
+Area mais adequada: Operações/Logística
+Motivo: Melhor em cadeia de suprimentos que em rotina administrativa
+----------------------------------------------------------------------------------------------------
+ID: 13 | Nome: Aline Pereira | Idade: 31
+Funcao atual: Analista Contábil (Financeira)
+Formacao: Ciências Contábeis | Experiencia: 7 anos
+Perfil profissional: Detalhista, metódica, confiável
+Competencias: Fiscal / SPED / conciliação
+Area mais adequada: Financeira
+Motivo: Perfil contábil clássico
+----------------------------------------------------------------------------------------------------
+ID: 14 | Nome: Gustavo Henrique | Idade: 29
+Funcao atual: Representante Externo (Comercial)
+Formacao: Gestão Comercial | Experiencia: 6 anos
+Perfil profissional: Extrovertido, persistente, autônomo
+Competencias: Visita / meta / roteirização
+Area mais adequada: Comercial/Vendas
+Motivo: Perfil de campo e meta
+----------------------------------------------------------------------------------------------------
+ID: 15 | Nome: Beatriz Lima | Idade: 25
+Funcao atual: Estagiária de RH (Recursos Humanos)
+Formacao: Psicologia (cursando) | Experiencia: 1 anos
+Perfil profissional: Aprendiz rápida, acolhedora, organizada
+Competencias: Triagem / planilhas / eventos
+Area mais adequada: Recursos Humanos
+Motivo: Em formação, manter em RH para desenvolvimento
+----------------------------------------------------------------------------------------------------
+ID: 16 | Nome: Felipe Barbosa | Idade: 40
+Funcao atual: Técnico de Infraestrutura (TI)
+Formacao: Redes de Computadores | Experiencia: 15 anos
+Perfil profissional: Operacional, preventivo, hands-on
+Competencias: Servidores / backup / segurança
+Area mais adequada: TI/Sistemas
+Motivo: Perfil operacional de TI
+----------------------------------------------------------------------------------------------------
+ID: 17 | Nome: Vanessa Dias | Idade: 33
+Funcao atual: Analista de Marketing Digital (Marketing)
+Formacao: Marketing Digital | Experiencia: 7 anos
+Perfil profissional: Criativa-analítica, orientada a dados
+Competencias: Tráfego / SEO / analytics
+Area mais adequada: Marketing
+Motivo: Combina criatividade e análise
+----------------------------------------------------------------------------------------------------
+ID: 18 | Nome: Ricardo Nogueira | Idade: 47
+Funcao atual: Supervisor Administrativo (Administrativa)
+Formacao: Administração | Experiencia: 20 anos
+Perfil profissional: Centralizador, experiente, processual
+Competencias: Processos / contratos / equipe
+Area mais adequada: Administrativa
+Motivo: Perfil generalista administrativo
+----------------------------------------------------------------------------------------------------
+ID: 19 | Nome: Juliana Moreira | Idade: 29
+Funcao atual: Analista de Crédito (Financeira)
+Formacao: Economia | Experiencia: 5 anos
+Perfil profissional: Criteriosa, numérica, prudente
+Competencias: Análise de crédito / risco / Excel
+Area mais adequada: Financeira
+Motivo: Perfil de risco/crédito
+----------------------------------------------------------------------------------------------------
+ID: 20 | Nome: Paulo César | Idade: 52
+Funcao atual: Motorista Entregador (Operações)
+Formacao: Ensino Médio | Experiencia: 22 anos
+Perfil profissional: Pontual, responsável, prático
+Competencias: Rota / direção defensiva / carga
+Area mais adequada: Operações/Logística
+Motivo: Perfil operacional de campo
+----------------------------------------------------------------------------------------------------
+ID: 21 | Nome: Renata Castro | Idade: 34
+Funcao atual: Psicóloga Organizacional (Recursos Humanos)
+Formacao: Psicologia + Esp. Organizacional | Experiencia: 9 anos
+Perfil profissional: Escuta ativa, ética, desenvolvedora
+Competencias: Clima / T&D / avaliação
+Area mais adequada: Recursos Humanos
+Motivo: Perfil técnico de RH
+----------------------------------------------------------------------------------------------------
+ID: 22 | Nome: Lucas Fernandes | Idade: 27
+Funcao atual: Desenvolvedor Jr (TI)
+Formacao: Análise e Desenvolvimento de Sistemas | Experiencia: 4 anos
+Perfil profissional: Lógico, autodidata, focado
+Competencias: Python / APIs / Git
+Area mais adequada: TI/Sistemas
+Motivo: Perfil dev puro
+----------------------------------------------------------------------------------------------------
+ID: 23 | Nome: Tatiane Rocha | Idade: 39
+Funcao atual: Advogada Corporativa (Administrativa)
+Formacao: Direito + OAB | Experiencia: 12 anos
+Perfil profissional: Argumentativa, normativa, estratégica
+Competencias: Contratos / trabalhista / compliance
+Area mais adequada: Jurídico/Compliance
+Motivo: Formação jurídica, realocar formalmente
+----------------------------------------------------------------------------------------------------
+ID: 24 | Nome: Marcos Vinícius | Idade: 30
+Funcao atual: Social Media (Marketing)
+Formacao: Comunicação Social | Experiencia: 5 anos
+Perfil profissional: Descontraído, criativo, trend
+Competencias: Instagram / TikTok / edição vídeo
+Area mais adequada: Marketing
+Motivo: Perfil criador de conteúdo
+----------------------------------------------------------------------------------------------------
+ID: 25 | Nome: Daniela Teixeira | Idade: 42
+Funcao atual: Coordenadora de Vendas (Comercial)
+Formacao: Administração | Experiencia: 16 anos
+Perfil profissional: Líder, competitiva, orientada a resultado
+Competencias: Gestão de equipe / funil / meta
+Area mais adequada: Comercial/Vendas
+Motivo: Liderança comercial comprovada
+----------------------------------------------------------------------------------------------------
+ID: 26 | Nome: Eduardo Silva | Idade: 37
+Funcao atual: Contador (Financeira)
+Formacao: Ciências Contábeis + CRC | Experiencia: 13 anos
+Perfil profissional: Rigoroso, ético, normativo
+Competencias: Balanço / IR / auditoria
+Area mais adequada: Financeira
+Motivo: Perfil contábil sênior
+----------------------------------------------------------------------------------------------------
+ID: 27 | Nome: Priscila Moura | Idade: 26
+Funcao atual: Recepcionista (Administrativa)
+Formacao: Secretariado | Experiencia: 3 anos
+Perfil profissional: Cordial, organizada, multitarefa
+Competencias: Atendimento / agenda / telefone
+Area mais adequada: Administrativa
+Motivo: Perfil de apoio e acolhimento
+----------------------------------------------------------------------------------------------------
+ID: 28 | Nome: Rodrigo Correia | Idade: 33
+Funcao atual: Analista de Logística (Operações)
+Formacao: Engenharia de Produção | Experiencia: 8 anos
+Perfil profissional: Processual, analítico, sistêmico
+Competencias: WMS / roteirização / KPI
+Area mais adequada: Operações/Logística
+Motivo: Perfil de processos logísticos
+----------------------------------------------------------------------------------------------------
+ID: 29 | Nome: Sabrina Freitas | Idade: 28
+Funcao atual: Assistente de DP (Recursos Humanos)
+Formacao: Gestão de RH | Experiencia: 5 anos
+Perfil profissional: Detalhista, confidencial, rotineira
+Competencias: Folha / eSocial / benefícios
+Area mais adequada: Recursos Humanos
+Motivo: Perfil de departamento pessoal
+----------------------------------------------------------------------------------------------------
+ID: 30 | Nome: André Luiz | Idade: 31
+Funcao atual: Analista de Suporte Sênior (TI)
+Formacao: Sistemas de Informação | Experiencia: 9 anos
+Perfil profissional: Solucionador, didático, calmo
+Competencias: Linx / ERP / treinamento
+Area mais adequada: TI/Sistemas
+Motivo: Perfil suporte/ERP, ponte TI-usuário
+----------------------------------------------------------------------------------------------------
+ID: 31 | Nome: Larissa Mendes | Idade: 24
+Funcao atual: Auxiliar Financeiro (Financeira)
+Formacao: Administração (cursando) | Experiencia: 2 anos
+Perfil profissional: Organizada, aprendiz, pontual
+Competencias: Contas a pagar / planilha / arquivo
+Area mais adequada: Financeira
+Motivo: Em formação financeira, manter com tutoria
+----------------------------------------------------------------------------------------------------
+ID: 32 | Nome: Igor Santana | Idade: 35
+Funcao atual: Gerente de Operações (Operações)
+Formacao: Engenharia + MBA Logística | Experiencia: 12 anos
+Perfil profissional: Decisivo, liderança forte, pressão
+Competencias: Lean / KPI / gestão turno
+Area mais adequada: Operações/Logística
+Motivo: Liderança operacional
+----------------------------------------------------------------------------------------------------
+ID: 33 | Nome: Natália Vieira | Idade: 30
+Funcao atual: Designer Gráfico (Marketing)
+Formacao: Design Gráfico | Experiencia: 6 anos
+Perfil profissional: Visual, detalhista, criativa
+Competencias: Photoshop / Illustrator / branding
+Area mais adequada: Marketing
+Motivo: Perfil criação
+----------------------------------------------------------------------------------------------------
+ID: 34 | Nome: Otávio Reis | Idade: 44
+Funcao atual: Consultor Jurídico Externo (Administrativa)
+Formacao: Direito + MBA Tributário | Experiencia: 18 anos
+Perfil profissional: Técnico, formal, consultivo
+Competencias: Parecer / tributário / contratos
+Area mais adequada: Jurídico/Compliance
+Motivo: Atuação jurídica especializada
+----------------------------------------------------------------------------------------------------
+ID: 35 | Nome: Cristina Barros | Idade: 37
+Funcao atual: Analista de Treinamento (Recursos Humanos)
+Formacao: Pedagogia | Experiencia: 10 anos
+Perfil profissional: Didática, paciente, comunicativa
+Competencias: Capacitação / onboarding / EAD
+Area mais adequada: Recursos Humanos
+Motivo: Perfil educador corporativo
+----------------------------------------------------------------------------------------------------
+ID: 36 | Nome: Hugo Pinto | Idade: 28
+Funcao atual: Vendedor E-commerce (Comercial)
+Formacao: Logística (cursando) | Experiencia: 4 anos
+Perfil profissional: Digital, ágil, analítico
+Competencias: Marketplace / pós-venda / Excel
+Area mais adequada: Comercial/Vendas
+Motivo: Mas com viés digital, ponte com Operações
+----------------------------------------------------------------------------------------------------
+ID: 37 | Nome: Débora Nunes | Idade: 33
+Funcao atual: Analista de Compliance (Administrativa)
+Formacao: Direito | Experiencia: 7 anos
+Perfil profissional: Ética, investigativa, normativa
+Competencias: LGPD / auditoria / normas
+Area mais adequada: Jurídico/Compliance
+Motivo: Perfil compliance puro
+----------------------------------------------------------------------------------------------------
+ID: 38 | Nome: Sérgio Cardoso | Idade: 46
+Funcao atual: Encarregado de Almoxarifado (Operações)
+Formacao: Ensino Médio + Tec. Logística | Experiencia: 19 anos
+Perfil profissional: Disciplinado, físico, controle
+Competencias: Estoque / inventário / empilhadeira
+Area mais adequada: Operações/Logística
+Motivo: Perfil operacional de estoque
+----------------------------------------------------------------------------------------------------
+ID: 39 | Nome: Letícia Fonseca | Idade: 27
+Funcao atual: Analista de BI (TI)
+Formacao: Estatística | Experiencia: 5 anos
+Perfil profissional: Curiosa, visual, storytelling
+Competencias: Power BI / SQL / DAX
+Area mais adequada: TI/Sistemas
+Motivo: Mas com forte aplicação em Marketing/Comercial
+----------------------------------------------------------------------------------------------------
+ID: 40 | Nome: Alexandre Pires | Idade: 39
+Funcao atual: Gerente Administrativo (Administrativa)
+Formacao: Administração + MBA Gestão | Experiencia: 15 anos
+Perfil profissional: Generalista, mediador, planejador
+Competencias: Planejamento / orçamento / equipe
+Area mais adequada: Administrativa
+Motivo: Liderança generalista
+----------------------------------------------------------------------------------------------------

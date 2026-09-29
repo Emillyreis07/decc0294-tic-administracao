@@ -1,0 +1,41 @@
+﻿id;nome;idade;funcao_atual;area_atual;formacao;tempo_experiencia_anos;perfil_profissional;competencias_chave;area_mais_adequada;motivo
+1;Ana Beatriz Souza;28;Assistente Administrativo;Administrativa;Administração;4;Organizada, metódica, boa comunicação escrita;Excel avançado / organização / atendimento;Administrativa;Perfil operacional-organizatcional forte, rende melhor em rotinas e processos
+2;Carlos Eduardo Lima;35;Analista Financeiro Jr;Financeira;Ciências Contábeis;7;Analítico, detalhista, avesso a risco;Contabilidade / conciliação / ERP;Financeira;Formação e experiência alinhadas à função atual
+3;Fernanda Oliveira;26;Vendedora Interna;Comercial;Marketing;3;Comunicativa, persuasiva, orientada a meta;Negociação / CRM / prospecção;Comercial/Vendas;Alta sociabilidade e foco em resultado
+4;João Pedro Santos;41;Coordenador de Logística;Operações;Logística;14;Prático, liderança operacional, resolve problemas;Gestão de frota / estoque / liderança;Operações/Logística;Experiência sólida e perfil de campo
+5;Mariana Costa;30;Analista de RH;Recursos Humanos;Psicologia;6;Empática, discreta, mediadora;Recrutamento / avaliação / legislação;Recursos Humanos;Formação e perfil interpessoal adequados
+6;Rafael Almeida;29;Suporte de TI;TI;Sistemas de Informação;5;Técnico, lógico, paciente;Redes / helpdesk / SQL básico;TI/Sistemas;Perfil técnico e formação na área
+7;Patrícia Gomes;38;Assistente Jurídico;Administrativa;Direito (incompleto);9;Cautelosa, normativa, atenta a prazos;Contratos / prazos / redação oficial;Jurídico/Compliance;Perfil normativo, melhor aproveitada em compliance
+8;Thiago Ferreira;24;Auxiliar de Marketing;Marketing;Publicidade;2;Criativo, antenado, visual;Redes sociais / Canva / copy;Marketing;Perfil criativo puro
+9;Luciana Ribeiro;45;Gerente Financeira;Financeira;Administração + MBA Finanças;18;Liderança, visão estratégica, controle;Orçamento / fluxo de caixa / liderança;Financeira;Experiência e liderança financeira
+10;Diego Martins;32;Analista de Dados;TI;Engenharia de Produção;8;Analítico, curioso, data-driven;Python / Power BI / estatística;TI/Sistemas;Perfil analítico-técnico
+11;Camila Rodrigues;27;Atendente Comercial;Comercial;Administração;4;Simpática, ágil, resiliente;Atendimento / pós-venda / sistema;Comercial/Vendas;Perfil relacional e de atendimento
+12;Bruno Carvalho;36;Comprador;Administrativa;Logística;10;Negociador, controlado, organizado;Cotação / fornecedores / ERP;Operações/Logística;Melhor em cadeia de suprimentos que em rotina administrativa
+13;Aline Pereira;31;Analista Contábil;Financeira;Ciências Contábeis;7;Detalhista, metódica, confiável;Fiscal / SPED / conciliação;Financeira;Perfil contábil clássico
+14;Gustavo Henrique;29;Representante Externo;Comercial;Gestão Comercial;6;Extrovertido, persistente, autônomo;Visita / meta / roteirização;Comercial/Vendas;Perfil de campo e meta
+15;Beatriz Lima;25;Estagiária de RH;Recursos Humanos;Psicologia (cursando);1;Aprendiz rápida, acolhedora, organizada;Triagem / planilhas / eventos;Recursos Humanos;Em formação, manter em RH para desenvolvimento
+16;Felipe Barbosa;40;Técnico de Infraestrutura;TI;Redes de Computadores;15;Operacional, preventivo, hands-on;Servidores / backup / segurança;TI/Sistemas;Perfil operacional de TI
+17;Vanessa Dias;33;Analista de Marketing Digital;Marketing;Marketing Digital;7;Criativa-analítica, orientada a dados;Tráfego / SEO / analytics;Marketing;Combina criatividade e análise
+18;Ricardo Nogueira;47;Supervisor Administrativo;Administrativa;Administração;20;Centralizador, experiente, processual;Processos / contratos / equipe;Administrativa;Perfil generalista administrativo
+19;Juliana Moreira;29;Analista de Crédito;Financeira;Economia;5;Criteriosa, numérica, prudente;Análise de crédito / risco / Excel;Financeira;Perfil de risco/crédito
+20;Paulo César;52;Motorista Entregador;Operações;Ensino Médio;22;Pontual, responsável, prático;Rota / direção defensiva / carga;Operações/Logística;Perfil operacional de campo
+21;Renata Castro;34;Psicóloga Organizacional;Recursos Humanos;Psicologia + Esp. Organizacional;9;Escuta ativa, ética, desenvolvedora;Clima / T&D / avaliação;Recursos Humanos;Perfil técnico de RH
+22;Lucas Fernandes;27;Desenvolvedor Jr;TI;Análise e Desenvolvimento de Sistemas;4;Lógico, autodidata, focado;Python / APIs / Git;TI/Sistemas;Perfil dev puro
+23;Tatiane Rocha;39;Advogada Corporativa;Administrativa;Direito + OAB;12;Argumentativa, normativa, estratégica;Contratos / trabalhista / compliance;Jurídico/Compliance;Formação jurídica, realocar formalmente
+24;Marcos Vinícius;30;Social Media;Marketing;Comunicação Social;5;Descontraído, criativo, trend;Instagram / TikTok / edição vídeo;Marketing;Perfil criador de conteúdo
+25;Daniela Teixeira;42;Coordenadora de Vendas;Comercial;Administração;16;Líder, competitiva, orientada a resultado;Gestão de equipe / funil / meta;Comercial/Vendas;Liderança comercial comprovada
+26;Eduardo Silva;37;Contador;Financeira;Ciências Contábeis + CRC;13;Rigoroso, ético, normativo;Balanço / IR / auditoria;Financeira;Perfil contábil sênior
+27;Priscila Moura;26;Recepcionista;Administrativa;Secretariado;3;Cordial, organizada, multitarefa;Atendimento / agenda / telefone;Administrativa;Perfil de apoio e acolhimento
+28;Rodrigo Correia;33;Analista de Logística;Operações;Engenharia de Produção;8;Processual, analítico, sistêmico;WMS / roteirização / KPI;Operações/Logística;Perfil de processos logísticos
+29;Sabrina Freitas;28;Assistente de DP;Recursos Humanos;Gestão de RH;5;Detalhista, confidencial, rotineira;Folha / eSocial / benefícios;Recursos Humanos;Perfil de departamento pessoal
+30;André Luiz;31;Analista de Suporte Sênior;TI;Sistemas de Informação;9;Solucionador, didático, calmo;Linx / ERP / treinamento;TI/Sistemas;Perfil suporte/ERP, ponte TI-usuário
+31;Larissa Mendes;24;Auxiliar Financeiro;Financeira;Administração (cursando);2;Organizada, aprendiz, pontual;Contas a pagar / planilha / arquivo;Financeira;Em formação financeira, manter com tutoria
+32;Igor Santana;35;Gerente de Operações;Operações;Engenharia + MBA Logística;12;Decisivo, liderança forte, pressão;Lean / KPI / gestão turno;Operações/Logística;Liderança operacional
+33;Natália Vieira;30;Designer Gráfico;Marketing;Design Gráfico;6;Visual, detalhista, criativa;Photoshop / Illustrator / branding;Marketing;Perfil criação
+34;Otávio Reis;44;Consultor Jurídico Externo;Administrativa;Direito + MBA Tributário;18;Técnico, formal, consultivo;Parecer / tributário / contratos;Jurídico/Compliance;Atuação jurídica especializada
+35;Cristina Barros;37;Analista de Treinamento;Recursos Humanos;Pedagogia;10;Didática, paciente, comunicativa;Capacitação / onboarding / EAD;Recursos Humanos;Perfil educador corporativo
+36;Hugo Pinto;28;Vendedor E-commerce;Comercial;Logística (cursando);4;Digital, ágil, analítico;Marketplace / pós-venda / Excel;Comercial/Vendas;Mas com viés digital, ponte com Operações
+37;Débora Nunes;33;Analista de Compliance;Administrativa;Direito;7;Ética, investigativa, normativa;LGPD / auditoria / normas;Jurídico/Compliance;Perfil compliance puro
+38;Sérgio Cardoso;46;Encarregado de Almoxarifado;Operações;Ensino Médio + Tec. Logística;19;Disciplinado, físico, controle;Estoque / inventário / empilhadeira;Operações/Logística;Perfil operacional de estoque
+39;Letícia Fonseca;27;Analista de BI;TI;Estatística;5;Curiosa, visual, storytelling;Power BI / SQL / DAX;TI/Sistemas;Mas com forte aplicação em Marketing/Comercial
+40;Alexandre Pires;39;Gerente Administrativo;Administrativa;Administração + MBA Gestão;15;Generalista, mediador, planejador;Planejamento / orçamento / equipe;Administrativa;Liderança generalista

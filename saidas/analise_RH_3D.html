@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RH 40 Funcionarios · Analise 3D Interativa · DECC0294 UFMA</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<style>
+:root{--vinho:#8D0333;--dourado:#D4B277;--teal:#0AB0AB;--amarelo:#FEC84D;--txt:#1A1A1A;--body:#333;--muted:#6B6B6B;--card:#F5F5F5;--linha:#E2E2E2}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--body);font-family:"Segoe UI",Calibri,system-ui,sans-serif;font-size:16px;line-height:1.55}
+.barra{height:14px;background:var(--vinho)}
+.capa{background:var(--vinho);color:#fff;padding:40px 28px 30px}
+.dentro{max-width:1120px;margin:0 auto}
+.capa .cod{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--dourado);font-weight:600;margin:0 0 10px}
+.capa h1{font-size:32px;margin:0 0 10px}
+.capa p{margin:0;color:#F2E4E9;max-width:78ch}
+.filete{height:4px;background:var(--dourado)}
+main{max-width:1120px;margin:0 auto;padding:28px 28px 60px}
+h2{color:var(--vinho);font-size:22px;margin:36px 0 6px}
+.sub{color:var(--muted);margin:0 0 16px;font-size:15px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:18px 0}
+.kpi{border:1px solid var(--linha);border-top:4px solid var(--dourado);background:var(--card);border-radius:4px;padding:12px 14px}
+.kpi b{font-size:26px;color:var(--vinho);display:block;line-height:1.1}
+.kpi span{font-size:13px;color:var(--muted)}
+.controles{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.btn{border:1px solid var(--vinho);background:#fff;color:var(--vinho);font-weight:700;font-size:14px;padding:8px 14px;border-radius:20px;cursor:pointer}
+.btn.ativo,.btn:hover{background:var(--vinho);color:#fff}
+#wrap3d{position:relative;border:1px solid var(--linha);border-radius:6px;overflow:hidden;background:#111}
+#c3d{width:100%;height:480px;display:block;cursor:grab}
+#tip{position:absolute;pointer-events:none;background:#fff;border:1px solid var(--linha);border-left:4px solid var(--dourado);padding:8px 12px;font-size:13px;border-radius:4px;display:none;max-width:260px;box-shadow:0 4px 16px rgba(0,0,0,.25);z-index:5}
+#legenda{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0;font-size:13px;color:var(--muted)}
+.dot{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:5px;vertical-align:baseline}
+.filtros{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+.filtros input,.filtros select{font-size:15px;padding:8px 12px;border:1px solid var(--linha);border-radius:4px;min-width:220px}
+table{border-collapse:collapse;width:100%;font-size:14px;margin:12px 0}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--linha);vertical-align:top}
+th{color:var(--vinho);font-size:12px;letter-spacing:.06em;text-transform:uppercase;position:sticky;top:0;background:#fff}
+tr.desalinhada td{background:#FFF6E5}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 8px;border-radius:10px;background:#eee}
+.tag.ok{background:#DFF5E6;color:#0B6B2E}.tag.off{background:#FDE2C8;color:#8A3B00}
+.cx{border:1px solid var(--linha);border-left:4px solid var(--teal);background:var(--card);padding:14px 18px;border-radius:3px;margin:16px 0}
+footer{border-top:1px solid var(--linha);margin-top:40px;padding:20px 28px 40px;color:var(--muted);font-size:14px}
+@media(max-width:640px){.capa h1{font-size:24px}#c3d{height:360px}}
+</style>
+</head>
+<body>
+<div class="barra"></div>
+<header class="capa"><div class="dentro">
+<p class="cod">DECC0294 · 2026.2 · Administração · UFMA</p>
+<h1>RH em 3D — 40 funcionários, função, perfil e área ideal</h1>
+<p>Arraste para orbitar · scroll para zoom · passe o mouse nas barras para detalhes · clique numa barra para filtrar a tabela. Dados simulados de <code>dados/funcionarios_simulados_organizado.csv</code>.</p>
+</div></header>
+<div class="filete"></div>
+<main>
+<h2>Visão geral</h2>
+<p class="sub">Números calculados do CSV real. Nenhum dado externo.</p>
+<div class="kpis">
+<div class="kpi"><b>40</b><span>funcionários simulados</span></div>
+<div class="kpi"><b>33,7 anos</b><span>idade média · mediana 32,5 · 24–52</span></div>
+<div class="kpi"><b>8,9 anos</b><span>experiência média · mediana 7,0 · 1–22</span></div>
+<div class="kpi"><b>87,5%</b><span>aderência (35/40 já na área ideal)</span></div>
+<div class="kpi"><b>5</b><span>desalinhados, todos no Administrativo</span></div>
+</div>
+
+<h2>Gráfico 3D interativo (Three.js)</h2>
+<p class="sub" id="metricaLabel">Métrica: headcount ideal por área — altura = nº de pessoas.</p>
+<div class="controles">
+<button class="btn ativo" data-m="n">Headcount ideal</button>
+<button class="btn" data-m="idade">Idade média</button>
+<button class="btn" data-m="exp">Experiência média</button>
+<button class="btn" id="btnGiro">Pausar giro</button>
+<button class="btn" id="btnReset">Resetar câmera</button>
+</div>
+<div id="wrap3d"><canvas id="c3d"></canvas><div id="tip"></div></div>
+<div id="legenda"></div>
+<div class="cx"><p><b>Leitura:</b> Operações/Logística tem o perfil mais sênior (40,5 anos · 14,2 de experiência). Marketing é o mais jovem (29,2 · 5,0). O Jurídico/Compliance não existe como lotação atual — as 4 pessoas estão formalmente no Administrativo. É um problema de desenho organizacional, não de desempenho.</p></div>
+
+<h2>Tabela interativa — clique na barra 3D para filtrar</h2>
+<div class="filtros">
+<input id="busca" placeholder="Buscar nome, função, perfil...">
+<select id="fArea"><option value="">Todas as áreas ideais</option></select>
+<select id="fAd"><option value="">Todos (aderentes + desalinhados)</option><option value="ok">Só aderentes</option><option value="off">Só desalinhados</option></select>
+<button class="btn" id="limpar">Limpar</button>
+</div>
+<p class="sub" id="cont">40 registros</p>
+<div style="overflow:auto;max-height:520px;border:1px solid var(--linha);border-radius:6px">
+<table><thead><tr><th>Nome</th><th>Função atual</th><th>Perfil</th><th>Área atual</th><th>Área ideal</th><th>Status</th></tr></thead><tbody id="tb"></tbody></table>
+</div>
+
+<h2>Os 5 desalinhados</h2>
+<p class="sub">Todos lotados no Administrativo. Realocação sugerida zera o desalinhamento sem desligamentos.</p>
+<table><thead><tr><th>Nome</th><th>Função</th><th>Área ideal</th></tr></thead><tbody>
+<tr><td>Patrícia Gomes</td><td>Assistente Jurídico</td><td>Jurídico/Compliance</td></tr>
+<tr><td>Tatiane Rocha</td><td>Advogada Corporativa</td><td>Jurídico/Compliance</td></tr>
+<tr><td>Débora Nunes</td><td>Analista de Compliance</td><td>Jurídico/Compliance</td></tr>
+<tr><td>Otávio Reis</td><td>Consultor Jurídico Externo</td><td>Jurídico/Compliance</td></tr>
+<tr><td>Bruno Carvalho</td><td>Comprador</td><td>Operações/Logística</td></tr>
+</tbody></table>
+<div class="cx"><p><b>Limitação:</b> dados simulados e fictícios, para exercício didático. Área ideal atribuída por regra perfil + formação, sem teste validado nem dados de desempenho/salário.</p></div>
+</main>
+<footer><div class="dentro">Fonte: <code>dados/funcionarios_simulados_organizado.csv</code> · Análise completa em <code>saidas/analise_descritiva_RH.docx</code> · Gerado em 29/09/2026 · Three.js r128 via CDN.</div></footer>
+
+<script>
+const AREAS=[
+{n:"Administrativa",cor:0x8D0333,nIdeal:4,nAtual:9,idade:35.0,exp:10.5},
+{n:"Comercial/Vendas",cor:0x0AB0AB,nIdeal:5,nAtual:5,idade:30.4,exp:6.6},
+{n:"Financeira",cor:0xD4B277,nIdeal:6,nAtual:6,idade:33.5,exp:8.7},
+{n:"Jurídico/Compliance",cor:0x5B2EE5,nIdeal:4,nAtual:0,idade:38.5,exp:11.5},
+{n:"Marketing",cor:0xFEC84D,nIdeal:4,nAtual:4,idade:29.2,exp:5.0},
+{n:"Operações/Logística",cor:0x2E7D32,nIdeal:6,nAtual:5,idade:40.5,exp:14.2},
+{n:"Recursos Humanos",cor:0xE57200,nIdeal:5,nAtual:5,idade:30.8,exp:6.2},
+{n:"TI/Sistemas",cor:0x1565C0,nIdeal:6,nAtual:6,idade:31.0,exp:7.7}];
+const FUNC=[
+["Alexandre Pires","Gerente Administrativo","Generalista, planejador","Administrativa","Administrativa"],
+["Ana Beatriz Souza","Assistente Administrativo","Organizada, metódica","Administrativa","Administrativa"],
+["Priscila Moura","Recepcionista","Cordial, multitarefa","Administrativa","Administrativa"],
+["Ricardo Nogueira","Supervisor Administrativo","Experiente, processual","Administrativa","Administrativa"],
+["Camila Rodrigues","Atendente Comercial","Simpática, ágil","Comercial","Comercial/Vendas"],
+["Daniela Teixeira","Coordenadora de Vendas","Líder, competitiva","Comercial","Comercial/Vendas"],
+["Fernanda Oliveira","Vendedora Interna","Comunicativa, persuasiva","Comercial","Comercial/Vendas"],
+["Gustavo Henrique","Representante Externo","Extrovertido, persistente","Comercial","Comercial/Vendas"],
+["Hugo Pinto","Vendedor E-commerce","Digital, ágil","Comercial","Comercial/Vendas"],
+["Aline Pereira","Analista Contábil","Detalhista, confiável","Financeira","Financeira"],
+["Carlos Eduardo Lima","Analista Financeiro Jr","Analítico, detalhista","Financeira","Financeira"],
+["Eduardo Silva","Contador","Rigoroso, ético","Financeira","Financeira"],
+["Juliana Moreira","Analista de Crédito","Criteriosa, prudente","Financeira","Financeira"],
+["Larissa Mendes","Auxiliar Financeiro","Organizada, aprendiz","Financeira","Financeira"],
+["Luciana Ribeiro","Gerente Financeira","Liderança estratégica","Financeira","Financeira"],
+["Débora Nunes","Analista de Compliance","Ética, investigativa","Administrativa","Jurídico/Compliance"],
+["Otávio Reis","Consultor Jurídico Externo","Técnico, formal","Administrativa","Jurídico/Compliance"],
+["Patrícia Gomes","Assistente Jurídico","Cautelosa, normativa","Administrativa","Jurídico/Compliance"],
+["Tatiane Rocha","Advogada Corporativa","Argumentativa, normativa","Administrativa","Jurídico/Compliance"],
+["Marcos Vinícius","Social Media","Criativo, trend","Marketing","Marketing"],
+["Natália Vieira","Designer Gráfico","Visual, detalhista","Marketing","Marketing"],
+["Thiago Ferreira","Auxiliar de Marketing","Criativo, antenado","Marketing","Marketing"],
+["Vanessa Dias","Analista Mkt Digital","Criativa-analítica","Marketing","Marketing"],
+["Bruno Carvalho","Comprador","Negociador, organizado","Administrativa","Operações/Logística"],
+["Igor Santana","Gerente de Operações","Decisivo, liderança forte","Operações","Operações/Logística"],
+["João Pedro Santos","Coordenador de Logística","Prático, liderança operacional","Operações","Operações/Logística"],
+["Paulo César","Motorista Entregador","Pontual, prático","Operações","Operações/Logística"],
+["Rodrigo Correia","Analista de Logística","Processual, sistêmico","Operações","Operações/Logística"],
+["Sérgio Cardoso","Encarregado Almoxarifado","Disciplinado, controle","Operações","Operações/Logística"],
+["Beatriz Lima","Estagiária de RH","Aprendiz rápida","Recursos Humanos","Recursos Humanos"],
+["Cristina Barros","Analista de Treinamento","Didática, comunicativa","Recursos Humanos","Recursos Humanos"],
+["Mariana Costa","Analista de RH","Empática, mediadora","Recursos Humanos","Recursos Humanos"],
+["Renata Castro","Psicóloga Organizacional","Escuta ativa, ética","Recursos Humanos","Recursos Humanos"],
+["Sabrina Freitas","Assistente de DP","Detalhista, confidencial","Recursos Humanos","Recursos Humanos"],
+["André Luiz","Suporte Sênior","Solucionador, didático","TI","TI/Sistemas"],
+["Diego Martins","Analista de Dados","Analítico, data-driven","TI","TI/Sistemas"],
+["Felipe Barbosa","Téc. Infraestrutura","Operacional, hands-on","TI","TI/Sistemas"],
+["Letícia Fonseca","Analista de BI","Curiosa, storytelling","TI","TI/Sistemas"],
+["Lucas Fernandes","Desenvolvedor Jr","Lógico, autodidata","TI","TI/Sistemas"],
+["Rafael Almeida","Suporte de TI","Técnico, lógico","TI","TI/Sistemas"]];
+
+// ---- tabela + filtros ----
+const tb=document.getElementById('tb'),busca=document.getElementById('busca'),fArea=document.getElementById('fArea'),fAd=document.getElementById('fAd'),cont=document.getElementById('cont');
+AREAS.forEach(a=>{const o=document.createElement('option');o.value=a.n;o.textContent=a.n;fArea.appendChild(o);});
+function aderente(atual,ideal){return atual.toLowerCase().includes(ideal.split('/')[0].toLowerCase().slice(0,4))||ideal.toLowerCase().includes(atual.toLowerCase().slice(0,4))||(atual==='TI'&&ideal==='TI/Sistemas')||(atual==='Comercial'&&ideal==='Comercial/Vendas')||(atual==='Operações'&&ideal.startsWith('Operações'));}
+function render(){
+const q=(busca.value||'').toLowerCase(),fa=fArea.value,fad=fAd.value;let n=0;tb.innerHTML='';
+FUNC.forEach(f=>{
+const ok=aderente(f[3],f[4]);
+if(fa&&f[4]!==fa)return;
+if(fad==='ok'&&!ok)return;if(fad==='off'&&ok)return;
+if(q&&!(f[0]+f[1]+f[2]+f[3]+f[4]).toLowerCase().includes(q))return;
+n++;
+const tr=document.createElement('tr');if(!ok)tr.className='desalinhada';
+tr.innerHTML='<td><b>'+f[0]+'</b></td><td>'+f[1]+'</td><td>'+f[2]+'</td><td>'+f[3]+'</td><td>'+f[4]+'</td><td><span class="tag '+(ok?'ok':'off')+'">'+(ok?'aderente':'realocar')+'</span></td>';
+tb.appendChild(tr);});
+cont.textContent=n+' registro(s) · clique numa barra 3D para filtrar por área';
+}
+[busca,fArea,fAd].forEach(e=>e.addEventListener('input',render));
+document.getElementById('limpar').onclick=()=>{busca.value='';fArea.value='';fAd.value='';render();};
+render();
+
+// legenda
+document.getElementById('legenda').innerHTML=AREAS.map(a=>'<span><span class="dot" style="background:#'+a.cor.toString(16).padStart(6,'0')+'"></span>'+a.n+'</span>').join('');
+
+// ---- THREE.JS ----
+let metrica='n';
+const labels={n:'Métrica: headcount ideal por área — altura = nº de pessoas.',idade:'Métrica: idade média por área ideal.',exp:'Métrica: experiência média por área ideal.'};
+document.querySelectorAll('.btn[data-m]').forEach(b=>b.onclick=()=>{document.querySelectorAll('.btn[data-m]').forEach(x=>x.classList.remove('ativo'));b.classList.add('ativo');metrica=b.dataset.m;document.getElementById('metricaLabel').textContent=labels[metrica];layout();});
+function val(a){return metrica==='n'?a.nIdeal:(metrica==='idade'?a.idade:a.exp);}
+function maxVal(){return metrica==='n'?6:(metrica==='idade'?40.5:14.2);}
+
+const canvas=document.getElementById('c3d'),tip=document.getElementById('tip'),wrap=document.getElementById('wrap3d');
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true});
+const scene=new THREE.Scene();scene.background=new THREE.Color(0x141118);scene.fog=new THREE.Fog(0x141118,30,70);
+const cam=new THREE.PerspectiveCamera(50,2,0.1,200);
+let radius=24,theta=0.7,phi=1.0,auto=true;
+function placeCam(){cam.position.set(radius*Math.sin(phi)*Math.sin(theta),radius*Math.cos(phi),radius*Math.sin(phi)*Math.cos(theta));cam.lookAt(0,2.5,0);}
+placeCam();
+scene.add(new THREE.AmbientLight(0xffffff,0.7));
+const l1=new THREE.DirectionalLight(0xffffff,0.9);l1.position.set(10,18,8);scene.add(l1);
+const l2=new THREE.PointLight(0xD4B277,0.8,60);l2.position.set(-10,8,-8);scene.add(l2);
+const grid=new THREE.GridHelper(34,17,0xD4B277,0x3a3a3a);scene.add(grid);
+const group=new THREE.Group();scene.add(group);
+const bars=[];
+function makeTextSprite(txt){
+const c=document.createElement('canvas');c.width=512;c.height=128;const g=c.getContext('2d');
+g.fillStyle='rgba(0,0,0,0)';g.fillRect(0,0,512,128);g.fillStyle='#fff';g.font='bold 44px Segoe UI, Arial';g.textAlign='center';g.fillText(txt,256,70);
+g.fillStyle='#D4B277';g.font='44px Segoe UI, Arial';
+const t=new THREE.CanvasTexture(c);const m=new THREE.SpriteMaterial({map:t,transparent:true});const s=new THREE.Sprite(m);s.scale.set(6,1.5,1);return s;}
+function layout(){
+while(group.children.length)group.remove(group.children[0]);
+bars.length=0;
+const mv=maxVal();
+AREAS.forEach((a,i)=>{
+const h=Math.max(0.6,(val(a)/mv)*10);
+const geo=new THREE.BoxGeometry(2.2,h,2.2);
+const mat=new THREE.MeshStandardMaterial({color:a.cor,roughness:0.35,metalness:0.25,emissive:a.cor,emissiveIntensity:0.12});
+const m=new THREE.Mesh(geo,mat);
+const x=(i-3.5)*3.4;
+m.position.set(x,h/2,0);m.userData={area:a,h:h};
+group.add(m);bars.push(m);
+const lbl=makeTextSprite((metrica==='n'?a.nIdeal:(metrica==='idade'?a.idade.toFixed(1):a.exp.toFixed(1)));
+lbl.position.set(x,h+1.2,0);group.add(lbl);
+const base=makeTextSprite(a.n.split('/')[0]);base.scale.set(4.4,1.1,1);base.position.set(x,0.35,2.2);group.add(base);
+});}
+layout();
+const ray=new THREE.Raycaster(),mouse=new THREE.Vector2();
+function resize(){const w=wrap.clientWidth,h=canvas.clientHeight;renderer.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();}
+window.addEventListener('resize',resize);resize();
+let drag=false,px=0,py=0;
+canvas.addEventListener('pointerdown',e=>{drag=true;px=e.clientX;py=e.clientY;canvas.style.cursor='grabbing';});
+window.addEventListener('pointerup',()=>{drag=false;canvas.style.cursor='grab';});
+window.addEventListener('pointermove',e=>{
+if(drag){theta-=(e.clientX-px)*0.008;phi-= (e.clientY-py)*0.005;phi=Math.max(0.25,Math.min(1.45,phi));px=e.clientX;py=e.clientY;placeCam();return;}
+const r=canvas.getBoundingClientRect();
+mouse.x=((e.clientX-r.left)/r.width)*2-1;mouse.y=-((e.clientY-r.top)/r.height)*2+1;
+ray.setFromCamera(mouse,cam);
+const hit=ray.intersectObjects(bars)[0];
+if(hit){const a=hit.object.userData.area;
+tip.style.display='block';tip.style.left=(e.clientX-r.left+14)+'px';tip.style.top=(e.clientY-r.top+10)+'px';
+tip.innerHTML='<b>'+a.n+'</b><br>Ideal: '+a.nIdeal+' · Atual: '+a.nAtual+'<br>Idade média: '+a.idade.toFixed(1)+' · Exp: '+a.exp.toFixed(1)+'<br><i>clique para filtrar a tabela</i>';
+bars.forEach(b=>b.material.emissiveIntensity=(b===hit.object?0.55:0.12));
+}else{tip.style.display='none';bars.forEach(b=>b.material.emissiveIntensity=0.12);}});
+canvas.addEventListener('click',()=>{
+const hit=ray.intersectObjects(bars)[0];
+if(hit){fArea.value=hit.object.userData.area.n;render();document.getElementById('tb').scrollIntoView({behavior:'smooth',block:'center'});}});
+canvas.addEventListener('wheel',e=>{e.preventDefault();radius=Math.max(12,Math.min(45,radius+e.deltaY*0.02));placeCam();},{passive:false});
+document.getElementById('btnGiro').onclick=e=>{auto=!auto;e.target.textContent=auto?'Pausar giro':'Retomar giro';};
+document.getElementById('btnReset').onclick=()=>{radius=24;theta=0.7;phi=1.0;placeCam();};
+(function anim(){requestAnimationFrame(anim);if(auto&&!drag){theta+=0.004;placeCam();group.rotation.y=0;}resize();renderer.render(scene,cam);})();
+</script>
+</body>
+</html>
