@@ -10,13 +10,13 @@ A disciplina é dada em laboratório, com um agente de programação (opencode) 
 
 Cada um dos 15 módulos tem três arquivos:
 
-- `moduloN-nome.html`, o deck de slides, que abre no navegador com duplo clique
-- `atividade_moduloN.py`, o script autoinstrucional das atividades
-- `roteiro-moduloN.md`, o roteiro do professor, com tempos e notas de condução
+- `slides/moduloN-nome.html`, o deck de slides, que abre no navegador com duplo clique
+- `scripts/atividade_moduloN.py`, o script autoinstrucional das atividades
+- `roteiros/roteiro-moduloN.md`, o roteiro do professor, com tempos e notas de condução
 
 Além disso, `programa-decc0294-2026-2.docx` traz o programa oficial e `planejamento-disciplina-v2.md` registra as decisões de desenho da disciplina. `indice-material-2026-2.md` é o mapa dos arquivos com a tabela de comandos de cada script, e `index.html` é a página de entrada que lista os 15 módulos com links de Slides, Roteiro e Script.
 
-Os arquivos `modulo1-transformacao-digital.pptx` e `modulo2-ambiente-de-trabalho-digital.pptx` são os editáveis de origem dos decks 1 e 2. As pastas `dados/`, `entregas/`, `saidas/` e `prompts/` são a estrutura de trabalho do aluno: bases de entrada, arquivos que valem nota, saídas geradas e caderno de prompts, cada uma com seu `LEIA-ME.md` ou `.manter`.
+Os arquivos `slides/modulo1-transformacao-digital.pptx` e `slides/modulo2-ambiente-de-trabalho-digital.pptx` são os editáveis de origem dos decks 1 e 2. A pasta `revisao/` reúne o guia, o registro e as ferramentas da revisão dos decks iniciada em novembro de 2026. As pastas `dados/`, `entregas/`, `saidas/` e `prompts/` são a estrutura de trabalho do aluno: bases de entrada, arquivos que valem nota, saídas geradas e caderno de prompts, cada uma com seu `LEIA-ME.md` ou `.manter`.
 
 A tabela da seção Os módulos, mais abaixo, reúne o link de slides e o link de script de cada um dos quinze módulos, na ordem dos encontros.
 
@@ -31,6 +31,8 @@ A identidade visual segue o Manual de Identidade Visual UFMA 2024, na paleta cla
 Rodam com a biblioteca padrão do Python, sem `pip install`, sem acesso à rede e sem modelo de linguagem. O aluno não digita comandos: o agente do opencode executa por ele.
 
 Cada script recusa entrega incompleta e diz, item por item, o que falta. Executar qualquer um deles sem argumento imprime as instruções de uso.
+
+No repositório, os scripts ficam em `scripts/` e gravam nas pastas de trabalho da raiz (`dados/`, `entregas/`, `saidas/`), qualquer que seja a pasta de onde forem chamados. Copiado para a raiz do projeto do aluno, como é publicado na turma virtual, cada script funciona sem alteração.
 
 | Script | Comandos |
 |---|---|
@@ -56,23 +58,23 @@ A coluna Slides abre o deck já renderizado no navegador, via GitHub Pages. A co
 
 | Mód. | Enc. | Título | Slides | Script | Entrega |
 |---|---|---|---|---|---|
-| 1 | 2 | Transformação digital e o trabalho do administrador | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/modulo1-transformacao-digital.html) | [Script](atividade_modulo1.py) | |
-| 2 | 3 | Ambiente de trabalho digital | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/modulo2-ambiente-de-trabalho-digital.html) | [Script](atividade_modulo2.py) | A1 |
-| 3 | 4 | IA, modelos de linguagem e engenharia de prompt | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/modulo3-ia-e-engenharia-de-prompt.html) | [Script](atividade_modulo3.py) | |
-| 4 | 5 | Do prompt ao artefato | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/modulo4-do-prompt-ao-artefato.html) | [Script](atividade_modulo4.py) | |
-| 5 | 6 | Dados na Administração | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/modulo5-dados-na-administracao.html) | [Script](atividade_modulo5.py) | A2 |
-| 6 | 7 | Análise exploratória de dados | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/modulo6-analise-exploratoria.html) | [Script](atividade_modulo6.py) | |
-| 7 | 8 | Dados estruturados e consulta | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/modulo7-dados-estruturados-e-consulta.html) | [Script](atividade_modulo7.py) | |
-| 8 | 9 | Visualização de dados e painéis | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/modulo8-visualizacao-e-paineis.html) | [Script](atividade_modulo8.py) | B1 |
-| 9 | 10 | Automação de documentos e processos | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/modulo9-automacao.html) | [Script](atividade_modulo9.py) | |
-| 10 | 11 | Pesquisa, documentos longos e análise qualitativa | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/modulo10-pesquisa-e-analise-qualitativa.html) | [Script](atividade_modulo10.py) | B2 |
-| 11 | 12 | Aprendizado de máquina e analytics para a decisão | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/modulo11-aprendizado-de-maquina.html) | [Script](atividade_modulo11.py) | |
-| 12 | 13 | Governança de dados, LGPD e cibersegurança | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/modulo12-governanca-lgpd-ciberseguranca.html) | [Script](atividade_modulo12.py) | |
-| 13 | 14 | Decisão apoiada por IA: contratos, editais e devolutivas | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/modulo13-decisao-apoiada-por-ia.html) | [Script](atividade_modulo13.py) | C1 |
-| 14 | 15 | Produto digital e gestão ágil | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/modulo14-produto-digital-e-agil.html) | [Script](atividade_modulo14.py) | |
-| 15 | 16 | Projeto integrador | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/modulo15-projeto-integrador.html) | [Script](atividade_modulo15.py) | C2 |
+| 1 | 2 | Transformação digital e o trabalho do administrador | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/slides/modulo1-transformacao-digital.html) | [Script](scripts/atividade_modulo1.py) | |
+| 2 | 3 | Ambiente de trabalho digital | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/slides/modulo2-ambiente-de-trabalho-digital.html) | [Script](scripts/atividade_modulo2.py) | A1 |
+| 3 | 4 | IA, modelos de linguagem e engenharia de prompt | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/slides/modulo3-ia-e-engenharia-de-prompt.html) | [Script](scripts/atividade_modulo3.py) | |
+| 4 | 5 | Do prompt ao artefato | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/slides/modulo4-do-prompt-ao-artefato.html) | [Script](scripts/atividade_modulo4.py) | |
+| 5 | 6 | Dados na Administração | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/slides/modulo5-dados-na-administracao.html) | [Script](scripts/atividade_modulo5.py) | A2 |
+| 6 | 7 | Análise exploratória de dados | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/slides/modulo6-analise-exploratoria.html) | [Script](scripts/atividade_modulo6.py) | |
+| 7 | 8 | Dados estruturados e consulta | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/slides/modulo7-dados-estruturados-e-consulta.html) | [Script](scripts/atividade_modulo7.py) | |
+| 8 | 9 | Visualização de dados e painéis | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/slides/modulo8-visualizacao-e-paineis.html) | [Script](scripts/atividade_modulo8.py) | B1 |
+| 9 | 10 | Automação de documentos e processos | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/slides/modulo9-automacao.html) | [Script](scripts/atividade_modulo9.py) | |
+| 10 | 11 | Pesquisa, documentos longos e análise qualitativa | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/slides/modulo10-pesquisa-e-analise-qualitativa.html) | [Script](scripts/atividade_modulo10.py) | B2 |
+| 11 | 12 | Aprendizado de máquina e analytics para a decisão | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/slides/modulo11-aprendizado-de-maquina.html) | [Script](scripts/atividade_modulo11.py) | |
+| 12 | 13 | Governança de dados, LGPD e cibersegurança | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/slides/modulo12-governanca-lgpd-ciberseguranca.html) | [Script](scripts/atividade_modulo12.py) | |
+| 13 | 14 | Decisão apoiada por IA: contratos, editais e devolutivas | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/slides/modulo13-decisao-apoiada-por-ia.html) | [Script](scripts/atividade_modulo13.py) | C1 |
+| 14 | 15 | Produto digital e gestão ágil | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/slides/modulo14-produto-digital-e-agil.html) | [Script](scripts/atividade_modulo14.py) | |
+| 15 | 16 | Projeto integrador | [Slides](https://tadeugomes.github.io/decc0294-tic-administracao/slides/modulo15-projeto-integrador.html) | [Script](scripts/atividade_modulo15.py) | C2 |
 
-A página pública da disciplina é <https://tadeugomes.github.io/decc0294-tic-administracao/>: abre `index.html` já renderizado, com os 15 decks a um clique. O GitHub nunca renderiza HTML na visualização do repositório por política de segurança: o link relativo `moduloN-nome.html` mostra o código-fonte, não o deck. Por isso a tabela acima aponta para o Pages. Fora do navegador, baixe o `.html` (botão "Raw" na página do arquivo, depois "Salvar como") e abra com duplo clique.
+A página pública da disciplina é <https://tadeugomes.github.io/decc0294-tic-administracao/>: abre `index.html` já renderizado, com os 15 decks a um clique. O GitHub nunca renderiza HTML na visualização do repositório por política de segurança: o link relativo `slides/moduloN-nome.html` mostra o código-fonte, não o deck. Por isso a tabela acima aponta para o Pages. Fora do navegador, baixe o `.html` (botão "Raw" na página do arquivo, depois "Salvar como") e abra com duplo clique.
 
 ## Avaliação
 
