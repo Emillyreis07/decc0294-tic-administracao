@@ -147,6 +147,132 @@ body.mexeu #ajuda{opacity:1}
   #barra,#ajuda{display:none}
   .slide{display:block!important;page-break-after:always;box-shadow:none;transform:none!important}
 }
+/* ---- componentes acrescentados na revisão de nov. 2026 ---- */
+.mono{font-family:Consolas,"Cascadia Mono","Courier New",monospace}
+.fonte-nota{position:absolute;left:0;right:0;bottom:-2px;font-size:13px;color:var(--muted);line-height:1.3}
+.prompt.compacto{padding:12px 20px;margin-bottom:16px}
+.prompt.compacto p{font-size:17px;line-height:1.4;margin-top:6px}
+.prompt.compacto p+p{margin-top:6px}
+.prompt .cmd{font-style:normal;font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:16px}
+
+/* tabela de dados */
+.tab{width:100%;border-collapse:collapse;font-size:15px;line-height:1.3;color:var(--body)}
+.tab th{background:var(--vinho);color:#fff;font-weight:700;text-align:left;padding:7px 10px;font-size:14px;letter-spacing:.3px}
+.tab td{border-bottom:1px solid #e1e1e1;padding:7px 10px;vertical-align:top;background:#fff}
+.tab tr:nth-child(even) td{background:#fafafa}
+.tab td.lac{background:#FFF3D1!important;color:#7a5600;font-weight:700}
+.tab td .s{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+.tab td strong{color:var(--txt)}
+.chip{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.5px;padding:2px 8px;margin-bottom:4px;color:var(--txt)}
+.chip.ok{background:#CFEFEE}.chip.med{background:#FFE7A8}.chip.ruim{background:#F2CDD8;color:var(--vinho)}
+.badge{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--vinho);
+  color:#fff;font-size:12px;font-weight:700;margin-right:6px;vertical-align:1px;font-style:normal}
+
+/* duas colunas */
+.duascol{display:grid;grid-template-columns:var(--esq,1.4fr) var(--dir,1fr);gap:28px;height:100%}
+.duascol .col{display:flex;flex-direction:column;gap:14px;min-height:0}
+.steps.compacto{gap:12px}
+.steps.compacto strong{font-size:18px}
+.steps.compacto p{font-size:16px;line-height:1.35}
+.steps.compacto .num{flex:0 0 28px;height:28px;font-size:15px}
+
+/* fluxo horizontal */
+.fluxo{display:grid;grid-template-columns:repeat(var(--n,4),1fr);gap:34px;position:relative}
+.etapa{background:var(--card);border:1px solid #e3e3e3;border-top:6px solid var(--cor,var(--vinho));
+  padding:12px 16px 14px;position:relative}
+.etapa:not(:last-child)::after{content:"";position:absolute;right:-27px;top:50%;margin-top:-11px;
+  border-left:16px solid var(--vinho);border-top:11px solid transparent;border-bottom:11px solid transparent}
+.etapa .n{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;
+  background:var(--vinho);color:#fff;font-size:14px;font-weight:700}
+.etapa h4{display:inline;font-size:18px;color:var(--txt);margin-left:6px;vertical-align:2px}
+.etapa p{font-size:15.5px;line-height:1.38;margin-top:8px}
+.etapa .arq{display:block;margin-top:8px;font-size:13.5px;color:var(--vinho);
+  font-family:Consolas,"Cascadia Mono","Courier New",monospace;word-break:break-all}
+.trilha{margin-top:18px}
+.trilha .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1px;color:var(--muted);margin-bottom:6px}
+.trilha .barra-g{height:14px;background:linear-gradient(90deg,var(--teal) 0%,#9fd6c4 30%,var(--amarelo) 55%,var(--vinho) 100%)}
+.trilha .marcas{display:grid;grid-template-columns:repeat(4,1fr);gap:34px;font-size:13.5px;color:var(--muted);margin-top:5px}
+
+/* conceito (mesmo padrão dos módulos 2 e 3) */
+.def{background:var(--card2);border:1px solid #e3e3e3;border-left:9px solid var(--vinho);padding:12px 20px}
+.def .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1.2px;color:var(--vinho);text-transform:uppercase}
+.def p{font-size:17px;line-height:1.4;color:var(--txt);margin-top:5px}
+
+/* eixo acima dos cartões */
+.eixo{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;margin-bottom:14px;
+  font-size:14px;font-weight:700;color:var(--muted);letter-spacing:.4px}
+.eixo .seta{height:10px;position:relative;background:linear-gradient(90deg,var(--dourado),var(--teal))}
+.eixo .seta::after{content:"";position:absolute;right:-14px;top:-7px;border-left:16px solid var(--teal);
+  border-top:12px solid transparent;border-bottom:12px solid transparent}
+.cards.baixos{height:calc(100% - 40px)}
+.cards.baixos .card h3{font-size:18px;padding:12px 16px 2px}
+.cards.baixos .card .bloco{padding:8px 16px 0}
+.cards.baixos .card .bloco p{font-size:15.5px;line-height:1.36}
+
+/* grade de dimensões */
+.grade{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:14px;height:calc(100% - 22px)}
+.dim{background:var(--card);border:1px solid #e3e3e3;border-top:5px solid var(--cor);padding:10px 16px}
+.dim h4{font-size:19px;color:var(--vinho)}
+.dim h4 small{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.dim p{font-size:15.5px;line-height:1.36;margin-top:5px}
+.dim .med{display:block;font-size:14px;color:var(--txt);margin-top:7px;border-top:1px solid #ddd;padding-top:6px}
+.dim .med b{color:var(--muted);font-size:12.5px;letter-spacing:.6px}
+
+/* caixa lateral */
+.caixa{background:var(--card2);border:1px solid #e3e3e3;padding:12px 16px}
+.caixa.vinho{border-left:6px solid var(--vinho)}
+.caixa.dourado{border-left:6px solid var(--dourado)}
+.caixa.teal{border-left:6px solid var(--teal)}
+.caixa .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1px;color:var(--vinho);margin-bottom:4px}
+.caixa p{font-size:15.5px;line-height:1.38}
+.caixa p+p{margin-top:6px}
+.legenda{list-style:none}
+.legenda li{font-size:15.5px;line-height:1.35;margin-bottom:8px;display:flex;gap:6px}
+.legenda li b{color:var(--txt)}
+
+/* ficha do mapa de dados */
+.ficha{display:grid;grid-template-columns:1fr 1fr;gap:14px;height:calc(100% - 64px)}
+.ficha .grupo{background:var(--card);border:1px solid #e3e3e3;border-top:5px solid var(--cor)}
+.ficha .grupo>header{font-size:16px;font-weight:700;color:var(--vinho);padding:8px 14px 2px}
+.ficha .grupo>header span{color:var(--muted);font-weight:400;font-size:14px;margin-left:6px}
+.ficha dl{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;padding:6px 14px 10px;font-size:14.5px;line-height:1.3}
+.ficha dt{font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:13.5px;color:var(--vinho);padding-top:1px}
+.ficha dd{color:var(--txt)}
+.rodape-corpo{margin-top:12px;font-size:15.5px;line-height:1.4;color:var(--body)}
+
+/* svg */
+.fig{display:block;width:100%;height:auto}
+.fig text{font-family:"Segoe UI",Calibri,"Helvetica Neue",Arial,sans-serif}
+
+/* ajustes após conferência visual */
+.tab.apertada{font-size:14.5px}
+.tab.apertada td{padding:6px 10px}
+.legenda .badge{flex:0 0 20px;margin-top:1px}
+.dim p{font-size:17px}
+.dim .med{font-size:15.5px}
+.dim h4{font-size:21px}
+.cards.baixos .card .bloco p{font-size:16.5px}
+.eixo{gap:26px}
+.ficha dl{font-size:16.5px;gap:6px 14px;padding:8px 14px 12px}
+.ficha dt{font-size:15px}
+.ficha .grupo>header{font-size:17.5px}
+.etapa p{font-size:16.5px}
+.etapa .arq{word-break:normal;overflow-wrap:break-word}
+.steps.cols-3.compacto p{font-size:17px}
+.steps.cols-3.compacto strong{font-size:19px}
+
+/* blocos de saída de terminal */
+.terminal{background:#262626;color:#e9e9e9;font-family:Consolas,"Cascadia Mono","Courier New",monospace;
+  font-size:14px;line-height:1.38;padding:12px 16px;white-space:pre;overflow:hidden;margin:0}
+.terminal .hl{color:#FEC84D;font-weight:700}
+
+/* acrescentado no módulo 9: trecho de arquivo de texto anotado */
+.codigo{background:#F7F4EE;border:1px solid #e3e3e3;border-left:6px solid var(--dourado);color:var(--txt);
+  font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:14px;line-height:1.55;padding:10px 14px;
+  white-space:pre;overflow:hidden;margin:0}
+.codigo b{color:var(--vinho)}
+/* ajustes do módulo 10 */
+.tab td.lac{text-align:left}
 </style>
 </head>
 <body>
@@ -157,49 +283,49 @@ body.mexeu #ajuda{opacity:1}
       <span class="mod">MÓDULO 10</span>
       <h1>Pesquisa, documentos longos e análise qualitativa</h1>
       <span class="tracinho"></span>
-      <p class="sub">Encontro 11 · O que fazer com cem páginas e com duzentas respostas abertas</p>
+      <p class="sub">Encontro 11 · Leitura em camadas, fontes, livro de códigos e conferência de norma</p>
       <p class="pe">DECC0294 · Tecnologia da Informação e Comunicação Aplicada à Administração · 2026.2</p>
     </section>
 <section class="slide conteudo" data-i="1">
     <span class="barra"></span>
     <span class="eyebrow">VISÃO GERAL DO MÓDULO</span>
     <h2>O que você vai construir hoje</h2>
-    <p class="sub">Este encontro fecha a nota 2 com a entrega B2</p>
+    <p class="sub">Este encontro fecha a entrega B2 e, com ela, a nota 2</p>
     <div class="corpo"><div class="overview">
     <article class="ciclo">
       <span class="topo" style="background:#D4B277"></span>
-      <span class="rot" >CICLO 10.1</span>
+      <span class="rot">CICLO 10.1</span>
       <h3>Leitura em camadas de documento longo</h3>
       <div class="pe">
         <span class="rule" style="background:#D4B277"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Síntese estruturada com trechos de origem</p>
+        <p>Síntese com o trecho de origem de cada item extraído</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#0AB0AB"></span>
-      <span class="rot" >CICLO 10.2</span>
+      <span class="rot">CICLO 10.2</span>
       <h3>Comparação setorial com fontes verificadas</h3>
       <div class="pe">
         <span class="rule" style="background:#0AB0AB"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Comparação de três organizações</p>
+        <p>Três organizações comparadas, com ficha de fonte</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#FEC84D"></span>
-      <span class="rot" >CICLO 10.3</span>
+      <span class="rot">CICLO 10.3</span>
       <h3>Análise de conteúdo de respostas abertas</h3>
       <div class="pe">
         <span class="rule" style="background:#FEC84D"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Livro de códigos e categorização</p>
+        <p>Livro de códigos e dupla codificação com concordância medida</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#D4B277"></span>
-      <span class="rot" >CICLO 10.4</span>
-      <h3>Legislação e o teste de alucinação jurídica</h3>
+      <span class="rot">CICLO 10.4</span>
+      <h3>Legislação e conferência na fonte oficial</h3>
       <div class="pe">
         <span class="rule" style="background:#D4B277"></span>
         <span class="rot2">ENTREGA</span>
@@ -209,7 +335,7 @@ body.mexeu #ajuda{opacity:1}
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Estrutura do módulo</span>
-      <span class="pag">2 / 29</span>
+      <span class="pag">2 / 31</span>
     </footer>
   </section>
 <section class="slide divisor" data-i="2">
@@ -219,63 +345,42 @@ body.mexeu #ajuda{opacity:1}
         <h2>Leitura em camadas de documento longo</h2>
         <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">3 / 29</span>
+      <span class="pag">3 / 31</span>
     </section>
 <section class="slide conteudo" data-i="3">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 10.1 · TEORIA</span>
-    <h2>Por que pedir "resuma este documento" não funciona</h2>
-    <p class="sub">O resumo de cem páginas em uma página perde justamente o que você precisava</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">O QUE ACONTECE</header>
-      <h3>O modelo devolve o genérico do documento</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Por quê</span>
-          <p>Sem uma pergunta, ele produz o resumo médio: o que qualquer documento daquele gênero diria.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O resultado</span>
-          <p>Um texto correto, plausível e inútil, que não responde ao que você precisava decidir.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">O QUE SE PERDE</header>
-      <h3>A exceção, o prazo e a condição</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Por quê</span>
-          <p>Resumo comprime, e o que se comprime primeiro é o detalhe. Justamente onde mora a obrigação que vai te pegar.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O exemplo</span>
-          <p>A cláusula que muda o prazo em caso de aditivo cabe em duas linhas e não sobrevive ao resumo.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">A ALTERNATIVA</header>
-      <h3>Ler em camadas, com pergunta em cada uma</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Como funciona</span>
-          <p>Quatro passagens sobre o mesmo documento, cada uma com uma pergunta e um produto próprio.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O ganho</span>
-          <p>Cada camada é conferível, e o erro de uma é detectado antes de contaminar a seguinte.</p>
-        </div>
-    </article></div></div>
+    <h2>Por que o resumo sem pergunta falha</h2>
+    <p class="sub">Um resumo de cem páginas em uma página descarta primeiro as exceções, os prazos e as condições</p>
+    <div class="corpo"><div class="duascol" style="--esq:1fr;--dir:1.05fr">
+    <div class="col"><svg class="fig" viewBox="0 0 560 250" xmlns="http://www.w3.org/2000/svg">
+  <text x="0" y="16" font-size="13.5" font-weight="700" fill="#6B6B6B">ACERTO CONFORME A POSIÇÃO DA INFORMAÇÃO NO TEXTO</text>
+  <line x1="60" y1="200" x2="540" y2="200" stroke="#999" stroke-width="1.5"/>
+  <line x1="60" y1="200" x2="60" y2="34" stroke="#999" stroke-width="1.5"/>
+  <text x="20" y="120" font-size="13.5" fill="#6B6B6B" transform="rotate(-90 20 120)" text-anchor="middle">acerto</text>
+  <rect x="215" y="34" width="170" height="166" fill="#F2CDD8" opacity=".55"/>
+  <path d="M75,58 C190,190 410,190 525,82" fill="none" stroke="#8D0333" stroke-width="3.5"/>
+  <circle cx="75" cy="58" r="6" fill="#0AB0AB"/><circle cx="300" cy="157" r="6" fill="#8D0333"/><circle cx="525" cy="82" r="6" fill="#0AB0AB"/>
+  <g font-size="14" fill="#333" text-anchor="middle">
+    <text x="75" y="220">início</text><text x="300" y="220">meio</text><text x="525" y="220">fim</text></g>
+  <text x="300" y="56" text-anchor="middle" font-size="14" font-weight="700" fill="#8D0333">trecho do meio</text>
+  <text x="300" y="74" text-anchor="middle" font-size="14" fill="#8D0333">menor acerto</text>
+  <text x="0" y="244" font-size="13" fill="#6B6B6B">Forma esquemática, sem valores, do resultado de Liu et al. (2024)</text>
+</svg>
+      <div class="caixa vinho"><span class="rot">O QUE O RESUMO DESCARTA</span><p>Sem pergunta, o modelo devolve o que qualquer documento do mesmo gênero diria. A cláusula que muda o prazo em caso de aditivo ocupa duas linhas e desaparece na compressão.</p></div>
+    </div>
+    <div class="col">
+      <div class="def"><span class="rot">Janela de contexto (context window)</span>
+        <p>Quantidade máxima de texto, medida em tokens, que o modelo recebe de uma vez. Caber na janela não garante leitura uniforme. O acerto cai quando a informação está no meio de um texto longo e fica mais instável à medida que a entrada cresce.</p></div>
+      <div class="caixa teal"><span class="rot">O QUE ENTRA NO LUGAR</span><p>Quatro leituras do mesmo documento, cada uma com uma pergunta e um arquivo de saída. O erro de uma camada aparece antes de chegar à seguinte.</p></div>
+      <div class="caixa dourado"><span class="rot">MEDIDA EM 18 MODELOS</span><p>Hong, Troynikov e Huber (2025) testaram modelos da OpenAI, Anthropic, Google e Alibaba. O desempenho ficou menos confiável conforme o tamanho da entrada aumentou.</p></div>
+    </div>
+  </div>
+  <p class="fonte-nota">Liu et al. (2024), Lost in the middle, Transactions of the ACL, v. 12, p. 157-173. Hong, Troynikov e Huber (2025), Context rot, Chroma, 14/07/2025 (trychroma.com/research/context-rot). Consulta em 02/11/2026.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 10.1 · Teoria</span>
-      <span class="pag">4 / 29</span>
+      <span class="pag">4 / 31</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="4">
@@ -283,48 +388,57 @@ body.mexeu #ajuda{opacity:1}
     <span class="eyebrow">CICLO 10.1 · TEORIA</span>
     <h2>As quatro camadas</h2>
     <p class="sub">Nesta ordem, sobre o mesmo documento, com um arquivo por camada</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Camada 1: o mapa</strong><p>Estrutura do documento: seções, o que cada uma trata e em que página começa. Serve para você saber onde procurar e para conferir se o modelo leu tudo.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Camada 2: a extração</strong><p>Uma lista do que interessa: obrigações, prazos, valores, condições. Cada item com o trecho de origem copiado literalmente.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Camada 3: a análise</strong><p>Sobre a lista extraída, e não sobre o documento. Classificar, priorizar, apontar contradições e lacunas.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Camada 4: a síntese</strong><p>A partir das três anteriores, para um destinatário definido, com o tamanho definido. É a única camada que vira texto corrido.</p></div>
-    </li></ol></div>
+    <div class="corpo"><div class="fluxo" style="--n:4">
+      <div class="etapa" style="--cor:#D4B277"><span class="n">1</span><h4>Mapa</h4>
+        <p>Seções do documento, o assunto de cada uma e a página em que começa. Mostra onde procurar e se o modelo percorreu o documento inteiro.</p>
+        <span class="arq">saidas/camada1-mapa.csv</span></div>
+      <div class="etapa" style="--cor:#FEC84D"><span class="n">2</span><h4>Extração</h4>
+        <p>Obrigações, prazos, valores e condições. Cada item com o trecho literal e a página. Item sem trecho fica fora.</p>
+        <span class="arq">saidas/camada2-obrigacoes.csv</span></div>
+      <div class="etapa" style="--cor:#0AB0AB"><span class="n">3</span><h4>Análise</h4>
+        <p>Feita sobre a lista extraída, sem voltar ao documento. Classificar, priorizar e apontar contradições e lacunas.</p>
+        <span class="arq">saidas/camada3-analise.csv</span></div>
+      <div class="etapa" style="--cor:#8D0333"><span class="n">4</span><h4>Síntese</h4>
+        <p>Texto corrido para um destinatário nomeado e com tamanho definido, montado a partir das três camadas.</p>
+        <span class="arq">entregas/modulo10-ciclo1-sintese.md</span></div>
+    </div>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:18px">
+      <div class="caixa dourado"><span class="rot">DOCUMENTO MAIOR QUE A JANELA</span><p>Rode a camada 2 seção por seção, guiado pelo mapa, e junte as listas. A camada 3 trabalha sobre a lista, que é curta.</p></div>
+      <div class="caixa vinho"><span class="rot">ANTES DE ENTREGAR O ARQUIVO AO AGENTE</span><p>O conteúdo lido pelo agente vai ao servidor do provedor do modelo. CPF, endereço ou dado de saúde de terceiros saem do documento antes.</p></div>
+    </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 10.1 · Teoria</span>
-      <span class="pag">5 / 29</span>
+      <span class="pag">5 / 31</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="5">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 10.1 · DEMONSTRAÇÃO</span>
-    <h2>O trecho de origem é o que torna a extração conferível</h2>
-    <p class="sub">A regra que separa leitura assistida de leitura inventada</p>
-    <div class="corpo"><div class="prompt">
+    <h2>O trecho de origem torna a extração conferível</h2>
+    <p class="sub">Saída ilustrativa sobre um contrato de prestação de serviços de limpeza com 42 páginas</p>
+    <div class="corpo"><div class="prompt compacto">
     <span class="rot">INSTRUÇÃO DA CAMADA 2</span>
-    <p>"Leia dados/[documento] e extraia todas as obrigações que ele impõe. Para cada uma, devolva três colunas: a obrigação em suas palavras, o trecho literal do documento que a estabelece, e a seção ou página onde ele está. Se você não encontrar o trecho literal, não inclua o item. Grave em saidas/camada2-obrigacoes.csv."</p>
+    <p>"Leia dados/contrato-limpeza.pdf e extraia as obrigações da contratada. Para cada uma, devolva a obrigação em suas palavras, o trecho literal que a estabelece e a página. Item sem trecho literal fica fora da lista. Grave em saidas/camada2-obrigacoes.csv."</p>
   </div>
-<ol class="steps cols-3" style="--linhas:1">
-    <li><span class="num">1</span>
-      <div><strong>O trecho literal é a âncora</strong><p>Você abre o documento e confere em dez segundos.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>"Não inclua sem trecho" fecha a saída</strong><p>Sem essa regra, o item plausível entra na lista.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Confira cinco por amostra</strong><p>Cinco trechos abertos no documento pegam quase todo erro.</p></div>
-    </li></ol></div>
+  <div class="duascol" style="--esq:1.75fr;--dir:1fr;height:auto">
+    <table class="tab apertada">
+      <tr><th style="width:4%">#</th><th style="width:27%">OBRIGAÇÃO</th><th style="width:37%">TRECHO LITERAL</th><th style="width:7%">PÁG.</th><th style="width:25%">CONFERÊNCIA</th></tr>
+      <tr><td>1</td><td>Prestar garantia de 5% do valor</td><td>"prestará garantia de 5% (cinco por cento) do valor contratual"</td><td>9</td><td><span class="chip ok">ENCONTRADO</span></td></tr>
+      <tr><td>2</td><td>Repor empregado que faltar</td><td>"substituir, no prazo de duas horas, o empregado que faltar ao serviço"</td><td>14</td><td><span class="chip ok">ENCONTRADO</span></td></tr>
+      <tr><td>3</td><td>Reajuste anual pelo IPCA</td><td>"os preços serão reajustados após doze meses, pelo IPCA"</td><td>27</td><td><span class="chip ok">ENCONTRADO</span></td></tr>
+      <tr><td>4</td><td>Multa de 10% por salário atrasado</td><td>"aplicar-se-á multa de 10% em caso de atraso salarial"</td><td>31</td><td class="lac">NÃO EXISTE. A página 31 prevê multa diária de 0,5%</td></tr>
+    </table>
+    <div class="col" style="gap:10px">
+      <div class="caixa vinho"><span class="rot">ITEM 4</span><p>Trecho entre aspas que não está no documento é confabulação. Um caso na amostra obriga a conferir a lista inteira.</p></div>
+      <div class="caixa dourado"><span class="rot">CONFERÊNCIA POR AMOSTRA</span><p>Cinco itens procurados no documento original com Ctrl+F. Anote quantos trechos foram encontrados.</p></div>
+      <div class="caixa teal"><span class="rot">COLUNAS FIXAS</span><p>Garantem o formato da lista. O conteúdo de cada trecho só se confere no documento.</p></div>
+    </div>
+  </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 10.1 · Demonstração</span>
-      <span class="pag">6 / 29</span>
+      <span class="pag">6 / 31</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="6">
@@ -332,50 +446,50 @@ body.mexeu #ajuda{opacity:1}
     <span class="eyebrow">CICLO 10.1 · PRÁTICA</span>
     <h2>Sua vez: quatro camadas no seu documento</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Coloque o documento em dados/</strong><p>O que você trouxe. Confira antes se há dado pessoal de terceiro.</p></div>
+      <div><strong>Coloque o documento em dados/</strong><p>O documento que você trouxe, com dez páginas ou mais. Retire antes os dados pessoais de terceiros, porque o agente envia o conteúdo ao provedor.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Rode as camadas 1 e 2</strong><p>O mapa e a extração com trecho de origem.</p></div>
+      <div><strong>Rode as camadas 1 e 2</strong><p>O mapa e a extração com trecho literal e página. Documento longo vai seção por seção.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Confira cinco itens da extração no documento</strong><p>Abra e procure o trecho. Anote quantos bateram.</p></div>
+      <div><strong>Confira cinco itens da extração no documento</strong><p>Procure cada trecho no original e anote quantos foram encontrados.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Rode as camadas 3 e 4</strong><p>A análise sobre a lista, e a síntese para um destinatário que você nomeia.</p></div>
+      <div><strong>Rode as camadas 3 e 4</strong><p>A análise sobre a lista e a síntese para um destinatário que você nomeia, com o tamanho definido.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 10.1 · Prática</span>
-      <span class="pag">7 / 29</span>
+      <span class="pag">7 / 31</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="7">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 10.1 · ENTREGA</span>
-    <h2>Síntese estruturada com trechos de origem</h2>
+    <h2>Síntese com trechos de origem</h2>
     
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>Os quatro arquivos, um por camada.</li><li>A extração com trecho literal e localização de cada item.</li><li>A conferência de cinco itens, com quantos bateram.</li><li>A síntese final, com o destinatário nomeado.</li></ul>
+      <ul><li>Os quatro arquivos, um por camada.</li><li>A extração com o trecho literal e a página de cada item.</li><li>A conferência de cinco itens, com quantos trechos foram encontrados.</li><li>A síntese, com destinatário e tamanho definidos.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>entregas/modulo10-ciclo1-sintese.md\nsaidas/camada*.csv</p>
+        <p><span class="mono" style="font-size:15px">entregas/modulo10-ciclo1-sintese.md<br>saidas/camada*.csv</span></p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Item de extração sem trecho literal não conta. Síntese sem destinatário nomeado perde metade do item.</p>
+        <p>Item de extração sem trecho literal não conta. Síntese sem destinatário nomeado perde metade do item. O arquivo da síntese entra na conferência da B2.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 10.1 · Entrega</span>
-      <span class="pag">8 / 29</span>
+      <span class="pag">8 / 31</span>
     </footer>
   </section>
 <section class="slide divisor" data-i="8">
@@ -383,140 +497,168 @@ body.mexeu #ajuda{opacity:1}
       <div class="esq"><span class="rot">CICLO</span><span class="num">10.2</span></div>
       <div class="dir">
         <h2>Comparação setorial com fontes verificadas</h2>
-        <p class="etapas">Teoria · Prática · Entrega</p>
+        <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">9 / 29</span>
+      <span class="pag">9 / 31</span>
     </section>
 <section class="slide conteudo" data-i="9">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 10.2 · TEORIA</span>
-    <h2>A comparação que não se sustenta</h2>
-    <p class="sub">Três defeitos que aparecem em quase toda comparação feita às pressas</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">ANO DIFERENTE</header>
-      <h3>Cada número de um período</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Como acontece</span>
-          <p>O dado de uma organização é de 2026 e o da outra é de 2023, porque foi o que estava disponível.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">A regra</span>
-          <p>Mesmo período para todos, ou a comparação não é feita. Declare o ano de cada número.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">MEDIDA DIFERENTE</header>
-      <h3>O mesmo nome, contas diferentes</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Como acontece</span>
-          <p>Uma conta despesa empenhada, outra conta despesa paga. As duas chamam de "gasto".</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">A regra</span>
-          <p>Confira a definição em cada fonte antes de colocar os números lado a lado.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">FONTE SECUNDÁRIA</header>
-      <h3>Notícia sobre o relatório, e não o relatório</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Como acontece</span>
-          <p>O modelo cita uma reportagem que cita um estudo. O número chega com dois intermediários.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">A regra</span>
-          <p>Suba até a fonte primária. Se ela não estiver acessível, declare que o dado é de segunda mão.</p>
-        </div>
-    </article></div></div>
+    <h2>Três defeitos de comparação</h2>
+    <p class="sub">Três falhas que fazem números lado a lado deixarem de ser comparáveis</p>
+    <div class="corpo"><table class="tab">
+      <tr><th style="width:18%">DEFEITO</th><th style="width:27%">COMO APARECE</th><th style="width:28%">EXEMPLO</th><th style="width:27%">REGRA</th></tr>
+      <tr><td><strong>Período diferente</strong></td><td>O número de uma organização é de 2025 e o da outra é de 2022, porque era o disponível.</td>
+          <td>Despesa por habitante de 2025 ao lado da de 2022, sem correção pela inflação.</td><td>Mesmo período para todas, ou ressalva escrita. Ano declarado em cada número.</td></tr>
+      <tr><td><strong>Medida diferente</strong></td><td>O mesmo nome cobre contas diferentes.</td>
+          <td>Uma fonte chama de gasto a despesa empenhada e a outra chama de gasto a despesa paga.</td><td>Ler a definição em cada fonte antes de pôr os números lado a lado.</td></tr>
+      <tr><td><strong>Fonte secundária</strong></td><td>O número chega por uma notícia que cita um relatório.</td>
+          <td>A reportagem arredonda o valor ou atribui ao estudo o ano da publicação.</td><td>Ir até a fonte primária. Sem acesso a ela, declarar o dado como de segunda mão.</td></tr>
+    </table>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:18px">
+      <div class="caixa teal"><span class="rot">ONDE O AGENTE ENTRA</span><p>Na lista de fontes possíveis, com órgão, publicação e endereço. O número vem da fonte que você abriu.</p></div>
+      <div class="caixa vinho"><span class="rot">NÚMERO DA RESPOSTA DO MODELO</span><p>Pode ser confabulação, com ordem de grandeza, ano e órgão plausíveis. Ele não entra na tabela sem a fonte aberta.</p></div>
+    </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 10.2 · Teoria</span>
-      <span class="pag">10 / 29</span>
+      <span class="pag">10 / 31</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="10">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 10.2 · TEORIA</span>
-    <h2>O procedimento em quatro passos</h2>
-    <p class="sub">A ordem importa: a fonte vem antes do número, como no encontro 4</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Defina o indicador antes de procurar</strong><p>Escreva numerador, denominador e período. Sem isso, você aceita o que encontrar e a comparação se desmancha.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Levante as fontes possíveis, sem números</strong><p>Peça ao agente a lista de fontes que publicam esse indicador, com órgão, nome da publicação e endereço.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Abra cada fonte e extraia você mesmo</strong><p>O número entra na tabela vindo da fonte aberta por você, e não da resposta do modelo.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Registre a definição usada por cada fonte</strong><p>É aqui que aparece a divergência de medida, e é o que permite dizer se a comparação é legítima.</p></div>
-    </li></ol></div>
+    <h2>A mesma comparação com duas definições</h2>
+    <p class="sub">Três municípios, o mesmo ano e a ordem invertida conforme o estágio da despesa</p>
+    <div class="corpo"><div class="duascol" style="--esq:0.82fr;--dir:1fr">
+    <div class="col"><svg class="fig" viewBox="0 0 470 262" xmlns="http://www.w3.org/2000/svg">
+  <text x="0" y="16" font-size="13.5" font-weight="700" fill="#6B6B6B">R$ POR HABITANTE · ORDEM CONFORME A DEFINIÇÃO</text>
+  <line x1="130" y1="34" x2="130" y2="240" stroke="#ccc" stroke-width="2"/>
+  <line x1="340" y1="34" x2="340" y2="240" stroke="#ccc" stroke-width="2"/>
+  <text x="130" y="258" text-anchor="middle" font-size="14" font-weight="700" fill="#333">empenhada</text>
+  <text x="340" y="258" text-anchor="middle" font-size="14" font-weight="700" fill="#333">paga</text>
+  <line x1="130" y1="45" x2="340" y2="227" stroke="#8D0333" stroke-width="3"/>
+  <circle cx="130" cy="45" r="6" fill="#8D0333"/><circle cx="340" cy="227" r="6" fill="#8D0333"/>
+  <text x="118" y="50" text-anchor="end" font-size="14" fill="#1A1A1A"><tspan font-weight="700">B</tspan> 840</text>
+  <text x="352" y="232" font-size="14" fill="#1A1A1A"><tspan font-weight="700">B</tspan> 700</text>
+  <line x1="130" y1="97" x2="340" y2="168" stroke="#C9962E" stroke-width="3"/>
+  <circle cx="130" cy="97" r="6" fill="#C9962E"/><circle cx="340" cy="168" r="6" fill="#C9962E"/>
+  <text x="118" y="102" text-anchor="end" font-size="14" fill="#1A1A1A"><tspan font-weight="700">A</tspan> 800</text>
+  <text x="352" y="173" font-size="14" fill="#1A1A1A"><tspan font-weight="700">A</tspan> 745</text>
+  <line x1="130" y1="123" x2="340" y2="136" stroke="#0AB0AB" stroke-width="3"/>
+  <circle cx="130" cy="123" r="6" fill="#0AB0AB"/><circle cx="340" cy="136" r="6" fill="#0AB0AB"/>
+  <text x="118" y="128" text-anchor="end" font-size="14" fill="#1A1A1A"><tspan font-weight="700">C</tspan> 780</text>
+  <text x="352" y="141" font-size="14" fill="#1A1A1A"><tspan font-weight="700">C</tspan> 770</text>
+</svg>
+      <div class="caixa teal"><span class="rot">QUAL DEFINIÇÃO USAR</span><p>A que responde à pergunta da comparação. O que foi comprometido no ano é a despesa empenhada. O que saiu do caixa é a despesa paga.</p></div>
+    </div>
+    <div class="col" style="gap:12px">
+      <table class="tab apertada">
+        <tr><th>MUNICÍPIO</th><th>POPULAÇÃO</th><th>EMPENHADA</th><th>PAGA</th></tr>
+        <tr><td><strong>A</strong></td><td>120.000</td><td>R$ 96,0 mi<span class="s">R$ 800 por hab.</span></td><td>R$ 89,4 mi<span class="s">R$ 745 por hab.</span></td></tr>
+        <tr><td><strong>B</strong></td><td>95.000</td><td>R$ 79,8 mi<span class="s">R$ 840 por hab.</span></td><td>R$ 66,5 mi<span class="s">R$ 700 por hab.</span></td></tr>
+        <tr><td><strong>C</strong></td><td>150.000</td><td>R$ 117,0 mi<span class="s">R$ 780 por hab.</span></td><td>R$ 115,5 mi<span class="s">R$ 770 por hab.</span></td></tr>
+      </table>
+      <div class="def"><span class="rot">Estágios da despesa pública</span>
+        <p>Empenho reserva a dotação para um credor (Lei 4.320/1964, art. 58). Liquidação verifica a entrega do bem ou serviço (art. 63). Pagamento quita a obrigação (art. 64). Os portais de transparência publicam os três valores.</p></div>
+    </div>
+  </div>
+  <p class="fonte-nota">Exemplo ilustrativo, com municípios e valores fictícios. Despesa com saúde em 2025. O município B fica em primeiro pela despesa empenhada e em último pela despesa paga.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 10.2 · Teoria</span>
-      <span class="pag">11 / 29</span>
+      <span class="pag">11 / 31</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="11">
     <span class="barra"></span>
-    <span class="eyebrow">CICLO 10.2 · DEMONSTRAÇÃO</span>
-    <h2>A ficha de fonte</h2>
-    <p class="sub">Um registro por fonte, e a comparação só existe depois que todas estão preenchidas</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Crie a ficha</strong><p>Diga: "execute atividade_modulo10.py com o comando fontes". Ele cria o formulário com as colunas da ficha.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Preencha uma linha por fonte</strong><p>Órgão, publicação, ano, endereço, definição do indicador e o valor extraído.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Rode a conferência</strong><p>O script recusa fonte sem endereço, sem ano e sem definição, e avisa quando os anos divergem entre as fontes.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Só então monte a comparação</strong><p>Com a ressalva escrita quando a definição não for a mesma nas três.</p></div>
-    </li></ol></div>
+    <span class="eyebrow">CICLO 10.2 · TEORIA</span>
+    <h2>O procedimento em quatro passos</h2>
+    <p class="sub">A fonte é localizada antes do número, e a definição é registrada junto com ele</p>
+    <div class="corpo"><div class="fluxo" style="--n:4">
+      <div class="etapa" style="--cor:#D4B277"><span class="n">1</span><h4>Definir o indicador</h4>
+        <p>Numerador, denominador e período, escritos antes da busca. Sem eles, qualquer número encontrado parece servir.</p>
+        <span class="arq">despesa liquidada ÷ população, 2025</span></div>
+      <div class="etapa" style="--cor:#FEC84D"><span class="n">2</span><h4>Levantar as fontes</h4>
+        <p>Pedir ao agente órgão, publicação e endereço de quem publica o indicador, sem números.</p>
+        <span class="arq">lista de fontes</span></div>
+      <div class="etapa" style="--cor:#0AB0AB"><span class="n">3</span><h4>Abrir e extrair</h4>
+        <p>O número entra na ficha a partir da fonte aberta por você, com o ano a que se refere.</p>
+        <span class="arq">valor_extraido · ano</span></div>
+      <div class="etapa" style="--cor:#8D0333"><span class="n">4</span><h4>Registrar a definição</h4>
+        <p>Como cada fonte define o indicador. É nesse campo que a divergência de medida aparece.</p>
+        <span class="arq">definicao_do_indicador</span></div>
+    </div>
+    <div class="def" style="margin-top:18px"><span class="rot">Fonte primária</span>
+      <p>Publicação do órgão que produziu o dado, como o Siconfi do Tesouro Nacional para as contas dos municípios ou o IBGE para a população estimada. Notícia e blog são fontes secundárias. A resposta de um modelo de linguagem indica onde procurar e não é citada como fonte.</p></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 10.2 · Demonstração</span>
-      <span class="pag">12 / 29</span>
+      <span class="centro">Ciclo 10.2 · Teoria</span>
+      <span class="pag">12 / 31</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="12">
     <span class="barra"></span>
+    <span class="eyebrow">CICLO 10.2 · DEMONSTRAÇÃO</span>
+    <h2>A ficha de fonte e o comando conferir</h2>
+    <p class="sub">A comparação só é escrita depois que a ficha passa pela conferência</p>
+    <div class="corpo"><div class="prompt compacto">
+    <span class="rot">DUAS EXECUÇÕES DO SCRIPT</span>
+    <p><span class="cmd">"execute atividade_modulo10.py com o comando fontes"</span> cria entregas/modulo10-fontes.csv. Depois de preenchida, <span class="cmd">"execute atividade_modulo10.py com o comando conferir"</span></p>
+  </div>
+  <div class="duascol" style="--esq:1.3fr;--dir:1fr;height:auto">
+    <div class="col" style="gap:8px">
+      <pre class="terminal">PROBLEMAS QUE PRECISAM SER CORRIGIDOS (2):
+<span class="hl">  - fontes, linha 4: ano precisa ter quatro digitos
+  - fontes, linha 4: definicao_do_indicador curta demais.</span>
+
+PONTOS PARA VOCE REVER (3):
+  - fontes, linha 4: o endereco nao parece um link
+  - os anos das fontes divergem (2025, 24). A comparacao
+    continua possivel, mas a ressalva precisa estar escrita.
+  - as definicoes do indicador nao sao identicas entre as
+    fontes. Declare isso na comparacao.
+
+O relatorio nao foi gerado. Corrija e execute 'conferir' de novo.</pre>
+      <p class="fonte-nota" style="position:static">Saída do script, abreviada, com dados fictícios. Linha 4 da ficha com ano digitado como 24 e definição "Gasto com saude". Execução feita depois do ciclo 10.3. Antes dele, o comando acusa também a falta da codificação e do livro de códigos.</p>
+    </div>
+    <div class="col" style="gap:10px">
+      <div class="caixa vinho"><span class="rot">O SCRIPT RECUSA</span><p>Linha com publicador, publicação, endereço, definição ou valor vazio. Ano sem quatro dígitos. Definição com menos de 20 caracteres. Menos de três organizações.</p></div>
+      <div class="caixa dourado"><span class="rot">O SCRIPT AVISA</span><p>Endereço que não parece link, anos diferentes e definições diferentes entre as fontes. O aviso não impede o relatório e pede a ressalva escrita.</p></div>
+      <div class="caixa teal"><span class="rot">UMA LINHA POR ORGANIZAÇÃO</span><p>organizacao, orgao_publicador, publicacao, ano, endereco, definicao_do_indicador e valor_extraido.</p></div>
+    </div>
+  </div></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 10.2 · Demonstração</span>
+      <span class="pag">13 / 31</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="13">
+    <span class="barra"></span>
     <span class="eyebrow">CICLO 10.2 · PRÁTICA</span>
     <h2>Sua vez: três organizações comparadas</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Defina o indicador da comparação</strong><p>Numerador, denominador e período, escritos antes de procurar qualquer coisa.</p></div>
+      <div><strong>Defina o indicador</strong><p>Numerador, denominador e período, escritos antes de procurar qualquer número.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Levante as fontes e abra cada uma</strong><p>As duas organizações comparáveis que você trouxe, mais a sua.</p></div>
+      <div><strong>Crie a ficha de fontes</strong><p>"execute atividade_modulo10.py com o comando fontes". Uma linha para a sua organização e uma para cada uma das duas comparáveis.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Preencha a ficha de fontes</strong><p>Com a definição que cada fonte usa para o indicador.</p></div>
+      <div><strong>Abra cada fonte e preencha a linha</strong><p>Publicador, publicação, ano com quatro dígitos, endereço, definição usada pela fonte e valor lido nela.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Escreva a comparação com a ressalva</strong><p>Se as definições divergem, a comparação continua possível: o que muda é o que se pode concluir dela.</p></div>
+      <div><strong>Confira e escreva a comparação</strong><p>"execute atividade_modulo10.py com o comando conferir". Corrija as linhas de fontes recusadas. Com anos ou definições diferentes, a ressalva diz o que a comparação deixa de sustentar.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 10.2 · Prática</span>
-      <span class="pag">13 / 29</span>
+      <span class="pag">14 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="13">
+<section class="slide conteudo" data-i="14">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 10.2 · ENTREGA</span>
     <h2>Comparação de três organizações</h2>
@@ -524,440 +666,478 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>O indicador definido antes da busca.</li><li>A ficha com as três fontes: órgão, publicação, ano, endereço e definição.</li><li>A tabela comparativa com os valores extraídos por você.</li><li>A ressalva escrita sobre divergência de período ou de definição.</li></ul>
+      <ul><li>O indicador, com numerador, denominador e período, definido antes da busca.</li><li>A ficha com as três organizações e todas as colunas preenchidas.</li><li>A tabela comparativa com os valores lidos por você.</li><li>A ressalva escrita sobre período ou definição divergente.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>entregas/modulo10-fontes.csv\nentregas/modulo10-ciclo2-comparacao.md</p>
+        <p><span class="mono" style="font-size:15px">entregas/modulo10-fontes.csv<br>entregas/modulo10-ciclo2-comparacao.md</span></p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Número copiado da resposta do modelo, sem a fonte aberta, zera o item. É o mesmo critério do encontro 4.</p>
+        <p>Número copiado da resposta do modelo, sem a fonte aberta, zera o item. Linha recusada pelo comando conferir também não conta.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 10.2 · Entrega</span>
-      <span class="pag">14 / 29</span>
+      <span class="pag">15 / 31</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="14">
+<section class="slide divisor" data-i="15">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">10.3</span></div>
       <div class="dir">
         <h2>Análise de conteúdo de respostas abertas</h2>
         <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">15 / 29</span>
+      <span class="pag">16 / 31</span>
     </section>
-<section class="slide conteudo" data-i="15">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 10.3 · TEORIA</span>
-    <h2>O livro de códigos</h2>
-    <p class="sub">A categorização só é defensável se as categorias foram definidas antes e por escrito</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">O QUE É</header>
-      <h3>A lista de categorias, com regra de uso</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que tem</span>
-          <p>Nome da categoria, definição em uma frase, dois exemplos que entram e um exemplo que não entra.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Por que importa</span>
-          <p>É o que permite outra pessoa categorizar do mesmo jeito, e é o que se apresenta quando alguém discorda.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">DE ONDE VEM</header>
-      <h3>Da teoria, dos dados, ou dos dois</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Categoria da teoria</span>
-          <p>Definida antes, a partir da literatura. Bom para comparar com outros estudos.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Categoria dos dados</span>
-          <p>Surge da leitura das respostas. Bom para descobrir o que você não esperava.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">A REGRA</header>
-      <h3>Exaustiva e mutuamente exclusiva</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que significa</span>
-          <p>Toda resposta cabe em alguma categoria, e nenhuma cabe em duas ao mesmo tempo.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Na prática</span>
-          <p>Se muitas caem em "outros", falta categoria. Se muitas cabem em duas, as definições estão frouxas.</p>
-        </div>
-    </article></div></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 10.3 · Teoria</span>
-      <span class="pag">16 / 29</span>
-    </footer>
-  </section>
 <section class="slide conteudo" data-i="16">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 10.3 · TEORIA</span>
-    <h2>A dupla codificação</h2>
-    <p class="sub">A técnica que transforma opinião sobre as respostas em análise defensável</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Duas codificações independentes da mesma amostra</strong><p>Você categoriza vinte respostas. O agente categoriza as mesmas vinte, sem ver as suas. Ou dois alunos fazem o mesmo.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>A concordância se mede</strong><p>Catorze das vinte respostas com a mesma categoria nas duas codificações são 70%, o piso aceitável. Treze, 65%, já ficam abaixo: o livro de códigos está frouxo, não os dois codificadores.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>A divergência é o que se examina</strong><p>Cada caso em que as duas discordaram aponta uma definição ambígua. Corrija a definição, e não o caso.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Depois de ajustar, recodifique</strong><p>A segunda rodada mede se o ajuste funcionou. É o mesmo procedimento das duas rodadas do encontro 5.</p></div>
-    </li></ol></div>
+    <h2>O livro de códigos</h2>
+    <p class="sub">Cada categoria tem nome, definição em uma frase, exemplos que entram e um exemplo que não entra</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.08fr;--dir:1fr">
+    <div class="col">
+      <div class="def"><span class="rot">Análise de conteúdo (content analysis)</span>
+        <p>Conjunto de técnicas que descreve o conteúdo de mensagens por procedimentos sistemáticos, como a classificação em categorias definidas (Bardin, 1977). O livro de códigos (codebook) registra as categorias e as regras de uso.</p></div>
+      <pre class="codigo"><b>### 3. Informacao</b>
+
+Definicao: a resposta aponta orientacao ausente,
+errada ou desatualizada, em qualquer canal.
+
+Entram, por exemplo:
+- O site informa um horario diferente do real.
+- Ninguem soube dizer quais documentos trazer.
+
+Nao entra, por exemplo:
+- O aplicativo trava (vai para canal digital, porque
+  a falha esta no funcionamento do aplicativo)</pre>
+    </div>
+    <div class="col">
+      <div class="caixa dourado"><span class="rot">DE ONDE VÊM AS CATEGORIAS</span><p>Da literatura, definidas antes da leitura (categorias dedutivas), ou da leitura das próprias respostas (indutivas). O script pede a leitura de trinta respostas antes da definição.</p></div>
+      <ul class="legenda">
+        <li><i class="badge">1</i><span><b>Exaustiva.</b> Toda resposta cabe em alguma categoria. Muitas respostas em "outros" indicam categoria faltando.</span></li>
+        <li><i class="badge">2</i><span><b>Mutuamente exclusiva.</b> Nenhuma resposta cabe em duas. Muitas respostas em duas indicam definição frouxa.</span></li>
+        <li><i class="badge">3</i><span><b>Entre quatro e sete categorias.</b> O comando conferir avisa quando o livro tem menos de quatro títulos no formato <span class="mono" style="white-space:nowrap">### 1. Nome</span>.</span></li>
+      </ul>
+      <div class="caixa teal"><span class="rot">MODELO CRIADO PELO SCRIPT</span><p>O comando codificar cria entregas/modulo10-livro-de-codigos.md com quatro categorias em branco. O comando conferir recusa o livro enquanto houver campo PREENCHER.</p></div>
+    </div>
+  </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 10.3 · Teoria</span>
-      <span class="pag">17 / 29</span>
+      <span class="pag">17 / 31</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="17">
     <span class="barra"></span>
-    <span class="eyebrow">CICLO 10.3 · DEMONSTRAÇÃO</span>
-    <h2>O script mede a concordância</h2>
-    <p class="sub">Você codifica, o agente codifica, e o script compara</p>
-    <div class="corpo"><div class="prompt">
-    <span class="rot">A SEQUÊNCIA</span>
-    <p>(1) "execute atividade_modulo10.py com o comando codificar dados/respostas.csv" — sorteia vinte respostas e cria entregas/modulo10-codificacao.csv com duas colunas vazias: a sua e a do agente.\n\n(2) Você preenche a sua coluna sem olhar nada. Depois pede ao agente para preencher a dele, informando o livro de códigos e proibindo que ele veja a sua coluna.\n\n(3) "execute atividade_modulo10.py com o comando concordancia" — calcula a taxa e lista os casos divergentes.</p>
-  </div></div>
+    <span class="eyebrow">CICLO 10.3 · TEORIA</span>
+    <h2>A dupla codificação</h2>
+    <p class="sub">Duas codificações independentes da mesma amostra, comparadas por script</p>
+    <div class="corpo"><svg class="fig" viewBox="0 0 1168 222" xmlns="http://www.w3.org/2000/svg">
+  <defs><marker id="dc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8D0333"/></marker></defs>
+  <rect x="0" y="48" width="190" height="66" fill="#fff" stroke="#D4B277" stroke-width="2.5"/>
+  <text x="95" y="76" text-anchor="middle" font-size="16" font-weight="700" fill="#1A1A1A">Amostra de 20</text>
+  <text x="95" y="98" text-anchor="middle" font-size="13.5" fill="#8D0333" font-family="Consolas,monospace">codificar</text>
+  <rect x="250" y="2" width="230" height="62" fill="#fff" stroke="#0AB0AB" stroke-width="2.5"/>
+  <text x="365" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#1A1A1A">Sua codificação</text>
+  <text x="365" y="50" text-anchor="middle" font-size="13.5" fill="#8D0333" font-family="Consolas,monospace">categoria_aluno</text>
+  <rect x="250" y="98" width="230" height="62" fill="#fff" stroke="#0AB0AB" stroke-width="2.5"/>
+  <text x="365" y="124" text-anchor="middle" font-size="16" font-weight="700" fill="#1A1A1A">Segunda codificação</text>
+  <text x="365" y="146" text-anchor="middle" font-size="13.5" fill="#8D0333" font-family="Consolas,monospace">categoria_agente</text>
+  <rect x="540" y="48" width="200" height="66" fill="#fff" stroke="#FEC84D" stroke-width="2.5"/>
+  <text x="640" y="76" text-anchor="middle" font-size="16" font-weight="700" fill="#1A1A1A">Comparação</text>
+  <text x="640" y="98" text-anchor="middle" font-size="13.5" fill="#8D0333" font-family="Consolas,monospace">concordancia</text>
+  <polygon points="880,26 960,81 880,136 800,81" fill="#8D0333"/>
+  <text x="880" y="78" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">70% ou</text>
+  <text x="880" y="96" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">mais?</text>
+  <rect x="1020" y="48" width="148" height="66" fill="#CFEFEE" stroke="#0AB0AB" stroke-width="2.5"/>
+  <text x="1094" y="76" text-anchor="middle" font-size="16" font-weight="700" fill="#1A1A1A">Relatório</text>
+  <text x="1094" y="98" text-anchor="middle" font-size="13.5" fill="#8D0333" font-family="Consolas,monospace">conferir</text>
+  <g stroke="#8D0333" stroke-width="2.5" fill="none">
+    <path d="M192,70 L246,38" marker-end="url(#dc)"/><path d="M192,92 L246,124" marker-end="url(#dc)"/>
+    <path d="M482,38 L536,70" marker-end="url(#dc)"/><path d="M482,124 L536,92" marker-end="url(#dc)"/>
+    <path d="M742,81 L796,81" marker-end="url(#dc)"/><path d="M962,81 L1016,81" marker-end="url(#dc)"/>
+  </g>
+  <text x="989" y="72" text-anchor="middle" font-size="13" font-weight="700" fill="#0a8f8a">sim</text>
+  <path d="M880,138 C880,196 365,196 365,166" stroke="#C9962E" stroke-width="2.5" stroke-dasharray="7 5" fill="none" marker-end="url(#dc)"/>
+  <text x="640" y="216" text-anchor="middle" font-size="14" fill="#8a6514" font-style="italic">abaixo de 70%, examinar as divergências, ajustar a definição e codificar de novo</text>
+</svg>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:12px;grid-template-columns:1fr 1fr 1fr">
+      <div class="caixa dourado"><span class="rot">O LIMITE DO SCRIPT</span><p>14 de 20 respostas com a mesma categoria são 70%, o mínimo. Com 13 de 20, ou 65%, cada divergência precisa de texto em divergencia_examinada.</p></div>
+      <div class="caixa teal"><span class="rot">O QUE SE CORRIGE</span><p>A definição da categoria que gerou a divergência. As duas codificações do caso ficam registradas como estavam.</p></div>
+      <div class="caixa vinho"><span class="rot">O AGENTE COMO CODIFICADOR</span><p>Modelos superaram anotadores contratados em tarefas de classificação (Gilardi, Alizadeh e Kubli, 2023) e mudaram a classificação com a mesma entrada repetida (Reiss, 2023).</p></div>
+    </div>
+    <p class="fonte-nota">Gilardi, Alizadeh e Kubli (2023), PNAS, v. 120, n. 30, e2305016120. Reiss (2023), arXiv:2304.11085. O script prevê o agente na segunda coluna. Um colega pode preenchê-la no lugar dele.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 10.3 · Demonstração</span>
-      <span class="pag">18 / 29</span>
+      <span class="centro">Ciclo 10.3 · Teoria</span>
+      <span class="pag">18 / 31</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="18">
     <span class="barra"></span>
-    <span class="eyebrow">CICLO 10.3 · PRÁTICA</span>
-    <h2>Sua vez: livro de códigos e dupla codificação</h2>
-    <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Leia trinta respostas antes de definir qualquer coisa</strong><p>Sem categorizar. Só ler. As categorias precisam vir do material.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Escreva o livro de códigos</strong><p>Entre quatro e sete categorias, com definição e exemplos. Mais que sete ninguém aplica com consistência.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Faça a dupla codificação de vinte respostas</strong><p>A sua primeiro, depois a do agente.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Meça, examine as divergências e ajuste</strong><p>Corrija as definições ambíguas e registre o que mudou.</p></div>
-    </li></ol></div>
+    <span class="eyebrow">CICLO 10.3 · TEORIA</span>
+    <h2>Concordância observada e concordância ao acaso</h2>
+    <p class="sub">Parte da concordância percentual ocorreria mesmo com categorias atribuídas ao acaso</p>
+    <div class="corpo"><div class="duascol" style="--esq:1fr;--dir:1fr">
+    <div class="col" style="gap:10px"><table class="tab apertada">
+<tr><th>VOCÊ × AGENTE</th><th>TEMPO</th><th>CONDUTA</th><th>INFORMAÇÃO</th><th>CANAL</th><th>TOTAL</th></tr>
+<tr><td><strong>tempo</strong></td><td class="lac">2</td><td>2</td><td>0</td><td>0</td><td><strong>4</strong></td></tr>
+<tr><td><strong>conduta</strong></td><td>0</td><td class="lac">6</td><td>0</td><td>0</td><td><strong>6</strong></td></tr>
+<tr><td><strong>informação</strong></td><td>0</td><td>1</td><td class="lac">1</td><td>2</td><td><strong>4</strong></td></tr>
+<tr><td><strong>canal</strong></td><td>0</td><td>0</td><td>0</td><td class="lac">6</td><td><strong>6</strong></td></tr>
+<tr><td><strong>total</strong></td><td><strong>2</strong></td><td><strong>9</strong></td><td><strong>1</strong></td><td><strong>8</strong></td><td><strong>20</strong></td></tr>
+</table>
+      <div class="caixa teal"><span class="rot">CÁLCULO</span>
+        <p>Concordância observada Po = 15 ÷ 20 = 0,75.<br>Ao acaso Pe = (4×2 + 6×9 + 4×1 + 6×8) ÷ 400 = 114 ÷ 400 = 0,285.<br>κ = (0,75 − 0,285) ÷ (1 − 0,285) = 0,465 ÷ 0,715 = 0,65.</p></div>
+    </div>
+    <div class="col" style="gap:12px">
+      <div class="def"><span class="rot">Kappa de Cohen (Cohen's kappa)</span>
+        <p>Concordância observada descontada da concordância esperada ao acaso, que depende de quantas vezes cada codificador usou cada categoria (Cohen, 1960). Vale 1 com acordo total e 0 com acordo igual ao do acaso.</p></div>
+      <div class="caixa dourado"><span class="rot">CATEGORIAS LARGAS DEMAIS</span><p>Com duas categorias e 18 das 20 respostas em "positivo" para os dois codificadores, Pe = (18×18 + 2×2) ÷ 400 = 0,82. Uma concordância de 90% equivale a κ = 0,44.</p></div>
+      <div class="caixa vinho"><span class="rot">O QUE O SCRIPT MEDE</span><p>Só a concordância percentual, com limite de 70%. Em pesquisa publicada, Krippendorff (2018) recomenda medida corrigida pelo acaso de 0,80 ou mais.</p></div>
+    </div>
+  </div>
+  <p class="fonte-nota">Dados fictícios, os mesmos 20 casos da demonstração. Diagonal destacada com as 15 concordâncias. Três das cinco divergências estão na linha "informação".</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 10.3 · Prática</span>
-      <span class="pag">19 / 29</span>
+      <span class="centro">Ciclo 10.3 · Teoria</span>
+      <span class="pag">19 / 31</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="19">
     <span class="barra"></span>
+    <span class="eyebrow">CICLO 10.3 · DEMONSTRAÇÃO</span>
+    <h2>O script mede a concordância</h2>
+    <p class="sub">Você codifica primeiro, o agente codifica sem ver a sua coluna, e o script compara</p>
+    <div class="corpo"><div class="prompt compacto">
+    <span class="rot">INSTRUÇÃO AO AGENTE, DEPOIS DA SUA COLUNA PREENCHIDA</span>
+    <p>"Leia o livro de códigos em entregas/modulo10-livro-de-codigos.md e preencha a coluna categoria_agente de entregas/modulo10-codificacao.csv. Não consulte a coluna categoria_aluno."</p>
+  </div>
+  <div class="duascol" style="--esq:1.05fr;--dir:1fr;height:auto">
+    <div class="col" style="gap:8px">
+      <pre class="terminal">  Respostas na amostra:         20
+  Codificadas nas duas colunas: 20
+  Concordancias:                15
+  Divergencias:                 5
+<span class="hl">  Taxa de concordancia:         75.0%</span>
+
+CASOS DIVERGENTES:
+  #7   voce: informacao       agente: canal digital
+       O site informa um horario de funcionamento diferente
+  #15  voce: tempo de espera  agente: conduta do servidor
+       Demorou muito para ser atendido, mais de uma hora.</pre>
+      <p class="fonte-nota" style="position:static">Saída de <span class="mono">"execute atividade_modulo10.py com o comando concordancia"</span>, abreviada, com 20 respostas fictícias de uma pesquisa de satisfação. Três dos cinco casos divergentes foram omitidos.</p>
+    </div>
+    <div class="col" style="gap:10px">
+      <div class="caixa dourado"><span class="rot">ACIMA DE 70%</span><p>O script não exige o exame. As divergências continuam úteis para revisar o livro.</p></div>
+      <div class="caixa teal"><span class="rot">LEITURA DAS DIVERGÊNCIAS</span><p>Nos casos 7 e 10, site e folheto desatualizados aparecem como informação para um e canal digital para o outro. A definição precisa dizer onde fica o conteúdo errado publicado em canal digital.</p></div>
+      <div class="caixa vinho"><span class="rot">DADO PESSOAL</span><p>As respostas vão ao servidor do provedor. Nome, CPF, telefone e e-mail citados no texto saem antes do comando codificar.</p></div>
+    </div>
+  </div></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 10.3 · Demonstração</span>
+      <span class="pag">20 / 31</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="20">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 10.3 · PRÁTICA</span>
+    <h2>Sua vez: livro de códigos e dupla codificação</h2>
+    <p class="sub">Individual</p>
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
+    <li><span class="num">1</span>
+      <div><strong>Prepare a amostra</strong><p>"execute atividade_modulo10.py com o comando codificar dados/RESPOSTAS.csv", com o nome do seu arquivo. O script sorteia 20 respostas com semente fixa.</p></div>
+    </li>
+    <li><span class="num">2</span>
+      <div><strong>Leia trinta respostas e escreva o livro</strong><p>Entre quatro e sete categorias em entregas/modulo10-livro-de-codigos.md, sem nenhum campo PREENCHER.</p></div>
+    </li>
+    <li><span class="num">3</span>
+      <div><strong>Faça as duas codificações</strong><p>A sua em categoria_aluno, sem consultar nada. Depois o agente em categoria_agente, com o livro e a instrução de não ler a sua coluna.</p></div>
+    </li>
+    <li><span class="num">4</span>
+      <div><strong>Meça e examine as divergências</strong><p>"execute atividade_modulo10.py com o comando concordancia". Abaixo de 70%, escreva em divergencia_examinada a definição ambígua e o ajuste feito.</p></div>
+    </li></ol></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 10.3 · Prática</span>
+      <span class="pag">21 / 31</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="21">
+    <span class="barra"></span>
     <span class="eyebrow">CICLO 10.3 · ENTREGA</span>
-    <h2>Livro de códigos e categorização</h2>
+    <h2>Livro de códigos e codificação</h2>
     
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>O livro de códigos, com definição e exemplos por categoria.</li><li>A dupla codificação de vinte respostas.</li><li>A taxa de concordância medida.</li><li>Os casos divergentes, com o ajuste feito na definição.</li><li>A distribuição final das categorias, em contagem e percentual.</li></ul>
+      <ul><li>O livro de códigos, com definição e exemplos de cada categoria.</li><li>A dupla codificação das 20 respostas da amostra.</li><li>A taxa de concordância medida pelo script.</li><li>Os casos divergentes, com o ajuste feito na definição.</li><li>A distribuição das categorias, em contagem e percentual, no relatório do comando conferir.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>entregas/modulo10-livro-de-codigos.md\nentregas/modulo10-codificacao.csv</p>
+        <p><span class="mono" style="font-size:15px">entregas/modulo10-livro-de-codigos.md<br>entregas/modulo10-codificacao.csv<br>entregas/modulo10-relatorio.md</span></p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Categorização sem dupla codificação é opinião sobre as respostas. Concordância abaixo de 70% sem ajuste registrado zera o item. O limite não é nota, é gatilho: abaixo dele, quase sempre a definição da categoria estava ambígua, não o colega estava errado.</p>
+        <p>Categorização sem dupla codificação não conta. Concordância abaixo de 70% com divergência sem exame registrado zera o item, e o comando conferir não gera o relatório.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 10.3 · Entrega</span>
-      <span class="pag">20 / 29</span>
+      <span class="pag">22 / 31</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="20">
+<section class="slide divisor" data-i="22">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">10.4</span></div>
       <div class="dir">
-        <h2>Legislação e o teste de alucinação jurídica</h2>
-        <p class="etapas">Teoria · Prática · Entrega</p>
+        <h2>Legislação e conferência na fonte oficial</h2>
+        <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">21 / 29</span>
+      <span class="pag">23 / 31</span>
     </section>
-<section class="slide conteudo" data-i="21">
+<section class="slide conteudo" data-i="23">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 10.4 · TEORIA</span>
-    <h2>Por que legislação é o pior terreno para confiar no modelo</h2>
-    <p class="sub">Três características que multiplicam o risco de erro</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">A NUMERAÇÃO</header>
-      <h3>Artigo, inciso e alínea são fáceis de trocar</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Por quê</span>
-          <p>A estrutura é regular e o modelo reproduz a forma com facilidade. Trocar o número do artigo não muda a aparência da resposta.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O efeito</span>
-          <p>A definição citada está certa e o artigo indicado está errado. Foi o caso do encontro 4.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">A VIGÊNCIA</header>
-      <h3>A lei muda e o texto antigo continua circulando</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Por quê</span>
-          <p>Alteração, revogação parcial e medida provisória convivem com o texto original em toda a internet.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O efeito</span>
-          <p>A resposta reproduz a redação anterior, que continua sendo a mais citada nas fontes.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">A APLICAÇÃO</header>
-      <h3>O texto da lei não é a prática do órgão</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Por quê</span>
-          <p>Entre a norma e o caso há regulamento, portaria, entendimento do controle e jurisprudência.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O efeito</span>
-          <p>A resposta correta em tese pode ser inaplicável no seu órgão, e o modelo não tem como saber disso.</p>
-        </div>
-    </article></div></div>
+    <h2>Por que citação de lei exige conferência</h2>
+    <p class="sub">Três características do texto normativo que tornam o erro difícil de perceber</p>
+    <div class="corpo"><table class="tab">
+      <tr><th style="width:15%">CARACTERÍSTICA</th><th style="width:38%">POR QUE A RESPOSTA ERRADA PARECE CERTA</th><th style="width:47%">EXEMPLO NA LEI DE LICITAÇÕES</th></tr>
+      <tr><td><strong>Numeração</strong></td><td>Artigo, inciso e alínea seguem estrutura regular. Trocar o número não muda a aparência da resposta.</td>
+          <td>A definição de pregão está no art. 6º, XLI, da Lei 14.133/2021. A resposta pode indicar o art. 28, que lista as modalidades.</td></tr>
+      <tr><td><strong>Vigência</strong></td><td>Texto revogado ou alterado continua reproduzido em sites, apostilas e dados de treino.</td>
+          <td>A Lei 8.666/1993 foi revogada em 30/12/2023 (Lei 14.133/2021, art. 193, II, a, com redação da LC 198/2023) e segue citada.</td></tr>
+      <tr><td><strong>Aplicação</strong></td><td>Entre a lei e o caso há decreto, portaria, entendimento do órgão de controle e jurisprudência.</td>
+          <td>O art. 75, II, traz R$ 50.000,00 para dispensa em compras. O valor para 2026 é R$ 65.492,11, fixado pelo Decreto 12.807/2025.</td></tr>
+    </table>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:14px">
+      <div class="caixa teal"><span class="rot">ESTUDO</span><p>Em perguntas verificáveis sobre decisões de tribunais federais dos EUA, os modelos testados alucinaram em 69% a 88% das respostas (Dahl et al., 2024).</p></div>
+      <div class="caixa vinho"><span class="rot">TRIBUNAIS</span><p>O TSE multou em cinco salários mínimos um advogado que citou julgados inexistentes gerados por IA (processo 0600352-15.2024.6.05.0067). A base de Charlotin listava 1.058 casos nos EUA em junho de 2026.</p></div>
+    </div>
+    <p class="fonte-nota">Dahl, Magesh, Suzgun e Ho (2024), Journal of Legal Analysis, v. 16, p. 64. Migalhas, 02/11/2025. UNC Law Library, jun. 2026 (damiencharlotin.com/hallucinations). TCU, Licitações e Contratos, 3.6.1. Decreto 12.807/2025 (camara.leg.br). Consulta em 02/11/2026.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 10.4 · Teoria</span>
-      <span class="pag">22 / 29</span>
-    </footer>
-  </section>
-<section class="slide conteudo" data-i="22">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 10.4 · DEMONSTRAÇÃO</span>
-    <h2>O teste em três passos</h2>
-    <p class="sub">A rotina para qualquer citação normativa que vá para um documento assinado</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Peça com o dispositivo e o texto literal</strong><p>"Informe o artigo, o inciso e transcreva o texto literal. Se não tiver certeza do dispositivo, escreva NÃO SEI."</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Abra a norma na fonte oficial</strong><p>O Planalto para lei federal, o Diário Oficial do estado ou do município para as demais. Nunca um site de resumo.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Confira o dispositivo e a redação vigente</strong><p>O texto transcrito bate? O artigo é esse? Há nota de alteração posterior?</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Registre o resultado</strong><p>Confirmado, dispositivo errado, redação desatualizada ou inexistente. É a mesma classificação do diário de alucinação.</p></div>
-    </li></ol></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 10.4 · Demonstração</span>
-      <span class="pag">23 / 29</span>
-    </footer>
-  </section>
-<section class="slide conteudo" data-i="23">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 10.4 · PRÁTICA</span>
-    <h2>Sua vez: resumo legislativo conferido e fechamento da B2</h2>
-    <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Escolha uma norma que regula o seu projeto</strong><p>Lei, decreto, resolução ou portaria que afeta a organização escolhida.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Produza o resumo com dispositivo e texto literal</strong><p>Cinco obrigações que ela impõe, no máximo.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Confira as cinco na fonte oficial</strong><p>E classifique cada uma. Não encontrar nenhum erro é um resultado válido: escreva isso, não invente um.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Rode a conferência da B2</strong><p>Diga: "execute atividade_modulo10.py com o comando b2". Corrija o que aparecer e publique.</p></div>
-    </li></ol></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 10.4 · Prática</span>
-      <span class="pag">24 / 29</span>
+      <span class="pag">24 / 31</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="24">
     <span class="barra"></span>
+    <span class="eyebrow">CICLO 10.4 · DEMONSTRAÇÃO</span>
+    <h2>O teste em três passos</h2>
+    <p class="sub">Saída ilustrativa sobre a Lei 14.133/2021, conferida no texto oficial</p>
+    <div class="corpo"><div class="prompt compacto">
+    <span class="rot">PASSO 1 · INSTRUÇÃO</span>
+    <p>"Informe a lei, o artigo e o inciso e transcreva o texto literal. Se não tiver certeza do dispositivo, escreva NÃO SEI."</p>
+  </div>
+  <table class="tab">
+    <tr><th style="width:17%">PEDIDO</th><th style="width:24%">RESPOSTA DO MODELO</th><th style="width:37%">PASSO 2 · CONFERÊNCIA NO PLANALTO</th><th style="width:22%">PASSO 3 · CLASSE</th></tr>
+    <tr><td>Definição de pregão</td><td>Lei 14.133/2021, art. 28</td><td>O art. 28 lista as modalidades. A definição está no art. 6º, XLI.</td><td><span class="chip ruim">DISPOSITIVO ERRADO</span></td></tr>
+    <tr><td>Limite de dispensa para compras</td><td>Lei 8.666/1993, art. 24, II</td><td>Lei revogada em 30/12/2023.</td><td><span class="chip ruim">REDAÇÃO DESATUALIZADA</span></td></tr>
+    <tr><td>O mesmo limite na lei vigente</td><td>Lei 14.133/2021, art. 75, II, R$ 50.000,00</td><td>Texto literal confere. O valor é atualizado todo ano por decreto (art. 182).</td><td><span class="chip med">CONFIRMADO COM RESSALVA</span></td></tr>
+  </table>
+  <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:14px">
+    <div class="caixa dourado"><span class="rot">AS QUATRO CLASSES</span><p>Confirmado, dispositivo errado, redação desatualizada e inexistente. Elas detalham o veredito "incorreto" do diário de alucinação do módulo 3.</p></div>
+    <div class="caixa teal"><span class="rot">ONDE CONFERIR</span><p>Planalto, no texto compilado, para lei federal. Diário oficial do estado ou do município para as demais normas. Site de resumo não é fonte oficial.</p></div>
+  </div></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 10.4 · Demonstração</span>
+      <span class="pag">25 / 31</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="25">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 10.4 · PRÁTICA</span>
+    <h2>Sua vez: resumo legislativo conferido e B2</h2>
+    <p class="sub">Individual</p>
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
+    <li><span class="num">1</span>
+      <div><strong>Escolha uma norma que regula o seu projeto</strong><p>Lei, decreto, resolução ou portaria que afeta a organização escolhida.</p></div>
+    </li>
+    <li><span class="num">2</span>
+      <div><strong>Peça o resumo com dispositivo e texto literal</strong><p>No máximo cinco obrigações, com a frase que autoriza o NÃO SEI.</p></div>
+    </li>
+    <li><span class="num">3</span>
+      <div><strong>Confira as cinco na fonte oficial e classifique</strong><p>Nas quatro classes. Se nenhum erro aparecer, registre esse resultado.</p></div>
+    </li>
+    <li><span class="num">4</span>
+      <div><strong>Grave e rode as duas conferências</strong><p>entregas/modulo10-ciclo4-legislacao.md. Depois "execute atividade_modulo10.py com o comando conferir" e "execute atividade_modulo10.py com o comando b2".</p></div>
+    </li></ol></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 10.4 · Prática</span>
+      <span class="pag">26 / 31</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="26">
+    <span class="barra"></span>
     <span class="eyebrow">CICLO 10.4 · ENTREGA B2</span>
-    <h2>Entrega B2: vale 40% da nota 2</h2>
+    <h2>Entrega B2, 40% da nota 2</h2>
     
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>Decomposição da tarefa, modelo com variáveis, ponto de conferência e fluxo medido, do encontro 10.</li><li>Síntese em camadas com trechos de origem, deste encontro.</li><li>Comparação de três organizações com ficha de fontes.</li><li>Livro de códigos e dupla codificação com concordância medida.</li><li>Resumo legislativo com as cinco citações conferidas na fonte oficial.</li></ul>
+      <ul><li>Os quatro itens do encontro 10 (decomposição, modelo, conferência e relatório do fluxo).</li><li>A síntese em camadas com trechos de origem.</li><li>A comparação de três organizações com ficha de fontes.</li><li>O livro de códigos e a dupla codificação.</li><li>O resumo legislativo com as citações conferidas.</li><li>O repositório publicado.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>Repositório publicado, com a mensagem "entrega B2", hoje, antes do fim do encontro.</p>
+        <p><span class="mono" style="font-size:15px">entregas/modulo10-ciclo4-legislacao.md<br>entregas/B2-relatorio.md</span><br><span style="font-size:15px">Gravação com a mensagem "entrega B2", publicada até o fim do encontro.</span></p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>A nota 2 é a média ponderada de B1 e B2. Citação normativa não conferida na fonte oficial zera o item correspondente.</p>
+        <p>O comando b2 confere dez itens e grava o relatório. A nota 2 é a média ponderada de B1 e B2. Citação normativa não conferida na fonte oficial zera o item correspondente.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Entrega avaliada</span>
-      <span class="pag">25 / 29</span>
+      <span class="centro">Ciclo 10.4 · Entrega</span>
+      <span class="pag">27 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="25">
+<section class="slide conteudo" data-i="27">
     <span class="barra"></span>
     <span class="eyebrow">BALANÇO</span>
-    <h2>O que você tem ao fim do bloco</h2>
+    <h2>O que você tem ao fim do encontro</h2>
     
-    <div class="corpo"><div class="cards cols-3">
+    <div class="corpo"><div class="cards cols-4">
     <article class="card">
       <header style="background:#D4B277">A LEITURA</header>
-      <h3>Em camadas, com trecho de origem</h3>
-      
+      <h3>Camadas com trecho de origem</h3>
         <div class="bloco">
           <span class="rule" style="background:#D4B277"></span>
           <span class="rot">O que é</span>
-          <p>Quatro passagens sobre o documento, cada uma com produto próprio e conferível.</p>
+          <p>Mapa, extração, análise e síntese, com cada item localizável no documento.</p>
         </div>
         <div class="bloco">
           <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Para que serve</span>
-          <p>É o método para edital, contrato, relatório e qualquer documento que você precise dominar rápido.</p>
+          <span class="rot">Uso seguinte</span>
+          <p>Edital, contrato e relatório que precisam ser lidos com prazo.</p>
         </div>
     </article>
     <article class="card">
       <header style="background:#0AB0AB">A PESQUISA</header>
       <h3>Comparação com definição declarada</h3>
-      
         <div class="bloco">
           <span class="rule" style="background:#0AB0AB"></span>
           <span class="rot">O que é</span>
-          <p>Três fontes abertas por você, com o ano e a definição de cada uma registrados.</p>
+          <p>Três fontes abertas por você, com ano e definição registrados na ficha.</p>
         </div>
         <div class="bloco">
           <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Para que serve</span>
-          <p>É o que separa comparação defensável de números lado a lado que não podem estar juntos.</p>
+          <span class="rot">Uso seguinte</span>
+          <p>Qualquer número de outra organização citado em relatório.</p>
         </div>
     </article>
     <article class="card">
       <header style="background:#FEC84D">A CATEGORIZAÇÃO</header>
-      <h3>Livro de códigos e concordância medida</h3>
-      
+      <h3>Livro de códigos e concordância</h3>
         <div class="bloco">
           <span class="rule" style="background:#FEC84D"></span>
           <span class="rot">O que é</span>
-          <p>Categorias definidas antes, aplicadas duas vezes, com a divergência examinada.</p>
+          <p>Categorias definidas antes, aplicadas duas vezes e com as divergências examinadas.</p>
         </div>
         <div class="bloco">
           <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Para que serve</span>
-          <p>É o procedimento de análise qualitativa que se cobra em pesquisa e em relatório de ouvidoria.</p>
+          <span class="rot">Uso seguinte</span>
+          <p>Relatório de ouvidoria e pesquisa de satisfação.</p>
+        </div>
+    </article>
+    <article class="card">
+      <header style="background:#9fd6c4">A CONFERÊNCIA</header>
+      <h3>Citação normativa na fonte oficial</h3>
+        <div class="bloco">
+          <span class="rule" style="background:#9fd6c4"></span>
+          <span class="rot">O que é</span>
+          <p>Dispositivo e texto literal conferidos e classificados em quatro classes.</p>
+        </div>
+        <div class="bloco">
+          <span class="rule" style="background:#9fd6c4"></span>
+          <span class="rot">Uso seguinte</span>
+          <p>Todo documento assinado que cite norma.</p>
         </div>
     </article></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Balanço do módulo</span>
-      <span class="pag">26 / 29</span>
+      <span class="pag">28 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="26">
+<section class="slide conteudo" data-i="28">
     <span class="barra"></span>
     <span class="eyebrow">PRÓXIMOS PASSOS</span>
     <h2>Módulo 11: o que preparar</h2>
-    <p class="sub">Aprendizado de máquina e analytics para a decisão. Começa a nota 3.</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <p class="sub">Aprendizado de máquina e analytics para a decisão. O encontro 12 abre a nota 3</p>
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Leia os capítulos 3 e 4 de Taulli</strong><p>Machine learning e deep learning. Estão na turma virtual.</p></div>
+      <div><strong>Leia os capítulos 3 e 4 de Taulli</strong><p>Aprendizado de máquina e aprendizado profundo. Estão na turma virtual.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Traga uma base própria em CSV</strong><p>Pelo menos 30 linhas e três colunas de número, uma delas algo que faça sentido prever. A base do encontro 7 serve, se tiver colunas numéricas suficientes. Sem base própria, use a de reserva, mas você perde o vínculo com o próprio trabalho, que é o que dá sentido ao ciclo 11.4.</p></div>
+      <div><strong>Traga uma base própria em CSV</strong><p>Pelo menos 30 linhas e três colunas de número, uma delas algo que faça sentido prever. A base do encontro 7 serve, se tiver colunas numéricas suficientes. A base de reserva tira o vínculo com o seu trabalho no ciclo 11.4.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Pense numa pergunta de previsão</strong><p>Algo do tipo "quais registros têm mais chance de X". Não precisa ser respondível ainda.</p></div>
+      <div><strong>Pense numa pergunta de previsão</strong><p>Do tipo "quais registros têm mais chance de X". Ela ainda não precisa ter resposta.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Confira a nota 2 quando sair</strong><p>Item pendente da B2 tem a semana seguinte para correção.</p></div>
+      <div><strong>Confira a nota 2 quando for publicada</strong><p>Item pendente da B2 pode ser corrigido na semana seguinte.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Próximos passos</span>
-      <span class="pag">27 / 29</span>
+      <span class="pag">29 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="27">
+<section class="slide conteudo" data-i="29">
     <span class="barra"></span>
     <span class="eyebrow">DÚVIDAS FREQUENTES</span>
     <h2>Perguntas que aparecem neste módulo</h2>
     
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:5">
+    <div class="corpo"><ol class="steps cols-2 compacto" style="--linhas:3">
     <li><span class="num">1</span>
-      <div><strong>"O documento é grande demais para o modelo."</strong><p>Divida em partes e rode a camada 2 em cada uma. A camada 3 trabalha sobre a lista, e não sobre o documento.</p></div>
+      <div><strong>"O documento é grande demais para o modelo."</strong><p>Rode a camada 2 por seção, guiado pelo mapa. A camada 3 trabalha sobre a lista extraída.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>"Não tenho respostas abertas."</strong><p>Use o conjunto público da turma virtual. O procedimento é o mesmo e a entrega vale igual.</p></div>
+      <div><strong>"Não tenho respostas abertas."</strong><p>Use o conjunto público da turma virtual. O procedimento e a entrega são os mesmos.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>"Minha concordância deu 55%."</strong><p>É um resultado honesto e comum na primeira rodada. O que vale nota é o exame das divergências e o ajuste das definições.</p></div>
+      <div><strong>"O script escolheu a coluna errada."</strong><p>Ele usa a coluna de texto mais longo. Indique a certa no fim do comando, como em codificar dados/RESPOSTAS.csv comentario.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>"As três fontes usam definições diferentes."</strong><p>Achado, e não obstáculo. Apresente a comparação com a ressalva. É assim que se publica.</p></div>
+      <div><strong>"Minha concordância deu 55%."</strong><p>Resultado comum na primeira rodada. A nota vem do exame de cada divergência e do ajuste das definições.</p></div>
     </li>
     <li><span class="num">5</span>
-      <div><strong>"O modelo acertou o artigo da lei."</strong><p>Ótimo, e você só sabe disso porque conferiu. Registre o acerto: o diário serve para os dois casos.</p></div>
+      <div><strong>"Categorias iguais contaram como divergentes."</strong><p>O script ignora maiúsculas e espaços extras e considera os acentos. Informação e informacao contam como duas categorias.</p></div>
+    </li>
+    <li><span class="num">6</span>
+      <div><strong>"O modelo acertou o artigo da lei."</strong><p>Registre como confirmado. O acerto só é conhecido porque houve conferência na fonte oficial.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Dúvidas frequentes</span>
-      <span class="pag">28 / 29</span>
+      <span class="pag">30 / 31</span>
     </footer>
   </section>
-<section class="slide fim" data-i="28">
+<section class="slide fim" data-i="30">
       <span class="filete"></span>
       <h1>Módulo 10 concluído</h1>
-      <p>A nota 2 está fechada. Nos próximos encontros o assunto passa a ser previsão, governança e decisão, até o projeto integrador.</p>
+      <p>A nota 2 está fechada. Os próximos encontros tratam de previsão, governança e decisão, até o projeto integrador.</p>
       <span class="slogan">SEMPRE+ QUALIDADE INOVAÇÃO INCLUSÃO</span>
     </section>
 </div>
 <div id="barra">
   <button id="ant" title="Anterior">&#8249;</button>
-  <input id="atual" value="1" title="Ir para o slide"> <span>/ 29</span>
+  <input id="atual" value="1" title="Ir para o slide"> <span>/ 31</span>
   <button id="prox" title="Próximo">&#8250;</button>
   <button id="tela" title="Tela cheia">&#9744;</button>
 </div>

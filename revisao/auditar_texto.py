@@ -63,7 +63,8 @@ def sinais(texto):
     achados = []
     baixo = texto.lower()
     for p in PALAVRAS:
-        n = baixo.count(p)
+        # só conta no início de palavra, para não pegar "coeficiente" em "eficiente"
+        n = len(re.findall(r"(?<![a-zà-ÿ])" + re.escape(p), baixo))
         if n:
             achados.append((p, n))
     for rx, nome in PADROES:

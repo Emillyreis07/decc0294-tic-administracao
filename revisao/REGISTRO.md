@@ -17,18 +17,30 @@ Os sinais vêm de `python revisao/auditar_texto.py`, rodado em 2 nov. 2026. Elem
 | 7 | 8 | Dados estruturados e consulta | 31 | 0 | 14 | revisado em 2 nov. 2026, deck inteiro |
 | 8 | 9 | Visualização e painéis | 31 | 0 | 13 | revisado em 2 nov. 2026, deck inteiro |
 | 9 | 10 | Automação | 31 | 0 | 13 | revisado em 2 nov. 2026, deck inteiro |
-| 10 | 11 | Pesquisa e análise qualitativa | 29 | 10 | nenhum | pendente, próximo da fila |
-| 11 | 12 | Aprendizado de máquina | 27 | 5 | nenhum | pendente |
-| 12 | 13 | Governança, LGPD e cibersegurança | 27 | 9 | nenhum | pendente. Já distingue anonimização de pseudonimização, coerente com o módulo 5 |
-| 13 | 14 | Decisão apoiada por IA | 26 | 6 | nenhum | pendente |
+| 10 | 11 | Pesquisa e análise qualitativa | 31 | 0 | 13 | revisado em 2 nov. 2026, deck inteiro |
+| 11 | 12 | Aprendizado de máquina | 29 | 0 | 11 | revisado em 2 nov. 2026, deck inteiro |
+| 12 | 13 | Governança, LGPD e cibersegurança | 29 | 0 | 11 | revisado em 2 nov. 2026, deck inteiro |
+| 13 | 14 | Decisão apoiada por IA | 26 | 6 | nenhum | pendente, próximo da fila |
 | 14 | 15 | Produto digital e ágil | 25 | 4 | nenhum | pendente |
 | 15 | 16 | Projeto integrador | 20 | 7 | nenhum | pendente |
 
-Ordem sugerida: seguir o calendário dos encontros (módulo 10 em diante) e depois voltar aos módulos 1 a 4, que já passaram por uma revisão de conteúdo em setembro.
+Ordem sugerida: seguir o calendário dos encontros (módulo 13 em diante) e depois voltar aos módulos 1 a 4, que já passaram por uma revisão de conteúdo em setembro.
 
 Em 2 nov. 2026 os marcadores de tempo foram retirados de todos os decks (ver histórico). A contagem de slides acima já reflete o estado posterior.
 
 ## Histórico
+
+### 2 nov. 2026, módulos 10, 11 e 12, decks inteiros
+
+Auditoria com zero sinais nos três (o auditor passou a contar palavras proibidas só no início de palavra, para não acusar "coeficiente"). Conferência visual com Liberation Sans e DejaVu Sans.
+
+Módulo 10 (encontro 11), de 29 para 31 slides. Novos: 11, a mesma comparação com despesa empenhada e paga (Lei 4.320/1964), e 19, concordância observada e ao acaso (kappa de Cohen, 1960, e Krippendorff, 2018). Fontes: Liu et al. (2024) sobre informação no meio de textos longos, Dahl et al. (2024) sobre alucinação em perguntas jurídicas, Gilardi, Alizadeh e Kubli (2023) sobre modelo como codificador, revogação da Lei 8.666 pela LC 198/2023, valor do art. 75, II, da Lei 14.133 em R$ 65.492,11 pelo Decreto 12.807/2025 (conferido). Corrigido: as classes do diário do módulo 3 não eram as mesmas do ciclo 10.3.
+
+Módulo 11 (encontro 12), de 27 para 29 slides. Novos: 16, como se treina um modelo de linguagem (pré-treino, ajuste supervisionado, reforço), e 22, treino e teste dentro do script. Saiu a afirmação sem fonte de que a regressão "custa 2 a 3 pontos percentuais". Entraram Rudin (2019), Mitchell (1997), Grinsztajn et al. (2022), Ouyang et al. (2022). Leitura para o módulo 12 corrigida para os arts. 5, 6, 7 e 48 da LGPD. Prática e entrega do 11.4 alinhadas ao script.
+
+Módulo 12 (encontro 13), de 27 para 29 slides. Novos: 12, linhas que o script aceita e recusa, e 18, proteção de dados e IA em novembro de 2026. Correções: comunicação de incidente em 3 dias úteis, complemento em 20 dias úteis e registro por 5 anos (Res. CD/ANPD 15/2024). ANPD agência reguladora pela Lei 15.352/2026 (conferido). ECA Digital em vigor desde 17 mar. 2026. PL 2338/2023 aguardando parecer na comissão especial da Câmara. NIST SP 800-63B-4: SMS como autenticador restrito (conferido). k-anonimato (Sweeney, 2002). O deck antigo dizia que o script aponta consentimento usado entre servidor e chefia, o que é falso.
+
+Roteiros 10, 11 e 12 renumerados, com descrições de teoria atualizadas.
 
 ### 2 nov. 2026, módulos 7, 8 e 9, decks inteiros
 
@@ -114,6 +126,11 @@ Defeitos nos scripts encontrados na revisão de 2 nov. 2026. Os scripts não for
 - `atividade_modulo9.py`: o cabeçalho do modelo (Responsável, Última revisão, Regra para dado ausente) sai em todo documento gerado, porque o corte é feito só em "COMO ADAPTAR ESTE MODELO". Marcador em minúscula ou com acento sai sem substituição e sem aviso.
 - Módulo 8: o deck dizia que o painel "volta no encontro 11", mas os módulos 9 e 10 não tratam de painel. Ficou "exemplo de fluxo repetível para o encontro 10". Confirmar.
 - Roteiro 7: notas fora do escopo ainda têm ponto e vírgula e "valiosa".
+- `atividade_modulo10.py`: o comando `b2` confere 10 itens, mas não verifica `entregas/modulo10-fontes.csv` nem se o `conferir` foi aprovado. O `conferir` acusa a falta da codificação enquanto o ciclo 10.3 não termina (o deck avisa).
+- Roteiro 10, ciclo 10.3: fala em duplas e diz que o ciclo não usa modelo de linguagem, mas o script prevê a coluna `categoria_agente`. O deck segue o script. Decidir qual desenho vale.
+- `atividade_modulo11.py`: o `conferir` recusa "não" com acento, porque compara com "nao" (o deck avisa).
+- Roteiro 11: diz que o encontro não tem entrega avaliada, mas o deck tem slide de entrega com critério de correção. Decidir.
+- `atividade_modulo12.py`: quando nenhuma linha é eliminável, o script manda escrever "nao - revisado", e a conferência recusa (só aceita linha que começa com "s"). A recusa de responsável vago compara o texto exato ("a equipe de TI" passa). Falta a base do art. 11, II, g (prevenção à fraude). Não confere `entregas/modulo12-ciclo3-exemplo.md`.
 
 - Em 2 nov. 2026 os decks (e os dois .pptx antigos) foram movidos para `slides/` e os scripts das atividades para `scripts/`. Na mesma data, os roteiros foram para `roteiros/`. Foram atualizados `index.html`, `README.md`, `indice-material-2026-2.md`, os roteiros e as ferramentas de `revisao/`. Os scripts receberam um ajuste de poucas linhas que muda o diretório de trabalho para a raiz quando estão em `scripts/`. O texto dos decks continua dizendo "execute atividade_moduloN.py", porque na turma o script é copiado para a raiz do projeto do aluno. Os endereços antigos do GitHub Pages (sem `slides/`) deixam de funcionar depois do próximo push.
 

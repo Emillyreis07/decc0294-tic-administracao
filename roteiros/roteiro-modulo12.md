@@ -23,18 +23,18 @@ Prepare um caso de incidente noticiado, de preferência do Maranhão ou do setor
 |---|---|---|
 | Abertura e visão geral | 10 min | 1 a 2 |
 | Ciclo 12.1 | 45 min | 3 a 8 |
-| Ciclo 12.2 | 50 min | 9 a 13 |
+| Ciclo 12.2 | 50 min | 9 a 14 |
 | Intervalo | 15 min | |
-| Ciclo 12.3 | 45 min | 14 a 19 |
+| Ciclo 12.3 | 45 min | 15 a 20 |
 | Intervalo | 10 min | |
-| Ciclo 12.4 | 60 min | 20 a 24 |
-| Fechamento | 15 min | 25 a 27 |
+| Ciclo 12.4 | 60 min | 21 a 25 |
+| Fechamento | 15 min | 26 a 29 |
 
 ## Ciclo 12.1 — Que dado pessoal passa por você
 
-Teoria, 15 min. Os quatro termos do artigo 5: dado pessoal, dado sensível, titular, controlador e operador. Depois, o dado que ninguém sabe que tem.
+Teoria, 15 min. Os seis termos do artigo 5º em tabela (dado pessoal, dado sensível, titular, controlador, operador e encarregado), ligados aos papéis de governança do módulo 5 (slide 4). Depois, a tabela das cópias que se formam fora do sistema oficial (slide 5).
 
-Demonstração, 10 min. A varredura na projeção, sobre a pasta de teste.
+Demonstração, 10 min. A varredura na projeção, sobre a pasta de teste (slide 6).
 
 Prática, 15 min. Cada aluno roda a varredura na própria pasta do projeto e começa o inventário.
 
@@ -48,7 +48,7 @@ Vigie o inventário enquanto a turma escreve. Todo semestre alguém copia um CPF
 
 ## Ciclo 12.2 — Base legal, finalidade e retenção
 
-Teoria, 20 min. As dez bases do artigo 7, com foco nas quatro que cobrem quase tudo no serviço público. Depois os princípios do artigo 6: finalidade, necessidade, prazo, transparência.
+Teoria, 20 min. As dez bases do artigo 7º com os rótulos que o script aceita, o consentimento, o artigo 11 para dado sensível e o teste do legítimo interesse (slide 10). O prazo de retenção no ciclo de vida do dado, com os artigos 15, 16, 18 e 19 (slide 11). As linhas que o script aceita e as que ele recusa (slide 12).
 
 Prática, 25 min. Cada aluno completa o inventário com base legal, finalidade e prazo em cada linha.
 
@@ -62,7 +62,7 @@ A coluna de eliminação por desnecessidade é a que gera a discussão mais úti
 
 ## Ciclo 12.3 — IA e dado pessoal: o que não vai no prompt
 
-Teoria, 20 min. O que acontece com o texto colado no prompt e por que isso é compartilhamento de dado. Anonimização e pseudonimização, e onde cada uma falha.
+Teoria, 20 min. Conta pessoal, contrato da organização e modelo local, comparados em treinamento, retenção, papel do provedor e transferência internacional (slide 16). O k-anonimato com exemplo numérico, que mostra por que a troca do nome por código não basta (slide 17). A situação regulatória em novembro de 2026, com a ANPD como agência, o ECA Digital e o PL 2338/2023 na Câmara (slide 18). Reconfira o slide 18 antes de cada semestre.
 
 Prática, 20 min. Cada aluno escreve a seção de uso seguro no AGENTS.md, cria a pasta restrita, põe no .gitignore e monta um exemplo de tarefa com identificadores trocados.
 
@@ -76,7 +76,7 @@ Retome aqui a regra que a turma escreveu no encontro 4, no AGENTS.md. Este ciclo
 
 ## Ciclo 12.4 — Cibersegurança e resposta a incidente
 
-Teoria, 25 min. As quatro medidas básicas: senha única por serviço em gerenciador, segundo fator, desconfiança de mensagem com urgência, cópia de segurança em três lugares. Depois, primeira hora, primeiro dia e comunicação, com o artigo 48.
+Teoria, 25 min. As quatro medidas com critério verificável (NIST SP 800-63B-4, CERT.br e regra 3-2-1) e o caso C&M Software, de julho de 2025 (slide 22). Depois, primeira hora, primeiro dia e os prazos da Resolução CD/ANPD nº 15/2024, com três dias úteis para comunicar a ANPD e os titulares, e o caso INSS (slide 23).
 
 Prática, 30 min. Cada aluno escreve o plano de resposta e roda a conferência final.
 

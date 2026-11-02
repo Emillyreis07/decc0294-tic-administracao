@@ -147,6 +147,134 @@ body.mexeu #ajuda{opacity:1}
   #barra,#ajuda{display:none}
   .slide{display:block!important;page-break-after:always;box-shadow:none;transform:none!important}
 }
+/* ---- componentes acrescentados na revisão de nov. 2026 ---- */
+.mono{font-family:Consolas,"Cascadia Mono","Courier New",monospace}
+.fonte-nota{position:absolute;left:0;right:0;bottom:-2px;font-size:13px;color:var(--muted);line-height:1.3}
+.prompt.compacto{padding:12px 20px;margin-bottom:16px}
+.prompt.compacto p{font-size:17px;line-height:1.4;margin-top:6px}
+.prompt.compacto p+p{margin-top:6px}
+.prompt .cmd{font-style:normal;font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:16px}
+
+/* tabela de dados */
+.tab{width:100%;border-collapse:collapse;font-size:15px;line-height:1.3;color:var(--body)}
+.tab th{background:var(--vinho);color:#fff;font-weight:700;text-align:left;padding:7px 10px;font-size:14px;letter-spacing:.3px}
+.tab td{border-bottom:1px solid #e1e1e1;padding:7px 10px;vertical-align:top;background:#fff}
+.tab tr:nth-child(even) td{background:#fafafa}
+.tab td.lac{background:#FFF3D1!important;color:#7a5600;font-weight:700}
+.tab td .s{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+.tab td strong{color:var(--txt)}
+.chip{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.5px;padding:2px 8px;margin-bottom:4px;color:var(--txt)}
+.chip.ok{background:#CFEFEE}.chip.med{background:#FFE7A8}.chip.ruim{background:#F2CDD8;color:var(--vinho)}
+.badge{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--vinho);
+  color:#fff;font-size:12px;font-weight:700;margin-right:6px;vertical-align:1px;font-style:normal}
+
+/* duas colunas */
+.duascol{display:grid;grid-template-columns:var(--esq,1.4fr) var(--dir,1fr);gap:28px;height:100%}
+.duascol .col{display:flex;flex-direction:column;gap:14px;min-height:0}
+.steps.compacto{gap:12px}
+.steps.compacto strong{font-size:18px}
+.steps.compacto p{font-size:16px;line-height:1.35}
+.steps.compacto .num{flex:0 0 28px;height:28px;font-size:15px}
+
+/* fluxo horizontal */
+.fluxo{display:grid;grid-template-columns:repeat(var(--n,4),1fr);gap:34px;position:relative}
+.etapa{background:var(--card);border:1px solid #e3e3e3;border-top:6px solid var(--cor,var(--vinho));
+  padding:12px 16px 14px;position:relative}
+.etapa:not(:last-child)::after{content:"";position:absolute;right:-27px;top:50%;margin-top:-11px;
+  border-left:16px solid var(--vinho);border-top:11px solid transparent;border-bottom:11px solid transparent}
+.etapa .n{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;
+  background:var(--vinho);color:#fff;font-size:14px;font-weight:700}
+.etapa h4{display:inline;font-size:18px;color:var(--txt);margin-left:6px;vertical-align:2px}
+.etapa p{font-size:15.5px;line-height:1.38;margin-top:8px}
+.etapa .arq{display:block;margin-top:8px;font-size:13.5px;color:var(--vinho);
+  font-family:Consolas,"Cascadia Mono","Courier New",monospace;word-break:break-all}
+.trilha{margin-top:18px}
+.trilha .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1px;color:var(--muted);margin-bottom:6px}
+.trilha .barra-g{height:14px;background:linear-gradient(90deg,var(--teal) 0%,#9fd6c4 30%,var(--amarelo) 55%,var(--vinho) 100%)}
+.trilha .marcas{display:grid;grid-template-columns:repeat(4,1fr);gap:34px;font-size:13.5px;color:var(--muted);margin-top:5px}
+
+/* conceito (mesmo padrão dos módulos 2 e 3) */
+.def{background:var(--card2);border:1px solid #e3e3e3;border-left:9px solid var(--vinho);padding:12px 20px}
+.def .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1.2px;color:var(--vinho);text-transform:uppercase}
+.def p{font-size:17px;line-height:1.4;color:var(--txt);margin-top:5px}
+
+/* eixo acima dos cartões */
+.eixo{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;margin-bottom:14px;
+  font-size:14px;font-weight:700;color:var(--muted);letter-spacing:.4px}
+.eixo .seta{height:10px;position:relative;background:linear-gradient(90deg,var(--dourado),var(--teal))}
+.eixo .seta::after{content:"";position:absolute;right:-14px;top:-7px;border-left:16px solid var(--teal);
+  border-top:12px solid transparent;border-bottom:12px solid transparent}
+.cards.baixos{height:calc(100% - 40px)}
+.cards.baixos .card h3{font-size:18px;padding:12px 16px 2px}
+.cards.baixos .card .bloco{padding:8px 16px 0}
+.cards.baixos .card .bloco p{font-size:15.5px;line-height:1.36}
+
+/* grade de dimensões */
+.grade{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:14px;height:calc(100% - 22px)}
+.dim{background:var(--card);border:1px solid #e3e3e3;border-top:5px solid var(--cor);padding:10px 16px}
+.dim h4{font-size:19px;color:var(--vinho)}
+.dim h4 small{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.dim p{font-size:15.5px;line-height:1.36;margin-top:5px}
+.dim .med{display:block;font-size:14px;color:var(--txt);margin-top:7px;border-top:1px solid #ddd;padding-top:6px}
+.dim .med b{color:var(--muted);font-size:12.5px;letter-spacing:.6px}
+
+/* caixa lateral */
+.caixa{background:var(--card2);border:1px solid #e3e3e3;padding:12px 16px}
+.caixa.vinho{border-left:6px solid var(--vinho)}
+.caixa.dourado{border-left:6px solid var(--dourado)}
+.caixa.teal{border-left:6px solid var(--teal)}
+.caixa .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1px;color:var(--vinho);margin-bottom:4px}
+.caixa p{font-size:15.5px;line-height:1.38}
+.caixa p+p{margin-top:6px}
+.legenda{list-style:none}
+.legenda li{font-size:15.5px;line-height:1.35;margin-bottom:8px;display:flex;gap:6px}
+.legenda li b{color:var(--txt)}
+
+/* ficha do mapa de dados */
+.ficha{display:grid;grid-template-columns:1fr 1fr;gap:14px;height:calc(100% - 64px)}
+.ficha .grupo{background:var(--card);border:1px solid #e3e3e3;border-top:5px solid var(--cor)}
+.ficha .grupo>header{font-size:16px;font-weight:700;color:var(--vinho);padding:8px 14px 2px}
+.ficha .grupo>header span{color:var(--muted);font-weight:400;font-size:14px;margin-left:6px}
+.ficha dl{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;padding:6px 14px 10px;font-size:14.5px;line-height:1.3}
+.ficha dt{font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:13.5px;color:var(--vinho);padding-top:1px}
+.ficha dd{color:var(--txt)}
+.rodape-corpo{margin-top:12px;font-size:15.5px;line-height:1.4;color:var(--body)}
+
+/* svg */
+.fig{display:block;width:100%;height:auto}
+.fig text{font-family:"Segoe UI",Calibri,"Helvetica Neue",Arial,sans-serif}
+
+/* ajustes após conferência visual */
+.tab.apertada{font-size:14.5px}
+.tab.apertada td{padding:6px 10px}
+.legenda .badge{flex:0 0 20px;margin-top:1px}
+.dim p{font-size:17px}
+.dim .med{font-size:15.5px}
+.dim h4{font-size:21px}
+.cards.baixos .card .bloco p{font-size:16.5px}
+.eixo{gap:26px}
+.ficha dl{font-size:16.5px;gap:6px 14px;padding:8px 14px 12px}
+.ficha dt{font-size:15px}
+.ficha .grupo>header{font-size:17.5px}
+.etapa p{font-size:16.5px}
+.etapa .arq{word-break:normal;overflow-wrap:break-word}
+.steps.cols-3.compacto p{font-size:17px}
+.steps.cols-3.compacto strong{font-size:19px}
+
+/* blocos de saída de terminal */
+.terminal{background:#262626;color:#e9e9e9;font-family:Consolas,"Cascadia Mono","Courier New",monospace;
+  font-size:14px;line-height:1.38;padding:12px 16px;white-space:pre;overflow:hidden;margin:0}
+.terminal .hl{color:#FEC84D;font-weight:700}
+
+/* acrescentado no módulo 9: trecho de arquivo de texto */
+.codigo{background:#F7F4EE;border:1px solid #e3e3e3;border-left:6px solid var(--dourado);color:var(--txt);
+  font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:14px;line-height:1.55;padding:10px 14px;
+  white-space:pre;overflow:hidden;margin:0}
+.codigo b{color:var(--vinho)}
+.tab.mini td{padding:4px 10px}
+/* módulo 12 */
+.tab td.mono{font-size:14px;color:var(--vinho)}
+.tab td.mono.lac{color:#7a5600}
 </style>
 </head>
 <body>
@@ -157,59 +285,59 @@ body.mexeu #ajuda{opacity:1}
       <span class="mod">MÓDULO 12</span>
       <h1>Governança de dados, LGPD e cibersegurança</h1>
       <span class="tracinho"></span>
-      <p class="sub">Encontro 13 · O que a lei exige, o que o dado exige e o que fazer quando algo dá errado</p>
+      <p class="sub">Encontro 13 · Inventário de dados, base legal, uso seguro com IA e resposta a incidente</p>
       <p class="pe">DECC0294 · Tecnologia da Informação e Comunicação Aplicada à Administração · 2026.2</p>
     </section>
 <section class="slide conteudo" data-i="1">
     <span class="barra"></span>
     <span class="eyebrow">VISÃO GERAL DO MÓDULO</span>
     <h2>O que você vai construir hoje</h2>
-    <p class="sub">O encontro trata do dado que você já manipula desde o encontro 6, agora sob a regra que o governa.</p>
+    <p class="sub">A Lei Geral de Proteção de Dados aplicada ao dado que passa pelo seu setor</p>
     <div class="corpo"><div class="overview">
     <article class="ciclo">
       <span class="topo" style="background:#D4B277"></span>
-      <span class="rot" >CICLO 12.1</span>
+      <span class="rot">CICLO 12.1</span>
       <h3>Que dado pessoal passa por você</h3>
       <div class="pe">
         <span class="rule" style="background:#D4B277"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Inventário de dados do seu setor</p>
+        <p>Varredura da pasta do projeto e inventário dos tipos de dado</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#0AB0AB"></span>
-      <span class="rot" >CICLO 12.2</span>
+      <span class="rot">CICLO 12.2</span>
       <h3>Base legal, finalidade e retenção</h3>
       <div class="pe">
         <span class="rule" style="background:#0AB0AB"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Inventário com base legal por linha</p>
+        <p>Inventário com base legal, finalidade e prazo em cada linha</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#FEC84D"></span>
-      <span class="rot" >CICLO 12.3</span>
+      <span class="rot">CICLO 12.3</span>
       <h3>IA e dado pessoal: o que não vai no prompt</h3>
       <div class="pe">
         <span class="rule" style="background:#FEC84D"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Seção de uso seguro no AGENTS.md</p>
+        <p>Seção de uso seguro no AGENTS.md e pasta restrita fora do Git</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#D4B277"></span>
-      <span class="rot" >CICLO 12.4</span>
+      <span class="rot">CICLO 12.4</span>
       <h3>Cibersegurança e resposta a incidente</h3>
       <div class="pe">
         <span class="rule" style="background:#D4B277"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Plano de resposta em uma página</p>
+        <p>Plano de resposta em uma página, com cargo em cada ação</p>
       </div>
     </article></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Estrutura do módulo</span>
-      <span class="pag">2 / 27</span>
+      <span class="pag">2 / 29</span>
     </footer>
   </section>
 <section class="slide divisor" data-i="2">
@@ -219,178 +347,154 @@ body.mexeu #ajuda{opacity:1}
         <h2>Que dado pessoal passa por você</h2>
         <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">3 / 27</span>
+      <span class="pag">3 / 29</span>
     </section>
 <section class="slide conteudo" data-i="3">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 12.1 · TEORIA</span>
-    <h2>Os quatro termos que a lei define</h2>
-    <p class="sub">Lei 13.709/2018, artigo 5. Sem esses quatro, nenhuma discussão sobre LGPD avança</p>
-    <div class="corpo"><div class="cards cols-4">
-    <article class="card">
-      <header style="background:#D4B277">DADO PESSOAL</header>
-      <h3>Informação sobre pessoa identificada ou identificável</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O alcance</span>
-          <p>Nome e CPF são o caso óbvio. Matrícula, placa, IP, geolocalização e a combinação de cargo com unidade também identificam.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O teste</span>
-          <p>Se com esse dado, sozinho ou junto de outro que você tem, dá para chegar na pessoa, é dado pessoal.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">DADO SENSÍVEL</header>
-      <h3>Categoria com proteção reforçada</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Quais são</span>
-          <p>Origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato, dado de saúde, vida sexual, dado genético ou biométrico.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que muda</span>
-          <p>As bases legais que autorizam o tratamento são mais estreitas. O que vale para dado comum não vale aqui.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">TITULAR</header>
-      <h3>A pessoa a quem o dado se refere</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que ele tem</span>
-          <p>Direito de confirmação, acesso, correção, anonimização, portabilidade, eliminação e informação sobre compartilhamento.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Na prática</span>
-          <p>Ele pode pedir. Sua organização tem prazo para responder, e alguém precisa saber onde o dado está.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#D4B277">CONTROLADOR E OPERADOR</header>
-      <h3>Quem decide e quem executa</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">A diferença</span>
-          <p>Controlador decide a finalidade do tratamento. Operador trata em nome dele. A empresa de folha é operadora; sua organização é controladora.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Por que importa</span>
-          <p>A responsabilidade acompanha a decisão. Contratar um serviço não transfere a obrigação.</p>
-        </div>
-    </article></div></div>
+    <h2>Seis termos definidos pela lei</h2>
+    <p class="sub">Lei nº 13.709/2018, art. 5º. CNPJ e razão social de pessoa jurídica ficam fora da definição de dado pessoal</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:20%">TERMO (ART. 5º)</th><th style="width:42%">DEFINIÇÃO NA LEI</th><th style="width:38%">EXEMPLO NA ADMINISTRAÇÃO</th></tr>
+      <tr><td><strong>Dado pessoal</strong> <span class="s">inciso I</span></td><td>Informação relacionada a pessoa natural identificada ou identificável.</td>
+          <td>Nome, CPF, matrícula, placa. Cargo, lotação e ano de admissão combinados, em setor pequeno.</td></tr>
+      <tr><td><strong>Dado sensível</strong> <span class="s">inciso II</span></td><td>Origem racial ou étnica, religião, opinião política, filiação sindical, saúde, vida sexual, dado genético ou biométrico.</td>
+          <td>Atestado médico, desconto de contribuição sindical na folha, digital do ponto eletrônico.</td></tr>
+      <tr><td><strong>Titular</strong> <span class="s">inciso V</span></td><td>Pessoa natural a quem se referem os dados.</td>
+          <td>O servidor, o cidadão atendido, o fornecedor pessoa física.</td></tr>
+      <tr><td><strong>Controlador</strong> <span class="s">inciso VI</span></td><td>Quem toma as decisões sobre o tratamento.</td>
+          <td>O órgão ou a empresa, como pessoa jurídica.</td></tr>
+      <tr><td><strong>Operador</strong> <span class="s">inciso VII</span></td><td>Quem realiza o tratamento em nome do controlador.</td>
+          <td>A empresa contratada para processar a folha.</td></tr>
+      <tr><td><strong>Encarregado</strong> <span class="s">inciso VIII</span></td><td>Pessoa indicada como canal com os titulares e a ANPD.</td>
+          <td>Servidor designado por portaria, com contato no site (art. 41).</td></tr>
+    </table>
+    <div class="caixa dourado" style="margin-top:12px"><span class="rot">LIGAÇÃO COM O MÓDULO 5</span>
+      <p>Dono do dado, custodiante e usuário são papéis internos de governança (DAMA-DMBOK). Controlador e operador são papéis legais e respondem pelo dano causado ao titular (art. 42). Contratar um operador não transfere a responsabilidade do controlador.</p></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 12.1 · Teoria</span>
-      <span class="pag">4 / 27</span>
+      <span class="pag">4 / 29</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="4">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 12.1 · TEORIA</span>
-    <h2>O dado que ninguém sabe que tem</h2>
-    <p class="sub">O vazamento raramente sai do sistema oficial. Sai da cópia esquecida</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>A planilha que alguém exportou para conferir</strong><p>Saiu do sistema com controle de acesso e virou arquivo em pasta compartilhada, sem registro de quem abre.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>O anexo de e-mail que ficou na caixa</strong><p>A lista de servidores de 2019 continua acessível para quem tem a senha daquela conta, e ninguém revisou.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>O grupo de mensagem com foto de documento</strong><p>Foto de identidade e comprovante circulam por aplicativo e ficam no aparelho de todos os participantes.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>A pasta do projeto no seu computador</strong><p>Inclusive a que você montou nesta disciplina. Ela vai ser varrida daqui a pouco.</p></div>
-    </li></ol></div>
+    <h2>O dado fora do sistema oficial</h2>
+    <p class="sub">Comparação ilustrativa entre o sistema de origem e as cópias que se formam no trabalho diário</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:21%">ONDE O DADO ESTÁ</th><th style="width:31%">COMO A CÓPIA SURGE</th><th style="width:17%">QUEM ACESSA</th>
+          <th style="width:15%">REGISTRO DE ACESSO</th><th style="width:16%">DATA DE DESCARTE</th></tr>
+      <tr><td><strong>Sistema oficial</strong></td><td>Cadastro feito pelo formulário, com perfil de acesso por cargo.</td>
+          <td><span class="chip ok">PERFIL DEFINIDO</span></td><td><span class="chip ok">SIM</span></td><td><span class="chip ok">TABELA DE TEMPORALIDADE</span></td></tr>
+      <tr><td><strong>Planilha exportada</strong></td><td>Alguém exporta a base para conferir um total e grava na pasta compartilhada.</td>
+          <td><span class="chip med">QUEM VÊ A PASTA</span></td><td><span class="chip ruim">NÃO</span></td><td><span class="chip ruim">NENHUMA</span></td></tr>
+      <tr><td><strong>Anexo de e-mail</strong></td><td>Lista de servidores enviada em 2019 continua na caixa de entrada e na de saída.</td>
+          <td><span class="chip med">QUEM TEM A SENHA</span></td><td><span class="chip ruim">NÃO</span></td><td><span class="chip ruim">NENHUMA</span></td></tr>
+      <tr><td><strong>Grupo de mensagem</strong></td><td>Foto do documento de identidade enviada para agilizar um cadastro.</td>
+          <td><span class="chip ruim">TODOS DO GRUPO</span></td><td><span class="chip ruim">NÃO</span></td><td><span class="chip ruim">NENHUMA</span></td></tr>
+      <tr><td><strong>Pasta do projeto</strong></td><td>Base copiada para as análises dos módulos 5 a 11.</td>
+          <td><span class="chip med">QUEM USA O COMPUTADOR</span></td><td><span class="chip ruim">NÃO</span></td><td><span class="chip ruim">NENHUMA</span></td></tr>
+    </table>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:14px">
+      <div class="caixa vinho"><span class="rot">O QUE A TABELA MOSTRA</span><p>Cada cópia repete o dado sem os controles do sistema de origem. O inventário do ciclo registra o tipo de dado e todos os lugares em que ele está guardado.</p></div>
+      <div class="caixa teal"><span class="rot">O QUE VEM A SEGUIR</span><p>A varredura procura CPF, CNPJ, e-mail, telefone e CEP na última linha da tabela, a pasta do projeto.</p></div>
+    </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 12.1 · Teoria</span>
-      <span class="pag">5 / 27</span>
+      <span class="pag">5 / 29</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="5">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 12.1 · DEMONSTRAÇÃO</span>
     <h2>A varredura da pasta na projeção</h2>
-    <p class="sub">O script procura padrões de dado pessoal e mostra onde eles estão, sem exibir o valor</p>
-    <div class="corpo"><div class="prompt">
-    <span class="rot">COMANDO EXECUTADO PELO AGENTE</span>
-    <p>python atividade_modulo12.py varrer .<br><br>O script percorre os arquivos de texto da pasta procurando CPF, CNPJ, e-mail, telefone e CEP. Ele confere o dígito verificador do CPF antes de apontar, para não acusar qualquer sequência de onze números. O relatório mostra o arquivo, a linha e o tipo, com o valor mascarado.</p>
+    <p class="sub">O relatório mostra arquivo, linha e tipo de dado, com o valor mascarado</p>
+    <div class="corpo"><div class="prompt compacto">
+    <span class="rot">INSTRUÇÃO DADA AO AGENTE</span>
+    <p><span class="cmd">"execute atividade_modulo12.py com o comando varrer ."</span> &nbsp;O ponto indica a pasta atual.</p>
   </div>
-<ol class="steps cols-3" style="--linhas:1">
-    <li><span class="num">1</span>
-      <div><strong>Ele não envia nada para lugar nenhum</strong><p>Roda inteiramente na sua máquina, sem rede e sem modelo de linguagem.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>O valor aparece mascarado</strong><p>CPF vira ***.456.789-**. Você localiza sem expor de novo.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Achar zero também é resultado</strong><p>E precisa estar no relatório, porque a varredura documenta a verificação. O script não lê PDF, imagem nem planilha binária, e não reconhece nome de pessoa: zero não é sinônimo de pasta limpa.</p></div>
-    </li></ol></div>
+  <div class="duascol" style="--esq:1.25fr;--dir:1fr;height:auto">
+    <div class="col" style="gap:6px">
+      <pre class="terminal">VARREDURA DE DADO PESSOAL
+arquivos lidos:     3
+achados:            11
+
+  e-mail     4
+  CPF        3
+  telefone   3
+  CEP        1
+
+  ./dados/atendimentos-2026.csv:2  CPF  <span class="hl">***.526.057-**</span>
+  ./dados/atendimentos-2026.csv:2  e-mail  p***@exemplo.com.br
+  ./dados/atendimentos-2026.csv:2  telefone  *******7540
+  ...
+  ./entregas/modulo10-notas.md:2  CEP  65080-***
+Relatorio gravado em saidas/varredura-dados-pessoais.md</pre>
+      <p class="fonte-nota" style="position:static">Saída do script, abreviada, sobre uma pasta de teste com CPFs gerados para o exemplo.</p>
+    </div>
+    <div class="col" style="gap:9px">
+      <div class="caixa teal"><span class="rot">SEM REDE E SEM MODELO</span><p>O script roda no computador e não envia nada ao provedor. O agente recebe só a saída mascarada.</p></div>
+      <div class="caixa dourado"><span class="rot">DÍGITO VERIFICADOR</span><p>Onze algarismos com dígito inválido, como uma matrícula, não são contados como CPF.</p></div>
+      <div class="caixa vinho"><span class="rot">ZERO ACHADOS</span><p>O script não lê PDF, imagem, planilha .xlsx nem arquivo compactado e não reconhece nome de pessoa. Zero achados vale só para os arquivos de texto lidos.</p></div>
+    </div>
+  </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 12.1 · Demonstração</span>
-      <span class="pag">6 / 27</span>
+      <span class="pag">6 / 29</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="6">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 12.1 · PRÁTICA</span>
-    <h2>Sua vez: inventário e varredura</h2>
+    <h2>Sua vez: varredura e inventário</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Rode a varredura na pasta do projeto</strong><p>python atividade_modulo12.py varrer . Leia o relatório antes de qualquer outra coisa.</p></div>
+      <div><strong>Rode a varredura na pasta do projeto</strong><p>"execute atividade_modulo12.py com o comando varrer ." Leia saidas/varredura-dados-pessoais.md e escreva a seção Decisão, mesmo com zero achados.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Abra o inventário em branco</strong><p>python atividade_modulo12.py inventario cria a planilha com as colunas exigidas.</p></div>
+      <div><strong>Crie o inventário em branco</strong><p>"execute atividade_modulo12.py com o comando inventario" grava entregas/inventario-dados.csv. Apague a linha que começa com EXEMPLO.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Liste os dados pessoais que passam por você</strong><p>Tipo de dado, de onde vem, onde fica guardado, quem acessa. Sem escrever nenhum dado real.</p></div>
+      <div><strong>Liste os tipos de dado que passam por você</strong><p>No mínimo cinco linhas, com tipo_de_dado, origem, onde_fica_guardado e quem_acessa. Escreva o tipo, como CPF do beneficiário, e nunca o valor.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Marque o que é sensível</strong><p>Saúde, biometria, filiação sindical. Se houver, a coluna sensivel recebe sim.</p></div>
+      <div><strong>Marque os dados sensíveis</strong><p>A coluna sensivel aceita sim ou nao. Atestado médico, filiação sindical e digital do ponto eletrônico recebem sim.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 12.1 · Prática</span>
-      <span class="pag">7 / 27</span>
+      <span class="pag">7 / 29</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="7">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 12.1 · ENTREGA</span>
-    <h2>Inventário de dados do seu setor</h2>
+    <h2>Varredura e inventário de dados do setor</h2>
     
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>O relatório da varredura da pasta do projeto, mesmo que não tenha encontrado nada.</li><li>O inventário com no mínimo cinco tipos de dado pessoal.</li><li>Para cada linha: origem, local de guarda e quem acessa.</li><li>A marcação de quais são dados sensíveis.</li></ul>
+      <ul><li>O relatório da varredura com a seção Decisão escrita, mesmo com zero achados.</li><li>O inventário com no mínimo cinco tipos de dado pessoal.</li><li>Origem, local de guarda e quem acessa em cada linha.</li><li>A coluna sensivel preenchida com sim ou nao.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>entregas/inventario-dados.csv e saidas/varredura-dados-pessoais.md</p>
+        <p><span class="mono" style="font-size:15px">saidas/varredura-dados-pessoais.md<br>entregas/inventario-dados.csv</span></p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Nenhum dado pessoal real entra no inventário. Ele registra tipos e caminhos, não conteúdo. Linha com dado real reprova a entrega.</p>
+        <p>O inventário registra tipos e caminhos. O comando conferir recusa linha com CPF ou CNPJ válido escrito e seção Decisão com menos de 60 caracteres.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 12.1 · Entrega</span>
-      <span class="pag">8 / 27</span>
+      <span class="pag">8 / 29</span>
     </footer>
   </section>
 <section class="slide divisor" data-i="8">
@@ -400,114 +504,148 @@ body.mexeu #ajuda{opacity:1}
         <h2>Base legal, finalidade e retenção</h2>
         <p class="etapas">Teoria · Prática · Entrega</p>
       </div>
-      <span class="pag">9 / 27</span>
+      <span class="pag">9 / 29</span>
     </section>
 <section class="slide conteudo" data-i="9">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 12.2 · TEORIA</span>
-    <h2>Todo tratamento precisa de uma base legal</h2>
-    <p class="sub">Artigo 7 da Lei 13.709. Consentimento é uma das dez, e quase nunca a certa no serviço público</p>
-    <div class="corpo"><div class="cards cols-2">
-    <article class="card">
-      <header style="background:#D4B277">AS MAIS USADAS</header>
-      <h3>Quatro que cobrem a maior parte dos casos</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Obrigação legal</span>
-          <p>A lei manda tratar. Folha de pagamento, obrigação tributária, prestação de contas.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Execução de contrato</span>
-          <p>O dado é necessário para cumprir o que foi contratado com o próprio titular.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Política pública</span>
-          <p>Execução de política pública prevista em lei, pela administração pública.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Legítimo interesse</span>
-          <p>A mais discutida. Exige teste documentado e não vale para dado sensível.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">CONSENTIMENTO</header>
-      <h3>Livre, informado e inequívoco</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Quando cabe</span>
-          <p>Quando o titular pode dizer não sem prejuízo. Envio de comunicação, pesquisa voluntária.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Quando não cabe</span>
-          <p>Quando há desequilíbrio: candidato de concurso, servidor diante da chefia, cidadão que depende do serviço. Consentimento obtido nessas condições não é livre.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que ele exige</span>
-          <p>Poder ser retirado a qualquer momento, com a mesma facilidade com que foi dado.</p>
-        </div>
-    </article></div></div>
+    <h2>As dez bases legais do artigo 7º</h2>
+    <p class="sub">Lei nº 13.709/2018. Marcadas, a obrigação legal e a base própria da administração pública</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.6fr;--dir:1fr">
+    <table class="tab apertada mini">
+      <tr><th style="width:8%">INC.</th><th style="width:45%">RÓTULO ACEITO PELO SCRIPT</th><th>EXEMPLO</th></tr>
+      <tr><td>I</td><td class="mono">consentimento</td><td>Inscrição voluntária em lista de comunicados</td></tr>
+      <tr><td>II</td><td class="mono lac">obrigacao legal</td><td>Folha de pagamento e envio ao eSocial</td></tr>
+      <tr><td>III</td><td class="mono lac">administracao publica</td><td>Cadastro para conceder auxílio previsto em lei</td></tr>
+      <tr><td>IV</td><td class="mono">estudo por orgao de pesquisa</td><td>Pesquisa de instituto público</td></tr>
+      <tr><td>V</td><td class="mono">execucao de contrato</td><td>Dados do fornecedor pessoa física no contrato</td></tr>
+      <tr><td>VI</td><td class="mono">exercicio de direito em processo</td><td>Defesa do órgão em ação trabalhista</td></tr>
+      <tr><td>VII</td><td class="mono">protecao da vida</td><td>Contato de emergência após acidente</td></tr>
+      <tr><td>VIII</td><td class="mono">tutela da saude</td><td>Prontuário no serviço de saúde</td></tr>
+      <tr><td>IX</td><td class="mono">legitimo interesse</td><td>Registro de visitantes na portaria</td></tr>
+      <tr><td>X</td><td class="mono">protecao ao credito</td><td>Consulta a cadastro de inadimplentes</td></tr>
+    </table>
+    <div class="col" style="gap:10px">
+      <div class="caixa vinho"><span class="rot">CONSENTIMENTO</span><p>Manifestação livre, informada e inequívoca (art. 5º, XII), revogável a qualquer momento (art. 8º, § 5º). Entre servidor e chefia, ou entre cidadão e serviço de que ele depende, a recusa tem custo e a manifestação deixa de ser livre.</p></div>
+      <div class="caixa dourado"><span class="rot">DADO SENSÍVEL (ART. 11)</span><p>As bases estão no art. 11. Legítimo interesse e proteção ao crédito ficam de fora. Obrigação legal, administração pública e tutela da saúde continuam disponíveis.</p></div>
+      <div class="caixa teal"><span class="rot">LEGÍTIMO INTERESSE</span><p>O guia da ANPD de fevereiro de 2024 pede um teste em três fases, que são finalidade, necessidade e balanceamento com salvaguardas.</p></div>
+    </div>
+  </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 12.2 · Teoria</span>
-      <span class="pag">10 / 27</span>
+      <span class="pag">10 / 29</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="10">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 12.2 · TEORIA</span>
-    <h2>Finalidade, necessidade e prazo</h2>
-    <p class="sub">Artigo 6. São princípios, e por isso valem mesmo quando a base legal está correta</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Finalidade declarada e específica</strong><p>Dado coletado para conceder o benefício não pode ser usado para campanha institucional. A finalidade nova exige base nova.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Necessidade: o mínimo que serve</strong><p>Se o cadastro funciona sem o nome da mãe, o nome da mãe não entra. Cada campo a mais é risco a mais sem contrapartida.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Prazo de retenção definido</strong><p>O dado tem data de descarte. Arquivo que fica "para o caso de precisar" é o que vaza cinco anos depois.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Transparência e acesso do titular</strong><p>A pessoa tem direito de saber que dados existem sobre ela e com quem foram compartilhados. Alguém precisa conseguir responder isso.</p></div>
-    </li></ol></div>
+    <h2>O prazo de retenção, do uso ao descarte</h2>
+    <p class="sub">O término do tratamento (art. 15) leva à eliminação, salvo as hipóteses de conservação do art. 16</p>
+    <div class="corpo"><svg class="fig" viewBox="0 0 1168 206" xmlns="http://www.w3.org/2000/svg">
+  <defs><marker id="mv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8D0333"/></marker></defs>
+  <text x="0" y="15" font-size="13.5" font-weight="700" fill="#6B6B6B">EXEMPLO ILUSTRATIVO · CADASTRO DO AUXÍLIO TRANSPORTE DE UM SERVIDOR</text>
+  <g font-size="14">
+    <rect x="0" y="30" width="200" height="104" fill="#fff" stroke="#0AB0AB" stroke-width="2.5"/>
+    <rect x="0" y="30" width="200" height="8" fill="#0AB0AB"/>
+    <text x="100" y="62" text-anchor="middle" font-size="17" font-weight="700" fill="#1A1A1A">Coleta</text>
+    <text x="100" y="84" text-anchor="middle" fill="#333">inscrição no benefício</text>
+    <text x="100" y="104" text-anchor="middle" fill="#6B6B6B">finalidade informada</text>
+    <text x="100" y="124" text-anchor="middle" font-weight="700" fill="#8D0333">03/2021</text>
+
+    <rect x="242" y="30" width="200" height="104" fill="#fff" stroke="#FEC84D" stroke-width="2.5"/>
+    <rect x="242" y="30" width="200" height="8" fill="#FEC84D"/>
+    <text x="342" y="62" text-anchor="middle" font-size="17" font-weight="700" fill="#1A1A1A">Uso</text>
+    <text x="342" y="84" text-anchor="middle" fill="#333">pagamento mensal</text>
+    <text x="342" y="104" text-anchor="middle" fill="#6B6B6B">dentro da finalidade</text>
+    <text x="342" y="124" text-anchor="middle" font-weight="700" fill="#8D0333">03/2021 a 02/2026</text>
+
+    <rect x="484" y="30" width="200" height="104" fill="#fff" stroke="#D4B277" stroke-width="2.5"/>
+    <rect x="484" y="30" width="200" height="8" fill="#D4B277"/>
+    <text x="584" y="62" text-anchor="middle" font-size="17" font-weight="700" fill="#1A1A1A">Término</text>
+    <text x="584" y="84" text-anchor="middle" fill="#333">benefício encerrado</text>
+    <text x="584" y="104" text-anchor="middle" fill="#6B6B6B">art. 15, I</text>
+    <text x="584" y="124" text-anchor="middle" font-weight="700" fill="#8D0333">02/2026</text>
+
+    <rect x="726" y="30" width="200" height="104" fill="#F7F4EE" stroke="#D4B277" stroke-width="2.5" stroke-dasharray="7 5"/>
+    <text x="826" y="62" text-anchor="middle" font-size="17" font-weight="700" fill="#1A1A1A">Guarda</text>
+    <text x="826" y="84" text-anchor="middle" fill="#333">prestação de contas</text>
+    <text x="826" y="104" text-anchor="middle" fill="#6B6B6B">art. 16, I</text>
+    <text x="826" y="124" text-anchor="middle" font-weight="700" fill="#8D0333">até 02/2031</text>
+
+    <rect x="968" y="30" width="200" height="104" fill="#F2CDD8" stroke="#8D0333" stroke-width="2.5"/>
+    <text x="1068" y="62" text-anchor="middle" font-size="17" font-weight="700" fill="#8D0333">Eliminação</text>
+    <text x="1068" y="84" text-anchor="middle" fill="#8D0333">registro excluído</text>
+    <text x="1068" y="104" text-anchor="middle" fill="#8D0333">e a exclusão anotada</text>
+    <text x="1068" y="124" text-anchor="middle" font-weight="700" fill="#8D0333">03/2031</text>
+  </g>
+  <g stroke="#8D0333" stroke-width="2.5" fill="none">
+    <path d="M202,82 L238,82" marker-end="url(#mv)"/><path d="M444,82 L480,82" marker-end="url(#mv)"/>
+    <path d="M686,82 L722,82" marker-end="url(#mv)"/><path d="M928,82 L964,82" marker-end="url(#mv)"/>
+  </g>
+  <path d="M726,150 L1168,150" stroke="#C9962E" stroke-width="2" stroke-dasharray="7 5"/>
+  <text x="947" y="170" text-anchor="middle" font-size="14" fill="#8a6514">5 anos depois do término, conforme a tabela de temporalidade</text>
+  <text x="0" y="198" font-size="14" fill="#6B6B6B">No inventário, a coluna prazo_retencao recebe <tspan font-family="Consolas,monospace" fill="#8D0333">5 anos apos o fim do beneficio</tspan>, contado a partir de um evento.</text>
+</svg>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:12px">
+      <div class="caixa teal"><span class="rot">TRANSPARÊNCIA E ACESSO DO TITULAR</span><p>O titular pode pedir confirmação, acesso, correção e eliminação (art. 18). A declaração completa sai em até 15 dias do pedido (art. 19, II). O inventário diz onde procurar.</p></div>
+      <div class="caixa vinho"><span class="rot">RETENÇÃO INDETERMINADA</span><p>Exige a regra que sustenta a guarda, como documento de guarda permanente na tabela de temporalidade do arquivo. O script recusa "indeterminado" sem essa regra na mesma célula.</p></div>
+    </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 12.2 · Teoria</span>
-      <span class="pag">11 / 27</span>
+      <span class="pag">11 / 29</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="11">
     <span class="barra"></span>
+    <span class="eyebrow">CICLO 12.2 · TEORIA</span>
+    <h2>Linhas que o script aceita e linhas que ele recusa</h2>
+    <p class="sub">Exemplos ilustrativos de entregas/inventario-dados.csv e das recusas de atividade_modulo12.py</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:19%">COLUNA</th><th style="width:25%">ACEITA</th><th style="width:21%">RECUSADA</th><th style="width:35%">MOTIVO DA RECUSA NO COMANDO CONFERIR</th></tr>
+      <tr><td class="mono">base_legal</td><td class="mono">administracao publica</td><td class="mono">interesse publico</td><td>O rótulo não está entre os dez do art. 7º listados pelo script.</td></tr>
+      <tr><td class="mono">finalidade</td><td class="mono">conceder o auxilio transporte</td><td class="mono">cadastro</td><td>Menos de três palavras. A finalidade se escreve com verbo.</td></tr>
+      <tr><td class="mono">prazo_retencao</td><td class="mono">5 anos apos o fim do beneficio</td><td class="mono">indeterminado</td><td>Retenção indeterminada sem a regra que a justifica na mesma célula.</td></tr>
+      <tr><td class="mono">sensivel</td><td class="mono">sim</td><td class="mono">talvez</td><td>A coluna aceita sim, nao, s ou n.</td></tr>
+      <tr><td class="mono">tipo_de_dado</td><td class="mono">CPF do beneficiario</td><td>um CPF válido escrito</td><td>O inventário registra tipo de dado e nunca o dado real.</td></tr>
+      <tr><td class="mono">poderia_ser_eliminado</td><td class="mono">sim</td><td>nao em todas as linhas</td><td>O princípio da necessidade (art. 6º, III) pede ao menos um campo revisto.</td></tr>
+    </table>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:14px">
+      <div class="caixa dourado"><span class="rot">O QUE O SCRIPT VERIFICA</span><p>Formato. Ele não avalia se a base escolhida cabe no caso. Consentimento entre servidor e chefia passa pelo script e é apontado na correção.</p></div>
+      <div class="caixa teal"><span class="rot">FORMATO DO ARQUIVO</span><p>Colunas separadas por ponto e vírgula, cabeçalho criado pelo comando inventario e rótulos sem acento, como o script os lista.</p></div>
+    </div></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 12.2 · Teoria</span>
+      <span class="pag">12 / 29</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="12">
+    <span class="barra"></span>
     <span class="eyebrow">CICLO 12.2 · PRÁTICA</span>
-    <h2>Sua vez: base legal por linha</h2>
+    <h2>Sua vez: base legal, finalidade e prazo por linha</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Volte ao inventário do ciclo anterior</strong><p>Cada linha vai receber três colunas novas.</p></div>
+      <div><strong>Escreva a base legal de cada linha</strong><p>Um dos dez rótulos que o comando inventario lista. Para dado sensível, confira se a mesma base aparece no art. 11.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Escreva a base legal de cada tratamento</strong><p>O script aceita apenas as bases do artigo 7. Nome inventado ele recusa.</p></div>
+      <div><strong>Escreva a finalidade com verbo</strong><p>Três palavras ou mais. "Conceder o auxílio transporte" passa. "Cadastro" é recusado.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Escreva a finalidade com um verbo</strong><p>"Cadastro" não é finalidade. "Conceder o auxílio transporte" é. O script recusa finalidade com menos de três palavras.</p></div>
+      <div><strong>Defina o prazo de retenção a partir de um evento</strong><p>Em meses ou anos, contados do fim do benefício, do contrato ou do vínculo. Retenção indeterminada só com a regra que a sustenta, na mesma célula.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Defina o prazo de retenção</strong><p>Em meses ou anos, com a regra que o justifica. "Indeterminado" precisa de justificativa escrita.</p></div>
+      <div><strong>Marque o que poderia ser eliminado</strong><p>Coluna poderia_ser_eliminado. Pelo menos uma linha com sim, para o campo que a organização coleta e não usa.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 12.2 · Prática</span>
-      <span class="pag">12 / 27</span>
+      <span class="pag">13 / 29</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="12">
+<section class="slide conteudo" data-i="13">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 12.2 · ENTREGA</span>
     <h2>Inventário com base legal por linha</h2>
@@ -515,146 +653,195 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>O inventário completo, com base legal, finalidade e prazo de retenção em cada linha.</li><li>A justificativa escrita para toda linha com retenção indeterminada.</li><li>A identificação de pelo menos um campo que poderia ser eliminado por desnecessidade.</li><li>A verificação do script, sem pendências.</li></ul>
+      <ul><li>Base legal, finalidade e prazo de retenção em todas as linhas.</li><li>A regra escrita em toda linha com retenção indeterminada.</li><li>Pelo menos um campo marcado como eliminável por desnecessidade.</li><li>O comando conferir sem pendências no inventário.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>entregas/inventario-dados.csv</p>
+        <p><span class="mono" style="font-size:15px">entregas/inventario-dados.csv</span></p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Linha que usa consentimento em relação de desequilíbrio, como servidor diante da chefia, é apontada pelo script e precisa ser revista.</p>
+        <p>O script confere o formato. A correção confere o conteúdo, como consentimento usado em relação de dependência e finalidade que repete o nome do campo.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 12.2 · Entrega</span>
-      <span class="pag">13 / 27</span>
+      <span class="pag">14 / 29</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="13">
+<section class="slide divisor" data-i="14">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">12.3</span></div>
       <div class="dir">
         <h2>IA e dado pessoal: o que não vai no prompt</h2>
         <p class="etapas">Teoria · Prática · Entrega</p>
       </div>
-      <span class="pag">14 / 27</span>
+      <span class="pag">15 / 29</span>
     </section>
-<section class="slide conteudo" data-i="14">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 12.3 · TEORIA</span>
-    <h2>O que acontece com o que você cola no prompt</h2>
-    <p class="sub">A pergunta certa não é se o modelo guarda, é quem pode ver e por quanto tempo</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>O texto sai da sua máquina</strong><p>Em serviço de nuvem, o prompt trafega e é processado em servidor de terceiro. Isso é compartilhamento de dado, e precisa de base legal como qualquer outro.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>O contrato define o resto</strong><p>Retenção, uso para treinamento e localização do processamento estão nos termos do serviço. Plano gratuito e plano corporativo costumam ter termos diferentes.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Modelo local não resolve tudo</strong><p>Ele elimina o trânsito, não o dever de minimizar, definir finalidade e controlar acesso ao arquivo.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>O registro fica com você também</strong><p>A conversa salva na sua conta é mais uma cópia do dado, sujeita às mesmas regras do inventário do ciclo 12.1.</p></div>
-    </li></ol></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 12.3 · Teoria</span>
-      <span class="pag">15 / 27</span>
-    </footer>
-  </section>
 <section class="slide conteudo" data-i="15">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 12.3 · TEORIA</span>
-    <h2>Anonimizar, pseudonimizar e o que costuma falhar</h2>
-    <p class="sub">A troca do nome por um código resolve menos do que parece</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">ANONIMIZAÇÃO</header>
-      <h3>O dado deixa de permitir identificação</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O efeito legal</span>
-          <p>Dado anonimizado sai do alcance da lei, enquanto a anonimização for irreversível por meios razoáveis.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Onde falha</span>
-          <p>Agregado pequeno reidentifica. "Servidor do setor X, cargo Y, admitido em 2021" pode ser uma pessoa só.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">PSEUDONIMIZAÇÃO</header>
-      <h3>O identificador vira código, com tabela à parte</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O efeito legal</span>
-          <p>Continua sendo dado pessoal. Reduz risco, não retira a obrigação.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Onde falha</span>
-          <p>A tabela de correspondência guardada na mesma pasta anula a proteção inteira.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">O QUE FAZER ANTES DO PROMPT</header>
-      <h3>Três providências que resolvem a maioria dos casos</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Substituir</span>
-          <p>Nome por código, CPF por sequência, endereço por bairro.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Reduzir</span>
-          <p>Enviar as três colunas de que a tarefa precisa, e não a planilha inteira.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Testar sem dado</span>
-          <p>Montar e ajustar a instrução com dados fictícios, e só depois rodar sobre os reais, se for necessário.</p>
-        </div>
-    </article></div></div>
+    <h2>Conta pessoal, contrato e modelo local</h2>
+    <p class="sub">O módulo 5 mostrou o caminho do conteúdo até o provedor. Aqui, o que muda conforme a forma de uso</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:19%"></th><th style="width:28%">CONTA PESSOAL DO SERVIDOR</th><th style="width:28%">CONTRATO DA ORGANIZAÇÃO OU API</th><th style="width:25%">MODELO LOCAL</th></tr>
+      <tr><td><strong>Quem aceita os termos</strong></td><td>O servidor, em nome próprio.</td><td>A organização, em contrato.</td><td>A organização, na licença do modelo.</td></tr>
+      <tr><td><strong>Uso para treinamento</strong></td><td><span class="chip med">DEPENDE DO PLANO</span><br>Nas contas individuais do Claude, escolha do usuário desde out. 2025.</td>
+          <td><span class="chip ok">EXCLUÍDO</span><br>No mesmo provedor, planos comerciais e API ficam fora.</td><td><span class="chip ok">SEM ENVIO</span></td></tr>
+      <tr><td><strong>Retenção</strong></td><td>No mesmo exemplo, 30 dias, ou 5 anos com treinamento autorizado.</td><td>Fixada no contrato.</td><td>Definida pela organização.</td></tr>
+      <tr><td><strong>Papel na LGPD</strong></td><td><span class="chip ruim">SEM INSTRUMENTO</span><br>O órgão não tem contrato com o provedor.</td>
+          <td>O provedor é operador e segue as instruções do controlador (art. 39).</td><td>Sem provedor externo.</td></tr>
+      <tr><td><strong>Transferência internacional</strong></td><td>Ocorre, sem mecanismo do art. 33.</td><td>Ocorre, com mecanismo do art. 33, como as cláusulas-padrão da Res. CD/ANPD nº 19/2024.</td><td>Não ocorre.</td></tr>
+    </table>
+    <div class="caixa vinho" style="margin-top:12px"><span class="rot">O QUE CONTINUA VALENDO COM MODELO LOCAL</span>
+      <p>Finalidade, necessidade e controle de acesso ao arquivo. A conversa gravada no computador é mais uma cópia do dado e entra no inventário.</p></div>
+    <p class="fonte-nota">Anthropic, Updates to our consumer terms, 28/08/2025 (anthropic.com/news). Lei nº 13.709/2018, arts. 33 e 39. Consulta em 02/11/2026. O módulo 5 trata do OpenCode Zen.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 12.3 · Teoria</span>
-      <span class="pag">16 / 27</span>
+      <span class="pag">16 / 29</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="16">
     <span class="barra"></span>
-    <span class="eyebrow">CICLO 12.3 · PRÁTICA</span>
-    <h2>Sua vez: seção de uso seguro no AGENTS.md</h2>
-    <p class="sub">Individual</p>
-    <div class="corpo"><div class="prompt">
-    <span class="rot">O QUE ENTRA NO ARQUIVO</span>
-    <p>## Uso seguro de dados<br><br>- Nunca colar neste projeto: CPF, RG, nome completo de terceiro, endereço, dado de saúde, biometria.<br>- Antes de enviar qualquer base ao modelo: substituir identificadores por código e enviar apenas as colunas necessárias.<br>- Bases com dado pessoal ficam em dados/restrito/, fora do controle de versão (entrada no .gitignore).<br>- Toda saída que citar pessoa é conferida por mim antes de sair da pasta.</p>
-  </div>
-<ol class="steps cols-3" style="--linhas:1">
-    <li><span class="num">1</span>
-      <div><strong>Adapte ao seu setor</strong><p>A lista do que não se cola depende do dado que você tem.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Crie a pasta restrita e ponha no .gitignore</strong><p>O agente executa; você confere que ela não aparece no GitHub Desktop.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Teste a regra em um caso real</strong><p>Pegue uma tarefa sua e mostre como ela ficaria com os identificadores trocados.</p></div>
-    </li></ol></div>
+    <span class="eyebrow">CICLO 12.3 · TEORIA</span>
+    <h2>O menor grupo da base e o k-anonimato</h2>
+    <p class="sub">Trocar o nome por código não altera o k. A generalização das colunas altera, com perda de detalhe</p>
+    <div class="corpo"><div class="def"><span class="rot">k-anonimato (k-anonymity)</span>
+      <p>Uma base é k-anônima quando cada combinação de quase-identificadores (quasi-identifiers), como unidade, cargo e ano de admissão, aparece em pelo menos k registros (Sweeney, 2002). Com k = 1, há pessoa identificável mesmo sem nome.</p></div>
+    <div class="duascol" style="--esq:1fr;--dir:1.12fr;height:auto;margin-top:12px">
+      <div class="col" style="gap:6px">
+        <table class="tab apertada mini">
+          <tr><th>ANTES · UNIDADE · CARGO · ANO</th><th style="width:22%">SERVIDORES</th></tr>
+          <tr><td>Protocolo · Assistente · 2021</td><td class="lac">1</td></tr>
+          <tr><td>Protocolo · Assistente · 2014</td><td>3</td></tr>
+          <tr><td>Compras · Analista · 2023</td><td class="lac">1</td></tr>
+          <tr><td>Contratos · Analista · 2019</td><td>2</td></tr>
+          <tr><td>... mais 27 combinações</td><td>41</td></tr>
+        </table>
+        <p class="rodape-corpo" style="margin-top:2px">31 combinações, 19 delas com um único servidor. k = 1.</p>
+        <div class="caixa vinho" style="margin-top:4px"><span class="rot">ANTES DE PEDIR A ANÁLISE AO AGENTE</span><p>Generalize as colunas até o menor grupo atingir o k adotado pela organização, ou peça o script e rode na sua máquina.</p></div>
+      </div>
+      <div class="col" style="gap:6px">
+        <table class="tab apertada mini">
+          <tr><th>DEPOIS · DIRETORIA · CARGO · FAIXA</th><th style="width:22%">SERVIDORES</th></tr>
+          <tr><td>Administrativa · Assistente · até 2015</td><td>9</td></tr>
+          <tr><td>Administrativa · Assistente · 2016 em diante</td><td>12</td></tr>
+          <tr><td>Administrativa · Analista · todas</td><td>7</td></tr>
+          <tr><td>Finalística · Assistente · até 2015</td><td class="lac">5</td></tr>
+          <tr><td>Finalística · Assistente · 2016 em diante</td><td>8</td></tr>
+          <tr><td>Finalística · Analista · todas</td><td>7</td></tr>
+        </table>
+        <p class="rodape-corpo" style="margin-top:2px">6 combinações, menor grupo com 5 servidores. k = 5.</p>
+      </div>
+    </div>
+    <p class="fonte-nota">Base ilustrativa de afastamentos de 48 servidores. Sweeney (2000) estimou que código postal, sexo e data de nascimento identificam de forma única 87% da população dos EUA.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 12.3 · Prática</span>
-      <span class="pag">17 / 27</span>
+      <span class="centro">Ciclo 12.3 · Teoria</span>
+      <span class="pag">17 / 29</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="17">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 12.3 · TEORIA</span>
+    <h2>Proteção de dados e IA em novembro de 2026</h2>
+    <p class="sub">Situação que muda com frequência. Confira a data de consulta antes de citar em documento</p>
+    <div class="corpo"><svg class="fig" viewBox="0 0 1168 232" xmlns="http://www.w3.org/2000/svg">
+  <line x1="20" y1="116" x2="1148" y2="116" stroke="#8D0333" stroke-width="3"/>
+  <g font-size="14" fill="#1A1A1A">
+    <circle cx="40" cy="116" r="9" fill="#D4B277"/>
+    <line x1="40" y1="106" x2="40" y2="70" stroke="#C9962E" stroke-width="1.5"/>
+    <text x="30" y="20" font-weight="700" fill="#8D0333">ago. 2018</text>
+    <text x="30" y="40">LGPD sancionada</text><text x="30" y="58">(Lei nº 13.709)</text>
+
+    <circle cx="200" cy="116" r="9" fill="#D4B277"/>
+    <line x1="200" y1="126" x2="200" y2="150" stroke="#C9962E" stroke-width="1.5"/>
+    <text x="150" y="170" font-weight="700" fill="#8D0333">abr. 2024</text>
+    <text x="150" y="190">Res. CD/ANPD nº 15,</text><text x="150" y="208">incidente em 3 dias úteis</text>
+
+    <circle cx="380" cy="116" r="9" fill="#0AB0AB"/>
+    <line x1="380" y1="106" x2="380" y2="70" stroke="#C9962E" stroke-width="1.5"/>
+    <text x="300" y="20" font-weight="700" fill="#8D0333">dez. 2024</text>
+    <text x="300" y="40">Senado aprova o</text><text x="300" y="58">PL 2338/2023 (IA)</text>
+
+    <circle cx="560" cy="116" r="9" fill="#D4B277"/>
+    <line x1="560" y1="126" x2="560" y2="150" stroke="#C9962E" stroke-width="1.5"/>
+    <text x="440" y="170" font-weight="700" fill="#8D0333">set. 2025</text>
+    <text x="440" y="190">ECA Digital sancionado</text><text x="440" y="208">(Lei nº 15.211)</text>
+
+    <circle cx="720" cy="116" r="9" fill="#8D0333"/>
+    <line x1="720" y1="106" x2="720" y2="70" stroke="#C9962E" stroke-width="1.5"/>
+    <text x="580" y="20" font-weight="700" fill="#8D0333">fev. 2026</text>
+    <text x="580" y="40">ANPD vira Agência Nacional de</text><text x="580" y="58">Proteção de Dados (Lei nº 15.352)</text>
+
+    <circle cx="880" cy="116" r="9" fill="#8D0333"/>
+    <line x1="880" y1="126" x2="880" y2="150" stroke="#C9962E" stroke-width="1.5"/>
+    <text x="780" y="170" font-weight="700" fill="#8D0333">mar. 2026</text>
+    <text x="780" y="190">ANPD inicia a fiscalização</text><text x="780" y="208">do ECA Digital</text>
+
+    <circle cx="1120" cy="116" r="11" fill="#fff" stroke="#0AB0AB" stroke-width="3"/>
+    <line x1="1120" y1="104" x2="1120" y2="70" stroke="#C9962E" stroke-width="1.5"/>
+    <text x="1148" y="20" text-anchor="end" font-weight="700" fill="#8D0333">nov. 2026</text>
+    <text x="1148" y="40" text-anchor="end">PL 2338 aguarda parecer</text><text x="1148" y="58" text-anchor="end">na comissão da Câmara</text>
+  </g>
+  <text x="0" y="230" font-size="13.5" fill="#6B6B6B">Marcadores em verde-azulado tratam de IA. O círculo vazado indica situação pendente.</text>
+</svg>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:10px">
+      <div class="caixa teal"><span class="rot">O QUE JÁ VALE PARA QUEM USA IA</span><p>A LGPD se aplica ao dado pessoal tratado por sistema de IA, inclusive o direito de pedir revisão de decisão automatizada (art. 20). A ANPD pôs IA entre os eixos de fiscalização prioritários de 2026 e 2027.</p></div>
+      <div class="caixa dourado"><span class="rot">PL 2338/2023 NA CÂMARA</span><p>Relator designado em maio de 2025, sem parecer apresentado. A votação prevista para junho de 2026 foi adiada para depois das eleições de outubro. Alterado na Câmara, o texto volta ao Senado.</p></div>
+    </div>
+    <p class="fonte-nota">Congresso em Foco, 25/02/2026. Teletime, 28/05/2026. Monitor LCF, verificação de 01/11/2026. Confidata, abr. 2026. O Povo, 05/03/2026. Consulta em 02/11/2026.</p></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 12.3 · Teoria</span>
+      <span class="pag">18 / 29</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="18">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 12.3 · PRÁTICA</span>
+    <h2>Sua vez: seção de uso seguro no AGENTS.md</h2>
+    <p class="sub">Individual</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.05fr;--dir:1fr">
+    <div class="col" style="gap:6px">
+      <pre class="codigo"><b>## Uso seguro de dados</b>
+- Nunca colar no chat nem deixar em pasta lida
+  pelo agente: CPF, RG, nome de terceiro,
+  endereco, dado de saude, biometria.
+- Antes de pedir a leitura de uma base: retirar
+  as colunas que a tarefa nao usa e trocar os
+  identificadores por codigo.
+- Bases com dado pessoal ficam em <b>dados/restrito/</b>,
+  declarada no .gitignore. Nao abrir essa pasta.
+- Calculo sobre dado pessoal: script em saidas/,
+  rodado aqui. So o resultado agregado volta.
+- Toda saida que cite pessoa e conferida por mim.</pre>
+      <p class="rodape-corpo" style="margin-top:0;font-size:14.5px;color:#6B6B6B">Exemplo para adaptar. A seção acrescenta regras ao AGENTS.md escrito no módulo 3.</p>
+    </div>
+    <ol class="steps cols-1 compacto" style="--linhas:4">
+    <li><span class="num">1</span>
+      <div><strong>Adapte a lista ao seu inventário</strong><p>O que nunca se cola depende dos tipos de dado registrados nos ciclos 12.1 e 12.2.</p></div>
+    </li>
+    <li><span class="num">2</span>
+      <div><strong>Crie dados/restrito/ e declare no .gitignore</strong><p>O comando conferir procura restrito ou dados/ no .gitignore.</p></div>
+    </li>
+    <li><span class="num">3</span>
+      <div><strong>Reescreva uma tarefa sua sem dado pessoal</strong><p>Em entregas/modulo12-ciclo3-exemplo.md, a instrução ao agente com os identificadores trocados.</p></div>
+    </li>
+    <li><span class="num">4</span>
+      <div><strong>Confira o commit no GitHub Desktop</strong><p>A pasta restrita não pode aparecer na lista de arquivos alterados.</p></div>
+    </li></ol></div></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 12.3 · Prática</span>
+      <span class="pag">19 / 29</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="19">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 12.3 · ENTREGA</span>
     <h2>Seção de uso seguro no AGENTS.md</h2>
@@ -662,140 +849,140 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>A seção de uso seguro escrita no AGENTS.md do projeto.</li><li>A pasta de dados restritos criada e declarada no .gitignore.</li><li>Um exemplo de tarefa sua com os identificadores substituídos.</li><li>O commit feito pelo GitHub Desktop, com a pasta restrita ausente da lista de arquivos.</li></ul>
+      <ul><li>A seção de uso seguro no AGENTS.md do projeto.</li><li>A pasta de dados restritos criada e declarada no .gitignore.</li><li>Uma tarefa sua reescrita com os identificadores substituídos.</li><li>O commit feito pelo GitHub Desktop, sem a pasta restrita na lista de arquivos.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>AGENTS.md, .gitignore e entregas/modulo12-ciclo3-exemplo.md</p>
+        <p><span class="mono" style="font-size:15px">AGENTS.md<br>.gitignore<br>entregas/modulo12-ciclo3-exemplo.md</span></p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>A conferência de que a pasta restrita não subiu é feita olhando a lista de arquivos do commit, e não a confiança na configuração.</p>
+        <p>O comando conferir exige a expressão uso seguro no AGENTS.md, com pelo menos 200 caracteres a partir dela, e a pasta restrita no .gitignore. O exemplo e o commit são conferidos na correção.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 12.3 · Entrega</span>
-      <span class="pag">18 / 27</span>
+      <span class="pag">20 / 29</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="18">
+<section class="slide divisor" data-i="20">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">12.4</span></div>
       <div class="dir">
         <h2>Cibersegurança e resposta a incidente</h2>
         <p class="etapas">Teoria · Prática · Entrega</p>
       </div>
-      <span class="pag">19 / 27</span>
+      <span class="pag">21 / 29</span>
     </section>
-<section class="slide conteudo" data-i="19">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 12.4 · TEORIA</span>
-    <h2>As quatro medidas que evitam a maior parte dos casos</h2>
-    <p class="sub">Nenhuma é técnica avançada, e é por isso que elas são ignoradas</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Senha diferente em cada serviço, guardada em gerenciador</strong><p>A senha repetida transforma um vazamento em vários. O gerenciador é o que torna a regra viável.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Segundo fator ativado onde existe</strong><p>Aplicativo autenticador é melhor que SMS, porque o chip pode ser clonado. O segundo fator sobrevive à senha vazada.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Desconfiança de mensagem com urgência</strong><p>O golpe usa pressa e autoridade: chefia pedindo pagamento agora, órgão pedindo confirmação de cadastro. A checagem é por outro canal, não pelo link.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Cópia de segurança em três lugares</strong><p>Duas mídias diferentes e uma fora do local. Backup que nunca foi restaurado não é backup, é esperança.</p></div>
-    </li></ol></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 12.4 · Teoria</span>
-      <span class="pag">20 / 27</span>
-    </footer>
-  </section>
-<section class="slide conteudo" data-i="20">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 12.4 · TEORIA</span>
-    <h2>Incidente: as primeiras horas e a comunicação</h2>
-    <p class="sub">Artigo 48 da Lei 13.709. O que se faz antes de saber o tamanho do problema</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">PRIMEIRA HORA</header>
-      <h3>Conter e registrar</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que fazer</span>
-          <p>Cortar o acesso comprometido, trocar credenciais, isolar a máquina. Anotar horário, quem percebeu e o que foi visto.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que não fazer</span>
-          <p>Apagar arquivo, formatar ou "consertar" antes de registrar. O que se apaga é a prova do que aconteceu.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">PRIMEIRO DIA</header>
-      <h3>Dimensionar</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que fazer</span>
-          <p>Que dados, de quantas pessoas, por quanto tempo expostos, se há dado sensível. Comunicar ao encarregado e à chefia.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que documentar</span>
-          <p>A linha do tempo do que se sabe e do que ainda não se sabe, separadas.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">COMUNICAÇÃO</header>
-      <h3>ANPD e titulares</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Quando</span>
-          <p>Incidente com risco ou dano relevante aos titulares é comunicado à autoridade nacional e às pessoas afetadas, em prazo razoável.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que comunicar</span>
-          <p>Quais dados, quantos titulares, medidas tomadas e riscos. A omissão agrava a responsabilidade.</p>
-        </div>
-    </article></div></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 12.4 · Teoria</span>
-      <span class="pag">21 / 27</span>
-    </footer>
-  </section>
 <section class="slide conteudo" data-i="21">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 12.4 · TEORIA</span>
+    <h2>Quatro medidas com critério verificável</h2>
+    <p class="sub">Medidas de proteção da conta e do arquivo, com a referência técnica de cada uma</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:25%">MEDIDA</th><th style="width:52%">CRITÉRIO</th><th style="width:23%">REFERÊNCIA</th></tr>
+      <tr><td><strong>Senha longa e única por serviço, em gerenciador</strong></td><td>15 caracteres ou mais quando a senha é o único fator. Sem regra de composição e sem troca periódica. Troca imediata quando há indício de vazamento.</td><td>NIST SP 800-63B-4, ago. 2025</td></tr>
+      <tr><td><strong>Verificação em duas etapas</strong></td><td>Ativa no e-mail, nos sistemas do órgão e no gerenciador. Aplicativo autenticador ou chave física. O NIST classifica o SMS como autenticador restrito.</td><td>CERT.br, Cartilha de Segurança. NIST SP 800-63B-4</td></tr>
+      <tr><td><strong>Confirmação por outro canal</strong></td><td>Pedido urgente de pagamento, senha ou dado é confirmado por telefone já conhecido ou pessoalmente, antes de qualquer ação.</td><td>Caso C&amp;M Software, abaixo</td></tr>
+      <tr><td><strong>Cópia de segurança 3-2-1</strong></td><td>Três cópias, em dois tipos de mídia, uma fora do local. Restauração testada, com data registrada.</td><td>US-CERT (2012), Data Backup Options</td></tr>
+    </table>
+    <div class="caixa vinho" style="margin-top:14px"><span class="rot">C&amp;M SOFTWARE, JULHO DE 2025</span>
+      <p>Um operador de TI da empresa que liga instituições de pagamento ao PIX entregou a credencial de acesso a criminosos por R$ 15 mil, segundo a polícia. O desvio da instituição BMP chegou a R$ 541 milhões. As três primeiras medidas não impedem o uso da credencial pelo próprio funcionário. Nesse caso, os controles são a separação de funções e o monitoramento de transações fora do padrão.</p></div>
+    <p class="fonte-nota">CNN Brasil e Baguete, 04/07/2025. Consulta em 02/11/2026.</p></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 12.4 · Teoria</span>
+      <span class="pag">22 / 29</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="22">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 12.4 · TEORIA</span>
+    <h2>As primeiras horas do incidente e os prazos</h2>
+    <p class="sub">Lei nº 13.709/2018, art. 48, e Regulamento de Comunicação de Incidente de Segurança da ANPD</p>
+    <div class="corpo"><svg class="fig" viewBox="0 0 1168 180" xmlns="http://www.w3.org/2000/svg">
+  <defs><marker id="mi" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8D0333"/></marker></defs>
+  <g font-size="14">
+    <rect x="0" y="0" width="178" height="132" fill="#8D0333"/>
+    <text x="89" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">Conhecimento</text>
+    <text x="89" y="54" text-anchor="middle" fill="#fff">alguém percebe</text>
+    <text x="89" y="74" text-anchor="middle" fill="#fff">o incidente</text>
+    <text x="89" y="112" text-anchor="middle" font-size="15" font-weight="700" fill="#FEC84D">marco zero</text>
+
+    <rect x="210" y="0" width="210" height="132" fill="#fff" stroke="#0AB0AB" stroke-width="2.5"/>
+    <text x="315" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#1A1A1A">Primeira hora</text>
+    <text x="315" y="52" text-anchor="middle" fill="#333">cortar o acesso, trocar</text>
+    <text x="315" y="72" text-anchor="middle" fill="#333">credenciais, anotar hora,</text>
+    <text x="315" y="92" text-anchor="middle" fill="#333">quem viu e o que foi visto</text>
+    <text x="315" y="120" text-anchor="middle" font-weight="700" fill="#8D0333">sem apagar nada</text>
+
+    <rect x="452" y="0" width="210" height="132" fill="#fff" stroke="#FEC84D" stroke-width="2.5"/>
+    <text x="557" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#1A1A1A">Primeiro dia</text>
+    <text x="557" y="52" text-anchor="middle" fill="#333">que dados, de quantas</text>
+    <text x="557" y="72" text-anchor="middle" fill="#333">pessoas, há dado sensível,</text>
+    <text x="557" y="92" text-anchor="middle" fill="#333">aviso ao encarregado</text>
+    <text x="557" y="120" text-anchor="middle" font-weight="700" fill="#8D0333">linha do tempo escrita</text>
+
+    <rect x="694" y="0" width="230" height="132" fill="#F2CDD8" stroke="#8D0333" stroke-width="2.5"/>
+    <text x="809" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#8D0333">Até 3 dias úteis</text>
+    <text x="809" y="52" text-anchor="middle" fill="#8D0333">comunicação à ANPD</text>
+    <text x="809" y="72" text-anchor="middle" fill="#8D0333">e aos titulares, se houver</text>
+    <text x="809" y="92" text-anchor="middle" fill="#8D0333">risco ou dano relevante</text>
+    <text x="809" y="120" text-anchor="middle" font-weight="700" fill="#8D0333">art. 48 e Res. 15/2024</text>
+
+    <rect x="956" y="0" width="212" height="132" fill="#F7F4EE" stroke="#D4B277" stroke-width="2.5"/>
+    <text x="1062" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#1A1A1A">Depois</text>
+    <text x="1062" y="52" text-anchor="middle" fill="#333">complemento em até</text>
+    <text x="1062" y="72" text-anchor="middle" fill="#333">20 dias úteis</text>
+    <text x="1062" y="96" text-anchor="middle" fill="#333">registro de todo incidente</text>
+    <text x="1062" y="116" text-anchor="middle" fill="#333">guardado por 5 anos</text>
+  </g>
+  <g stroke="#8D0333" stroke-width="2.5" fill="none">
+    <path d="M180,66 L206,66" marker-end="url(#mi)"/><path d="M422,66 L448,66" marker-end="url(#mi)"/>
+    <path d="M664,66 L690,66" marker-end="url(#mi)"/><path d="M926,66 L952,66" marker-end="url(#mi)"/>
+  </g>
+  <path d="M0,150 L924,150" stroke="#C9962E" stroke-width="2" stroke-dasharray="7 5"/>
+  <text x="462" y="172" text-anchor="middle" font-size="14" fill="#8a6514">os 3 dias úteis correm desde que o controlador sabe que o incidente afetou dado pessoal, com a apuração ainda em curso</text>
+</svg>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:10px">
+      <div class="caixa dourado"><span class="rot">RISCO OU DANO RELEVANTE</span><p>Incidente que possa afetar de forma relevante os direitos dos titulares e envolva ao menos um destes casos, que são dado sensível, dado de criança, adolescente ou idoso, dado financeiro, credencial de acesso, dado sob sigilo ou tratamento em larga escala.</p></div>
+      <div class="caixa vinho"><span class="rot">INSS, 2024</span><p>A ANPD determinou a publicação da infração por 60 dias no site e no aplicativo Meu INSS. Um incidente de 2022 no sistema de benefícios não foi comunicado aos titulares. O INSS alegou não conseguir identificá-los, e a ANPD respondeu que cabia aviso por meio amplo.</p></div>
+    </div>
+    <p class="fonte-nota">Resolução CD/ANPD nº 15, de 24/04/2024, resumo em cesconbarrieu.com.br. Caso INSS em legismap.com.br, 01/02/2024. Consulta em 02/11/2026.</p></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 12.4 · Teoria</span>
+      <span class="pag">23 / 29</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="23">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 12.4 · PRÁTICA</span>
     <h2>Sua vez: plano de resposta em uma página</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Abra o modelo do plano</strong><p>python atividade_modulo12.py incidente cria o arquivo com as seções exigidas.</p></div>
+      <div><strong>Crie o modelo do plano</strong><p>"execute atividade_modulo12.py com o comando incidente" grava entregas/plano-resposta-incidente.md com as seções exigidas.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Escolha o cenário mais provável no seu setor</strong><p>Planilha enviada ao destinatário errado, conta comprometida, aparelho perdido, sistema fora do ar por sequestro de dados.</p></div>
+      <div><strong>Escolha o incidente mais provável no seu setor</strong><p>A partir do inventário. Planilha enviada ao destinatário errado, conta comprometida, notebook perdido ou sistema sequestrado (ransomware).</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Escreva quem faz o quê nas primeiras duas horas</strong><p>Com nome de cargo, não "a equipe de TI". Se não houver cargo definido, esse é o achado.</p></div>
+      <div><strong>Escreva ao menos três ações das primeiras duas horas</strong><p>Uma por linha, como acao_1, no formato ação | cargo. O script recusa "a equipe", "o setor de TI" e "todos", e ação com menos de três palavras.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Rode a conferência final</strong><p>python atividade_modulo12.py conferir verifica o inventário, o AGENTS.md e o plano.</p></div>
+      <div><strong>Escreva o critério de comunicação e confira</strong><p>Campos quando_vai_a_anpd e quando_os_titulares_sao_avisados. Depois, "execute atividade_modulo12.py com o comando conferir".</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 12.4 · Prática</span>
-      <span class="pag">22 / 27</span>
+      <span class="pag">24 / 29</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="22">
+<section class="slide conteudo" data-i="24">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 12.4 · ENTREGA</span>
     <h2>Plano de resposta em uma página</h2>
@@ -803,143 +990,157 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>O cenário escolhido e por que ele é o mais provável no seu setor.</li><li>As ações das primeiras duas horas, com cargo responsável em cada uma.</li><li>Quem é comunicado, em que ordem e por qual canal.</li><li>O critério que define se o caso vai à ANPD e aos titulares.</li></ul>
+      <ul><li>O incidente escolhido no campo cenario e por que é o mais provável no seu setor.</li><li>Três ações ou mais das primeiras duas horas, com cargo em cada uma.</li><li>Quem é comunicado primeiro, a ordem seguinte e o canal.</li><li>O critério de comunicação à ANPD e aos titulares.</li><li>O que não fazer.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>entregas/plano-resposta-incidente.md</p>
+        <p><span class="mono" style="font-size:15px">entregas/plano-resposta-incidente.md</span></p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Ação sem cargo responsável não é ação. O script recusa "a equipe" e "o setor de TI" como responsáveis.</p>
+        <p>O comando conferir recusa campo vazio, responsável vago e ação curta. A correção confere se o critério de comunicação segue o prazo de três dias úteis da Resolução CD/ANPD nº 15/2024.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 12.4 · Entrega</span>
-      <span class="pag">23 / 27</span>
-    </footer>
-  </section>
-<section class="slide conteudo" data-i="23">
-    <span class="barra"></span>
-    <span class="eyebrow">FECHAMENTO</span>
-    <h2>O que você tem ao fim do encontro</h2>
-    <p class="sub">Quatro documentos que a maioria das organizações não tem</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">O INVENTÁRIO</header>
-      <h3>Dado, base legal, finalidade e prazo</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que é</span>
-          <p>A lista do que passa por você, com o fundamento de cada tratamento.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Para que serve</span>
-          <p>É o que se apresenta quando o titular pergunta ou quando o controle interno cobra.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">A REGRA DE USO</header>
-      <h3>A seção de uso seguro do AGENTS.md</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que é</span>
-          <p>O que não vai para o modelo, e o que se faz com o dado antes de enviá-lo.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Para que serve</span>
-          <p>Vale para o agente e vale para você. É a regra que impede o erro de pressa.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">O PLANO</header>
-      <h3>Resposta a incidente em uma página</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que é</span>
-          <p>Cenário, ações das primeiras horas, responsáveis e critério de comunicação.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Para que serve</span>
-          <p>Uma página lida antes vale mais que um manual de trinta páginas procurado durante.</p>
-        </div>
-    </article></div></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Fechamento</span>
-      <span class="pag">24 / 27</span>
-    </footer>
-  </section>
-<section class="slide conteudo" data-i="24">
-    <span class="barra"></span>
-    <span class="eyebrow">PRÓXIMOS PASSOS</span>
-    <h2>Módulo 13: o que preparar</h2>
-    <p class="sub">Decisão apoiada por IA e a entrega C1</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Traga um documento de decisão do seu setor</strong><p>Edital, termo de referência, contrato, parecer ou devolutiva. Dez páginas ou mais, e sem dado pessoal.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Releia o seu inventário antes de trazer</strong><p>Se o documento tiver dado pessoal, leve a versão publicada ou substitua os identificadores.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Revise as entregas dos encontros 12 e 13</strong><p>A C1 do encontro 14 vale 40% da nota 3 e reúne os três encontros.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Traga o critério de decisão que você usaria</strong><p>Escrito antes da aula, em três linhas. Ele vai ser comparado com o que o modelo propõe. Quem escrever durante a aula perde a comparação.</p></div>
-    </li></ol></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Próximos passos</span>
-      <span class="pag">25 / 27</span>
+      <span class="pag">25 / 29</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="25">
     <span class="barra"></span>
+    <span class="eyebrow">BALANÇO</span>
+    <h2>O que você tem ao fim do encontro</h2>
+    
+    <div class="corpo"><div class="cards cols-4">
+    <article class="card">
+      <header style="background:#D4B277">A VARREDURA</header>
+      <h3>Relatório com decisão</h3>
+        <div class="bloco">
+          <span class="rule" style="background:#D4B277"></span>
+          <span class="rot">O que é</span>
+          <p>Os padrões de dado pessoal na pasta do projeto e o que fazer com cada um.</p>
+        </div>
+        <div class="bloco">
+          <span class="rule" style="background:#D4B277"></span>
+          <span class="rot">Uso seguinte</span>
+          <p>Repetir antes de entregar qualquer arquivo com dados.</p>
+        </div>
+    </article>
+    <article class="card">
+      <header style="background:#0AB0AB">O INVENTÁRIO</header>
+      <h3>Base legal e prazo</h3>
+        <div class="bloco">
+          <span class="rule" style="background:#0AB0AB"></span>
+          <span class="rot">O que é</span>
+          <p>Tipos de dado, origem, guarda, acesso, base legal, finalidade e prazo.</p>
+        </div>
+        <div class="bloco">
+          <span class="rule" style="background:#0AB0AB"></span>
+          <span class="rot">Uso seguinte</span>
+          <p>Responder a pedido de titular (art. 18) e iniciar o registro das operações (art. 37).</p>
+        </div>
+    </article>
+    <article class="card">
+      <header style="background:#FEC84D">A REGRA DE USO</header>
+      <h3>AGENTS.md e pasta restrita</h3>
+        <div class="bloco">
+          <span class="rule" style="background:#FEC84D"></span>
+          <span class="rot">O que é</span>
+          <p>O que não vai ao modelo e o preparo da base antes da leitura pelo agente.</p>
+        </div>
+        <div class="bloco">
+          <span class="rule" style="background:#FEC84D"></span>
+          <span class="rot">Uso seguinte</span>
+          <p>Vale nos módulos 13 a 15 e no trabalho.</p>
+        </div>
+    </article>
+    <article class="card">
+      <header style="background:#9fd6c4">O PLANO</header>
+      <h3>Ações com cargo</h3>
+        <div class="bloco">
+          <span class="rule" style="background:#9fd6c4"></span>
+          <span class="rot">O que é</span>
+          <p>Incidente provável, ações das duas primeiras horas, comunicação e critério de aviso.</p>
+        </div>
+        <div class="bloco">
+          <span class="rule" style="background:#9fd6c4"></span>
+          <span class="rot">Uso seguinte</span>
+          <p>Levar à chefia e ao encarregado do órgão.</p>
+        </div>
+    </article></div></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Balanço do módulo</span>
+      <span class="pag">26 / 29</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="26">
+    <span class="barra"></span>
+    <span class="eyebrow">PRÓXIMOS PASSOS</span>
+    <h2>Módulo 13: o que preparar</h2>
+    <p class="sub">Decisão apoiada por IA e a entrega C1</p>
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
+    <li><span class="num">1</span>
+      <div><strong>Traga um documento de decisão do seu setor</strong><p>Edital, termo de referência, contrato, parecer ou devolutiva, com dez páginas ou mais.</p></div>
+    </li>
+    <li><span class="num">2</span>
+      <div><strong>Aplique o inventário ao documento</strong><p>Se ele tiver dado pessoal, leve a versão publicada ou substitua os identificadores antes da aula.</p></div>
+    </li>
+    <li><span class="num">3</span>
+      <div><strong>Escreva o critério de decisão antes da aula</strong><p>Três linhas. Ele será comparado com o critério que o modelo propuser. Se for escrito depois da resposta do modelo, a comparação perde o sentido.</p></div>
+    </li>
+    <li><span class="num">4</span>
+      <div><strong>Revise as entregas dos encontros 12 e 13</strong><p>A C1, no encontro 14, vale 40% da nota 3 e reúne os três encontros.</p></div>
+    </li></ol></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Próximos passos</span>
+      <span class="pag">27 / 29</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="27">
+    <span class="barra"></span>
     <span class="eyebrow">DÚVIDAS FREQUENTES</span>
     <h2>Perguntas que aparecem neste módulo</h2>
     
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:5">
+    <div class="corpo"><ol class="steps cols-2 compacto" style="--linhas:3">
     <li><span class="num">1</span>
-      <div><strong>"Então não posso usar IA com dado do trabalho?"</strong><p>Pode, com base legal, minimização e a regra escrita no AGENTS.md. O que não se pode é colar planilha inteira sem pensar.</p></div>
+      <div><strong>"Então não posso usar IA com dado do trabalho?"</strong><p>Pode, com base legal, só as colunas necessárias, identificadores trocados e, quando houver, pelo contrato da organização.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>"Meu órgão não tem encarregado."</strong><p>Isso é um achado do inventário e entra no plano de resposta. A obrigação existe mesmo sem a designação feita.</p></div>
+      <div><strong>"Meu órgão não tem encarregado."</strong><p>Registre no plano. A indicação é obrigação do controlador (art. 41), também no setor público (art. 23, III).</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>"E se eu já mandei dado pessoal para o modelo?"</strong><p>Registre quando e o quê, apague a conversa se o serviço permitir, e trate como incidente se envolveu dado sensível ou muitas pessoas.</p></div>
+      <div><strong>"Já enviei dado pessoal ao modelo."</strong><p>Anote quando, o quê e em qual serviço. Apague a conversa se o serviço permitir e avise o encarregado, que avalia se houve incidente.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>"Dado de empresa também é protegido?"</strong><p>CNPJ e razão social de pessoa jurídica não são dado pessoal. O nome do sócio e o CPF do responsável são.</p></div>
+      <div><strong>"Dado de empresa é protegido?"</strong><p>CNPJ e razão social não são dado pessoal. Nome e CPF do sócio ou do responsável legal são.</p></div>
     </li>
     <li><span class="num">5</span>
-      <div><strong>"Anonimizar é só tirar o nome?"</strong><p>Não. Se a combinação das colunas restantes chega em uma pessoa, o dado continua pessoal.</p></div>
+      <div><strong>"A varredura deu zero achados."</strong><p>O resultado vale para os arquivos de texto. PDF, imagem, .xlsx e nomes de pessoas ficam fora da busca.</p></div>
+    </li>
+    <li><span class="num">6</span>
+      <div><strong>"A ANPD virou agência. O que muda?"</strong><p>A LGPD continua a mesma. A agência tem autonomia financeira e 200 cargos de especialista (Lei nº 15.352/2026).</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Dúvidas frequentes</span>
-      <span class="pag">26 / 27</span>
+      <span class="pag">28 / 29</span>
     </footer>
   </section>
-<section class="slide fim" data-i="26">
+<section class="slide fim" data-i="28">
       <span class="filete"></span>
       <h1>Módulo 12 concluído</h1>
-      <p>Você sabe o que tem, com que fundamento trata, o que não envia ao modelo e o que faz quando algo vaza. No próximo encontro, esse cuidado vira critério de decisão em documento real.</p>
+      <p>A pasta foi varrida, o inventário tem base legal e prazo, o AGENTS.md diz o que não vai ao modelo e o plano de incidente tem cargo em cada ação. No próximo encontro, um documento de decisão do seu setor é analisado com apoio do modelo.</p>
       <span class="slogan">SEMPRE+ QUALIDADE INOVAÇÃO INCLUSÃO</span>
     </section>
 </div>
 <div id="barra">
   <button id="ant" title="Anterior">&#8249;</button>
-  <input id="atual" value="1" title="Ir para o slide"> <span>/ 27</span>
+  <input id="atual" value="1" title="Ir para o slide"> <span>/ 29</span>
   <button id="prox" title="Próximo">&#8250;</button>
   <button id="tela" title="Tela cheia">&#9744;</button>
 </div>

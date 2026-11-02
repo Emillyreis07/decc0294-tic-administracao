@@ -147,6 +147,124 @@ body.mexeu #ajuda{opacity:1}
   #barra,#ajuda{display:none}
   .slide{display:block!important;page-break-after:always;box-shadow:none;transform:none!important}
 }
+/* ---- componentes acrescentados na revisão de nov. 2026 ---- */
+.mono{font-family:Consolas,"Cascadia Mono","Courier New",monospace}
+.fonte-nota{position:absolute;left:0;right:0;bottom:-2px;font-size:13px;color:var(--muted);line-height:1.3}
+.prompt.compacto{padding:12px 20px;margin-bottom:16px}
+.prompt.compacto p{font-size:17px;line-height:1.4;margin-top:6px}
+.prompt.compacto p+p{margin-top:6px}
+.prompt .cmd{font-style:normal;font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:16px}
+
+/* tabela de dados */
+.tab{width:100%;border-collapse:collapse;font-size:15px;line-height:1.3;color:var(--body)}
+.tab th{background:var(--vinho);color:#fff;font-weight:700;text-align:left;padding:7px 10px;font-size:14px;letter-spacing:.3px}
+.tab td{border-bottom:1px solid #e1e1e1;padding:7px 10px;vertical-align:top;background:#fff}
+.tab tr:nth-child(even) td{background:#fafafa}
+.tab td.lac{background:#FFF3D1!important;color:#7a5600;font-weight:700}
+.tab td .s{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+.tab td strong{color:var(--txt)}
+.chip{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.5px;padding:2px 8px;margin-bottom:4px;color:var(--txt)}
+.chip.ok{background:#CFEFEE}.chip.med{background:#FFE7A8}.chip.ruim{background:#F2CDD8;color:var(--vinho)}
+.badge{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--vinho);
+  color:#fff;font-size:12px;font-weight:700;margin-right:6px;vertical-align:1px;font-style:normal}
+
+/* duas colunas */
+.duascol{display:grid;grid-template-columns:var(--esq,1.4fr) var(--dir,1fr);gap:28px;height:100%}
+.duascol .col{display:flex;flex-direction:column;gap:14px;min-height:0}
+.steps.compacto{gap:12px}
+.steps.compacto strong{font-size:18px}
+.steps.compacto p{font-size:16px;line-height:1.35}
+.steps.compacto .num{flex:0 0 28px;height:28px;font-size:15px}
+
+/* fluxo horizontal */
+.fluxo{display:grid;grid-template-columns:repeat(var(--n,4),1fr);gap:34px;position:relative}
+.etapa{background:var(--card);border:1px solid #e3e3e3;border-top:6px solid var(--cor,var(--vinho));
+  padding:12px 16px 14px;position:relative}
+.etapa:not(:last-child)::after{content:"";position:absolute;right:-27px;top:50%;margin-top:-11px;
+  border-left:16px solid var(--vinho);border-top:11px solid transparent;border-bottom:11px solid transparent}
+.etapa .n{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;
+  background:var(--vinho);color:#fff;font-size:14px;font-weight:700}
+.etapa h4{display:inline;font-size:18px;color:var(--txt);margin-left:6px;vertical-align:2px}
+.etapa p{font-size:15.5px;line-height:1.38;margin-top:8px}
+.etapa .arq{display:block;margin-top:8px;font-size:13.5px;color:var(--vinho);
+  font-family:Consolas,"Cascadia Mono","Courier New",monospace;word-break:break-all}
+.trilha{margin-top:18px}
+.trilha .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1px;color:var(--muted);margin-bottom:6px}
+.trilha .barra-g{height:14px;background:linear-gradient(90deg,var(--teal) 0%,#9fd6c4 30%,var(--amarelo) 55%,var(--vinho) 100%)}
+.trilha .marcas{display:grid;grid-template-columns:repeat(4,1fr);gap:34px;font-size:13.5px;color:var(--muted);margin-top:5px}
+
+/* conceito (mesmo padrão dos módulos 2 e 3) */
+.def{background:var(--card2);border:1px solid #e3e3e3;border-left:9px solid var(--vinho);padding:12px 20px}
+.def .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1.2px;color:var(--vinho);text-transform:uppercase}
+.def p{font-size:17px;line-height:1.4;color:var(--txt);margin-top:5px}
+
+/* eixo acima dos cartões */
+.eixo{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;margin-bottom:14px;
+  font-size:14px;font-weight:700;color:var(--muted);letter-spacing:.4px}
+.eixo .seta{height:10px;position:relative;background:linear-gradient(90deg,var(--dourado),var(--teal))}
+.eixo .seta::after{content:"";position:absolute;right:-14px;top:-7px;border-left:16px solid var(--teal);
+  border-top:12px solid transparent;border-bottom:12px solid transparent}
+.cards.baixos{height:calc(100% - 40px)}
+.cards.baixos .card h3{font-size:18px;padding:12px 16px 2px}
+.cards.baixos .card .bloco{padding:8px 16px 0}
+.cards.baixos .card .bloco p{font-size:15.5px;line-height:1.36}
+
+/* grade de dimensões */
+.grade{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:14px;height:calc(100% - 22px)}
+.dim{background:var(--card);border:1px solid #e3e3e3;border-top:5px solid var(--cor);padding:10px 16px}
+.dim h4{font-size:19px;color:var(--vinho)}
+.dim h4 small{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.dim p{font-size:15.5px;line-height:1.36;margin-top:5px}
+.dim .med{display:block;font-size:14px;color:var(--txt);margin-top:7px;border-top:1px solid #ddd;padding-top:6px}
+.dim .med b{color:var(--muted);font-size:12.5px;letter-spacing:.6px}
+
+/* caixa lateral */
+.caixa{background:var(--card2);border:1px solid #e3e3e3;padding:12px 16px}
+.caixa.vinho{border-left:6px solid var(--vinho)}
+.caixa.dourado{border-left:6px solid var(--dourado)}
+.caixa.teal{border-left:6px solid var(--teal)}
+.caixa .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1px;color:var(--vinho);margin-bottom:4px}
+.caixa p{font-size:15.5px;line-height:1.38}
+.caixa p+p{margin-top:6px}
+.legenda{list-style:none}
+.legenda li{font-size:15.5px;line-height:1.35;margin-bottom:8px;display:flex;gap:6px}
+.legenda li b{color:var(--txt)}
+
+/* ficha do mapa de dados */
+.ficha{display:grid;grid-template-columns:1fr 1fr;gap:14px;height:calc(100% - 64px)}
+.ficha .grupo{background:var(--card);border:1px solid #e3e3e3;border-top:5px solid var(--cor)}
+.ficha .grupo>header{font-size:16px;font-weight:700;color:var(--vinho);padding:8px 14px 2px}
+.ficha .grupo>header span{color:var(--muted);font-weight:400;font-size:14px;margin-left:6px}
+.ficha dl{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;padding:6px 14px 10px;font-size:14.5px;line-height:1.3}
+.ficha dt{font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:13.5px;color:var(--vinho);padding-top:1px}
+.ficha dd{color:var(--txt)}
+.rodape-corpo{margin-top:12px;font-size:15.5px;line-height:1.4;color:var(--body)}
+
+/* svg */
+.fig{display:block;width:100%;height:auto}
+.fig text{font-family:"Segoe UI",Calibri,"Helvetica Neue",Arial,sans-serif}
+
+/* ajustes após conferência visual */
+.tab.apertada{font-size:14.5px}
+.tab.apertada td{padding:6px 10px}
+.legenda .badge{flex:0 0 20px;margin-top:1px}
+.dim p{font-size:17px}
+.dim .med{font-size:15.5px}
+.dim h4{font-size:21px}
+.cards.baixos .card .bloco p{font-size:16.5px}
+.eixo{gap:26px}
+.ficha dl{font-size:16.5px;gap:6px 14px;padding:8px 14px 12px}
+.ficha dt{font-size:15px}
+.ficha .grupo>header{font-size:17.5px}
+.etapa p{font-size:16.5px}
+.etapa .arq{word-break:normal;overflow-wrap:break-word}
+.steps.cols-3.compacto p{font-size:17px}
+.steps.cols-3.compacto strong{font-size:19px}
+
+/* blocos de saída de terminal */
+.terminal{background:#262626;color:#e9e9e9;font-family:Consolas,"Cascadia Mono","Courier New",monospace;
+  font-size:14px;line-height:1.38;padding:12px 16px;white-space:pre;overflow:hidden;margin:0}
+.terminal .hl{color:#FEC84D;font-weight:700}
 </style>
 </head>
 <body>
@@ -157,59 +275,59 @@ body.mexeu #ajuda{opacity:1}
       <span class="mod">MÓDULO 11</span>
       <h1>Aprendizado de máquina e analytics para a decisão</h1>
       <span class="tracinho"></span>
-      <p class="sub">Encontro 12 · O que essas técnicas fazem, e o que um gestor precisa perguntar sobre elas</p>
+      <p class="sub">Encontro 12 · Camadas de análise, tipos de aprendizado e o palpite simples como régua</p>
       <p class="pe">DECC0294 · Tecnologia da Informação e Comunicação Aplicada à Administração · 2026.2</p>
     </section>
 <section class="slide conteudo" data-i="1">
     <span class="barra"></span>
     <span class="eyebrow">VISÃO GERAL DO MÓDULO</span>
     <h2>O que você vai construir hoje</h2>
-    <p class="sub">Começa a nota 3. O objetivo não é operar modelos, é saber avaliá-los.</p>
+    <p class="sub">Primeiro encontro da nota 3. A turma aprende a avaliar uma proposta de modelo preditivo antes de usá-la</p>
     <div class="corpo"><div class="overview">
     <article class="ciclo">
       <span class="topo" style="background:#D4B277"></span>
-      <span class="rot" >CICLO 11.1</span>
+      <span class="rot">CICLO 11.1</span>
       <h3>Descritiva, preditiva e prescritiva</h3>
       <div class="pe">
         <span class="rule" style="background:#D4B277"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Classificação de cinco perguntas</p>
+        <p>Cinco perguntas do seu setor classificadas, com a variável a prever e o palpite simples</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#0AB0AB"></span>
-      <span class="rot" >CICLO 11.2</span>
+      <span class="rot">CICLO 11.2</span>
       <h3>Os três tipos de aprendizado</h3>
       <div class="pe">
         <span class="rule" style="background:#0AB0AB"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Escolha de abordagem justificada</p>
+        <p>Abordagem escolhida para a pergunta preditiva, com rótulo e variáveis verificados</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#FEC84D"></span>
-      <span class="rot" >CICLO 11.3</span>
+      <span class="rot">CICLO 11.3</span>
       <h3>Aprendizado profundo e IA generativa</h3>
       <div class="pe">
         <span class="rule" style="background:#FEC84D"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Análise de um caso do setor</p>
+        <p>Um caso do setor analisado quanto à exigência de explicação</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#D4B277"></span>
-      <span class="rot" >CICLO 11.4</span>
+      <span class="rot">CICLO 11.4</span>
       <h3>Um modelo simples sobre a sua base</h3>
       <div class="pe">
         <span class="rule" style="background:#D4B277"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Modelo avaliado contra o palpite simples</p>
+        <p>Modelo treinado, comparado com o palpite simples e lido em duas frases</p>
       </div>
     </article></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Estrutura do módulo</span>
-      <span class="pag">2 / 27</span>
+      <span class="pag">2 / 29</span>
     </footer>
   </section>
 <section class="slide divisor" data-i="2">
@@ -219,112 +337,91 @@ body.mexeu #ajuda{opacity:1}
         <h2>Descritiva, preditiva e prescritiva</h2>
         <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">3 / 27</span>
+      <span class="pag">3 / 29</span>
     </section>
 <section class="slide conteudo" data-i="3">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 11.1 · TEORIA</span>
-    <h2>Três perguntas diferentes sobre os mesmos dados</h2>
-    <p class="sub">Sharda, Delen e Turban organizam analytics por essa distinção, e ela decide o que se pode prometer</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">DESCRITIVA</header>
-      <h3>O que aconteceu?</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que faz</span>
-          <p>Resume o passado: totais, médias, distribuições, séries. É tudo que você fez até o encontro 9.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que promete</span>
-          <p>Nada sobre o futuro. E responde a maior parte das perguntas de gestão do dia a dia.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">PREDITIVA</header>
-      <h3>O que provavelmente vai acontecer?</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que faz</span>
-          <p>Estima um valor ou uma probabilidade para casos ainda não observados, a partir do padrão dos casos passados.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que promete</span>
-          <p>Uma estimativa com erro conhecido. Nunca uma certeza, e o erro precisa ser declarado junto.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">PRESCRITIVA</header>
-      <h3>O que devemos fazer?</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que faz</span>
-          <p>Recomenda a ação, considerando restrições e objetivo. Otimização de rota, alocação de equipe, mix de compra.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que promete</span>
-          <p>A melhor decisão dentro do modelo. E o modelo nunca contém tudo que importa na organização.</p>
-        </div>
-    </article></div></div>
+    <h2>Três perguntas sobre os mesmos dados</h2>
+    <p class="sub">A camada da pergunta define o que a análise pode prometer a quem decide</p>
+    <div class="corpo"><table class="tab">
+      <tr><th style="width:15%"></th><th style="width:28%">DESCRITIVA</th><th style="width:28%">PREDITIVA</th><th style="width:29%">PRESCRITIVA</th></tr>
+      <tr><td><strong>Pergunta</strong></td><td>O que aconteceu?</td><td>O que tende a acontecer?</td><td>O que fazer, dadas as restrições?</td></tr>
+      <tr><td><strong>Técnica típica</strong></td><td>Totais, médias, séries e cruzamentos dos módulos 5 a 8</td>
+          <td>Regressão e classificação treinadas em casos passados</td><td>Otimização e simulação com objetivo e restrições declarados</td></tr>
+      <tr><td><strong>O que entrega</strong></td><td>Fato do período, sem afirmação sobre o futuro</td>
+          <td>Estimativa acompanhada do erro medido em casos novos</td><td>Ação recomendada, válida dentro das restrições do modelo</td></tr>
+      <tr><td><strong>Ouvidoria</strong><span class="s">exemplo ilustrativo</span></td>
+          <td>Setembro de 2026 teve 1.109 atendimentos, 13,6% abaixo de agosto (1.284)</td>
+          <td>A estimativa para dezembro é de 1.150 atendimentos, com erro médio de 90 nos meses de teste</td>
+          <td>Com 1.150 atendimentos e 160 por atendente ao mês, escalar 8 atendentes</td></tr>
+    </table>
+    <div class="duascol" style="--esq:1.25fr;--dir:1fr;height:auto;margin-top:16px">
+      <div class="def"><span class="rot">Analytics</span>
+        <p>Uso de dados e modelos para responder perguntas de negócio, organizado em três tipos pela pergunta que respondem (Sharda, Delen e Turban, 2019, cap. 1). A prescritiva depende de uma previsão e a preditiva depende de uma boa descrição.</p></div>
+      <div class="caixa dourado"><span class="rot">NA GESTÃO DO DIA A DIA</span><p>A maior parte das decisões de rotina se resolve na camada descritiva. Antes de pedir um modelo, verifique se a pergunta já se responde com o que aconteceu.</p></div>
+    </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 11.1 · Teoria</span>
-      <span class="pag">4 / 27</span>
+      <span class="pag">4 / 29</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="4">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 11.1 · TEORIA</span>
-    <h2>A pergunta que o gestor precisa fazer</h2>
-    <p class="sub">Quatro perguntas diante de qualquer proposta de modelo preditivo</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Qual o erro do modelo, e comparado com o quê?</strong><p>Acurácia de 90% pode ser pior que chutar sempre a categoria mais comum. Peça sempre a comparação com o palpite simples.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Com que dados ele foi treinado?</strong><p>Se foram os mesmos usados para avaliar, o resultado não significa nada. Treino e teste precisam ser separados.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>O que acontece quando ele erra?</strong><p>Erro que gera um contato desnecessário é barato. Erro que nega um benefício a quem tem direito é caro e pode ser ilegal.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Quem responde pela decisão?</strong><p>O modelo recomenda. Alguém assina. Decisão automatizada que afeta direito de pessoa tem exigência específica na LGPD.</p></div>
-    </li></ol></div>
+    <h2>Quatro perguntas antes de aceitar uma previsão</h2>
+    <p class="sub">Um roteiro para qualquer proposta de modelo que chegue à sua mesa, de fornecedor ou da equipe interna</p>
+    <div class="corpo"><table class="tab">
+      <tr><th style="width:4%">#</th><th style="width:27%">PERGUNTA DO GESTOR</th><th style="width:36%">O QUE PEDIR A QUEM PROPÕE O MODELO</th><th style="width:33%">SINAL DE ALERTA</th></tr>
+      <tr><td>1</td><td><strong>Qual o erro, e comparado com quê?</strong></td><td>O erro em casos novos ao lado do erro do palpite simples, que prevê sempre a média ou a categoria mais comum</td>
+          <td>Acurácia apresentada sem a proporção da categoria mais comum</td></tr>
+      <tr><td>2</td><td><strong>Com que dados ele aprendeu?</strong></td><td>Período, número de casos, origem da resposta certa e separação entre treino e teste</td>
+          <td>Erro medido nos mesmos casos usados para treinar</td></tr>
+      <tr><td>3</td><td><strong>Quanto custa cada direção do erro?</strong></td><td>O efeito de prever acima do real e o de prever abaixo, em reais, prazo ou pessoas afetadas</td>
+          <td>Os dois erros tratados como equivalentes</td></tr>
+      <tr><td>4</td><td><strong>Quem responde pela decisão?</strong></td><td>O cargo que assina e o canal para pedir revisão</td>
+          <td>"O sistema decide", sem responsável nomeado</td></tr>
+    </table>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:16px">
+      <div class="caixa teal"><span class="rot">VOLTA NO CICLO 11.4</span><p>O script da atividade calcula a comparação da pergunta 1. A ficha do modelo pede a resposta da pergunta 3 em dois campos, erro_para_mais e erro_para_menos.</p></div>
+      <div class="caixa vinho"><span class="rot">PERGUNTA 4 E LGPD</span><p>Decisão tomada só por tratamento automatizado que afete interesse de pessoa dá ao titular o direito de pedir revisão (Lei nº 13.709/2018, art. 20). O ciclo 11.3 trata do tema.</p></div>
+    </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 11.1 · Teoria</span>
-      <span class="pag">5 / 27</span>
+      <span class="pag">5 / 29</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="5">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 11.1 · DEMONSTRAÇÃO</span>
     <h2>Classificar perguntas antes de escolher técnica</h2>
-    <p class="sub">A maior parte do que se pede como preditivo é descritivo mal formulado</p>
-    <div class="corpo"><div class="prompt">
+    <p class="sub">Cinco perguntas de uma ouvidoria, classificadas pelo agente e revistas por quem conhece o setor</p>
+    <div class="corpo"><div class="prompt compacto">
     <span class="rot">INSTRUÇÃO DADA AO AGENTE</span>
-    <p>"Abaixo estão cinco perguntas de gestão da minha organização. Para cada uma, diga se ela é descritiva, preditiva ou prescritiva, e por quê. Se for preditiva, informe qual seria a variável a prever e o que serviria de palpite simples para comparação. Não proponha algoritmo. Grave em entregas/modulo11-ciclo1-classificacao.md."</p>
+    <p>"Classifique cada pergunta como descritiva, preditiva ou prescritiva, com justificativa. Nas preditivas, indique a variável a prever e o palpite simples. Não proponha algoritmo. Grave em entregas/modulo11-ciclo1-classificacao.md."</p>
   </div>
-<ol class="steps cols-3" style="--linhas:1">
-    <li><span class="num">1</span>
-      <div><strong>O "não proponha algoritmo" é deliberado</strong><p>A escolha da técnica vem depois, e quase nunca é a parte difícil.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>O palpite simples é a régua</strong><p>Sem ele, não há como saber se o modelo vale alguma coisa.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Perguntas descritivas você já sabe responder</strong><p>E são a maioria. Descobrir isso economiza um projeto.</p></div>
-    </li></ol></div>
+  <div class="duascol" style="--esq:2.3fr;--dir:1fr;height:auto">
+    <table class="tab apertada mini">
+      <tr><th style="width:40%">PERGUNTA DA OUVIDORIA</th><th style="width:18%">CAMADA</th><th style="width:42%">VARIÁVEL E PALPITE SIMPLES</th></tr>
+      <tr><td>Quantos atendimentos houve em 2026?</td><td><span class="chip ok">DESCRITIVA</span></td><td>Não se aplica</td></tr>
+      <tr><td>As reclamações estão aumentando?</td><td><span class="chip ok">DESCRITIVA</span></td><td>Não se aplica. Responde-se com a série mensal</td></tr>
+      <tr><td>Quantos atendimentos teremos em dezembro?</td><td><span class="chip med">PREDITIVA</span></td><td>Atendimentos no mês, comparados com a média dos últimos 12 meses</td></tr>
+      <tr><td>Qual manifestação vai passar do prazo de resposta?</td><td><span class="chip med">PREDITIVA</span></td><td>Fora do prazo, sim ou não, comparado com a categoria mais comum</td></tr>
+      <tr><td>Quantos atendentes escalar por turno?</td><td><span class="chip ruim">PRESCRITIVA</span></td><td>Usa a previsão de atendimentos e a carga horária</td></tr>
+    </table>
+    <div class="col" style="gap:10px">
+      <div class="caixa vinho"><span class="rot">"NÃO PROPONHA ALGORITMO"</span><p>Sem a restrição, o agente sugere técnica antes de a pergunta estar classificada.</p></div>
+      <div class="caixa dourado"><span class="rot">SEGUNDA PERGUNTA</span><p>Soa como previsão e se responde com a série do período.</p></div>
+      <div class="caixa teal"><span class="rot">REVISÃO</span><p>Quem conhece o setor confere a classificação antes da entrega.</p></div>
+    </div>
+  </div>
+  <p class="fonte-nota">Saída ilustrativa. O prazo de resposta da ouvidoria pública é de 30 dias, prorrogável uma vez por igual período (Lei nº 13.460/2017, art. 16).</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 11.1 · Demonstração</span>
-      <span class="pag">6 / 27</span>
+      <span class="pag">6 / 29</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="6">
@@ -332,23 +429,23 @@ body.mexeu #ajuda{opacity:1}
     <span class="eyebrow">CICLO 11.1 · PRÁTICA</span>
     <h2>Sua vez: cinco perguntas classificadas</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Escreva cinco perguntas da sua organização</strong><p>Inclua a que você anotou como pergunta de previsão.</p></div>
+      <div><strong>Escreva cinco perguntas da sua organização</strong><p>Inclua a pergunta de previsão que você anotou ao preparar a base para este encontro.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Classifique cada uma nas três categorias</strong><p>E justifique. A justificativa é o que se avalia.</p></div>
+      <div><strong>Classifique cada uma nas três camadas</strong><p>Com a justificativa em uma ou duas frases. A justificativa é o que se avalia.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Para as preditivas, defina a variável a prever</strong><p>E o palpite simples que serviria de comparação.</p></div>
+      <div><strong>Para as preditivas, defina a variável e o palpite</strong><p>O número ou a categoria a prever e o palpite simples que serviria de comparação.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Marque quais você já sabe responder</strong><p>Com o que aprendeu até o encontro 9. Costuma ser a maioria.</p></div>
+      <div><strong>Marque as que você já sabe responder</strong><p>Com as técnicas dos módulos 5 a 8. Em geral, são a maioria das cinco.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 11.1 · Prática</span>
-      <span class="pag">7 / 27</span>
+      <span class="pag">7 / 29</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="7">
@@ -359,7 +456,7 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>Cinco perguntas da sua organização.</li><li>A classificação de cada uma, com justificativa.</li><li>Para as preditivas, a variável a prever e o palpite simples.</li><li>A marcação das que você já sabe responder com análise descritiva.</li></ul>
+      <ul><li>Cinco perguntas da sua organização.</li><li>A camada de cada uma, com justificativa.</li><li>Para as preditivas, a variável a prever e o palpite simples.</li><li>A marcação das que você já sabe responder com análise descritiva.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
@@ -368,14 +465,14 @@ body.mexeu #ajuda{opacity:1}
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Pergunta classificada como preditiva sem definir a variável a prever não conta como classificação.</p>
+        <p>Pergunta classificada como preditiva sem a variável a prever não conta como classificada.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 11.1 · Entrega</span>
-      <span class="pag">8 / 27</span>
+      <span class="pag">8 / 29</span>
     </footer>
   </section>
 <section class="slide divisor" data-i="8">
@@ -385,87 +482,60 @@ body.mexeu #ajuda{opacity:1}
         <h2>Os três tipos de aprendizado</h2>
         <p class="etapas">Teoria · Prática · Entrega</p>
       </div>
-      <span class="pag">9 / 27</span>
+      <span class="pag">9 / 29</span>
     </section>
 <section class="slide conteudo" data-i="9">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 11.2 · TEORIA</span>
     <h2>Supervisionado, não supervisionado e por reforço</h2>
-    <p class="sub">Taulli trata dos três no capítulo 3. A diferença está no que existe para aprender.</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">SUPERVISIONADO</header>
-      <h3>Existem casos passados com a resposta certa</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que aprende</span>
-          <p>A relação entre as características do caso e a resposta conhecida. Previsão de valor ou de categoria.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Na gestão</span>
-          <p>Prever inadimplência a partir do histórico, classificar demanda pelo texto, estimar prazo de entrega.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">NÃO SUPERVISIONADO</header>
-      <h3>Não existe resposta certa, só os dados</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que aprende</span>
-          <p>Agrupamentos e padrões que estavam ali sem que ninguém tivesse nomeado.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Na gestão</span>
-          <p>Segmentar fornecedores por comportamento de entrega, agrupar unidades por perfil de demanda.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">POR REFORÇO</header>
-      <h3>Aprende tentando e recebendo retorno</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que aprende</span>
-          <p>A sequência de ações que maximiza um resultado ao longo do tempo, por tentativa e erro.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Na gestão</span>
-          <p>Pouco frequente. Aparece em precificação dinâmica e roteirização, e exige simulação ou ambiente controlado.</p>
-        </div>
-    </article></div></div>
+    <p class="sub">O tipo de aprendizado depende do que está registrado na base, antes de qualquer escolha de algoritmo</p>
+    <div class="corpo"><table class="tab">
+      <tr><th style="width:16%"></th><th style="width:28%">SUPERVISIONADO (SUPERVISED)</th><th style="width:28%">NÃO SUPERVISIONADO (UNSUPERVISED)</th><th style="width:28%">POR REFORÇO (REINFORCEMENT)</th></tr>
+      <tr><td><strong>O que existe para aprender</strong></td><td>Casos passados com a resposta registrada, chamada rótulo</td>
+          <td>Características dos casos, sem resposta registrada</td><td>Um ambiente que devolve uma recompensa a cada ação</td></tr>
+      <tr><td><strong>O que produz</strong></td><td>Um valor (regressão) ou uma categoria (classificação)</td>
+          <td>Grupos de casos parecidos (agrupamento) e padrões</td><td>Uma regra de escolha de ações ao longo do tempo</td></tr>
+      <tr><td><strong>Na gestão</strong></td><td>Prever atraso de fornecedor com três anos de pedidos e a data real de entrega de cada um</td>
+          <td>Separar 200 fornecedores em grupos por prazo médio, volume e devoluções</td><td>Roteirização e ajuste de preço por ocupação, testados em simulador antes do uso real</td></tr>
+      <tr><td><strong>Como se avalia</strong></td><td>Erro em casos guardados para teste</td>
+          <td>Utilidade dos grupos para quem decide, sem resposta certa para comparar</td><td>Recompensa acumulada na simulação</td></tr>
+    </table>
+    <div class="def" style="margin-top:14px"><span class="rot">Aprendizado de máquina (machine learning)</span>
+      <p>Um programa aprende quando o desempenho dele em uma tarefa, medido por um critério, melhora com a experiência (Mitchell, 1997). Taulli (2020, cap. 3) apresenta os três tipos. O script do ciclo 11.4 faz aprendizado supervisionado de valor, com regressão linear.</p></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 11.2 · Teoria</span>
-      <span class="pag">10 / 27</span>
+      <span class="pag">10 / 29</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="10">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 11.2 · TEORIA</span>
-    <h2>O que dá errado com mais frequência</h2>
-    <p class="sub">Três problemas que aparecem antes de qualquer discussão sobre algoritmo</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>O rótulo não existe, ou é ruim</strong><p>Aprendizado supervisionado precisa da resposta certa nos casos passados. Se ninguém registrou o desfecho, não há o que aprender, e nenhum algoritmo resolve isso.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>O viés do passado vira regra do futuro</strong><p>O modelo aprende o que a organização fez, inclusive o que ela fez de errado. Se a triagem histórica desfavorecia um grupo, o modelo aprende a desfavorecer.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>A variável que prevê é consequência, e não causa</strong><p>Prever evasão usando "quantidade de faltas no último mês" funciona e não ajuda: quando o sinal aparece, já é tarde. Pergunte se a variável chega a tempo de agir.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>O modelo é avaliado no que já viu</strong><p>Se treino e teste são os mesmos dados, o resultado mede memória, e não previsão. É o erro mais comum e o mais fácil de detectar.</p></div>
-    </li></ol></div>
+    <h2>Quatro problemas anteriores ao algoritmo</h2>
+    <p class="sub">Os quatro aparecem na base e no processo de registro, e nenhum se corrige com outro algoritmo</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:23%">PROBLEMA</th><th style="width:47%">COMO APARECE</th><th style="width:30%">VERIFICAÇÃO</th></tr>
+      <tr><td><strong>Rótulo ausente ou ruim</strong></td><td>Ninguém registrou o desfecho. Pedidos de compra sem a data real de entrega não ensinam a prever atraso.</td>
+          <td>Contar os casos com a resposta preenchida</td></tr>
+      <tr><td><strong>Viés do histórico</strong></td><td>A Amazon abandonou uma triagem de currículos treinada com dez anos de contratações, que rebaixava currículos com a palavra "women's" (Dastin, 2018).</td>
+          <td>Comparar a taxa de aprovação por grupo no histórico</td></tr>
+      <tr><td><strong>Vazamento (data leakage)</strong></td><td>Preditora que só existe depois do desfecho, como a comissão paga para prever a venda (Kaufman et al., 2012).</td>
+          <td>Perguntar em que data cada coluna fica disponível</td></tr>
+      <tr><td><strong>Avaliação no que já viu</strong></td><td>Erro medido nos casos de treino. Mede memória do modelo.</td>
+          <td>Exigir casos de teste separados</td></tr>
+    </table>
+    <div class="duascol" style="--esq:1.05fr;--dir:1fr;height:auto;margin-top:14px">
+      <pre class="terminal">alvo:                custo_total
+preditoras:          custo_pessoal
+  modelo             946,8471
+  palpite simples    18.677,32
+<span class="hl">O modelo ficou 94.9% mais preciso que o palpite simples.</span></pre>
+      <div class="caixa vinho"><span class="rot">VAZAMENTO NA PRÁTICA</span><p>Base ilustrativa de 40 unidades. O custo de pessoal é parte do custo total e só se conhece quando o mês fecha. Prevendo pelos atendimentos, o ganho cai para 70,6%, com um número disponível a tempo de orçar.</p></div>
+    </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 11.2 · Teoria</span>
-      <span class="pag">11 / 27</span>
+      <span class="pag">11 / 29</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="11">
@@ -473,23 +543,23 @@ body.mexeu #ajuda{opacity:1}
     <span class="eyebrow">CICLO 11.2 · PRÁTICA</span>
     <h2>Sua vez: escolha a abordagem</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Pegue a pergunta preditiva do ciclo 11.1</strong><p>A mais promissora das cinco.</p></div>
+      <div><strong>Pegue a pergunta preditiva do ciclo 11.1</strong><p>A mais promissora das cinco. Identifique o tipo de aprendizado que ela pede.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Verifique se o rótulo existe na sua base</strong><p>A resposta certa está registrada nos casos passados? Se não estiver, esse é o achado do ciclo.</p></div>
+      <div><strong>Verifique se o rótulo existe na sua base</strong><p>Conte quantos casos passados têm a resposta registrada. Se nenhum tiver, registre isso como resultado do ciclo.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Liste as variáveis que poderiam prever</strong><p>E marque quais são consequência e quais chegam a tempo de agir.</p></div>
+      <div><strong>Liste as variáveis candidatas e a data de cada uma</strong><p>Marque as que só existem depois do desfecho. Essas ficam fora do modelo.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Avalie o viés do histórico</strong><p>O que a base registra é o que aconteceu, ou o que a organização decidiu que aconteceria?</p></div>
+      <div><strong>Avalie o viés do histórico</strong><p>A base registra o que aconteceu ou o que a organização decidiu no passado? Se for decisão, quem decidia e com que critério?</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 11.2 · Prática</span>
-      <span class="pag">12 / 27</span>
+      <span class="pag">12 / 29</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="12">
@@ -500,7 +570,7 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>A pergunta preditiva escolhida e o tipo de aprendizado que ela pede.</li><li>A verificação de que o rótulo existe, ou o registro de que não existe.</li><li>As variáveis candidatas, marcadas entre causa e consequência.</li><li>A avaliação do viés do histórico, em até cinco linhas.</li></ul>
+      <ul><li>A pergunta preditiva escolhida e o tipo de aprendizado que ela pede, em duas frases.</li><li>A contagem de casos com rótulo, ou o registro de que o rótulo não existe.</li><li>As variáveis candidatas, com a data em que cada uma fica disponível.</li><li>A avaliação do viés do histórico, em até cinco linhas.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
@@ -509,14 +579,14 @@ body.mexeu #ajuda{opacity:1}
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Descobrir que o rótulo não existe é resultado válido e vale nota cheia, desde que a verificação esteja documentada.</p>
+        <p>Constatar que o rótulo não existe conta como entrega completa, desde que a verificação esteja descrita. Variável marcada como disponível depois do desfecho e mantida no modelo perde o item.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 11.2 · Entrega</span>
-      <span class="pag">13 / 27</span>
+      <span class="pag">13 / 29</span>
     </footer>
   </section>
 <section class="slide divisor" data-i="13">
@@ -526,114 +596,139 @@ body.mexeu #ajuda{opacity:1}
         <h2>Aprendizado profundo e IA generativa</h2>
         <p class="etapas">Teoria · Prática · Entrega</p>
       </div>
-      <span class="pag">14 / 27</span>
+      <span class="pag">14 / 29</span>
     </section>
 <section class="slide conteudo" data-i="14">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 11.3 · TEORIA</span>
     <h2>O que o aprendizado profundo mudou</h2>
-    <p class="sub">Taulli trata disso no capítulo 4. A mudança foi de escopo, não de natureza.</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">ANTES</header>
-      <h3>Alguém escolhia as características</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Como era</span>
-          <p>Um especialista definia quais variáveis alimentariam o modelo, e essa escolha era metade do trabalho.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O limite</span>
-          <p>Funcionava bem em tabela e mal em imagem, som e texto livre, onde não há variável óbvia.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">DEPOIS</header>
-      <h3>O modelo extrai as características sozinho</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que mudou</span>
-          <p>Redes com muitas camadas aprendem a representação a partir do dado bruto. Foi o que destravou imagem e linguagem.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O custo</span>
-          <p>Precisa de muito mais dado e de muito mais computação, e a explicação de como decidiu fica mais difícil.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">A GENERATIVA</header>
-      <h3>A mesma família, treinada para continuar texto</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que é</span>
-          <p>O modelo de linguagem do encontro 4 é aprendizado profundo aplicado a texto, em escala muito grande.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">A consequência</span>
-          <p>Tudo que você aprendeu sobre alucinação e verificação se explica por aqui.</p>
-        </div>
-    </article></div></div>
+    <p class="sub">O especialista deixa de escolher as características, e o modelo passa a exigir mais dados e mais computação</p>
+    <div class="corpo"><svg class="fig" viewBox="0 0 1168 230" xmlns="http://www.w3.org/2000/svg">
+  <defs><marker id="sd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8D0333"/></marker></defs>
+  <text x="0" y="16" font-size="14" font-weight="700" fill="#6B6B6B">APRENDIZADO DE MÁQUINA CLÁSSICO</text>
+  <rect x="0" y="26" width="200" height="58" fill="#fff" stroke="#D4B277" stroke-width="2.5"/>
+  <text x="100" y="51" text-anchor="middle" font-size="16" font-weight="700" fill="#1A1A1A">Registro</text>
+  <text x="100" y="72" text-anchor="middle" font-size="14" fill="#6B6B6B">planilha, sistema</text>
+  <rect x="270" y="26" width="420" height="58" fill="#FFF3D1" stroke="#C9962E" stroke-width="2.5"/>
+  <text x="480" y="51" text-anchor="middle" font-size="16" font-weight="700" fill="#1A1A1A">Características escolhidas por especialista</text>
+  <text x="480" y="72" text-anchor="middle" font-size="14" fill="#6B6B6B">atendimentos, servidores, área da unidade</text>
+  <rect x="760" y="26" width="170" height="58" fill="#fff" stroke="#0AB0AB" stroke-width="2.5"/>
+  <text x="845" y="60" text-anchor="middle" font-size="16" font-weight="700" fill="#1A1A1A">Modelo</text>
+  <rect x="1000" y="26" width="168" height="58" fill="#8D0333"/>
+  <text x="1084" y="60" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">Previsão</text>
+  <g stroke="#8D0333" stroke-width="2.5" fill="none">
+    <path d="M202,55 L266,55" marker-end="url(#sd)"/><path d="M692,55 L756,55" marker-end="url(#sd)"/><path d="M932,55 L996,55" marker-end="url(#sd)"/>
+  </g>
+  <text x="0" y="122" font-size="14" font-weight="700" fill="#6B6B6B">APRENDIZADO PROFUNDO (DEEP LEARNING)</text>
+  <rect x="0" y="132" width="200" height="58" fill="#fff" stroke="#D4B277" stroke-width="2.5"/>
+  <text x="100" y="157" text-anchor="middle" font-size="16" font-weight="700" fill="#1A1A1A">Dado bruto</text>
+  <text x="100" y="178" text-anchor="middle" font-size="14" fill="#6B6B6B">imagem, texto, áudio</text>
+  <rect x="270" y="132" width="190" height="58" fill="#E6F6F5" stroke="#0AB0AB" stroke-width="2"/>
+  <rect x="505" y="132" width="190" height="58" fill="#CFEFEE" stroke="#0AB0AB" stroke-width="2"/>
+  <rect x="740" y="132" width="190" height="58" fill="#9fd6c4" stroke="#0AB0AB" stroke-width="2"/>
+  <text x="365" y="157" text-anchor="middle" font-size="15" font-weight="700" fill="#1A1A1A">camada 1</text>
+  <text x="365" y="178" text-anchor="middle" font-size="14" fill="#333">bordas, letras</text>
+  <text x="600" y="157" text-anchor="middle" font-size="15" font-weight="700" fill="#1A1A1A">camada 2</text>
+  <text x="600" y="178" text-anchor="middle" font-size="14" fill="#333">formas, palavras</text>
+  <text x="835" y="157" text-anchor="middle" font-size="15" font-weight="700" fill="#1A1A1A">camada N</text>
+  <text x="835" y="178" text-anchor="middle" font-size="14" fill="#333">objetos, sentido</text>
+  <rect x="1000" y="132" width="168" height="58" fill="#8D0333"/>
+  <text x="1084" y="166" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">Previsão</text>
+  <g stroke="#8D0333" stroke-width="2.5" fill="none">
+    <path d="M202,161 L266,161" marker-end="url(#sd)"/><path d="M462,161 L501,161" marker-end="url(#sd)"/><path d="M697,161 L736,161" marker-end="url(#sd)"/><path d="M932,161 L996,161" marker-end="url(#sd)"/>
+  </g>
+  <path d="M270,200 L270,208 L930,208 L930,200" stroke="#C9962E" stroke-width="2" fill="none"/>
+  <text x="600" y="222" text-anchor="middle" font-size="13.5" fill="#8a6514" font-style="italic">características aprendidas pelo próprio modelo</text>
+</svg>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:12px">
+      <div class="caixa teal"><span class="rot">O QUE MUDOU</span><p>No ImageNet de 2012, a rede profunda errou 15,3% das imagens no critério das cinco opções, contra 26,2% do segundo colocado.</p></div>
+      <div class="caixa dourado"><span class="rot">O CUSTO</span><p>Mais dados e mais computação. Os milhões a bilhões de parâmetros não têm significado individual, e a explicação de cada previsão fica mais difícil.</p></div>
+      <div class="caixa vinho"><span class="rot">NA PLANILHA</span><p>Em 45 bases tabulares de porte médio, modelos de árvore superaram as redes profundas.</p></div>
+    </div>
+    <p class="fonte-nota">LeCun, Bengio e Hinton (2015). Taulli (2020, cap. 4). Krizhevsky, Sutskever e Hinton (2012). Grinsztajn, Oyallon e Varoquaux (2022).</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 11.3 · Teoria</span>
-      <span class="pag">15 / 27</span>
+      <span class="pag">15 / 29</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="15">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 11.3 · TEORIA</span>
-    <h2>Explicabilidade: quando ela é exigível</h2>
-    <p class="sub">Nem todo modelo precisa ser explicável, e em alguns casos ele precisa por lei</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Decisão que afeta direito de pessoa</strong><p>Concessão de benefício, seleção, crédito, sanção. A LGPD assegura ao titular a revisão de decisão automatizada e a informação sobre os critérios usados.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Decisão em compra pública</strong><p>O princípio da motivação exige que o gestor consiga explicar por que decidiu. "O modelo indicou" não é motivação.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Recomendação interna sem efeito externo</strong><p>Priorizar a fila de inspeção, sugerir a ordem de contato. Aqui a explicabilidade é desejável e não obrigatória.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>A regra prática</strong><p>Quanto mais o erro cai sobre uma pessoa específica, mais simples e explicável o modelo precisa ser. Trocar um modelo complexo por uma regressão simples costuma custar dois ou três pontos percentuais de acerto: pouco, diante da explicação que a lei exige.</p></div>
-    </li></ol></div>
+    <h2>Como se treina um modelo de linguagem</h2>
+    <p class="sub">O modelo usado desde o encontro 4 passa pelos três tipos de aprendizado, em três etapas</p>
+    <div class="corpo"><div class="fluxo" style="--n:3">
+      <div class="etapa" style="--cor:#D4B277"><span class="n">1</span><h4>Pré-treinamento</h4>
+        <p>Rede profunda treinada para prever o próximo trecho (token) de textos públicos. O rótulo vem do próprio texto, por isso o treino se diz autossupervisionado.</p>
+        <span class="arq">Llama 3 usou mais de 15 trilhões de tokens</span></div>
+      <div class="etapa" style="--cor:#0AB0AB"><span class="n">2</span><h4>Ajuste por instrução</h4>
+        <p>Aprendizado supervisionado com pares de instrução e resposta escritos por pessoas. O modelo passa a seguir pedidos.</p>
+        <span class="arq">supervisionado</span></div>
+      <div class="etapa" style="--cor:#8D0333"><span class="n">3</span><h4>Reforço</h4>
+        <p>Recompensa pela resposta preferida por avaliadores humanos (RLHF) e, nos modelos de raciocínio, por resposta conferível em matemática e programação.</p>
+        <span class="arq">por reforço</span></div>
+    </div>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:18px">
+      <div class="caixa vinho"><span class="rot">CONFABULAÇÃO</span><p>O treino recompensa texto plausível. O modelo conhece da sua organização só o que está na instrução, e o que ele acrescenta fora da instrução é confabulação.</p></div>
+      <div class="caixa dourado"><span class="rot">CÁLCULO</span><p>O reforço com respostas conferíveis melhorou contas e código. O cálculo da disciplina continua pedido como script gravado em saidas/ e conferido à mão em dois números.</p></div>
+    </div>
+    <p class="fonte-nota">Meta (2024), anúncio do Llama 3. Ouyang et al. (2022), RLHF. DeepSeek-AI (2025), DeepSeek-R1, Nature, v. 645. Consulta em 02/11/2026.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 11.3 · Teoria</span>
-      <span class="pag">16 / 27</span>
+      <span class="pag">16 / 29</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="16">
     <span class="barra"></span>
+    <span class="eyebrow">CICLO 11.3 · TEORIA</span>
+    <h2>Quando a explicação é exigível</h2>
+    <p class="sub">A exigência cresce com o efeito da decisão sobre uma pessoa identificada</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:24%">SITUAÇÃO</th><th style="width:23%">EXEMPLO</th><th style="width:31%">O QUE SE EXIGE</th><th style="width:22%">BASE</th></tr>
+      <tr><td><strong>Decisão só automatizada que afeta interesse de pessoa</strong></td><td>Benefício indeferido, candidato reprovado, crédito negado</td>
+          <td>Revisão a pedido do titular e informação clara sobre critérios e procedimentos</td><td>Lei nº 13.709/2018, art. 20, caput e § 1º</td></tr>
+      <tr><td><strong>Ato administrativo que nega ou limita direito</strong></td><td>Indeferimento, sanção, desclassificação em licitação</td>
+          <td>Motivação com os fatos e os fundamentos jurídicos. "O modelo indicou" deixa a decisão sem motivo declarado</td><td>Lei nº 9.784/1999, art. 50. Lei nº 14.133/2021, art. 5º</td></tr>
+      <tr><td><strong>Decisão sobre agregado, sem pessoa identificada</strong></td><td>Previsão de estoque, dimensionamento de equipe</td>
+          <td>Explicação desejável, sem exigência legal específica</td><td>Critério de gestão</td></tr>
+    </table>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:14px">
+      <div class="caixa vinho"><span class="rot">REVISÃO POR PESSOA</span><p>O projeto de conversão aprovado em 2019 previa revisão por pessoa natural. O trecho foi vetado e o veto, mantido pelo Congresso em 2/10/2019. O texto em vigor não exige revisor humano.</p></div>
+      <div class="caixa teal"><span class="rot">MODELO INTERPRETÁVEL</span><p>Em decisão de alto impacto com dados tabulares, Rudin (2019) recomenda partir de um modelo interpretável, cuja diferença de acerto para o modelo complexo costuma ser pequena.</p></div>
+    </div>
+    <p class="fonte-nota">PL 2338/2023 (marco da IA), aprovado no Senado em 10/12/2024, aguarda parecer na comissão especial da Câmara. ANPD, Nota Técnica nº 12/2025, sobre decisões automatizadas. Consulta em 02/11/2026.</p></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 11.3 · Teoria</span>
+      <span class="pag">17 / 29</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="17">
+    <span class="barra"></span>
     <span class="eyebrow">CICLO 11.3 · PRÁTICA</span>
     <h2>Sua vez: um caso do seu setor</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Encontre um caso real de uso de IA no seu setor</strong><p>Notícia, relatório ou documento oficial. Prefira caso brasileiro.</p></div>
+      <div><strong>Encontre um caso real de uso de IA no seu setor</strong><p>Notícia, relatório ou documento oficial, com endereço. Prefira caso brasileiro.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Identifique o tipo de aprendizado e o que ele decide</strong><p>Com base no que a fonte diz, e não no que você supõe.</p></div>
+      <div><strong>Identifique o tipo de aprendizado e o que o modelo decide</strong><p>Com base no que a fonte diz. O que a fonte não informa fica registrado como não informado.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Aplique as quatro perguntas do ciclo 11.1</strong><p>Erro comparado com quê, dados de treino, custo do erro, quem responde.</p></div>
+      <div><strong>Aplique as quatro perguntas do ciclo 11.1</strong><p>Erro comparado com quê, dados de treino, custo de cada direção do erro e quem responde.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Avalie se a explicabilidade é exigível ali</strong><p>E se o caso, como descrito, atenderia a essa exigência.</p></div>
+      <div><strong>Situe o caso na tabela de explicabilidade</strong><p>Decisão sobre pessoa, ato administrativo ou agregado. Diga se o caso, como descrito, atende à exigência.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 11.3 · Prática</span>
-      <span class="pag">17 / 27</span>
+      <span class="pag">18 / 29</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="17">
+<section class="slide conteudo" data-i="18">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 11.3 · ENTREGA</span>
     <h2>Análise de um caso do setor</h2>
@@ -641,7 +736,7 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>O caso, com a fonte e o endereço.</li><li>O tipo de aprendizado e o que o modelo decide.</li><li>As quatro perguntas respondidas, com o que a fonte informa e o que ela omite.</li><li>A avaliação sobre explicabilidade exigível.</li></ul>
+      <ul><li>O caso, com a fonte e o endereço.</li><li>O tipo de aprendizado e o que o modelo decide.</li><li>As quatro perguntas respondidas, com o que a fonte informa separado do que ela omite.</li><li>A linha da tabela de explicabilidade em que o caso se encaixa e se ele atende à exigência.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
@@ -650,132 +745,166 @@ body.mexeu #ajuda{opacity:1}
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Boa parte das fontes omite o erro do modelo e os dados de treino. Registrar a omissão vale tanto quanto responder.</p>
+        <p>A maior parte das fontes omite o erro do modelo e os dados de treino. A omissão registrada conta como resposta.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 11.3 · Entrega</span>
-      <span class="pag">18 / 27</span>
+      <span class="pag">19 / 29</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="18">
+<section class="slide divisor" data-i="19">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">11.4</span></div>
       <div class="dir">
         <h2>Um modelo simples sobre a sua base</h2>
         <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">19 / 27</span>
+      <span class="pag">20 / 29</span>
     </section>
-<section class="slide conteudo" data-i="19">
+<section class="slide conteudo" data-i="20">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 11.4 · TEORIA</span>
     <h2>O palpite simples é a régua</h2>
-    <p class="sub">Nenhum resultado de modelo significa alguma coisa sem essa comparação</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">PARA VALOR</header>
-      <h3>Chutar sempre a média</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O palpite</span>
-          <p>Se a venda média histórica é R$ 80 mil por mês, o palpite é sempre R$ 80 mil. É o modelo mais burro possível.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">A régua</span>
-          <p>Um modelo que erra R$ 25 mil por mês, mais que os R$ 18 mil do palpite, perdeu: aprendeu menos que a média sozinha.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">PARA CATEGORIA</header>
-      <h3>Chutar sempre a mais comum</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O palpite</span>
-          <p>Se 95% dos casos são "sem problema", chutar isso sempre acerta 95%.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">A régua</span>
-          <p>Um modelo com 93% de acerto é pior que o palpite. É o número que aparece em apresentação de fornecedor.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">A SEPARAÇÃO</header>
-      <h3>Treino e teste, sempre</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Como se faz</span>
-          <p>Setenta por cento dos casos para aprender, trinta por cento guardados para avaliar.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Por quê</span>
-          <p>Avaliar no que já viu mede memória. O que interessa é o desempenho em caso novo.</p>
-        </div>
-    </article></div></div>
+    <p class="sub">O erro do modelo só tem sentido ao lado do erro de quem prevê sempre a média</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.25fr;--dir:1fr">
+    <div class="col">
+      <table class="tab apertada">
+        <tr><th>CASO DE TESTE</th><th>REAL</th><th>MODELO</th><th>ERRO</th><th>MÉDIA</th><th>ERRO</th></tr>
+        <tr><td>Unidade A</td><td>52</td><td>55</td><td>3</td><td>60</td><td>8</td></tr>
+        <tr><td>Unidade B</td><td>75</td><td>70</td><td>5</td><td>60</td><td>15</td></tr>
+        <tr><td>Unidade C</td><td>48</td><td>50</td><td>2</td><td>60</td><td>12</td></tr>
+        <tr><td>Unidade D</td><td>90</td><td>82</td><td>8</td><td>60</td><td>30</td></tr>
+        <tr><td>Unidade E</td><td>61</td><td>64</td><td>3</td><td>60</td><td>1</td></tr>
+        <tr><td><strong>Erro médio absoluto</strong></td><td></td><td></td><td class="lac">4,2</td><td></td><td class="lac">13,2</td></tr>
+      </table>
+      <p class="rodape-corpo" style="margin-top:0;font-size:14.5px;color:#6B6B6B">Custo mensal em R$ mil, exemplo ilustrativo. A média do treino é 60. Erros somados de 21 e 66, divididos por 5 casos. O modelo reduz o erro em 68,2%.</p>
+    </div>
+    <div class="col">
+      <div class="def"><span class="rot">Erro médio absoluto (mean absolute error)</span>
+        <p>Soma das diferenças entre real e previsto, sem sinal, dividida pelo número de casos. Fica na unidade do alvo, em R$ mil neste exemplo.</p></div>
+      <div class="caixa vinho"><span class="rot">PARA CATEGORIA</span><p>Se 95% dos contratos terminam sem problema, prever "sem problema" para todos acerta 95%. Um modelo com 93% de acerto perde para esse palpite.</p></div>
+      <div class="caixa dourado"><span class="rot">NO SCRIPT</span><p>O palpite é a média do alvo nos casos de treino, aplicada a todos os casos de teste.</p></div>
+    </div>
+  </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 11.4 · Teoria</span>
-      <span class="pag">20 / 27</span>
-    </footer>
-  </section>
-<section class="slide conteudo" data-i="20">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 11.4 · DEMONSTRAÇÃO</span>
-    <h2>O script treina, separa e compara</h2>
-    <p class="sub">Uma regressão linear em cálculo determinístico, sem biblioteca nenhuma</p>
-    <div class="corpo"><div class="prompt">
-    <span class="rot">EXECUÇÃO DO SCRIPT DA ATIVIDADE</span>
-    <p>"execute atividade_modulo11.py com o comando prever dados/base.csv custo_total atendimentos". O script separa treino e teste, ajusta a reta, informa o erro médio no teste, calcula o mesmo erro para o palpite simples e diz se o modelo ganhou ou perdeu do palpite. Grava modelo/resultado.md com os coeficientes e a comparação.</p>
-  </div>
-<ol class="steps cols-3" style="--linhas:1">
-    <li><span class="num">1</span>
-      <div><strong>Se o modelo perder do palpite, é resultado</strong><p>E dos mais úteis: evita um projeto inteiro.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Os coeficientes são a explicação</strong><p>Cada atendimento adicional muda o custo previsto em um valor fixo, por exemplo R$ 42: é o número para orçar a próxima leva. Descreve a base, não prova causa.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Trinta por cento guardados</strong><p>O script nunca avalia no que usou para aprender.</p></div>
-    </li></ol></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 11.4 · Demonstração</span>
-      <span class="pag">21 / 27</span>
+      <span class="pag">21 / 29</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="21">
     <span class="barra"></span>
+    <span class="eyebrow">CICLO 11.4 · TEORIA</span>
+    <h2>Treino e teste dentro do script</h2>
+    <p class="sub">Base ilustrativa de 40 linhas, separada pela regra do script atividade_modulo11.py</p>
+    <div class="corpo"><svg class="fig" viewBox="0 0 1168 250" xmlns="http://www.w3.org/2000/svg">
+  <defs><marker id="st" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8D0333"/></marker></defs>
+  <rect x="0" y="40" width="160" height="80" fill="#fff" stroke="#6B6B6B" stroke-width="2"/>
+  <text x="80" y="72" text-anchor="middle" font-size="17" font-weight="700" fill="#1A1A1A">40 linhas</text>
+  <text x="80" y="96" text-anchor="middle" font-size="14" fill="#6B6B6B">completas</text>
+  <text x="0" y="24" font-size="13.5" fill="#6B6B6B">linha com célula vazia sai antes</text>
+  <path d="M162,80 L246,80" stroke="#8D0333" stroke-width="2.5" marker-end="url(#st)"/>
+  <text x="203" y="70" text-anchor="middle" font-size="12.5" fill="#8D0333" font-weight="700">embaralha</text>
+  <text x="203" y="100" text-anchor="middle" font-size="12.5" fill="#8D0333">semente 42</text>
+  <rect x="250" y="40" width="392" height="80" fill="#FFF3D1" stroke="#C9962E" stroke-width="2"/>
+  <rect x="642" y="40" width="168" height="80" fill="#E6F6F5" stroke="#0AB0AB" stroke-width="2"/>
+  <text x="446" y="72" text-anchor="middle" font-size="17" font-weight="700" fill="#1A1A1A">treino · 28 linhas (70%)</text>
+  <text x="446" y="96" text-anchor="middle" font-size="14" fill="#6B6B6B">o modelo aprende só com estas</text>
+  <text x="726" y="72" text-anchor="middle" font-size="17" font-weight="700" fill="#1A1A1A">teste · 12</text>
+  <text x="726" y="96" text-anchor="middle" font-size="14" fill="#6B6B6B">guardadas</text>
+  <g font-size="14.5">
+    <rect x="250" y="160" width="392" height="76" fill="#fff" stroke="#C9962E" stroke-width="2"/>
+    <text x="264" y="188" font-weight="700" fill="#1A1A1A">coeficientes por mínimos quadrados</text>
+    <text x="264" y="214" fill="#333">média do alvo no treino = palpite simples</text>
+    <rect x="860" y="40" width="308" height="196" fill="#fff" stroke="#8D0333" stroke-width="2.5"/>
+    <text x="876" y="70" font-weight="700" fill="#8D0333">erro médio absoluto no teste</text>
+    <text x="876" y="100" fill="#1A1A1A">modelo</text><text x="1152" y="100" text-anchor="end" fill="#1A1A1A">previsão de cada linha</text>
+    <text x="876" y="126" fill="#1A1A1A">palpite simples</text><text x="1152" y="126" text-anchor="end" fill="#1A1A1A">média do treino</text>
+    <line x1="876" y1="142" x2="1152" y2="142" stroke="#e1e1e1"/>
+    <text x="876" y="168" fill="#1A1A1A">se o erro do modelo for menor,</text>
+    <text x="876" y="194" font-family="Consolas,monospace" font-size="13.5" fill="#8D0333">ganhou_do_palpite_simples: sim</text>
+    <text x="876" y="220" fill="#6B6B6B">em modelo/resultado.md</text>
+  </g>
+  <path d="M446,122 L446,156" stroke="#8D0333" stroke-width="2.5" marker-end="url(#st)"/>
+  <path d="M644,198 L856,198" stroke="#8D0333" stroke-width="2.5" fill="none" marker-end="url(#st)"/>
+  <path d="M812,80 L856,80" stroke="#8D0333" stroke-width="2.5" fill="none" marker-end="url(#st)"/>
+</svg>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:14px">
+      <div class="caixa vinho"><span class="rot">POR QUE SEPARAR</span><p>Erro medido nos casos de treino mede memória do modelo. Com a semente fixa, a mesma base gera sempre a mesma separação e o mesmo resultado.</p></div>
+      <div class="caixa dourado"><span class="rot">O QUE O SCRIPT RECUSA</span><p>Coluna inexistente ou sem números, menos linhas completas que o número de preditoras mais cinco, menos de três linhas de teste e preditoras que repetem a mesma informação.</p></div>
+    </div></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 11.4 · Teoria</span>
+      <span class="pag">22 / 29</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="22">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 11.4 · DEMONSTRAÇÃO</span>
+    <h2>O mesmo alvo com duas preditoras diferentes</h2>
+    <p class="sub">Uma preditora com relação real com o alvo e outra sem relação, na mesma base</p>
+    <div class="corpo"><div class="prompt compacto">
+    <span class="rot">DUAS EXECUÇÕES DO SCRIPT</span>
+    <p><span class="cmd">"execute atividade_modulo11.py com o comando prever dados/unidades.csv custo_total atendimentos"</span> e depois o mesmo comando com <span class="cmd">area_m2</span> no lugar de <span class="cmd">atendimentos</span></p>
+  </div>
+  <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto">
+    <div class="col" style="gap:8px">
+      <pre class="terminal">preditoras:          atendimentos
+treino / teste:      28 / 12
+  intercepto         9.734,51
+  atendimentos       43,9863
+  modelo             5.496,40
+  palpite simples    18.677,32
+<span class="hl">O modelo ficou 70.6% mais preciso que o palpite simples.</span></pre>
+      <div class="caixa teal"><span class="rot">LEITURA DO COEFICIENTE</span><p>Cada atendimento a mais corresponde a R$ 43,99 a mais de custo mensal nesta base. A leitura descreve a base e não prova causa.</p></div>
+    </div>
+    <div class="col" style="gap:8px">
+      <pre class="terminal">preditoras:          area_m2
+treino / teste:      28 / 12
+  intercepto         84.960,32
+  area_m2            -49,2044
+  modelo             24.154,76
+  palpite simples    18.677,32
+<span class="hl">O modelo NAO ganhou do palpite simples.</span></pre>
+      <div class="caixa vinho"><span class="rot">PERDER PARA A MÉDIA</span><p>A área não explica o custo nesta base. O resultado é válido e fica registrado. Trocar de coluna até o modelo ganhar compromete o teste, que passa a orientar a escolha.</p></div>
+    </div>
+  </div>
+  <p class="fonte-nota">Saídas do script com base ilustrativa (40 unidades de atendimento, custo em reais por mês), abreviadas.</p></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 11.4 · Demonstração</span>
+      <span class="pag">23 / 29</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="23">
+    <span class="barra"></span>
     <span class="eyebrow">CICLO 11.4 · PRÁTICA</span>
-    <h2>Sua vez: treine e avalie</h2>
-    <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <h2>Sua vez: treine, compare e leia</h2>
+    <p class="sub">Individual, com a base própria em CSV ou a base de reserva da turma virtual</p>
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Escolha a variável a prever e as preditoras</strong><p>Da sua base do encontro 8. Comece com uma preditora só.</p></div>
+      <div><strong>Crie e preencha a ficha antes de treinar</strong><p>"execute atividade_modulo11.py com o comando iniciar". Em modelo/ficha-modelo.md, preencha pergunta, coluna_alvo, unidade_do_alvo, preditoras, erro_para_mais e erro_para_menos.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Rode e leia a comparação com o palpite</strong><p>O modelo ganhou? Por quanto?</p></div>
+      <div><strong>Treine com uma preditora</strong><p>"execute atividade_modulo11.py com o comando prever dados/sua-base.csv alvo preditora", com o nome exato das colunas. Anote o erro do modelo e o do palpite.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Acrescente uma segunda preditora e compare</strong><p>Melhorou? Piorou? Modelo mais complexo nem sempre é melhor.</p></div>
+      <div><strong>Acrescente uma segunda preditora e compare</strong><p>O arquivo modelo/resultado.md guarda só a última execução. Rode por último a versão que vai entregar.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Escreva a conclusão para um gestor</strong><p>O modelo serve? Para quê? Com que erro? E o que aconteceria se ele errasse?</p></div>
+      <div><strong>Escreva a leitura e rode a conferência</strong><p>Duas frases na seção Leitura de modelo/resultado.md, os dois campos finais da ficha e "execute atividade_modulo11.py com o comando conferir".</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 11.4 · Prática</span>
-      <span class="pag">22 / 27</span>
+      <span class="pag">24 / 29</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="22">
+<section class="slide conteudo" data-i="24">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 11.4 · ENTREGA</span>
     <h2>Modelo avaliado contra o palpite simples</h2>
@@ -783,149 +912,163 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>A variável prevista e as preditoras usadas.</li><li>O erro do modelo no teste e o erro do palpite simples.</li><li>A comparação entre as duas versões, com uma e com duas preditoras.</li><li>Os coeficientes, lidos em linguagem de gestão.</li><li>A conclusão para um gestor, com o custo do erro declarado.</li></ul>
+      <ul><li>A ficha preenchida antes do treino, com o custo do erro em cada direção.</li><li>O resultado da versão entregue, com coeficientes e os dois erros no teste.</li><li>Na seção Leitura, a comparação entre uma e duas preditoras.</li><li>Na mesma seção, o que o resultado permite decidir e o que não permite.</li><li>Os dois campos finais da ficha coerentes com o resultado, com sim ou nao sem acento.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>modelo/ficha-modelo.md e modelo/resultado.md</p>
+        <p><span class="mono" style="font-size:15px">modelo/ficha-modelo.md<br>modelo/resultado.md</span></p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Resultado de modelo sem a comparação com o palpite simples não conta. Modelo que perdeu do palpite, com a conclusão honesta escrita, vale nota cheia. O comando conferir recusa a ficha se o custo de errar para mais e o de errar para menos forem a mesma resposta, e recusa também quem diz que usaria um modelo que perdeu do palpite sem escrever a ressalva.</p>
+        <p>Modelo que perdeu do palpite, com a conclusão escrita, conta como entrega completa. O conferir recusa custo igual nas duas direções, resposta diferente do resultado, Leitura curta e uso sem ressalva de modelo que perdeu.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 11.4 · Entrega</span>
-      <span class="pag">23 / 27</span>
+      <span class="pag">25 / 29</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="23">
+<section class="slide conteudo" data-i="25">
     <span class="barra"></span>
     <span class="eyebrow">BALANÇO</span>
     <h2>O que você tem ao fim do encontro</h2>
     
-    <div class="corpo"><div class="cards cols-3">
+    <div class="corpo"><div class="cards cols-4">
     <article class="card">
-      <header style="background:#D4B277">A DISTINÇÃO</header>
-      <h3>Descritiva, preditiva e prescritiva</h3>
-      
+      <header style="background:#D4B277">A CAMADA</header>
+      <h3>Perguntas classificadas</h3>
         <div class="bloco">
           <span class="rule" style="background:#D4B277"></span>
           <span class="rot">O que é</span>
-          <p>Cinco perguntas classificadas, com a variável a prever e o palpite simples definidos.</p>
+          <p>Cinco perguntas em descritiva, preditiva e prescritiva, com variável e palpite.</p>
         </div>
         <div class="bloco">
           <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Para que serve</span>
-          <p>Evita o projeto preditivo que responderia a uma pergunta descritiva.</p>
+          <span class="rot">Uso seguinte</span>
+          <p>Evita encomendar modelo para uma pergunta que a descrição já responde.</p>
         </div>
     </article>
     <article class="card">
-      <header style="background:#0AB0AB">AS QUATRO PERGUNTAS</header>
-      <h3>O que se pergunta a um fornecedor</h3>
-      
+      <header style="background:#0AB0AB">A ABORDAGEM</header>
+      <h3>Rótulo e variáveis verificados</h3>
         <div class="bloco">
           <span class="rule" style="background:#0AB0AB"></span>
           <span class="rot">O que é</span>
-          <p>Erro comparado com quê, dados de treino, custo do erro, quem responde pela decisão.</p>
+          <p>Tipo de aprendizado, contagem de rótulos e data de cada variável candidata.</p>
         </div>
         <div class="bloco">
           <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Para que serve</span>
-          <p>É o roteiro para avaliar qualquer proposta de modelo que chegue à sua mesa.</p>
+          <span class="rot">Uso seguinte</span>
+          <p>Detecta vazamento e viés antes de qualquer treino.</p>
         </div>
     </article>
     <article class="card">
-      <header style="background:#FEC84D">O MODELO</header>
-      <h3>Treinado, avaliado e comparado</h3>
-      
+      <header style="background:#FEC84D">A EXPLICAÇÃO</header>
+      <h3>Exigência situada</h3>
         <div class="bloco">
           <span class="rule" style="background:#FEC84D"></span>
           <span class="rot">O que é</span>
-          <p>Uma regressão simples, com treino e teste separados e comparação com o palpite.</p>
+          <p>Um caso do setor lido pelas quatro perguntas e pela tabela de explicabilidade.</p>
         </div>
         <div class="bloco">
           <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Para que serve</span>
-          <p>Você fez o mínimo honesto que qualquer projeto preditivo deveria fazer, e sabe reconhecer quando não fizeram.</p>
+          <span class="rot">Uso seguinte</span>
+          <p>Base para o módulo 12, sobre LGPD e governança de dados.</p>
+        </div>
+    </article>
+    <article class="card">
+      <header style="background:#9fd6c4">O MODELO</header>
+      <h3>Comparado com a média</h3>
+        <div class="bloco">
+          <span class="rule" style="background:#9fd6c4"></span>
+          <span class="rot">O que é</span>
+          <p>Regressão com treino e teste separados e erro ao lado do palpite simples.</p>
+        </div>
+        <div class="bloco">
+          <span class="rule" style="background:#9fd6c4"></span>
+          <span class="rot">Uso seguinte</span>
+          <p>O mínimo a pedir de qualquer projeto preditivo.</p>
         </div>
     </article></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Balanço do módulo</span>
-      <span class="pag">24 / 27</span>
+      <span class="pag">26 / 29</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="24">
+<section class="slide conteudo" data-i="26">
     <span class="barra"></span>
     <span class="eyebrow">PRÓXIMOS PASSOS</span>
     <h2>Módulo 12: o que preparar</h2>
     <p class="sub">Governança de dados, LGPD e cibersegurança</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:6">
+    <div class="corpo"><ol class="steps cols-2 compacto" style="--linhas:3">
     <li><span class="num">1</span>
-      <div><strong>Releia a Lei 13.709/2018, artigos 5, 6, 7 e 20</strong><p>São os que sustentam o encontro. Estão na turma virtual, com o texto vigente.</p></div>
+      <div><strong>Leia a Lei nº 13.709/2018, artigos 5, 6, 7 e 48</strong><p>O texto vigente estará na turma virtual. São os artigos usados no encontro 13.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Traga um caso de incidente que você conheça</strong><p>Vazamento, golpe por mensagem, acesso indevido. Pode ser público ou da sua organização, sem identificar pessoas.</p></div>
+      <div><strong>Levante os dados pessoais que passam por você</strong><p>No trabalho ou no estágio, e por onde eles circulam. Uma lista de tipos de dado e de caminhos.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Deixe a pasta do projeto como está</strong><p>Ela vai ser varrida em busca de dado pessoal no ciclo 12.1, e o resultado é parte da entrega.</p></div>
+      <div><strong>Não traga dado real para a sala</strong><p>A lista registra tipos de dado. Nenhum arquivo com dado pessoal de terceiro entra na aula.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Revise o seu AGENTS.md</strong><p>Ele ganha uma seção de uso seguro no encontro 13.</p></div>
+      <div><strong>Deixe a pasta do projeto como está</strong><p>Ela passa pela varredura de dado pessoal do script do módulo 12 no ciclo 12.1.</p></div>
     </li>
     <li><span class="num">5</span>
-      <div><strong>Levante os dados pessoais que passam pelas suas mãos</strong><p>No trabalho ou no estágio, e por onde eles circulam. Uma lista de tipos de dado e de caminhos.</p></div>
+      <div><strong>Revise o seu AGENTS.md</strong><p>Ele recebe uma seção de uso seguro de dados no encontro 13.</p></div>
     </li>
     <li><span class="num">6</span>
-      <div><strong>Não traga dado real para a sala</strong><p>A lista é de tipos de dado, não de conteúdo. Nenhum arquivo com dado pessoal de terceiro entra na aula.</p></div>
+      <div><strong>Anote um incidente de segurança que você conheça</strong><p>Vazamento, golpe por mensagem ou acesso indevido, sem identificar pessoas.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Próximos passos</span>
-      <span class="pag">25 / 27</span>
+      <span class="pag">27 / 29</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="25">
+<section class="slide conteudo" data-i="27">
     <span class="barra"></span>
     <span class="eyebrow">DÚVIDAS FREQUENTES</span>
     <h2>Perguntas que aparecem neste módulo</h2>
     
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:5">
+    <div class="corpo"><ol class="steps cols-2 compacto" style="--linhas:3">
     <li><span class="num">1</span>
-      <div><strong>"Meu modelo perdeu do palpite simples."</strong><p>É o resultado mais comum com base pequena, e é uma conclusão legítima. Escreva por quê: poucas linhas, variável fraca ou rótulo ausente. Trocar de coluna até o modelo "dar certo" é o hábito errado.</p></div>
+      <div><strong>"Meu modelo perdeu do palpite simples."</strong><p>Com base pequena é o resultado mais comum, e a conclusão é válida. Escreva a causa provável, como poucas linhas, variável sem relação ou rótulo ausente.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>"Preciso saber programar para isso?"</strong><p>Não. Precisa saber ler a comparação e perguntar o erro. Quem programa é o agente ou o fornecedor.</p></div>
+      <div><strong>"Preciso saber programar para isso?"</strong><p>Precisa ler a comparação com o palpite e perguntar o erro. O código fica com o script, o agente ou o fornecedor.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>"Qual algoritmo é o melhor?"</strong><p>A pergunta certa é qual erro é aceitável e quanto custa cada tipo de erro. O algoritmo vem depois, e quase sempre importa menos que o dado.</p></div>
+      <div><strong>"Qual algoritmo é o melhor?"</strong><p>Depende do erro aceitável e do custo de cada direção do erro. Em tabelas de gestão, modelos simples costumam ficar perto dos complexos.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>"Posso usar isso no TCC?"</strong><p>Pode, com a separação treino e teste declarada e a comparação com o palpite. Sem essas duas coisas, a banca vai perguntar.</p></div>
+      <div><strong>"Posso usar isso no TCC?"</strong><p>Pode, com a separação entre treino e teste declarada e a comparação com o palpite simples. A banca vai pedir as duas.</p></div>
     </li>
     <li><span class="num">5</span>
-      <div><strong>"O fornecedor diz 95% de acurácia."</strong><p>Pergunte qual o percentual da classe mais comum. Se for 95%, ele está vendendo o palpite simples.</p></div>
+      <div><strong>"O fornecedor diz 95% de acurácia."</strong><p>Pergunte a proporção da categoria mais comum. Se for 95%, o modelo empata com o palpite simples.</p></div>
+    </li>
+    <li><span class="num">6</span>
+      <div><strong>"O conferir recusou o não da ficha."</strong><p>Escreva sim ou nao sem acento, como aparece em modelo/resultado.md. O script compara as duas respostas pelo texto.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Dúvidas frequentes</span>
-      <span class="pag">26 / 27</span>
+      <span class="pag">28 / 29</span>
     </footer>
   </section>
-<section class="slide fim" data-i="26">
+<section class="slide fim" data-i="28">
       <span class="filete"></span>
       <h1>Módulo 11 concluído</h1>
-      <p>Você sabe classificar a pergunta, avaliar a proposta e medir um modelo contra o palpite simples. No próximo encontro, o assunto é proteger o dado que alimenta tudo isso.</p>
+      <p>As perguntas estão classificadas, a abordagem foi verificada na base, o caso do setor foi lido quanto à explicação e o modelo foi comparado com o palpite simples. No próximo encontro, o tema é a proteção do dado pessoal que alimenta essas análises.</p>
       <span class="slogan">SEMPRE+ QUALIDADE INOVAÇÃO INCLUSÃO</span>
     </section>
 </div>
 <div id="barra">
   <button id="ant" title="Anterior">&#8249;</button>
-  <input id="atual" value="1" title="Ir para o slide"> <span>/ 27</span>
+  <input id="atual" value="1" title="Ir para o slide"> <span>/ 29</span>
   <button id="prox" title="Próximo">&#8250;</button>
   <button id="tela" title="Tela cheia">&#9744;</button>
 </div>
