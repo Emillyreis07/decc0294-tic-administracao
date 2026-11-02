@@ -14,21 +14,33 @@ Os sinais vêm de `python revisao/auditar_texto.py`, rodado em 2 nov. 2026. Elem
 | 4 | 5 | Do prompt ao artefato | 40 | 8 | nenhum | revisado em set. 2026 para turma sem contato prévio, linguagem pendente |
 | 5 | 6 | Dados na Administração | 32 | 0 | 11 | revisado em 2 nov. 2026, slides 6 a 32 (ver abaixo) |
 | 6 | 7 | Análise exploratória | 31 | 2 | 15 | revisado em 2 nov. 2026, deck inteiro (ver abaixo). Os dois sinais restantes são falsos positivos: "significativa" como termo estatístico e o separador ';' na saída do script |
-| 7 | 8 | Dados estruturados e consulta | 29 | 17 | nenhum | pendente, próximo da fila |
-| 8 | 9 | Visualização e painéis | 29 | 15 | nenhum | pendente |
-| 9 | 10 | Automação | 29 | 10 | nenhum | pendente |
-| 10 | 11 | Pesquisa e análise qualitativa | 29 | 10 | nenhum | pendente |
+| 7 | 8 | Dados estruturados e consulta | 31 | 0 | 14 | revisado em 2 nov. 2026, deck inteiro |
+| 8 | 9 | Visualização e painéis | 31 | 0 | 13 | revisado em 2 nov. 2026, deck inteiro |
+| 9 | 10 | Automação | 31 | 0 | 13 | revisado em 2 nov. 2026, deck inteiro |
+| 10 | 11 | Pesquisa e análise qualitativa | 29 | 10 | nenhum | pendente, próximo da fila |
 | 11 | 12 | Aprendizado de máquina | 27 | 5 | nenhum | pendente |
 | 12 | 13 | Governança, LGPD e cibersegurança | 27 | 9 | nenhum | pendente. Já distingue anonimização de pseudonimização, coerente com o módulo 5 |
 | 13 | 14 | Decisão apoiada por IA | 26 | 6 | nenhum | pendente |
 | 14 | 15 | Produto digital e ágil | 25 | 4 | nenhum | pendente |
 | 15 | 16 | Projeto integrador | 20 | 7 | nenhum | pendente |
 
-Ordem sugerida: seguir o calendário dos encontros (módulo 7 em diante) e depois voltar aos módulos 1 a 4, que já passaram por uma revisão de conteúdo em setembro.
+Ordem sugerida: seguir o calendário dos encontros (módulo 10 em diante) e depois voltar aos módulos 1 a 4, que já passaram por uma revisão de conteúdo em setembro.
 
 Em 2 nov. 2026 os marcadores de tempo foram retirados de todos os decks (ver histórico). A contagem de slides acima já reflete o estado posterior.
 
 ## Histórico
+
+### 2 nov. 2026, módulos 7, 8 e 9, decks inteiros
+
+Os três decks foram reescritos pelo padrão do guia e passaram de 29 para 31 slides cada. Auditoria de linguagem com zero sinais nos três. Conferência visual com Liberation Sans e DejaVu Sans.
+
+Módulo 7 (encontro 8). Slides novos: 6, "Tipo declarado e valor gravado", e 19, "Acerto dos modelos ao escrever SQL" (teste BIRD, Li et al., 2023, e resultado de 80,04% do Gemini-SQL2 no ranking de modelos únicos, jun. 2026, por fontes secundárias, porque o ranking oficial não abriu). Correções: a coluna tipada do SQLite só barra valor errado no modo STRICT, que o script não usa. O script não informa linhas antes e depois do filtro, e o slide passou a pedir duas consultas COUNT(*). CNPJ alfanumérico a partir de jul. 2026 (IN RFB 2.229/2024). Acrescentados o comando `conferir` e suas regras. Treze `\n` literais removidos. Citações: Codd (1970), Chen (1976), Kimball e Ross (2013).
+
+Módulo 8 (encontro 9). Slides novos: 6, eixo cortado e fator de distorção (Tufte, 1983), e 12, barra e pizza pela ordem de precisão de Cleveland e McGill (1984). Correções: as colunas do formulário e o comando `painel saidas/consulta-N.csv` agora coincidem com o script. O painel gera só barras ordenadas por valor, e o deck avisa que série mensal perde a ordem do calendário. Ferramentas: Power BI Desktop gratuito, compartilhamento com licença Pro, Copilot com capacidade F2 ou P1. Looker Studio voltou a se chamar Data Studio em abril de 2026 (docs.cloud.google.com/data-studio, conferido). Acessibilidade pela WCAG 2.2 (critérios 1.4.1 e 1.4.11).
+
+Módulo 9 (encontro 10). Slides novos: 5, "Quatro sinais de tarefa automatizável", previsto no roteiro e ausente no deck, e 12, "Substituição por script e redação pelo agente". Correções: o comando `conferir` exige quatro números, e o deck falava em três. Marcadores do modelo precisam estar em maiúsculas e sem acento. Fontes: IEEE 2755-2017 (RPA), Taulli (2020), OSWorld (Xie et al., 2024), Acórdão TCU 1.498/2026 sobre concessão automática no INSS (por fontes secundárias), LGPD art. 20. O roteiro dizia que o encontro abria a nota 3. Corrigido: ele integra a B2.
+
+Roteiros 7, 8 e 9 renumerados, com descrições de teoria e demonstração atualizadas.
 
 ### 2 nov. 2026, marcadores de tempo retirados de todos os decks
 
@@ -92,6 +104,16 @@ Conferência: renderização com Liberation Sans e DejaVu Sans. Falta conferir n
 - 15 set.: ajustes pequenos em quase todos os decks (e882102). Links do README para o GitHub Pages (600fbc3)
 
 ## Pendências fora dos decks
+
+Defeitos nos scripts encontrados na revisão de 2 nov. 2026. Os scripts não foram alterados, e os decks avisam o aluno onde o defeito afeta a atividade.
+
+- `atividade_modulo7.py`, comando `juntar`: conta os registros sem par com NOT IN. Com chave vazia em qualquer das tabelas, a contagem sai menor que a real (teste: 0 em vez de 1). Trocar por NOT EXISTS resolve.
+- `atividade_modulo7.py`, função `numero()`: lê "1.234" como 1,234. Valor não numérico em coluna numérica vira vazio sem ser contado como rejeitado. CNPJ só com dígitos perde os zeros à esquerda.
+- `atividade_modulo7.py`: pede "as cinco contagens" e imprime seis. A numeração `consulta-N` usa a contagem de arquivos e pode sobrescrever um arquivo se algum for apagado.
+- `atividade_modulo8.py`, comando `painel`: pinta todo aumento em vinho, mesmo quando aumentar é bom, e destaca sempre a maior barra. A variação negativa em verde-azulado tem contraste de 2,7:1 para texto, abaixo do mínimo de 4,5:1 da WCAG. O critério "sem data de atualização perde metade do item" ficou no deck, embora o script já grave a data.
+- `atividade_modulo9.py`: o cabeçalho do modelo (Responsável, Última revisão, Regra para dado ausente) sai em todo documento gerado, porque o corte é feito só em "COMO ADAPTAR ESTE MODELO". Marcador em minúscula ou com acento sai sem substituição e sem aviso.
+- Módulo 8: o deck dizia que o painel "volta no encontro 11", mas os módulos 9 e 10 não tratam de painel. Ficou "exemplo de fluxo repetível para o encontro 10". Confirmar.
+- Roteiro 7: notas fora do escopo ainda têm ponto e vírgula e "valiosa".
 
 - Em 2 nov. 2026 os decks (e os dois .pptx antigos) foram movidos para `slides/` e os scripts das atividades para `scripts/`. Na mesma data, os roteiros foram para `roteiros/`. Foram atualizados `index.html`, `README.md`, `indice-material-2026-2.md`, os roteiros e as ferramentas de `revisao/`. Os scripts receberam um ajuste de poucas linhas que muda o diretório de trabalho para a raiz quando estão em `scripts/`. O texto dos decks continua dizendo "execute atividade_moduloN.py", porque na turma o script é copiado para a raiz do projeto do aluno. Os endereços antigos do GitHub Pages (sem `slides/`) deixam de funcionar depois do próximo push.
 

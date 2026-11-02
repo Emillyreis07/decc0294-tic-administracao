@@ -147,6 +147,132 @@ body.mexeu #ajuda{opacity:1}
   #barra,#ajuda{display:none}
   .slide{display:block!important;page-break-after:always;box-shadow:none;transform:none!important}
 }
+/* ---- componentes acrescentados na revisão de nov. 2026 ---- */
+.mono{font-family:Consolas,"Cascadia Mono","Courier New",monospace}
+.fonte-nota{position:absolute;left:0;right:0;bottom:-2px;font-size:13px;color:var(--muted);line-height:1.3}
+.prompt.compacto{padding:12px 20px;margin-bottom:16px}
+.prompt.compacto p{font-size:17px;line-height:1.4;margin-top:6px}
+.prompt.compacto p+p{margin-top:6px}
+.prompt .cmd{font-style:normal;font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:16px}
+
+/* tabela de dados */
+.tab{width:100%;border-collapse:collapse;font-size:15px;line-height:1.3;color:var(--body)}
+.tab th{background:var(--vinho);color:#fff;font-weight:700;text-align:left;padding:7px 10px;font-size:14px;letter-spacing:.3px}
+.tab td{border-bottom:1px solid #e1e1e1;padding:7px 10px;vertical-align:top;background:#fff}
+.tab tr:nth-child(even) td{background:#fafafa}
+.tab td.lac{background:#FFF3D1!important;color:#7a5600;font-weight:700}
+.tab td .s{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+.tab td strong{color:var(--txt)}
+.chip{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.5px;padding:2px 8px;margin-bottom:4px;color:var(--txt)}
+.chip.ok{background:#CFEFEE}.chip.med{background:#FFE7A8}.chip.ruim{background:#F2CDD8;color:var(--vinho)}
+.badge{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--vinho);
+  color:#fff;font-size:12px;font-weight:700;margin-right:6px;vertical-align:1px;font-style:normal}
+
+/* duas colunas */
+.duascol{display:grid;grid-template-columns:var(--esq,1.4fr) var(--dir,1fr);gap:28px;height:100%}
+.duascol .col{display:flex;flex-direction:column;gap:14px;min-height:0}
+.steps.compacto{gap:12px}
+.steps.compacto strong{font-size:18px}
+.steps.compacto p{font-size:16px;line-height:1.35}
+.steps.compacto .num{flex:0 0 28px;height:28px;font-size:15px}
+
+/* fluxo horizontal */
+.fluxo{display:grid;grid-template-columns:repeat(var(--n,4),1fr);gap:34px;position:relative}
+.etapa{background:var(--card);border:1px solid #e3e3e3;border-top:6px solid var(--cor,var(--vinho));
+  padding:12px 16px 14px;position:relative}
+.etapa:not(:last-child)::after{content:"";position:absolute;right:-27px;top:50%;margin-top:-11px;
+  border-left:16px solid var(--vinho);border-top:11px solid transparent;border-bottom:11px solid transparent}
+.etapa .n{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;
+  background:var(--vinho);color:#fff;font-size:14px;font-weight:700}
+.etapa h4{display:inline;font-size:18px;color:var(--txt);margin-left:6px;vertical-align:2px}
+.etapa p{font-size:15.5px;line-height:1.38;margin-top:8px}
+.etapa .arq{display:block;margin-top:8px;font-size:13.5px;color:var(--vinho);
+  font-family:Consolas,"Cascadia Mono","Courier New",monospace;word-break:break-all}
+.trilha{margin-top:18px}
+.trilha .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1px;color:var(--muted);margin-bottom:6px}
+.trilha .barra-g{height:14px;background:linear-gradient(90deg,var(--teal) 0%,#9fd6c4 30%,var(--amarelo) 55%,var(--vinho) 100%)}
+.trilha .marcas{display:grid;grid-template-columns:repeat(4,1fr);gap:34px;font-size:13.5px;color:var(--muted);margin-top:5px}
+
+/* conceito (mesmo padrão dos módulos 2 e 3) */
+.def{background:var(--card2);border:1px solid #e3e3e3;border-left:9px solid var(--vinho);padding:12px 20px}
+.def .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1.2px;color:var(--vinho);text-transform:uppercase}
+.def p{font-size:17px;line-height:1.4;color:var(--txt);margin-top:5px}
+
+/* eixo acima dos cartões */
+.eixo{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;margin-bottom:14px;
+  font-size:14px;font-weight:700;color:var(--muted);letter-spacing:.4px}
+.eixo .seta{height:10px;position:relative;background:linear-gradient(90deg,var(--dourado),var(--teal))}
+.eixo .seta::after{content:"";position:absolute;right:-14px;top:-7px;border-left:16px solid var(--teal);
+  border-top:12px solid transparent;border-bottom:12px solid transparent}
+.cards.baixos{height:calc(100% - 40px)}
+.cards.baixos .card h3{font-size:18px;padding:12px 16px 2px}
+.cards.baixos .card .bloco{padding:8px 16px 0}
+.cards.baixos .card .bloco p{font-size:15.5px;line-height:1.36}
+
+/* grade de dimensões */
+.grade{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:14px;height:calc(100% - 22px)}
+.dim{background:var(--card);border:1px solid #e3e3e3;border-top:5px solid var(--cor);padding:10px 16px}
+.dim h4{font-size:19px;color:var(--vinho)}
+.dim h4 small{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.dim p{font-size:15.5px;line-height:1.36;margin-top:5px}
+.dim .med{display:block;font-size:14px;color:var(--txt);margin-top:7px;border-top:1px solid #ddd;padding-top:6px}
+.dim .med b{color:var(--muted);font-size:12.5px;letter-spacing:.6px}
+
+/* caixa lateral */
+.caixa{background:var(--card2);border:1px solid #e3e3e3;padding:12px 16px}
+.caixa.vinho{border-left:6px solid var(--vinho)}
+.caixa.dourado{border-left:6px solid var(--dourado)}
+.caixa.teal{border-left:6px solid var(--teal)}
+.caixa .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1px;color:var(--vinho);margin-bottom:4px}
+.caixa p{font-size:15.5px;line-height:1.38}
+.caixa p+p{margin-top:6px}
+.legenda{list-style:none}
+.legenda li{font-size:15.5px;line-height:1.35;margin-bottom:8px;display:flex;gap:6px}
+.legenda li b{color:var(--txt)}
+
+/* ficha do mapa de dados */
+.ficha{display:grid;grid-template-columns:1fr 1fr;gap:14px;height:calc(100% - 64px)}
+.ficha .grupo{background:var(--card);border:1px solid #e3e3e3;border-top:5px solid var(--cor)}
+.ficha .grupo>header{font-size:16px;font-weight:700;color:var(--vinho);padding:8px 14px 2px}
+.ficha .grupo>header span{color:var(--muted);font-weight:400;font-size:14px;margin-left:6px}
+.ficha dl{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;padding:6px 14px 10px;font-size:14.5px;line-height:1.3}
+.ficha dt{font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:13.5px;color:var(--vinho);padding-top:1px}
+.ficha dd{color:var(--txt)}
+.rodape-corpo{margin-top:12px;font-size:15.5px;line-height:1.4;color:var(--body)}
+
+/* svg */
+.fig{display:block;width:100%;height:auto}
+.fig text{font-family:"Segoe UI",Calibri,"Helvetica Neue",Arial,sans-serif}
+
+/* ajustes após conferência visual */
+.tab.apertada{font-size:14.5px}
+.tab.apertada td{padding:6px 10px}
+.legenda .badge{flex:0 0 20px;margin-top:1px}
+.dim p{font-size:17px}
+.dim .med{font-size:15.5px}
+.dim h4{font-size:21px}
+.cards.baixos .card .bloco p{font-size:16.5px}
+.eixo{gap:26px}
+.ficha dl{font-size:16.5px;gap:6px 14px;padding:8px 14px 12px}
+.ficha dt{font-size:15px}
+.ficha .grupo>header{font-size:17.5px}
+.etapa p{font-size:16.5px}
+.etapa .arq{word-break:normal;overflow-wrap:break-word}
+.steps.cols-3.compacto p{font-size:17px}
+.steps.cols-3.compacto strong{font-size:19px}
+
+/* blocos de saída de terminal */
+.terminal{background:#262626;color:#e9e9e9;font-family:Consolas,"Cascadia Mono","Courier New",monospace;
+  font-size:14px;line-height:1.38;padding:12px 16px;white-space:pre;overflow:hidden;margin:0}
+.terminal .hl{color:#FEC84D;font-weight:700}
+
+/* acrescentado no módulo 9: trecho de arquivo de texto anotado */
+.codigo{background:#F7F4EE;border:1px solid #e3e3e3;border-left:6px solid var(--dourado);color:var(--txt);
+  font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:14px;line-height:1.55;padding:10px 14px;
+  white-space:pre;overflow:hidden;margin:0}
+.codigo b{color:var(--vinho)}
+.tab.mini td{padding:4px 10px}
+.codigo .badge{width:18px;height:18px;font-size:11px;margin-right:5px;font-family:"Segoe UI",Calibri,Arial,sans-serif}
 </style>
 </head>
 <body>
@@ -157,201 +283,222 @@ body.mexeu #ajuda{opacity:1}
       <span class="mod">MÓDULO 9</span>
       <h1>Automação de documentos e processos</h1>
       <span class="tracinho"></span>
-      <p class="sub">Encontro 10 · O que se repete toda semana e não precisa ser refeito toda semana</p>
+      <p class="sub">Encontro 10 · Decomposição de tarefas, modelos com variáveis, conferência e medição do ganho</p>
       <p class="pe">DECC0294 · Tecnologia da Informação e Comunicação Aplicada à Administração · 2026.2</p>
     </section>
 <section class="slide conteudo" data-i="1">
     <span class="barra"></span>
     <span class="eyebrow">VISÃO GERAL DO MÓDULO</span>
     <h2>O que você vai construir hoje</h2>
-    <p class="sub">A tarefa que ficou em primeiro lugar no seu mapa do módulo 1 sai do papel</p>
+    <p class="sub">A tarefa mais bem colocada no mapa do módulo 1 passa a ser executada por um fluxo repetível</p>
     <div class="corpo"><div class="overview">
     <article class="ciclo">
       <span class="topo" style="background:#D4B277"></span>
-      <span class="rot" >CICLO 9.1</span>
-      <h3>O que é automatizável de verdade</h3>
+      <span class="rot">CICLO 9.1</span>
+      <h3>O que é automatizável</h3>
       <div class="pe">
         <span class="rule" style="background:#D4B277"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Decomposição da tarefa em passos</p>
+        <p>Tarefa decomposta em passos, com tempo medido e classe de cada passo</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#0AB0AB"></span>
-      <span class="rot" >CICLO 9.2</span>
-      <h3>Modelos de instrução com variáveis</h3>
+      <span class="rot">CICLO 9.2</span>
+      <h3>Modelos de documento com variáveis</h3>
       <div class="pe">
         <span class="rule" style="background:#0AB0AB"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Um modelo testado em três casos</p>
+        <p>Um modelo testado em três casos reais</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#FEC84D"></span>
-      <span class="rot" >CICLO 9.3</span>
+      <span class="rot">CICLO 9.3</span>
       <h3>Automação de processos e seus limites</h3>
       <div class="pe">
         <span class="rule" style="background:#FEC84D"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Ponto de conferência declarado</p>
+        <p>Ponto de conferência declarado, com cargo responsável</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#D4B277"></span>
-      <span class="rot" >CICLO 9.4</span>
-      <h3>Um fluxo repetível, medido</h3>
+      <span class="rot">CICLO 9.4</span>
+      <h3>Um fluxo repetível e medido</h3>
       <div class="pe">
         <span class="rule" style="background:#D4B277"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Fluxo documentado com ganho medido</p>
+        <p>Fluxo documentado, com ponto de equilíbrio calculado</p>
       </div>
     </article></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Estrutura do módulo</span>
-      <span class="pag">2 / 29</span>
+      <span class="pag">2 / 31</span>
     </footer>
   </section>
 <section class="slide divisor" data-i="2">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">9.1</span></div>
       <div class="dir">
-        <h2>O que é automatizável de verdade</h2>
+        <h2>O que é automatizável</h2>
         <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">3 / 29</span>
+      <span class="pag">3 / 31</span>
     </section>
 <section class="slide conteudo" data-i="3">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 9.1 · TEORIA</span>
-    <h2>Automatizar tarefa é diferente de automatizar decisão</h2>
-    <p class="sub">A confusão entre as duas produz o projeto de automação que ninguém usa</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">A COLETA</header>
-      <h3>Buscar, juntar e organizar o insumo</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que é</span>
-          <p>Exportar do sistema, consolidar planilhas, buscar a base pública, padronizar formato.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Automatizável</span>
-          <p>Quase sempre. É onde está a maior parte do tempo e a menor parte do julgamento.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">A PRODUÇÃO</header>
-      <h3>Transformar o insumo em documento</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que é</span>
-          <p>Calcular indicadores, montar tabelas, redigir o texto padrão que se repete todo mês.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Automatizável</span>
-          <p>Em boa parte, com o texto variável gerado a partir dos números apurados.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">A DECISÃO</header>
-      <h3>Julgar o que os números significam</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que é</span>
-          <p>Dizer se o desvio é aceitável, o que recomendar, o que comunicar e a quem.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Automatizável</span>
-          <p>Não. E o valor do seu trabalho está aqui, e não nas duas etapas anteriores.</p>
-        </div>
-    </article></div></div>
+    <h2>Coleta, produção e decisão</h2>
+    <p class="sub">Automatizar as duas primeiras etapas tem consequências diferentes de automatizar a terceira</p>
+    <div class="corpo"><div class="fluxo" style="--n:3">
+      <div class="etapa" style="--cor:#0AB0AB"><span class="n">1</span><h4>Coleta</h4>
+        <p>Exportar do sistema, juntar planilhas, baixar a base pública, padronizar o formato.</p>
+        <span class="chip ok">AUTOMATIZÁVEL QUASE SEMPRE</span></div>
+      <div class="etapa" style="--cor:#FEC84D"><span class="n">2</span><h4>Produção</h4>
+        <p>Calcular indicadores, montar tabelas e redigir o texto padrão que se repete a cada período.</p>
+        <span class="chip ok">AUTOMATIZÁVEL EM GRANDE PARTE</span></div>
+      <div class="etapa" style="--cor:#8D0333"><span class="n">3</span><h4>Decisão</h4>
+        <p>Julgar se o desvio é aceitável, o que recomendar e a quem comunicar.</p>
+        <span class="chip ruim">PERMANECE COM UM RESPONSÁVEL</span></div>
+    </div>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:18px">
+      <div class="caixa teal"><span class="rot">ALICE (CGU E TCU)</span><p>O Analisador de Licitações, Contratos e Editais lê as compras publicadas no Compras.gov.br e no Diário Oficial da União e emite alertas de risco. A unidade de auditoria decide o que apurar e acompanha as correções. Coleta e produção automatizadas, decisão humana.</p></div>
+      <div class="caixa vinho"><span class="rot">CONCESSÃO AUTOMÁTICA DO INSS</span><p>O sistema decide o benefício quando os dados do CNIS são válidos. Em 2024, 10,94% dos pedidos foram indeferidos sem análise humana. O TCU determinou que o segurado seja avisado de pendências que possam aumentar o valor (Acórdão 1.498/2026-Plenário).</p></div>
+    </div>
+    <p class="fonte-nota">Fontes: TRT-11, notícia de 18/11/2024 (portal.trt11.jus.br). TCU, Acórdão 1.498/2026-Plenário, TC 007.094/2025-6, noticiado em 12/06/2026 (jornaldebrasilia.com.br, jmlgrupo.com.br). Consulta em 02/11/2026.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 9.1 · Teoria</span>
-      <span class="pag">4 / 29</span>
+      <span class="pag">4 / 31</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="4">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 9.1 · TEORIA</span>
-    <h2>Decompor antes de automatizar</h2>
-    <p class="sub">A tarefa que parece indivisível quase sempre tem quatro ou cinco passos, e nem todos são iguais</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Escreva os passos como você os executa hoje</strong><p>Um verbo por passo. "Abrir o sistema", "filtrar o mês", "exportar", "colar na planilha", "conferir os totais", "escrever o comentário".</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Marque o tempo de cada passo</strong><p>Estimativa grosseira serve. O que importa é descobrir onde está a maior parte do tempo, e quase nunca é onde se imagina.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Classifique cada passo</strong><p>Coleta, produção ou decisão. Passo de decisão fica humano, e o fluxo é desenhado em torno dele.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Identifique o que muda a cada execução</strong><p>O mês, o setor, os números. Tudo que muda vira variável. Tudo que não muda vira modelo.</p></div>
-    </li></ol></div>
+    <h2>Quatro sinais de tarefa automatizável</h2>
+    <p class="sub">Critérios verificáveis, aplicados passo a passo antes de qualquer ferramenta</p>
+    <div class="corpo"><table class="tab">
+      <tr><th style="width:21%">SINAL</th><th style="width:27%">PERGUNTA DE VERIFICAÇÃO</th>
+          <th style="width:26%">EXEMPLO QUE PASSA</th><th style="width:26%">EXEMPLO QUE NÃO PASSA</th></tr>
+      <tr><td><strong>Entrada previsível</strong></td><td>O insumo chega sempre do mesmo lugar e com as mesmas colunas?</td>
+          <td>Exportação mensal do sistema de atendimento, com cabeçalho fixo</td><td>Pedidos recebidos por e-mail, com anexos em formatos variados</td></tr>
+      <tr><td><strong>Regra escrita</strong></td><td>A regra cabe em cinco linhas sem a palavra "depende"?</td>
+          <td>Multa de 2% sobre parcela paga após o vencimento</td><td>Análise de pedido de reconsideração de um servidor</td></tr>
+      <tr><td><strong>Saída conferível</strong></td><td>Há um número ou critério para saber se o resultado está certo?</td>
+          <td>Total do relatório igual ao total do extrato do mês</td><td>Parecer sobre a conveniência de renovar um contrato</td></tr>
+      <tr><td><strong>Repetição com frequência conhecida</strong></td><td>Quantas vezes por ano a tarefa é executada?</td>
+          <td>12 relatórios mensais ou 52 boletins semanais</td><td>Relatório produzido uma vez, sob demanda</td></tr>
+    </table>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:16px">
+      <div class="caixa dourado"><span class="rot">LIGAÇÃO COM O MAPA DO MÓDULO 1</span><p>Tarefa que passa nos quatro sinais é candidata ao destino "automatizar". Tarefa que falha só na regra escrita costuma ficar em "aumentar", com o agente preparando e a pessoa decidindo.</p></div>
+      <div class="caixa teal"><span class="rot">COMO USAR A TABELA</span><p>Aplique os quatro sinais a cada passo da tarefa, e não à tarefa inteira. Um relatório que falha na regra escrita pode ter coleta e produção que passam nos quatro.</p></div>
+    </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 9.1 · Teoria</span>
-      <span class="pag">5 / 29</span>
+      <span class="pag">5 / 31</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="5">
     <span class="barra"></span>
-    <span class="eyebrow">CICLO 9.1 · DEMONSTRAÇÃO</span>
-    <h2>Decompor o relatório mensal na projeção</h2>
-    <p class="sub">Com o documento que a turma trouxe</p>
-    <div class="corpo"><div class="prompt">
-    <span class="rot">INSTRUÇÃO DADA AO AGENTE</span>
-    <p>"Abaixo estão os passos que eu executo para produzir este documento todo mês, e o tempo de cada um. Classifique cada passo em coleta, produção ou decisão. Depois liste o que muda a cada execução e o que permanece igual. Não proponha solução ainda: só classifique. Grave em saidas/decomposicao.md."</p>
-  </div>
-<ol class="steps cols-3" style="--linhas:1">
-    <li><span class="num">1</span>
-      <div><strong>O "não proponha solução ainda" é deliberado</strong><p>Sem isso o modelo pula para a ferramenta antes de entender a tarefa.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>O que permanece igual vira o modelo</strong><p>E o que muda vira a lista de variáveis.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>O passo de decisão é o que sobra para você</strong><p>E é o que vai ser assinado.</p></div>
-    </li></ol></div>
+    <span class="eyebrow">CICLO 9.1 · TEORIA</span>
+    <h2>Decompor antes de automatizar</h2>
+    <p class="sub">Quatro etapas, cada uma com um resultado registrado por escrito</p>
+    <div class="corpo"><div class="fluxo" style="--n:4">
+      <div class="etapa" style="--cor:#D4B277"><span class="n">1</span><h4>Listar os passos</h4>
+        <p>Como a tarefa é feita hoje, com o documento aberto. Um verbo por passo, como exportar, filtrar, colar, conferir ou redigir.</p>
+        <span class="arq">6 a 12 passos, um verbo cada</span></div>
+      <div class="etapa" style="--cor:#FEC84D"><span class="n">2</span><h4>Medir o tempo</h4>
+        <p>Minutos por passo, na última execução. A medição mostra onde o tempo se concentra.</p>
+        <span class="arq">minutos por passo</span></div>
+      <div class="etapa" style="--cor:#0AB0AB"><span class="n">3</span><h4>Classificar</h4>
+        <p>Coleta, produção ou decisão. O fluxo automatizado é desenhado em torno dos passos de decisão.</p>
+        <span class="arq">minutos por classe</span></div>
+      <div class="etapa" style="--cor:#8D0333"><span class="n">4</span><h4>Separar fixo e variável</h4>
+        <p>O que muda a cada execução (mês, unidade, números) e o que se repete igual.</p>
+        <span class="arq">lista de variáveis</span></div>
+    </div>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:18px">
+      <div class="caixa vinho"><span class="rot">ERRO COMUM</span><p>Decompor em três passos genéricos, como "coletar, analisar, escrever". A decomposição precisa dizer de onde vem cada número, quem abre qual arquivo e em que ordem.</p></div>
+      <div class="caixa dourado"><span class="rot">O QUE A ETAPA 4 PRODUZ</span><p>O que se repete igual vira o texto fixo do modelo do ciclo 9.2. O que muda vira coluna da tabela de variáveis.</p></div>
+    </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 9.1 · Demonstração</span>
-      <span class="pag">6 / 29</span>
+      <span class="centro">Ciclo 9.1 · Teoria</span>
+      <span class="pag">6 / 31</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="6">
     <span class="barra"></span>
+    <span class="eyebrow">CICLO 9.1 · DEMONSTRAÇÃO</span>
+    <h2>Decomposição do relatório mensal da ouvidoria</h2>
+    <p class="sub">Saída ilustrativa. A classificação proposta pelo agente é revista por quem executa a tarefa</p>
+    <div class="corpo"><div class="prompt compacto">
+    <span class="rot">INSTRUÇÃO DADA AO AGENTE</span>
+    <p>"Classifique cada passo abaixo em coleta, produção ou decisão e grave a tabela em saidas/decomposicao.csv. Some os minutos por classe com um script gravado em saidas/somar_tempos.py. Não proponha solução ainda."</p>
+  </div>
+  <div class="duascol" style="--esq:1.5fr;--dir:1fr;height:auto">
+    <table class="tab apertada mini">
+      <tr><th>#</th><th>PASSO</th><th>MIN</th><th>CLASSE</th></tr>
+      <tr><td>1</td><td>Exportar os atendimentos do sistema</td><td>12</td><td><span class="chip ok">COLETA</span></td></tr>
+      <tr><td>2</td><td>Filtrar o mês e retirar duplicados</td><td>24</td><td><span class="chip ok">COLETA</span></td></tr>
+      <tr><td>3</td><td>Copiar o custo do sistema financeiro</td><td>18</td><td><span class="chip ok">COLETA</span></td></tr>
+      <tr><td>4</td><td>Calcular total, meta e custo</td><td>18</td><td><span class="chip med">PRODUÇÃO</span></td></tr>
+      <tr><td>5</td><td>Montar a tabela do período</td><td>12</td><td><span class="chip med">PRODUÇÃO</span></td></tr>
+      <tr><td>6</td><td>Redigir o texto padrão com os números</td><td>12</td><td><span class="chip med">PRODUÇÃO</span></td></tr>
+      <tr><td>7</td><td>Avaliar o desvio e escrever a observação</td><td>12</td><td><span class="chip ruim">DECISÃO</span></td></tr>
+      <tr><td>8</td><td>Conferir os totais e assinar o envio</td><td>12</td><td><span class="chip ruim">DECISÃO</span></td></tr>
+    </table>
+    <div class="col" style="gap:10px"><svg class="fig" viewBox="0 0 400 118" xmlns="http://www.w3.org/2000/svg">
+  <text x="0" y="16" font-size="13.5" font-weight="700" fill="#6B6B6B">TEMPO POR CLASSE · 120 MIN POR EXECUÇÃO</text>
+  <rect x="0" y="28" width="180" height="40" fill="#0AB0AB"/>
+  <rect x="180" y="28" width="140" height="40" fill="#FEC84D"/>
+  <rect x="320" y="28" width="80" height="40" fill="#8D0333"/>
+  <text x="90" y="54" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">54 min</text>
+  <text x="250" y="54" text-anchor="middle" font-size="15" font-weight="700" fill="#1A1A1A">42 min</text>
+  <text x="360" y="54" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">24 min</text>
+  <text x="0" y="90" font-size="14" fill="#333">coleta 45%</text>
+  <text x="180" y="90" font-size="14" fill="#333">produção 35%</text>
+  <text x="400" y="90" text-anchor="end" font-size="14" fill="#333">decisão 20%</text>
+  <text x="0" y="112" font-size="13" fill="#6B6B6B">80% do tempo está em passos automatizáveis</text>
+</svg>
+      <div class="caixa vinho"><span class="rot">"NÃO PROPONHA SOLUÇÃO AINDA"</span><p>Sem a restrição, o agente sugere ferramenta antes de a tarefa estar descrita.</p></div>
+      <div class="caixa dourado"><span class="rot">SOMA POR SCRIPT</span><p>Confira à mão um total por classe antes de usar o resultado.</p></div>
+    </div>
+  </div></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 9.1 · Demonstração</span>
+      <span class="pag">7 / 31</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="7">
+    <span class="barra"></span>
     <span class="eyebrow">CICLO 9.1 · PRÁTICA</span>
     <h2>Sua vez: decomponha a sua tarefa</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Use a tarefa em primeiro lugar do seu mapa</strong><p>A do módulo 1. Se ela não for documental, escolha a próxima que seja.</p></div>
+      <div><strong>Escolha a tarefa no mapa do módulo 1</strong><p>A primeira de entregas/modulo1-mapa-de-tarefas.md que produza documento. Se ela não produzir, use a seguinte que produza.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Escreva os passos e o tempo de cada um</strong><p>Com o documento na frente. Escrever de memória produz lista incompleta.</p></div>
+      <div><strong>Escreva os passos e o tempo de cada um</strong><p>Com o documento da última execução aberto. Lista escrita de memória costuma omitir passos de coleta.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Classifique e some os tempos por classe</strong><p>Quanto do total é coleta, quanto é produção e quanto é decisão?</p></div>
+      <div><strong>Classifique e some os tempos por classe</strong><p>Coleta, produção e decisão. A soma é feita por script e um dos totais é conferido à mão.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Compare com a estimativa do módulo 1</strong><p>O ganho estimado lá bate com a medição agora? A diferença é o achado.</p></div>
+      <div><strong>Compare com a estimativa do módulo 1</strong><p>A coluna ganho_horas_mes do mapa traz a estimativa. Registre a diferença em relação à medição e a causa provável.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 9.1 · Prática</span>
-      <span class="pag">7 / 29</span>
+      <span class="pag">8 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="7">
+<section class="slide conteudo" data-i="8">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 9.1 · ENTREGA</span>
     <h2>Decomposição da tarefa</h2>
@@ -359,7 +506,7 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>A tarefa escolhida e sua posição no mapa do módulo 1.</li><li>Os passos com o tempo de cada um.</li><li>A classificação de cada passo em coleta, produção ou decisão.</li><li>O total por classe e a comparação com a estimativa do módulo 1.</li><li>A lista do que muda e do que permanece igual a cada execução.</li></ul>
+      <ul><li>A tarefa escolhida e a posição dela no mapa do módulo 1.</li><li>Os passos, com o tempo de cada um em minutos.</li><li>A classe de cada passo e o total de minutos por classe.</li><li>A comparação com a estimativa do módulo 1.</li><li>A lista do que muda e do que se repete a cada execução.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
@@ -368,156 +515,206 @@ body.mexeu #ajuda{opacity:1}
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Tarefa sem nenhum passo de decisão costuma estar mal decomposta. Se for mesmo o caso, diga por que ela ainda é feita por uma pessoa. O julgamento marcado como julgamento, e não apagado da lista, é o que separa automação de terceirização de responsabilidade.</p>
+        <p>Tarefa sem nenhum passo de decisão indica decomposição incompleta. Se for de fato o caso, explique por que a tarefa ainda é feita por uma pessoa. O passo de decisão continua na lista, marcado como decisão.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 9.1 · Entrega</span>
-      <span class="pag">8 / 29</span>
+      <span class="pag">9 / 31</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="8">
+<section class="slide divisor" data-i="9">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">9.2</span></div>
       <div class="dir">
-        <h2>Modelos de instrução com variáveis</h2>
+        <h2>Modelos de documento com variáveis</h2>
         <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">9 / 29</span>
+      <span class="pag">10 / 31</span>
     </section>
-<section class="slide conteudo" data-i="9">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 9.2 · TEORIA</span>
-    <h2>O modelo com variáveis</h2>
-    <p class="sub">Escrever uma vez e usar toda semana é a forma mais barata de automação que existe</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">A PARTE FIXA</header>
-      <h3>O que não muda entre execuções</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que entra</span>
-          <p>Papel, contexto da organização, estrutura pedida, regras de formato e o que nunca fazer.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Onde fica</span>
-          <p>No arquivo de modelo, escrito uma vez e revisado quando a rotina mudar.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">AS VARIÁVEIS</header>
-      <h3>O que muda a cada execução</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que entra</span>
-          <p>Mês, setor, os números do período, o nome do destinatário, a meta vigente.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Onde fica</span>
-          <p>Numa tabela, uma linha por execução. É o que você preenche a cada mês.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">A JUNÇÃO</header>
-      <h3>O script troca uma coisa pela outra</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Como funciona</span>
-          <p>Cada marcador entre colchetes é substituído pelo valor da linha correspondente.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O ganho</span>
-          <p>Doze relatórios mensais saem de um modelo e uma tabela de doze linhas.</p>
-        </div>
-    </article></div></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 9.2 · Teoria</span>
-      <span class="pag">10 / 29</span>
-    </footer>
-  </section>
 <section class="slide conteudo" data-i="10">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 9.2 · TEORIA</span>
-    <h2>Quatro regras de um modelo que sobrevive</h2>
-    <p class="sub">Modelo mal escrito é pior que nenhum, porque produz erro em escala</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Toda variável tem nome descritivo</strong><p>Escreva [MES_REFERENCIA] e não [X1]. Daqui a seis meses você não vai lembrar o que era X1, e outra pessoa nunca vai saber.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Nenhum número fica dentro do texto fixo</strong><p>Meta, valor de referência e prazo mudam. Se estiverem no texto fixo, um dia o relatório vai sair com a meta do ano passado.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>O modelo declara o que fazer quando falta dado</strong><p>Escreva a regra: se a variável vier vazia, escrever NÃO INFORMADO e sinalizar no início do documento.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>O modelo tem data e responsável</strong><p>No topo do arquivo. Modelo sem dono é modelo que ninguém atualiza quando a norma muda.</p></div>
-    </li></ol></div>
+    <h2>O modelo com variáveis</h2>
+    <p class="sub">O texto que se repete fica no modelo e o que muda fica na tabela</p>
+    <div class="corpo"><svg class="fig" viewBox="0 0 1168 250" xmlns="http://www.w3.org/2000/svg">
+  <defs><marker id="sm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8D0333"/></marker></defs>
+  <rect x="0" y="0" width="360" height="34" fill="#8D0333"/>
+  <text x="12" y="23" font-size="15" font-weight="700" fill="#fff">MODELO · parte fixa</text>
+  <rect x="0" y="34" width="360" height="150" fill="#F5F5F5" stroke="#e3e3e3"/>
+  <g font-size="15" fill="#1A1A1A">
+    <text x="14" y="62">Relatório mensal de <tspan fill="#8D0333" font-weight="700">[AREA]</tspan></text>
+    <text x="14" y="88">Período: <tspan fill="#8D0333" font-weight="700">[MES_REFERENCIA]</tspan></text>
+    <text x="14" y="114">Foram registrados <tspan fill="#8D0333" font-weight="700">[QUANTIDADE]</tspan></text>
+    <text x="14" y="138">atendimentos, contra a meta</text>
+    <text x="14" y="162">de <tspan fill="#8D0333" font-weight="700">[META]</tspan>.</text>
+  </g>
+  <text x="0" y="206" font-size="13.5" fill="#8D0333" font-family="Consolas,monospace">prompts/modulo9-modelo.md</text>
+  <rect x="400" y="0" width="390" height="34" fill="#0AB0AB"/>
+  <text x="412" y="23" font-size="15" font-weight="700" fill="#fff">TABELA · uma linha por documento</text>
+  <g font-size="14">
+    <rect x="400" y="34" width="390" height="30" fill="#E6F6F5"/>
+    <text x="410" y="54" font-weight="700" fill="#1A1A1A">AREA</text><text x="510" y="54" font-weight="700" fill="#1A1A1A">MES_REFERENCIA</text><text x="660" y="54" font-weight="700" fill="#1A1A1A">QUANTIDADE</text>
+    <rect x="400" y="64" width="390" height="40" fill="#fff" stroke="#e3e3e3"/>
+    <text x="410" y="89" fill="#333">Ouvidoria</text><text x="510" y="89" fill="#333">agosto/2026</text><text x="660" y="89" fill="#333">1.284</text>
+    <rect x="400" y="104" width="390" height="40" fill="#fafafa" stroke="#e3e3e3"/>
+    <text x="410" y="129" fill="#333">Ouvidoria</text><text x="510" y="129" fill="#333">setembro/2026</text><text x="660" y="129" fill="#333">1.109</text>
+    <rect x="400" y="144" width="390" height="40" fill="#fff" stroke="#e3e3e3"/>
+    <text x="410" y="169" fill="#333">Ouvidoria</text><text x="510" y="169" fill="#333">outubro/2026</text><text x="660" y="169" fill="#333">1.236</text>
+  </g>
+  <text x="400" y="206" font-size="13.5" fill="#8D0333" font-family="Consolas,monospace">dados/modulo9-variaveis.csv</text>
+  <path d="M362,110 L396,110" stroke="#8D0333" stroke-width="2.5" marker-end="url(#sm)"/>
+  <path d="M792,110 L846,110" stroke="#8D0333" stroke-width="2.5" marker-end="url(#sm)"/>
+  <text x="819" y="98" text-anchor="middle" font-size="13" fill="#8D0333" font-weight="700">gerar</text>
+  <g font-size="14">
+    <rect x="890" y="4" width="250" height="52" fill="#fff" stroke="#D4B277" stroke-width="2"/>
+    <rect x="870" y="64" width="250" height="52" fill="#fff" stroke="#D4B277" stroke-width="2"/>
+    <rect x="850" y="124" width="250" height="52" fill="#fff" stroke="#D4B277" stroke-width="2"/>
+    <text x="862" y="147" fill="#1A1A1A" font-weight="700">documento-3.md</text>
+    <text x="862" y="167" fill="#6B6B6B">outubro/2026 · 1.236</text>
+    <text x="882" y="87" fill="#1A1A1A" font-weight="700">documento-2.md</text>
+    <text x="882" y="107" fill="#6B6B6B">setembro/2026 · 1.109</text>
+    <text x="902" y="27" fill="#1A1A1A" font-weight="700">documento-1.md</text>
+    <text x="902" y="47" fill="#6B6B6B">agosto/2026 · 1.284</text>
+  </g>
+  <text x="850" y="206" font-size="13.5" fill="#8D0333" font-family="Consolas,monospace">saidas/documento-N.md</text>
+  <text x="0" y="240" font-size="14" fill="#6B6B6B">Cada marcador entre colchetes corresponde a uma coluna com o mesmo nome. A troca é feita pelo script, sem uso de modelo de linguagem.</text>
+</svg>
+    <div class="def" style="margin-top:14px"><span class="rot">Modelo de documento com variáveis (template)</span>
+      <p>Texto fixo com marcadores que o script substitui pelos valores de uma tabela, um documento por linha. É o princípio da mala direta (mail merge) dos editores de texto. Doze relatórios mensais saem de um modelo e de uma tabela de doze linhas.</p></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 9.2 · Teoria</span>
-      <span class="pag">11 / 29</span>
+      <span class="pag">11 / 31</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="11">
     <span class="barra"></span>
-    <span class="eyebrow">CICLO 9.2 · DEMONSTRAÇÃO</span>
-    <h2>Um modelo e três execuções</h2>
-    <p class="sub">O script substitui as variáveis e gera um documento por linha da tabela</p>
-    <div class="corpo"><div class="prompt">
-    <span class="rot">A SEQUÊNCIA</span>
-    <p>(1) "execute atividade_modulo9.py com o comando iniciar" — cria o modelo em prompts/modulo9-modelo.md e a tabela de variáveis em dados/modulo9-variaveis.csv\n\n(2) Você adapta o modelo à sua tarefa e preenche três linhas de variáveis.\n\n(3) "execute atividade_modulo9.py com o comando gerar" — produz um documento por linha em saidas/, avisa se alguma variável ficou sem valor e se alguma sobrou sem uso.</p>
-  </div>
-<ol class="steps cols-3" style="--linhas:1">
-    <li><span class="num">1</span>
-      <div><strong>Variável sem valor é apontada</strong><p>O script não deixa passar em silêncio.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Variável da tabela sem uso no modelo também</strong><p>Costuma ser erro de digitação no nome.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Três execuções é o mínimo</strong><p>Com uma só, o modelo parece funcionar.</p></div>
-    </li></ol></div>
+    <span class="eyebrow">CICLO 9.2 · TEORIA</span>
+    <h2>Substituição por script e redação pelo agente</h2>
+    <p class="sub">Duas formas de produzir os mesmos doze relatórios, com controles diferentes</p>
+    <div class="corpo"><table class="tab">
+      <tr><th style="width:22%"></th><th style="width:39%">SCRIPT SUBSTITUI OS MARCADORES</th><th style="width:39%">AGENTE REDIGE CADA DOCUMENTO</th></tr>
+      <tr><td><strong>Mesma entrada, mesma saída</strong></td><td><span class="chip ok">SIM</span><br>A troca é determinística. O texto fixo sai igual em todos os documentos.</td>
+          <td><span class="chip med">NÃO</span><br>Cada execução produz redação diferente, mesmo com os mesmos números.</td></tr>
+      <tr><td><strong>Falha característica</strong></td><td>Marcador sem coluna ou valor vazio, que o script aponta.</td>
+          <td>Número alterado na redação ou frase acrescentada sem base nos dados (confabulação).</td></tr>
+      <tr><td><strong>Para onde vão os dados</strong></td><td>Ficam no computador. O script não usa modelo de linguagem.</td>
+          <td>Para o servidor do provedor do modelo. Dado pessoal precisa sair da tabela antes.</td></tr>
+      <tr><td><strong>Conferência</strong></td><td>Ler os documentos uma vez para ajustar o texto fixo.</td>
+          <td>Conferir cada número de cada documento, em todas as execuções.</td></tr>
+    </table>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:16px">
+      <div class="caixa teal"><span class="rot">ONDE O AGENTE ENTRA</span><p>Na redação do modelo, uma vez, e na extração de valores de documentos para a tabela. Nesse segundo uso, a saída estruturada garante as colunas e não confere os valores.</p></div>
+      <div class="caixa vinho"><span class="rot">ONDE ELE NÃO ENTRA</span><p>Na geração recorrente. Um relatório mensal com redação diferente a cada mês dificulta a comparação com o mês anterior.</p></div>
+    </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 9.2 · Demonstração</span>
-      <span class="pag">12 / 29</span>
+      <span class="centro">Ciclo 9.2 · Teoria</span>
+      <span class="pag">12 / 31</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="12">
     <span class="barra"></span>
+    <span class="eyebrow">CICLO 9.2 · TEORIA</span>
+    <h2>Quatro regras para o modelo</h2>
+    <p class="sub">Um erro no modelo se repete em todos os documentos gerados a partir dele</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.08fr;--dir:1fr">
+    <div class="col">
+      <pre class="codigo"><i class="badge">4</i>Responsavel por este modelo: Coordenador da Ouvidoria
+   Ultima revisao: 20/10/2026
+
+<i class="badge">3</i>## Regra para dado ausente
+   Se alguma variavel vier vazia, escrever NAO INFORMADO
+   e avisar no inicio do documento.
+
+   ## Documento
+<i class="badge">1</i>Periodo de referencia: <b>[MES_REFERENCIA]</b>
+   Foram registrados <b>[QUANTIDADE]</b> atendimentos,
+<i class="badge">2</i>contra a meta de <b>[META]</b> estabelecida para o periodo.
+
+   ---
+   COMO ADAPTAR ESTE MODELO</pre>
+      <p class="rodape-corpo" style="margin-top:0;font-size:14.5px;color:#6B6B6B">Trecho no formato de prompts/modulo9-modelo.md. Tudo o que fica acima de COMO ADAPTAR ESTE MODELO entra em cada documento gerado.</p>
+    </div>
+    <div class="col">
+      <ul class="legenda">
+        <li><i class="badge">1</i><span><b>Nome descritivo, em maiúsculas e sem acento.</b> O script reconhece só letras de A a Z, algarismos e sublinhado, com dois caracteres ou mais. [mes] ou [MÊS] ficam no documento sem substituição e sem aviso.</span></li>
+        <li><i class="badge">2</i><span><b>Nenhum número no texto fixo.</b> Meta, valor de referência e prazo mudam. Escrito no texto fixo, o valor do ano anterior continua saindo nos relatórios.</span></li>
+        <li><i class="badge">3</i><span><b>Regra para dado ausente.</b> O script preenche o campo vazio com NAO INFORMADO e põe o aviso no topo do documento. O modelo declara a regra para quem lê.</span></li>
+        <li><i class="badge">4</i><span><b>Responsável e data de revisão.</b> No topo do arquivo. Quando a norma muda, alguém precisa saber que o modelo é dele.</span></li>
+      </ul>
+    </div>
+  </div></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 9.2 · Teoria</span>
+      <span class="pag">13 / 31</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="13">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 9.2 · DEMONSTRAÇÃO</span>
+    <h2>Um modelo e três execuções</h2>
+    <p class="sub">Três linhas de variáveis, três documentos e os avisos que o script emite</p>
+    <div class="corpo"><div class="prompt compacto">
+    <span class="rot">DUAS EXECUÇÕES DO SCRIPT</span>
+    <p><span class="cmd">"execute atividade_modulo9.py com o comando iniciar"</span> e <span class="cmd">"execute atividade_modulo9.py com o comando gerar"</span></p>
+  </div>
+  <div class="duascol" style="--esq:1.3fr;--dir:1fr;height:auto">
+    <div class="col" style="gap:8px">
+      <pre class="terminal"><span class="hl">O modelo usa marcadores que nao tem coluna na tabela:
+  - [CUSTO_TOTAL]</span>
+Acrescente essas colunas em dados/modulo9-variaveis.csv ou corrija o nome no
+modelo. A geracao foi interrompida.</pre>
+      <pre class="terminal">Colunas da tabela que o modelo nao usa (pode ser erro de digitacao):
+  - META_ANUAL
+
+DOCUMENTOS GERADOS (3):
+  + saidas/documento-1.md
+<span class="hl">  + saidas/documento-2.md   (1 campo(s) sem valor)</span>
+  + saidas/documento-3.md</pre>
+      <p class="fonte-nota" style="position:static">Saídas do script com dados fictícios, abreviadas. Primeira execução sem a coluna CUSTO_TOTAL, segunda com a coluna.</p>
+    </div>
+    <div class="col" style="gap:10px">
+      <div class="caixa vinho"><span class="rot">MARCADOR SEM COLUNA</span><p>A geração é interrompida. Sem a recusa, o documento sairia com o marcador no lugar do valor.</p></div>
+      <div class="caixa dourado"><span class="rot">VALOR VAZIO</span><p>O documento é gerado com NAO INFORMADO no campo e um aviso no topo com o nome do campo.</p></div>
+      <div class="caixa teal"><span class="rot">COLUNA SEM USO</span><p>Apenas aviso. Em geral é nome digitado de forma diferente na tabela e no modelo.</p></div>
+    </div>
+  </div></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 9.2 · Demonstração</span>
+      <span class="pag">14 / 31</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="14">
+    <span class="barra"></span>
     <span class="eyebrow">CICLO 9.2 · PRÁTICA</span>
     <h2>Sua vez: escreva o seu modelo</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Transforme o seu documento em modelo</strong><p>Pegue um exemplar real e substitua por marcadores tudo que muda.</p></div>
+      <div><strong>Transforme um exemplar real em modelo</strong><p>Copie o texto do documento para prompts/modulo9-modelo.md e troque por marcadores entre colchetes tudo o que muda.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Nomeie as variáveis com clareza</strong><p>E declare a regra para variável vazia.</p></div>
+      <div><strong>Ajuste as colunas da tabela</strong><p>Uma coluna em dados/modulo9-variaveis.csv para cada marcador, com o mesmo nome. Separador ponto e vírgula.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Preencha três linhas de variáveis</strong><p>Três meses diferentes, ou três setores. Casos reais, não inventados.</p></div>
+      <div><strong>Preencha três linhas com casos reais</strong><p>Três meses ou três unidades. Retire nome, CPF e outros dados pessoais antes de pedir ao agente que leia a tabela.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Gere e leia os três documentos</strong><p>Algum deles ficou com frase sem sentido? É onde o modelo precisa de ajuste.</p></div>
+      <div><strong>Gere e leia os três documentos</strong><p>Frase que perde o sentido com algum dos valores indica ajuste no texto fixo. Corrija e gere de novo.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 9.2 · Prática</span>
-      <span class="pag">13 / 29</span>
+      <span class="pag">15 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="13">
+<section class="slide conteudo" data-i="15">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 9.2 · ENTREGA</span>
     <h2>Um modelo testado em três casos</h2>
@@ -525,197 +722,180 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>O modelo, com as variáveis nomeadas e a regra para dado ausente.</li><li>A tabela com três linhas de variáveis reais.</li><li>Os três documentos gerados.</li><li>O que precisou de ajuste depois da leitura dos três.</li></ul>
+      <ul><li>O modelo, com variáveis nomeadas, regra para dado ausente, responsável e data.</li><li>A tabela com três linhas de variáveis reais.</li><li>Os três documentos gerados pelo script.</li><li>O que precisou de ajuste depois da leitura dos três documentos.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>prompts/modulo9-modelo.md\ndados/modulo9-variaveis.csv\nsaidas/documento-*.md</p>
+        <p><span class="mono" style="font-size:15px">prompts/modulo9-modelo.md<br>dados/modulo9-variaveis.csv<br>saidas/documento-*.md<br>entregas/modulo9-ciclo2-modelo.md</span></p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Modelo com número fixo dentro do texto perde metade do item: é o defeito que faz o relatório sair com a meta do ano passado. Documento gerado sem o aviso de dado ausente também perde: ele circula com aparência de completo, e isso é pior do que não gerar o documento.</p>
+        <p>Modelo com número escrito no texto fixo perde metade do item. Documento com campo vazio e sem o aviso no topo indica geração feita fora do script.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 9.2 · Entrega</span>
-      <span class="pag">14 / 29</span>
+      <span class="pag">16 / 31</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="14">
+<section class="slide divisor" data-i="16">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">9.3</span></div>
       <div class="dir">
         <h2>Automação de processos e seus limites</h2>
         <p class="etapas">Teoria · Prática · Entrega</p>
       </div>
-      <span class="pag">15 / 29</span>
+      <span class="pag">17 / 31</span>
     </section>
-<section class="slide conteudo" data-i="15">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 9.3 · TEORIA</span>
-    <h2>Automação robótica de processos</h2>
-    <p class="sub">O que é, e por que ela ainda existe apesar de tudo</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">O QUE É</header>
-      <h3>Um programa que opera a tela como uma pessoa</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Como funciona</span>
-          <p>Abre o sistema, digita, clica, copia e cola, seguindo um roteiro gravado. Taulli trata disso no capítulo 5.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Por que existe</span>
-          <p>Serve para integrar sistemas antigos que não têm API e que não podem ser alterados.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">ONDE FUNCIONA</header>
-      <h3>Regra fixa, tela estável, alto volume</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O caso típico</span>
-          <p>Lançar mil notas de um sistema em outro, todo mês, com a mesma sequência de cliques.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O ganho</span>
-          <p>Real e mensurável, quando o processo não muda. É por isso que bancos e seguradoras adotaram em escala.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">ONDE QUEBRA</header>
-      <h3>Qualquer mudança na tela</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que acontece</span>
-          <p>Um botão que muda de lugar interrompe o robô. A manutenção costuma custar mais que a implantação.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">A alternativa</span>
-          <p>Se o sistema tem API, use a API. Automação de tela é o último recurso, e não o primeiro.</p>
-        </div>
-    </article></div></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 9.3 · Teoria</span>
-      <span class="pag">16 / 29</span>
-    </footer>
-  </section>
-<section class="slide conteudo" data-i="16">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 9.3 · TEORIA</span>
-    <h2>O ponto de conferência humana</h2>
-    <p class="sub">Todo fluxo automatizado precisa de um, declarado e com responsável</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>O que se confere não é tudo</strong><p>Conferir cem por cento anula o ganho. Confere-se por amostra, ou nos pontos em que o erro seria caro.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Onde colocar: antes do irreversível</strong><p>Antes de enviar, publicar, pagar ou assinar. Depois disso, corrigir custa mais do que conferir teria custado.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>O que confere: os totais e os extremos</strong><p>A soma bate com a fonte, e os maiores e menores valores fazem sentido. Duas conferências pegam quase todo defeito.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Quem responde tem nome</strong><p>Não é "a equipe". É um cargo. Fluxo automatizado sem responsável declarado é fluxo que roda errado por meses sem que ninguém perceba.</p></div>
-    </li></ol></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 9.3 · Teoria</span>
-      <span class="pag">17 / 29</span>
-    </footer>
-  </section>
 <section class="slide conteudo" data-i="17">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 9.3 · TEORIA</span>
-    <h2>Quando não automatizar</h2>
-    <p class="sub">Quatro situações em que a decisão certa é deixar como está</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">BAIXA FREQUÊNCIA</header>
-      <h3>Uma vez por ano não compensa</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">A conta</span>
-          <p>Se automatizar leva oito horas e a tarefa leva duas horas por ano, o retorno vem no quarto ano.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">A exceção</span>
-          <p>Se o erro na tarefa anual for muito caro, a automação se justifica pelo risco, e não pelo tempo.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">REGRA INSTÁVEL</header>
-      <h3>O critério muda a cada caso</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O sintoma</span>
-          <p>Você não consegue escrever a regra em cinco linhas sem usar "depende".</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que fazer</span>
-          <p>Automatize a coleta, que é estável, e deixe a produção manual até a regra se firmar.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">PROCESSO EM MUDANÇA</header>
-      <h3>O sistema vai ser trocado no ano que vem</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O sintoma</span>
-          <p>Há um projeto de substituição em curso, ou a norma está em revisão.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que fazer</span>
-          <p>Espere. Automatizar processo que vai mudar é construir o que será jogado fora.</p>
-        </div>
-    </article></div></div>
+    <h2>API, RPA e agentes de uso do computador</h2>
+    <p class="sub">Três formas de operar um sistema sem digitação manual, da mais estável para a menos previsível</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:19%"></th><th style="width:27%">INTEGRAÇÃO POR API</th><th style="width:27%">AUTOMAÇÃO ROBÓTICA DE PROCESSOS (RPA)</th><th style="width:27%">AGENTE DE USO DO COMPUTADOR</th></tr>
+      <tr><td><strong>Como opera</strong></td><td>Um programa troca dados com o sistema por uma interface publicada.</td>
+          <td>Um robô repete na tela os cliques e a digitação de um roteiro gravado.</td><td>Um modelo de linguagem lê a imagem da tela e escolhe a próxima ação.</td></tr>
+      <tr><td><strong>Se a tela muda</strong></td><td><span class="chip ok">NÃO AFETA</span></td>
+          <td><span class="chip ruim">INTERROMPE</span><br>Um botão fora do lugar para o robô.</td><td><span class="chip med">TOLERA EM PARTE</span><br>Adapta-se, e pode agir no lugar errado.</td></tr>
+      <tr><td><strong>Previsibilidade</strong></td><td>Alta</td><td>Alta enquanto a tela não muda</td>
+          <td>Variável. No OSWorld, 72% das tarefas para pessoas, 12% para o melhor agente de 2024 e acima de 80% nos registros de 2026.</td></tr>
+      <tr><td><strong>Quando usar</strong></td><td>Sempre que o sistema oferece API.</td>
+          <td>Sistema antigo sem API, regra fixa e alto volume.</td><td>Tarefa variável e de baixo volume, com conferência de cada execução.</td></tr>
+    </table>
+    <div class="def" style="margin-top:12px"><span class="rot">Automação robótica de processos (robotic process automation)</span>
+      <p>Software configurado para executar, com regras de negócio e sequência de atividades predefinidas, tarefas em um ou mais sistemas sem integração entre si, com tratamento humano das exceções (IEEE 2755-2017). Taulli (2020) trata do tema no capítulo 5.</p></div>
+    <p class="fonte-nota">Xie et al. (2024), OSWorld, 369 tarefas em computador real. Registros de 2026 no ranking OSWorld-Verified (yutori.com/leaderboards), consulta em 02/11/2026.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 9.3 · Teoria</span>
-      <span class="pag">18 / 29</span>
+      <span class="pag">18 / 31</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="18">
     <span class="barra"></span>
+    <span class="eyebrow">CICLO 9.3 · TEORIA</span>
+    <h2>O ponto de conferência humana</h2>
+    <p class="sub">Verificação feita por uma pessoa com cargo definido, em ponto fixo do fluxo (human in the loop)</p>
+    <div class="corpo"><svg class="fig" viewBox="0 0 1168 196" xmlns="http://www.w3.org/2000/svg">
+  <defs><marker id="sc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8D0333"/></marker></defs>
+  <rect x="0" y="20" width="220" height="70" fill="#fff" stroke="#0AB0AB" stroke-width="2.5"/>
+  <text x="110" y="51" text-anchor="middle" font-size="17" font-weight="700" fill="#1A1A1A">Coleta</text>
+  <text x="110" y="74" text-anchor="middle" font-size="14" fill="#6B6B6B">exportação e tabela</text>
+  <rect x="280" y="20" width="220" height="70" fill="#fff" stroke="#FEC84D" stroke-width="2.5"/>
+  <text x="390" y="51" text-anchor="middle" font-size="17" font-weight="700" fill="#1A1A1A">Geração</text>
+  <text x="390" y="74" text-anchor="middle" font-size="14" fill="#6B6B6B">script gerar</text>
+  <polygon points="650,8 728,55 650,102 572,55" fill="#8D0333"/>
+  <text x="650" y="52" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">CONFERÊNCIA</text>
+  <text x="650" y="70" text-anchor="middle" font-size="13" fill="#fff">cargo nomeado</text>
+  <rect x="800" y="20" width="220" height="70" fill="#F2CDD8" stroke="#8D0333" stroke-width="2.5"/>
+  <text x="910" y="51" text-anchor="middle" font-size="17" font-weight="700" fill="#8D0333">Envio</text>
+  <text x="910" y="74" text-anchor="middle" font-size="14" fill="#8D0333">passo irreversível</text>
+  <g stroke="#8D0333" stroke-width="2.5" fill="none">
+    <path d="M222,55 L276,55" marker-end="url(#sc)"/><path d="M502,55 L568,55" marker-end="url(#sc)"/><path d="M730,55 L796,55" marker-end="url(#sc)"/>
+  </g>
+  <path d="M650,104 C650,150 300,150 300,96" stroke="#C9962E" stroke-width="2.5" stroke-dasharray="7 5" fill="none" marker-end="url(#sc)"/>
+  <text x="470" y="156" text-anchor="middle" font-size="14" fill="#8a6514" font-style="italic">se falhar, corrigir na origem e gerar de novo</text>
+  <text x="1040" y="51" font-size="14" fill="#6B6B6B">ofício enviado,</text>
+  <text x="1040" y="69" font-size="14" fill="#6B6B6B">boleto emitido,</text>
+  <text x="1040" y="87" font-size="14" fill="#6B6B6B">pagamento feito</text>
+  <text x="0" y="188" font-size="14" fill="#6B6B6B">Depois do passo irreversível, a correção exige retificar o que já circulou. Antes dele, basta gerar de novo.</text>
+</svg>
+    <div class="cards cols-4 baixos" style="height:auto;margin-top:12px">
+    <article class="card">
+      <header style="background:#D4B277">ONDE</header>
+      <h3>Antes do irreversível</h3>
+        <div class="bloco">
+          <span class="rule" style="background:#D4B277"></span>
+          <span class="rot">Critério</span>
+          <p>Imediatamente antes de enviar, publicar, pagar ou assinar.</p>
+        </div>
+    </article>
+    <article class="card">
+      <header style="background:#FEC84D">O QUÊ</header>
+      <h3>Totais e extremos</h3>
+        <div class="bloco">
+          <span class="rule" style="background:#FEC84D"></span>
+          <span class="rot">Critério</span>
+          <p>O total bate com a fonte e o maior e o menor valor fazem sentido. No máximo dois itens.</p>
+        </div>
+    </article>
+    <article class="card">
+      <header style="background:#0AB0AB">QUEM</header>
+      <h3>Um cargo</h3>
+        <div class="bloco">
+          <span class="rule" style="background:#0AB0AB"></span>
+          <span class="rot">Critério</span>
+          <p>Coordenador da ouvidoria, e não "a equipe". O cargo permanece quando a pessoa sai.</p>
+        </div>
+    </article>
+    <article class="card">
+      <header style="background:#9fd6c4">SE FALHAR</header>
+      <h3>Parar e corrigir</h3>
+        <div class="bloco">
+          <span class="rule" style="background:#9fd6c4"></span>
+          <span class="rot">Critério</span>
+          <p>Suspender o envio, corrigir na origem e gerar de novo.</p>
+        </div>
+    </article></div></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 9.3 · Teoria</span>
+      <span class="pag">19 / 31</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="19">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 9.3 · TEORIA</span>
+    <h2>Quando não automatizar</h2>
+    <p class="sub">Quatro situações em que a decisão adequada é manter o processo como está</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:21%">SITUAÇÃO</th><th style="width:27%">SINTOMA</th><th style="width:27%">CONTA OU CRITÉRIO</th><th style="width:25%">O QUE FAZER</th></tr>
+      <tr><td><strong>Baixa frequência</strong></td><td>A tarefa ocorre uma ou duas vezes por ano.</td>
+          <td>Construção de 8 h, tarefa de 2 h por ano reduzida a 30 min. Economia de 1,5 h por ano e retorno em 5,3 anos.</td><td>Manter manual. Automatizar só se o erro for caro.</td></tr>
+      <tr><td><strong>Regra instável</strong></td><td>A regra não cabe em cinco linhas sem "depende".</td>
+          <td>Falha no sinal de regra escrita do ciclo 9.1.</td><td>Automatizar a coleta e manter a produção manual até a regra se firmar.</td></tr>
+      <tr><td><strong>Processo em mudança</strong></td><td>Troca de sistema prevista ou norma em revisão.</td>
+          <td>Prazo da mudança menor que o tempo de retorno.</td><td>Esperar a mudança e medir de novo.</td></tr>
+      <tr><td><strong>Decisão sobre direito de pessoa</strong></td><td>O resultado concede, nega ou cobra algo de alguém.</td>
+          <td>A LGPD, art. 20, dá ao titular o direito de pedir revisão de decisão tomada só por tratamento automatizado.</td><td>Automatizar coleta e produção e manter a decisão com um responsável.</td></tr>
+    </table>
+    <div class="caixa dourado" style="margin-top:14px"><span class="rot">PROJETOS DE AGENTES DE IA</span>
+      <p>O Gartner prevê o cancelamento de mais de 40% dos projetos de IA agêntica até o fim de 2027, por custo crescente, valor de negócio pouco claro ou controle de risco insuficiente (comunicado de 25/06/2025, gartner.com, consulta em 02/11/2026).</p></div></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 9.3 · Teoria</span>
+      <span class="pag">20 / 31</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="20">
+    <span class="barra"></span>
     <span class="eyebrow">CICLO 9.3 · PRÁTICA</span>
     <h2>Sua vez: declare o ponto de conferência</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Aponte o passo irreversível do seu fluxo</strong><p>Enviar, publicar, pagar, assinar. A conferência vai imediatamente antes dele.</p></div>
+      <div><strong>Aponte o passo irreversível do seu fluxo</strong><p>Enviar, publicar, pagar ou assinar. A conferência fica imediatamente antes dele.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Defina o que se confere e como</strong><p>Dois itens, no máximo. Totais e extremos costumam bastar.</p></div>
+      <div><strong>Defina o que se confere, em frase verificável</strong><p>No máximo dois itens. "O coordenador confere se o total do relatório bate com o extrato do mês" é verificável. "O gestor revisa" não é.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Nomeie o cargo responsável</strong><p>Não a pessoa: o cargo. Pessoa sai, cargo permanece.</p></div>
+      <div><strong>Nomeie o cargo responsável</strong><p>O cargo, e não a pessoa. O script recusa texto curto com a palavra equipe.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Escreva o que fazer quando a conferência falhar</strong><p>Parar o fluxo, corrigir na origem e reexecutar. Sem esse passo, a conferência vira formalidade.</p></div>
+      <div><strong>Escreva o que fazer se a conferência falhar</strong><p>Parar o fluxo, corrigir na origem e gerar de novo. Avalie também o seu fluxo contra as quatro situações do slide anterior.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 9.3 · Prática</span>
-      <span class="pag">19 / 29</span>
+      <span class="pag">21 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="19">
+<section class="slide conteudo" data-i="21">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 9.3 · ENTREGA</span>
     <h2>Ponto de conferência declarado</h2>
@@ -723,110 +903,128 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>O passo irreversível do seu fluxo.</li><li>O que se confere, e como, em no máximo dois itens.</li><li>O cargo responsável pela conferência.</li><li>O procedimento quando a conferência falha.</li><li>A avaliação do seu fluxo contra as três situações de não automatizar.</li></ul>
+      <ul><li>O passo irreversível do seu fluxo.</li><li>O que se confere e como, em no máximo dois itens.</li><li>O cargo responsável pela conferência.</li><li>O procedimento quando a conferência falha.</li><li>A avaliação do fluxo contra as quatro situações de não automatizar.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>entregas/modulo9-ciclo3-conferencia.md</p>
+        <p><span class="mono" style="font-size:15px">entregas/modulo9-ciclo3-conferencia.md<br>entregas/modulo9-fluxo.csv</span></p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Responsável descrito como "a equipe" não conta. Conferência sem procedimento de falha também não. "O gestor revisa" não é ponto de conferência: o formato exigido é verificável, como "o coordenador confere se o total do relatório bate com o extrato do mês".</p>
+        <p>Os quatro primeiros itens vão também para as linhas passo_irreversivel, o_que_se_confere, cargo_responsavel e se_a_conferencia_falhar de entregas/modulo9-fluxo.csv. O comando conferir recusa campo com menos de dez caracteres.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 9.3 · Entrega</span>
-      <span class="pag">20 / 29</span>
+      <span class="pag">22 / 31</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="20">
+<section class="slide divisor" data-i="22">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">9.4</span></div>
       <div class="dir">
-        <h2>Um fluxo repetível, medido</h2>
-        <p class="etapas">Teoria · Prática · Entrega</p>
+        <h2>Um fluxo repetível e medido</h2>
+        <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">21 / 29</span>
+      <span class="pag">23 / 31</span>
     </section>
-<section class="slide conteudo" data-i="21">
+<section class="slide conteudo" data-i="23">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 9.4 · TEORIA</span>
-    <h2>O que documentar para que o fluxo sobreviva</h2>
-    <p class="sub">Cinco itens. Sem eles, o fluxo funciona enquanto você estiver por perto.</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:5">
-    <li><span class="num">1</span>
-      <div><strong>O que entra e de onde vem</strong><p>Os arquivos de insumo, com a origem de cada um e quem os disponibiliza.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>A sequência de comandos</strong><p>Na ordem, com o que cada um produz. Quem assumir precisa conseguir executar lendo isso.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>O ponto de conferência e o responsável</strong><p>O que foi definido no ciclo anterior, escrito no mesmo documento.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>O que fazer quando dá errado</strong><p>Os dois ou três defeitos previsíveis e o que fazer em cada caso. É a parte que ninguém escreve e que todo mundo procura.</p></div>
-    </li>
-    <li><span class="num">5</span>
-      <div><strong>O tempo medido, antes e depois</strong><p>Sem isso não há como defender a continuidade do fluxo quando alguém questionar.</p></div>
-    </li></ol></div>
+    <h2>O que documentar para que o fluxo continue</h2>
+    <p class="sub">Cinco itens que permitem a outra pessoa executar o fluxo sem o autor presente</p>
+    <div class="corpo"><table class="tab">
+      <tr><th style="width:4%">#</th><th style="width:28%">ITEM</th><th style="width:38%">CONTEÚDO</th><th style="width:30%">QUEM PREENCHE NO RELATÓRIO</th></tr>
+      <tr><td>1</td><td><strong>O que entra e de onde vem</strong></td><td>Arquivos de insumo, origem de cada um e quem os disponibiliza.</td><td>Você</td></tr>
+      <tr><td>2</td><td><strong>A sequência de comandos</strong></td><td>Na ordem, com o que cada comando produz.</td><td>Você</td></tr>
+      <tr><td>3</td><td><strong>Ponto de conferência</strong></td><td>Passo irreversível, o que se confere, cargo e procedimento de falha.</td><td class="lac">O script, a partir de modulo9-fluxo.csv</td></tr>
+      <tr><td>4</td><td><strong>O que fazer quando dá errado</strong></td><td>Os dois ou três defeitos previsíveis e a resposta a cada um.</td><td>Você</td></tr>
+      <tr><td>5</td><td><strong>Tempo medido, antes e depois</strong></td><td>Tempo manual, automatizado e de construção, e execuções por ano.</td><td class="lac">O script, a partir de modulo9-fluxo.csv</td></tr>
+    </table>
+    <div class="def" style="margin-top:14px"><span class="rot">Ponto de equilíbrio (break-even) da automação</span>
+      <p>Número de execuções a partir do qual o tempo economizado cobre o tempo de construção. É o tempo de construção dividido pela economia por execução, que é o tempo manual menos o automatizado. Com 360 min de construção e 80 min economizados por execução, 360 ÷ 80 = 4,5 execuções.</p></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 9.4 · Teoria</span>
-      <span class="pag">22 / 29</span>
+      <span class="pag">24 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="22">
+<section class="slide conteudo" data-i="24">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 9.4 · DEMONSTRAÇÃO</span>
     <h2>A medição do ganho</h2>
-    <p class="sub">O número que sustenta a conversa com a chefia</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Registre o tempo da execução manual</strong><p>O que você mediu no ciclo 9.1, somado.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Registre o tempo da execução automatizada</strong><p>Cronometre de verdade, incluindo o preenchimento das variáveis e a conferência.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Some o tempo de construção</strong><p>As horas gastas hoje. É o investimento que precisa ser recuperado.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Calcule em quantas execuções o ganho aparece</strong><p>Diga: "execute atividade_modulo9.py com o comando conferir". O script faz a conta e recusa medição sem os três tempos.</p></div>
-    </li></ol></div>
+    <p class="sub">O tempo automatizado inclui o preenchimento das variáveis e a conferência</p>
+    <div class="corpo"><div class="prompt compacto">
+    <span class="rot">EXECUÇÃO DO SCRIPT</span>
+    <p><span class="cmd">"execute atividade_modulo9.py com o comando conferir"</span></p>
+  </div>
+  <div class="duascol" style="--esq:1.12fr;--dir:1fr;height:auto">
+    <div class="col" style="gap:8px">
+      <pre class="terminal">Nenhum problema encontrado.
+  Tempo manual por execucao:        120 min
+  Tempo automatizado por execucao:  40 min
+  Economia por execucao:            80 min
+  Investimento na construcao:       360 min
+<span class="hl">  Execucoes ate o investimento se pagar: 4.5</span>
+  Ou seja, cerca de 0.4 ano(s) na frequencia informada.
+  Economia anual estimada: 960 min (16.0 h)
+Relatorio gerado em: entregas/modulo9-relatorio.md</pre>
+      <p class="fonte-nota" style="position:static">Saída do script, abreviada, com dados fictícios (relatório mensal, 12 execuções por ano).</p>
+      <div class="caixa vinho"><span class="rot">O QUE O SCRIPT RECUSA</span><p>Tempo ou frequência que não seja número, valor negativo, campo de texto com menos de dez caracteres, cargo curto com a palavra equipe e menos de três documentos em saidas/.</p></div>
+    </div>
+    <div class="col" style="gap:10px"><svg class="fig" viewBox="0 0 538 236" xmlns="http://www.w3.org/2000/svg">
+  <text x="0" y="14" font-size="13.5" font-weight="700" fill="#6B6B6B">MINUTOS ACUMULADOS POR EXECUÇÃO</text>
+  <line x1="56" y1="196" x2="476" y2="196" stroke="#999" stroke-width="1.5"/>
+  <line x1="56" y1="196" x2="56" y2="26" stroke="#999" stroke-width="1.5"/>
+  <g font-size="12.5" fill="#6B6B6B" text-anchor="end">
+    <text x="48" y="200">0</text><text x="48" y="117">500</text><text x="48" y="35">1000</text></g>
+  <g font-size="12.5" fill="#6B6B6B" text-anchor="middle">
+    <text x="56" y="214">0</text><text x="160" y="214">2</text><text x="264" y="214">4</text><text x="368" y="214">6</text><text x="472" y="214">8</text></g>
+  <text x="264" y="232" text-anchor="middle" font-size="12.5" fill="#6B6B6B">execuções</text>
+  <polyline points="56,196 108,176 160,156 212,137 264,117 316,97 368,77 420,57 472,38" fill="none" stroke="#8D0333" stroke-width="3"/>
+  <polyline points="56,137 108,130 160,123 212,117 264,110 316,104 368,97 420,90 472,84" fill="none" stroke="#0AB0AB" stroke-width="3"/>
+  <circle cx="290" cy="107" r="6" fill="#FEC84D" stroke="#1A1A1A" stroke-width="1"/>
+  <text x="300" y="132" font-size="13" font-weight="700" fill="#1A1A1A">4,5 execuções</text>
+  <text x="482" y="42" font-size="13" fill="#8D0333">manual</text>
+  <text x="482" y="88" font-size="13" fill="#0a8f8a">fluxo</text>
+</svg>
+      <div class="caixa dourado"><span class="rot">COMPARAÇÃO COM O MÓDULO 1</span><p>Ganho medido de 16 h por ano, ou 1,3 h por mês. Se o mapa estimava 3 h por mês, a diferença e a causa vão para o relatório.</p></div>
+    </div>
+  </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 9.4 · Demonstração</span>
-      <span class="pag">23 / 29</span>
+      <span class="pag">25 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="23">
+<section class="slide conteudo" data-i="25">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 9.4 · PRÁTICA</span>
     <h2>Sua vez: documente e meça</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Execute o fluxo inteiro uma vez, cronometrando</strong><p>Do insumo ao documento pronto, com a conferência incluída.</p></div>
+      <div><strong>Execute o fluxo inteiro uma vez, cronometrando</strong><p>Do insumo ao documento pronto, com o preenchimento da tabela e a conferência incluídos.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Escreva os cinco itens da documentação</strong><p>No arquivo do fluxo. Escreva para quem vai assumir, e não para você.</p></div>
+      <div><strong>Preencha a medição em entregas/modulo9-fluxo.csv</strong><p>tempo_manual_minutos, tempo_automatizado_minutos, tempo_construcao_minutos e execucoes_por_ano, em números.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Preencha a medição e rode a conferência</strong><p>O script calcula em quantas execuções o investimento se paga.</p></div>
+      <div><strong>Rode o comando conferir e complete o relatório</strong><p>"execute atividade_modulo9.py com o comando conferir". Escreva no relatório os itens 1, 2 e 4, para quem vai assumir o fluxo.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Escreva a frase para a chefia</strong><p>Uma frase: o que era, o que é agora, e em quanto tempo o investimento se paga.</p></div>
+      <div><strong>Escreva a frase para a chefia</strong><p>Uma frase com o tempo antes, o tempo depois e o número de execuções até o investimento se pagar.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 9.4 · Prática</span>
-      <span class="pag">24 / 29</span>
+      <span class="pag">26 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="24">
+<section class="slide conteudo" data-i="26">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 9.4 · ENTREGA</span>
     <h2>Fluxo documentado com ganho medido</h2>
@@ -834,146 +1032,160 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>A documentação com os cinco itens.</li><li>Os três tempos medidos: manual, automatizado e de construção.</li><li>O número de execuções até o investimento se pagar.</li><li>A frase para a chefia.</li><li>A comparação com o ganho que você estimou no módulo 1.</li></ul>
+      <ul><li>A documentação com os cinco itens.</li><li>Os três tempos medidos e o número de execuções por ano.</li><li>O número de execuções até o investimento se pagar.</li><li>A frase para a chefia.</li><li>A comparação com o ganho estimado no módulo 1.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>entregas/modulo9-fluxo.csv\nentregas/modulo9-relatorio.md</p>
+        <p><span class="mono" style="font-size:15px">entregas/modulo9-fluxo.csv<br>entregas/modulo9-relatorio.md</span></p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Compõe a entrega B2, no encontro 11. Ganho declarado sem os três tempos medidos não conta. Responsável descrito como "a equipe" também não conta: fluxo sem dono para de funcionar no primeiro mês em que ninguém o roda.</p>
+        <p>Compõe a entrega B2, no encontro 11. Ganho declarado sem os três tempos medidos não conta. Responsável descrito como "a equipe" também não, porque fluxo sem responsável deixa de ser executado quando o autor se ausenta.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 9.4 · Entrega</span>
-      <span class="pag">25 / 29</span>
+      <span class="pag">27 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="25">
+<section class="slide conteudo" data-i="27">
     <span class="barra"></span>
     <span class="eyebrow">BALANÇO</span>
     <h2>O que você tem ao fim do encontro</h2>
     
-    <div class="corpo"><div class="cards cols-3">
+    <div class="corpo"><div class="cards cols-4">
     <article class="card">
       <header style="background:#D4B277">A DECOMPOSIÇÃO</header>
-      <h3>A tarefa separada em coleta, produção e decisão</h3>
-      
+      <h3>Passos medidos e classificados</h3>
         <div class="bloco">
           <span class="rule" style="background:#D4B277"></span>
           <span class="rot">O que é</span>
-          <p>Os passos com tempo medido e classificados, comparados com a estimativa do módulo 1.</p>
+          <p>A tarefa separada em coleta, produção e decisão, com minutos por passo.</p>
         </div>
         <div class="bloco">
           <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Para que serve</span>
-          <p>É o método que se aplica a qualquer proposta de automação que chegue à sua mesa.</p>
+          <span class="rot">Uso seguinte</span>
+          <p>Método para avaliar qualquer proposta de automação.</p>
         </div>
     </article>
     <article class="card">
       <header style="background:#0AB0AB">O MODELO</header>
-      <h3>Escrito uma vez, testado em três casos</h3>
-      
+      <h3>Testado em três casos</h3>
         <div class="bloco">
           <span class="rule" style="background:#0AB0AB"></span>
           <span class="rot">O que é</span>
-          <p>A parte fixa separada das variáveis, com regra para dado ausente e responsável declarado.</p>
+          <p>Texto fixo, variáveis nomeadas, regra para dado ausente e responsável.</p>
         </div>
         <div class="bloco">
           <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Para que serve</span>
-          <p>É a automação mais barata que existe e a que mais se usa no trabalho administrativo.</p>
+          <span class="rot">Uso seguinte</span>
+          <p>Gera os documentos recorrentes sem enviar dados ao provedor.</p>
         </div>
     </article>
     <article class="card">
-      <header style="background:#FEC84D">A MEDIÇÃO</header>
-      <h3>O ganho em número, e não em impressão</h3>
-      
+      <header style="background:#FEC84D">A CONFERÊNCIA</header>
+      <h3>Declarada, com cargo</h3>
         <div class="bloco">
           <span class="rule" style="background:#FEC84D"></span>
           <span class="rot">O que é</span>
-          <p>Três tempos medidos e o ponto em que o investimento se paga.</p>
+          <p>Ponto antes do passo irreversível, com o que se confere e o que fazer se falhar.</p>
         </div>
         <div class="bloco">
           <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Para que serve</span>
-          <p>É o que sustenta a conversa com quem decide, e o que separa proposta de entusiasmo.</p>
+          <span class="rot">Uso seguinte</span>
+          <p>Controle exigível de qualquer fluxo automatizado.</p>
+        </div>
+    </article>
+    <article class="card">
+      <header style="background:#9fd6c4">A MEDIÇÃO</header>
+      <h3>Ganho em minutos</h3>
+        <div class="bloco">
+          <span class="rule" style="background:#9fd6c4"></span>
+          <span class="rot">O que é</span>
+          <p>Três tempos medidos e o ponto de equilíbrio calculado pelo script.</p>
+        </div>
+        <div class="bloco">
+          <span class="rule" style="background:#9fd6c4"></span>
+          <span class="rot">Uso seguinte</span>
+          <p>Base da proposta à chefia e do módulo 14.</p>
         </div>
     </article></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Balanço do módulo</span>
-      <span class="pag">26 / 29</span>
+      <span class="pag">28 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="26">
+<section class="slide conteudo" data-i="28">
     <span class="barra"></span>
     <span class="eyebrow">PRÓXIMOS PASSOS</span>
     <h2>Módulo 10: o que preparar</h2>
-    <p class="sub">Pesquisa, documentos longos e análise qualitativa. O encontro 11 fecha a nota 2.</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:5">
+    <p class="sub">Pesquisa, documentos longos e análise qualitativa. O encontro 11 fecha a nota 2</p>
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:5">
     <li><span class="num">1</span>
-      <div><strong>Traga um documento longo da sua área</strong><p>Artigo, relatório anual, plano diretor ou estudo setorial. Mínimo de dez páginas. Sem ele, você entra no encontro 11 com material de reserva e perde o vínculo com o seu próprio caso.</p></div>
+      <div><strong>Traga um documento longo da sua área</strong><p>Artigo, relatório anual, plano diretor ou estudo setorial, com no mínimo dez páginas.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Traga respostas abertas, se tiver</strong><p>De pesquisa de satisfação, ouvidoria ou formulário interno. Anonimizadas. Se não tiver, a turma virtual terá um conjunto público.</p></div>
+      <div><strong>Traga respostas abertas, se tiver</strong><p>Pesquisa de satisfação, ouvidoria ou formulário interno, sem nome, CPF, e-mail e telefone. Quem não tiver usa o conjunto público da turma virtual.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Anote duas organizações comparáveis à sua</strong><p>Vão ser usadas no exercício de comparação setorial com fontes.</p></div>
+      <div><strong>Anote duas organizações comparáveis à sua</strong><p>Elas entram no exercício de comparação setorial com fontes.</p></div>
     </li>
     <li><span class="num">4</span>
       <div><strong>A entrega B2 reúne os encontros 10 e 11</strong><p>Fluxo automatizado e pesquisa com fontes verificadas. Vale 40% da nota 2.</p></div>
     </li>
     <li><span class="num">5</span>
-      <div><strong>Regularize pendência da B1 até o encontro 11</strong><p>É o prazo final para isso.</p></div>
+      <div><strong>Pendências da B1 até o encontro 11</strong><p>É o prazo final para regularizar.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Próximos passos</span>
-      <span class="pag">27 / 29</span>
+      <span class="pag">29 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="27">
+<section class="slide conteudo" data-i="29">
     <span class="barra"></span>
     <span class="eyebrow">DÚVIDAS FREQUENTES</span>
     <h2>Perguntas que aparecem neste módulo</h2>
     
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:5">
+    <div class="corpo"><ol class="steps cols-2 compacto" style="--linhas:3">
     <li><span class="num">1</span>
-      <div><strong>"Minha tarefa não é documental."</strong><p>Automatize a parte documental dela: o registro, o relatório, a comunicação. Costuma ser um terço do tempo.</p></div>
+      <div><strong>"Minha tarefa não produz documento."</strong><p>Automatize a parte que produz registro, relatório ou comunicação. Na decomposição, ela costuma aparecer como passo de produção.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>"Meu chefe não vai deixar mudar o processo."</strong><p>Não precisa. O modelo com variáveis muda como você produz, não o processo formal. Comece por aí.</p></div>
+      <div><strong>"Meu chefe não vai deixar mudar o processo."</strong><p>O modelo com variáveis muda a forma como você produz o documento. O processo formal e o documento final continuam iguais.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>"A medição deu ganho pequeno."</strong><p>É um resultado, e um bom resultado. Descobrir que não compensa antes de investir é exatamente o objetivo do método.</p></div>
+      <div><strong>"A medição deu ganho pequeno ou negativo."</strong><p>O script gera o relatório mesmo assim. A medição serve para decidir antes de investir mais tempo. A justificativa passa a ser a redução de erro, se houver.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>"Posso automatizar a conferência?"</strong><p>A checagem de totais, sim. O julgamento sobre o que fazer com o desvio, não. É a fronteira do ciclo 9.1.</p></div>
+      <div><strong>"Posso automatizar a conferência?"</strong><p>A checagem de totais, sim, por script. A decisão sobre o que fazer com o desvio fica com o cargo responsável.</p></div>
     </li>
     <li><span class="num">5</span>
-      <div><strong>"O documento gerado ficou com frase estranha."</strong><p>Variável no meio de uma frase que não comporta todos os valores possíveis. Reescreva a frase fixa.</p></div>
+      <div><strong>"Um marcador apareceu sem substituição."</strong><p>Nome com minúscula ou acento, como [mes] ou [MÊS]. O script não reconhece e não avisa. Use [MES_REFERENCIA].</p></div>
+    </li>
+    <li><span class="num">6</span>
+      <div><strong>"Por que não pedir ao agente que escreva os documentos?"</strong><p>Cada execução sai com redação diferente e os dados vão ao servidor do provedor. Com o script, o resultado se repete e fica no computador.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Dúvidas frequentes</span>
-      <span class="pag">28 / 29</span>
+      <span class="pag">30 / 31</span>
     </footer>
   </section>
-<section class="slide fim" data-i="28">
+<section class="slide fim" data-i="30">
       <span class="filete"></span>
       <h1>Módulo 9 concluído</h1>
-      <p>Você tem um fluxo que se repete sem ser refeito, com conferência declarada e ganho medido. No próximo encontro o assunto é o que fazer com documento longo e resposta aberta.</p>
+      <p>A tarefa está decomposta, o modelo foi testado em três casos, a conferência tem responsável e o ganho foi medido. No próximo encontro, o trabalho é com documentos longos e respostas abertas.</p>
       <span class="slogan">SEMPRE+ QUALIDADE INOVAÇÃO INCLUSÃO</span>
     </section>
 </div>
 <div id="barra">
   <button id="ant" title="Anterior">&#8249;</button>
-  <input id="atual" value="1" title="Ir para o slide"> <span>/ 29</span>
+  <input id="atual" value="1" title="Ir para o slide"> <span>/ 31</span>
   <button id="prox" title="Próximo">&#8250;</button>
   <button id="tela" title="Tela cheia">&#9744;</button>
 </div>

@@ -3,7 +3,7 @@
 Automação de documentos e processos. Encontro 10, cerca de 4 horas.
 DECC0294, UFMA, Curso de Administração, 2026.2.
 
-Este encontro abre o bloco da nota 3 e não tem entrega avaliada. É o encontro em que a turma sai do relatório pontual e passa para o fluxo repetível.
+Este encontro não tem entrega avaliada própria. O que se produz aqui entra na entrega B2, conferida no encontro 11 pelo comando `b2` do script do módulo 10, que percorre os encontros 10 e 11. É o encontro em que a turma sai do relatório pontual e passa para o fluxo repetível.
 
 ## Antes da aula
 
@@ -22,19 +22,19 @@ Separe também um caso local de automação que deu errado. Sistema que emitiu o
 | Bloco | Duração | Slides |
 |---|---|---|
 | Abertura e visão geral | 10 min | 1 a 2 |
-| Ciclo 9.1 | 45 min | 3 a 8 |
-| Ciclo 9.2 | 55 min | 9 a 14 |
+| Ciclo 9.1 | 45 min | 3 a 9 |
+| Ciclo 9.2 | 55 min | 10 a 16 |
 | Intervalo | 15 min | |
-| Ciclo 9.3 | 45 min | 15 a 20 |
+| Ciclo 9.3 | 45 min | 17 a 22 |
 | Intervalo | 10 min | |
-| Ciclo 9.4 | 55 min | 21 a 25 |
-| Fechamento | 15 min | 26 a 29 |
+| Ciclo 9.4 | 55 min | 23 a 27 |
+| Fechamento | 15 min | 28 a 31 |
 
-## Ciclo 9.1 — O que é automatizável de verdade
+## Ciclo 9.1 — O que é automatizável
 
-Teoria, 15 min. A separação entre tarefa e decisão. Os quatro sinais de tarefa automatizável: entrada previsível, regra escrita, saída conferível, repetição com frequência conhecida.
+Teoria, 15 min. Slides 4 a 6. Coleta, produção e decisão (slide 4), com dois casos brasileiros: o Alice (CGU e TCU), que automatiza coleta e produção de alertas e deixa a decisão com a auditoria, e a concessão automática do INSS, em que a decisão é automatizada e o TCU determinou ajustes (Acórdão 1.498/2026-Plenário). Os quatro sinais de tarefa automatizável em tabela com pergunta de verificação e exemplos (slide 5, novo): entrada previsível, regra escrita, saída conferível, repetição com frequência conhecida. O método de decomposição em quatro etapas (slide 6).
 
-Demonstração, 10 min. O relatório mensal decomposto na projeção, passo a passo, com a turma dizendo o que é coleta, o que é cálculo, o que é redação e o que é julgamento.
+Demonstração, 10 min. Slide 7. O relatório mensal da ouvidoria (exemplo ilustrativo) decomposto em oito passos, 120 minutos por execução, com 45% em coleta, 35% em produção e 20% em decisão. A instrução pede a soma por classe em script gravado em saidas/, conferida à mão.
 
 Prática, 15 min. Cada aluno decompõe a tarefa que trouxe.
 
@@ -44,11 +44,11 @@ O erro comum é decompor em três passos genéricos ("coletar, analisar, escreve
 
 O julgamento não sai da lista. Ele é marcado como julgamento e continua com o humano. Essa marcação é o que separa automação de terceirização de responsabilidade.
 
-## Ciclo 9.2 — Modelos de instrução com variáveis
+## Ciclo 9.2 — Modelos de documento com variáveis
 
-Teoria, 20 min. O modelo com `[VARIAVEIS]` e as quatro regras: variável com nome de campo real, valor ausente declarado e não inventado, formato de saída fixo, exemplo de saída correta junto do modelo.
+Teoria, 20 min. Slides 11 a 13. O modelo com `[VARIAVEIS]` em diagrama (modelo, tabela, script, três documentos) e a definição de modelo com variáveis, ligada à mala direta (slide 11). Substituição por script e redação pelo agente comparadas (slide 12, novo): repetibilidade, falha característica, para onde vão os dados e conferência necessária. As quatro regras sobre um trecho anotado do modelo (slide 13): nome descritivo em maiúsculas e sem acento (o script só reconhece A a Z, algarismos e sublinhado), nenhum número no texto fixo, regra para dado ausente, responsável e data de revisão no topo.
 
-Demonstração, 15 min. Um modelo executado três vezes com dados diferentes, na projeção, incluindo a execução com a coluna faltando, para que a turma veja o script recusar e depois preencher com `NAO INFORMADO` e o aviso no topo.
+Demonstração, 15 min. Slide 14. Um modelo executado três vezes com dados diferentes, na projeção, incluindo a execução com a coluna faltando, para que a turma veja o script recusar e depois preencher com `NAO INFORMADO` e o aviso no topo.
 
 Prática, 15 min. Cada aluno escreve o próprio modelo e roda `gerar` sobre a base que trouxe.
 
@@ -60,23 +60,23 @@ Este é o ciclo mais longo do encontro e o que mais consome cota do modelo gratu
 
 ## Ciclo 9.3 — Automação de processos e seus limites
 
-Teoria, 25 min. O que é automação robótica de processos e por que ela quebra quando a tela muda. O ponto de conferência humana: onde ele fica, quem assina, o que ele olha.
+Teoria, 25 min. Slides 18 a 20. API, RPA e agentes de uso do computador comparados (slide 18), com a definição de RPA da IEEE 2755-2017, Taulli (2020, cap. 5) e os resultados do OSWorld. O ponto de conferência humana em diagrama, antes do passo irreversível, com onde, o quê, quem e o que fazer se falhar (slide 19). Quando não automatizar, em quatro situações (slide 20): baixa frequência, regra instável, processo em mudança e decisão sobre direito de pessoa (LGPD, art. 20), com a previsão do Gartner sobre projetos de IA agêntica.
 
 Prática, 15 min. Cada aluno declara o ponto de conferência do fluxo que está montando e escreve o que a pessoa confere ali, em uma frase verificável.
 
-Entrega, 5 min. `entregas/modulo9-ciclo3-conferencia.md`.
+Entrega, 5 min. `entregas/modulo9-ciclo3-conferencia.md` e as quatro linhas correspondentes de `entregas/modulo9-fluxo.csv`.
 
 "O gestor revisa" não é ponto de conferência. "O coordenador confere se o total do relatório bate com o extrato do mês" é. Exija o segundo formato.
 
 O caso local de erro em escala entra aqui. A pergunta para a turma é onde estaria o ponto de conferência que teria pegado aquele erro, e por que ele não existia.
 
-## Ciclo 9.4 — Um fluxo repetível, medido
+## Ciclo 9.4 — Um fluxo repetível e medido
 
-Teoria, 15 min. O que documentar para o fluxo sobreviver a quem o criou. A conta do ponto de equilíbrio: tempo de construção dividido pela economia por execução.
+Teoria, 15 min. Slides 24 e 25. Os cinco itens da documentação e quem preenche cada um no relatório gerado pelo script (slide 24), com a definição de ponto de equilíbrio. A demonstração do comando `conferir` (slide 25), com a saída do script, o gráfico de minutos acumulados e a comparação com a estimativa do módulo 1, entra no tempo da teoria.
 
 Prática, 30 min. Cada aluno preenche a ficha do fluxo e roda `conferir`. O script calcula em quantas execuções a automação se paga e recusa a entrega se o responsável for "a equipe".
 
-Entrega, 10 min. `entregas/modulo9-ciclo4-fluxo.md`.
+Entrega, 10 min. `entregas/modulo9-fluxo.csv` e `entregas/modulo9-relatorio.md`, gerado pelo comando `conferir`.
 
 O ponto de equilíbrio é a defesa do aluno diante de uma chefia. Quatro horas de construção, vinte minutos economizados por semana, doze execuções para pagar, três meses. Esse cálculo cabe em um e-mail e é o que aprova ou reprova a ideia.
 

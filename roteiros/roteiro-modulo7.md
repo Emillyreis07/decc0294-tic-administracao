@@ -18,19 +18,19 @@ Prepare também uma segunda tabela de referência com uma chave repetida, para d
 | Bloco | Duração | Slides |
 |---|---|---|
 | Abertura e visão geral | 10 min | 1 a 2 |
-| Ciclo 7.1 | 45 min | 3 a 8 |
-| Ciclo 7.2 | 50 min | 9 a 14 |
+| Ciclo 7.1 | 45 min | 3 a 9 |
+| Ciclo 7.2 | 50 min | 10 a 15 |
 | Intervalo | 15 min | |
-| Ciclo 7.3 | 60 min | 15 a 20 |
+| Ciclo 7.3 | 60 min | 16 a 22 |
 | Intervalo | 10 min | |
-| Ciclo 7.4 | 45 min | 21 a 25 |
-| Fechamento | 15 min | 26 a 29 |
+| Ciclo 7.4 | 45 min | 23 a 27 |
+| Fechamento | 15 min | 28 a 31 |
 
 ## Ciclo 7.1 — Da planilha à tabela
 
-Teoria, 18 min. Planilha, tabela e banco. Os quatro problemas que a planilha não resolve.
+Teoria, 18 min. Planilha, tabela e banco relacional (Codd, 1970). Os quatro problemas que a planilha não resolve, com o termo técnico de cada um. Tipo declarado e valor gravado (slide 6): no SQLite o tipo da coluna é uma preferência (afinidade de tipo), e o script cria a coluna como número quando 90% ou mais dos valores preenchidos são números, grava vazio no lugar dos demais e não conta a linha como rejeitada. O mesmo slide mostra o valor 1.234 lido como 1,234 e o CNPJ que perde os zeros à esquerda.
 
-Demonstração, 7 min. O script criando o banco na projeção, com as contagens.
+Demonstração, 7 min. O script criando o banco na projeção, com as contagens e a conferência de COUNT(coluna) contra os vazios do perfil.
 
 Prática, 15 min. Cada aluno cria o banco com as próprias bases.
 
@@ -44,7 +44,7 @@ Coluna de valor que o script tipou como TEXT é vírgula decimal de novo. Corrig
 
 ## Ciclo 7.2 — Modelo relacional em linguagem de gestor
 
-Teoria, 25 min. Entidade, atributo e relação. Chave, e por que nome não serve. Os três tipos de relação.
+Teoria, 25 min. Entidade, atributo e relação, com o diagrama das tabelas usadas nas demonstrações (Chen, 1976). Chave primária e chave estrangeira, o agrupamento pelo nome que divide São Luís em quatro grupos e o CNPJ alfanumérico, emitido desde julho de 2026 (IN RFB nº 2.229/2024). Os três tipos de relação e o efeito de cada um na contagem da junção.
 
 Prática, 20 min. Cada aluno modela as próprias tabelas e gera o diagrama.
 
@@ -58,9 +58,9 @@ Aluno cujas bases não têm chave comum tem o principal achado do ciclo, e não 
 
 ## Ciclo 7.3 — Perguntas de negócio viram consultas
 
-Teoria, 25 min. As cinco partes de uma consulta. Os três erros que produzem número errado plausível.
+Teoria, 25 min. As cinco partes de uma consulta e a ordem em que o banco as executa. Os três erros que produzem número errado plausível e o conceito de granularidade (Kimball e Ross, 2013). O acerto dos modelos ao escrever SQL no teste BIRD (slide 19): 80,04% para o melhor modelo único em junho de 2026, contra 92,96% de especialistas humanos. Uma consulta em cinco ainda sai errada e roda sem mensagem de erro.
 
-Demonstração, 10 min. A sequência completa: esquema, pedido ao agente, leitura da consulta, execução.
+Demonstração, 10 min. A sequência completa: esquema, pedido ao agente, leitura da consulta, execução. O script mostra só as linhas do resultado, então a contagem antes e depois do filtro sai de duas consultas COUNT(*), sem e com o WHERE.
 
 Prática, 20 min. Cinco perguntas viradas em consultas.
 
@@ -74,7 +74,7 @@ O script recusa entrega sem a contagem antes e depois do filtro. É onde o núme
 
 ## Ciclo 7.4 — Juntar fontes sem inventar linha
 
-Teoria, 12 min. As três formas de juntar e o efeito de cada uma na contagem.
+Teoria, 12 min. As três formas de juntar e a contagem esperada de cada uma. A diferença entre a junção interna, que é a do comando juntar, e a junção à esquerda, que o aluno pode pedir pelo comando sql.
 
 Demonstração, 8 min. A junção com a tabela de chave repetida que você preparou. A contagem cresce na tela, e é isso que fica.
 

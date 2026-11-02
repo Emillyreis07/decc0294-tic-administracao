@@ -147,6 +147,128 @@ body.mexeu #ajuda{opacity:1}
   #barra,#ajuda{display:none}
   .slide{display:block!important;page-break-after:always;box-shadow:none;transform:none!important}
 }
+/* ---- componentes acrescentados na revisão de nov. 2026 ---- */
+.mono{font-family:Consolas,"Cascadia Mono","Courier New",monospace}
+.fonte-nota{position:absolute;left:0;right:0;bottom:-2px;font-size:13px;color:var(--muted);line-height:1.3}
+.prompt.compacto{padding:12px 20px;margin-bottom:16px}
+.prompt.compacto p{font-size:17px;line-height:1.4;margin-top:6px}
+.prompt.compacto p+p{margin-top:6px}
+.prompt .cmd{font-style:normal;font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:16px}
+
+/* tabela de dados */
+.tab{width:100%;border-collapse:collapse;font-size:15px;line-height:1.3;color:var(--body)}
+.tab th{background:var(--vinho);color:#fff;font-weight:700;text-align:left;padding:7px 10px;font-size:14px;letter-spacing:.3px}
+.tab td{border-bottom:1px solid #e1e1e1;padding:7px 10px;vertical-align:top;background:#fff}
+.tab tr:nth-child(even) td{background:#fafafa}
+.tab td.lac{background:#FFF3D1!important;color:#7a5600;font-weight:700}
+.tab td .s{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+.tab td strong{color:var(--txt)}
+.chip{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.5px;padding:2px 8px;margin-bottom:4px;color:var(--txt)}
+.chip.ok{background:#CFEFEE}.chip.med{background:#FFE7A8}.chip.ruim{background:#F2CDD8;color:var(--vinho)}
+.badge{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--vinho);
+  color:#fff;font-size:12px;font-weight:700;margin-right:6px;vertical-align:1px;font-style:normal}
+
+/* duas colunas */
+.duascol{display:grid;grid-template-columns:var(--esq,1.4fr) var(--dir,1fr);gap:28px;height:100%}
+.duascol .col{display:flex;flex-direction:column;gap:14px;min-height:0}
+.steps.compacto{gap:12px}
+.steps.compacto strong{font-size:18px}
+.steps.compacto p{font-size:16px;line-height:1.35}
+.steps.compacto .num{flex:0 0 28px;height:28px;font-size:15px}
+
+/* fluxo horizontal */
+.fluxo{display:grid;grid-template-columns:repeat(var(--n,4),1fr);gap:34px;position:relative}
+.etapa{background:var(--card);border:1px solid #e3e3e3;border-top:6px solid var(--cor,var(--vinho));
+  padding:12px 16px 14px;position:relative}
+.etapa:not(:last-child)::after{content:"";position:absolute;right:-27px;top:50%;margin-top:-11px;
+  border-left:16px solid var(--vinho);border-top:11px solid transparent;border-bottom:11px solid transparent}
+.etapa .n{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;
+  background:var(--vinho);color:#fff;font-size:14px;font-weight:700}
+.etapa h4{display:inline;font-size:18px;color:var(--txt);margin-left:6px;vertical-align:2px}
+.etapa p{font-size:15.5px;line-height:1.38;margin-top:8px}
+.etapa .arq{display:block;margin-top:8px;font-size:13.5px;color:var(--vinho);
+  font-family:Consolas,"Cascadia Mono","Courier New",monospace;word-break:break-all}
+.trilha{margin-top:18px}
+.trilha .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1px;color:var(--muted);margin-bottom:6px}
+.trilha .barra-g{height:14px;background:linear-gradient(90deg,var(--teal) 0%,#9fd6c4 30%,var(--amarelo) 55%,var(--vinho) 100%)}
+.trilha .marcas{display:grid;grid-template-columns:repeat(4,1fr);gap:34px;font-size:13.5px;color:var(--muted);margin-top:5px}
+
+/* conceito (mesmo padrão dos módulos 2 e 3) */
+.def{background:var(--card2);border:1px solid #e3e3e3;border-left:9px solid var(--vinho);padding:12px 20px}
+.def .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1.2px;color:var(--vinho);text-transform:uppercase}
+.def p{font-size:17px;line-height:1.4;color:var(--txt);margin-top:5px}
+
+/* eixo acima dos cartões */
+.eixo{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;margin-bottom:14px;
+  font-size:14px;font-weight:700;color:var(--muted);letter-spacing:.4px}
+.eixo .seta{height:10px;position:relative;background:linear-gradient(90deg,var(--dourado),var(--teal))}
+.eixo .seta::after{content:"";position:absolute;right:-14px;top:-7px;border-left:16px solid var(--teal);
+  border-top:12px solid transparent;border-bottom:12px solid transparent}
+.cards.baixos{height:calc(100% - 40px)}
+.cards.baixos .card h3{font-size:18px;padding:12px 16px 2px}
+.cards.baixos .card .bloco{padding:8px 16px 0}
+.cards.baixos .card .bloco p{font-size:15.5px;line-height:1.36}
+
+/* grade de dimensões */
+.grade{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:14px;height:calc(100% - 22px)}
+.dim{background:var(--card);border:1px solid #e3e3e3;border-top:5px solid var(--cor);padding:10px 16px}
+.dim h4{font-size:19px;color:var(--vinho)}
+.dim h4 small{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.dim p{font-size:15.5px;line-height:1.36;margin-top:5px}
+.dim .med{display:block;font-size:14px;color:var(--txt);margin-top:7px;border-top:1px solid #ddd;padding-top:6px}
+.dim .med b{color:var(--muted);font-size:12.5px;letter-spacing:.6px}
+
+/* caixa lateral */
+.caixa{background:var(--card2);border:1px solid #e3e3e3;padding:12px 16px}
+.caixa.vinho{border-left:6px solid var(--vinho)}
+.caixa.dourado{border-left:6px solid var(--dourado)}
+.caixa.teal{border-left:6px solid var(--teal)}
+.caixa .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1px;color:var(--vinho);margin-bottom:4px}
+.caixa p{font-size:15.5px;line-height:1.38}
+.caixa p+p{margin-top:6px}
+.legenda{list-style:none}
+.legenda li{font-size:15.5px;line-height:1.35;margin-bottom:8px;display:flex;gap:6px}
+.legenda li b{color:var(--txt)}
+
+/* ficha do mapa de dados */
+.ficha{display:grid;grid-template-columns:1fr 1fr;gap:14px;height:calc(100% - 64px)}
+.ficha .grupo{background:var(--card);border:1px solid #e3e3e3;border-top:5px solid var(--cor)}
+.ficha .grupo>header{font-size:16px;font-weight:700;color:var(--vinho);padding:8px 14px 2px}
+.ficha .grupo>header span{color:var(--muted);font-weight:400;font-size:14px;margin-left:6px}
+.ficha dl{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;padding:6px 14px 10px;font-size:14.5px;line-height:1.3}
+.ficha dt{font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:13.5px;color:var(--vinho);padding-top:1px}
+.ficha dd{color:var(--txt)}
+.rodape-corpo{margin-top:12px;font-size:15.5px;line-height:1.4;color:var(--body)}
+
+/* svg */
+.fig{display:block;width:100%;height:auto}
+.fig text{font-family:"Segoe UI",Calibri,"Helvetica Neue",Arial,sans-serif}
+
+/* ajustes após conferência visual */
+.tab.apertada{font-size:14.5px}
+.tab.apertada td{padding:6px 10px}
+.legenda .badge{flex:0 0 20px;margin-top:1px}
+.dim p{font-size:17px}
+.dim .med{font-size:15.5px}
+.dim h4{font-size:21px}
+.cards.baixos .card .bloco p{font-size:16.5px}
+.eixo{gap:26px}
+.ficha dl{font-size:16.5px;gap:6px 14px;padding:8px 14px 12px}
+.ficha dt{font-size:15px}
+.ficha .grupo>header{font-size:17.5px}
+.etapa p{font-size:16.5px}
+.etapa .arq{word-break:normal;overflow-wrap:break-word}
+.steps.cols-3.compacto p{font-size:17px}
+.steps.cols-3.compacto strong{font-size:19px}
+
+/* blocos de saída de terminal */
+.terminal{background:#262626;color:#e9e9e9;font-family:Consolas,"Cascadia Mono","Courier New",monospace;
+  font-size:14px;line-height:1.38;padding:12px 16px;white-space:pre;overflow:hidden;margin:0}
+.terminal .hl{color:#FEC84D;font-weight:700}
+
+/* ajustes do módulo 8 */
+.tab td svg{display:block}
+.legenda li{font-size:16px;margin-bottom:9px}
 </style>
 </head>
 <body>
@@ -157,18 +279,18 @@ body.mexeu #ajuda{opacity:1}
       <span class="mod">MÓDULO 8</span>
       <h1>Visualização de dados e painéis</h1>
       <span class="tracinho"></span>
-      <p class="sub">Encontro 9 · Mostrar o número de um jeito que sustente a decisão</p>
+      <p class="sub">Encontro 9 · Forma do gráfico, painel gerado por script e entrega B1</p>
       <p class="pe">DECC0294 · Tecnologia da Informação e Comunicação Aplicada à Administração · 2026.2</p>
     </section>
 <section class="slide conteudo" data-i="1">
     <span class="barra"></span>
     <span class="eyebrow">VISÃO GERAL DO MÓDULO</span>
     <h2>O que você vai construir hoje</h2>
-    <p class="sub">Este encontro tem a entrega B1, que vale 60% da nota 2</p>
+    <p class="sub">Este encontro fecha a entrega B1, que vale 60% da nota 2</p>
     <div class="corpo"><div class="overview">
     <article class="ciclo">
       <span class="topo" style="background:#D4B277"></span>
-      <span class="rot" >CICLO 8.1</span>
+      <span class="rot">CICLO 8.1</span>
       <h3>Por que a maioria dos gráficos falha</h3>
       <div class="pe">
         <span class="rule" style="background:#D4B277"></span>
@@ -178,17 +300,17 @@ body.mexeu #ajuda{opacity:1}
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#0AB0AB"></span>
-      <span class="rot" >CICLO 8.2</span>
+      <span class="rot">CICLO 8.2</span>
       <h3>Forma, escala e cor</h3>
       <div class="pe">
         <span class="rule" style="background:#0AB0AB"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Escolha de forma justificada</p>
+        <p>Forma justificada para cinco indicadores</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#FEC84D"></span>
-      <span class="rot" >CICLO 8.3</span>
+      <span class="rot">CICLO 8.3</span>
       <h3>Do dado ao painel que abre no navegador</h3>
       <div class="pe">
         <span class="rule" style="background:#FEC84D"></span>
@@ -198,18 +320,18 @@ body.mexeu #ajuda{opacity:1}
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#D4B277"></span>
-      <span class="rot" >CICLO 8.4</span>
+      <span class="rot">CICLO 8.4</span>
       <h3>O painel do projeto e a entrega B1</h3>
       <div class="pe">
         <span class="rule" style="background:#D4B277"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Painel final e entrega B1</p>
+        <p>Painel com destinatário e B1 conferida</p>
       </div>
     </article></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Estrutura do módulo</span>
-      <span class="pag">2 / 29</span>
+      <span class="pag">2 / 31</span>
     </footer>
   </section>
 <section class="slide divisor" data-i="2">
@@ -219,141 +341,153 @@ body.mexeu #ajuda{opacity:1}
         <h2>Por que a maioria dos gráficos falha</h2>
         <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">3 / 29</span>
+      <span class="pag">3 / 31</span>
     </section>
 <section class="slide conteudo" data-i="3">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 8.1 · TEORIA</span>
-    <h2>O gráfico responde a uma pergunta, ou não serve</h2>
-    <p class="sub">A falha mais comum não é estética. É não haver pergunta.</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">SEM PERGUNTA</header>
-      <h3>O gráfico mostra o que a planilha tinha</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Como se reconhece</span>
-          <p>Doze séries, legenda com dez itens, título que repete o nome da coluna. Quem olha não sabe o que deveria notar.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O efeito</span>
-          <p>A reunião discute o gráfico em vez da decisão. Ninguém decide nada.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">COM PERGUNTA</header>
-      <h3>O gráfico mostra uma comparação</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Como se reconhece</span>
-          <p>Duas ou três séries, o título diz a conclusão, e o que importa está destacado do resto.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O efeito</span>
-          <p>Quem olha vê a diferença em três segundos e a discussão passa a ser sobre o que fazer.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">O TESTE</header>
-      <h3>Escreva o título antes de fazer o gráfico</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Como se faz</span>
-          <p>O título é a frase que você quer que a pessoa leve. "Custo por atendimento é 40% maior na unidade Centro."</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Se não conseguir</span>
-          <p>Se você não consegue escrever essa frase, não é o gráfico que falta. É a análise.</p>
-        </div>
-    </article></div></div>
+    <h2>O gráfico responde a uma pergunta de gestão</h2>
+    <p class="sub">Os mesmos quatro números, antes e depois de definir a pergunta</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.5fr;--dir:1fr">
+    <div class="col"><svg class="fig" viewBox="0 0 684 410" xmlns="http://www.w3.org/2000/svg">
+  <text x="0" y="16" font-size="13" font-weight="700" fill="#6B6B6B" letter-spacing="1">ANTES</text>
+  <text x="0" y="44" font-size="16" font-weight="700" fill="#1A1A1A">Custo por unidade</text>
+  <line x1="40" y1="140" x2="40" y2="290" stroke="#999" stroke-width="1.5"/>
+  <line x1="40" y1="290" x2="310" y2="290" stroke="#999" stroke-width="1.5"/>
+  <text x="34" y="145" text-anchor="end" font-size="13" fill="#6B6B6B">18</text>
+  <text x="34" y="294" text-anchor="end" font-size="13" fill="#6B6B6B">12</text><rect x="52" y="262.5" width="46" height="27.5" fill="#0AB0AB"/><rect x="116" y="280.0" width="46" height="10.0" fill="#FEC84D"/><rect x="180" y="148.5" width="46" height="141.5" fill="#8D0333"/><rect x="244" y="284.0" width="46" height="6.0" fill="#D4B277"/><rect x="40" y="306" width="14" height="14" fill="#0AB0AB"/><text x="60" y="318" font-size="14" fill="#333">Norte</text><rect x="170" y="306" width="14" height="14" fill="#FEC84D"/><text x="190" y="318" font-size="14" fill="#333">Sul</text><rect x="40" y="330" width="14" height="14" fill="#8D0333"/><text x="60" y="342" font-size="14" fill="#333">Centro</text><rect x="170" y="330" width="14" height="14" fill="#D4B277"/><text x="190" y="342" font-size="14" fill="#333">Leste</text>
+  <text x="0" y="388" font-size="13" fill="#8D0333" font-style="italic">eixo a partir de 12, cor sem significado, sem fonte</text>
+  <line x1="336" y1="0" x2="336" y2="404" stroke="#DDD" stroke-width="1.5"/>
+  <text x="356" y="16" font-size="13" font-weight="700" fill="#6B6B6B" letter-spacing="1">DEPOIS</text>
+  <text x="356" y="44" font-size="15" font-weight="700" fill="#8D0333">Centro custa 40% mais por</text>
+  <text x="356" y="64" font-size="15" font-weight="700" fill="#8D0333">atendimento que a média</text>
+  <text x="356" y="84" font-size="15" font-weight="700" fill="#8D0333">das demais unidades</text>
+  <line x1="428" y1="98" x2="428" y2="258" stroke="#999" stroke-width="1.5"/><text x="420" y="123" text-anchor="end" font-size="14" fill="#333">Centro</text><rect x="428" y="104" width="190.0" height="28" fill="#8D0333"/><text x="624.0" y="123" font-size="14" font-weight="700" fill="#1A1A1A">17,66</text><text x="420" y="163" text-anchor="end" font-size="14" fill="#333">Norte</text><rect x="428" y="144" width="140.9" height="28" fill="#BDBDBD"/><text x="574.9" y="163" font-size="14" font-weight="700" fill="#1A1A1A">13,10</text><text x="420" y="203" text-anchor="end" font-size="14" fill="#333">Sul</text><rect x="428" y="184" width="133.4" height="28" fill="#BDBDBD"/><text x="567.4" y="203" font-size="14" font-weight="700" fill="#1A1A1A">12,40</text><text x="420" y="243" text-anchor="end" font-size="14" fill="#333">Leste</text><rect x="428" y="224" width="131.7" height="28" fill="#BDBDBD"/><text x="565.7" y="243" font-size="14" font-weight="700" fill="#1A1A1A">12,24</text>
+  <text x="356" y="288" font-size="13" fill="#6B6B6B">R$ por atendimento, jan. a ago. de 2026</text>
+  <text x="356" y="308" font-size="13" fill="#6B6B6B">Fonte: tabela base, custo maior que zero</text>
+  <text x="356" y="334" font-size="13" fill="#333">Média das demais:</text>
+  <text x="356" y="354" font-size="13" fill="#333">(13,10 + 12,40 + 12,24) ÷ 3 = 12,58</text>
+  <text x="356" y="374" font-size="13" fill="#333">17,66 ÷ 12,58 = 1,40</text>
+  <text x="356" y="400" font-size="13" fill="#6B6B6B" font-style="italic">valores ilustrativos</text>
+</svg></div>
+    <div class="col">
+      <div class="def"><span class="rot">Título-conclusão (action title)</span>
+        <p>Título escrito como frase afirmativa, com o número que o leitor deve levar. Substitui o nome da coluna no topo do gráfico (Knaflic, 2015).</p></div>
+      <div class="caixa teal"><span class="rot">O TESTE</span><p>Escreva o título antes de desenhar o gráfico. A frase define a comparação, e a comparação define o que fica em destaque e o que fica em cinza.</p></div>
+      <div class="caixa vinho"><span class="rot">QUANDO A FRASE NÃO SAI</span><p>Falta análise. Volte à consulta e decida qual comparação interessa ao leitor antes de escolher a forma do gráfico.</p></div>
+    </div>
+  </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 8.1 · Teoria</span>
-      <span class="pag">4 / 29</span>
+      <span class="pag">4 / 31</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="4">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 8.1 · TEORIA</span>
-    <h2>Cinco defeitos que aparecem em quase todo relatório</h2>
-    <p class="sub">Nenhum é questão de gosto. Todos distorcem a leitura.</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:5">
-    <li><span class="num">1</span>
-      <div><strong>Eixo que não começa no zero</strong><p>Em gráfico de barras, corta a base e transforma diferença de 3% em barra três vezes maior. Em gráfico de linha é aceitável, e em barra não é.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Gráfico de pizza com mais de três fatias</strong><p>O olho compara ângulo mal. Com sete fatias ninguém ordena corretamente. Barras horizontais resolvem o mesmo caso.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Terceira dimensão decorativa</strong><p>Profundidade em barra ou pizza distorce a área e não acrescenta informação. É o defeito mais fácil de eliminar.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Cor sem significado</strong><p>Uma cor diferente por categoria, sem que a cor signifique nada. O leitor procura o padrão e não existe padrão.</p></div>
-    </li>
-    <li><span class="num">5</span>
-      <div><strong>Falta a fonte e o período</strong><p>Sem eles o gráfico não é verificável, e quem discorda não tem como conferir. É o que separa gráfico de decoração.</p></div>
-    </li></ol></div>
+    <h2>Cinco defeitos frequentes em relatórios</h2>
+    <p class="sub">Os cinco distorcem a leitura do número, independentemente do gosto de quem desenha</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:4%">#</th><th style="width:25%">DEFEITO</th><th style="width:40%">O QUE ELE DISTORCE</th><th style="width:31%">CORREÇÃO</th></tr>
+      <tr><td><span class="badge">1</span></td><td><strong>Barra com eixo fora do zero</strong></td>
+          <td>A barra codifica o valor pelo comprimento. Cortar a base multiplica a diferença visual.</td>
+          <td>Base no zero. Em gráfico de linha, o corte é aceito se estiver declarado no eixo.</td></tr>
+      <tr><td><span class="badge">2</span></td><td><strong>Pizza com mais de três fatias</strong></td>
+          <td>Ângulo e área são lidos com menos precisão que comprimento. Com sete fatias, o leitor não consegue ordená-las.</td>
+          <td>Barras horizontais, ordenadas da maior para a menor.</td></tr>
+      <tr><td><span class="badge">3</span></td><td><strong>Terceira dimensão decorativa</strong></td>
+          <td>A perspectiva aumenta a área aparente das fatias e barras da frente.</td>
+          <td>Gráfico em duas dimensões.</td></tr>
+      <tr><td><span class="badge">4</span></td><td><strong>Cor sem significado</strong></td>
+          <td>Uma cor por categoria leva o leitor a procurar um padrão que não existe.</td>
+          <td>Cinza para o contexto e uma cor para o que se discute.</td></tr>
+      <tr><td><span class="badge">5</span></td><td><strong>Sem fonte e sem período</strong></td>
+          <td>Ninguém consegue conferir o número nem saber a que intervalo ele se refere.</td>
+          <td>Linha de fonte com tabela, filtro e período, no pé do gráfico.</td></tr>
+    </table>
+    <div class="def" style="margin-top:14px"><span class="rot">Proporção dados-tinta (data-ink ratio)</span>
+      <p>Parcela da tinta de um gráfico que representa dado, dividida pela tinta total (Tufte, 1983). Grade carregada, sombra, moldura e efeito 3D reduzem a proporção sem acrescentar informação.</p></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 8.1 · Teoria</span>
-      <span class="pag">5 / 29</span>
+      <span class="pag">5 / 31</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="5">
     <span class="barra"></span>
-    <span class="eyebrow">CICLO 8.1 · DEMONSTRAÇÃO</span>
-    <h2>Reconstruir um gráfico ruim em sala</h2>
-    <p class="sub">A turma escolhe o pior gráfico trazido e ele é refeito na projeção</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Escreva a pergunta que o gráfico deveria responder</strong><p>Antes de mexer em qualquer coisa. Se ninguém consegue formular a pergunta, esse é o diagnóstico.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Escreva o título como conclusão</strong><p>Uma frase afirmativa. Se os dados não sustentam nenhuma frase, o gráfico não tem o que mostrar.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Reduza ao que responde a pergunta</strong><p>Tire séries, categorias e enfeites que não entram na comparação. Quase sempre sobra menos de metade.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Destaque o que importa e apague o resto</strong><p>Uma cor para o que se discute, cinza para o contexto. Acrescente fonte e período.</p></div>
-    </li></ol></div>
+    <span class="eyebrow">CICLO 8.1 · TEORIA</span>
+    <h2>A mesma série com e sem eixo cortado</h2>
+    <p class="sub">Exemplo numérico do primeiro defeito do slide anterior</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.5fr;--dir:1fr">
+    <div class="col"><svg class="fig" viewBox="0 0 684 400" xmlns="http://www.w3.org/2000/svg"><text x="0" y="16" font-size="13" font-weight="700" fill="#6B6B6B">CUSTO ANUAL DE MANUTENÇÃO DA FROTA, R$ MIL · VALORES ILUSTRATIVOS</text><text x="40" y="56" font-size="15" font-weight="700" fill="#0a8f8a">Base no zero</text><text x="384" y="56" font-size="15" font-weight="700" fill="#8D0333">Eixo a partir de R$ 39 mil</text><line x1="70" y1="100" x2="70" y2="340" stroke="#999" stroke-width="1.5"/><line x1="70" y1="340" x2="300" y2="340" stroke="#999" stroke-width="1.5"/><text x="62" y="345" text-anchor="end" font-size="13" fill="#6B6B6B">0</text><text x="62" y="245" text-anchor="end" font-size="13" fill="#6B6B6B">20</text><text x="62" y="145" text-anchor="end" font-size="13" fill="#6B6B6B">40</text><rect x="100" y="140.0" width="64" height="200.0" fill="#0AB0AB"/><text x="132" y="132.0" text-anchor="middle" font-size="15" font-weight="700" fill="#1A1A1A">40</text><text x="132" y="362" text-anchor="middle" font-size="14" fill="#333">2025</text><rect x="200" y="120.0" width="64" height="220.0" fill="#0AB0AB"/><text x="232" y="112.0" text-anchor="middle" font-size="15" font-weight="700" fill="#1A1A1A">44</text><text x="232" y="362" text-anchor="middle" font-size="14" fill="#333">2026</text><line x1="414" y1="100" x2="414" y2="340" stroke="#999" stroke-width="1.5"/><line x1="414" y1="340" x2="644" y2="340" stroke="#999" stroke-width="1.5"/><text x="406" y="345" text-anchor="end" font-size="13" fill="#6B6B6B">39</text><text x="406" y="257" text-anchor="end" font-size="13" fill="#6B6B6B">41</text><text x="406" y="169" text-anchor="end" font-size="13" fill="#6B6B6B">43</text><rect x="444" y="296.0" width="64" height="44.0" fill="#8D0333"/><text x="476" y="288.0" text-anchor="middle" font-size="15" font-weight="700" fill="#1A1A1A">40</text><text x="476" y="362" text-anchor="middle" font-size="14" fill="#333">2025</text><rect x="544" y="120.0" width="64" height="220.0" fill="#8D0333"/><text x="576" y="112.0" text-anchor="middle" font-size="15" font-weight="700" fill="#1A1A1A">44</text><text x="576" y="362" text-anchor="middle" font-size="14" fill="#333">2026</text><text x="40" y="392" font-size="14" fill="#333">Barra de 2026 com 1,1 vez a de 2025</text><text x="384" y="392" font-size="14" fill="#8D0333" font-weight="700">Barra de 2026 com 5 vezes a de 2025</text></svg></div>
+    <div class="col">
+      <div class="def"><span class="rot">Fator de distorção (lie factor)</span>
+        <p>Efeito mostrado no gráfico dividido pelo efeito nos dados (Tufte, 1983). Valores entre 0,95 e 1,05 indicam desenho fiel.</p></div>
+      <div class="caixa vinho"><span class="rot">A CONTA DO DESENHO À DIREITA</span>
+        <p>Nos dados, (44 − 40) ÷ 40 = 10%. No desenho, as barras medem 1 e 5 unidades acima da base, (5 − 1) ÷ 1 = 400%. Fator de distorção 400 ÷ 10 = 40.</p></div>
+      <div class="caixa teal"><span class="rot">GRÁFICO DE LINHA</span>
+        <p>A linha codifica a variação pela inclinação, e o eixo pode começar acima do zero. O corte fica declarado no rótulo do eixo.</p></div>
+    </div>
+  </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 8.1 · Demonstração</span>
-      <span class="pag">6 / 29</span>
+      <span class="centro">Ciclo 8.1 · Teoria</span>
+      <span class="pag">6 / 31</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="6">
     <span class="barra"></span>
+    <span class="eyebrow">CICLO 8.1 · DEMONSTRAÇÃO</span>
+    <h2>Reconstruir um gráfico ruim em sala</h2>
+    <p class="sub">A turma escolhe o pior gráfico trazido e ele é refeito na projeção</p>
+    <div class="corpo"><div class="fluxo" style="--n:4">
+      <div class="etapa" style="--cor:#D4B277"><span class="n">1</span><h4>Pergunta</h4>
+        <p>Escrever a pergunta que o gráfico deveria responder. Se ninguém consegue, esse é o diagnóstico.</p></div>
+      <div class="etapa" style="--cor:#FEC84D"><span class="n">2</span><h4>Título-conclusão</h4>
+        <p>Uma frase afirmativa com o número. Sem frase sustentada pelos dados, o gráfico não tem o que mostrar.</p></div>
+      <div class="etapa" style="--cor:#0AB0AB"><span class="n">3</span><h4>Redução</h4>
+        <p>Retirar séries, categorias e enfeites que não entram na comparação.</p></div>
+      <div class="etapa" style="--cor:#8D0333"><span class="n">4</span><h4>Destaque</h4>
+        <p>Uma cor para o que se discute, cinza para o contexto, fonte e período no pé.</p></div>
+    </div>
+    <div class="prompt compacto" style="margin-top:18px"><span class="rot">SE O AGENTE REDESENHAR O GRÁFICO</span>
+      <p>"Refaça o gráfico com os valores de dados/[arquivo]. Grave o script em saidas/grafico-reconstruido.py e o resultado em saidas/grafico-reconstruido.html. Barras horizontais ordenadas, base no zero, [categoria] em vinho e as demais em cinza, título [frase], fonte e período no pé."</p></div>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto">
+      <div class="caixa vinho"><span class="rot">VALORES LIDOS DE UMA IMAGEM</span><p>Quando o gráfico original existe só como figura, os valores que o agente extrai dela são estimativas. Registre isso na entrega.</p></div>
+      <div class="caixa teal"><span class="rot">CONFERÊNCIA</span><p>Compare dois valores do gráfico novo com a tabela de origem, como no ciclo 6.4.</p></div>
+    </div></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 8.1 · Demonstração</span>
+      <span class="pag">7 / 31</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="7">
+    <span class="barra"></span>
     <span class="eyebrow">CICLO 8.1 · PRÁTICA</span>
     <h2>Sua vez: reconstrua o seu gráfico ruim</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Descreva o gráfico original</strong><p>Onde encontrou, o que ele mostra e quais dos cinco defeitos ele tem.</p></div>
+      <div><strong>Descreva o gráfico original</strong><p>Onde ele foi publicado, o que mostra e quais dos cinco defeitos apresenta.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Escreva a pergunta e o título-conclusão</strong><p>Nessa ordem. O título é a frase que o leitor deve levar.</p></div>
+      <div><strong>Escreva a pergunta e o título-conclusão</strong><p>Nessa ordem. O título é a frase que o leitor deve levar, com o número dentro.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Refaça com os dados que o original usava</strong><p>Se os dados não estiverem disponíveis, refaça o desenho e explique o que mudaria.</p></div>
+      <div><strong>Refaça com os dados que o original usava</strong><p>Se os dados não estiverem disponíveis, refaça o desenho com valores estimados e declare a estimativa.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Compare os dois lado a lado</strong><p>O que ficou visível na versão nova que não estava visível na antiga?</p></div>
+      <div><strong>Compare as duas versões</strong><p>Registre o que a versão nova mostra e a antiga escondia.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 8.1 · Prática</span>
-      <span class="pag">7 / 29</span>
+      <span class="pag">8 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="7">
+<section class="slide conteudo" data-i="8">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 8.1 · ENTREGA</span>
     <h2>Um gráfico ruim reconstruído</h2>
@@ -361,7 +495,7 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>O gráfico original, com a origem e os defeitos identificados.</li><li>A pergunta que ele deveria responder.</li><li>O título escrito como conclusão.</li><li>A versão reconstruída.</li><li>O que ficou visível depois e não estava visível antes.</li></ul>
+      <ul><li>O gráfico original, com a origem e os defeitos identificados.</li><li>A pergunta que ele deveria responder.</li><li>O título escrito como conclusão.</li><li>A versão reconstruída, com fonte e período.</li><li>O que ficou visível depois e não estava visível antes.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
@@ -370,191 +504,144 @@ body.mexeu #ajuda{opacity:1}
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Reconstrução que só troca cores não conta. O que se avalia é a redução ao que responde a pergunta.</p>
+        <p>Reconstrução que só troca cores não conta. A correção avalia a redução ao que responde à pergunta.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 8.1 · Entrega</span>
-      <span class="pag">8 / 29</span>
+      <span class="pag">9 / 31</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="8">
+<section class="slide divisor" data-i="9">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">8.2</span></div>
       <div class="dir">
         <h2>Forma, escala e cor</h2>
         <p class="etapas">Teoria · Prática · Entrega</p>
       </div>
-      <span class="pag">9 / 29</span>
+      <span class="pag">10 / 31</span>
     </section>
-<section class="slide conteudo" data-i="9">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 8.2 · TEORIA</span>
-    <h2>A forma vem da comparação, não do gosto</h2>
-    <p class="sub">Cinco comparações cobrem quase tudo que um relatório de gestão precisa</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:5">
-    <li><span class="num">1</span>
-      <div><strong>Comparar categorias entre si</strong><p>Barras horizontais, ordenadas da maior para a menor. Horizontal porque o nome da categoria cabe, e ordenada porque o olho lê ordem antes de ler número.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Acompanhar ao longo do tempo</strong><p>Linha. O eixo do tempo é sempre horizontal, e a linha mostra continuidade que a barra não mostra.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Ver a composição de um total</strong><p>Barras empilhadas quando são poucas partes, ou uma tabela quando o valor exato importa. Pizza só com duas ou três fatias.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Ver a distribuição de valores</strong><p>Histograma. É o que revela se a média representa o conjunto, e quase nunca aparece em relatório de gestão.</p></div>
-    </li>
-    <li><span class="num">5</span>
-      <div><strong>Relacionar duas medidas</strong><p>Dispersão. Custo contra volume, prazo contra valor. Mostra o padrão e, principalmente, quem foge dele.</p></div>
-    </li></ol></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 8.2 · Teoria</span>
-      <span class="pag">10 / 29</span>
-    </footer>
-  </section>
 <section class="slide conteudo" data-i="10">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 8.2 · TEORIA</span>
-    <h2>Escala: onde a distorção entra sem ser notada</h2>
-    <p class="sub">Três decisões que mudam a conclusão de quem lê</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">O ZERO</header>
-      <h3>Barra exige base no zero</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Por quê</span>
-          <p>A barra codifica o valor pelo comprimento. Um custo que sobe de R$ 40 mil para R$ 44 mil, alta de 10%, com o eixo cortado em R$ 39 mil aparece cinco vezes mais alto. Quem só olha o desenho aprova um salto que não existe.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">A exceção</span>
-          <p>Linha pode ter eixo truncado, porque ela codifica variação e não magnitude. Declare o corte no eixo.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">A UNIDADE</header>
-      <h3>Valor absoluto e taxa contam histórias diferentes</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O caso típico</span>
-          <p>A unidade Centro atende 4 mil pacientes por mês e custa R$ 800 mil; a Sul atende 800 e custa R$ 200 mil. Por atendimento, o Centro sai a R$ 200 e a Sul a R$ 250: a menor é a mais cara por paciente.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">A regra</span>
-          <p>Se as unidades comparadas têm tamanhos diferentes, o absoluto sozinho engana.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">O PERÍODO</header>
-      <h3>A janela escolhida define a tendência</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O caso típico</span>
-          <p>Doze meses mostram queda; vinte e quatro mostram estabilidade com sazonalidade.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">A regra</span>
-          <p>Escolha o período pela pergunta, não pelo resultado. E declare a janela no gráfico.</p>
-        </div>
-    </article></div></div>
+    <h2>A forma do gráfico vem da comparação</h2>
+    <p class="sub">Cinco comparações cobrem a maior parte dos relatórios de gestão</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:21%">COMPARAÇÃO</th><th style="width:9%">FORMA</th><th style="width:34%">REGRA</th><th style="width:36%">EXEMPLO NA GESTÃO</th></tr>
+      <tr><td><strong>Categorias entre si</strong></td><td><svg viewBox="0 0 76 40" width="76" height="40" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="3" width="66" height="9" fill="#8D0333"/><rect x="4" y="15" width="48" height="9" fill="#BDBDBD"/><rect x="4" y="27" width="34" height="9" fill="#BDBDBD"/></svg></td>
+          <td>Barras horizontais, ordenadas da maior para a menor. O nome da categoria cabe ao lado da barra.</td>
+          <td>Custo por atendimento das quatro unidades de uma secretaria.</td></tr>
+      <tr><td><strong>Ao longo do tempo</strong></td><td><svg viewBox="0 0 76 40" width="76" height="40" xmlns="http://www.w3.org/2000/svg"><polyline points="4,32 18,26 32,28 46,16 60,12 72,6" fill="none" stroke="#0AB0AB" stroke-width="3"/><line x1="4" y1="37" x2="72" y2="37" stroke="#999"/></svg></td>
+          <td>Linha, com o tempo no eixo horizontal e os períodos na ordem do calendário.</td>
+          <td>Atendimentos por mês, de janeiro a agosto de 2026.</td></tr>
+      <tr><td><strong>Composição de um total</strong></td><td><svg viewBox="0 0 76 40" width="76" height="40" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="6" width="34" height="12" fill="#8D0333"/><rect x="38" y="6" width="20" height="12" fill="#D4B277"/><rect x="58" y="6" width="12" height="12" fill="#0AB0AB"/><rect x="4" y="22" width="26" height="12" fill="#8D0333"/><rect x="30" y="22" width="28" height="12" fill="#D4B277"/><rect x="58" y="22" width="14" height="12" fill="#0AB0AB"/></svg></td>
+          <td>Barra empilhada com poucas partes, ou tabela quando o valor exato importa. Pizza só com duas ou três fatias.</td>
+          <td>Despesa de custeio por natureza: pessoal, contratos e material.</td></tr>
+      <tr><td><strong>Distribuição de valores</strong></td><td><svg viewBox="0 0 76 40" width="76" height="40" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="31" width="10" height="6" fill="#D4B277"/><rect x="15" y="21" width="10" height="16" fill="#D4B277"/><rect x="26" y="7" width="10" height="30" fill="#D4B277"/><rect x="37" y="13" width="10" height="24" fill="#D4B277"/><rect x="48" y="25" width="10" height="12" fill="#D4B277"/><rect x="59" y="31" width="10" height="6" fill="#D4B277"/></svg></td>
+          <td>Histograma, com faixas de largura igual. Mostra se a média representa o conjunto.</td>
+          <td>Tempo de espera dos atendimentos, em faixas de 10 minutos.</td></tr>
+      <tr><td><strong>Relação entre duas medidas</strong></td><td><svg viewBox="0 0 76 40" width="76" height="40" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="33" r="3" fill="#0AB0AB"/><circle cx="16" cy="30" r="3" fill="#0AB0AB"/><circle cx="24" cy="27" r="3" fill="#0AB0AB"/><circle cx="32" cy="25" r="3" fill="#0AB0AB"/><circle cx="40" cy="20" r="3" fill="#0AB0AB"/><circle cx="50" cy="17" r="3" fill="#0AB0AB"/><circle cx="60" cy="12" r="3" fill="#0AB0AB"/><circle cx="68" cy="8" r="3" fill="#0AB0AB"/><circle cx="30" cy="8" r="4" fill="#8D0333"/></svg></td>
+          <td>Dispersão, um ponto por caso. Mostra o padrão e os casos que fogem dele.</td>
+          <td>Custo mensal contra número de atendimentos, por unidade.</td></tr>
+    </table>
+    <div class="caixa dourado" style="margin-top:14px"><span class="rot">NO PAINEL DO CICLO 8.3</span>
+      <p>O script do encontro desenha só barras horizontais ordenadas pelo valor. Ele atende à primeira comparação. As outras formas ficam no relatório ou em saidas/.</p></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 8.2 · Teoria</span>
-      <span class="pag">11 / 29</span>
+      <span class="pag">11 / 31</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="11">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 8.2 · TEORIA</span>
-    <h2>Cor: três usos legítimos e um proibido</h2>
-    <p class="sub">Na identidade UFMA, vinho, dourado e verde-azulado bastam para tudo</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">DESTACAR</header>
-      <h3>Uma cor para o que se discute</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Como se faz</span>
-          <p>A categoria em questão em vinho, todas as outras em cinza. É o uso mais eficaz e o menos utilizado.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Quando usar</span>
-          <p>Sempre que houver uma comparação principal e o resto for contexto.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">ORDENAR</header>
-      <h3>Intensidade para grandeza</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Como se faz</span>
-          <p>Tons da mesma cor, do claro ao escuro, para valores do menor ao maior.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Quando usar</span>
-          <p>Mapas e tabelas de calor. Nunca para categorias sem ordem natural.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">SEPARAR</header>
-      <h3>Cores distintas para poucos grupos</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Como se faz</span>
-          <p>No máximo quatro. Além disso ninguém acompanha a legenda.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O proibido</span>
-          <p>Cor decorativa, que muda a cada categoria sem significar nada. Confunde e não informa.</p>
-        </div>
-    </article></div></div>
+    <h2>Por que a barra é lida melhor que a pizza</h2>
+    <p class="sub">Precisão da leitura por tipo de codificação visual</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.45fr;--dir:1fr">
+    <div class="col"><svg class="fig" viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gcm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0AB0AB"/><stop offset="1" stop-color="#8D0333"/></linearGradient><marker id="mcm" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8D0333"/></marker></defs><rect x="10" y="30" width="12" height="372" fill="url(#gcm)"/><text x="0" y="18" font-size="13" font-weight="700" fill="#0a8f8a">MAIS PRECISA</text><text x="0" y="418" font-size="13" font-weight="700" fill="#8D0333">MENOS PRECISA</text><circle cx="70" cy="50" r="15" fill="#8D0333"/><text x="70" y="55" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">1</text><text x="100" y="47" font-size="16" font-weight="700" fill="#1A1A1A">Posição em escala comum</text><text x="100" y="67" font-size="14" fill="#6B6B6B">gráfico de pontos, barras com a mesma base</text><g transform="translate(540,34)"><line x1="0" y1="30" x2="110" y2="30" stroke="#999"/><circle cx="15" cy="8" r="5" fill="#8D0333"/><circle cx="45" cy="20" r="5" fill="#8D0333"/><circle cx="75" cy="13" r="5" fill="#8D0333"/><circle cx="100" cy="24" r="5" fill="#8D0333"/></g><circle cx="70" cy="114" r="15" fill="#8D0333"/><text x="70" y="119" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">2</text><text x="100" y="111" font-size="16" font-weight="700" fill="#1A1A1A">Posição em escalas não alinhadas</text><text x="100" y="131" font-size="14" fill="#6B6B6B">painéis lado a lado</text><g transform="translate(540,98)"><line x1="0" y1="30" x2="48" y2="30" stroke="#999"/><line x1="62" y1="22" x2="110" y2="22" stroke="#999"/><circle cx="20" cy="12" r="5" fill="#8D0333"/><circle cx="86" cy="6" r="5" fill="#8D0333"/></g><circle cx="70" cy="178" r="15" fill="#8D0333"/><text x="70" y="183" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">3</text><text x="100" y="175" font-size="16" font-weight="700" fill="#1A1A1A">Comprimento, direção e ângulo</text><text x="100" y="195" font-size="14" fill="#6B6B6B">barras sem base comum, inclinação, pizza</text><g transform="translate(540,162)"><rect x="0" y="6" width="44" height="8" fill="#8D0333"/><rect x="0" y="20" width="30" height="8" fill="#8D0333"/><path d="M70,30 L110,30 M70,30 L104,8" stroke="#8D0333" stroke-width="3" fill="none"/></g><circle cx="70" cy="242" r="15" fill="#8D0333"/><text x="70" y="247" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">4</text><text x="100" y="239" font-size="16" font-weight="700" fill="#1A1A1A">Área</text><text x="100" y="259" font-size="14" fill="#6B6B6B">bolhas, mapa com círculos</text><g transform="translate(540,226)"><circle cx="18" cy="18" r="14" fill="#D4B277"/><circle cx="56" cy="22" r="9" fill="#D4B277"/><circle cx="88" cy="24" r="6" fill="#D4B277"/></g><circle cx="70" cy="306" r="15" fill="#8D0333"/><text x="70" y="311" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">5</text><text x="100" y="303" font-size="16" font-weight="700" fill="#1A1A1A">Volume e curvatura</text><text x="100" y="323" font-size="14" fill="#6B6B6B">barras e pizzas em 3D</text><g transform="translate(540,290)"><path d="M8,12 L36,12 L36,34 L8,34 Z" fill="#D4B277"/><path d="M8,12 L18,4 L46,4 L36,12 Z" fill="#E8D5B0"/><path d="M36,12 L46,4 L46,26 L36,34 Z" fill="#B89650"/><path d="M62,20 Q86,0 110,20" stroke="#D4B277" stroke-width="3" fill="none"/></g><circle cx="70" cy="370" r="15" fill="#8D0333"/><text x="70" y="375" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">6</text><text x="100" y="367" font-size="16" font-weight="700" fill="#1A1A1A">Sombreamento e saturação de cor</text><text x="100" y="387" font-size="14" fill="#6B6B6B">mapa de calor, mapa coroplético</text><g transform="translate(540,354)"><rect x="0" y="6" width="24" height="24" fill="#F2CDD8"/><rect x="28" y="6" width="24" height="24" fill="#D98AA2"/><rect x="56" y="6" width="24" height="24" fill="#B5406A"/><rect x="84" y="6" width="24" height="24" fill="#8D0333"/></g></svg></div>
+    <div class="col">
+      <div class="def"><span class="rot">Percepção gráfica (graphical perception)</span>
+        <p>Cleveland e McGill (1984) mediram o erro de leitores ao comparar valores codificados de formas diferentes. A ordem ao lado resume o resultado, da codificação lida com menor erro para a de maior erro.</p></div>
+      <div class="caixa teal"><span class="rot">CONSEQUÊNCIA PARA O RELATÓRIO</span>
+        <p>Barras e pontos usam posição e comprimento, os níveis 1 a 3. A pizza depende de ângulo e área, níveis 3 e 4. O efeito 3D leva a leitura ao nível 5.</p></div>
+      <div class="caixa dourado"><span class="rot">USO DA COR</span>
+        <p>Saturação fica no último nível. Ela serve para ordenar ou realçar quando a posição já está ocupada por outra variável.</p></div>
+    </div>
+  </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 8.2 · Teoria</span>
-      <span class="pag">12 / 29</span>
+      <span class="pag">12 / 31</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="12">
     <span class="barra"></span>
+    <span class="eyebrow">CICLO 8.2 · TEORIA</span>
+    <h2>Três decisões de escala que mudam a conclusão</h2>
+    <p class="sub">Base do eixo, unidade de medida e janela de tempo</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.35fr;--dir:1fr">
+    <div class="col">
+      <span class="trilha"><span class="rot">A UNIDADE · O MESMO DADO EM VALOR ABSOLUTO E EM TAXA</span></span><svg class="fig" viewBox="0 0 640 330" xmlns="http://www.w3.org/2000/svg"><text x="0" y="16" font-size="13" font-weight="700" fill="#6B6B6B">CUSTO MENSAL TOTAL, R$ MIL</text><text x="96" y="50" text-anchor="end" font-size="15" fill="#333">Centro</text><rect x="104" y="30" width="420.0" height="30" fill="#BDBDBD"/><text x="532.0" y="50" font-size="15" font-weight="700" fill="#1A1A1A">800</text><text x="96" y="88" text-anchor="end" font-size="15" fill="#333">Sul</text><rect x="104" y="68" width="105.0" height="30" fill="#BDBDBD"/><text x="217.0" y="88" font-size="15" font-weight="700" fill="#1A1A1A">200</text><line x1="104" y1="24" x2="104" y2="104" stroke="#999" stroke-width="1.5"/><text x="0" y="146" font-size="13" font-weight="700" fill="#6B6B6B">CUSTO POR ATENDIMENTO, R$</text><text x="96" y="180" text-anchor="end" font-size="15" fill="#333">Centro</text><rect x="104" y="160" width="336.0" height="30" fill="#BDBDBD"/><text x="448.0" y="180" font-size="15" font-weight="700" fill="#1A1A1A">200</text><text x="96" y="218" text-anchor="end" font-size="15" fill="#333">Sul</text><rect x="104" y="198" width="420.0" height="30" fill="#8D0333"/><text x="532.0" y="218" font-size="15" font-weight="700" fill="#1A1A1A">250</text><line x1="104" y1="154" x2="104" y2="234" stroke="#999" stroke-width="1.5"/><text x="0" y="272" font-size="14" fill="#333">Centro: 800.000 ÷ 4.000 atendimentos = R$ 200</text><text x="0" y="294" font-size="14" fill="#333">Sul: 200.000 ÷ 800 atendimentos = R$ 250</text><text x="0" y="320" font-size="13" fill="#6B6B6B" font-style="italic">valores ilustrativos, um mês</text></svg></div>
+    <div class="col">
+      <div class="caixa vinho"><span class="rot">O ZERO</span><p>Barra exige base no zero, como no exemplo do eixo cortado do ciclo 8.1. Linha admite corte declarado.</p></div>
+      <div class="caixa teal"><span class="rot">A UNIDADE</span><p>O Centro gasta quatro vezes mais e atende cinco vezes mais. Por atendimento, a unidade menor é a mais cara. Unidades de tamanhos diferentes pedem taxa.</p></div>
+      <div class="caixa dourado"><span class="rot">O PERÍODO</span><p>Doze meses de uma série sazonal podem mostrar queda, e vinte e quatro meses mostrarem estabilidade. A janela sai da pergunta e fica escrita no gráfico.</p></div>
+    </div>
+  </div></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 8.2 · Teoria</span>
+      <span class="pag">13 / 31</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="13">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 8.2 · TEORIA</span>
+    <h2>Três usos da cor e uma restrição de acessibilidade</h2>
+    <p class="sub">Na identidade UFMA, vinho, dourado e verde-azulado cobrem os três usos</p>
+    <div class="corpo"><svg class="fig" viewBox="0 0 1168 160" xmlns="http://www.w3.org/2000/svg"><text x="20" y="20" font-size="14" font-weight="700" fill="#8D0333" letter-spacing="1">REALÇAR</text><text x="420" y="20" font-size="14" font-weight="700" fill="#8D0333" letter-spacing="1">ORDENAR</text><text x="830" y="20" font-size="14" font-weight="700" fill="#8D0333" letter-spacing="1">SEPARAR</text><rect x="20" y="36" width="250" height="16" fill="#BDBDBD"/><rect x="20" y="56" width="220" height="16" fill="#8D0333"/><rect x="20" y="76" width="190" height="16" fill="#BDBDBD"/><rect x="20" y="96" width="160" height="16" fill="#BDBDBD"/><rect x="20" y="116" width="130" height="16" fill="#BDBDBD"/><rect x="420" y="40" width="62" height="56" fill="#F2CDD8"/><rect x="486" y="40" width="62" height="56" fill="#E3A3B7"/><rect x="552" y="40" width="62" height="56" fill="#C9667F"/><rect x="618" y="40" width="62" height="56" fill="#AB2F57"/><rect x="684" y="40" width="62" height="56" fill="#8D0333"/><line x1="830" y1="44" x2="900" y2="44" stroke="#8D0333" stroke-width="5"/><text x="912" y="49" font-size="15" fill="#333">Grupo A</text><line x1="830" y1="68" x2="900" y2="68" stroke="#0AB0AB" stroke-width="5"/><text x="912" y="73" font-size="15" fill="#333">Grupo B</text><line x1="830" y1="92" x2="900" y2="92" stroke="#D4B277" stroke-width="5"/><text x="912" y="97" font-size="15" fill="#333">Grupo C</text><line x1="830" y1="116" x2="900" y2="116" stroke="#6B6B6B" stroke-width="5"/><text x="912" y="121" font-size="15" fill="#333">Grupo D</text><text x="20" y="156" font-size="14" fill="#333">Uma cor para o que se discute, cinza no resto</text><text x="420" y="118" font-size="14" fill="#333">menor</text><text x="744" y="118" text-anchor="end" font-size="14" fill="#333">maior</text><text x="420" y="156" font-size="14" fill="#333">Tons de uma cor para grandeza ordenada</text><text x="830" y="156" font-size="14" fill="#333">No máximo quatro grupos</text></svg>
+    <div class="duascol" style="--esq:1fr;--dir:1.25fr;height:auto;margin-top:14px">
+      <div class="col">
+        <div class="caixa vinho"><span class="rot">USO RECUSADO</span><p>Cor decorativa, diferente a cada categoria sem significar nada. Tons ordenados também não servem para categorias sem ordem natural.</p></div>
+        <div class="caixa teal"><span class="rot">DEFICIÊNCIA DE VISÃO DE CORES</span><p>Cerca de 8% dos homens e 0,4% das mulheres de origem europeia têm deficiência para vermelho e verde (Birch, 2012).</p></div>
+      </div>
+      <div class="def"><span class="rot">WCAG 2.2, critérios 1.4.1 e 1.4.11</span>
+        <p>A cor não pode ser o único meio de transmitir a informação. As partes do gráfico necessárias à leitura precisam de contraste de 3:1 com o fundo, salvo se o valor estiver escrito em texto. Sobre branco, o vinho da UFMA tem 9,6:1, o verde-azulado 2,7:1, o dourado 2,0:1 e o amarelo 1,5:1. Barras nas três últimas cores precisam do valor escrito ao lado.</p></div>
+    </div>
+    <p class="fonte-nota">W3C, WCAG 2.2, w3.org/WAI/WCAG22/Understanding/non-text-contrast, consultado em 2 nov. 2026. Contraste calculado pela fórmula de luminância relativa da WCAG.</p></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 8.2 · Teoria</span>
+      <span class="pag">14 / 31</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="14">
+    <span class="barra"></span>
     <span class="eyebrow">CICLO 8.2 · PRÁTICA</span>
     <h2>Sua vez: escolha a forma dos seus indicadores</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Retome os cinco resultados do encontro 8</strong><p>Para cada um, escreva qual das cinco comparações ele representa.</p></div>
+      <div><strong>Retome as cinco consultas do encontro 8</strong><p>Para cada resultado, escreva qual das cinco comparações ele representa.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Escolha a forma correspondente</strong><p>E justifique em uma linha. Se dois indicadores pedem a mesma forma, tudo bem.</p></div>
+      <div><strong>Escolha a forma correspondente</strong><p>Justifique em uma linha. Dois indicadores podem pedir a mesma forma.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Decida a escala de cada um</strong><p>Zero na base, valor absoluto ou taxa, e qual período.</p></div>
+      <div><strong>Decida a escala de cada um</strong><p>Base no zero, valor absoluto ou taxa, e a janela de tempo.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Escreva o título-conclusão de cada um</strong><p>A frase que o leitor deve levar. Se você não conseguir escrever, o indicador não está pronto.</p></div>
+      <div><strong>Escreva o título-conclusão de cada um</strong><p>A frase que o leitor deve levar, com o número. Indicador sem frase ainda não está pronto.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 8.2 · Prática</span>
-      <span class="pag">13 / 29</span>
+      <span class="pag">15 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="13">
+<section class="slide conteudo" data-i="15">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 8.2 · ENTREGA</span>
     <h2>Escolha de forma justificada</h2>
@@ -571,156 +658,135 @@ body.mexeu #ajuda{opacity:1}
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Indicador sem título-conclusão não entra no painel. Se a frase não sai, a análise não está pronta.</p>
+        <p>Indicador sem título-conclusão não entra no painel. O script do ciclo 8.3 recusa título com menos de 25 caracteres.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 8.2 · Entrega</span>
-      <span class="pag">14 / 29</span>
+      <span class="pag">16 / 31</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="14">
+<section class="slide divisor" data-i="16">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">8.3</span></div>
       <div class="dir">
         <h2>Do dado ao painel que abre no navegador</h2>
         <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">15 / 29</span>
+      <span class="pag">17 / 31</span>
     </section>
-<section class="slide conteudo" data-i="15">
+<section class="slide conteudo" data-i="17">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 8.3 · TEORIA</span>
     <h2>O que um painel precisa ter</h2>
-    <p class="sub">Quatro elementos, e o quarto é o que quase todo painel esquece</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>O indicador com a comparação ao lado</strong><p>Um número sozinho não informa. Ao lado dele precisa estar a meta, o período anterior ou a média das outras unidades.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>O gráfico que sustenta o indicador</strong><p>Se o número chama atenção, o gráfico explica por quê. Um gráfico por indicador, e não uma galeria.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>A data de atualização, visível</strong><p>Quem abre precisa saber se está olhando o mês passado ou o ano passado. Sem isso, o painel envelhece em silêncio.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>A fonte de cada número, no próprio painel</strong><p>De que tabela saiu e com que filtro. É o mapa de dados do encontro 6 chegando à tela de quem decide.</p></div>
-    </li></ol></div>
+    <p class="sub">Estrutura do painel gerado pelo script do encontro. Valores ilustrativos</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.3fr;--dir:1fr">
+    <div class="col"><svg class="fig" viewBox="0 0 640 444" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="640" height="444" fill="#f2f2f2"/><rect x="0" y="0" width="640" height="6" fill="#D4B277"/><rect x="0" y="6" width="640" height="56" fill="#8D0333"/><text x="14" y="32" font-size="17" font-weight="700" fill="#fff">Painel do projeto</text><text x="14" y="52" font-size="11.5" fill="#f1d9e2">Atualizado em 02/11/2026 às 14:05</text><circle cx="232" cy="48" r="12" fill="#1A1A1A"/><text x="232" y="53" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">3</text><rect x="12" y="74" width="196" height="92" fill="#fff" stroke="#e0e0e0"/><rect x="12" y="74" width="196" height="4" fill="#8D0333"/><text x="22" y="96" font-size="10.5" font-weight="700" fill="#8D0333" letter-spacing=".5">CUSTO POR ATENDIMENTO</text><text x="22" y="124" font-size="24" font-weight="700" fill="#1A1A1A">17,66 <tspan font-size="11" font-weight="400" fill="#666">R$</tspan></text><text x="22" y="143" font-size="11" fill="#555">contra média das demais</text><text x="22" y="159" font-size="11" fill="#555"><tspan font-weight="700" fill="#1A1A1A">12,58</tspan>  <tspan font-weight="700" fill="#8D0333">+40,4%</tspan></text><rect x="222" y="74" width="196" height="92" fill="#fff" stroke="#e0e0e0"/><rect x="222" y="74" width="196" height="4" fill="#8D0333"/><text x="232" y="96" font-size="10.5" font-weight="700" fill="#8D0333" letter-spacing=".5">TEMPO MÉDIO DE ESPERA</text><text x="232" y="124" font-size="24" font-weight="700" fill="#1A1A1A">38 <tspan font-size="11" font-weight="400" fill="#666">min</tspan></text><text x="232" y="143" font-size="11" fill="#555">contra meta</text><text x="232" y="159" font-size="11" fill="#555"><tspan font-weight="700" fill="#1A1A1A">30</tspan>  <tspan font-weight="700" fill="#8D0333">+26,7%</tspan></text><rect x="432" y="74" width="196" height="92" fill="#fff" stroke="#e0e0e0"/><rect x="432" y="74" width="196" height="4" fill="#8D0333"/><text x="442" y="96" font-size="10.5" font-weight="700" fill="#8D0333" letter-spacing=".5">ATENDIMENTOS CONCLUÍDOS</text><text x="442" y="124" font-size="24" font-weight="700" fill="#1A1A1A">3.011 <tspan font-size="11" font-weight="400" fill="#666"></tspan></text><text x="442" y="143" font-size="11" fill="#555">contra jan. a ago. de 2025</text><text x="442" y="159" font-size="11" fill="#555"><tspan font-weight="700" fill="#1A1A1A">2.870</tspan>  <tspan font-weight="700" fill="#8D0333">+4,9%</tspan></text><circle cx="616" cy="74" r="12" fill="#1A1A1A"/><text x="616" y="79" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">1</text><rect x="12" y="178" width="616" height="134" fill="#fff" stroke="#e0e0e0"/><text x="24" y="200" font-size="12.5" font-weight="700" fill="#8D0333">custo por atendimento por unidade</text><text x="110" y="226" text-anchor="end" font-size="11" fill="#333">Centro</text><rect x="118" y="214" width="330.0" height="16" fill="#8D0333"/><text x="453.0" y="226" font-size="11" font-weight="700" fill="#1A1A1A">17,66</text><text x="110" y="248" text-anchor="end" font-size="11" fill="#333">Norte</text><rect x="118" y="236" width="244.8" height="16" fill="#BDBDBD"/><text x="367.8" y="248" font-size="11" font-weight="700" fill="#1A1A1A">13,10</text><text x="110" y="270" text-anchor="end" font-size="11" fill="#333">Sul</text><rect x="118" y="258" width="231.7" height="16" fill="#BDBDBD"/><text x="354.7" y="270" font-size="11" font-weight="700" fill="#1A1A1A">12,40</text><text x="110" y="292" text-anchor="end" font-size="11" fill="#333">Leste</text><rect x="118" y="280" width="228.7" height="16" fill="#BDBDBD"/><text x="351.7" y="292" font-size="11" font-weight="700" fill="#1A1A1A">12,24</text><circle cx="616" cy="178" r="12" fill="#1A1A1A"/><text x="616" y="183" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">2</text><rect x="12" y="322" width="616" height="80" fill="#fff" stroke="#e0e0e0"/><text x="24" y="342" font-size="12.5" font-weight="700" fill="#8D0333">De onde vem cada número</text><rect x="24" y="350" width="592" height="18" fill="#8D0333"/><text x="30" y="363" font-size="10.5" font-weight="700" fill="#fff">Indicador</text><text x="170" y="363" font-size="10.5" font-weight="700" fill="#fff">Período</text><text x="290" y="363" font-size="10.5" font-weight="700" fill="#fff">Fonte e filtro</text><text x="520" y="363" font-size="10.5" font-weight="700" fill="#fff">Consulta</text><text x="30" y="384" font-size="10.5" fill="#333">Custo por atendimento</text><text x="170" y="384" font-size="10.5" fill="#333">jan. a ago. 2026</text><text x="290" y="384" font-size="10.5" fill="#333">tabela base, custo maior que zero</text><text x="520" y="384" font-size="10.5" fill="#333">consulta-1.sql</text><rect x="30" y="391" width="560" height="4" fill="#E6E6E6"/><circle cx="616" cy="322" r="12" fill="#1A1A1A"/><text x="616" y="327" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">4</text><rect x="12" y="410" width="616" height="28" fill="#faf7f8" stroke="#D4B277"/><text x="22" y="428" font-size="11" fill="#333"><tspan font-weight="700">Destinatário deste painel:</tspan> ________  <tspan font-weight="700">Decisão que ele sustenta:</tspan> ________</text><circle cx="616" cy="424" r="12" fill="#1A1A1A"/><text x="616" y="429" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">5</text></svg></div>
+    <div class="col">
+      <ul class="legenda">
+        <li><span class="badge">1</span><span><b>Indicador com a comparação ao lado.</b> Meta, período anterior ou média das demais unidades. O script calcula a variação.</span></li>
+        <li><span class="badge">2</span><span><b>Gráfico que sustenta o indicador.</b> Série exportada por uma consulta do encontro 8.</span></li>
+        <li><span class="badge">3</span><span><b>Data de atualização.</b> Gravada pelo script a cada geração.</span></li>
+        <li><span class="badge">4</span><span><b>Fonte de cada número.</b> Tabela, filtro, período e arquivo .sql. Corresponde ao mapa de dados do encontro 6.</span></li>
+        <li><span class="badge">5</span><span><b>Destinatário e decisão.</b> Preenchidos no ciclo 8.4.</span></li>
+      </ul>
+      <div class="def"><span class="rot">Painel (dashboard)</span>
+        <p>Exibição visual das informações mais importantes para atingir um ou mais objetivos, reunidas em uma única tela para acompanhamento rápido (Few, 2006).</p></div>
+    </div>
+  </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 8.3 · Teoria</span>
-      <span class="pag">16 / 29</span>
-    </footer>
-  </section>
-<section class="slide conteudo" data-i="16">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 8.3 · TEORIA</span>
-    <h2>Painel em HTML: por que este formato</h2>
-    <p class="sub">A escolha tem consequência prática na organização</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">ABRE EM QUALQUER LUGAR</header>
-      <h3>Um arquivo, dois cliques</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que significa</span>
-          <p>Não exige licença, instalação nem conta. Vai por e-mail como anexo único e abre no navegador de qualquer máquina.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">A comparação</span>
-          <p>Ferramenta de painel comercial exige licença por usuário e prende o dado no fornecedor.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">É GERADO, NÃO DESENHADO</header>
-      <h3>O mesmo comando refaz com dado novo</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que significa</span>
-          <p>Atualizar é rodar de novo, e não refazer no editor. O painel deixa de ser trabalho recorrente.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O ganho</span>
-          <p>É a automação do encontro 11 aplicada ao produto mais visível do seu trabalho.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">É AUDITÁVEL</header>
-      <h3>O dado e a fonte vão junto</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que significa</span>
-          <p>O arquivo carrega os números, a data e a origem. Quem discorda consegue conferir.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O limite</span>
-          <p>Não atualiza sozinho e não tem controle de acesso. Para dado sensível, isso é impeditivo.</p>
-        </div>
-    </article></div></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 8.3 · Teoria</span>
-      <span class="pag">17 / 29</span>
-    </footer>
-  </section>
-<section class="slide conteudo" data-i="17">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 8.3 · DEMONSTRAÇÃO</span>
-    <h2>O script monta o painel a partir de um formulário</h2>
-    <p class="sub">Você preenche indicadores e série; o script gera a página</p>
-    <div class="corpo"><div class="prompt">
-    <span class="rot">A SEQUÊNCIA</span>
-    <p>(1) "execute atividade_modulo8.py com o comando iniciar" — cria entregas/modulo8-indicadores.csv com as colunas do painel.\n\n(2) Você preenche: indicador, o que mede, valor, unidade, período, fonte, comparação e situação.\n\n(3) "execute atividade_modulo8.py com o comando painel saidas/serie.csv" — gera entregas/painel.html, com os cartões, o gráfico de barras e a tabela de fontes.</p>
-  </div>
-<ol class="steps cols-3" style="--linhas:1">
-    <li><span class="num">1</span>
-      <div><strong>O painel é autocontido</strong><p>Sem internet, sem biblioteca externa. Abre em qualquer navegador.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>A cor segue a identidade UFMA</strong><p>Vinho para o que se discute, cinza para o contexto.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>A fonte de cada número aparece</strong><p>O script recusa indicador sem fonte declarada.</p></div>
-    </li></ol></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 8.3 · Demonstração</span>
-      <span class="pag">18 / 29</span>
+      <span class="pag">18 / 31</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="18">
     <span class="barra"></span>
+    <span class="eyebrow">CICLO 8.3 · TEORIA</span>
+    <h2>Painel em HTML e as ferramentas de mercado</h2>
+    <p class="sub">Custo, local do dado e controle de acesso definem a escolha na organização</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:17%"></th><th style="width:27%">HTML GERADO PELO SCRIPT</th><th style="width:29%">POWER BI</th><th style="width:27%">DATA STUDIO (GOOGLE)</th></tr>
+      <tr><td><strong>Custo</strong></td><td>Nenhum para criar e compartilhar. O arquivo vai por e-mail ou pasta.</td><td>Desktop gratuito. Compartilhar exige licença Pro, US$ 14 por usuário por mês no plano anual, ou capacidade Premium ou Fabric.</td><td>Sem custo, com compartilhamento por link ou conta Google. Versão Pro paga.</td></tr>
+      <tr><td><strong>Onde fica o dado</strong></td><td>Dentro do arquivo.</td><td>No serviço de nuvem da Microsoft, depois da publicação.</td><td>Na fonte conectada, como planilha ou BigQuery.</td></tr>
+      <tr><td><strong>Atualização</strong></td><td>Rodar o comando de novo.</td><td>Agendada no serviço.</td><td>Leitura da fonte conectada.</td></tr>
+      <tr><td><strong>Controle de acesso</strong></td><td>Nenhum. Quem tem o arquivo vê tudo.</td><td>Por usuário, com restrição por linha.</td><td>Permissões da conta Google.</td></tr>
+      <tr><td><strong>Assistente de IA</strong></td><td>O agente da disciplina escreve e roda o script.</td><td class="lac">Copilot exige capacidade Fabric F2 ou Premium P1. Licença Pro sozinha não basta.</td><td>Gemini, conforme a documentação do produto.</td></tr>
+    </table>
+    <div class="caixa vinho" style="margin-top:12px"><span class="rot">COPILOT E CONFABULAÇÃO</span>
+      <p>Quando a pergunta não se refere aos dados do modelo semântico, o Copilot responde com o conhecimento geral do modelo de linguagem (Microsoft Learn). A resposta é conferida contra a consulta.</p></div>
+    <p class="fonte-nota">Consultados em 2 nov. 2026: microsoft.com/power-platform/products/power-bi/pricing, learn.microsoft.com/power-bi/create-reports/copilot-introduction (atualizada em 24 ago. 2026), docs.cloud.google.com/data-studio/welcome. O Looker Studio voltou ao nome Data Studio em abril de 2026.</p></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 8.3 · Teoria</span>
+      <span class="pag">19 / 31</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="19">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 8.3 · DEMONSTRAÇÃO</span>
+    <h2>O script monta o painel a partir de um formulário</h2>
+    <p class="sub">Formulário entregas/modulo8-indicadores.csv e série exportada pela consulta. Saída ilustrativa</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.3fr;--dir:1fr">
+    <div class="col">
+      <table class="tab apertada">
+        <tr><th style="width:31%">COLUNA</th><th style="width:33%">CONTEÚDO</th><th style="width:36%">REGRA DO SCRIPT</th></tr>
+        <tr><td class="mono">indicador</td><td>Nome curto</td><td>Linha sem nome é ignorada</td></tr>
+        <tr><td class="mono">titulo_conclusao</td><td>Frase com o número</td><td class="lac">Recusa se tiver menos de 25 caracteres</td></tr>
+        <tr><td class="mono">valor</td><td>Número apurado</td><td class="lac">Recusa se não for número</td></tr>
+        <tr><td class="mono">unidade</td><td>R$, %, dias</td><td class="lac">Recusa se vazio</td></tr>
+        <tr><td class="mono">periodo</td><td>Intervalo coberto</td><td class="lac">Recusa se vazio</td></tr>
+        <tr><td class="mono">comparacao</td><td>Meta, período anterior</td><td class="lac">Recusa se vazio</td></tr>
+        <tr><td class="mono">valor_comparacao</td><td>Número da comparação</td><td class="lac">Recusa se não for número</td></tr>
+        <tr><td class="mono">fonte</td><td>Tabela e filtro</td><td class="lac">Recusa se vazio</td></tr>
+        <tr><td class="mono">consulta</td><td>Arquivo .sql</td><td>Aviso no conferir se faltar em saidas/</td></tr>
+      </table>
+      <p class="rodape-corpo" style="margin-top:6px">Mínimo de três indicadores. A linha de exemplo do formulário precisa ser apagada.</p>
+    </div>
+    <div class="col">
+      <div class="prompt compacto" style="margin-bottom:0"><span class="rot">EXECUÇÃO DO SCRIPT DA ATIVIDADE</span>
+        <p><span class="cmd">"execute atividade_modulo8.py com o comando iniciar"</span></p>
+        <p><span class="cmd">"execute atividade_modulo8.py com o comando painel saidas/consulta-3.csv"</span></p></div>
+      <pre class="terminal">Indicadores no painel: 3
+Categorias no grafico: 4
+
+<span class="hl">Painel gerado em: entregas/painel.html</span></pre>
+      <div class="caixa dourado"><span class="rot">O GRÁFICO DO PAINEL</span><p>Usa as duas primeiras colunas do CSV como categoria e valor, ordena as barras pelo valor e pinta a maior em vinho. Série mensal perde a ordem do calendário.</p></div>
+    </div>
+  </div></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 8.3 · Demonstração</span>
+      <span class="pag">20 / 31</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="20">
+    <span class="barra"></span>
     <span class="eyebrow">CICLO 8.3 · PRÁTICA</span>
     <h2>Sua vez: monte o primeiro painel</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Preencha os três indicadores escolhidos</strong><p>Com valor, unidade, período, fonte e comparação. A comparação é obrigatória.</p></div>
+      <div><strong>Crie o formulário e preencha três indicadores</strong><p>"execute atividade_modulo8.py com o comando iniciar". Apague a linha de exemplo. Copie valor e valor_comparacao do CSV da consulta.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Exporte a série do gráfico</strong><p>Do banco do encontro 8, com o comando sql. Duas colunas: categoria e valor.</p></div>
+      <div><strong>Exporte a série do gráfico</strong><p>"execute atividade_modulo7.py com o comando sql SELECT categoria, valor ..." grava saidas/consulta-N.csv. Use comparação entre categorias.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Gere o painel e abra no navegador</strong><p>Confira: os números batem com as consultas? A data está lá? As fontes aparecem?</p></div>
+      <div><strong>Gere o painel e abra no navegador</strong><p>"execute atividade_modulo8.py com o comando painel saidas/consulta-N.csv". Confira cada número do painel contra o CSV da consulta.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Ajuste os títulos-conclusão</strong><p>Cada cartão leva a frase que o leitor deve levar, e não o nome da coluna.</p></div>
+      <div><strong>Ajuste os títulos-conclusão</strong><p>O script pinta aumento em vinho e queda em verde-azulado, sem saber se aumentar é bom. O título diz ao leitor se a variação é favorável.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 8.3 · Prática</span>
-      <span class="pag">19 / 29</span>
+      <span class="pag">21 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="19">
+<section class="slide conteudo" data-i="21">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 8.3 · ENTREGA</span>
     <h2>Painel com três indicadores</h2>
@@ -728,107 +794,124 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>O arquivo painel.html, abrindo corretamente.</li><li>Três indicadores com valor, comparação, período e fonte.</li><li>Um gráfico com a forma escolhida no ciclo 8.2.</li><li>A conferência dos três números contra as consultas do encontro 8.</li></ul>
+      <ul><li>O arquivo painel.html, abrindo no navegador.</li><li>Três indicadores ou mais, com valor, comparação, período e fonte.</li><li>O gráfico de barras gerado a partir de uma consulta do encontro 8.</li><li>A conferência dos números do painel contra as consultas.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>entregas/painel.html\nentregas/modulo8-indicadores.csv</p>
+        <p><span class="mono" style="font-size:15px">entregas/painel.html<br>entregas/modulo8-indicadores.csv</span></p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Indicador sem comparação ao lado é número solto: o script recusa. Número que não bate com a consulta zera o item.</p>
+        <p>O script recusa indicador sem comparação, unidade, período ou fonte. Número do painel diferente da consulta citada zera o item.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 8.3 · Entrega</span>
-      <span class="pag">20 / 29</span>
+      <span class="pag">22 / 31</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="20">
+<section class="slide divisor" data-i="22">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">8.4</span></div>
       <div class="dir">
         <h2>O painel do projeto e a entrega B1</h2>
         <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">21 / 29</span>
+      <span class="pag">23 / 31</span>
     </section>
-<section class="slide conteudo" data-i="21">
+<section class="slide conteudo" data-i="23">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 8.4 · TEORIA</span>
     <h2>De quem é o painel</h2>
-    <p class="sub">A pergunta que decide o que entra e o que sai</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Um painel tem um destinatário</strong><p>Dirigente, coordenador de área ou equipe de operação. Cada um decide coisas diferentes e precisa de números diferentes.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>O que o destinatário não pode mudar, não entra</strong><p>Indicador sobre o que está fora do alcance de quem olha gera frustração, e não decisão. É a regra de corte mais útil, e a que mais reduz painel inchado.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Três a cinco indicadores bastam</strong><p>Painel com quinze números não é lido. O que sobra vira anexo, e o anexo pode ter tudo.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>A periodicidade define o formato</strong><p>Painel olhado toda semana precisa ser rápido de atualizar. Se atualizar dá trabalho, ele para de ser atualizado no segundo mês.</p></div>
-    </li></ol></div>
+    <p class="sub">Cada destinatário decide coisas diferentes e precisa de números diferentes. Exemplo de uma secretaria fictícia</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:17%">DESTINATÁRIO</th><th style="width:24%">DECISÃO QUE TOMA</th><th style="width:13%">PERIODICIDADE</th><th style="width:23%">INDICADOR QUE ENTRA</th><th style="width:23%">INDICADOR QUE SAI</th></tr>
+      <tr><td><strong>Secretário municipal</strong></td><td>Manter, concentrar ou abrir unidades de atendimento</td><td>Trimestral</td>
+          <td>Custo por atendimento, por unidade</td><td class="lac">Fila de um atendente específico</td></tr>
+      <tr><td><strong>Coordenador de unidade</strong></td><td>Escala de pessoal e horário de funcionamento</td><td>Mensal</td>
+          <td>Atendimentos por faixa de horário</td><td class="lac">Orçamento anual da secretaria</td></tr>
+      <tr><td><strong>Equipe de atendimento</strong></td><td>Distribuição do trabalho no dia</td><td>Diária</td>
+          <td>Senhas em espera e tempo médio de espera</td><td class="lac">Custo por atendimento</td></tr>
+    </table>
+    <div class="fluxo" style="--n:3;margin-top:18px">
+      <div class="etapa" style="--cor:#8D0333"><span class="n">1</span><h4>Regra de corte</h4>
+        <p>Indicador sobre o que o destinatário não pode mudar sai do painel. As células em destaque mostram um exemplo por linha.</p></div>
+      <div class="etapa" style="--cor:#0AB0AB"><span class="n">2</span><h4>Três a cinco indicadores</h4>
+        <p>O que não cabe em uma tela vai para um anexo, que pode ter tudo.</p></div>
+      <div class="etapa" style="--cor:#D4B277"><span class="n">3</span><h4>Periodicidade</h4>
+        <p>Painel lido toda semana precisa de atualização rápida. Atualização trabalhosa deixa de ser feita.</p></div>
+    </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 8.4 · Teoria</span>
-      <span class="pag">22 / 29</span>
+      <span class="pag">24 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="22">
+<section class="slide conteudo" data-i="24">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 8.4 · DEMONSTRAÇÃO</span>
     <h2>A conferência que fecha o bloco</h2>
-    <p class="sub">O script percorre os encontros 7, 8 e 9 e diz o que falta para a B1</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Rode a conferência do painel</strong><p>Diga: "execute atividade_modulo8.py com o comando conferir". Ele valida indicadores, fontes e comparações.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Rode a conferência da B1</strong><p>Diga: "execute atividade_modulo8.py com o comando b1". Ele percorre os arquivos dos três encontros.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Corrija o que aparecer e repita</strong><p>A lista sai item por item, com o caminho do arquivo esperado.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Grave e publique</strong><p>Com a mensagem "entrega B1", antes de sair da sala.</p></div>
-    </li></ol></div>
+    <p class="sub">Dois comandos, primeiro conferir e depois b1</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.3fr;--dir:1fr">
+    <div class="col">
+      <div class="prompt compacto" style="margin-bottom:0"><span class="rot">EXECUÇÃO DO SCRIPT DA ATIVIDADE</span>
+        <p><span class="cmd">"execute atividade_modulo8.py com o comando b1"</span></p></div>
+      <pre class="terminal">  [OK]    Perguntas formuladas (encontro 7)
+           Encontrado: entregas/modulo6-ciclo1-perguntas.md (1840 bytes).
+  [OK]    Perfil da base (encontro 7)
+           Encontrado: entregas/modulo6-ciclo2-perfil.md (3215 bytes).
+  ...
+<span class="hl">  [FALTA] Juncao validada (encontro 8)
+           Nao encontrei entregas/modulo7-ciclo4-juncao.md</span>
+  ...
+<span class="hl">  [FALTA] Repositorio publicado
+           Publique o repositorio antes de entregar.</span>
+
+Concluidos: 10 de 12.
+
+Relatorio gravado em: entregas/B1-relatorio.md</pre>
+      <p class="fonte-nota" style="position:static">Saída ilustrativa e resumida, no formato do script.</p>
+    </div>
+    <div class="col">
+      <div class="caixa teal"><span class="rot">COMANDO CONFERIR</span><p>Valida o formulário, confirma que o painel existe e avisa quando destinatário e decisão estão em branco ou quando a consulta citada falta em saidas/.</p></div>
+      <div class="caixa dourado"><span class="rot">COMANDO B1</span><p>Procura onze arquivos dos encontros 7, 8 e 9 e a publicação do repositório. Arquivo com até 200 bytes conta como pendente. O conteúdo é avaliado na correção.</p></div>
+      <div class="caixa vinho"><span class="rot">RELATÓRIO DA B1</span><p>Traz nome, matrícula e a declaração de que os números foram conferidos e de que o painel não contém dado pessoal de terceiro.</p></div>
+    </div>
+  </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 8.4 · Demonstração</span>
-      <span class="pag">23 / 29</span>
+      <span class="pag">25 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="23">
+<section class="slide conteudo" data-i="25">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 8.4 · PRÁTICA</span>
     <h2>Sua vez: painel final e fechamento</h2>
-    <p class="sub">Individual. Ninguém sai antes de rodar a conferência da B1.</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <p class="sub">Individual. Ninguém sai antes de rodar a conferência da B1</p>
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Defina o destinatário do seu painel</strong><p>Um cargo concreto da organização escolhida. Escreva no topo do painel.</p></div>
+      <div><strong>Defina o destinatário do seu painel</strong><p>Um cargo concreto da organização escolhida, com a decisão que ele toma.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Corte o que ele não pode mudar</strong><p>Se sobrar menos de três indicadores, volte às consultas do encontro 8 e produza outro.</p></div>
+      <div><strong>Corte o que ele não pode mudar</strong><p>Se sobrarem menos de três indicadores, volte às consultas do encontro 8 e produza outro.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Escreva o que você faria na segunda-feira</strong><p>Uma frase, ao pé do painel, dizendo a decisão que ele sustenta.</p></div>
+      <div><strong>Preencha destinatário e decisão no pé do painel</strong><p>Abra entregas/painel.html no editor e substitua as linhas em branco. Faça isso depois da última geração, porque o comando painel regrava o arquivo.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Rode as duas conferências e publique</strong><p>Painel e B1. Corrija o que aparecer antes de gravar.</p></div>
+      <div><strong>Rode as duas conferências e publique</strong><p>Primeiro o comando conferir, depois o b1. Corrija o que aparecer, preencha o relatório da B1 e grave com a mensagem "entrega B1".</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 8.4 · Prática</span>
-      <span class="pag">24 / 29</span>
+      <span class="pag">26 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="24">
+<section class="slide conteudo" data-i="26">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 8.4 · ENTREGA B1</span>
     <h2>Entrega B1: vale 60% da nota 2</h2>
@@ -836,26 +919,26 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>Perguntas, perfil da base, tratamento e log de verificação, do encontro 7.</li><li>Banco povoado, modelo, cinco consultas e junção validada, do encontro 8.</li><li>Reconstrução de gráfico, escolha de formas e painel, deste encontro.</li><li>O painel com destinatário declarado e a decisão que ele sustenta.</li><li>O relatório da B1, gerado pelo script.</li></ul>
+      <ul><li>Perguntas, perfil da base, tratamento e log de verificação, do encontro 7.</li><li>Banco povoado, modelo, cinco consultas e junção validada, do encontro 8.</li><li>Reconstrução de gráfico, escolha de formas e painel, deste encontro.</li><li>O painel com destinatário declarado e a decisão que ele sustenta.</li><li>O relatório da B1 gerado pelo script, com nome, matrícula e declaração.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>Repositório publicado, com a mensagem "entrega B1", hoje, antes do fim do encontro.</p>
+        <p>Repositório publicado com a mensagem "entrega B1", até o fim do encontro.<br><span class="mono" style="font-size:15px">entregas/B1-relatorio.md</span></p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>A nota 2 é a média ponderada de B1 e B2. Painel sem fonte por número ou sem data de atualização perde metade do item.</p>
+        <p>A nota 2 é a média ponderada de B1, peso 60, e B2, peso 40. Painel sem fonte por número ou sem data de atualização perde metade do item.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Entrega avaliada</span>
-      <span class="pag">25 / 29</span>
+      <span class="centro">Ciclo 8.4 · Entrega</span>
+      <span class="pag">27 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="25">
+<section class="slide conteudo" data-i="27">
     <span class="barra"></span>
     <span class="eyebrow">BALANÇO</span>
     <h2>O que você tem ao fim do bloco</h2>
@@ -864,115 +947,115 @@ body.mexeu #ajuda{opacity:1}
     <article class="card">
       <header style="background:#D4B277">O CRITÉRIO</header>
       <h3>Forma escolhida pela comparação</h3>
-      
         <div class="bloco">
           <span class="rule" style="background:#D4B277"></span>
           <span class="rot">O que é</span>
-          <p>Cinco comparações e a forma que cada uma pede, com as decisões de escala declaradas.</p>
+          <p>Cinco comparações, a forma que cada uma pede e as decisões de escala declaradas.</p>
         </div>
         <div class="bloco">
           <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Para que serve</span>
-          <p>É o que evita a discussão sobre gosto e transforma a escolha do gráfico em decisão técnica.</p>
+          <span class="rot">Uso seguinte</span>
+          <p>Justificar a escolha de um gráfico com base na precisão de leitura, sem recorrer ao gosto.</p>
         </div>
     </article>
     <article class="card">
       <header style="background:#0AB0AB">O PAINEL</header>
       <h3>Gerado, auditável e com destinatário</h3>
-      
         <div class="bloco">
           <span class="rule" style="background:#0AB0AB"></span>
           <span class="rot">O que é</span>
-          <p>Um arquivo que abre em qualquer navegador, com fonte por número e data de atualização.</p>
+          <p>Arquivo que abre em qualquer navegador, com fonte por número e data de atualização.</p>
         </div>
         <div class="bloco">
           <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Para que serve</span>
-          <p>É o produto mais visível do seu projeto, e o que vai à apresentação do encontro 16.</p>
+          <span class="rot">Uso seguinte</span>
+          <p>Volta na apresentação do projeto integrador, no encontro 16.</p>
         </div>
     </article>
     <article class="card">
       <header style="background:#FEC84D">A NOTA 2</header>
-      <h3>Metade dela fechada hoje</h3>
-      
+      <h3>B1 fechada hoje</h3>
         <div class="bloco">
           <span class="rule" style="background:#FEC84D"></span>
           <span class="rot">O que é</span>
-          <p>A B1 reúne os encontros 7, 8 e 9: base, consultas e painel.</p>
+          <p>A B1 reúne os encontros 7, 8 e 9, com base, consultas e painel. Peso 60 na nota 2.</p>
         </div>
         <div class="bloco">
           <span class="rule" style="background:#FEC84D"></span>
           <span class="rot">O que falta</span>
-          <p>A B2, no encontro 11, com automação e pesquisa com fontes verificadas.</p>
+          <p>A B2, no encontro 11, com fluxo de automação e pesquisa com fontes verificadas.</p>
         </div>
     </article></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Balanço do módulo</span>
-      <span class="pag">26 / 29</span>
+      <span class="pag">28 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="26">
+<section class="slide conteudo" data-i="28">
     <span class="barra"></span>
     <span class="eyebrow">PRÓXIMOS PASSOS</span>
     <h2>Módulo 9: o que preparar</h2>
-    <p class="sub">Automação de documentos e processos</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <p class="sub">Automação de documentos e processos, no encontro 10</p>
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Retome o mapa de tarefas do módulo 1</strong><p>A tarefa que você colocou em primeiro lugar na ordem de ataque é o objeto do próximo encontro.</p></div>
+      <div><strong>Retome o mapa de tarefas do módulo 1</strong><p>A tarefa em primeiro lugar na ordem de ataque é o objeto do próximo encontro.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Traga um documento que você refaz todo mês</strong><p>Relatório, ofício, planilha de acompanhamento. Com dois exemplares de meses diferentes, se possível.</p></div>
+      <div><strong>Traga um documento que você refaz todo mês</strong><p>Relatório, ofício ou planilha de acompanhamento, com dois exemplares de meses diferentes, se possível.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Anote quanto tempo ele leva hoje</strong><p>A estimativa do módulo 1 vai ser confrontada com a medição real.</p></div>
+      <div><strong>Anote quanto tempo ele leva hoje</strong><p>A estimativa do módulo 1 será comparada com a medição real.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Deixe o painel funcionando</strong><p>Ele volta no encontro 11, quando a atualização dele vira parte do fluxo automatizado.</p></div>
+      <div><strong>Deixe o painel funcionando</strong><p>Regerar o painel com dado novo é um exemplo de fluxo repetível, assunto do encontro 10.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Próximos passos</span>
-      <span class="pag">27 / 29</span>
+      <span class="pag">29 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="27">
+<section class="slide conteudo" data-i="29">
     <span class="barra"></span>
     <span class="eyebrow">DÚVIDAS FREQUENTES</span>
     <h2>Perguntas que aparecem neste módulo</h2>
     
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:5">
+    <div class="corpo"><ol class="steps cols-2 compacto" style="--linhas:3">
     <li><span class="num">1</span>
-      <div><strong>"Posso usar Power BI em vez disso?"</strong><p>Pode, no seu trabalho. Aqui o formato é HTML porque não depende de licença e porque o painel gerado é a ponte para a automação do encontro 11.</p></div>
+      <div><strong>"Posso usar Power BI em vez disso?"</strong><p>No seu trabalho, sim. O Desktop é gratuito, e compartilhar exige licença. Aqui o formato é HTML porque não depende de licença e o painel é gerado por comando.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>"Meu gestor prefere pizza."</strong><p>Apresente as duas versões uma vez. Com mais de três fatias, a comparação por barras ganha a discussão sozinha.</p></div>
+      <div><strong>"Não consigo escrever o título-conclusão."</strong><p>O indicador ainda não responde a uma pergunta. Volte à consulta e decida qual comparação interessa ao destinatário.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>"Não consigo escrever o título-conclusão."</strong><p>É o sinal de que o indicador ainda não diz nada. Volte à consulta e pergunte o que ele deveria mostrar.</p></div>
+      <div><strong>"Os números do painel não batem com a consulta."</strong><p>Na maior parte dos casos, o filtro de período do SQL difere do período escrito no formulário. Compare os dois.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>"Os números do painel não batem com a consulta."</strong><p>Quase sempre é filtro de período diferente. Compare o filtro do SQL com o período que você escreveu no formulário.</p></div>
+      <div><strong>"Posso pedir ao agente que preencha o formulário?"</strong><p>Pode, a partir dos CSV de saidas/, com conferência de cada valor. O que o agente lê vai ao servidor do provedor do modelo, por isso a base não pode ter dado pessoal.</p></div>
     </li>
     <li><span class="num">5</span>
-      <div><strong>"Posso publicar o painel na internet?"</strong><p>Não sem falar com quem responde pelo dado. Painel autocontido carrega os números dentro do arquivo.</p></div>
+      <div><strong>"Preenchi o destinatário e ele sumiu."</strong><p>O comando painel regrava entregas/painel.html. Preencha destinatário e decisão depois da última geração.</p></div>
+    </li>
+    <li><span class="num">6</span>
+      <div><strong>"Posso publicar o painel na internet?"</strong><p>Só com autorização de quem responde pelo dado. O arquivo carrega os números dentro dele e não tem controle de acesso.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Dúvidas frequentes</span>
-      <span class="pag">28 / 29</span>
+      <span class="pag">30 / 31</span>
     </footer>
   </section>
-<section class="slide fim" data-i="28">
+<section class="slide fim" data-i="30">
       <span class="filete"></span>
       <h1>Módulo 8 concluído</h1>
-      <p>A entrega B1 está fechada. O painel é o produto que vai à apresentação final, e a partir do próximo encontro o assunto é automatizar o que se repete.</p>
+      <p>A entrega B1 está fechada, com o painel do projeto conferido contra as consultas. No próximo encontro, o assunto é automatizar o trabalho que se repete.</p>
       <span class="slogan">SEMPRE+ QUALIDADE INOVAÇÃO INCLUSÃO</span>
     </section>
 </div>
 <div id="barra">
   <button id="ant" title="Anterior">&#8249;</button>
-  <input id="atual" value="1" title="Ir para o slide"> <span>/ 29</span>
+  <input id="atual" value="1" title="Ir para o slide"> <span>/ 31</span>
   <button id="prox" title="Próximo">&#8250;</button>
   <button id="tela" title="Tela cheia">&#9744;</button>
 </div>

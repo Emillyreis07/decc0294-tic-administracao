@@ -147,6 +147,124 @@ body.mexeu #ajuda{opacity:1}
   #barra,#ajuda{display:none}
   .slide{display:block!important;page-break-after:always;box-shadow:none;transform:none!important}
 }
+/* ---- componentes acrescentados na revisão de nov. 2026 ---- */
+.mono{font-family:Consolas,"Cascadia Mono","Courier New",monospace}
+.fonte-nota{position:absolute;left:0;right:0;bottom:-2px;font-size:13px;color:var(--muted);line-height:1.3}
+.prompt.compacto{padding:12px 20px;margin-bottom:16px}
+.prompt.compacto p{font-size:17px;line-height:1.4;margin-top:6px}
+.prompt.compacto p+p{margin-top:6px}
+.prompt .cmd{font-style:normal;font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:16px}
+
+/* tabela de dados */
+.tab{width:100%;border-collapse:collapse;font-size:15px;line-height:1.3;color:var(--body)}
+.tab th{background:var(--vinho);color:#fff;font-weight:700;text-align:left;padding:7px 10px;font-size:14px;letter-spacing:.3px}
+.tab td{border-bottom:1px solid #e1e1e1;padding:7px 10px;vertical-align:top;background:#fff}
+.tab tr:nth-child(even) td{background:#fafafa}
+.tab td.lac{background:#FFF3D1!important;color:#7a5600;font-weight:700}
+.tab td .s{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+.tab td strong{color:var(--txt)}
+.chip{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.5px;padding:2px 8px;margin-bottom:4px;color:var(--txt)}
+.chip.ok{background:#CFEFEE}.chip.med{background:#FFE7A8}.chip.ruim{background:#F2CDD8;color:var(--vinho)}
+.badge{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--vinho);
+  color:#fff;font-size:12px;font-weight:700;margin-right:6px;vertical-align:1px;font-style:normal}
+
+/* duas colunas */
+.duascol{display:grid;grid-template-columns:var(--esq,1.4fr) var(--dir,1fr);gap:28px;height:100%}
+.duascol .col{display:flex;flex-direction:column;gap:14px;min-height:0}
+.steps.compacto{gap:12px}
+.steps.compacto strong{font-size:18px}
+.steps.compacto p{font-size:16px;line-height:1.35}
+.steps.compacto .num{flex:0 0 28px;height:28px;font-size:15px}
+
+/* fluxo horizontal */
+.fluxo{display:grid;grid-template-columns:repeat(var(--n,4),1fr);gap:34px;position:relative}
+.etapa{background:var(--card);border:1px solid #e3e3e3;border-top:6px solid var(--cor,var(--vinho));
+  padding:12px 16px 14px;position:relative}
+.etapa:not(:last-child)::after{content:"";position:absolute;right:-27px;top:50%;margin-top:-11px;
+  border-left:16px solid var(--vinho);border-top:11px solid transparent;border-bottom:11px solid transparent}
+.etapa .n{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;
+  background:var(--vinho);color:#fff;font-size:14px;font-weight:700}
+.etapa h4{display:inline;font-size:18px;color:var(--txt);margin-left:6px;vertical-align:2px}
+.etapa p{font-size:15.5px;line-height:1.38;margin-top:8px}
+.etapa .arq{display:block;margin-top:8px;font-size:13.5px;color:var(--vinho);
+  font-family:Consolas,"Cascadia Mono","Courier New",monospace;word-break:break-all}
+.trilha{margin-top:18px}
+.trilha .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1px;color:var(--muted);margin-bottom:6px}
+.trilha .barra-g{height:14px;background:linear-gradient(90deg,var(--teal) 0%,#9fd6c4 30%,var(--amarelo) 55%,var(--vinho) 100%)}
+.trilha .marcas{display:grid;grid-template-columns:repeat(4,1fr);gap:34px;font-size:13.5px;color:var(--muted);margin-top:5px}
+
+/* conceito (mesmo padrão dos módulos 2 e 3) */
+.def{background:var(--card2);border:1px solid #e3e3e3;border-left:9px solid var(--vinho);padding:12px 20px}
+.def .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1.2px;color:var(--vinho);text-transform:uppercase}
+.def p{font-size:17px;line-height:1.4;color:var(--txt);margin-top:5px}
+
+/* eixo acima dos cartões */
+.eixo{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;margin-bottom:14px;
+  font-size:14px;font-weight:700;color:var(--muted);letter-spacing:.4px}
+.eixo .seta{height:10px;position:relative;background:linear-gradient(90deg,var(--dourado),var(--teal))}
+.eixo .seta::after{content:"";position:absolute;right:-14px;top:-7px;border-left:16px solid var(--teal);
+  border-top:12px solid transparent;border-bottom:12px solid transparent}
+.cards.baixos{height:calc(100% - 40px)}
+.cards.baixos .card h3{font-size:18px;padding:12px 16px 2px}
+.cards.baixos .card .bloco{padding:8px 16px 0}
+.cards.baixos .card .bloco p{font-size:15.5px;line-height:1.36}
+
+/* grade de dimensões */
+.grade{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:14px;height:calc(100% - 22px)}
+.dim{background:var(--card);border:1px solid #e3e3e3;border-top:5px solid var(--cor);padding:10px 16px}
+.dim h4{font-size:19px;color:var(--vinho)}
+.dim h4 small{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.dim p{font-size:15.5px;line-height:1.36;margin-top:5px}
+.dim .med{display:block;font-size:14px;color:var(--txt);margin-top:7px;border-top:1px solid #ddd;padding-top:6px}
+.dim .med b{color:var(--muted);font-size:12.5px;letter-spacing:.6px}
+
+/* caixa lateral */
+.caixa{background:var(--card2);border:1px solid #e3e3e3;padding:12px 16px}
+.caixa.vinho{border-left:6px solid var(--vinho)}
+.caixa.dourado{border-left:6px solid var(--dourado)}
+.caixa.teal{border-left:6px solid var(--teal)}
+.caixa .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1px;color:var(--vinho);margin-bottom:4px}
+.caixa p{font-size:15.5px;line-height:1.38}
+.caixa p+p{margin-top:6px}
+.legenda{list-style:none}
+.legenda li{font-size:15.5px;line-height:1.35;margin-bottom:8px;display:flex;gap:6px}
+.legenda li b{color:var(--txt)}
+
+/* ficha do mapa de dados */
+.ficha{display:grid;grid-template-columns:1fr 1fr;gap:14px;height:calc(100% - 64px)}
+.ficha .grupo{background:var(--card);border:1px solid #e3e3e3;border-top:5px solid var(--cor)}
+.ficha .grupo>header{font-size:16px;font-weight:700;color:var(--vinho);padding:8px 14px 2px}
+.ficha .grupo>header span{color:var(--muted);font-weight:400;font-size:14px;margin-left:6px}
+.ficha dl{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;padding:6px 14px 10px;font-size:14.5px;line-height:1.3}
+.ficha dt{font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:13.5px;color:var(--vinho);padding-top:1px}
+.ficha dd{color:var(--txt)}
+.rodape-corpo{margin-top:12px;font-size:15.5px;line-height:1.4;color:var(--body)}
+
+/* svg */
+.fig{display:block;width:100%;height:auto}
+.fig text{font-family:"Segoe UI",Calibri,"Helvetica Neue",Arial,sans-serif}
+
+/* ajustes após conferência visual */
+.tab.apertada{font-size:14.5px}
+.tab.apertada td{padding:6px 10px}
+.legenda .badge{flex:0 0 20px;margin-top:1px}
+.dim p{font-size:17px}
+.dim .med{font-size:15.5px}
+.dim h4{font-size:21px}
+.cards.baixos .card .bloco p{font-size:16.5px}
+.eixo{gap:26px}
+.ficha dl{font-size:16.5px;gap:6px 14px;padding:8px 14px 12px}
+.ficha dt{font-size:15px}
+.ficha .grupo>header{font-size:17.5px}
+.etapa p{font-size:16.5px}
+.etapa .arq{word-break:normal;overflow-wrap:break-word}
+.steps.cols-3.compacto p{font-size:17px}
+.steps.cols-3.compacto strong{font-size:19px}
+
+/* blocos de saída de terminal */
+.terminal{background:#262626;color:#e9e9e9;font-family:Consolas,"Cascadia Mono","Courier New",monospace;
+  font-size:14px;line-height:1.38;padding:12px 16px;white-space:pre;overflow:hidden;margin:0}
+.terminal .hl{color:#FEC84D;font-weight:700}
 </style>
 </head>
 <body>
@@ -157,51 +275,51 @@ body.mexeu #ajuda{opacity:1}
       <span class="mod">MÓDULO 7</span>
       <h1>Dados estruturados e consulta</h1>
       <span class="tracinho"></span>
-      <p class="sub">Encontro 8 · Quando a planilha deixa de dar conta e a base vira tabela</p>
+      <p class="sub">Encontro 8 · Tabelas tipadas, chaves, consultas gravadas e junção conferida</p>
       <p class="pe">DECC0294 · Tecnologia da Informação e Comunicação Aplicada à Administração · 2026.2</p>
     </section>
-<section class="slide conteudo" data-i="1">
+<section class="slide conteudo">
     <span class="barra"></span>
     <span class="eyebrow">VISÃO GERAL DO MÓDULO</span>
     <h2>O que você vai construir hoje</h2>
-    <p class="sub">As duas bases do encontro 6 viram tabelas ligadas, e as perguntas viram consultas</p>
+    <p class="sub">As duas bases do projeto se tornam tabelas ligadas por chave, e as perguntas, consultas gravadas</p>
     <div class="corpo"><div class="overview">
     <article class="ciclo">
       <span class="topo" style="background:#D4B277"></span>
-      <span class="rot" >CICLO 7.1</span>
+      <span class="rot">CICLO 7.1</span>
       <h3>Da planilha à tabela</h3>
       <div class="pe">
         <span class="rule" style="background:#D4B277"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Banco criado com as suas bases</p>
+        <p>Banco criado, com contagens e tipos conferidos</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#0AB0AB"></span>
-      <span class="rot" >CICLO 7.2</span>
+      <span class="rot">CICLO 7.2</span>
       <h3>Modelo relacional em linguagem de gestor</h3>
       <div class="pe">
         <span class="rule" style="background:#0AB0AB"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Modelo das suas tabelas, com chaves</p>
+        <p>Modelo das tabelas, com chaves e relações</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#FEC84D"></span>
-      <span class="rot" >CICLO 7.3</span>
+      <span class="rot">CICLO 7.3</span>
       <h3>Perguntas de negócio viram consultas</h3>
       <div class="pe">
         <span class="rule" style="background:#FEC84D"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Cinco consultas com resultado conferido</p>
+        <p>Cinco consultas gravadas e conferidas</p>
       </div>
     </article>
     <article class="ciclo">
-      <span class="topo" style="background:#D4B277"></span>
-      <span class="rot" >CICLO 7.4</span>
+      <span class="topo" style="background:#8D0333"></span>
+      <span class="rot">CICLO 7.4</span>
       <h3>Juntar fontes sem inventar linha</h3>
       <div class="pe">
-        <span class="rule" style="background:#D4B277"></span>
+        <span class="rule" style="background:#8D0333"></span>
         <span class="rot2">ENTREGA</span>
         <p>Junção validada pela contagem</p>
       </div>
@@ -209,149 +327,156 @@ body.mexeu #ajuda{opacity:1}
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Estrutura do módulo</span>
-      <span class="pag">2 / 29</span>
+      <span class="pag">2 / 31</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="2">
+<section class="slide divisor">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">7.1</span></div>
       <div class="dir">
         <h2>Da planilha à tabela</h2>
         <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">3 / 29</span>
+      <span class="pag">3 / 31</span>
     </section>
-<section class="slide conteudo" data-i="3">
+<section class="slide conteudo">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 7.1 · TEORIA</span>
     <h2>Planilha, tabela e banco de dados</h2>
-    <p class="sub">A diferença não é de tamanho. É do que cada um garante.</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">PLANILHA</header>
-      <h3>A célula aceita qualquer coisa</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que ela garante</span>
-          <p>Nada. A mesma coluna pode ter número, texto, data e célula mesclada, e ninguém é avisado.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Onde ela brilha</span>
-          <p>Rascunho, cálculo pontual e apresentação. É a ferramenta certa para pensar, e a errada para guardar.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">TABELA</header>
-      <h3>A coluna tem um tipo, e ele vale</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que ela garante</span>
-          <p>Coluna de data só aceita data. Coluna de valor só aceita número. O erro é barrado na entrada.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O ganho imediato</span>
-          <p>Some a classe inteira de defeito que você passou o encontro passado corrigindo.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">BANCO</header>
-      <h3>Várias tabelas ligadas, com regras entre elas</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que ele garante</span>
-          <p>Que um atendimento não aponte para uma unidade inexistente, e que a informação não seja repetida em dois lugares.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O ganho</span>
-          <p>A consulta atravessa as tabelas e responde perguntas que nenhuma delas responde sozinha.</p>
-        </div>
-    </article></div></div>
+    <p class="sub">Cada estrutura assegura um conjunto diferente de regras sobre o dado</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:16%"></th><th style="width:28%">PLANILHA</th><th style="width:28%">TABELA</th><th style="width:28%">BANCO RELACIONAL</th></tr>
+      <tr><td><strong>Unidade de registro</strong></td><td>Célula, sem regra sobre o conteúdo</td>
+          <td>Linha, com as mesmas colunas para todos os registros</td><td>Várias tabelas, ligadas por colunas de chave</td></tr>
+      <tr><td><strong>O que assegura</strong></td><td>Nada sobre o conteúdo. A mesma coluna aceita número, data, texto e célula mesclada.</td>
+          <td>Um nome e um tipo declarado por coluna</td><td>Também a correspondência entre tabelas. Um atendimento só aponta para unidade cadastrada (integridade referencial).</td></tr>
+      <tr><td><strong>Uso adequado</strong></td><td>Rascunho, cálculo pontual e apresentação</td>
+          <td>Registros de uma única entidade</td><td>Dados de várias entidades, usados por mais de uma pessoa ou sistema</td></tr>
+      <tr><td><strong>Exemplo</strong></td><td>Controle de diárias mantido pelo setor</td>
+          <td>Lista de atendimentos exportada do sistema</td><td>Sistema de protocolo, com documentos, setores e servidores</td></tr>
+    </table>
+    <div class="duascol" style="--esq:1.15fr;--dir:1fr;height:auto;margin-top:14px">
+      <div class="def"><span class="rot">Modelo relacional (relational model)</span>
+        <p>Organiza os dados em tabelas de linhas e colunas, ligadas por valores de chave e consultadas por operações sobre conjuntos (Codd, 1970). A linguagem de consulta desse modelo, o SQL, é padronizada pela norma ISO/IEC 9075.</p></div>
+      <div class="caixa teal"><span class="rot">NO PROJETO.DB DA ATIVIDADE</span>
+        <p>O script usa o SQLite, que grava o banco inteiro em um único arquivo. As tabelas são criadas sem chave estrangeira declarada. A correspondência entre elas é conferida pelo comando juntar, no ciclo 7.4.</p></div>
+    </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 7.1 · Teoria</span>
-      <span class="pag">4 / 29</span>
+      <span class="pag">4 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="4">
+<section class="slide conteudo">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 7.1 · TEORIA</span>
     <h2>Quatro problemas que a planilha não resolve</h2>
-    <p class="sub">Todos aparecem quando o arquivo passa de uma pessoa para uma equipe</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>A informação repetida</strong><p>O nome da unidade escrito em cada uma das mil linhas. Quando a unidade muda de nome, mil linhas precisam mudar juntas, e algumas não mudam.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>A ausência de tipo</strong><p>Uma data digitada como texto numa linha e como data em outra. A ordenação sai errada e ninguém percebe, porque o resultado parece plausível.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>A ausência de relação</strong><p>Duas abas que se referem à mesma coisa sem nenhuma garantia de correspondência. É onde o PROCV vira a tecnologia crítica da organização.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>A edição simultânea</strong><p>Duas pessoas abrem, editam e salvam. Uma das duas versões some, e a que sobrou não é necessariamente a certa.</p></div>
-    </li></ol></div>
+    <p class="sub">Aparecem quando o arquivo passa de uma pessoa para uma equipe</p>
+    <div class="corpo"><table class="tab">
+      <tr><th style="width:23%">PROBLEMA</th><th style="width:43%">EXEMPLO</th><th style="width:34%">O QUE O BANCO FAZ</th></tr>
+      <tr><td><strong>Informação repetida</strong><span class="s">redundância e anomalia de atualização (update anomaly)</span></td>
+          <td>O nome da unidade escrito em cada uma das 1.000 linhas de atendimento. A unidade muda de nome e parte das linhas fica com o nome antigo.</td>
+          <td>Guarda o nome uma vez, na tabela de unidades. O atendimento guarda só o código.</td></tr>
+      <tr><td><strong>Ausência de tipo</strong></td>
+          <td>Data digitada como texto em parte das linhas. A ordenação por data mistura meses de anos diferentes, sem aviso.</td>
+          <td>Declara o tipo de cada coluna na criação da tabela. O slide seguinte mostra o caso do SQLite.</td></tr>
+      <tr><td><strong>Ausência de relação</strong><span class="s">integridade referencial</span></td>
+          <td>Duas abas ligadas por PROCV. A unidade digitada com espaço no fim devolve #N/D, e a linha sai do relatório quando os erros são filtrados.</td>
+          <td>Com chave estrangeira declarada, recusa o código que não existe na tabela de referência.</td></tr>
+      <tr><td><strong>Edição simultânea</strong><span class="s">controle de concorrência</span></td>
+          <td>Duas pessoas editam cópias do mesmo arquivo e salvam. A última gravação substitui a anterior.</td>
+          <td>Aplica as gravações uma de cada vez, em transações que se completam ou são desfeitas por inteiro.</td></tr>
+    </table>
+    <p class="fonte-nota">Redundância e consistência entre tabelas são tratadas no artigo que propôs o modelo relacional (Codd, 1970, seção 2).</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 7.1 · Teoria</span>
-      <span class="pag">5 / 29</span>
+      <span class="pag">5 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="5">
+<section class="slide conteudo">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 7.1 · TEORIA</span>
+    <h2>Tipo declarado e valor gravado</h2>
+    <p class="sub">O script decide o tipo de cada coluna antes de gravar, e alguns valores mudam no caminho</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.45fr;--dir:1fr">
+    <div class="col">
+      <table class="tab apertada">
+        <tr><th style="width:24%">VALOR NO CSV</th><th style="width:17%">COLUNA CRIADA</th><th style="width:21%">GRAVADO NO BANCO</th><th style="width:38%">O QUE CONFERIR</th></tr>
+        <tr><td class="mono">40,50</td><td class="mono">REAL</td><td class="mono">40.5</td><td>Conversão correta da vírgula decimal</td></tr>
+        <tr><td class="mono">1.234,56</td><td class="mono">REAL</td><td class="mono">1234.56</td><td>Conversão correta do ponto de milhar</td></tr>
+        <tr><td class="mono">1.234</td><td class="mono">REAL</td><td class="mono lac">1.234</td><td class="lac">Lido como decimal. O valor fica mil vezes menor.</td></tr>
+        <tr><td class="mono">n/d</td><td class="mono">REAL</td><td class="mono lac">vazio (NULL)</td><td class="lac">A linha é gravada e o valor se perde</td></tr>
+        <tr><td class="mono">15/03/2026</td><td class="mono">TEXT</td><td class="mono">15/03/2026</td><td>Ordem e filtro de data passam a ser de texto</td></tr>
+        <tr><td class="mono">00012345000190</td><td class="mono">INTEGER</td><td class="mono lac">12345000190</td><td class="lac">CNPJ sem os zeros à esquerda</td></tr>
+      </table>
+      <p class="rodape-corpo" style="margin-top:4px">Resultados conferidos no script atividade_modulo7.py, com os valores acima em colunas de números.</p>
+    </div>
+    <div class="col">
+      <div class="def"><span class="rot">Afinidade de tipo (type affinity)</span>
+        <p>No SQLite, o tipo declarado é uma preferência. Em tabela comum, texto que não vira número fica gravado como texto em coluna INTEGER. O modo STRICT (versão 3.37.0, 2021) recusa o valor. Fonte: sqlite.org/stricttables.html, consultado em 2/11/2026.</p></div>
+      <div class="caixa vinho"><span class="rot">REGRA DO SCRIPT</span>
+        <p>Se 90% ou mais dos valores preenchidos forem números, a coluna é criada como INTEGER ou REAL e os demais valores entram vazios. A linha não conta como rejeitada.</p></div>
+    </div>
+  </div></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 7.1 · Teoria</span>
+      <span class="pag">6 / 31</span>
+    </footer>
+  </section>
+<section class="slide conteudo">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 7.1 · DEMONSTRAÇÃO</span>
     <h2>O script cria o banco a partir dos seus arquivos</h2>
-    <p class="sub">Um comando transforma os CSV do seu projeto em tabelas tipadas</p>
-    <div class="corpo"><div class="prompt">
-    <span class="rot">EXECUÇÃO DO SCRIPT DA ATIVIDADE</span>
-    <p>"execute atividade_modulo7.py com o comando banco dados/base.csv dados/api-municipios.csv"\n\nO script cria projeto.db com uma tabela por arquivo, detecta o tipo de cada coluna, informa quantas linhas entraram em cada tabela e imprime o esquema resultante.</p>
-  </div>
-<ol class="steps cols-3" style="--linhas:1">
-    <li><span class="num">1</span>
-      <div><strong>Confira a contagem de linhas</strong><p>Ela precisa bater com o que o perfil do encontro 7 mostrou.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Confira o tipo de cada coluna</strong><p>Coluna de valor que virou texto é a vírgula decimal de novo.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>O banco é um arquivo só</strong><p>projeto.db fica na pasta e entra no repositório como qualquer outro.</p></div>
-    </li></ol></div>
+    <p class="sub">Um comando cria projeto.db com uma tabela por arquivo e imprime as contagens</p>
+    <div class="corpo"><div class="prompt compacto"><span class="rot">EXECUÇÃO DO SCRIPT DA ATIVIDADE</span>
+      <p><span class="cmd">"execute atividade_modulo7.py com o comando banco dados/atendimentos.csv dados/municipios.csv"</span></p></div>
+    <pre class="terminal">TABELA atendimentos  (de dados/atendimentos.csv)
+<span class="hl">  linhas no CSV: 12466 | gravadas: 12466 | rejeitadas: 0</span>
+  colunas: protocolo TEXT, data TEXT, cod_unidade INTEGER, cod_ibge INTEGER, servico TEXT, custo REAL
+
+TABELA municipios  (de dados/municipios.csv)
+  linhas no CSV: 217 | gravadas: 217 | rejeitadas: 0
+  colunas: cod_ibge INTEGER, municipio TEXT, populacao INTEGER</pre>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:12px">
+      <div class="caixa dourado"><span class="rot">CONTAGEM E TIPO</span>
+        <p>As 12.466 linhas coincidem com o perfil do encontro 7 depois da remoção das 14 duplicadas. A coluna custo saiu REAL. Se tivesse saído TEXT, a vírgula decimal continuaria no CSV.</p></div>
+      <div class="caixa vinho"><span class="rot">VALORES PERDIDOS</span>
+        <p>Gravadas igual a linhas no CSV não prova que todos os valores entraram. Confira com <span class="mono">sql "SELECT COUNT(*), COUNT(custo) FROM atendimentos"</span> e compare com os vazios do perfil.</p></div>
+    </div>
+    <p class="fonte-nota">Saída ilustrativa, no formato do script. Base fictícia de atendimentos e cadastro dos 217 municípios do Maranhão.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 7.1 · Demonstração</span>
-      <span class="pag">6 / 29</span>
+      <span class="pag">7 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="6">
+<section class="slide conteudo">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 7.1 · PRÁTICA</span>
     <h2>Sua vez: crie o banco do seu projeto</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Rode o comando com as suas duas bases</strong><p>A tratada do encontro 7 e a pública do encontro 6.</p></div>
+      <div><strong>Rode o comando banco com as suas duas bases</strong><p>A base tratada no encontro 7 e a base pública do encontro 6, as duas em dados/.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Confira as contagens contra o perfil</strong><p>Se a tabela tem menos linhas que o CSV, alguma linha foi rejeitada. Descubra qual antes de seguir.</p></div>
+      <div><strong>Confira as contagens contra o perfil</strong><p>Linhas no CSV, gravadas e rejeitadas, ao lado do total do perfil. Diferença sem explicação precisa ser resolvida antes do ciclo 7.2.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Confira os tipos detectados</strong><p>Peça o esquema com o comando esquema. Coluna numérica lida como texto precisa de correção no CSV.</p></div>
+      <div><strong>Confira tipos e valores perdidos</strong><p>Peça o esquema com o comando esquema. Em cada coluna numérica, compare COUNT(coluna) com o número de preenchidos do perfil.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Refaça se necessário</strong><p>Corrigir o CSV e recriar o banco leva dois minutos. Consultar um banco mal tipado custa o encontro inteiro.</p></div>
+      <div><strong>Corrija o CSV e recrie o banco quando preciso</strong><p>O comando banco apaga e recria a tabela de mesmo nome. Nome de coluna com acento vira sublinhado (Município vira munic_pio), então renomeie no CSV.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 7.1 · Prática</span>
-      <span class="pag">7 / 29</span>
+      <span class="pag">8 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="7">
+<section class="slide conteudo">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 7.1 · ENTREGA</span>
     <h2>Banco criado com as suas bases</h2>
@@ -359,197 +484,133 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>O arquivo projeto.db, com no mínimo duas tabelas.</li><li>O esquema impresso, com as colunas e os tipos detectados.</li><li>A comparação entre a contagem de linhas de cada tabela e o perfil do encontro 7.</li><li>O registro de qualquer linha rejeitada, com o motivo.</li></ul>
+      <ul><li>O arquivo projeto.db, com as duas tabelas.</li><li>O esquema impresso pelo comando esquema.</li><li>Para cada tabela, as linhas no CSV, as gravadas e o total do perfil do encontro 7.</li><li>Para cada coluna numérica, os valores preenchidos no banco comparados com o perfil.</li><li>Cada correção feita no CSV, com o motivo.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>projeto.db\nentregas/modulo7-ciclo1-banco.md</p>
+        <p><span class="mono" style="font-size:15px">projeto.db<br>entregas/modulo7-ciclo1-banco.md</span></p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Diferença entre a contagem do CSV e a da tabela, sem explicação, invalida tudo que vier depois.</p>
+        <p>Diferença de contagem sem explicação invalida o restante do encontro. Coluna de valor mantida como TEXT também não é aceita.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 7.1 · Entrega</span>
-      <span class="pag">8 / 29</span>
+      <span class="pag">9 / 31</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="8">
+<section class="slide divisor">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">7.2</span></div>
       <div class="dir">
         <h2>Modelo relacional em linguagem de gestor</h2>
         <p class="etapas">Teoria · Prática · Entrega</p>
       </div>
-      <span class="pag">9 / 29</span>
+      <span class="pag">10 / 31</span>
     </section>
-<section class="slide conteudo" data-i="9">
+<section class="slide conteudo">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 7.2 · TEORIA</span>
-    <h2>Três palavras e o que elas significam no seu trabalho</h2>
-    <p class="sub">O vocabulário mínimo para conversar com quem cuida do sistema</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">ENTIDADE</header>
-      <h3>A coisa sobre a qual você guarda dados</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Na prática</span>
-          <p>Servidor, unidade, atendimento, contrato, fornecedor. Cada entidade vira uma tabela.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O teste</span>
-          <p>Se você consegue contar quantos existem, é entidade. "Quantos contratos temos?" faz sentido.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">ATRIBUTO</header>
-      <h3>O que você sabe sobre cada uma</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Na prática</span>
-          <p>Do contrato: número, objeto, valor, vigência, fornecedor. Cada atributo vira uma coluna.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O teste</span>
-          <p>Se a resposta é um valor por item, é atributo. Se são vários, virou outra entidade.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">RELAÇÃO</header>
-      <h3>Como as entidades se ligam</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Na prática</span>
-          <p>Um contrato pertence a um fornecedor. Um fornecedor tem vários contratos.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O teste</span>
-          <p>A frase que liga as duas, dita nos dois sentidos, revela o tipo da relação.</p>
-        </div>
-    </article></div></div>
+    <h2>Entidade, atributo e relação</h2>
+    <p class="sub">O vocabulário mínimo para conversar com quem mantém o sistema</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.05fr;--dir:1fr">
+    <div class="col"><svg class="fig" viewBox="0 0 600 410" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="6" width="220" height="120" fill="#fff" stroke="#8D0333" stroke-width="2"/><rect x="0" y="6" width="220" height="34" fill="#8D0333"/><text x="12" y="29" font-size="16" font-weight="700" fill="#fff">unidades</text><text x="12" y="61" font-size="14.5" fill="#1A1A1A" font-family="Consolas,Courier New,monospace">cod_unidade</text><text x="210" y="61" font-size="13" font-weight="700" text-anchor="end" fill="#8D0333">PK</text><text x="12" y="87" font-size="14.5" fill="#1A1A1A" font-family="Consolas,Courier New,monospace">nome_unidade</text><text x="12" y="113" font-size="14.5" fill="#1A1A1A" font-family="Consolas,Courier New,monospace">endereco</text><rect x="0" y="238" width="220" height="120" fill="#fff" stroke="#0AB0AB" stroke-width="2"/><rect x="0" y="238" width="220" height="34" fill="#0AB0AB"/><text x="12" y="261" font-size="16" font-weight="700" fill="#fff">municipios</text><text x="12" y="293" font-size="14.5" fill="#1A1A1A" font-family="Consolas,Courier New,monospace">cod_ibge</text><text x="210" y="293" font-size="13" font-weight="700" text-anchor="end" fill="#8D0333">PK</text><text x="12" y="319" font-size="14.5" fill="#1A1A1A" font-family="Consolas,Courier New,monospace">municipio</text><text x="12" y="345" font-size="14.5" fill="#1A1A1A" font-family="Consolas,Courier New,monospace">populacao</text><rect x="368" y="92" width="232" height="172" fill="#fff" stroke="#C9962E" stroke-width="2"/><rect x="368" y="92" width="232" height="34" fill="#C9962E"/><text x="380" y="115" font-size="16" font-weight="700" fill="#fff">atendimentos</text><text x="380" y="147" font-size="14.5" fill="#1A1A1A" font-family="Consolas,Courier New,monospace">protocolo</text><text x="590" y="147" font-size="13" font-weight="700" text-anchor="end" fill="#8D0333">PK</text><text x="380" y="173" font-size="14.5" fill="#1A1A1A" font-family="Consolas,Courier New,monospace">data</text><text x="380" y="199" font-size="14.5" fill="#1A1A1A" font-family="Consolas,Courier New,monospace">cod_unidade</text><text x="590" y="199" font-size="13" font-weight="700" text-anchor="end" fill="#0a8f8a">FK</text><text x="380" y="225" font-size="14.5" fill="#1A1A1A" font-family="Consolas,Courier New,monospace">cod_ibge</text><text x="590" y="225" font-size="13" font-weight="700" text-anchor="end" fill="#0a8f8a">FK</text><text x="380" y="251" font-size="14.5" fill="#1A1A1A" font-family="Consolas,Courier New,monospace">custo</text><g stroke="#6B6B6B" stroke-width="2" fill="none"><path d="M220,66 H294 V200 H368"/><path d="M220,298 H294 V226 H368"/></g><g font-size="15" font-weight="700" fill="#8D0333"><text x="228" y="58">1</text><text x="350" y="192">N</text><text x="228" y="290">1</text><text x="350" y="246">N</text></g><text x="0" y="384" font-size="14" fill="#1A1A1A">Uma unidade tem muitos atendimentos. Um atendimento pertence a uma unidade.</text><text x="0" y="404" font-size="13" fill="#6B6B6B">PK: chave primária · FK: chave estrangeira · 1 e N: cardinalidade da relação</text></svg></div>
+    <div class="col">
+      <table class="tab apertada">
+        <tr><th style="width:20%">TERMO</th><th style="width:40%">DEFINIÇÃO</th><th style="width:40%">TESTE PRÁTICO</th></tr>
+        <tr><td><strong>Entidade</strong></td><td>Aquilo sobre o que a organização guarda dados. Vira tabela.</td>
+            <td>Faz sentido perguntar quantos existem, como quantos contratos ou quantas unidades.</td></tr>
+        <tr><td><strong>Atributo</strong></td><td>Característica de cada ocorrência da entidade. Vira coluna.</td>
+            <td>Tem um valor por ocorrência. Se o fornecedor tem vários telefones, telefone vira outra entidade.</td></tr>
+        <tr><td><strong>Relação</strong></td><td>Ligação entre duas entidades, feita por uma coluna de chave.</td>
+            <td>A frase que liga as duas, lida nos dois sentidos, indica o tipo da relação.</td></tr>
+      </table>
+      <div class="caixa dourado"><span class="rot">UMA LINHA REPRESENTA O QUÊ?</span>
+        <p>A primeira pergunta sobre qualquer tabela. Na de atendimentos, um atendimento. Em uma base pública com população por ano, um município em um ano, e o código do município se repete.</p></div>
+    </div>
+  </div>
+  <p class="fonte-nota">Modelo entidade-relacionamento proposto por Chen (1976). Diagrama ilustrativo com as tabelas usadas nas demonstrações.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 7.2 · Teoria</span>
-      <span class="pag">10 / 29</span>
+      <span class="pag">11 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="10">
+<section class="slide conteudo">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 7.2 · TEORIA</span>
-    <h2>Chave: por que nome não serve</h2>
-    <p class="sub">A escolha da chave decide se o cruzamento vai funcionar</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>A chave identifica sem ambiguidade</strong><p>Um valor, um registro, para sempre. Código do IBGE para município, CNPJ para empresa, matrícula para servidor.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Nome é texto livre, e texto livre varia</strong><p>São Luís, Sao Luis, S. Luís e SAO LUIS são quatro chaves diferentes para o mesmo município. Foi o que estragou o cruzamento do encontro 6.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>A chave estrangeira é a ligação</strong><p>A tabela de atendimentos guarda o código da unidade, e não o nome dela. Se a unidade mudar de nome, nada quebra.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Sem chave comum não há cruzamento</strong><p>Se as duas bases não compartilham nenhum código, a única saída é criar a correspondência à mão, uma vez, e guardá-la numa terceira tabela.</p></div>
-    </li></ol></div>
+    <h2>Por que o nome não serve de chave</h2>
+    <p class="sub">A escolha da chave decide se o cruzamento entre as bases funciona</p>
+    <div class="corpo"><div class="duascol" style="--esq:1fr;--dir:1.05fr">
+    <div class="col"><svg class="fig" viewBox="0 0 560 330" xmlns="http://www.w3.org/2000/svg"><defs><marker id="sc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6B6B6B"/></marker></defs><text x="0" y="14" font-size="13.5" font-weight="700" fill="#6B6B6B">AGRUPAMENTO PELO NOME DO MUNICÍPIO</text><rect x="0" y="24" width="132" height="36" fill="#FFF3D1" stroke="#C9962E" stroke-width="2"/><text x="66" y="48" text-anchor="middle" font-size="15" font-weight="700" fill="#1A1A1A">São Luís</text><path d="M66,62 V88" stroke="#6B6B6B" stroke-width="2" marker-end="url(#sc)"/><rect x="0" y="92" width="132" height="36" fill="#fff" stroke="#8D0333" stroke-width="2"/><text x="66" y="116" text-anchor="middle" font-size="15" font-weight="700" fill="#1A1A1A">2.870</text><rect x="142" y="24" width="132" height="36" fill="#FFF3D1" stroke="#C9962E" stroke-width="2"/><text x="208" y="48" text-anchor="middle" font-size="15" font-weight="700" fill="#1A1A1A">Sao Luis</text><path d="M208,62 V88" stroke="#6B6B6B" stroke-width="2" marker-end="url(#sc)"/><rect x="142" y="92" width="132" height="36" fill="#fff" stroke="#8D0333" stroke-width="2"/><text x="208" y="116" text-anchor="middle" font-size="15" font-weight="700" fill="#1A1A1A">806</text><rect x="284" y="24" width="132" height="36" fill="#FFF3D1" stroke="#C9962E" stroke-width="2"/><text x="350" y="48" text-anchor="middle" font-size="15" font-weight="700" fill="#1A1A1A">S. Luís</text><path d="M350,62 V88" stroke="#6B6B6B" stroke-width="2" marker-end="url(#sc)"/><rect x="284" y="92" width="132" height="36" fill="#fff" stroke="#8D0333" stroke-width="2"/><text x="350" y="116" text-anchor="middle" font-size="15" font-weight="700" fill="#1A1A1A">301</text><rect x="426" y="24" width="132" height="36" fill="#FFF3D1" stroke="#C9962E" stroke-width="2"/><text x="492" y="48" text-anchor="middle" font-size="15" font-weight="700" fill="#1A1A1A">SAO LUIS</text><path d="M492,62 V88" stroke="#6B6B6B" stroke-width="2" marker-end="url(#sc)"/><rect x="426" y="92" width="132" height="36" fill="#fff" stroke="#8D0333" stroke-width="2"/><text x="492" y="116" text-anchor="middle" font-size="15" font-weight="700" fill="#1A1A1A">125</text><text x="0" y="150" font-size="14" fill="#8D0333" font-weight="700">4 grupos, com os 4.102 atendimentos de São Luís divididos</text><text x="0" y="196" font-size="13.5" font-weight="700" fill="#6B6B6B">AGRUPAMENTO PELO CÓDIGO IBGE</text><rect x="0" y="206" width="132" height="36" fill="#E2F5F4" stroke="#0AB0AB" stroke-width="2"/><text x="66" y="230" text-anchor="middle" font-size="15" font-weight="700" fill="#1A1A1A">2111300</text><path d="M66,244 L208,272" stroke="#6B6B6B" stroke-width="2" marker-end="url(#sc)"/><rect x="142" y="206" width="132" height="36" fill="#E2F5F4" stroke="#0AB0AB" stroke-width="2"/><text x="208" y="230" text-anchor="middle" font-size="15" font-weight="700" fill="#1A1A1A">2111300</text><path d="M208,244 L256,272" stroke="#6B6B6B" stroke-width="2" marker-end="url(#sc)"/><rect x="284" y="206" width="132" height="36" fill="#E2F5F4" stroke="#0AB0AB" stroke-width="2"/><text x="350" y="230" text-anchor="middle" font-size="15" font-weight="700" fill="#1A1A1A">2111300</text><path d="M350,244 L303,272" stroke="#6B6B6B" stroke-width="2" marker-end="url(#sc)"/><rect x="426" y="206" width="132" height="36" fill="#E2F5F4" stroke="#0AB0AB" stroke-width="2"/><text x="492" y="230" text-anchor="middle" font-size="15" font-weight="700" fill="#1A1A1A">2111300</text><path d="M492,244 L350,272" stroke="#6B6B6B" stroke-width="2" marker-end="url(#sc)"/><rect x="130" y="276" width="300" height="36" fill="#fff" stroke="#0AB0AB" stroke-width="2"/><text x="280" y="300" text-anchor="middle" font-size="15" font-weight="700" fill="#1A1A1A">2111300 · 4.102 atendimentos</text></svg>
+      <p class="rodape-corpo" style="margin-top:2px">Contagens ilustrativas. 2.870 + 806 + 301 + 125 = 4.102. Foi este o defeito do cruzamento do encontro 6.</p>
+    </div>
+    <div class="col">
+      <div class="def"><span class="rot">Chave primária e chave estrangeira</span>
+        <p>A chave primária (primary key) identifica cada linha e não se repete. A chave estrangeira (foreign key) é a coluna que guarda a chave primária de outra tabela. O atendimento guarda cod_ibge, e não o nome do município.</p></div>
+      <table class="tab apertada">
+        <tr><th style="width:30%">ENTIDADE</th><th>CHAVE USUAL</th></tr>
+        <tr><td>Município</td><td>Código IBGE, 7 dígitos (São Luís, 2111300)</td></tr>
+        <tr><td>Empresa</td><td>CNPJ, 14 caracteres</td></tr>
+        <tr><td>Servidor federal</td><td>Matrícula SIAPE</td></tr>
+      </table>
+      <div class="caixa vinho"><span class="rot">CNPJ ALFANUMÉRICO</span>
+        <p>Desde julho de 2026, novas inscrições podem ter letras nas 12 primeiras posições (IN RFB nº 2.229/2024). Identificador se grava como texto. Como INTEGER, perde zeros à esquerda e o CNPJ com letras entra vazio. Fonte: serpro.gov.br, consultado em 2/11/2026.</p></div>
+    </div>
+  </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 7.2 · Teoria</span>
-      <span class="pag">11 / 29</span>
+      <span class="pag">12 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="11">
+<section class="slide conteudo">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 7.2 · TEORIA</span>
     <h2>Três tipos de relação</h2>
-    <p class="sub">O terceiro é o que mais aparece e o que mais gera erro de contagem</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">UM PARA UM</header>
-      <h3>Cada um de um lado, um do outro</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Exemplo</span>
-          <p>Servidor e ficha funcional. Raro, e quase sempre sinal de que as duas tabelas poderiam ser uma só.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Cuidado</span>
-          <p>Se é raro no seu modelo, ótimo. Se é frequente, você fragmentou uma entidade sem necessidade.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">UM PARA MUITOS</header>
-      <h3>Um de um lado, vários do outro</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Exemplo</span>
-          <p>Uma unidade tem muitos atendimentos. Um fornecedor tem muitos contratos. É a relação mais comum.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Como se implementa</span>
-          <p>O lado "muitos" guarda o código do lado "um". Atendimento guarda o código da unidade.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">MUITOS PARA MUITOS</header>
-      <h3>Vários dos dois lados</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Exemplo</span>
-          <p>Um servidor participa de vários projetos, e um projeto tem vários servidores.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Como se implementa</span>
-          <p>Uma terceira tabela, com os dois códigos. Sem ela, a junção multiplica linhas e a soma sai inflada.</p>
-        </div>
-    </article></div></div>
+    <p class="sub">O tipo define em que tabela fica a chave e o que acontece com a contagem na junção</p>
+    <div class="corpo"><svg class="fig" viewBox="0 0 1168 128" xmlns="http://www.w3.org/2000/svg"><text x="166" y="16" font-size="14" font-weight="700" fill="#6B6B6B">UM PARA UM (1:1)</text><text x="502" y="16" font-size="14" font-weight="700" fill="#6B6B6B">UM PARA MUITOS (1:N)</text><text x="838" y="16" font-size="14" font-weight="700" fill="#6B6B6B">MUITOS PARA MUITOS (N:N)</text><rect x="166" y="52" width="120" height="40" fill="#fff" stroke="#C9962E" stroke-width="2"/><text x="226" y="78" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1A1A1A" font-family="Consolas,Courier New,monospace">servidores</text><line x1="286" y1="72" x2="362" y2="72" stroke="#6B6B6B" stroke-width="2"/><text x="291" y="66" font-size="15" font-weight="700" fill="#8D0333">1</text><text x="357" y="66" font-size="15" font-weight="700" fill="#8D0333" text-anchor="end">1</text><rect x="362" y="52" width="120" height="40" fill="#fff" stroke="#C9962E" stroke-width="2"/><text x="422" y="78" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1A1A1A" font-family="Consolas,Courier New,monospace">fichas</text><rect x="502" y="52" width="110" height="40" fill="#fff" stroke="#0AB0AB" stroke-width="2"/><text x="557" y="78" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1A1A1A" font-family="Consolas,Courier New,monospace">unidades</text><line x1="612" y1="72" x2="682" y2="72" stroke="#6B6B6B" stroke-width="2"/><text x="617" y="66" font-size="15" font-weight="700" fill="#8D0333">1</text><text x="677" y="66" font-size="15" font-weight="700" fill="#8D0333" text-anchor="end">N</text><rect x="682" y="52" width="140" height="40" fill="#fff" stroke="#0AB0AB" stroke-width="2"/><text x="752" y="78" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1A1A1A" font-family="Consolas,Courier New,monospace">atendimentos</text><rect x="838" y="28" width="120" height="40" fill="#fff" stroke="#8D0333" stroke-width="2"/><text x="898" y="54" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1A1A1A" font-family="Consolas,Courier New,monospace">servidores</text><rect x="1038" y="28" width="110" height="40" fill="#fff" stroke="#8D0333" stroke-width="2"/><text x="1093" y="54" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1A1A1A" font-family="Consolas,Courier New,monospace">projetos</text><rect x="908" y="86" width="170" height="40" fill="#fff" stroke="#8D0333" stroke-width="2"/><text x="993" y="112" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1A1A1A" font-family="Consolas,Courier New,monospace">participacoes</text><g stroke="#6B6B6B" stroke-width="2"><line x1="898" y1="68" x2="938" y2="86"/><line x1="1093" y1="68" x2="1048" y2="86"/></g><g font-size="15" font-weight="700" fill="#8D0333"><text x="886" y="84">1</text><text x="892" y="104">N</text><text x="1100" y="84">1</text><text x="1084" y="104">N</text></g></svg>
+    <table class="tab" style="margin-top:8px">
+      <tr><th style="width:13.7%"></th><th style="width:28.77%">UM PARA UM</th><th style="width:28.77%">UM PARA MUITOS</th><th style="width:28.77%">MUITOS PARA MUITOS</th></tr>
+      <tr><td><strong>Exemplo</strong></td><td>Servidor e ficha funcional</td><td>Uma unidade tem muitos atendimentos. Um fornecedor tem muitos contratos.</td><td>Um servidor atua em vários projetos, e um projeto tem vários servidores.</td></tr>
+      <tr><td><strong>Como se implementa</strong></td><td>As duas tabelas usam a mesma chave. Relação rara, que costuma indicar uma entidade dividida sem necessidade.</td><td>O lado N guarda a chave do lado 1. Em atendimentos, é a coluna cod_unidade.</td><td>Terceira tabela (tabela associativa) com as duas chaves, uma linha por participação.</td></tr>
+      <tr><td><strong>Efeito na junção</strong></td><td>A contagem se mantém</td><td>Partindo do lado N, a contagem se mantém. Partindo do lado 1, cresce até o número de linhas do lado N.</td><td>O servidor que está em 3 projetos aparece 3 vezes, e a soma do salário dele triplica.</td></tr>
+    </table></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 7.2 · Teoria</span>
-      <span class="pag">12 / 29</span>
+      <span class="pag">13 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="12">
+<section class="slide conteudo">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 7.2 · PRÁTICA</span>
     <h2>Sua vez: modele as suas tabelas</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Liste as entidades das suas duas tabelas</strong><p>Uma frase por entidade, dizendo o que cada linha representa no mundo.</p></div>
+      <div><strong>Escreva o que cada linha representa</strong><p>Uma frase por tabela, como um atendimento, um município em um ano ou um contrato.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Aponte a chave de cada uma</strong><p>Se não houver coluna que identifique sem ambiguidade, registre isso: é o principal achado do ciclo.</p></div>
+      <div><strong>Aponte a chave de cada tabela e confira</strong><p>Rode sql "SELECT COUNT(*), COUNT(DISTINCT coluna) FROM tabela". Se os dois números forem diferentes, a coluna se repete ou tem vazios e não serve de chave.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Escreva a relação nos dois sentidos</strong><p>"Um município tem muitos atendimentos" e "um atendimento pertence a um município".</p></div>
+      <div><strong>Escreva a relação nos dois sentidos</strong><p>"Um município tem muitos atendimentos" e "um atendimento pertence a um município". Se as bases não têm chave comum, registre isso.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Desenhe o modelo</strong><p>Peça: "escreva em mermaid o diagrama das tabelas de projeto.db, com as chaves e as relações. Grave em saidas/modelo.md." Confira se as relações estão como você escreveu.</p></div>
+      <div><strong>Peça o diagrama ao agente e confira</strong><p>"Escreva em Mermaid o diagrama entidade-relacionamento das tabelas de projeto.db, com chaves e relações. Grave em saidas/modelo.md." Compare cada relação com o que você escreveu.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 7.2 · Prática</span>
-      <span class="pag">13 / 29</span>
+      <span class="pag">14 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="13">
+<section class="slide conteudo">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 7.2 · ENTREGA</span>
     <h2>Modelo das suas tabelas</h2>
@@ -557,168 +618,202 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>As entidades, com o que cada linha representa.</li><li>A chave de cada tabela, ou o registro de que não existe uma.</li><li>A relação escrita nos dois sentidos, com o tipo identificado.</li><li>O diagrama gerado, conferido contra o que você escreveu.</li></ul>
+      <ul><li>O que cada linha de cada tabela representa.</li><li>A chave de cada tabela, com as duas contagens que a confirmam, ou o registro de que ela não existe.</li><li>A relação escrita nos dois sentidos, com o tipo identificado.</li><li>O diagrama gerado pelo agente, conferido contra o que você escreveu.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>entregas/modulo7-ciclo2-modelo.md\nsaidas/modelo.md</p>
+        <p><span class="mono" style="font-size:15px">entregas/modulo7-ciclo2-modelo.md<br>saidas/modelo.md</span></p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Relação escrita em um sentido só não conta: é a leitura nos dois sentidos que revela o tipo.</p>
+        <p>Relação escrita em um só sentido não é aceita, porque o tipo aparece na leitura dos dois sentidos. Chave indicada sem as duas contagens também não.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 7.2 · Entrega</span>
-      <span class="pag">14 / 29</span>
+      <span class="pag">15 / 31</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="14">
+<section class="slide divisor">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">7.3</span></div>
       <div class="dir">
         <h2>Perguntas de negócio viram consultas</h2>
         <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">15 / 29</span>
+      <span class="pag">16 / 31</span>
     </section>
-<section class="slide conteudo" data-i="15">
+<section class="slide conteudo">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 7.3 · TEORIA</span>
-    <h2>Toda consulta responde cinco perguntas</h2>
-    <p class="sub">Saber quais são basta para ler qualquer consulta, mesmo sem escrever nenhuma</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:5">
-    <li><span class="num">1</span>
-      <div><strong>O que eu quero ver</strong><p>As colunas do resultado. Em linguagem de consulta, é o SELECT. Pedir tudo é o erro de quem não sabe o que procura.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>De onde</strong><p>A tabela, ou as tabelas juntadas. É o FROM e o JOIN. Quando são duas, a chave da junção precisa estar declarada.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Filtrado por quê</strong><p>A condição que decide quais linhas entram. É o WHERE. É aqui que quase todo número errado nasce.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Agrupado como</strong><p>Por unidade, por mês, por categoria. É o GROUP BY, e ele define a granularidade do resultado.</p></div>
-    </li>
-    <li><span class="num">5</span>
-      <div><strong>Ordenado como</strong><p>Do maior para o menor, ou por data. É o ORDER BY. Muda a leitura e não muda o número.</p></div>
-    </li></ol></div>
+    <h2>As cinco partes de uma consulta</h2>
+    <p class="sub">Quem identifica as cinco partes consegue ler uma consulta sem saber escrevê-la</p>
+    <div class="corpo"><div class="duascol" style="--esq:1fr;--dir:1.12fr">
+    <div class="col">
+      <pre class="terminal" style="font-size:16px;line-height:1.6;padding:16px 18px"><span class="hl">1 SELECT</span>   cod_unidade,
+           COUNT(*)   AS atendimentos,
+           SUM(custo) AS custo_total
+<span class="hl">2 FROM</span>     atendimentos
+<span class="hl">3 WHERE</span>    data BETWEEN '2026-01-01'
+                    AND '2026-08-31'
+<span class="hl">4 GROUP BY</span> cod_unidade
+<span class="hl">5 ORDER BY</span> custo_total DESC</pre>
+      <div class="caixa dourado"><span class="rot">ORDEM EM QUE O BANCO EXECUTA</span>
+        <p>FROM, WHERE, GROUP BY, SELECT e ORDER BY. O filtro age antes da soma, e a soma é feita dentro de cada grupo.</p></div>
+    </div>
+    <div class="col">
+      <table class="tab apertada">
+        <tr><th style="width:27%">PERGUNTA</th><th style="width:22%">CLÁUSULA</th><th style="width:51%">O QUE LER</th></tr>
+        <tr><td><strong>1. O que quero ver</strong></td><td class="mono">SELECT</td><td>Colunas e cálculos do resultado. SUM, COUNT e AVG ignoram valores vazios, menos COUNT(*).</td></tr>
+        <tr><td><strong>2. De onde</strong></td><td class="mono">FROM, JOIN</td><td>A tabela, ou as tabelas e a chave que as liga</td></tr>
+        <tr><td><strong>3. Filtrado por quê</strong></td><td class="mono">WHERE</td><td>Quais linhas entram. A maior parte dos números errados nasce aqui.</td></tr>
+        <tr><td><strong>4. Agrupado como</strong></td><td class="mono">GROUP BY</td><td>A granularidade do resultado, como uma linha por unidade ou por mês</td></tr>
+        <tr><td><strong>5. Ordenado como</strong></td><td class="mono">ORDER BY</td><td>Só a ordem das linhas. O número fica igual.</td></tr>
+      </table>
+      <div class="caixa teal"><span class="rot">LEITURA DO EXEMPLO</span>
+        <p>Custo total e número de atendimentos por unidade, de janeiro a agosto de 2026, da unidade de maior custo para a de menor.</p></div>
+    </div>
+  </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 7.3 · Teoria</span>
-      <span class="pag">16 / 29</span>
+      <span class="pag">17 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="16">
+<section class="slide conteudo">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 7.3 · TEORIA</span>
     <h2>Três erros que produzem número errado plausível</h2>
-    <p class="sub">Nenhum deles dá mensagem de erro. Todos dão um resultado que parece certo.</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">O FILTRO</header>
-      <h3>A condição exclui o vazio sem avisar</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que acontece</span>
-          <p>Filtrar por "custo maior que zero" tira também as linhas de custo vazio, e o total encolhe silenciosamente.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Como detectar</span>
-          <p>Compare a contagem antes e depois do filtro. É a segunda conferência do encontro passado.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">A JUNÇÃO</header>
-      <h3>Uma linha vira várias e a soma infla</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que acontece</span>
-          <p>Se o código da unidade se repete na tabela de referência, cada um dos 500 atendimentos dela é contado duas vezes. A base sobe para 1.000 linhas, e o custo total reportado sai o dobro do real, sem nenhuma mensagem de erro.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Como detectar</span>
-          <p>Conte as linhas antes e depois da junção. Se cresceu, a chave não era única.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">A GRANULARIDADE</header>
-      <h3>A média das médias não é a média</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que acontece</span>
-          <p>Unidade A: 900 atendimentos a R$ 40. Unidade B: 100 atendimentos a R$ 200. A média das médias dá R$ 120; a média pelo total dá R$ 56. Para orçar o custo do conjunto, vale a segunda: a primeira dá o mesmo peso a quem responde por um décimo do volume.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Como detectar</span>
-          <p>Calcule também pelo total dividido pelo total. Se der diferente, escolha conscientemente qual usar.</p>
-        </div>
-    </article></div></div>
+    <p class="sub">Nenhum deles gera mensagem de erro</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:18%">ERRO</th><th style="width:52%">EXEMPLO NUMÉRICO</th><th style="width:30%">COMO DETECTAR</th></tr>
+      <tr><td><strong>Filtro que descarta sem aviso</strong></td>
+          <td><span class="mono">WHERE custo &gt; 0</span> exclui também as 399 linhas de custo vazio, porque comparação com vazio (NULL) nunca é verdadeira. Data gravada como 15/09/2026 passa no filtro <span class="mono">BETWEEN '01/01/2026' AND '31/08/2026'</span>, porque a comparação é de texto.</td>
+          <td>Contar as linhas antes e depois do filtro. Gravar datas no formato AAAA-MM-DD.</td></tr>
+      <tr><td><strong>Junção que multiplica linhas</strong></td>
+          <td>O código de uma unidade aparece duas vezes na tabela de referência. Os 500 atendimentos dessa unidade entram duas vezes, a base passa de 500 para 1.000 linhas e o custo total dobra.</td>
+          <td>Contar as linhas antes e depois da junção. O comando juntar informa as chaves repetidas.</td></tr>
+      <tr><td><strong>Média das médias</strong></td>
+          <td>A unidade A tem 900 atendimentos a R$ 40 e a unidade B, 100 a R$ 200. A média das duas médias dá R$ 120. O custo total dividido pelos atendimentos dá 56.000 ÷ 1.000 = R$ 56.</td>
+          <td>Calcular também total ÷ total. Para orçar o conjunto, vale R$ 56, que pondera cada unidade pelo volume.</td></tr>
+    </table>
+    <div class="def" style="margin-top:14px"><span class="rot">Granularidade (grain)</span>
+      <p>O que uma linha da tabela representa, como um atendimento ou uma unidade em um mês. Soma e média só podem ser comparadas entre resultados de mesma granularidade (Kimball e Ross, 2013).</p></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 7.3 · Teoria</span>
-      <span class="pag">17 / 29</span>
+      <span class="pag">18 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="17">
+<section class="slide conteudo">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 7.3 · TEORIA</span>
+    <h2>Acerto dos modelos ao escrever SQL</h2>
+    <p class="sub">Resultados publicados em teste de conversão de pergunta em SQL (text-to-SQL)</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.12fr;--dir:1fr">
+    <div class="col"><svg class="fig" viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg"><text x="0" y="16" font-size="14" font-weight="700" fill="#6B6B6B">ACURÁCIA DE EXECUÇÃO NO TESTE BIRD, EM %</text><text x="0" y="52" font-size="14.5" fill="#1A1A1A">Especialistas humanos</text><rect x="0" y="60" width="520.6" height="26" fill="#0AB0AB"/><text x="528.6" y="79" font-size="15" font-weight="700" fill="#1A1A1A">92,96</text><text x="0" y="116" font-size="14.5" fill="#1A1A1A">Gemini-SQL2, primeiro entre modelos únicos, jun. 2026</text><rect x="0" y="124" width="448.2" height="26" fill="#FEC84D"/><text x="456.2" y="143" font-size="15" font-weight="700" fill="#1A1A1A">80,04</text><text x="0" y="180" font-size="14.5" fill="#1A1A1A">GPT-4 com a descrição das colunas, 2023</text><rect x="0" y="188" width="307.4" height="26" fill="#D4B277"/><text x="315.4" y="207" font-size="15" font-weight="700" fill="#1A1A1A">54,89</text><text x="0" y="244" font-size="14.5" fill="#1A1A1A">GPT-4 sem a descrição das colunas, 2023</text><rect x="0" y="252" width="195.3" height="26" fill="#8D0333"/><text x="203.3" y="271" font-size="15" font-weight="700" fill="#1A1A1A">34,88</text></svg>
+      <p class="rodape-corpo" style="margin-top:0">No teste original, a descrição do significado das colunas (external knowledge) elevou o acerto do GPT-4 em 20 pontos. Por isso o pedido ao agente leva o esquema e o que cada coluna quer dizer.</p>
+    </div>
+    <div class="col">
+      <div class="def"><span class="rot">Acurácia de execução (execution accuracy)</span>
+        <p>Percentual de perguntas em que a consulta gerada devolve o mesmo resultado da consulta de referência. O BIRD tem 12.751 perguntas sobre 95 bancos de 37 áreas (Li et al., 2023).</p></div>
+      <div class="caixa vinho"><span class="rot">O QUE O NÚMERO SIGNIFICA</span>
+        <p>Com 80% de acerto, uma consulta em cinco devolve resultado diferente do correto. A consulta errada roda sem mensagem de erro.</p></div>
+      <div class="caixa teal"><span class="rot">CONTROLE ADOTADO NA DISCIPLINA</span>
+        <p>O agente recebe o esquema, que não contém linhas de dados. Você lê as cinco partes antes de executar e confere as contagens. O resultado que o agente lê vai ao servidor do provedor do modelo.</p></div>
+    </div>
+  </div>
+  <p class="fonte-nota">Li et al. (2023), NeurIPS, arXiv:2305.03111. Resultado de jun. 2026 em AI Weekly, 13/6/2026. Ambos consultados em 2/11/2026.</p></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 7.3 · Teoria</span>
+      <span class="pag">19 / 31</span>
+    </footer>
+  </section>
+<section class="slide conteudo">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 7.3 · DEMONSTRAÇÃO</span>
-    <h2>Da pergunta ao resultado, com o SQL registrado</h2>
-    <p class="sub">O agente escreve, o script executa e grava, e você lê a consulta</p>
-    <div class="corpo"><div class="prompt">
-    <span class="rot">A SEQUÊNCIA COMPLETA</span>
-    <p>(1) "execute atividade_modulo7.py com o comando esquema" — mostra as tabelas e colunas.\n\n(2) Ao agente: "Com base neste esquema, escreva a consulta SQL que responde: qual o custo por atendimento em cada unidade, de janeiro a agosto de 2026. Devolva só a consulta, sem executar."\n\n(3) "execute atividade_modulo7.py com o comando sql" e cole a consulta. O script executa, mostra as primeiras linhas e grava o SQL e o resultado em saidas/.\n\nO script só executa comandos de leitura: uma instrução de escrita é recusada antes de rodar.</p>
-  </div>
-<ol class="steps cols-3" style="--linhas:1">
-    <li><span class="num">1</span>
-      <div><strong>Leia a consulta antes de executar</strong><p>Cinco perguntas: o quê, de onde, filtrado, agrupado, ordenado.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>O SQL fica gravado</strong><p>É a resposta auditável a "como esse número foi calculado?".</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Confira a contagem</strong><p>O script informa quantas linhas entraram e quantas saíram.</p></div>
-    </li></ol></div>
+    <h2>Da pergunta ao resultado, com o SQL gravado</h2>
+    <p class="sub">O agente escreve, você lê, o script executa e grava</p>
+    <div class="corpo"><div class="fluxo" style="--n:4">
+      <div class="etapa" style="--cor:#D4B277"><span class="n">1</span><h4>Esquema</h4>
+        <p>Comando esquema. Tabelas, colunas e tipos, sem linhas de dados.</p></div>
+      <div class="etapa" style="--cor:#FEC84D"><span class="n">2</span><h4>Pedido</h4>
+        <p>"Com base neste esquema, escreva a consulta que responde [pergunta]. Não execute."</p></div>
+      <div class="etapa" style="--cor:#0AB0AB"><span class="n">3</span><h4>Leitura</h4>
+        <p>As cinco partes, com atenção ao filtro, antes de qualquer execução.</p></div>
+      <div class="etapa" style="--cor:#8D0333"><span class="n">4</span><h4>Execução</h4>
+        <p>Comando sql com a consulta entre aspas. O script grava .sql e .csv.</p></div>
+    </div>
+    <div class="duascol" style="--esq:1.12fr;--dir:1fr;height:auto;margin-top:12px">
+      <pre class="terminal" style="font-size:13.5px;line-height:1.3">Linhas no resultado: 4
+
+cod_unidade | atendimentos | custo_total
+----------------------------------------------------------------------
+10 | 3102 | 581344.8
+20 | 2480 | 466240.0
+30 | 1655 | 297900.0
+40 | 1074 | 214800.0
+
+GRAVADO:
+<span class="hl">  + saidas/consulta-3.sql
+  + saidas/consulta-3.csv</span></pre>
+      <div class="col" style="gap:10px">
+        <div class="caixa vinho"><span class="rot">CONTAGEM ANTES E DEPOIS DO FILTRO</span>
+          <p>O script mostra só as linhas do resultado. As duas contagens saem de <span class="mono">SELECT COUNT(*) FROM atendimentos</span>, sem e com o WHERE. Aqui, 12.466 e 8.311.</p></div>
+        <div class="caixa dourado"><span class="rot">SÓ LEITURA</span>
+          <p>Consulta com DROP, DELETE, UPDATE, INSERT ou ALTER é recusada antes de rodar. As aspas evitam que o terminal leia o sinal &gt; como gravação em arquivo.</p></div>
+      </div>
+    </div>
+    <p class="fonte-nota">Trecho ilustrativo da saída da consulta do slide 17, no formato do script. 3.102 + 2.480 + 1.655 + 1.074 = 8.311 atendimentos.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 7.3 · Demonstração</span>
-      <span class="pag">18 / 29</span>
+      <span class="pag">20 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="18">
+<section class="slide conteudo">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 7.3 · PRÁTICA</span>
     <h2>Sua vez: cinco perguntas viram consultas</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><div class="duascol" style="--esq:1fr;--dir:1.05fr">
+    <div class="col"><ol class="steps cols-1 compacto" style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Use as cinco perguntas que você trouxe</strong><p>As que exigem cruzar as duas bases. Se alguma não exigir, troque por outra que exija.</p></div>
+      <div><strong>Use as cinco perguntas que exigem cruzar as bases</strong><p>Troque a que puder ser respondida com uma base só.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Peça a consulta e leia antes de rodar</strong><p>Identifique as cinco partes. Se você não entende o filtro, não aceite o número.</p></div>
+      <div><strong>Peça a consulta e leia antes de executar</strong><p>Identifique as cinco partes. Se o filtro não estiver claro, o número não é aceito.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Execute e confira a contagem</strong><p>Antes e depois do filtro, antes e depois da junção.</p></div>
+      <div><strong>Execute e conte antes e depois do filtro</strong><p>Duas consultas COUNT(*), sem e com o WHERE.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Registre pergunta, SQL e resultado</strong><p>Diga: "execute atividade_modulo7.py com o comando registrar". O formulário sai pronto para preencher.</p></div>
+      <div><strong>Registre e confira</strong><p>"execute atividade_modulo7.py com o comando registrar" cria o formulário. O comando conferir valida e gera o relatório.</p></div>
     </li></ol></div>
+    <div class="col">
+      <table class="tab apertada">
+        <tr><th colspan="2">ENTREGAS/MODULO7-CONSULTAS.CSV · UMA LINHA POR CONSULTA</th></tr>
+        <tr><td class="mono" style="width:44%">pergunta</td><td>A pergunta de negócio, em uma frase</td></tr>
+        <tr><td class="mono">arquivo_sql</td><td>Só o nome do arquivo, como consulta-1.sql</td></tr>
+        <tr><td class="mono">resultado</td><td>O número ou a conclusão em uma linha</td></tr>
+        <tr><td class="mono">linhas_antes_do_filtro</td><td>Número inteiro</td></tr>
+        <tr><td class="mono">linhas_depois_do_filtro</td><td>Número inteiro, nunca maior que o anterior</td></tr>
+        <tr><td class="mono">conferencia</td><td>Como o número foi conferido</td></tr>
+        <tr><td class="mono">precisou_corrigir</td><td>O que foi corrigido na consulta, ou nada</td></tr>
+      </table>
+    </div>
+  </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 7.3 · Prática</span>
-      <span class="pag">19 / 29</span>
+      <span class="pag">21 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="19">
+<section class="slide conteudo">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 7.3 · ENTREGA</span>
     <h2>Cinco consultas com resultado conferido</h2>
@@ -726,141 +821,117 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>Cinco perguntas de negócio, com a consulta que responde cada uma.</li><li>O resultado de cada consulta, gravado em arquivo.</li><li>A contagem antes e depois do filtro, para cada uma.</li><li>A identificação das cinco partes em pelo menos duas das consultas.</li><li>O registro de qualquer consulta que precisou ser corrigida, e por quê.</li></ul>
+      <ul><li>Cinco perguntas de negócio, cada uma com o arquivo .sql gravado pelo script.</li><li>O resultado de cada consulta e as contagens antes e depois do filtro.</li><li>Como cada número foi conferido e o que precisou ser corrigido.</li><li>No relatório gerado, as cinco partes identificadas em duas das consultas.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>entregas/modulo7-consultas.csv\nsaidas/consulta-*.sql</p>
+        <p><span class="mono" style="font-size:15px">entregas/modulo7-consultas.csv<br>saidas/consulta-*.sql<br>entregas/modulo7-relatorio.md</span></p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Consulta entregue sem a contagem antes e depois do filtro não conta. É onde o número errado se esconde.</p>
+        <p>O comando conferir recusa registro com menos de cinco consultas, arquivo .sql ausente de saidas/, conferência vazia ou contagem depois do filtro maior que antes. Filtro que descarta mais de 80% das linhas gera aviso.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 7.3 · Entrega</span>
-      <span class="pag">20 / 29</span>
+      <span class="pag">22 / 31</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="20">
+<section class="slide divisor">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">7.4</span></div>
       <div class="dir">
         <h2>Juntar fontes sem inventar linha</h2>
         <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">21 / 29</span>
+      <span class="pag">23 / 31</span>
     </section>
-<section class="slide conteudo" data-i="21">
+<section class="slide conteudo">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 7.4 · TEORIA</span>
-    <h2>Três formas de juntar, e o que cada uma faz com a contagem</h2>
-    <p class="sub">Confundi-las é a causa mais comum de total inflado em relatório</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">EMPILHAR</header>
-      <h3>Acrescentar linhas de mesma estrutura</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Quando se usa</span>
-          <p>Doze arquivos mensais com as mesmas colunas viram um só. É a operação mais simples e a mais segura.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Efeito na contagem</span>
-          <p>O total é a soma dos parciais. Se não for, algum arquivo tem cabeçalho diferente.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">JUNTAR POR CHAVE</header>
-      <h3>Acrescentar colunas de outra tabela</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Quando se usa</span>
-          <p>Trazer o nome e a região do município para a tabela de atendimentos, pelo código do IBGE.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Efeito na contagem</span>
-          <p>Deve permanecer igual. Se cresceu, a chave se repete do outro lado e você multiplicou linhas.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">CRUZAR TUDO</header>
-      <h3>Cada linha com cada linha</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Quando se usa</span>
-          <p>Quase nunca de propósito. Serve para gerar todas as combinações possíveis de dois conjuntos.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Efeito na contagem</span>
-          <p>Multiplica. Cem linhas com duzentas dão vinte mil. É o que acontece quando a chave da junção foi esquecida.</p>
-        </div>
-    </article></div></div>
+    <h2>Três formas de juntar e a contagem esperada</h2>
+    <p class="sub">A contagem esperada é a conferência de cada operação</p>
+    <div class="corpo"><svg class="fig" viewBox="0 0 1168 150" xmlns="http://www.w3.org/2000/svg"><defs><marker id="sj" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8D0333"/></marker></defs><text x="166" y="14" font-size="14" font-weight="700" fill="#6B6B6B">EMPILHAR · UNION ALL</text><text x="502" y="14" font-size="14" font-weight="700" fill="#6B6B6B">JUNTAR POR CHAVE · JOIN</text><text x="838" y="14" font-size="14" font-weight="700" fill="#6B6B6B">CRUZAR TUDO · CROSS JOIN</text><rect x="166" y="26" width="120" height="30" fill="#FFF3D1" stroke="#C9962E" stroke-width="2"/><text x="226" y="46" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1A1A1A">jan · 1.020</text><rect x="166" y="62" width="120" height="30" fill="#FFF3D1" stroke="#C9962E" stroke-width="2"/><text x="226" y="82" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1A1A1A">fev · 980</text><rect x="166" y="98" width="120" height="30" fill="#FFF3D1" stroke="#C9962E" stroke-width="2"/><text x="226" y="118" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1A1A1A">... dez</text><path d="M294,77 H342" stroke="#8D0333" stroke-width="2.2" marker-end="url(#sj)"/><rect x="348" y="26" width="130" height="102" fill="#fff" stroke="#C9962E" stroke-width="2"/><text x="413" y="72" text-anchor="middle" font-size="14" font-weight="700">soma das</text><text x="413" y="92" text-anchor="middle" font-size="14" font-weight="700">12 contagens</text><rect x="502" y="26" width="120" height="64" fill="#E2F5F4" stroke="#0AB0AB" stroke-width="2"/><text x="562" y="53" text-anchor="middle" font-size="13.5" font-weight="700">atendimentos</text><text x="562" y="73" text-anchor="middle" font-size="13.5">12.466</text><rect x="502" y="98" width="120" height="30" fill="#E2F5F4" stroke="#0AB0AB" stroke-width="2"/><text x="562" y="118" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1A1A1A">municipios · 217</text><path d="M630,77 H678" stroke="#8D0333" stroke-width="2.2" marker-end="url(#sj)"/><rect x="684" y="26" width="130" height="102" fill="#fff" stroke="#0AB0AB" stroke-width="2"/><text x="749" y="72" text-anchor="middle" font-size="14" font-weight="700">12.466 linhas</text><text x="749" y="92" text-anchor="middle" font-size="13.5">colunas das duas</text><rect x="838" y="26" width="120" height="46" fill="#F7E1E8" stroke="#8D0333" stroke-width="2"/><text x="898" y="54" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1A1A1A">100 linhas</text><rect x="838" y="82" width="120" height="46" fill="#F7E1E8" stroke="#8D0333" stroke-width="2"/><text x="898" y="110" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1A1A1A">200 linhas</text><path d="M966,77 H1014" stroke="#8D0333" stroke-width="2.2" marker-end="url(#sj)"/><rect x="1020" y="26" width="130" height="102" fill="#fff" stroke="#8D0333" stroke-width="2"/><text x="1085" y="72" text-anchor="middle" font-size="14" font-weight="700">100 × 200 =</text><text x="1085" y="92" text-anchor="middle" font-size="14" font-weight="700">20.000 linhas</text></svg>
+    <table class="tab apertada" style="margin-top:6px">
+      <tr><th style="width:13.7%"></th><th style="width:28.77%">EMPILHAR</th><th style="width:28.77%">JUNTAR POR CHAVE</th><th style="width:28.77%">CRUZAR TUDO</th></tr>
+      <tr><td><strong>O que faz</strong></td><td>Acrescenta linhas de arquivos com as mesmas colunas</td><td>Acrescenta colunas de outra tabela, pela chave</td><td>Combina cada linha de uma tabela com cada linha da outra</td></tr>
+      <tr><td><strong>Contagem esperada</strong></td><td>Soma das contagens parciais</td><td>Igual à da tabela principal, se a chave for única na outra</td><td>Produto das duas contagens</td></tr>
+      <tr><td><strong>Se não bater</strong></td><td>Algum arquivo tem cabeçalho diferente ou foi lido duas vezes</td><td>Se cresceu, a chave se repete. Se diminuiu, há linhas sem par.</td><td>Aparece quando a condição da junção foi esquecida</td></tr>
+    </table>
+    <div class="caixa teal" style="margin-top:10px"><span class="rot">JUNÇÃO INTERNA E JUNÇÃO À ESQUERDA</span>
+      <p>O comando juntar faz junção interna (INNER JOIN), que deixa fora do resultado as linhas sem par. A junção à esquerda (LEFT JOIN), que você pode pedir no comando sql, mantém todas as linhas da primeira tabela, com vazio nas colunas da segunda.</p></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 7.4 · Teoria</span>
-      <span class="pag">22 / 29</span>
+      <span class="pag">24 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="22">
+<section class="slide conteudo">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 7.4 · DEMONSTRAÇÃO</span>
-    <h2>A junção validada pela contagem</h2>
-    <p class="sub">A regra que evita o erro mais caro deste módulo</p>
-    <div class="corpo"><div class="prompt">
-    <span class="rot">EXECUÇÃO DO SCRIPT DA ATIVIDADE</span>
-    <p>"execute atividade_modulo7.py com o comando juntar atendimentos municipios codigo_ibge"\n\nO script junta as duas tabelas pela chave indicada, informa quantas linhas havia antes, quantas ficaram depois, quantas não encontraram par nos dois sentidos, e grava a tabela resultante.</p>
-  </div>
-<ol class="steps cols-3" style="--linhas:1">
-    <li><span class="num">1</span>
-      <div><strong>Depois maior que antes é erro</strong><p>A chave não era única. Pare e investigue: o script informa quantas chaves se repetem.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Depois menor que antes é escolha</strong><p>Você perdeu as linhas sem correspondência. Isso pode ser certo, mas precisa ser declarado.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Os sem par dos dois lados importam</strong><p>Um é dado seu sem referência; o outro é referência sem uso.</p></div>
-    </li></ol></div>
+    <h2>A junção conferida pela contagem</h2>
+    <p class="sub">Tabela de referência com uma chave repetida. Saída ilustrativa, no formato do script</p>
+    <div class="corpo"><div class="prompt compacto"><span class="rot">EXECUÇÃO DO SCRIPT DA ATIVIDADE</span>
+      <p><span class="cmd">"execute atividade_modulo7.py com o comando juntar atendimentos municipios cod_ibge"</span></p></div>
+    <div class="duascol" style="--esq:1.3fr;--dir:1fr;height:auto;gap:22px">
+      <pre class="terminal" style="font-size:12px;line-height:1.36;align-self:start">  Linhas em atendimentos           12466
+  Linhas em municipios             218
+<span class="hl">  Linhas depois da juncao       16531</span>
+  Sem par em atendimentos          37
+  Sem par em municipios            189
+<span class="hl">  Chaves repetidas em municipios   1</span>
+
+  ATENCAO: a juncao AUMENTOU a contagem.
+  A chave se repete em municipios (1 valor(es) repetido(s)).
+  Some linhas foram multiplicadas e qualquer soma sobre o resultado esta inflada.
+  Investigue antes de seguir. Nao entregue assim.
+
+Tabela juntada criada: atendimentos_municipios
+Registre as cinco contagens acima na entrega do ciclo 7.4.</pre>
+      <div class="col" style="gap:8px">
+        <div class="caixa vinho"><span class="rot">A CONTA</span>
+          <p>12.466 − 37 sem par = 12.429 com par. São Luís aparece duas vezes em municipios, e os 4.102 atendimentos dela entram em dobro, e 12.429 + 4.102 = 16.531.</p></div>
+        <div class="caixa dourado"><span class="rot">DEPOIS DA CORREÇÃO</span>
+          <p>Sem a linha repetida no CSV e com o banco recriado, a junção dá 12.429. A queda de 37 linhas é declarada na entrega.</p></div>
+        <div class="caixa teal"><span class="rot">CHAVE VAZIA</span>
+          <p>O script não conta chave vazia como sem par. Conte à parte com <span class="mono">sql "SELECT COUNT(*) FROM atendimentos WHERE cod_ibge IS NULL"</span>.</p></div>
+      </div>
+    </div>
+</div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 7.4 · Demonstração</span>
-      <span class="pag">23 / 29</span>
+      <span class="pag">25 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="23">
+<section class="slide conteudo">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 7.4 · PRÁTICA</span>
     <h2>Sua vez: junte e valide</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Junte as suas duas tabelas pela chave</strong><p>Se a chave for texto, o resultado vai ser ruim. Procure um código antes de aceitar o nome.</p></div>
+      <div><strong>Junte as suas duas tabelas pela chave</strong><p>A chave precisa ter o mesmo nome nas duas tabelas. Se não tiver, renomeie a coluna no CSV e recrie o banco.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Compare as contagens</strong><p>Antes, depois, e os sem par de cada lado.</p></div>
+      <div><strong>Registre as contagens que o script imprime</strong><p>Linhas de cada tabela, linhas depois da junção, sem par de cada lado e chaves repetidas. Some a elas as chaves vazias, contadas à parte.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Explique cada linha sem par</strong><p>Grafia diferente, registro de outro período, código inexistente na tabela de referência.</p></div>
+      <div><strong>Explique cada grupo de linhas sem par</strong><p>Código digitado errado, registro de outro período, município fora da base de referência.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Refaça uma consulta do ciclo 7.3 sobre a tabela juntada</strong><p>O número mudou? Se mudou, por quê? É a conferência que fecha o encontro.</p></div>
+      <div><strong>Refaça uma consulta do ciclo 7.3 sobre a tabela juntada</strong><p>O nome da tabela junta os das duas, como atendimentos_municipios. Compare o número com o da consulta original e explique a diferença.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 7.4 · Prática</span>
-      <span class="pag">24 / 29</span>
+      <span class="pag">26 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="24">
+<section class="slide conteudo">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 7.4 · ENTREGA</span>
     <h2>Junção validada pela contagem</h2>
@@ -868,26 +939,26 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>A tabela resultante da junção, no banco.</li><li>As contagens: antes, depois e sem par de cada lado.</li><li>A explicação de cada grupo de linhas sem par.</li><li>Uma consulta do ciclo 7.3 refeita sobre a tabela juntada, com a comparação dos números.</li></ul>
+      <ul><li>A tabela juntada, criada no projeto.db pelo comando juntar.</li><li>As contagens impressas pelo script e a contagem de chaves vazias.</li><li>A explicação de cada grupo de linhas sem par.</li><li>Uma consulta do ciclo 7.3 refeita sobre a tabela juntada, com os dois números lado a lado.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>entregas/modulo7-ciclo4-juncao.md</p>
+        <p><span class="mono" style="font-size:15px">entregas/modulo7-ciclo4-juncao.md</span></p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Junção que aumentou a contagem e foi entregue assim zera o item. É exatamente o erro que o ciclo existe para evitar.</p>
+        <p>Junção que aumentou a contagem e foi entregue assim zera o item. Junção que diminuiu a contagem sem declarar as linhas perdidas também não é aceita.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 7.4 · Entrega</span>
-      <span class="pag">25 / 29</span>
+      <span class="pag">27 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="25">
+<section class="slide conteudo">
     <span class="barra"></span>
     <span class="eyebrow">BALANÇO</span>
     <h2>O que você tem ao fim do encontro</h2>
@@ -895,116 +966,119 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="cards cols-3">
     <article class="card">
       <header style="background:#D4B277">O BANCO</header>
-      <h3>Duas tabelas tipadas e ligadas</h3>
-      
+      <h3>Duas tabelas tipadas e modeladas</h3>
         <div class="bloco">
           <span class="rule" style="background:#D4B277"></span>
           <span class="rot">O que é</span>
-          <p>Um arquivo, projeto.db, com as bases do seu projeto convertidas em tabelas com tipo e chave.</p>
+          <p>O arquivo projeto.db, com contagens e tipos conferidos contra o perfil, e o modelo com chaves e relações.</p>
         </div>
         <div class="bloco">
           <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Para que serve</span>
-          <p>É a fonte do painel do encontro 9 e de tudo que vier depois.</p>
+          <span class="rot">Uso seguinte</span>
+          <p>Fonte do painel do encontro 9 e do projeto final.</p>
         </div>
     </article>
     <article class="card">
       <header style="background:#0AB0AB">AS CONSULTAS</header>
-      <h3>Cinco perguntas respondidas e auditáveis</h3>
-      
+      <h3>Cinco perguntas respondidas</h3>
         <div class="bloco">
           <span class="rule" style="background:#0AB0AB"></span>
           <span class="rot">O que é</span>
-          <p>Cada pergunta com o SQL que a responde, o resultado gravado e a contagem conferida.</p>
+          <p>Cada pergunta com o SQL gravado em saidas/, o resultado e as contagens antes e depois do filtro.</p>
         </div>
         <div class="bloco">
           <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Para que serve</span>
-          <p>São os indicadores que o painel vai mostrar. O SQL é a resposta a "de onde veio o número".</p>
+          <span class="rot">Uso seguinte</span>
+          <p>Os indicadores do painel. O arquivo .sql responde de onde veio cada número.</p>
         </div>
     </article>
     <article class="card">
       <header style="background:#FEC84D">A JUNÇÃO</header>
-      <h3>Validada pela contagem, não pela aparência</h3>
-      
+      <h3>Validada pela contagem</h3>
         <div class="bloco">
           <span class="rule" style="background:#FEC84D"></span>
           <span class="rot">O que é</span>
-          <p>A tabela cruzada, com o antes, o depois e os sem par explicados.</p>
+          <p>A tabela juntada, com as linhas sem par explicadas e a ausência de chave repetida conferida.</p>
         </div>
         <div class="bloco">
           <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Para que serve</span>
-          <p>É a competência que separa análise confiável de total inflado que ninguém percebeu.</p>
+          <span class="rot">Uso seguinte</span>
+          <p>Base das consultas que cruzam as duas fontes, sem total inflado.</p>
         </div>
     </article></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Balanço do módulo</span>
-      <span class="pag">26 / 29</span>
+      <span class="pag">28 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="26">
+<section class="slide conteudo">
     <span class="barra"></span>
     <span class="eyebrow">PRÓXIMOS PASSOS</span>
     <h2>Módulo 8: o que preparar</h2>
-    <p class="sub">Visualização de dados e painéis. O encontro 9 tem a entrega B1.</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <p class="sub">Visualização de dados e painéis. O encontro 9 tem a entrega B1</p>
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:5">
     <li><span class="num">1</span>
-      <div><strong>Deixe o banco e as consultas no repositório</strong><p>O painel do encontro 9 é construído sobre eles, e não sobre planilha nova.</p></div>
+      <div><strong>Mantenha projeto.db e saidas/ na pasta do projeto</strong><p>O painel do encontro 9 usa as consultas gravadas, e não uma planilha nova.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Escolha três dos cinco indicadores</strong><p>Os três que um gestor olharia primeiro. Anote a razão da escolha.</p></div>
+      <div><strong>Escolha três dos cinco indicadores</strong><p>Os três que um gestor consultaria primeiro. Anote a razão da escolha.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Traga um gráfico ruim que você tenha visto</strong><p>De relatório, jornal ou apresentação. Vai ser reconstruído em sala.</p></div>
+      <div><strong>Prepare uma consulta de duas colunas para o gráfico</strong><p>Categoria e valor, como cod_unidade e SUM(custo). O comando sql grava a série em saidas/consulta-N.csv.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>A entrega B1 reúne os encontros 7, 8 e 9</strong><p>Base povoada, consultas e painel. Quem está atrasado precisa acertar esta semana.</p></div>
+      <div><strong>Traga um gráfico ruim de relatório, jornal ou apresentação</strong><p>Ele será reconstruído em sala. Leia a parte de visualização do capítulo 3 de Sharda, Delen e Turban.</p></div>
+    </li>
+    <li><span class="num">5</span>
+      <div><strong>A entrega B1 reúne os encontros 7, 8 e 9</strong><p>Base, modelo, consultas, junção e painel. O comando b1 do script do módulo 8 lista o que falta.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Próximos passos</span>
-      <span class="pag">27 / 29</span>
+      <span class="pag">29 / 31</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="27">
+<section class="slide conteudo">
     <span class="barra"></span>
     <span class="eyebrow">DÚVIDAS FREQUENTES</span>
     <h2>Perguntas que aparecem neste módulo</h2>
     
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:5">
+    <div class="corpo"><ol class="steps cols-2 compacto" style="--linhas:3">
     <li><span class="num">1</span>
-      <div><strong>"Preciso decorar SQL?"</strong><p>Não. Precisa saber ler as cinco partes e conferir o filtro. Quem escreve pode ser o agente; quem responde pelo número é você.</p></div>
+      <div><strong>"Preciso decorar SQL?"</strong><p>Não. Precisa identificar as cinco partes e conferir filtro e contagens. O agente pode escrever a consulta, e quem assina o número responde por ele.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>"Minhas bases não têm chave comum."</strong><p>Achado do encontro. Registre, e crie a correspondência à mão numa terceira tabela. É o que se faz na organização real.</p></div>
+      <div><strong>"Minhas bases não têm chave comum."</strong><p>Registre a ausência e monte à mão uma tabela de correspondência, com o nome como aparece e o código. É o procedimento usado nas organizações.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>"A junção triplicou as linhas."</strong><p>A chave se repete do outro lado. Investigue qual valor aparece mais de uma vez na tabela de referência.</p></div>
+      <div><strong>"A junção triplicou as linhas."</strong><p>A chave se repete na segunda tabela. Encontre os valores com SELECT chave, COUNT(*) FROM tabela GROUP BY chave HAVING COUNT(*) &gt; 1.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>"O agente escreveu um SQL que não roda."</strong><p>Cole a mensagem de erro de volta para ele. Costuma ser nome de coluna: confira no esquema.</p></div>
+      <div><strong>"O agente escreveu uma consulta que não roda."</strong><p>Cole a mensagem de erro de volta para ele. O erro mais comum é nome de coluna, que se confere no esquema.</p></div>
     </li>
     <li><span class="num">5</span>
-      <div><strong>"Posso usar Excel em vez do banco?"</strong><p>Para cinco consultas com duas tabelas, o Excel dá conta. O ponto do módulo é entender o que ele esconde quando não dá.</p></div>
+      <div><strong>"O comando sql recusou a minha consulta."</strong><p>Ele só executa leitura. Para recriar uma tabela, corrija o CSV e use o comando banco.</p></div>
+    </li>
+    <li><span class="num">6</span>
+      <div><strong>"Posso usar Excel em vez do banco?"</strong><p>Com duas tabelas pequenas, o Excel resolve as cinco perguntas. O banco acrescenta o SQL gravado de cada número e a contagem da junção.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Dúvidas frequentes</span>
-      <span class="pag">28 / 29</span>
+      <span class="pag">30 / 31</span>
     </footer>
   </section>
-<section class="slide fim" data-i="28">
+<section class="slide fim">
       <span class="filete"></span>
       <h1>Módulo 7 concluído</h1>
-      <p>A base virou tabela consultável e as perguntas viraram consultas auditáveis. No próximo encontro os números viram painel, e a entrega B1 fecha o bloco.</p>
+      <p>As bases estão em tabelas tipadas, as perguntas têm consultas gravadas e a junção foi conferida pela contagem. No próximo encontro, os números entram no painel da entrega B1.</p>
       <span class="slogan">SEMPRE+ QUALIDADE INOVAÇÃO INCLUSÃO</span>
     </section>
 </div>
 <div id="barra">
   <button id="ant" title="Anterior">&#8249;</button>
-  <input id="atual" value="1" title="Ir para o slide"> <span>/ 29</span>
+  <input id="atual" value="1" title="Ir para o slide"> <span>/ 31</span>
   <button id="prox" title="Próximo">&#8250;</button>
   <button id="tela" title="Tela cheia">&#9744;</button>
 </div>
