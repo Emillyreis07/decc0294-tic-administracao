@@ -16,19 +16,21 @@ Não há instalação neste encontro. Os alunos precisam apenas de navegador e d
 | Bloco | Duração | Slides |
 |---|---|---|
 | Abertura e visão geral | 10 min | 1 a 2 |
-| Ciclo 1.1 | 50 min | 3 a 9 |
+| Ciclo 1.1 | 50 min | 3 a 10 |
 | Intervalo | 15 min | |
-| Ciclo 1.2 | 50 min | 10 a 16 |
-| Ciclo 1.3 | 55 min | 17 a 23 |
+| Ciclo 1.2 | 50 min | 11 a 17 |
+| Ciclo 1.3 | 55 min | 18 a 25 |
 | Intervalo | 10 min | |
-| Ciclo 1.4 | 45 min | 24 a 29 |
-| Fechamento | 15 min | 30 a 34 |
+| Ciclo 1.4 | 45 min | 26 a 31 |
+| Fechamento | 15 min | 32 a 36 |
 
-## Ciclo 1.1 — A quarta revolução industrial
+Deck revisado em 2 nov. 2026 (36 slides). Slides novos: 6, velocidade de adoção da IA generativa, e 20, quanto do trabalho a IA generativa alcança. Os dados de adoção e de trabalho por plataforma têm data de consulta no próprio slide e devem ser reconferidos antes de cada semestre.
 
-Teoria, 20 min. As quatro revoluções e o que cada uma deslocou. As três características que Schwab usa. As três fragilidades do argumento.
+## Ciclo 1.1. A quarta revolução industrial
 
-Demonstração, 10 min. O professor projeta uma sessão e dá a instrução do slide 7. Mostra a resposta e abre uma das fontes citadas no navegador, ao vivo.
+Teoria, 20 min. As quatro revoluções e o que cada uma transferiu para a máquina (slide 4). A definição de Schwab e as três características que ele usa, velocidade, amplitude e profundidade, e impacto sistêmico (slide 5). A versão anterior do deck trocava o impacto sistêmico por uma terceira característica chamada profundidade. A velocidade com número, pela adoção da IA generativa nos EUA (Bick, Blandin e Deming, 2025) e no Brasil (TIC Domicílios 2025) (slide 6). As fragilidades do argumento, com a produtividade por hora de Gordon (2016) (slide 7).
+
+Demonstração, 10 min. O professor projeta uma sessão e dá a instrução do slide 8. Mostra a resposta e abre uma das fontes citadas no navegador, ao vivo. A tabela do slide é ilustrativa e apresenta as três marcas da conferência (existe e traz o dado, existe e não traz o dado, não encontrada) e a definição de confabulação.
 
 Prática, 15 min. Cada aluno escolhe uma afirmação e repete o procedimento.
 
@@ -38,25 +40,25 @@ Resultado esperado, caso o modelo não responda: o exercício continua sem ele. 
 
 Ponto de atenção: alguém vai perguntar se pode usar o Perplexity ou outro serviço. Pode, desde que registre qual usou.
 
-## Ciclo 1.2 — Sociedade informacional e a empresa brasileira
+## Ciclo 1.2. Sociedade informacional e a empresa brasileira
 
-Teoria, 20 min. O que muda quando a informação vira insumo. A plataforma como intermediação. O recorte brasileiro.
+Teoria, 20 min. Sociedade informacional em Castells (1996) e três mudanças na empresa (slide 12). A plataforma como mercado de dois lados, com os números do IBGE sobre trabalho por plataforma em 2024 e a disputa sobre o vínculo (slide 13). Antes da aula, conferir se o STF concluiu o Tema 1291. O recorte brasileiro com a TIC Empresas 2025 por porte e setor, a PNAD Contínua TIC 2025 e a Pintec Semestral 2024 (slide 14).
 
-Demonstração, 10 min. A instrução do slide 14, que pede a fonte antes do número. Vale explicar por que a ordem importa.
+Demonstração, 10 min. A instrução do slide 15, que pede a fonte antes do número, com as três fontes públicas que o assistente deveria listar. Explicar por que a ordem do pedido muda o resultado.
 
 Prática, 15 min. Dois setores, uma fonte, expectativa registrada antes.
 
 Entrega, 5 min. `entregas/modulo1-ciclo2-comparacao.md`.
 
-Fontes que funcionam bem nesta atividade: TIC Domicílios e TIC Empresas, do Cetic.br; PNAD Contínua TIC, do IBGE; Pesquisa de Inovação, do IBGE.
+Fontes que funcionam bem nesta atividade: TIC Domicílios e TIC Empresas (indicador H9, uso de IA por porte e setor), do Cetic.br, PNAD Contínua TIC e Pintec Semestral, do IBGE.
 
 Resultado esperado: a maioria descobre que a diferença entre setores é maior do que imaginava, e que a média nacional esconde essa diferença. Se ninguém chegar lá, o professor projeta uma comparação pronta e discute.
 
-## Ciclo 1.3 — Automação do trabalho: tarefa, não ocupação
+## Ciclo 1.3. Automação do trabalho medida por tarefa
 
-Teoria, 25 min. A distinção entre tarefa e ocupação e o que ela faz com as previsões. Os três destinos. Os quatro critérios.
+Teoria, 25 min. Tarefa e ocupação, com as estimativas de Frey e Osborne (2013), Arntz, Gregory e Zierahn (2016) e Nedelkoska e Quintini (2018) (slide 19). A exposição à IA generativa medida por tarefa em Eloundou et al. (2024), OIT e NASK (2025), Gmyrek, Winkler e Garganta (2024) e Brynjolfsson, Li e Raymond (2025) (slide 20). Os três destinos (slide 21) e os quatro critérios em tabela, com a referência a Autor, Levy e Murnane (2003) (slide 22).
 
-Demonstração, 10 min. Classificação das dez tarefas do assistente administrativo, com o pedido de incerteza ao final.
+Demonstração, 10 min. Classificação das dez tarefas do assistente administrativo, com o pedido de incerteza ao final (slide 23). As tarefas do exemplo reaparecem na matriz do slide 28.
 
 Prática, 15 min. Cada aluno escolhe um cargo que conhece e lista dez tarefas.
 
@@ -64,11 +66,11 @@ Entrega, 5 min. `entregas/modulo1-ciclo3-tarefas.md`.
 
 Ponto de atenção: metade da turma escreve "cuidar do setor" como tarefa. Corrija na hora, no primeiro caso, para toda a turma ouvir. Tarefa tem verbo no infinitivo e objeto definido.
 
-## Ciclo 1.4 — Mapa de tarefas automatizáveis
+## Ciclo 1.4. Mapa de tarefas automatizáveis
 
-Teoria, 12 min. Esforço, ganho e risco. A ordem de ataque, e por onde nunca começar.
+Teoria, 12 min. Esforço, ganho e risco, com a linha de exemplo do formulário calculada (slide 27). A ordem de ataque na matriz ganho por esforço, com as dez tarefas ilustrativas (slide 28).
 
-Demonstração, 8 min. O professor executa `atividade_modulo1.py iniciar` na projeção e mostra o formulário criado.
+Demonstração, 8 min. O professor executa `atividade_modulo1.py iniciar` na projeção e mostra o formulário criado. O slide 29 traz a saída real do `conferir` sobre as dez tarefas ilustrativas.
 
 Prática, 20 min. Cada aluno preenche as suas dez tarefas e roda `conferir`.
 

@@ -173,6 +173,139 @@ body.mexeu #ajuda{opacity:1}
   #barra,#ajuda{display:none}
   .slide{display:block!important;page-break-after:always;box-shadow:none;transform:none!important}
 }
+/* ---- componentes acrescentados na revisão de nov. 2026 ---- */
+.mono{font-family:Consolas,"Cascadia Mono","Courier New",monospace}
+.fonte-nota{position:absolute;left:0;right:0;bottom:-2px;font-size:13px;color:var(--muted);line-height:1.3}
+.prompt.compacto{padding:12px 20px;margin-bottom:16px}
+.prompt.compacto p{font-size:17px;line-height:1.4;margin-top:6px}
+.prompt.compacto p+p{margin-top:6px}
+.prompt .cmd{font-style:normal;font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:16px}
+
+/* tabela de dados */
+.tab{width:100%;border-collapse:collapse;font-size:15px;line-height:1.3;color:var(--body)}
+.tab th{background:var(--vinho);color:#fff;font-weight:700;text-align:left;padding:7px 10px;font-size:14px;letter-spacing:.3px}
+.tab td{border-bottom:1px solid #e1e1e1;padding:7px 10px;vertical-align:top;background:#fff}
+.tab tr:nth-child(even) td{background:#fafafa}
+.tab td.lac{background:#FFF3D1!important;color:#7a5600;font-weight:700}
+.tab td .s{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+.tab td strong{color:var(--txt)}
+.chip{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.5px;padding:2px 8px;margin-bottom:4px;color:var(--txt)}
+.chip.ok{background:#CFEFEE}.chip.med{background:#FFE7A8}.chip.ruim{background:#F2CDD8;color:var(--vinho)}
+.badge{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--vinho);
+  color:#fff;font-size:12px;font-weight:700;margin-right:6px;vertical-align:1px;font-style:normal}
+
+/* duas colunas */
+.duascol{display:grid;grid-template-columns:var(--esq,1.4fr) var(--dir,1fr);gap:28px;height:100%}
+.duascol .col{display:flex;flex-direction:column;gap:14px;min-height:0}
+.steps.compacto{gap:12px}
+.steps.compacto strong{font-size:18px}
+.steps.compacto p{font-size:16px;line-height:1.35}
+.steps.compacto .num{flex:0 0 28px;height:28px;font-size:15px}
+
+/* fluxo horizontal */
+.fluxo{display:grid;grid-template-columns:repeat(var(--n,4),1fr);gap:34px;position:relative}
+.etapa{background:var(--card);border:1px solid #e3e3e3;border-top:6px solid var(--cor,var(--vinho));
+  padding:12px 16px 14px;position:relative}
+.etapa:not(:last-child)::after{content:"";position:absolute;right:-27px;top:50%;margin-top:-11px;
+  border-left:16px solid var(--vinho);border-top:11px solid transparent;border-bottom:11px solid transparent}
+.etapa .n{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;
+  background:var(--vinho);color:#fff;font-size:14px;font-weight:700}
+.etapa h4{display:inline;font-size:18px;color:var(--txt);margin-left:6px;vertical-align:2px}
+.etapa p{font-size:15.5px;line-height:1.38;margin-top:8px}
+.etapa .arq{display:block;margin-top:8px;font-size:13.5px;color:var(--vinho);
+  font-family:Consolas,"Cascadia Mono","Courier New",monospace;word-break:break-all}
+.trilha{margin-top:18px}
+.trilha .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1px;color:var(--muted);margin-bottom:6px}
+.trilha .barra-g{height:14px;background:linear-gradient(90deg,var(--teal) 0%,#9fd6c4 30%,var(--amarelo) 55%,var(--vinho) 100%)}
+.trilha .marcas{display:grid;grid-template-columns:repeat(4,1fr);gap:34px;font-size:13.5px;color:var(--muted);margin-top:5px}
+
+/* conceito (mesmo padrão dos módulos 2 e 3) */
+.def{background:var(--card2);border:1px solid #e3e3e3;border-left:9px solid var(--vinho);padding:12px 20px}
+.def .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1.2px;color:var(--vinho);text-transform:uppercase}
+.def p{font-size:17px;line-height:1.4;color:var(--txt);margin-top:5px}
+
+/* eixo acima dos cartões */
+.eixo{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;margin-bottom:14px;
+  font-size:14px;font-weight:700;color:var(--muted);letter-spacing:.4px}
+.eixo .seta{height:10px;position:relative;background:linear-gradient(90deg,var(--dourado),var(--teal))}
+.eixo .seta::after{content:"";position:absolute;right:-14px;top:-7px;border-left:16px solid var(--teal);
+  border-top:12px solid transparent;border-bottom:12px solid transparent}
+.cards.baixos{height:calc(100% - 40px)}
+.cards.baixos .card h3{font-size:18px;padding:12px 16px 2px}
+.cards.baixos .card .bloco{padding:8px 16px 0}
+.cards.baixos .card .bloco p{font-size:15.5px;line-height:1.36}
+
+/* grade de dimensões */
+.grade{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:14px;height:calc(100% - 22px)}
+.dim{background:var(--card);border:1px solid #e3e3e3;border-top:5px solid var(--cor);padding:10px 16px}
+.dim h4{font-size:19px;color:var(--vinho)}
+.dim h4 small{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.dim p{font-size:15.5px;line-height:1.36;margin-top:5px}
+.dim .med{display:block;font-size:14px;color:var(--txt);margin-top:7px;border-top:1px solid #ddd;padding-top:6px}
+.dim .med b{color:var(--muted);font-size:12.5px;letter-spacing:.6px}
+
+/* caixa lateral */
+.caixa{background:var(--card2);border:1px solid #e3e3e3;padding:12px 16px}
+.caixa.vinho{border-left:6px solid var(--vinho)}
+.caixa.dourado{border-left:6px solid var(--dourado)}
+.caixa.teal{border-left:6px solid var(--teal)}
+.caixa .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1px;color:var(--vinho);margin-bottom:4px}
+.caixa p{font-size:15.5px;line-height:1.38}
+.caixa p+p{margin-top:6px}
+.legenda{list-style:none}
+.legenda li{font-size:15.5px;line-height:1.35;margin-bottom:8px;display:flex;gap:6px}
+.legenda li b{color:var(--txt)}
+
+/* ficha do mapa de dados */
+.ficha{display:grid;grid-template-columns:1fr 1fr;gap:14px;height:calc(100% - 64px)}
+.ficha .grupo{background:var(--card);border:1px solid #e3e3e3;border-top:5px solid var(--cor)}
+.ficha .grupo>header{font-size:16px;font-weight:700;color:var(--vinho);padding:8px 14px 2px}
+.ficha .grupo>header span{color:var(--muted);font-weight:400;font-size:14px;margin-left:6px}
+.ficha dl{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;padding:6px 14px 10px;font-size:14.5px;line-height:1.3}
+.ficha dt{font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:13.5px;color:var(--vinho);padding-top:1px}
+.ficha dd{color:var(--txt)}
+.rodape-corpo{margin-top:12px;font-size:15.5px;line-height:1.4;color:var(--body)}
+
+/* svg */
+.fig{display:block;width:100%;height:auto}
+.fig text{font-family:"Segoe UI",Calibri,"Helvetica Neue",Arial,sans-serif}
+
+/* ajustes após conferência visual */
+.tab.apertada{font-size:14.5px}
+.tab.apertada td{padding:6px 10px}
+.legenda .badge{flex:0 0 20px;margin-top:1px}
+.dim p{font-size:17px}
+.dim .med{font-size:15.5px}
+.dim h4{font-size:21px}
+.cards.baixos .card .bloco p{font-size:16.5px}
+.eixo{gap:26px}
+.ficha dl{font-size:16.5px;gap:6px 14px;padding:8px 14px 12px}
+.ficha dt{font-size:15px}
+.ficha .grupo>header{font-size:17.5px}
+.etapa p{font-size:16.5px}
+.etapa .arq{word-break:normal;overflow-wrap:break-word}
+.steps.cols-3.compacto p{font-size:17px}
+.steps.cols-3.compacto strong{font-size:19px}
+
+/* blocos de saída de terminal */
+.terminal{background:#262626;color:#e9e9e9;font-family:Consolas,"Cascadia Mono","Courier New",monospace;
+  font-size:14px;line-height:1.38;padding:12px 16px;white-space:pre;overflow:hidden;margin:0}
+.terminal .hl{color:#FEC84D;font-weight:700}
+
+/* acréscimos do módulo 3 (nov. 2026) */
+.conceito .def{padding:14px 22px}
+.conceito .def p{font-size:21px}
+.anot p{font-style:normal;font-size:17px;line-height:1.55}
+.anot .el{display:block;padding:7px 10px;margin-top:8px}
+.anot .e1{background:#F6E9CF}.anot .e2{background:#D7F1F0}.anot .e3{background:#F6DCE4}.anot .e4{background:#FFEDB8}
+.caixa.q1{border-left:6px solid var(--dourado)}.caixa.q2{border-left:6px solid var(--teal)}
+.caixa.q3{border-left:6px solid var(--vinho)}.caixa.q4{border-left:6px solid var(--amarelo)}
+.duas+.duascol{margin-top:0}
+.prompt+.steps,.duas+.steps,.steps.auto{height:auto}
+.conceito{gap:14px}
+.conceito .pt p{font-size:16.5px;line-height:1.36}
+.conceito .analogia{padding:9px 18px}
+.conceito .analogia p{font-size:17px}
 </style>
 </head>
 <body>
@@ -183,7 +316,7 @@ body.mexeu #ajuda{opacity:1}
       <span class="mod">MÓDULO 3</span>
       <h1>Inteligência artificial, modelos de linguagem e engenharia de prompt</h1>
       <span class="tracinho"></span>
-      <p class="sub">Encontro 4 · O que a ferramenta faz, o que ela erra e como pedir</p>
+      <p class="sub">Encontro 4 · Como o modelo produz texto, onde ele erra e como escrever a instrução</p>
       <p class="pe">DECC0294 · Tecnologia da Informação e Comunicação Aplicada à Administração · 2026.2</p>
     </section>
 <section class="slide conteudo" data-i="1">
@@ -194,27 +327,27 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="overview">
     <article class="ciclo">
       <span class="topo" style="background:#D4B277"></span>
-      <span class="rot" >CICLO 3.1</span>
+      <span class="rot">CICLO 3.1</span>
       <h3>O que é IA e o que é um modelo de linguagem</h3>
       <div class="pe">
         <span class="rule" style="background:#D4B277"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Comparação de duas respostas ao mesmo pedido</p>
+        <p>Comparação de duas respostas à mesma instrução</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#0AB0AB"></span>
-      <span class="rot" >CICLO 3.2</span>
+      <span class="rot">CICLO 3.2</span>
       <h3>Alucinação e verificação</h3>
       <div class="pe">
         <span class="rule" style="background:#0AB0AB"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Diário de alucinação com cinco casos</p>
+        <p>Diário de alucinação com cinco casos conferidos na fonte</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#FEC84D"></span>
-      <span class="rot" >CICLO 3.3</span>
+      <span class="rot">CICLO 3.3</span>
       <h3>Os quatro elementos de um prompt</h3>
       <div class="pe">
         <span class="rule" style="background:#FEC84D"></span>
@@ -224,18 +357,18 @@ body.mexeu #ajuda{opacity:1}
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#D4B277"></span>
-      <span class="rot" >CICLO 3.4</span>
+      <span class="rot">CICLO 3.4</span>
       <h3>Técnicas e quando cada uma vale</h3>
       <div class="pe">
         <span class="rule" style="background:#D4B277"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Três técnicas testadas, um arquivo cada</p>
+        <p>Três técnicas testadas, um arquivo para cada</p>
       </div>
     </article></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Estrutura do módulo</span>
-      <span class="pag">2 / 42</span>
+      <span class="pag">2 / 44</span>
     </footer>
   </section>
 <section class="slide divisor" data-i="2">
@@ -245,313 +378,323 @@ body.mexeu #ajuda{opacity:1}
         <h2>O que é IA e o que é um modelo de linguagem</h2>
         <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">3 / 42</span>
+      <span class="pag">3 / 44</span>
     </section>
 <section class="slide conteudo" data-i="3">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 3.1 · CONCEITO</span>
     <h2>O que é inteligência artificial</h2>
-    <p class="sub">O termo tem setenta anos, e hoje é usado para vender coisas muito diferentes entre si</p>
+    <p class="sub">Um termo de setenta anos, usado hoje para produtos muito diferentes entre si</p>
     <div class="corpo"><div class="conceito">
     <div class="def" style="border-left-color:#8D0333">
-      <span class="rot">INTELIGÊNCIA ARTIFICIAL</span>
-      <p>É o campo que constrói sistemas capazes de executar tarefas que, feitas por uma pessoa, exigiriam algum tipo de julgamento: reconhecer, classificar, prever, recomendar, redigir. Não é uma tecnologia única, e sim um guarda-chuva sobre técnicas bem diferentes.</p>
+      <span class="rot">Inteligência artificial (artificial intelligence)</span>
+      <p>Campo da computação que constrói sistemas capazes de executar tarefas que, feitas por uma pessoa, exigiriam julgamento, como reconhecer, classificar, prever, recomendar e redigir. O termo reúne técnicas muito diferentes entre si.</p>
     </div>
     <div class="pontos cols-2">
       <div class="pt">
         <span class="rule" style="background:#8D0333"></span>
-        <span class="rot">Não é o robô do cinema</span>
-        <p>Nenhum sistema em uso hoje entende o que faz, tem intenção ou vontade. O que existe são programas muito bons em uma tarefa estreita de cada vez.</p>
+        <span class="rot">Origem do termo</span>
+        <p>Proposto em 1955 por McCarthy, Minsky, Rochester e Shannon, no projeto do seminário de Dartmouth, realizado em 1956. Há setenta anos ele designa técnicas que mudam de década em década.</p>
       </div>
       <div class="pt">
         <span class="rule" style="background:#8D0333"></span>
-        <span class="rot">Não é sinônimo de ChatGPT</span>
-        <p>O modelo de linguagem é uma técnica entre várias, e é a mais recente delas. Sistemas de IA existem em uso comercial desde os anos 1980.</p>
+        <span class="rot">O que os sistemas atuais fazem</span>
+        <p>Executam bem tarefas delimitadas. Nenhum deles responde pelo resultado, e a responsabilidade continua com quem usa e com quem decide.</p>
       </div>
       <div class="pt">
         <span class="rule" style="background:#8D0333"></span>
-        <span class="rot">O termo virou etiqueta comercial</span>
-        <p>Muito software vendido como IA é regra escrita à mão. Perguntar qual das três técnicas do próximo slide está por trás é o que separa a proposta séria da propaganda.</p>
+        <span class="rot">Modelo de linguagem é uma das técnicas</span>
+        <p>É a mais recente e a mais visível desde o lançamento do ChatGPT, em 2022. Sistemas de regras e de aprendizado de máquina estão em uso comercial há décadas.</p>
       </div>
       <div class="pt">
         <span class="rule" style="background:#8D0333"></span>
-        <span class="rot">Por que isso importa para você</span>
-        <p>A escolha errada da técnica custa dinheiro e prazo. Problema com critério conhecido não precisa de aprendizado de máquina, e problema com dado ruim não se resolve com modelo melhor.</p>
+        <span class="rot">A pergunta ao fornecedor</span>
+        <p>Parte do software vendido como IA executa regras escritas por pessoas. Pergunte qual das três técnicas do próximo slide está por trás do produto e com que dados ele foi construído.</p>
       </div></div>
-    
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 3.1 · Conceito</span>
-      <span class="pag">4 / 42</span>
+      <span class="pag">4 / 44</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="4">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 3.1 · TEORIA</span>
-    <h2>Três coisas diferentes chamadas de inteligência artificial</h2>
-    <p class="sub">Confundi-las leva a comprar a ferramenta errada para o problema certo</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">REGRAS</header>
-      <h3>Alguém escreveu o critério, o sistema executa</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Como funciona</span>
-          <p>Um conjunto de condições definidas por especialistas humanos. Se o pedido é acima de tal valor, exige aprovação.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Na gestão</span>
-          <p>Fluxo de aprovação no ERP, regra de crédito, validação de formulário. Previsível e auditável.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">APRENDIZADO DE MÁQUINA</header>
-      <h3>O critério é extraído dos dados históricos</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Como funciona</span>
-          <p>O sistema encontra padrões num conjunto de casos passados e generaliza para casos novos.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Na gestão</span>
-          <p>Previsão de inadimplência, detecção de fraude, segmentação de clientes. Exige dado e cuidado com viés.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">MODELO DE LINGUAGEM</header>
-      <h3>Produz texto a partir de instrução em linguagem comum</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Como funciona</span>
-          <p>Treinado para prever a continuação mais provável de um texto, sobre um volume enorme de escrita.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Na gestão</span>
-          <p>Redigir, resumir, classificar, traduzir, explicar. É o que você usa nesta disciplina.</p>
-        </div>
-    </article></div></div>
+    <h2>Três técnicas chamadas de inteligência artificial</h2>
+    <p class="sub">O critério de decisão tem origem diferente em cada uma, e a forma de auditar também</p>
+    <div class="corpo"><table class="tab">
+      <tr><th style="width:16%"></th><th style="width:27%">REGRAS</th><th style="width:28%">APRENDIZADO DE MÁQUINA</th><th style="width:29%">MODELO DE LINGUAGEM</th></tr>
+      <tr><td><strong>De onde vem o critério</strong></td><td>Escrito por especialistas e executado pelo sistema</td>
+          <td>Extraído de casos passados, com o resultado conhecido de cada caso</td><td>Aprendido de grande volume de texto, ao prever a continuação de cada trecho</td></tr>
+      <tr><td><strong>Exemplo na gestão</strong><span class="s">ilustrativo</span></td><td>Pedido acima de R$ 50 mil exige segunda aprovação no sistema de compras</td>
+          <td>Previsão de inadimplência a partir do histórico de pagamentos dos contribuintes</td><td>Resumo de edital, classificação de demandas de ouvidoria, minuta de ofício</td></tr>
+      <tr><td><strong>Como se audita</strong></td><td>Lendo a regra</td>
+          <td>Medindo o erro em casos que o modelo não viu no treino (módulo 11)</td><td>Conferindo cada afirmação na fonte (ciclo 3.2)</td></tr>
+      <tr><td><strong>Falha típica</strong></td><td>Caso que a regra não previu</td>
+          <td>Viés herdado dos dados históricos</td><td>Texto plausível e incorreto (alucinação)</td></tr>
+    </table>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:16px">
+      <div class="caixa teal"><span class="rot">NA MESMA FERRAMENTA</span><p>O agente usado na disciplina combina as técnicas. O modelo de linguagem interpreta o pedido, e os scripts das atividades aplicam regras escritas e conferíveis.</p></div>
+      <div class="caixa dourado"><span class="rot">ESCOLHA PELO PROBLEMA</span><p>Critério conhecido pede regra. Histórico com resultado registrado permite aprendizado de máquina. Texto a ler ou redigir pede modelo de linguagem.</p></div>
+    </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 3.1 · Teoria</span>
-      <span class="pag">5 / 42</span>
+      <span class="pag">5 / 44</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="5">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 3.1 · CONCEITO</span>
-    <h2>Treinamento: como o modelo ficou do jeito que está</h2>
-    <p class="sub">Entender essa etapa explica quase tudo que ele acerta e quase tudo que ele erra</p>
+    <h2>Como o treinamento formou o modelo</h2>
+    <p class="sub">O que acontece antes do primeiro uso explica boa parte dos acertos e dos erros</p>
     <div class="corpo"><div class="conceito">
     <div class="def" style="border-left-color:#0AB0AB">
-      <span class="rot">TREINAMENTO</span>
-      <p>Antes de você usá-lo, o modelo passou meses lendo uma quantidade enorme de texto e ajustando bilhões de números internos até acertar qual palavra vem depois. Esses números são tudo o que ele guardou. Os textos originais não ficaram lá dentro.</p>
+      <span class="rot">Treinamento (training)</span>
+      <p>Etapa anterior ao uso em que o modelo ajusta bilhões de parâmetros até prever bem o próximo trecho de texto. Os parâmetros ficam, e os textos lidos não ficam guardados para consulta.</p>
     </div>
     <div class="pontos cols-2">
       <div class="pt">
         <span class="rule" style="background:#0AB0AB"></span>
-        <span class="rot">Ele não guardou os textos</span>
-        <p>O que sobrou foi o padrão da linguagem, e não os documentos. Por isso ele não consegue abrir uma fonte, conferir uma citação nem dizer de onde tirou uma frase.</p>
+        <span class="rot">Três etapas</span>
+        <p>Pré-treinamento em textos públicos, ajuste por instrução com exemplos escritos por pessoas e reforço pela resposta preferida (módulo 11).</p>
       </div>
       <div class="pt">
         <span class="rule" style="background:#0AB0AB"></span>
-        <span class="rot">Existe uma data de corte</span>
-        <p>O treinamento terminou em algum mês. O que aconteceu depois disso ele não sabe, e costuma responder sobre o assunto assim mesmo, com a mesma segurança.</p>
+        <span class="rot">Data de corte (knowledge cutoff)</span>
+        <p>O treino usa textos até uma data, 1º/12/2025 no GPT-5.5 e jun. 2026 no Claude Opus 5.5 (consulta em 02/11/2026). Sobre fatos posteriores, ele responde com a mesma segurança.</p>
       </div>
       <div class="pt">
         <span class="rule" style="background:#0AB0AB"></span>
-        <span class="rot">O que era raro no texto ficou fraco</span>
-        <p>Assunto muito documentado sai bem. Autor brasileiro pouco citado, norma local, dado de uma prefeitura: é onde ele mais inventa.</p>
+        <span class="rot">Assunto raro sai fraco</span>
+        <p>Tema muito documentado sai bem. Autor brasileiro pouco citado, norma municipal e dado de uma prefeitura saem com mais erro.</p>
       </div>
       <div class="pt">
         <span class="rule" style="background:#0AB0AB"></span>
-        <span class="rot">Depois vem o ajuste de comportamento</span>
-        <p>Uma segunda etapa treina o modelo a responder de forma útil e educada. É por isso que ele soa prestativo mesmo quando está errado.</p>
+        <span class="rot">Modelos de raciocínio (reasoning models)</span>
+        <p>Desde o o1 da OpenAI (set. 2024), parte dos modelos raciocina antes de responder. Eles erram menos em contas e código e continuam sem abrir as fontes que leram.</p>
       </div></div>
-    <div class="analogia"><span class="rot">PARA FIXAR</span><p>É como alguém que leu uma biblioteca inteira e devolveu todos os livros. Ficou com o repertório e o jeito de escrever, e não tem como voltar à página para conferir a citação.</p></div>
+    <div class="analogia"><span class="rot">PARA FIXAR</span><p>É como alguém que leu uma biblioteca inteira e devolveu todos os livros. Ficou com o repertório e o modo de escrever e não tem como voltar à página para conferir a citação.</p></div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 3.1 · Conceito</span>
-      <span class="pag">6 / 42</span>
+      <span class="pag">6 / 44</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="6">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 3.1 · TEORIA</span>
-    <h2>O que um modelo de linguagem realmente faz</h2>
-    <p class="sub">Três afirmações que explicam quase todo o comportamento que você vai observar</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">PREVÊ</header>
-      <h3>Ele calcula a continuação mais provável</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que significa</span>
-          <p>A cada passo escolhe o próximo trecho de texto segundo a probabilidade aprendida no treinamento.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Consequência</span>
-          <p>A resposta é plausível por construção. Plausível não é o mesmo que correto.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">NÃO CONSULTA</header>
-      <h3>Não existe um banco de dados sendo lido</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que significa</span>
-          <p>O que ele sabe está distribuído nos parâmetros do modelo, não em registros que possam ser recuperados.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Consequência</span>
-          <p>Ele não tem como conferir se uma referência existe, a menos que você lhe dê acesso à fonte.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">NÃO SABE</header>
-      <h3>Ele não distingue o que sabe do que não sabe</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que significa</span>
-          <p>Não há medida interna de certeza acessível na resposta. O tom seguro é igual nos dois casos.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Consequência</span>
-          <p>A confiança da resposta não informa nada sobre a correção dela. Por isso a instrução precisa autorizar o NÃO SEI.</p>
-        </div>
-    </article></div></div>
+    <h2>Tokens e a previsão do próximo token</h2>
+    <p class="sub">O modelo calcula a probabilidade de cada continuação e sorteia uma delas, token a token</p>
+    <div class="corpo"><svg class="fig" viewBox="0 0 1168 222" xmlns="http://www.w3.org/2000/svg"><defs><marker id="tk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8D0333"/></marker></defs><text x="0" y="52" font-size="13.5" font-weight="700" fill="#6B6B6B">ENTRADA DIVIDIDA EM TOKENS</text><rect x="2" y="70" width="26" height="40" fill="#fff" stroke="#D4B277" stroke-width="2"/><text x="15" y="96" text-anchor="middle" font-size="17" fill="#1A1A1A">O</text><rect x="34" y="70" width="58" height="40" fill="#fff" stroke="#D4B277" stroke-width="2"/><text x="62" y="96" text-anchor="middle" font-size="17" fill="#1A1A1A">preg</text><rect x="96" y="70" width="37" height="40" fill="#fff" stroke="#D4B277" stroke-width="2"/><text x="115" y="96" text-anchor="middle" font-size="17" fill="#1A1A1A">ão</text><rect x="138" y="70" width="68" height="40" fill="#fff" stroke="#D4B277" stroke-width="2"/><text x="173" y="96" text-anchor="middle" font-size="17" fill="#1A1A1A">eletr</text><rect x="212" y="70" width="68" height="40" fill="#fff" stroke="#D4B277" stroke-width="2"/><text x="246" y="96" text-anchor="middle" font-size="17" fill="#1A1A1A">ônico</text><rect x="286" y="70" width="48" height="40" fill="#fff" stroke="#D4B277" stroke-width="2"/><text x="309" y="96" text-anchor="middle" font-size="17" fill="#1A1A1A">foi</text><rect x="338" y="70" width="90" height="40" fill="#fff" stroke="#D4B277" stroke-width="2"/><text x="383" y="96" text-anchor="middle" font-size="17" fill="#1A1A1A">homolog</text><rect x="432" y="70" width="48" height="40" fill="#fff" stroke="#D4B277" stroke-width="2"/><text x="456" y="96" text-anchor="middle" font-size="17" fill="#1A1A1A">ado</text><rect x="485" y="70" width="37" height="40" fill="#fff" stroke="#D4B277" stroke-width="2"/><text x="504" y="96" text-anchor="middle" font-size="17" fill="#1A1A1A">em</text><rect x="527" y="70" width="68" height="40" fill="#E6F6F5" stroke="#0AB0AB" stroke-width="2" stroke-dasharray="5 3"/><text x="561" y="96" text-anchor="middle" font-size="17" font-weight="700" fill="#1A1A1A">março</text><path d="M602,90 L640,90" stroke="#8D0333" stroke-width="2.5" marker-end="url(#tk)"/><rect x="644" y="60" width="120" height="60" fill="#8D0333"/><text x="704" y="86" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">MODELO</text><text x="704" y="107" text-anchor="middle" font-size="13" fill="#f1d9e2">parâmetros</text><path d="M766,90 L800,90" stroke="#8D0333" stroke-width="2.5" marker-end="url(#tk)"/><text x="876" y="20" font-size="13.5" font-weight="700" fill="#6B6B6B">PROBABILIDADE DO PRÓXIMO TOKEN</text><text x="868" y="47" text-anchor="end" font-size="15.5" fill="#1A1A1A" font-weight="700">março</text><rect x="876" y="32" width="236" height="20" fill="#8D0333"/><text x="1118" y="47" font-size="14.5" fill="#333">0,31</text><text x="868" y="77" text-anchor="end" font-size="15.5" fill="#1A1A1A">2025</text><rect x="876" y="62" width="137" height="20" fill="#D4B277"/><text x="1019" y="77" font-size="14.5" fill="#333">0,18</text><text x="868" y="107" text-anchor="end" font-size="15.5" fill="#1A1A1A">janeiro</text><rect x="876" y="92" width="91" height="20" fill="#D4B277"/><text x="973" y="107" font-size="14.5" fill="#333">0,12</text><text x="868" y="137" text-anchor="end" font-size="15.5" fill="#1A1A1A">sessão</text><rect x="876" y="122" width="53" height="20" fill="#D4B277"/><text x="935" y="137" font-size="14.5" fill="#333">0,07</text><text x="868" y="167" text-anchor="end" font-size="15.5" fill="#1A1A1A">outros</text><rect x="876" y="152" width="243" height="20" fill="#c9c9c9"/><text x="1125" y="167" font-size="14.5" fill="#333">0,32</text><path d="M1000,184 L1000,196 L561,196 L561,114" stroke="#0AB0AB" stroke-width="2.5" fill="none" marker-end="url(#tk)"/><text x="571" y="216" font-size="14" fill="#08807c" font-style="italic">o token sorteado entra na sequência e o cálculo recomeça</text></svg>
+    <div style="display:grid;grid-template-columns:1.15fr 1fr 1fr 1fr;gap:16px;margin-top:6px">
+      <div class="def"><span class="rot">Token</span><p style="font-size:15.5px">Unidade de texto que o modelo lê e produz, em geral um pedaço de palavra com cerca de 4 caracteres, segundo a documentação do Gemini. Janela e custo são medidos em tokens.</p></div>
+      <div class="caixa vinho"><span class="rot">RESPOSTA PLAUSÍVEL</span><p>Cada token sai da probabilidade aprendida no treino. Plausível e correto coincidem com frequência alta, e a conferência separa os dois casos.</p></div>
+      <div class="caixa dourado"><span class="rot">SEM BANCO DE REGISTROS</span><p>O que o modelo aprendeu está distribuído nos parâmetros. Para citar uma fonte com segurança, ele precisa recebê-la ou buscá-la com uma ferramenta.</p></div>
+      <div class="caixa teal"><span class="rot">TOM IGUAL NO ERRO</span><p>A resposta não mostra a certeza do modelo. Por isso a instrução precisa aceitar NÃO SEI como resposta válida.</p></div>
+    </div>
+    <p class="fonte-nota">Tokens e probabilidades ilustrativos. Cada modelo tem o seu tokenizador. Google, Gemini API, Understand and count tokens (13/10/2026). Consulta em 02/11/2026.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 3.1 · Teoria</span>
-      <span class="pag">7 / 42</span>
+      <span class="pag">7 / 44</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="7">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 3.1 · TEORIA</span>
-    <h2>O que isso explica no uso diário</h2>
-    <p class="sub">Quatro comportamentos que deixam de ser surpresa</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>A mesma pergunta dá respostas diferentes</strong><p>A escolha do próximo trecho envolve sorteio controlado. Duas execuções não são idênticas, e isso é do desenho, não defeito.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Ele acerta o formato e erra o conteúdo</strong><p>Reproduzir a forma de uma referência bibliográfica é fácil, porque a forma é regular. Acertar qual referência existe é outro problema.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Ele é melhor em texto do que em conta</strong><p>Cálculo exige seguir um procedimento sem desvio. Previsão de texto tolera desvio. Por isso conta feita por modelo precisa ser conferida sempre.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Instrução vaga produz resposta genérica</strong><p>Sem contexto, a continuação mais provável é a mais comum, ou seja, a mais genérica. O ciclo 3.3 trata disso.</p></div>
-    </li></ol></div>
+    <h2>O que o mecanismo explica no uso diário</h2>
+    <p class="sub">Quatro comportamentos que decorrem da previsão do próximo token</p>
+    <div class="corpo"><table class="tab">
+      <tr><th style="width:24%">COMPORTAMENTO</th><th style="width:40%">CAUSA</th><th style="width:36%">O QUE FAZER NA DISCIPLINA</th></tr>
+      <tr><td><strong>A mesma pergunta dá respostas diferentes</strong></td><td>O próximo token é sorteado entre os mais prováveis. A variação é parte do desenho do modelo.</td>
+          <td>Gravar cada resposta em arquivo e comparar as execuções (demonstração deste ciclo)</td></tr>
+      <tr><td><strong>Formato certo com conteúdo errado</strong></td><td>A forma de uma referência bibliográfica é regular e fácil de prever. A existência da obra depende de um dado que o modelo pode não ter.</td>
+          <td>Conferir a referência na base, pelo título exato e pelo DOI (ciclo 3.2)</td></tr>
+      <tr><td><strong>Conta escrita na resposta sai errada</strong></td><td>O número escrito no texto é previsto como texto, sem conta executada. Modelos de raciocínio erram menos e ainda erram.</td>
+          <td>Pedir o cálculo como script gravado em <span class="mono">saidas/</span> e conferir dois números à mão (módulos 5 e 6)</td></tr>
+      <tr><td><strong>Instrução vaga produz texto genérico</strong></td><td>Sem contexto, a continuação mais provável é a mais comum entre os textos de treino.</td>
+          <td>Escrever papel, contexto, instrução e formato (ciclo 3.3)</td></tr>
+    </table>
+    <div class="caixa teal" style="margin-top:16px"><span class="rot">NOS AGENTES ATUAIS</span><p>O agente do opencode escreve e executa código quando a tarefa envolve um arquivo de dados. O número passa a vir do script, e a regra que o script aplica continua a ser lida por você antes do uso.</p></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 3.1 · Teoria</span>
-      <span class="pag">8 / 42</span>
+      <span class="pag">8 / 44</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="8">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 3.1 · CONCEITO</span>
     <h2>Sessão, contexto e janela de contexto</h2>
-    <p class="sub">Três palavras que explicam por que às vezes ele esquece o que você acabou de dizer</p>
+    <p class="sub">Três termos que explicam por que o agente às vezes esquece uma regra dada no início da conversa</p>
     <div class="corpo"><div class="conceito">
-    <div class="def" style="border-left-color:#FEC84D">
-      <span class="rot">CONTEXTO</span>
-      <p>A cada pedido, o modelo recebe de novo tudo o que está valendo naquela conversa: a sua instrução, o que já foi dito antes e os arquivos que ele leu. Esse conjunto é o contexto, e ele tem um tamanho máximo, chamado janela de contexto.</p>
+    <div class="def" style="border-left-color:#8D0333">
+      <span class="rot">Contexto e janela de contexto (context window)</span>
+      <p>Contexto é tudo o que o modelo recebe a cada pedido, como instruções do agente, AGENTS.md, conversa anterior, arquivos lidos e resultados de ferramentas. A janela de contexto é o tamanho máximo desse conjunto, em tokens.</p>
     </div>
     <div class="pontos cols-2">
       <div class="pt">
-        <span class="rule" style="background:#FEC84D"></span>
-        <span class="rot">Sessão é uma conversa</span>
-        <p>Começa quando você abre e termina quando você fecha ou inicia outra. Sessão nova não sabe nada da anterior, e é por isso que o AGENTS.md existe.</p>
+        <span class="rule" style="background:#8D0333"></span>
+        <span class="rot">Sessão</span>
+        <p>Uma conversa no opencode. A sessão nova começa sem o que foi dito na anterior, e por isso as regras permanentes ficam no AGENTS.md.</p>
       </div>
       <div class="pt">
-        <span class="rule" style="background:#FEC84D"></span>
-        <span class="rot">Quando a janela enche, o começo cai</span>
-        <p>Numa conversa longa, o que foi dito no início sai do contexto. O sintoma é o modelo esquecer uma regra que você deu meia hora antes.</p>
+        <span class="rule" style="background:#8D0333"></span>
+        <span class="rot">O modelo recebe tudo de novo a cada pedido</span>
+        <p>Ele não guarda memória entre pedidos. O agente reenvia o contexto inteiro a cada mensagem, e o volume cresce ao longo da conversa.</p>
       </div>
       <div class="pt">
-        <span class="rule" style="background:#FEC84D"></span>
-        <span class="rot">Documento longo ocupa a janela inteira</span>
-        <p>Por isso, no módulo 11, o trabalho com documento grande é feito por seção, e não pelo arquivo todo de uma vez.</p>
+        <span class="rule" style="background:#8D0333"></span>
+        <span class="rot">Perto do limite, a conversa antiga vira resumo</span>
+        <p>O opencode resume a parte antiga e mantém na íntegra só o trecho recente (compactação). O resumo perde detalhes, como uma regra dada no início.</p>
       </div>
       <div class="pt">
-        <span class="rule" style="background:#FEC84D"></span>
-        <span class="rot">O que fazer na prática</span>
-        <p>Conversa longa e embolada, comece outra. Regra importante, escreva no AGENTS.md em vez de repetir no chat. Trabalho sério, grave em arquivo.</p>
+        <span class="rule" style="background:#8D0333"></span>
+        <span class="rot">Na prática</span>
+        <p>Conversa longa e confusa, abra outra sessão. Regra permanente, escreva no AGENTS.md. Resultado de trabalho, grave em arquivo.</p>
       </div></div>
-    <div class="analogia"><span class="rot">PARA FIXAR</span><p>É a mesa de trabalho de alguém que só enxerga o que está em cima dela. Cabe bastante coisa, e quando você põe mais um documento, alguma outra folha cai no chão.</p></div>
+    <div class="analogia"><span class="rot">PARA FIXAR</span><p>É a mesa de quem só enxerga o que está em cima dela. Quando a mesa enche, as folhas mais antigas viram uma folha de resumo.</p></div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 3.1 · Conceito</span>
-      <span class="pag">9 / 42</span>
+      <span class="pag">9 / 44</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="9">
     <span class="barra"></span>
-    <span class="eyebrow">CICLO 3.1 · DEMONSTRAÇÃO</span>
-    <h2>A mesma pergunta, duas vezes</h2>
-    <p class="sub">Ver a variação em ato vale mais do que ouvir sobre ela</p>
-    <div class="corpo"><div class="prompt">
-    <span class="rot">INSTRUÇÃO DADA AO AGENTE, DUAS VEZES SEGUIDAS, EM SESSÕES SEPARADAS</span>
-    <p>"Explique em cinco linhas o que é controle gerencial numa organização pública e cite um autor de referência sobre o tema. Grave a resposta em saidas/teste-variacao-1.md." (na segunda vez, grave em saidas/teste-variacao-2.md)</p>
-  </div>
-<ol class="steps cols-3" style="--linhas:1">
-    <li><span class="num">1</span>
-      <div><strong>Compare os dois arquivos</strong><p>O que permaneceu igual e o que mudou entre as duas execuções?</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Olhe o autor citado</strong><p>Veio o mesmo nas duas? Ele existe? Escreveu sobre isso?</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Tire a conclusão</strong><p>O que é estável na resposta e o que não é.</p></div>
-    </li></ol></div>
+    <span class="eyebrow">CICLO 3.1 · TEORIA</span>
+    <h2>O que ocupa a janela de contexto</h2>
+    <p class="sub">Uma sessão de trabalho ilustrativa e a janela dos modelos atuais, em tokens</p>
+    <div class="corpo"><svg class="fig" viewBox="0 0 1168 122" xmlns="http://www.w3.org/2000/svg"><rect x="0.0" y="34" width="93.4" height="44" fill="#D4B277" stroke="#fff" stroke-width="2"/><text x="46.7" y="61" text-anchor="middle" font-size="15" font-weight="700" fill="#1A1A1A">16 mil</text><text x="0.0" y="98" font-size="13.5" fill="#333">Instruções do agente,</text><text x="0.0" y="115" font-size="13.5" fill="#333">ferramentas e AGENTS.md</text><rect x="93.4" y="34" width="350.4" height="44" fill="#0AB0AB" stroke="#fff" stroke-width="2"/><text x="268.6" y="61" text-anchor="middle" font-size="15" font-weight="700" fill="#1A1A1A">60 mil</text><text x="268.6" y="98" text-anchor="middle" font-size="13.5" fill="#333">Arquivos lidos</text><rect x="443.8" y="34" width="221.9" height="44" fill="#9fd6c4" stroke="#fff" stroke-width="2"/><text x="554.8" y="61" text-anchor="middle" font-size="15" font-weight="700" fill="#1A1A1A">38 mil</text><text x="554.8" y="98" text-anchor="middle" font-size="13.5" fill="#333">Conversa anterior</text><rect x="665.8" y="34" width="175.2" height="44" fill="#FEC84D" stroke="#fff" stroke-width="2"/><text x="753.4" y="61" text-anchor="middle" font-size="15" font-weight="700" fill="#1A1A1A">30 mil</text><text x="753.4" y="98" text-anchor="middle" font-size="13.5" fill="#333">Resultados de ferramentas</text><rect x="841.0" y="34" width="151.8" height="44" fill="#f2f2f2" stroke="#ccc"/><text x="916.9" y="61" text-anchor="middle" font-size="14" fill="#6B6B6B">livre</text><rect x="992.8" y="34" width="175.2" height="44" fill="#F2CDD8" stroke="#ccc"/><text x="1080.4" y="61" text-anchor="middle" font-size="14" fill="#8D0333">reserva de 15%</text><path d="M992.8,28 L992.8,84" stroke="#8D0333" stroke-width="3"/><text x="1168" y="98" text-anchor="end" font-size="13.5" font-weight="700" fill="#8D0333">compactação do opencode</text><text x="1168" y="115" text-anchor="end" font-size="13.5" font-weight="700" fill="#8D0333">começa perto de 85%</text><text x="0" y="18" font-size="13.5" font-weight="700" fill="#6B6B6B">SESSÃO NUMA JANELA DE 200 MIL TOKENS · 144 MIL OCUPADOS (72%)</text></svg>
+    <div class="duascol" style="--esq:1.25fr;--dir:1fr;height:auto;margin-top:14px">
+      <table class="tab apertada">
+        <tr><th style="width:38%">MODELO</th><th style="width:30%">JANELA</th><th style="width:32%">FONTE</th></tr>
+        <tr><td><strong>Claude Opus 5.5 e Sonnet 5.5</strong></td><td>1 milhão de tokens<span class="s">cerca de 555 mil palavras</span></td><td>Anthropic, Models overview</td></tr>
+        <tr><td><strong>GPT-5.5</strong></td><td>1.050.000 tokens</td><td>OpenAI, página do modelo</td></tr>
+        <tr><td><strong>Gemini 3 e Gemini 4</strong></td><td>1.048.576 tokens</td><td>Google, Understand and count tokens</td></tr>
+        <tr><td><strong>Modelos gratuitos do opencode</strong></td><td>variam por modelo</td><td>página de cada modelo no provedor</td></tr>
+      </table>
+      <div class="col" style="gap:12px">
+        <div class="caixa vinho"><span class="rot">CABER E SER BEM LIDO</span><p>O acerto cai quando a informação está no meio de um texto longo (Liu et al., 2024) e piora conforme a janela enche. O módulo 10 retoma o tema.</p></div>
+        <div class="caixa dourado"><span class="rot">CONECTORES OCUPAM ESPAÇO</span><p>Cada servidor MCP ativado acrescenta a descrição das suas ferramentas ao contexto. A documentação do opencode recomenda ativar só os necessários.</p></div>
+      </div>
+    </div>
+    <p class="fonte-nota">Ocupação ilustrativa. Anthropic, Models overview. OpenAI, GPT-5.5. Google, Understand and count tokens (13/10/2026). OpenCode, Compaction e MCP servers. Anthropic, Effective context engineering for AI agents (29/09/2025). Consulta em 02/11/2026.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 3.1 · Demonstração</span>
-      <span class="pag">10 / 42</span>
+      <span class="centro">Ciclo 3.1 · Teoria</span>
+      <span class="pag">10 / 44</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="10">
     <span class="barra"></span>
+    <span class="eyebrow">CICLO 3.1 · TEORIA</span>
+    <h2>O ciclo do agente com ferramentas</h2>
+    <p class="sub">O agente do opencode lê arquivos, executa scripts e chama conectores a pedido do modelo</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.1fr;--dir:1fr">
+      <div class="col"><svg class="fig" viewBox="0 0 640 410" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8D0333"/></marker></defs>
+  <rect x="384" y="2" width="254" height="138" fill="none" stroke="#C9962E" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="396" y="132" font-size="13" fill="#8a6514" font-style="italic">no servidor do provedor</text>
+  <rect x="0" y="14" width="170" height="64" fill="#fff" stroke="#D4B277" stroke-width="2.5"/>
+  <text x="85" y="42" text-anchor="middle" font-size="17" font-weight="700" fill="#1A1A1A">Você</text>
+  <text x="85" y="64" text-anchor="middle" font-size="14" fill="#6B6B6B">escreve a instrução</text>
+  <rect x="400" y="14" width="224" height="88" fill="#8D0333"/>
+  <text x="512" y="46" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">Modelo de linguagem</text>
+  <text x="512" y="68" text-anchor="middle" font-size="14" fill="#f1d9e2">responde ou pede</text>
+  <text x="512" y="88" text-anchor="middle" font-size="14" fill="#f1d9e2">uma ferramenta</text>
+  <rect x="0" y="176" width="214" height="86" fill="#E6F6F5" stroke="#0AB0AB" stroke-width="2.5"/>
+  <text x="107" y="206" text-anchor="middle" font-size="17" font-weight="700" fill="#1A1A1A">Agente (opencode)</text>
+  <text x="107" y="228" text-anchor="middle" font-size="14" fill="#333">monta o contexto e</text>
+  <text x="107" y="247" text-anchor="middle" font-size="14" fill="#333">executa as ferramentas</text>
+  <rect x="400" y="236" width="224" height="150" fill="#FFF3D1" stroke="#C9962E" stroke-width="2.5"/>
+  <text x="414" y="262" font-size="16" font-weight="700" fill="#1A1A1A">Ferramentas</text>
+  <text x="414" y="288" font-size="14.5" fill="#333">ler e gravar arquivo</text>
+  <text x="414" y="312" font-size="14.5" fill="#333">executar script</text>
+  <text x="414" y="336" font-size="14.5" fill="#333">buscar na web</text>
+  <text x="414" y="360" font-size="14.5" fill="#333">conector MCP para sistemas</text>
+  <g stroke="#8D0333" stroke-width="2.5" fill="none">
+    <path d="M85,80 L85,172" marker-end="url(#ag)"/>
+    <path d="M216,196 L396,92" marker-end="url(#ag)"/>
+    <path d="M600,104 L600,232" marker-end="url(#ag)"/>
+    <path d="M396,300 L218,246" marker-end="url(#ag)"/>
+    <path d="M398,34 L174,34" marker-end="url(#ag)"/>
+  </g>
+  <text x="93" y="132" font-size="13.5" fill="#8D0333">instrução</text>
+  <text x="300" y="132" font-size="13.5" fill="#8D0333" text-anchor="middle">contexto</text>
+  <text x="590" y="172" font-size="13.5" fill="#8D0333" text-anchor="end">pedido de</text>
+  <text x="590" y="190" font-size="13.5" fill="#8D0333" text-anchor="end">ferramenta</text>
+  <text x="296" y="302" font-size="13.5" fill="#8D0333" text-anchor="middle">resultado</text>
+  <text x="286" y="26" font-size="13.5" fill="#8D0333" text-anchor="middle">resposta final</text>
+  <text x="0" y="306" font-size="14.5" fill="#333">O ciclo se repete até a tarefa</text>
+  <text x="0" y="326" font-size="14.5" fill="#333">terminar ou o agente pedir a sua</text>
+  <text x="0" y="346" font-size="14.5" fill="#333">confirmação antes de uma ação.</text>
+</svg></div>
+      <div class="col" style="gap:12px">
+        <div class="def"><span class="rot">Agente de IA (AI agent)</span><p>Programa que repete o ciclo entre o modelo e as ferramentas até concluir a tarefa. O modelo escolhe a ferramenta, e o programa a executa e devolve o resultado ao contexto.</p></div>
+        <div class="def" style="border-left-color:#0AB0AB"><span class="rot" style="color:#08807c">Model Context Protocol (MCP)</span><p>Padrão aberto lançado pela Anthropic em novembro de 2024 para ligar agentes a sistemas externos. Em 09/12/2025 foi doado à Agentic AI Foundation, da Linux Foundation, junto com o formato AGENTS.md, da OpenAI.</p></div>
+        <div class="caixa vinho"><span class="rot">PARA ONDE VAI O CONTEÚDO</span><p>Tudo o que entra no contexto, inclusive arquivo lido e resultado de ferramenta, é enviado ao servidor do provedor do modelo. Dado pessoal sai do arquivo antes.</p></div>
+      </div>
+    </div>
+    <p class="fonte-nota">Model Context Protocol Blog, MCP joins the Agentic AI Foundation, 09/12/2025. OpenCode, MCP servers. Consulta em 02/11/2026.</p></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 3.1 · Teoria</span>
+      <span class="pag">11 / 44</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="11">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 3.1 · DEMONSTRAÇÃO</span>
+    <h2>A mesma pergunta, duas vezes</h2>
+    <p class="sub">Duas sessões separadas, porque a segunda não pode receber o contexto da primeira</p>
+    <div class="corpo"><div class="prompt">
+    <span class="rot">INSTRUÇÃO DADA AO AGENTE, DUAS VEZES, EM SESSÕES SEPARADAS</span>
+    <p>"Explique em cinco linhas o que é controle gerencial numa organização pública e cite um autor de referência sobre o tema. Grave a resposta em saidas/teste-variacao-1.md." (na segunda sessão, grave em saidas/teste-variacao-2.md)</p>
+  </div><ol class="steps cols-3 " style="--linhas:1">
+    <li><span class="num">1</span>
+      <div><strong>Compare os dois arquivos</strong><p>O que permaneceu igual e o que mudou entre as duas execuções?</p></div>
+    </li>
+    <li><span class="num">2</span>
+      <div><strong>Confira o autor citado</strong><p>Veio o mesmo nas duas? Ele existe e escreveu sobre o tema?</p></div>
+    </li>
+    <li><span class="num">3</span>
+      <div><strong>Separe os dois tipos de variação</strong><p>Redação diferente é esperada. Fato diferente indica que uma das respostas precisa de conferência.</p></div>
+    </li></ol></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 3.1 · Demonstração</span>
+      <span class="pag">12 / 44</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="12">
+    <span class="barra"></span>
     <span class="eyebrow">CICLO 3.1 · PRÁTICA</span>
     <h2>Sua vez: teste a variação num tema seu</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Escolha um conceito da sua área</strong><p>Um que você domine o bastante para julgar a resposta. Não escolha algo que você desconhece.</p></div>
+      <div><strong>Escolha um conceito da sua área</strong><p>Um que você domine o bastante para julgar a resposta sem consultar outra fonte.</p></div>
     </li>
     <li><span class="num">2</span>
       <div><strong>Rode a mesma instrução duas vezes</strong><p>Em sessões separadas. Grave cada resposta num arquivo em saidas/.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Marque as diferenças</strong><p>Estrutura, ênfase, exemplos, autores. Anote o que mudou.</p></div>
+      <div><strong>Marque as diferenças</strong><p>Estrutura, ênfase, exemplos, autores e datas. Anote o que mudou.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Julgue as duas respostas</strong><p>Qual está mais correta, e por quê? Se as duas erram no mesmo ponto, isso diz algo.</p></div>
+      <div><strong>Julgue as duas respostas</strong><p>Qual está mais correta, e por quê? Se as duas erram no mesmo ponto, registre o ponto.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 3.1 · Prática</span>
-      <span class="pag">11 / 42</span>
+      <span class="pag">13 / 44</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="11">
+<section class="slide conteudo" data-i="13">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 3.1 · ENTREGA</span>
     <h2>Comparação de duas respostas</h2>
@@ -568,223 +711,208 @@ body.mexeu #ajuda{opacity:1}
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Resposta que aponta apenas diferenças de redação, sem julgar correção, vale metade.</p>
+        <p>Resposta que aponta apenas diferenças de redação, sem julgar a correção, vale metade.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 3.1 · Entrega</span>
-      <span class="pag">12 / 42</span>
+      <span class="pag">14 / 44</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="12">
+<section class="slide divisor" data-i="14">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">3.2</span></div>
       <div class="dir">
         <h2>Alucinação e verificação</h2>
-        <p class="etapas">Conceito · Teoria · Demonstração · Prática · Entrega</p>
+        <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">13 / 42</span>
+      <span class="pag">15 / 44</span>
     </section>
-<section class="slide conteudo" data-i="13">
+<section class="slide conteudo" data-i="15">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 3.2 · CONCEITO</span>
     <h2>O que é alucinação</h2>
-    <p class="sub">O nome é ruim e já ficou. O fenômeno é preciso e você vai encontrá-lo hoje.</p>
+    <p class="sub">O nome pegou, e o fenômeno tem definição precisa. Você vai provocá-lo hoje</p>
     <div class="corpo"><div class="conceito">
     <div class="def" style="border-left-color:#8D0333">
-      <span class="rot">ALUCINAÇÃO</span>
-      <p>É quando o modelo produz uma informação falsa com a mesma forma, o mesmo tom e a mesma segurança de uma informação correta. Não é um erro de digitação nem uma resposta confusa: é uma afirmação bem construída sobre algo que não existe.</p>
+      <span class="rot">Alucinação (hallucination), também chamada confabulação</span>
+      <p>Informação falsa produzida com a mesma forma e a mesma segurança de uma informação correta. É uma afirmação bem construída sobre algo que não existe ou que não é como foi descrito.</p>
     </div>
     <div class="pontos cols-2">
       <div class="pt">
         <span class="rule" style="background:#8D0333"></span>
-        <span class="rot">Não é mentira</span>
-        <p>Mentir exige saber a verdade e escolher outra. O modelo não tem essa distinção interna. Ele completa a lacuna com o que seria plausível ali.</p>
+        <span class="rot">Sem intenção de enganar</span>
+        <p>Mentir exige conhecer a verdade e escolher outra versão. O modelo completa a lacuna com o que seria plausível naquele ponto do texto.</p>
       </div>
       <div class="pt">
         <span class="rule" style="background:#8D0333"></span>
-        <span class="rot">Não vem com aviso</span>
-        <p>A parte inventada da resposta é redigida exatamente como a parte correta. Não existe mudança de tom que sirva de alerta.</p>
+        <span class="rot">Sem aviso no texto</span>
+        <p>O trecho inventado tem a mesma redação do trecho correto. Nenhuma mudança de tom sinaliza o erro.</p>
       </div>
       <div class="pt">
         <span class="rule" style="background:#8D0333"></span>
-        <span class="rot">Aparece mais onde você mais precisa</span>
-        <p>Referência bibliográfica, número, artigo de lei, procedimento de sistema e dado local. São justamente os itens que sustentam decisão e trabalho acadêmico.</p>
+        <span class="rot">Concentrada no que sustenta decisão</span>
+        <p>Referência bibliográfica, número, artigo de lei, procedimento de sistema e dado local, os itens que mais pesam em trabalho acadêmico e em decisão de gestão.</p>
       </div>
       <div class="pt">
         <span class="rule" style="background:#8D0333"></span>
-        <span class="rot">Não some com a próxima versão</span>
-        <p>Modelos melhores alucinam menos, e continuam alucinando. Conferir não é uma etapa provisória até a tecnologia melhorar: é parte do método.</p>
+        <span class="rot">Presente também nos modelos novos</span>
+        <p>Cada geração alucina menos e continua alucinando. A conferência faz parte do método de trabalho e não depende da versão do modelo.</p>
       </div></div>
-    <div class="analogia"><span class="rot">PARA FIXAR</span><p>É o colega que responde a tudo com convicção e nunca diz que não sabe. Ele é útil, e você aprende a conferir o que ele afirma antes de repassar adiante.</p></div>
+    <div class="analogia"><span class="rot">PARA FIXAR</span><p>É o colega que responde a tudo com convicção e nunca diz que não sabe. Ele ajuda, e você confere o que ele afirma antes de repassar adiante.</p></div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 3.2 · Conceito</span>
-      <span class="pag">14 / 42</span>
-    </footer>
-  </section>
-<section class="slide conteudo" data-i="14">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 3.2 · TEORIA</span>
-    <h2>Quatro tipos de erro que você vai encontrar</h2>
-    <p class="sub">Cada um exige um tipo diferente de conferência</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Referência inventada</strong><p>Autores plausíveis, revista real, volume e páginas verossímeis, e o artigo não existe. É o erro mais comum em trabalho acadêmico e o mais fácil de detectar: procure o título exato.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Número plausível</strong><p>Um percentual, um valor ou uma data com a ordem de grandeza certa e o valor errado. Difícil de detectar sem abrir a fonte, e por isso a instrução precisa exigir a fonte junto do número.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Atribuição trocada</strong><p>A ideia existe, o conceito é real, mas foi atribuído ao autor errado, ao ano errado ou à escola errada. Detecta-se conferindo o conceito na obra citada, não só a existência da obra.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Procedimento inexistente</strong><p>Um passo a passo para uma funcionalidade que o sistema não tem, um artigo de lei que não existe, um campo de formulário que nunca foi criado. Detecta-se tentando executar.</p></div>
-    </li></ol></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 3.2 · Teoria</span>
-      <span class="pag">15 / 42</span>
-    </footer>
-  </section>
-<section class="slide conteudo" data-i="15">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 3.2 · TEORIA</span>
-    <h2>Por que acontece e o que reduz</h2>
-    <p class="sub">A alucinação não é defeito a ser corrigido numa próxima versão. É como o mecanismo funciona.</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">A CAUSA</header>
-      <h3>Preencher a lacuna é a função</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Por quê</span>
-          <p>O modelo produz a continuação mais provável. Diante de uma lacuna, a continuação mais provável é algo que se pareça com a resposta.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Implicação</span>
-          <p>Não existe versão futura que elimine isso. O que muda é a frequência, não a natureza.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">O QUE PIORA</header>
-      <h3>Pergunta específica sobre coisa rara</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Quando piora</span>
-          <p>Dados locais, autores brasileiros pouco citados, legislação recente, números de uma organização específica.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Implicação</span>
-          <p>Justamente o que interessa à Administração é onde o risco é maior.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">O QUE REDUZ</header>
-      <h3>Dar a fonte, exigir a fonte, autorizar o não sei</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que fazer</span>
-          <p>Coloque o documento na pasta e mande ler. Peça a fonte antes do número. Escreva na instrução que NÃO SEI é resposta aceitável.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Implicação</span>
-          <p>Reduz muito, não elimina. A conferência continua sendo sua.</p>
-        </div>
-    </article></div></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 3.2 · Teoria</span>
-      <span class="pag">16 / 42</span>
+      <span class="pag">16 / 44</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="16">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 3.2 · TEORIA</span>
-    <h2>Onde se confere cada tipo de afirmação</h2>
-    <p class="sub">Conferir não é reler a resposta com atenção. É abrir outra fonte.</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:5">
-    <li><span class="num">1</span>
-      <div><strong>Artigo acadêmico</strong><p>Procure o título exato entre aspas no Google Acadêmico. Se não aparecer nenhum resultado, o artigo não existe. O DOI, aquele código que começa com 10., pode ser colado em doi.org e leva ao artigo real.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Artigo de lei</strong><p>Portal do Planalto, no texto compilado da lei, que é a versão com as alterações já aplicadas. Confira o número do artigo e leia o que ele diz, porque o número certo com conteúdo trocado é comum.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Número e estatística</strong><p>Vá ao órgão que produz o dado: IBGE, Banco Central, Tesouro, o portal da própria organização. Número sem fonte declarada não entra em trabalho avaliado.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Procedimento de sistema</strong><p>Abra o sistema e tente executar. É o único teste que vale, e é o mais rápido dos quatro.</p></div>
-    </li>
-    <li><span class="num">5</span>
-      <div><strong>Sempre registre onde conferiu</strong><p>A entrega da disciplina não pede só o veredito, e sim a fonte consultada. "Pesquisei" não é resposta aceita pelo script.</p></div>
-    </li></ol></div>
+    <h2>Quatro tipos de erro e o rótulo no diário</h2>
+    <p class="sub">Cada tipo pede uma forma diferente de conferência. Exemplos ilustrativos</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:21%">RÓTULO NO DIÁRIO</th><th style="width:29%">O QUE ACONTECE</th><th style="width:25%">EXEMPLO</th><th style="width:25%">COMO SE DETECTA</th></tr>
+      <tr><td><span class="mono">referencia inventada</span></td><td>Autores, revista, volume e páginas plausíveis para um artigo que não existe</td>
+          <td>Artigo atribuído à RAC com DOI que leva a outro texto</td><td>Título exato entre aspas no Google Acadêmico e DOI em doi.org</td></tr>
+      <tr><td><span class="mono">numero plausivel</span></td><td>Valor com a ordem de grandeza certa e os dígitos errados</td>
+          <td>População de São Luís no Censo 2022</td><td>Abrir a publicação do órgão que produz o dado</td></tr>
+      <tr><td><span class="mono">atribuicao trocada</span></td><td>Conceito real atribuído ao autor, ao ano ou ao artigo de lei errado</td>
+          <td>Prazo de recurso correto, citado com o artigo errado da Lei nº 14.133/2021</td><td>Ler o trecho na obra ou na lei citada</td></tr>
+      <tr><td><span class="mono">procedimento inexistente</span></td><td>Passo a passo de função, menu ou campo que o sistema não tem</td>
+          <td>Caminho de menu no sistema de protocolo que nunca existiu</td><td>Tentar executar no próprio sistema</td></tr>
+      <tr><td><span class="mono">sem erro</span></td><td>Resposta conferida e correta</td>
+          <td>Código IBGE do município conferido na tabela oficial</td><td>Registrar a fonte que confirmou</td></tr>
+    </table>
+    <div class="caixa dourado" style="margin-top:14px"><span class="rot">COMO O SCRIPT LÊ A COLUNA tipo_de_erro</span><p>Escreva o rótulo sem acento, como na primeira coluna. O comando conferir aceita só esses cinco e exige pelo menos três rótulos diferentes entre os cinco casos.</p></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 3.2 · Teoria</span>
-      <span class="pag">17 / 42</span>
+      <span class="pag">17 / 44</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="17">
     <span class="barra"></span>
-    <span class="eyebrow">CICLO 3.2 · DEMONSTRAÇÃO</span>
-    <h2>Diário de alucinação: como se registra um caso</h2>
-    <p class="sub">Use a referência bibliográfica que você trouxe de casa</p>
-    <div class="corpo"><div class="prompt">
-    <span class="rot">INSTRUÇÃO DADA AO AGENTE</span>
-    <p>"Cite três artigos acadêmicos brasileiros publicados nos últimos dez anos sobre [seu tema], com autores, título, revista, volume, ano e DOI. Se você não tiver certeza de que um artigo existe, escreva NÃO SEI no lugar dele em vez de estimar."</p>
-  </div>
-<ol class="steps cols-3" style="--linhas:1">
-    <li><span class="num">1</span>
-      <div><strong>Procure o título exato</strong><p>No Google Acadêmico, entre aspas. Não aparece? Não existe.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Confira o DOI</strong><p>Cole no doi.org. Leva ao artigo citado ou a outro?</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Registre no diário</strong><p>Tipo do erro, como detectou, e o que o modelo devolveu.</p></div>
-    </li></ol>
-<p class="nota" style="color:#8D0333">Autorizar o NÃO SEI muda o resultado. Rode a mesma instrução sem essa frase final e compare.</p></div>
+    <span class="eyebrow">CICLO 3.2 · TEORIA</span>
+    <h2>Por que acontece e o que reduz</h2>
+    <p class="sub">Um modelo que pode dizer NÃO SEI erra menos, com acerto parecido</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.12fr;--dir:1fr">
+      <div class="col" style="gap:8px">
+        <span style="font-size:13.5px;font-weight:700;letter-spacing:1px;color:#6B6B6B">RESPOSTAS A PERGUNTAS FACTUAIS CURTAS, TESTE SIMPLEQA</span><svg class="fig" viewBox="0 0 640 196" xmlns="http://www.w3.org/2000/svg">
+  <g font-size="13.5">
+    <rect x="0" y="4" width="14" height="14" fill="#0AB0AB"/><text x="20" y="16" fill="#333">acerto</text>
+    <rect x="90" y="4" width="14" height="14" fill="#8D0333"/><text x="110" y="16" fill="#333">erro (resposta errada)</text>
+    <rect x="270" y="4" width="14" height="14" fill="#d9d9d9"/><text x="290" y="16" fill="#333">abstenção (sem resposta específica)</text>
+  </g>
+  <text x="0" y="48" font-size="15" font-weight="700" fill="#1A1A1A">gpt-5-thinking-mini</text>
+  <rect x="0" y="56" width="132" height="40" fill="#0AB0AB"/><text x="66" y="82" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">22%</text>
+  <rect x="132" y="56" width="156" height="40" fill="#8D0333"/><text x="210" y="82" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">26%</text>
+  <rect x="288" y="56" width="312" height="40" fill="#d9d9d9"/><text x="444" y="82" text-anchor="middle" font-size="15" font-weight="700" fill="#333">52%</text>
+  <text x="0" y="128" font-size="15" font-weight="700" fill="#1A1A1A">o4-mini</text>
+  <rect x="0" y="136" width="144" height="40" fill="#0AB0AB"/><text x="72" y="162" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">24%</text>
+  <rect x="144" y="136" width="450" height="40" fill="#8D0333"/><text x="369" y="162" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">75%</text>
+  <rect x="594" y="136" width="6" height="40" fill="#d9d9d9"/><text x="606" y="162" font-size="14" fill="#333">1%</text>
+</svg>
+        <p style="font-size:16.5px;line-height:1.4">Os dois modelos acertam quase o mesmo (22% e 24%). O que se abstém em 52% das perguntas erra em 26% delas, contra 75% do que quase sempre responde.</p>
+      </div>
+      <div class="col" style="gap:10px">
+        <div class="caixa vinho"><span class="rot">A CAUSA</span><p>O treino e as avaliações que contam só acertos premiam o chute, como uma prova de múltipla escolha sem desconto por erro (Kalai et al., 2025).</p></div>
+        <div class="caixa dourado"><span class="rot">O QUE AUMENTA O ERRO</span><p>Pergunta específica sobre assunto raro, como dado local, autor brasileiro pouco citado, lei recente ou número de uma organização.</p></div>
+        <div class="caixa teal"><span class="rot">O QUE REDUZ</span><p>Pôr o documento na pasta e mandar ler, pedir a fonte junto com o número e escrever na instrução que NÃO SEI é resposta aceita. A conferência continua sendo sua.</p></div>
+      </div>
+    </div>
+    <p class="fonte-nota">OpenAI, Why language models hallucinate, 05/09/2025, tabela do teste SimpleQA. Kalai, Nachum, Vempala e Zhang (2025), Why language models hallucinate, arXiv:2509.04664. Consulta em 02/11/2026.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 3.2 · Demonstração</span>
-      <span class="pag">18 / 42</span>
+      <span class="centro">Ciclo 3.2 · Teoria</span>
+      <span class="pag">18 / 44</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="18">
     <span class="barra"></span>
-    <span class="eyebrow">CICLO 3.2 · PRÁTICA</span>
-    <h2>Sua vez: cinco casos no diário</h2>
-    <p class="sub">Individual, com o script da atividade</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Peça ao agente para executar o script</strong><p>Diga: "execute atividade_modulo3.py com o comando iniciar". Ele cria o diário em entregas/.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Provoque cinco casos</strong><p>Referências, um número sobre a sua organização, um artigo de lei recente, um procedimento de sistema, um dado regional.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Confira cada um na fonte</strong><p>E registre o veredito: confirmado, incorreto ou não verificável.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Rode a conferência</strong><p>Diga: "execute atividade_modulo3.py com o comando conferir". O script valida e gera o relatório.</p></div>
-    </li></ol></div>
+    <span class="eyebrow">CICLO 3.2 · TEORIA</span>
+    <h2>Onde se confere cada tipo de afirmação</h2>
+    <p class="sub">Conferir é abrir outra fonte. Reler a resposta com atenção não detecta o erro</p>
+    <div class="corpo"><table class="tab">
+      <tr><th style="width:17%">AFIRMAÇÃO</th><th style="width:22%">ONDE CONFERIR</th><th style="width:37%">COMO</th><th style="width:24%">ATENÇÃO</th></tr>
+      <tr><td><strong>Artigo acadêmico</strong></td><td>Google Acadêmico, SPELL, SciELO e doi.org</td>
+          <td>Título exato entre aspas na busca. O DOI, código que começa com 10., colado em doi.org leva ao artigo registrado.</td><td>DOI que abre outro artigo indica referência inventada</td></tr>
+      <tr><td><strong>Artigo de lei</strong></td><td>Portal do Planalto, texto compilado</td>
+          <td>O texto compilado traz as alterações já aplicadas. Leia o artigo e confira o conteúdo, além do número.</td><td>Número certo com conteúdo trocado é comum</td></tr>
+      <tr><td><strong>Número e estatística</strong></td><td>Órgão que produz o dado</td>
+          <td>IBGE, Banco Central, Tesouro Nacional ou o portal da própria organização, com a data da publicação.</td><td>Número sem fonte declarada fica fora do trabalho avaliado</td></tr>
+      <tr><td><strong>Procedimento de sistema</strong></td><td>O próprio sistema</td>
+          <td>Abrir o sistema e tentar executar o passo a passo.</td><td>É o teste mais rápido dos quatro</td></tr>
+    </table>
+    <div class="caixa vinho" style="margin-top:16px"><span class="rot">O QUE O DIÁRIO EXIGE</span><p>A coluna como_conferi diz onde e o que você procurou. O script recusa texto com menos de 20 caracteres ou só com pesquisei, procurei ou conferi, e exige fonte_consultada quando o veredito é confirmado ou incorreto.</p></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 3.2 · Prática</span>
-      <span class="pag">19 / 42</span>
+      <span class="centro">Ciclo 3.2 · Teoria</span>
+      <span class="pag">19 / 44</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="19">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 3.2 · DEMONSTRAÇÃO</span>
+    <h2>Como se registra um caso no diário</h2>
+    <p class="sub">Use a referência bibliográfica que você trouxe de casa</p>
+    <div class="corpo"><div class="prompt">
+    <span class="rot">INSTRUÇÃO DADA AO AGENTE</span>
+    <p>"Cite três artigos acadêmicos brasileiros publicados nos últimos dez anos sobre [seu tema], com autores, título, revista, volume, ano e DOI. Se você não tiver certeza de que um artigo existe, escreva NÃO SEI no lugar dele em vez de estimar."</p>
+  </div><ol class="steps cols-3 " style="--linhas:1">
+    <li><span class="num">1</span>
+      <div><strong>Procure o título exato</strong><p>No Google Acadêmico, entre aspas. Sem resultado, a referência é tratada como inexistente.</p></div>
+    </li>
+    <li><span class="num">2</span>
+      <div><strong>Confira o DOI</strong><p>Cole em doi.org. Ele leva ao artigo citado ou a outro?</p></div>
+    </li>
+    <li><span class="num">3</span>
+      <div><strong>Registre no diário</strong><p>Rótulo do erro, como conferiu, fonte, veredito e o que corrigiu.</p></div>
+    </li></ol><div class="caixa teal" style="margin-top:18px"><span class="rot">SEGUNDA RODADA</span><p>Rode a mesma instrução sem a última frase, a que autoriza o NÃO SEI, e compare o número de referências inventadas nas duas respostas.</p></div></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 3.2 · Demonstração</span>
+      <span class="pag">20 / 44</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="20">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 3.2 · PRÁTICA</span>
+    <h2>Sua vez: cinco casos no diário</h2>
+    <p class="sub">Individual, com o script da atividade</p>
+    <div class="corpo"><ol class="steps cols-2 compacto auto" style="--linhas:2">
+    <li><span class="num">1</span>
+      <div><strong>Peça ao agente para iniciar o diário</strong><p>Diga "execute atividade_modulo3.py com o comando iniciar". O script cria entregas/modulo3-diario-de-alucinacao.csv, separado por ponto e vírgula.</p></div>
+    </li>
+    <li><span class="num">2</span>
+      <div><strong>Provoque cinco casos de tipos diferentes</strong><p>Referências, um número sobre a sua organização, um artigo de lei recente, um procedimento de sistema e um dado do Maranhão.</p></div>
+    </li>
+    <li><span class="num">3</span>
+      <div><strong>Confira cada caso e registre o veredito</strong><p>Escreva confirmado, incorreto ou nao verificavel, sem acento. Apague a linha de exemplo.</p></div>
+    </li>
+    <li><span class="num">4</span>
+      <div><strong>Peça a conferência</strong><p>Diga "execute atividade_modulo3.py com o comando conferir". Sem problemas, o script gera o relatório em .md.</p></div>
+    </li></ol><p style="font-size:13.5px;font-weight:700;letter-spacing:1px;color:#6B6B6B;margin:12px 0 6px">SAÍDA REAL DO COMANDO CONFERIR SOBRE UM DIÁRIO ILUSTRATIVO DE QUATRO CASOS</p><pre class="terminal">==========================================================================
+ MODULO 3 - CICLO 3.2 - CONFERENCIA DO DIARIO
+==========================================================================
+PROBLEMAS QUE PRECISAM SER CORRIGIDOS (2):
+<span class="hl">  - linha 4: veredito deveria ser confirmado, incorreto ou nao verificavel, veio 'não verificável'</span>
+<span class="hl">  - linha 5: como_conferi esta vazia ou curta demais. Diga onde procurou e o que procurou.</span>
+
+Casos registrados: 4 (minimo 5).
+Tipos de erro cobertos: 3 (minimo 3) -> atribuicao trocada, numero plausivel, referencia inventada
+
+O relatorio nao foi gerado. Corrija o diario e execute 'conferir' de novo.</pre></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 3.2 · Prática</span>
+      <span class="pag">21 / 44</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="21">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 3.2 · ENTREGA</span>
     <h2>Diário de alucinação</h2>
@@ -792,7 +920,7 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>Cinco casos registrados, de pelo menos três tipos diferentes.</li><li>A instrução usada em cada caso.</li><li>O que o modelo respondeu, no essencial.</li><li>Como você conferiu, com a fonte consultada.</li><li>O veredito de cada caso e o que você corrigiu.</li></ul>
+      <ul><li>Cinco casos registrados, de pelo menos três tipos diferentes.</li><li>A instrução usada em cada caso, na íntegra.</li><li>O que o modelo respondeu, em resumo.</li><li>Como você conferiu, com a fonte consultada e a data.</li><li>O veredito de cada caso e o que você corrigiu.</li><li>A conclusão escrita ao fim do relatório gerado.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
@@ -801,207 +929,144 @@ body.mexeu #ajuda{opacity:1}
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Cinco casos do mesmo tipo contam como um. O script recusa o diário sem a coluna de como você conferiu, porque a conferência é o produto deste exercício, não o erro.</p>
+        <p>Cinco casos do mesmo tipo contam como um. O relatório só é gerado com a coluna como_conferi preenchida em todos os casos, e a conferência é o que mais pesa na nota.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 3.2 · Entrega</span>
-      <span class="pag">20 / 42</span>
+      <span class="pag">22 / 44</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="20">
+<section class="slide divisor" data-i="22">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">3.3</span></div>
       <div class="dir">
         <h2>Os quatro elementos de um prompt</h2>
         <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">21 / 42</span>
+      <span class="pag">23 / 44</span>
     </section>
-<section class="slide conteudo" data-i="21">
+<section class="slide conteudo" data-i="23">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 3.3 · CONCEITO</span>
     <h2>O que é engenharia de prompt</h2>
-    <p class="sub">O nome é pomposo e a prática é simples: escrever direito o que se quer</p>
+    <p class="sub">Escrever com precisão o que se quer, para um leitor que não conhece a sua organização</p>
     <div class="corpo"><div class="conceito">
-    <div class="def" style="border-left-color:#0AB0AB">
-      <span class="rot">ENGENHARIA DE PROMPT</span>
-      <p>É a prática de escrever a instrução de modo que a resposta venha utilizável já na primeira tentativa, em vez de servir apenas como rascunho a ser refeito. Prompt é a instrução; a engenharia é escrever nela tudo que o modelo não tem como adivinhar.</p>
+    <div class="def" style="border-left-color:#8D0333">
+      <span class="rot">Engenharia de prompt (prompt engineering)</span>
+      <p>Prática de escrever a instrução com tudo o que o modelo não tem como adivinhar, para que a primeira resposta já seja utilizável. Prompt é a instrução escrita ao modelo.</p>
     </div>
     <div class="pontos cols-2">
       <div class="pt">
-        <span class="rule" style="background:#0AB0AB"></span>
-        <span class="rot">Não são palavras mágicas</span>
-        <p>Não existe fórmula secreta que destrave o modelo. O que muda o resultado é informação: quem responde, para quem, sobre o quê e em que formato.</p>
+        <span class="rule" style="background:#8D0333"></span>
+        <span class="rot">Informação muda o resultado</span>
+        <p>Quem responde, para quem, sobre o quê, com que dados e em que formato. Palavras em maiúsculas e ordens enfáticas acrescentam pouco, segundo a documentação da Anthropic.</p>
       </div>
       <div class="pt">
-        <span class="rule" style="background:#0AB0AB"></span>
-        <span class="rot">O modelo não sabe nada sobre você</span>
-        <p>A sua organização, os seus números, o prazo do seu edital e o padrão do seu setor não estão nele. O que você não escrever, ele preenche com o caso médio.</p>
+        <span class="rule" style="background:#8D0333"></span>
+        <span class="rot">O modelo conhece da organização só o que está na instrução</span>
+        <p>Números, prazos e padrões do seu setor entram pela instrução ou por arquivo na pasta. O que faltar, ele preenche com o caso médio.</p>
       </div>
       <div class="pt">
-        <span class="rule" style="background:#0AB0AB"></span>
-        <span class="rot">Instrução vaga tem resposta genérica garantida</span>
-        <p>Diante de pouca informação, a continuação mais provável é a mais comum. O texto genérico não é preguiça do modelo: é consequência do pedido.</p>
+        <span class="rule" style="background:#8D0333"></span>
+        <span class="rot">O teste do colega</span>
+        <p>A Anthropic sugere mostrar a instrução a um colega sem contexto. Se ele ficaria confuso, o modelo também fica.</p>
       </div>
       <div class="pt">
-        <span class="rule" style="background:#0AB0AB"></span>
-        <span class="rot">É a habilidade que sobrevive à troca de ferramenta</span>
-        <p>Modelos mudam de nome e de dono todo ano. Saber descrever uma tarefa com precisão continua valendo em todos eles, e também com pessoas.</p>
+        <span class="rule" style="background:#8D0333"></span>
+        <span class="rot">Engenharia de contexto (context engineering)</span>
+        <p>Nos agentes, a instrução divide a janela com AGENTS.md, arquivos e ferramentas. A Anthropic chama de engenharia de contexto a escolha do que entra nela (29/09/2025).</p>
       </div></div>
-    
+    <div class="analogia"><span class="rot">PARA FIXAR</span><p>É o pedido feito a um estagiário competente no primeiro dia. Ele faz bem o que entendeu e ainda não conhece as regras da casa.</p></div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 3.3 · Conceito</span>
-      <span class="pag">22 / 42</span>
-    </footer>
-  </section>
-<section class="slide conteudo" data-i="22">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 3.3 · TEORIA</span>
-    <h2>Papel, contexto, instrução e formato</h2>
-    <p class="sub">Um prompt que tem os quatro produz resultado utilizável na primeira tentativa</p>
-    <div class="corpo"><div class="cards cols-4">
-    <article class="card">
-      <header style="background:#D4B277">PAPEL</header>
-      <h3>Quem responde e para quem</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que escrever</span>
-          <p>A função e o nível de especialidade esperados, e quem vai ler o resultado.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Exemplo</span>
-          <p>"Você é analista de compras públicas. O texto será lido por um pregoeiro."</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">CONTEXTO</header>
-      <h3>A situação e a restrição</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que escrever</span>
-          <p>A organização, o problema, o que já foi tentado, o que não pode ser feito.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Exemplo</span>
-          <p>"Autarquia municipal de 200 servidores, orçamento aprovado, sem equipe de TI própria."</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">INSTRUÇÃO</header>
-      <h3>A tarefa, com verbo</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que escrever</span>
-          <p>Uma tarefa por vez, com verbo no imperativo e objeto claro. Duas tarefas juntas viram uma resposta pela metade.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Exemplo</span>
-          <p>"Liste os riscos do contrato e classifique cada um em alto, médio ou baixo."</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#D4B277">FORMATO</header>
-      <h3>Como a resposta deve sair</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que escrever</span>
-          <p>Estrutura, extensão, onde gravar. Sem isso o modelo escolhe, e a escolha dele raramente serve.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Exemplo</span>
-          <p>"Tabela de três colunas, máximo de dez linhas, gravada em saidas/riscos.md."</p>
-        </div>
-    </article></div></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 3.3 · Teoria</span>
-      <span class="pag">23 / 42</span>
-    </footer>
-  </section>
-<section class="slide conteudo" data-i="23">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 3.3 · TEORIA</span>
-    <h2>O mesmo pedido, duas versões</h2>
-    <p class="sub">A diferença não está no assunto. Está no que foi dito sobre ele.</p>
-    <div class="corpo"><div class="cards cols-2">
-    <article class="card">
-      <header style="background:#D4B277">PROMPT FRACO</header>
-      <h3>"Faça uma análise de RH da minha empresa"</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que falta</span>
-          <p>Não há papel, não há organização, não há dado, não há definição do que analisar nem de como entregar.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que vem</span>
-          <p>Um texto genérico sobre gestão de pessoas, que serviria para qualquer empresa e não decide nada.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">PROMPT FORTE</header>
-      <h3>Os quatro elementos, em oito linhas</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que tem</span>
-          <p>Papel de analista de RH; contexto da autarquia com os números do mês; instrução de comparar com a meta; formato de tabela e parágrafo de desvio.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que vem</span>
-          <p>Um relatório que o gestor lê e usa, com os números que você forneceu e a estrutura que você pediu.</p>
-        </div>
-    </article></div></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 3.3 · Teoria</span>
-      <span class="pag">24 / 42</span>
+      <span class="pag">24 / 44</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="24">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 3.3 · TEORIA</span>
-    <h2>Quatro erros que estragam um prompt bom</h2>
-    <p class="sub">Aparecem mesmo em quem já entendeu os quatro elementos</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Pedir três coisas de uma vez</strong><p>Analise, compare e recomende, tudo na mesma instrução. O modelo faz a primeira bem e as outras pela metade. Separe em pedidos encadeados.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Dizer o que não quer, sem dizer o que quer</strong><p>"Não seja genérico" não informa o que seria específico. Substitua por um exemplo do que você espera.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Omitir o dado achando que ele sabe</strong><p>Números da sua organização, prazos do seu edital, nomes do seu setor: nada disso está no modelo. Coloque o arquivo na pasta e mande ler.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Aceitar a primeira resposta</strong><p>Ela é o rascunho. Dizer o que ficou errado e pedir de novo custa menos que reescrever o prompt do zero.</p></div>
-    </li></ol></div>
+    <h2>Papel, contexto, instrução e formato</h2>
+    <p class="sub">Um prompt com os quatro elementos produz resultado utilizável já na primeira tentativa</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.12fr;--dir:1fr">
+      <div class="col">
+        <div class="prompt anot"><span class="rot">PROMPT ANOTADO · EXEMPLO ILUSTRATIVO</span>
+          <p><span class="el e1"><i class="badge">1</i>Você é analista de compras públicas. O texto será lido pelo pregoeiro.</span>
+          <span class="el e2"><i class="badge">2</i>Autarquia municipal com 200 servidores e sem equipe de TI própria. O termo de referência do serviço de limpeza está em dados/tr-limpeza.pdf.</span>
+          <span class="el e3"><i class="badge">3</i>Liste os riscos do contrato e classifique cada um em alto, médio ou baixo. Se uma informação não estiver no arquivo, escreva NÃO CONSTA.</span>
+          <span class="el e4"><i class="badge">4</i>Tabela de três colunas (risco, classificação, item do termo), no máximo dez linhas, gravada em saidas/riscos.md.</span></p>
+        </div>
+      </div>
+      <div class="col" style="gap:10px">
+        <div class="caixa q1"><span class="rot">1 · PAPEL</span><p>A função de quem responde e quem vai ler. A Anthropic registra que uma frase de papel já muda o resultado.</p></div>
+        <div class="caixa q2"><span class="rot">2 · CONTEXTO</span><p>A organização, a restrição e o caminho do arquivo. O Google recomenda não presumir que o modelo tem a informação.</p></div>
+        <div class="caixa q3"><span class="rot">3 · INSTRUÇÃO</span><p>Uma tarefa com verbo no imperativo e a regra para o que faltar no arquivo.</p></div>
+        <div class="caixa q4"><span class="rot">4 · FORMATO</span><p>Estrutura, extensão e onde gravar. Sem isso, o modelo escolhe o formato.</p></div>
+      </div>
+    </div>
+    <p class="fonte-nota">Anthropic, Prompting best practices (platform.claude.com). Google, Gemini API, Prompt design strategies, atualizado em 13/10/2026. Consulta em 02/11/2026.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 3.3 · Teoria</span>
-      <span class="pag">25 / 42</span>
+      <span class="pag">25 / 44</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="25">
     <span class="barra"></span>
+    <span class="eyebrow">CICLO 3.3 · TEORIA</span>
+    <h2>O mesmo pedido, duas versões</h2>
+    <p class="sub">O assunto é o mesmo. A diferença está no que foi dito sobre ele</p>
+    <div class="corpo"><div class="duas">
+    <div class="prompt fraco">
+      <span class="rot">PROMPT FRACO</span>
+      <p>"Faça uma análise de RH da minha empresa."</p>
+    </div>
+    <div class="prompt forte">
+      <span class="rot">PROMPT FORTE · OS QUATRO ELEMENTOS</span>
+      <p>"Você é analista de gestão de pessoas de uma autarquia estadual. O relatório será lido pela diretora administrativa. A planilha dados/rh-setembro.csv traz, por setor, servidores ativos, afastamentos e horas extras de setembro de 2026. A meta de horas extras é de 4% das horas contratadas. Compare cada setor com a meta e aponte os três maiores desvios. Faça o cálculo por script gravado em saidas/. Entregue uma tabela com setor, valor e desvio e um parágrafo de até cinco linhas."</p>
+    </div>
+  </div><div class="duascol" style="--esq:1fr;--dir:1fr;height:auto">
+      <div class="caixa dourado"><span class="rot">O QUE VEM DO FRACO</span><p>Um texto sobre gestão de pessoas que serviria para qualquer empresa. Faltam papel, organização, dado, critério de análise e formato.</p></div>
+      <div class="caixa teal"><span class="rot">O QUE VEM DO FORTE</span><p>Uma tabela calculada a partir da planilha, com a meta como critério, e um parágrafo que a diretora lê e usa.</p></div>
+    </div></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 3.3 · Teoria</span>
+      <span class="pag">26 / 44</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="26">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 3.3 · TEORIA</span>
+    <h2>Quatro erros que estragam um prompt bom</h2>
+    <p class="sub">Aparecem mesmo em quem já domina os quatro elementos</p>
+    <div class="corpo"><table class="tab">
+      <tr><th style="width:22%">ERRO</th><th style="width:24%">EXEMPLO</th><th style="width:34%">CORREÇÃO</th><th style="width:20%">BASE</th></tr>
+      <tr><td><strong>Três tarefas na mesma instrução</strong></td><td>"Analise, compare e recomende"</td>
+          <td>Pedidos encadeados, um por vez, com a saída de um como entrada do seguinte</td><td>Google, encadeamento de prompts</td></tr>
+      <tr><td><strong>Dizer só o que não quer</strong></td><td>"Não seja genérico"</td>
+          <td>Dizer o que fazer e mostrar um exemplo do resultado esperado</td><td>Anthropic, prompting best practices</td></tr>
+      <tr><td><strong>Omitir o dado</strong></td><td>"Calcule o custo por atendimento" sem a planilha</td>
+          <td>Pôr o arquivo na pasta e indicar o caminho na instrução</td><td>Google, adicionar contexto</td></tr>
+      <tr><td><strong>Aceitar a primeira resposta</strong></td><td>Rascunho entregue como versão final</td>
+          <td>Apontar o que ficou errado e pedir de novo na mesma sessão. Custa menos que reescrever o prompt do zero</td><td>Prática da disciplina</td></tr>
+    </table>
+    <p class="fonte-nota">Anthropic, Prompting best practices. Google, Gemini API, Prompt design strategies, atualizado em 13/10/2026. Consulta em 02/11/2026.</p></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 3.3 · Teoria</span>
+      <span class="pag">27 / 44</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="27">
+    <span class="barra"></span>
     <span class="eyebrow">CICLO 3.3 · DEMONSTRAÇÃO</span>
     <h2>Um prompt fraco e sua versão forte</h2>
-    <p class="sub">Exemplo já escrito: rode os dois ao vivo e compare o que muda na resposta</p>
+    <p class="sub">Exemplo já escrito. Rode os dois ao vivo e compare o que muda na resposta</p>
     <div class="corpo"><div class="duas">
     <div class="prompt fraco">
       <span class="rot">PROMPT FRACO</span>
@@ -1009,15 +1074,14 @@ body.mexeu #ajuda{opacity:1}
     </div>
     <div class="prompt forte">
       <span class="rot">PROMPT FORTE</span>
-      <p>"Você é assistente de compras de uma secretaria municipal. O edital de pregão eletrônico nº 12/2026, para aquisição de material de expediente, está na pasta. Liste as exigências de habilitação técnica e financeira que uma empresa de pequeno porte pode ter dificuldade em cumprir, uma por parágrafo, citando o item do edital. Formato: lista numerada, no máximo dez itens. Grave o resultado em saidas/edital-habilitacao.md. Se algum dado necessário não estiver nos arquivos desta pasta, pergunte antes de estimar."</p>
+      <p>"Você é assistente de compras de uma secretaria municipal. O edital do pregão eletrônico nº 12/2026, para aquisição de material de expediente, está na pasta. Liste as exigências de habilitação técnica e financeira que uma empresa de pequeno porte pode ter dificuldade em cumprir, uma por parágrafo, citando o item do edital. Formato: lista numerada, no máximo dez itens. Grave o resultado em saidas/edital-habilitacao.md. Se algum dado necessário não estiver nos arquivos desta pasta, pergunte antes de estimar."</p>
     </div>
-  </div>
-<ol class="steps cols-3" style="--linhas:1">
+  </div><ol class="steps cols-3 " style="--linhas:1">
     <li><span class="num">1</span>
       <div><strong>Rode o prompt fraco</strong><p>Projete a resposta. Ela é o termo de comparação.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Rode o prompt forte</strong><p>Mesma tarefa, os quatro elementos presentes.</p></div>
+      <div><strong>Rode o prompt forte</strong><p>Mesma tarefa, com os quatro elementos presentes.</p></div>
     </li>
     <li><span class="num">3</span>
       <div><strong>Compare lado a lado</strong><p>O que a segunda resposta tem que a primeira não tinha?</p></div>
@@ -1025,34 +1089,34 @@ body.mexeu #ajuda{opacity:1}
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 3.3 · Demonstração</span>
-      <span class="pag">26 / 42</span>
+      <span class="pag">28 / 44</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="26">
+<section class="slide conteudo" data-i="28">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 3.3 · PRÁTICA</span>
     <h2>Sua vez: um par de prompts</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Sua tarefa: um parecer sobre terceirizar a limpeza de um prédio público</strong><p>Considere custo, qualidade e continuidade do serviço. Invente o órgão e o seu papel nele: é o contexto que você vai escrever no prompt forte.</p></div>
+      <div><strong>Escreva um parecer sobre terceirizar a limpeza de um prédio público</strong><p>A tarefa é a mesma para toda a turma. Considere custo, qualidade e continuidade do serviço. Invente o órgão e o seu papel nele, que serão o contexto do prompt forte.</p></div>
     </li>
     <li><span class="num">2</span>
       <div><strong>Escreva a versão fraca de propósito</strong><p>Uma linha, como você escreveria sem pensar. Guarde a resposta.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Escreva a versão forte</strong><p>Com os quatro elementos. Entre seis e doze linhas.</p></div>
+      <div><strong>Escreva a versão forte</strong><p>Com os quatro elementos, entre seis e doze linhas.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Anote a diferença observada</strong><p>Não a diferença esperada. O que de fato mudou na resposta.</p></div>
+      <div><strong>Anote a diferença observada</strong><p>O que de fato mudou na resposta, e não o que você esperava que mudasse.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 3.3 · Prática</span>
-      <span class="pag">27 / 42</span>
+      <span class="pag">29 / 44</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="27">
+<section class="slide conteudo" data-i="29">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 3.3 · ENTREGA</span>
     <h2>Par de prompts documentado</h2>
@@ -1076,254 +1140,165 @@ body.mexeu #ajuda{opacity:1}
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 3.3 · Entrega</span>
-      <span class="pag">28 / 42</span>
+      <span class="pag">30 / 44</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="28">
+<section class="slide divisor" data-i="30">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">3.4</span></div>
       <div class="dir">
         <h2>Técnicas e quando cada uma vale</h2>
         <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">29 / 42</span>
+      <span class="pag">31 / 44</span>
     </section>
-<section class="slide conteudo" data-i="29">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 3.4 · TEORIA</span>
-    <h2>Três técnicas que mudam a resposta</h2>
-    <p class="sub">Cada uma resolve um tipo de problema diferente</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">EXEMPLOS</header>
-      <h3>Mostrar dois ou três casos resolvidos</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Quando usar</span>
-          <p>Quando o formato de saída é específico e difícil de descrever, mas fácil de exemplificar.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Exemplo na gestão</span>
-          <p>Classificar demandas de ouvidoria: dê três demandas já classificadas antes de pedir as novas.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">PASSO A PASSO</header>
-      <h3>Pedir o raciocínio antes da conclusão</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Quando usar</span>
-          <p>Em problemas com etapas, cálculo ou comparação. A conclusão pedida direto costuma sair errada.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Exemplo na gestão</span>
-          <p>"Antes de dizer qual proposta é mais vantajosa, calcule o valor total de cada uma e mostre a conta."</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">DO SIMPLES AO COMPLEXO</header>
-      <h3>Quebrar em subproblemas encadeados</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Quando usar</span>
-          <p>Quando a tarefa é grande demais e a resposta única sai superficial.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Exemplo na gestão</span>
-          <p>Diagnóstico de processo: primeiro liste as etapas, depois os gargalos de cada etapa, depois as soluções.</p>
-        </div>
-    </article></div></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 3.4 · Teoria</span>
-      <span class="pag">30 / 42</span>
-    </footer>
-  </section>
-<section class="slide conteudo" data-i="30">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 3.4 · TEORIA</span>
-    <h2>Duas técnicas de conferência</h2>
-    <p class="sub">Servem para reduzir o erro que você não conseguiria detectar sozinho</p>
-    <div class="corpo"><div class="cards cols-2">
-    <article class="card">
-      <header style="background:#D4B277">VERIFICAÇÃO EM CADEIA</header>
-      <h3>O modelo lista o que precisaria ser conferido</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Como se faz</span>
-          <p>Depois da resposta, peça: "liste as afirmações desta resposta que dependem de fato verificável, e diga como cada uma poderia ser conferida".</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Ganho</span>
-          <p>Transforma um texto corrido numa lista de itens que você pode checar um a um. Não confere por você.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">CONSISTÊNCIA</header>
-      <h3>Rodar mais de uma vez e comparar</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Como se faz</span>
-          <p>A mesma instrução em sessões separadas. O que aparece nas três é mais confiável que o que aparece numa só.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Ganho</span>
-          <p>Peça três vezes um número real da sua organização, sem colar o documento na conversa, por exemplo o valor total de um contrato. Sem a fonte, o modelo tende a inventar, e o número muda a cada resposta; se repetir nas três, é mais confiável. Por isso a técnica se reserva ao número que vai sustentar uma decisão, não ao texto do dia a dia.</p>
-        </div>
-    </article></div></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 3.4 · Teoria</span>
-      <span class="pag">31 / 42</span>
-    </footer>
-  </section>
 <section class="slide conteudo" data-i="31">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 3.4 · TEORIA</span>
-    <h2>Escolher a técnica pelo erro que ela evita</h2>
-    <p class="sub">Cada técnica corrige um tipo de falha. O critério é sempre o erro, nunca o provedor: ele muda ao longo do semestre, o erro que cada técnica evita não.</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>A saída vem no formato errado</strong><p>Use exemplos. Duas ou três amostras resolvem o que meia página de descrição não resolve, porque a forma se mostra mais fácil do que se explica.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>A conclusão pula etapas ou a conta não fecha</strong><p>Use passo a passo. Pedir o raciocínio antes da conclusão expõe onde o erro entrou, e sem isso você recebe só o resultado errado.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>A resposta sai rasa num problema grande</strong><p>Use do simples ao complexo. A tarefa grande produz a resposta média. Quebrada em subproblemas, cada parte fica específica.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>O número ou a referência vai sustentar uma decisão</strong><p>Use verificação em cadeia e consistência. São as duas técnicas de conferência, e só se justificam quando alguém vai agir com base naquilo.</p></div>
-    </li></ol></div>
+    <h2>Três técnicas que mudam a resposta</h2>
+    <p class="sub">Cada uma resolve um tipo de problema, e os modelos de raciocínio mudaram o uso de uma delas</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:17%">TÉCNICA</th><th style="width:21%">QUANDO USAR</th><th style="width:28%">EXEMPLO NA GESTÃO</th><th style="width:34%">COM MODELO DE RACIOCÍNIO</th></tr>
+      <tr><td><strong>Exemplos</strong><span class="s">few-shot (Brown et al., 2020)</span></td><td>Formato ou critério fácil de mostrar e difícil de descrever</td>
+          <td>Três demandas de ouvidoria já classificadas antes das novas</td>
+          <td>O Google recomenda incluir exemplos sempre, e a Anthropic sugere de três a cinco. A OpenAI sugere testar primeiro sem exemplos</td></tr>
+      <tr><td><strong>Passo a passo</strong><span class="s">chain of thought (Wei et al., 2022)</span></td><td>Problema com etapas ou comparação entre opções</td>
+          <td>"Antes de dizer qual proposta é mais vantajosa, liste os critérios do edital e compare as propostas em cada um"</td>
+          <td>Dispensável. O modelo já raciocina antes de responder. A OpenAI recomenda evitar a instrução, e a Anthropic prefere "pense com cuidado" a um roteiro escrito à mão</td></tr>
+      <tr><td><strong>Do simples ao complexo</strong><span class="s">prompt chaining</span></td><td>Tarefa grande que, pedida de uma vez, sai rasa</td>
+          <td>Diagnóstico de processo em três pedidos, com etapas, depois gargalos de cada etapa, depois soluções</td>
+          <td>Continua útil, porque cada pedido grava um arquivo que você confere antes do seguinte</td></tr>
+    </table>
+    <div class="caixa teal" style="margin-top:14px"><span class="rot">COMO SABER SE O MODELO RACIOCINA</span><p>A documentação do provedor indica. No opencode, parte dos modelos mostra o raciocínio antes da resposta. Na dúvida, aplique a técnica e compare o resultado com e sem ela.</p></div>
+    <p class="fonte-nota">OpenAI, Reasoning best practices (developers.openai.com). Anthropic, Prompting best practices. Google, Gemini API, Prompt design strategies (13/10/2026). Consulta em 02/11/2026.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 3.4 · Teoria</span>
-      <span class="pag">32 / 42</span>
+      <span class="pag">32 / 44</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="32">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 3.4 · TEORIA</span>
-    <h2>Trocar de técnica ou trocar de modelo?</h2>
-    <p class="sub">A pergunta aparece assim que o primeiro resultado decepciona, e a ordem da resposta importa</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">O QUE O MODELO RESOLVE</header>
-      <h3>Capacidade bruta e limite de uso</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que melhora</span>
-          <p>Texto longo sem perder o fio, cálculo mais confiável, menos deriva em tarefa com muitas etapas, e mais pedidos por dia.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Quando trocar</span>
-          <p>Quando a mesma instrução, já boa, falha de forma consistente por limite da ferramenta e não por falta de informação.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">O QUE ELE NÃO RESOLVE</header>
-      <h3>Falta de contexto e de conferência</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que não melhora</span>
-          <p>O dado da sua organização não está em modelo nenhum. Instrução vaga continua produzindo resposta genérica. Alucinação diminui e não desaparece.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O sintoma</span>
-          <p>Você troca de modelo, a resposta parece melhor, e o erro que você não conferia continua lá.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">A ORDEM</header>
-      <h3>Instrução, técnica, modelo. Nessa sequência.</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Por quê</span>
-          <p>Corrigir a instrução é grátis e resolve a maior parte. Mudar a técnica custa um pedido. Trocar de modelo muda tudo de uma vez e esconde qual era o problema.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">A prática</span>
-          <p>Só troque de modelo depois de ter uma instrução que você considera boa. Assim a troca vira teste, e não tentativa.</p>
-        </div>
-    </article></div></div>
+    <h2>Duas técnicas de conferência</h2>
+    <p class="sub">Servem para localizar o erro que você não perceberia lendo a resposta</p>
+    <div class="corpo"><span style="display:block;font-size:13.5px;font-weight:700;letter-spacing:1px;color:#6B6B6B;margin-bottom:8px">VERIFICAÇÃO EM CADEIA (CHAIN-OF-VERIFICATION), ADAPTADA PARA A DISCIPLINA</span>
+    <div class="fluxo" style="--n:4">
+      <div class="etapa" style="--cor:#D4B277"><span class="n">1</span><h4>Resposta inicial</h4><p>O modelo responde ao pedido original.</p></div>
+      <div class="etapa" style="--cor:#0AB0AB"><span class="n">2</span><h4>Lista de afirmações</h4><p>"Liste as afirmações desta resposta que dependem de fato verificável e diga onde cada uma pode ser conferida."</p></div>
+      <div class="etapa" style="--cor:#FEC84D"><span class="n">3</span><h4>Conferência</h4><p>Você abre a fonte de cada item. O modelo organiza a lista e não confere por você.</p></div>
+      <div class="etapa" style="--cor:#8D0333"><span class="n">4</span><h4>Resposta corrigida</h4><p>Itens incorretos saem ou são corrigidos, com a fonte registrada.</p></div>
+    </div>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:18px">
+      <div class="def"><span class="rot">Consistência (self-consistency)</span><p>Rodar a mesma instrução em sessões separadas e comparar. Número que muda entre as execuções foi gerado sem fonte. Número que se repete também precisa de fonte, porque o modelo pode errar do mesmo jeito nas três.</p></div>
+      <div class="caixa dourado"><span class="rot">QUANDO USAR AS DUAS</span><p>Quando alguém vai agir com base no número ou na referência. No texto de rotina, o custo de rodar três vezes e conferir cada item não se justifica.</p></div>
+    </div>
+    <p class="fonte-nota">Dhuliawala et al. (2024), Chain-of-verification reduces hallucination in large language models, Findings of ACL 2024. Wang et al. (2023), Self-consistency improves chain of thought reasoning in language models, ICLR 2023.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 3.4 · Teoria</span>
-      <span class="pag">33 / 42</span>
+      <span class="pag">33 / 44</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="33">
     <span class="barra"></span>
-    <span class="eyebrow">CICLO 3.4 · DEMONSTRAÇÃO</span>
-    <h2>A mesma tarefa com e sem exemplos</h2>
-    <p class="sub">Três demandas de ouvidoria, escritas no próprio prompt, classificadas com e sem exemplos</p>
-    <div class="corpo"><div class="duas">
-    <div class="prompt fraco">
-      <span class="rot">SEM EXEMPLOS</span>
-      <p>"Classifique cada uma destas demandas de ouvidoria em: reclamação, solicitação, denúncia ou elogio. (1) O atendimento da secretaria foi rápido e educado. (2) Moro perto de uma escola e o barulho da obra continua depois das 22h. (3) Preciso do comprovante de matrícula do meu filho. Grave o resultado em saidas/classificacao-sem-exemplos.csv."</p>
-    </div>
-    <div class="prompt forte">
-      <span class="rot">COM EXEMPLOS</span>
-      <p>"Classifique cada demanda de ouvidoria em: reclamação, solicitação, denúncia ou elogio. Exemplos já classificados: a obra está parada há dois meses → reclamação; solicito segunda via do carnê → solicitação; o servidor cobrou para agilizar → denúncia. Agora classifique: (1) O atendimento da secretaria foi rápido e educado. (2) Moro perto de uma escola e o barulho da obra continua depois das 22h. (3) Preciso do comprovante de matrícula do meu filho. Grave o resultado em saidas/classificacao-com-exemplos.csv."</p>
-    </div>
-  </div>
-<ol class="steps cols-3" style="--linhas:1">
-    <li><span class="num">1</span>
-      <div><strong>Rode sem exemplos primeiro</strong><p>A classificação varia e a fronteira entre reclamação e solicitação fica instável.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Rode com exemplos</strong><p>A fronteira fica definida pelos casos, não pela palavra.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Abra os dois arquivos lado a lado</strong><p>São as três mesmas demandas nos dois. Em qual delas a classificação muda?</p></div>
-    </li></ol></div>
+    <span class="eyebrow">CICLO 3.4 · TEORIA</span>
+    <h2>Escolher a técnica pelo erro que ela evita</h2>
+    <p class="sub">Cada técnica corrige um tipo de falha, e o sintoma indica qual usar</p>
+    <div class="corpo"><table class="tab">
+      <tr><th style="width:30%">SINTOMA NA RESPOSTA</th><th style="width:22%">TÉCNICA</th><th style="width:48%">POR QUE FUNCIONA</th></tr>
+      <tr><td><strong>A saída vem no formato errado</strong></td><td><span class="chip ok">EXEMPLOS</span></td>
+          <td>Duas ou três amostras mostram a forma que meia página de descrição não consegue explicar.</td></tr>
+      <tr><td><strong>A conclusão pula etapas</strong></td><td><span class="chip ok">PASSO A PASSO</span></td>
+          <td>Pedir o raciocínio antes da conclusão expõe a etapa em que o erro entrou. Com modelo de raciocínio, aumente antes o esforço de raciocínio.</td></tr>
+      <tr><td><strong>A resposta sai rasa num problema grande</strong></td><td><span class="chip ok">DO SIMPLES AO COMPLEXO</span></td>
+          <td>A tarefa grande produz a resposta média. Dividida em pedidos, cada parte recebe uma resposta específica e conferível.</td></tr>
+      <tr><td><strong>Um número ou uma referência vai sustentar uma decisão</strong></td><td><span class="chip med">VERIFICAÇÃO</span> <span class="chip med">CONSISTÊNCIA</span></td>
+          <td>As duas técnicas de conferência só compensam o custo quando alguém vai agir com base no item.</td></tr>
+    </table>
+    <div class="caixa vinho" style="margin-top:16px"><span class="rot">O CRITÉRIO É O ERRO</span><p>O provedor e o modelo podem mudar ao longo do semestre. O tipo de erro que cada técnica evita continua o mesmo em qualquer modelo.</p></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 3.4 · Demonstração</span>
-      <span class="pag">34 / 42</span>
+      <span class="centro">Ciclo 3.4 · Teoria</span>
+      <span class="pag">34 / 44</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="34">
     <span class="barra"></span>
+    <span class="eyebrow">CICLO 3.4 · TEORIA</span>
+    <h2>Trocar de técnica ou trocar de modelo?</h2>
+    <p class="sub">A ordem é instrução, técnica e modelo. Só troque de modelo depois de ter uma instrução boa</p>
+    <div class="corpo"><div class="fluxo" style="--n:3">
+      <div class="etapa" style="--cor:#0AB0AB"><span class="n">1</span><h4>Instrução</h4><p>Acrescentar papel, contexto, dado e formato. Não custa nada e resolve a maior parte dos casos.</p><span class="arq">custo · reescrever o pedido</span></div>
+      <div class="etapa" style="--cor:#FEC84D"><span class="n">2</span><h4>Técnica</h4><p>Exemplos, passo a passo ou decomposição, escolhidos pelo sintoma do slide anterior.</p><span class="arq">custo · um pedido a mais</span></div>
+      <div class="etapa" style="--cor:#8D0333"><span class="n">3</span><h4>Modelo</h4><p>Outro modelo ou mais esforço de raciocínio. Muda várias coisas de uma vez e esconde qual era o problema.</p><span class="arq">custo · tempo, cota e nova comparação</span></div>
+    </div>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:18px">
+      <div class="caixa vinho"><span class="rot">O QUE NENHUM MODELO RESOLVE</span><p>O dado da sua organização que ficou fora da instrução, o pedido vago e a conferência. A alucinação diminui de uma versão para outra e continua presente.</p></div>
+      <div class="caixa dourado"><span class="rot">ESFORÇO DE RACIOCÍNIO</span><p>O GPT-5.5 aceita cinco níveis, de none a xhigh. Os modelos Claude 5.5 decidem quanto raciocinar, regulados pelo parâmetro effort. Mais esforço consome mais tempo e mais tokens.</p></div>
+    </div>
+    <p class="fonte-nota">OpenAI, página do modelo GPT-5.5. Anthropic, Models overview e Prompting best practices. Consulta em 02/11/2026.</p></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 3.4 · Teoria</span>
+      <span class="pag">35 / 44</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="35">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 3.4 · DEMONSTRAÇÃO</span>
+    <h2>A mesma tarefa com e sem exemplos</h2>
+    <p class="sub">Três demandas de ouvidoria escritas no próprio prompt, sem arquivo de dados</p>
+    <div class="corpo"><div class="duas">
+    <div class="prompt fraco">
+      <span class="rot">SEM EXEMPLOS</span>
+      <p>"Classifique cada uma destas demandas de ouvidoria em reclamação, solicitação, denúncia ou elogio. (1) O atendimento da secretaria foi rápido e educado. (2) Moro perto de uma escola e o barulho da obra continua depois das 22h. (3) Preciso do comprovante de matrícula do meu filho. Grave o resultado em saidas/classificacao-sem-exemplos.csv."</p>
+    </div>
+    <div class="prompt forte">
+      <span class="rot">COM EXEMPLOS</span>
+      <p>"Classifique cada demanda de ouvidoria em reclamação, solicitação, denúncia ou elogio. Exemplos já classificados. A obra está parada há dois meses → reclamação. Solicito segunda via do carnê → solicitação. O servidor cobrou para agilizar → denúncia. Agora classifique (1) O atendimento da secretaria foi rápido e educado. (2) Moro perto de uma escola e o barulho da obra continua depois das 22h. (3) Preciso do comprovante de matrícula do meu filho. Grave o resultado em saidas/classificacao-com-exemplos.csv."</p>
+    </div>
+  </div><ol class="steps cols-3 " style="--linhas:1">
+    <li><span class="num">1</span>
+      <div><strong>Rode sem exemplos primeiro</strong><p>Observe a fronteira entre reclamação e denúncia na demanda 2.</p></div>
+    </li>
+    <li><span class="num">2</span>
+      <div><strong>Rode com exemplos</strong><p>Os casos já classificados definem a fronteira entre as categorias.</p></div>
+    </li>
+    <li><span class="num">3</span>
+      <div><strong>Abra os dois arquivos lado a lado</strong><p>As três demandas são as mesmas. Em qual delas a classificação mudou?</p></div>
+    </li></ol></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 3.4 · Demonstração</span>
+      <span class="pag">36 / 44</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="36">
+    <span class="barra"></span>
     <span class="eyebrow">CICLO 3.4 · PRÁTICA</span>
     <h2>Sua vez: um arquivo por técnica</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Escolha três das cinco técnicas</strong><p>Uma de produção e uma de conferência, no mínimo.</p></div>
+      <div><strong>Escolha três das cinco técnicas</strong><p>Pelo menos uma de produção e uma de conferência.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Aplique cada uma a uma tarefa sua</strong><p>Pode ser a mesma tarefa do ciclo 3.3, ou tarefas diferentes.</p></div>
+      <div><strong>Aplique cada uma a uma tarefa sua</strong><p>Pode ser a tarefa do ciclo 3.3 ou tarefas diferentes.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Grave um arquivo por técnica em prompts/</strong><p>Instrução, resultado e o tipo de erro que ela evitou. Nada além disso.</p></div>
+      <div><strong>Grave um arquivo por técnica em prompts/</strong><p>Instrução, resultado e o tipo de erro que a técnica evitou.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Repita uma delas em outro modelo</strong><p>Se você tiver acesso a mais de um. Mesma instrução, mesma técnica, modelo diferente. Anote o que mudou e o que não mudou.</p></div>
+      <div><strong>Repita uma delas em outro modelo</strong><p>Se tiver acesso a mais de um. Mesma instrução e mesma técnica. Anote o que mudou e o que permaneceu igual.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 3.4 · Prática</span>
-      <span class="pag">35 / 42</span>
+      <span class="pag">37 / 44</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="35">
+<section class="slide conteudo" data-i="37">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 3.4 · ENTREGA</span>
     <h2>Três técnicas testadas</h2>
@@ -1331,7 +1306,7 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>Três arquivos em prompts/, um por técnica.</li><li>Em cada um: a instrução, o resultado obtido e o tipo de erro que aquela técnica evitou.</li><li>A avaliação de quando aquela técnica vale a pena, em duas linhas.</li><li>O teste em segundo modelo, se você tiver acesso: o que mudou e o que permaneceu igual.</li><li>Uma comparação final: qual das três você usaria na semana que vem, e por quê.</li></ul>
+      <ul><li>Três arquivos em prompts/, um por técnica.</li><li>Em cada um, a instrução, o resultado obtido e o tipo de erro que a técnica evitou.</li><li>A avaliação de quando a técnica compensa, em duas linhas.</li><li>O teste em segundo modelo, se você tiver acesso, com o que mudou e o que permaneceu igual.</li><li>Uma comparação final, com a técnica que você usaria na semana que vem e o motivo.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
@@ -1340,209 +1315,235 @@ body.mexeu #ajuda{opacity:1}
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Técnica registrada sem o resultado que ela produziu não conta. Quem trocou de modelo e não anotou o que permaneceu igual perde metade do item.</p>
+        <p>Técnica registrada sem o resultado que ela produziu não conta. Teste em segundo modelo sem o registro do que permaneceu igual vale metade do item.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 3.4 · Entrega</span>
-      <span class="pag">36 / 42</span>
+      <span class="pag">38 / 44</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="36">
+<section class="slide conteudo" data-i="38">
     <span class="barra"></span>
     <span class="eyebrow">BALANÇO</span>
     <h2>O que você produziu hoje</h2>
     
-    <div class="corpo"><div class="cards cols-3">
+    <div class="corpo"><div class="cards cols-4">
     <article class="card">
-      <header style="background:#D4B277">CICLOS 3.1 E 3.2</header>
-      <h3>Uma comparação e um arquivo de casos</h3>
-      
+      <header style="background:#D4B277">CICLO 3.1</header>
+      <h3>Comparação de duas respostas</h3>
         <div class="bloco">
           <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que são</span>
-          <p>O teste de variação da mesma instrução e cinco casos de erro registrados, conferidos e classificados.</p>
+          <span class="rot">O que é</span>
+          <p>A mesma instrução em duas sessões, com a variação de redação separada da variação de fato.</p>
         </div>
         <div class="bloco">
           <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Para que servem</span>
-          <p>Compõem a entrega A2 e são a base do critério de correção de todo o semestre.</p>
+          <span class="rot">Uso seguinte</span>
+          <p>Explica por que toda resposta usada em trabalho fica gravada em arquivo.</p>
         </div>
     </article>
     <article class="card">
-      <header style="background:#0AB0AB">CICLO 3.3</header>
-      <h3>Um par de prompts</h3>
-      
+      <header style="background:#0AB0AB">CICLO 3.2</header>
+      <h3>Diário de alucinação</h3>
         <div class="bloco">
           <span class="rule" style="background:#0AB0AB"></span>
           <span class="rot">O que é</span>
-          <p>A mesma tarefa pedida de duas formas, com a diferença observada e não a esperada.</p>
+          <p>Cinco casos provocados, conferidos na fonte e classificados pelo script.</p>
         </div>
         <div class="bloco">
           <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Para que serve</span>
-          <p>É o exercício que separa quem usa a ferramenta de quem só conversa com ela.</p>
+          <span class="rot">Uso seguinte</span>
+          <p>Entra na entrega A2 e é a base do critério de conferência do semestre.</p>
         </div>
     </article>
     <article class="card">
-      <header style="background:#FEC84D">CICLO 3.4</header>
-      <h3>Três técnicas, um arquivo cada</h3>
-
+      <header style="background:#FEC84D">CICLO 3.3</header>
+      <h3>Par de prompts</h3>
         <div class="bloco">
           <span class="rule" style="background:#FEC84D"></span>
           <span class="rot">O que é</span>
-          <p>O início dos arquivos de prompts, um por técnica, com o tipo de erro que cada uma evita.</p>
+          <p>A mesma tarefa pedida de duas formas, com a diferença observada.</p>
         </div>
         <div class="bloco">
           <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Para que serve</span>
-          <p>É o ativo que sobra quando a disciplina acabar, e é cobrado no encontro 16.</p>
+          <span class="rot">Uso seguinte</span>
+          <p>Entra na entrega A2 e serve de modelo para as instruções dos próximos módulos.</p>
+        </div>
+    </article>
+    <article class="card">
+      <header style="background:#9fd6c4">CICLO 3.4</header>
+      <h3>Três técnicas</h3>
+        <div class="bloco">
+          <span class="rule" style="background:#9fd6c4"></span>
+          <span class="rot">O que é</span>
+          <p>Arquivos em prompts/, cada um com o erro que a técnica evita.</p>
+        </div>
+        <div class="bloco">
+          <span class="rule" style="background:#9fd6c4"></span>
+          <span class="rot">Uso seguinte</span>
+          <p>Início do caderno de prompts, cobrado no encontro 16.</p>
         </div>
     </article></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Balanço do módulo</span>
-      <span class="pag">37 / 42</span>
+      <span class="pag">39 / 44</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="37">
+<section class="slide conteudo" data-i="39">
     <span class="barra"></span>
     <span class="eyebrow">VOCABULÁRIO · 1 DE 2</span>
     <h2>As palavras deste encontro</h2>
-    <p class="sub">O modelo e os seus erros. Guarde estes dois slides.</p>
-    <div class="corpo"><ol class="steps cols-2" style="--linhas:4">
+    <p class="sub">O modelo e o seu funcionamento. Guarde estes dois slides</p>
+    <div class="corpo"><ol class="steps cols-2 compacto" style="--linhas:5">
     <li><span class="num">1</span>
-      <div><strong>Inteligência artificial</strong><p>Guarda-chuva sobre técnicas que executam tarefas que exigiriam julgamento humano.</p></div>
+      <div><strong>Inteligência artificial</strong><p>Campo que reúne técnicas para tarefas que exigiriam julgamento humano.</p></div>
     </li>
     <li><span class="num">2</span>
       <div><strong>Regras</strong><p>Sistema em que o critério foi escrito por uma pessoa. Previsível e auditável.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Aprendizado de máquina</strong><p>Sistema que extrai o critério dos dados passados, em vez de recebê-lo pronto.</p></div>
+      <div><strong>Aprendizado de máquina</strong><p>Sistema que extrai o critério de casos passados.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Modelo de linguagem</strong><p>Sistema que produz texto prevendo a continuação mais provável.</p></div>
+      <div><strong>Modelo de linguagem</strong><p>Sistema que produz texto prevendo o próximo token.</p></div>
     </li>
     <li><span class="num">5</span>
-      <div><strong>Treinamento</strong><p>A leitura de muito texto que ajustou os números internos do modelo, antes do seu uso.</p></div>
+      <div><strong>Token</strong><p>Pedaço de palavra que o modelo lê e produz. Cerca de 4 caracteres.</p></div>
     </li>
     <li><span class="num">6</span>
-      <div><strong>Data de corte</strong><p>O mês em que o treinamento parou. Depois disso, ele não sabe e responde assim mesmo.</p></div>
+      <div><strong>Treinamento e data de corte</strong><p>Ajuste dos parâmetros antes do uso, com textos até uma data.</p></div>
     </li>
     <li><span class="num">7</span>
-      <div><strong>Sessão</strong><p>Uma conversa. A seguinte não sabe nada do que foi dito na anterior.</p></div>
+      <div><strong>Modelo de raciocínio</strong><p>Modelo treinado para raciocinar antes de responder.</p></div>
     </li>
     <li><span class="num">8</span>
-      <div><strong>Contexto e janela de contexto</strong><p>Tudo o que está valendo no pedido, e o tamanho máximo disso.</p></div>
+      <div><strong>Contexto e janela de contexto</strong><p>Tudo o que o modelo recebe no pedido e o tamanho máximo disso, em tokens.</p></div>
+    </li>
+    <li><span class="num">9</span>
+      <div><strong>Sessão</strong><p>Uma conversa. A seguinte começa sem o que foi dito na anterior.</p></div>
+    </li>
+    <li><span class="num">10</span>
+      <div><strong>Agente, ferramenta e MCP</strong><p>Programa que alterna modelo e ferramentas. MCP é o padrão de conexão.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Vocabulário</span>
-      <span class="pag">38 / 42</span>
+      <span class="pag">40 / 44</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="38">
+<section class="slide conteudo" data-i="40">
     <span class="barra"></span>
     <span class="eyebrow">VOCABULÁRIO · 2 DE 2</span>
     <h2>As palavras deste encontro</h2>
     <p class="sub">Erro, conferência e instrução</p>
-    <div class="corpo"><ol class="steps cols-2" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-2 compacto" style="--linhas:5">
     <li><span class="num">1</span>
-      <div><strong>Alucinação</strong><p>Informação falsa produzida com a forma e a segurança de uma informação correta.</p></div>
+      <div><strong>Alucinação ou confabulação</strong><p>Informação falsa produzida com a forma e a segurança de uma correta.</p></div>
     </li>
     <li><span class="num">2</span>
       <div><strong>Referência inventada</strong><p>Autores e revista plausíveis para um artigo que não existe.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Atribuição trocada</strong><p>Conceito real, atribuído ao autor, ano ou escola errados.</p></div>
+      <div><strong>Atribuição trocada</strong><p>Conceito real atribuído ao autor, ano ou artigo errado.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>DOI</strong><p>Código de identificação de um artigo, começa com 10. e se confere em doi.org.</p></div>
+      <div><strong>DOI</strong><p>Código de identificação de um artigo. Começa com 10. e se confere em doi.org.</p></div>
     </li>
     <li><span class="num">5</span>
-      <div><strong>Prompt</strong><p>A instrução escrita para o modelo.</p></div>
+      <div><strong>Prompt</strong><p>A instrução escrita ao modelo.</p></div>
     </li>
     <li><span class="num">6</span>
-      <div><strong>Engenharia de prompt</strong><p>Escrever a instrução com o que o modelo não tem como adivinhar.</p></div>
+      <div><strong>Engenharia de prompt</strong><p>Escrever na instrução o que o modelo não tem como adivinhar.</p></div>
     </li>
     <li><span class="num">7</span>
-      <div><strong>Verificação em cadeia</strong><p>Pedir ao modelo a lista do que precisaria ser conferido na resposta dele.</p></div>
+      <div><strong>Engenharia de contexto</strong><p>Escolher o que entra na janela de contexto de um agente.</p></div>
     </li>
     <li><span class="num">8</span>
-      <div><strong>Consistência</strong><p>Rodar a mesma instrução mais de uma vez e comparar o que se manteve.</p></div>
+      <div><strong>Exemplos (few-shot)</strong><p>Casos resolvidos colocados na instrução antes do pedido.</p></div>
+    </li>
+    <li><span class="num">9</span>
+      <div><strong>Verificação em cadeia</strong><p>Pedir ao modelo a lista do que precisa ser conferido na resposta.</p></div>
+    </li>
+    <li><span class="num">10</span>
+      <div><strong>Consistência</strong><p>Rodar a mesma instrução mais de uma vez e comparar os resultados.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Vocabulário</span>
-      <span class="pag">39 / 42</span>
+      <span class="pag">41 / 44</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="39">
+<section class="slide conteudo" data-i="41">
     <span class="barra"></span>
     <span class="eyebrow">PRÓXIMOS PASSOS</span>
     <h2>Módulo 4: o que preparar</h2>
     <p class="sub">Do prompt ao artefato: arquivos, agentes e configuração</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-2 " style="--linhas:3">
     <li><span class="num">1</span>
-      <div><strong>Grave e publique o trabalho de hoje</strong><p>Antes de sair da sala. Mensagem: "entregas do modulo 3".</p></div>
+      <div><strong>Grave e publique o trabalho de hoje</strong><p>Antes de sair da sala, com a mensagem "entregas do modulo 3".</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Traga um documento da sua área</strong><p>Um edital, um contrato, um relatório, um regulamento. Em PDF ou Word, sem dado pessoal de terceiro.</p></div>
+      <div><strong>Traga um documento da sua área</strong><p>Edital, contrato, relatório ou regulamento, em PDF ou Word, sem dado pessoal de terceiro.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Releia o seu AGENTS.md</strong><p>No módulo 4 ele passa a valer para valer, e você vai reescrevê-lo com base no que aprendeu hoje.</p></div>
+      <div><strong>Releia o seu AGENTS.md</strong><p>No módulo 4 você vai reescrevê-lo com o que aprendeu hoje sobre contexto e instrução.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Leia o capítulo 3 de Taulli</strong><p>Machine learning. Está na turma virtual. É a base do módulo 11, mas ajuda desde já.</p></div>
+      <div><strong>Leia o capítulo 3 de Taulli</strong><p>Aprendizado de máquina. Está na turma virtual e é a base do módulo 11.</p></div>
     </li>
     <li><span class="num">5</span>
-      <div><strong>Comece a pensar na organização do seu projeto</strong><p>A escolha precisa estar fechada até o encontro 6.</p></div>
+      <div><strong>Feche a escolha da organização do projeto</strong><p>O prazo é o encontro 6.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Próximos passos</span>
-      <span class="pag">40 / 42</span>
+      <span class="pag">42 / 44</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="40">
+<section class="slide conteudo" data-i="42">
     <span class="barra"></span>
     <span class="eyebrow">DÚVIDAS FREQUENTES</span>
     <h2>Perguntas que aparecem neste módulo</h2>
     
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:5">
+    <div class="corpo"><ol class="steps cols-2 compacto" style="--linhas:3">
     <li><span class="num">1</span>
-      <div><strong>"Se ele inventa, por que usar?"</strong><p>Porque a alternativa é escrever tudo do zero. O ganho está no rascunho, e o custo é a conferência. A disciplina é sobre fazer essa conta.</p></div>
+      <div><strong>"Se ele inventa, por que usar?"</strong><p>Porque o rascunho sai rápido e a conferência tem custo conhecido. A disciplina ensina a comparar os dois.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>"Não seria melhor só trocar de modelo?"</strong><p>Às vezes é. Mas troque depois de ter uma instrução boa, e não antes: senão você nunca descobre se o problema era a ferramenta ou o pedido.</p></div>
+      <div><strong>"Não seria melhor só trocar de modelo?"</strong><p>Às vezes. Troque depois de ter uma instrução boa, para saber se o problema era a ferramenta ou o pedido.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>"Posso pedir para ele mesmo conferir?"</strong><p>Pode, e ajuda a organizar o que precisa ser checado. Mas quem abre a fonte é você. Ele não tem acesso ao que não está na pasta.</p></div>
+      <div><strong>"Posso pedir para ele mesmo conferir?"</strong><p>Ele organiza a lista do que conferir. A fonte é aberta por você, e o diário registra onde.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>"Meu prompt forte deu resposta pior."</strong><p>Acontece. Excesso de restrição engessa. Registre isso: é um achado, não um fracasso.</p></div>
+      <div><strong>"Meu prompt forte deu resposta pior."</strong><p>Restrição demais engessa a resposta. Registre o caso na entrega, com as duas versões.</p></div>
     </li>
     <li><span class="num">5</span>
-      <div><strong>"Acabou minha cota."</strong><p>Registre na entrega e continue com o roteiro. O resultado esperado está escrito. Se você trocar de provedor, anote qual passou a usar.</p></div>
+      <div><strong>"O script recusou o meu veredito."</strong><p>Escreva confirmado, incorreto ou nao verificavel, sem acento. O mesmo vale para o tipo_de_erro.</p></div>
+    </li>
+    <li><span class="num">6</span>
+      <div><strong>"Acabou minha cota."</strong><p>Registre na entrega e siga o roteiro. Se trocar de modelo, anote qual passou a usar.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Dúvidas frequentes</span>
-      <span class="pag">41 / 42</span>
+      <span class="pag">43 / 44</span>
     </footer>
   </section>
-<section class="slide fim" data-i="41">
+<section class="slide fim" data-i="43">
       <span class="filete"></span>
       <h1>Módulo 3 concluído</h1>
-      <p>Você sabe o que a ferramenta faz, conhece os erros que ela comete e tem um método para pedir. No próximo encontro, ela passa a produzir arquivos.</p>
+      <p>Você sabe como o modelo produz texto, conhece os erros que ele comete e onde conferi-los, e tem um método para escrever a instrução. No próximo encontro, o agente passa a produzir arquivos a partir de documentos da sua área.</p>
       <span class="slogan">SEMPRE+ QUALIDADE INOVAÇÃO INCLUSÃO</span>
     </section>
 </div>
 <div id="barra">
   <button id="ant" title="Anterior">&#8249;</button>
-  <input id="atual" value="1" title="Ir para o slide"> <span>/ 42</span>
+  <input id="atual" value="1" title="Ir para o slide"> <span>/ 44</span>
   <button id="prox" title="Próximo">&#8250;</button>
   <button id="tela" title="Tela cheia">&#9744;</button>
 </div>

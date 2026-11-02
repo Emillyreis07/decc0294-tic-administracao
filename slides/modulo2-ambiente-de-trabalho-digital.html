@@ -166,6 +166,140 @@ body.mexeu #ajuda{opacity:1}
   #barra,#ajuda{display:none}
   .slide{display:block!important;page-break-after:always;box-shadow:none;transform:none!important}
 }
+/* ---- componentes acrescentados na revisão de nov. 2026 ---- */
+.mono{font-family:Consolas,"Cascadia Mono","Courier New",monospace}
+.fonte-nota{position:absolute;left:0;right:0;bottom:-2px;font-size:13px;color:var(--muted);line-height:1.3}
+.prompt.compacto{padding:12px 20px;margin-bottom:16px}
+.prompt.compacto p{font-size:17px;line-height:1.4;margin-top:6px}
+.prompt.compacto p+p{margin-top:6px}
+.prompt .cmd{font-style:normal;font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:16px}
+
+/* tabela de dados */
+.tab{width:100%;border-collapse:collapse;font-size:15px;line-height:1.3;color:var(--body)}
+.tab th{background:var(--vinho);color:#fff;font-weight:700;text-align:left;padding:7px 10px;font-size:14px;letter-spacing:.3px}
+.tab td{border-bottom:1px solid #e1e1e1;padding:7px 10px;vertical-align:top;background:#fff}
+.tab tr:nth-child(even) td{background:#fafafa}
+.tab td.lac{background:#FFF3D1!important;color:#7a5600;font-weight:700}
+.tab td .s{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+.tab td strong{color:var(--txt)}
+.chip{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.5px;padding:2px 8px;margin-bottom:4px;color:var(--txt)}
+.chip.ok{background:#CFEFEE}.chip.med{background:#FFE7A8}.chip.ruim{background:#F2CDD8;color:var(--vinho)}
+.badge{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--vinho);
+  color:#fff;font-size:12px;font-weight:700;margin-right:6px;vertical-align:1px;font-style:normal}
+
+/* duas colunas */
+.duascol{display:grid;grid-template-columns:var(--esq,1.4fr) var(--dir,1fr);gap:28px;height:100%}
+.duascol .col{display:flex;flex-direction:column;gap:14px;min-height:0}
+.steps.compacto{gap:12px}
+.steps.compacto strong{font-size:18px}
+.steps.compacto p{font-size:16px;line-height:1.35}
+.steps.compacto .num{flex:0 0 28px;height:28px;font-size:15px}
+
+/* fluxo horizontal */
+.fluxo{display:grid;grid-template-columns:repeat(var(--n,4),1fr);gap:34px;position:relative}
+.etapa{background:var(--card);border:1px solid #e3e3e3;border-top:6px solid var(--cor,var(--vinho));
+  padding:12px 16px 14px;position:relative}
+.etapa:not(:last-child)::after{content:"";position:absolute;right:-27px;top:50%;margin-top:-11px;
+  border-left:16px solid var(--vinho);border-top:11px solid transparent;border-bottom:11px solid transparent}
+.etapa .n{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;
+  background:var(--vinho);color:#fff;font-size:14px;font-weight:700}
+.etapa h4{display:inline;font-size:18px;color:var(--txt);margin-left:6px;vertical-align:2px}
+.etapa p{font-size:15.5px;line-height:1.38;margin-top:8px}
+.etapa .arq{display:block;margin-top:8px;font-size:13.5px;color:var(--vinho);
+  font-family:Consolas,"Cascadia Mono","Courier New",monospace;word-break:break-all}
+.trilha{margin-top:18px}
+.trilha .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1px;color:var(--muted);margin-bottom:6px}
+.trilha .barra-g{height:14px;background:linear-gradient(90deg,var(--teal) 0%,#9fd6c4 30%,var(--amarelo) 55%,var(--vinho) 100%)}
+.trilha .marcas{display:grid;grid-template-columns:repeat(4,1fr);gap:34px;font-size:13.5px;color:var(--muted);margin-top:5px}
+
+/* conceito (mesmo padrão dos módulos 2 e 3) */
+.def{background:var(--card2);border:1px solid #e3e3e3;border-left:9px solid var(--vinho);padding:12px 20px}
+.def .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1.2px;color:var(--vinho);text-transform:uppercase}
+.def p{font-size:17px;line-height:1.4;color:var(--txt);margin-top:5px}
+
+/* eixo acima dos cartões */
+.eixo{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;margin-bottom:14px;
+  font-size:14px;font-weight:700;color:var(--muted);letter-spacing:.4px}
+.eixo .seta{height:10px;position:relative;background:linear-gradient(90deg,var(--dourado),var(--teal))}
+.eixo .seta::after{content:"";position:absolute;right:-14px;top:-7px;border-left:16px solid var(--teal);
+  border-top:12px solid transparent;border-bottom:12px solid transparent}
+.cards.baixos{height:calc(100% - 40px)}
+.cards.baixos .card h3{font-size:18px;padding:12px 16px 2px}
+.cards.baixos .card .bloco{padding:8px 16px 0}
+.cards.baixos .card .bloco p{font-size:15.5px;line-height:1.36}
+
+/* grade de dimensões */
+.grade{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:14px;height:calc(100% - 22px)}
+.dim{background:var(--card);border:1px solid #e3e3e3;border-top:5px solid var(--cor);padding:10px 16px}
+.dim h4{font-size:19px;color:var(--vinho)}
+.dim h4 small{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.dim p{font-size:15.5px;line-height:1.36;margin-top:5px}
+.dim .med{display:block;font-size:14px;color:var(--txt);margin-top:7px;border-top:1px solid #ddd;padding-top:6px}
+.dim .med b{color:var(--muted);font-size:12.5px;letter-spacing:.6px}
+
+/* caixa lateral */
+.caixa{background:var(--card2);border:1px solid #e3e3e3;padding:12px 16px}
+.caixa.vinho{border-left:6px solid var(--vinho)}
+.caixa.dourado{border-left:6px solid var(--dourado)}
+.caixa.teal{border-left:6px solid var(--teal)}
+.caixa .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1px;color:var(--vinho);margin-bottom:4px}
+.caixa p{font-size:15.5px;line-height:1.38}
+.caixa p+p{margin-top:6px}
+.legenda{list-style:none}
+.legenda li{font-size:15.5px;line-height:1.35;margin-bottom:8px;display:flex;gap:6px}
+.legenda li b{color:var(--txt)}
+
+/* ficha do mapa de dados */
+.ficha{display:grid;grid-template-columns:1fr 1fr;gap:14px;height:calc(100% - 64px)}
+.ficha .grupo{background:var(--card);border:1px solid #e3e3e3;border-top:5px solid var(--cor)}
+.ficha .grupo>header{font-size:16px;font-weight:700;color:var(--vinho);padding:8px 14px 2px}
+.ficha .grupo>header span{color:var(--muted);font-weight:400;font-size:14px;margin-left:6px}
+.ficha dl{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;padding:6px 14px 10px;font-size:14.5px;line-height:1.3}
+.ficha dt{font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:13.5px;color:var(--vinho);padding-top:1px}
+.ficha dd{color:var(--txt)}
+.rodape-corpo{margin-top:12px;font-size:15.5px;line-height:1.4;color:var(--body)}
+
+/* svg */
+.fig{display:block;width:100%;height:auto}
+.fig text{font-family:"Segoe UI",Calibri,"Helvetica Neue",Arial,sans-serif}
+
+/* ajustes após conferência visual */
+.tab.apertada{font-size:14.5px}
+.tab.apertada td{padding:6px 10px}
+.legenda .badge{flex:0 0 20px;margin-top:1px}
+.dim p{font-size:17px}
+.dim .med{font-size:15.5px}
+.dim h4{font-size:21px}
+.cards.baixos .card .bloco p{font-size:16.5px}
+.eixo{gap:26px}
+.ficha dl{font-size:16.5px;gap:6px 14px;padding:8px 14px 12px}
+.ficha dt{font-size:15px}
+.ficha .grupo>header{font-size:17.5px}
+.etapa p{font-size:16.5px}
+.etapa .arq{word-break:normal;overflow-wrap:break-word}
+.steps.cols-3.compacto p{font-size:17px}
+.steps.cols-3.compacto strong{font-size:19px}
+
+/* blocos de saída de terminal */
+.terminal{background:#262626;color:#e9e9e9;font-family:Consolas,"Cascadia Mono","Courier New",monospace;
+  font-size:14px;line-height:1.38;padding:12px 16px;white-space:pre;overflow:hidden;margin:0}
+.terminal .hl{color:#FEC84D;font-weight:700}
+
+/* acrescentado no módulo 9: trecho de arquivo de texto */
+.codigo{background:#F7F4EE;border:1px solid #e3e3e3;border-left:6px solid var(--dourado);color:var(--txt);
+  font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:14px;line-height:1.55;padding:10px 14px;
+  white-space:pre;overflow:hidden;margin:0}
+.codigo b{color:var(--vinho)}
+/* módulo 2: componente conceito mais compacto, para caber na área útil */
+.conceito{gap:12px}
+.conceito .def{padding:12px 22px}
+.conceito .def p{font-size:20px;line-height:1.32}
+.conceito .def .fonte{display:block;font-size:13px;line-height:1.3;color:var(--muted);margin-top:5px}
+.conceito .pontos{gap:10px 30px}
+.conceito .pt .rule{margin-bottom:6px}
+.conceito .pt p{font-size:16px;line-height:1.36}
+.conceito .analogia{padding:9px 18px}
+.conceito .analogia p{font-size:16.5px;line-height:1.36}
 </style>
 </head>
 <body>
@@ -187,42 +321,42 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="overview">
     <article class="ciclo">
       <span class="topo" style="background:#D4B277"></span>
-      <span class="rot" >CICLO 2.1</span>
+      <span class="rot">CICLO 2.1</span>
       <h3>Infraestrutura de TI: o que roda onde</h3>
       <div class="pe">
         <span class="rule" style="background:#D4B277"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Ficha de onde roda o seu modelo</p>
+        <p>Ficha de infraestrutura de um sistema que você usa</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#0AB0AB"></span>
-      <span class="rot" >CICLO 2.2</span>
+      <span class="rot">CICLO 2.2</span>
       <h3>A pasta do projeto</h3>
       <div class="pe">
         <span class="rule" style="background:#0AB0AB"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Estrutura de pastas criada</p>
+        <p>Pasta criada pelo script, com README preenchido</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#FEC84D"></span>
-      <span class="rot" >CICLO 2.3</span>
+      <span class="rot">CICLO 2.3</span>
       <h3>opencode desktop: instalação e primeiro uso</h3>
       <div class="pe">
         <span class="rule" style="background:#FEC84D"></span>
         <span class="rot2">ENTREGA</span>
-        <p>AGENTS.md da sua área</p>
+        <p>AGENTS.md com as quatro seções e três testes</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#D4B277"></span>
-      <span class="rot" >CICLO 2.4</span>
+      <span class="rot">CICLO 2.4</span>
       <h3>GitHub Desktop e a entrega A1</h3>
       <div class="pe">
         <span class="rule" style="background:#D4B277"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Repositório publicado (A1)</p>
+        <p>Repositório privado publicado e conferido (A1)</p>
       </div>
     </article></div></div>
     <footer>
@@ -239,30 +373,29 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="conceito">
     <div class="def" style="border-left-color:#8D0333">
       <span class="rot">O COMBINADO DE HOJE</span>
-      <p>Toda palavra técnica usada aqui é definida na primeira vez que aparece, em um slide próprio, antes de você precisar usá-la. Se alguma passar sem definição, interrompa e pergunte.</p>
+      <p>Toda palavra técnica usada aqui é definida em um slide próprio, antes do primeiro uso. Se alguma passar sem definição, interrompa e pergunte.</p>
     </div>
     <div class="pontos cols-2">
       <div class="pt">
         <span class="rule" style="background:#8D0333"></span>
         <span class="rot">Você não precisa saber programar</span>
-        <p>Nenhuma atividade da disciplina exige escrever código. Quem escreve comando é o programa que você vai instalar; você escreve em português o que quer.</p>
+        <p>Nenhuma atividade da disciplina pede que você escreva código. O programa que você vai instalar escreve e executa os comandos. Você descreve em português o que quer.</p>
       </div>
       <div class="pt">
         <span class="rule" style="background:#8D0333"></span>
-        <span class="rot">Errar aqui não quebra nada</span>
-        <p>Tudo o que você vai fazer hoje acontece dentro de uma pasta sua, e tudo pode ser desfeito. O encontro foi desenhado para você errar e refazer.</p>
+        <span class="rot">Errar aqui não estraga nada</span>
+        <p>Tudo o que você fizer hoje fica dentro de uma pasta sua, e cada passo pode ser refeito. O encontro prevê tempo para errar e refazer.</p>
       </div>
       <div class="pt">
         <span class="rule" style="background:#8D0333"></span>
         <span class="rot">O vocabulário volta no fim</span>
-        <p>O penúltimo bloco do encontro traz a lista de todos os termos, com a definição de cada um, para consulta durante o semestre.</p>
+        <p>Dois slides perto do encerramento trazem todos os termos do encontro com a definição de cada um, para consulta durante o semestre.</p>
       </div>
       <div class="pt">
         <span class="rule" style="background:#8D0333"></span>
-        <span class="rot">A dúvida óbvia é a mais útil</span>
-        <p>Se você não entendeu o que é uma pasta ou o que é a nuvem, metade da turma também não entendeu, e o resto do semestre depende disso.</p>
+        <span class="rot">Pergunte o que parecer óbvio</span>
+        <p>Se você não entendeu o que é uma pasta ou o que é a nuvem, outras pessoas da turma também não entenderam. Os próximos treze encontros usam esses termos.</p>
       </div></div>
-    
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
@@ -283,34 +416,34 @@ body.mexeu #ajuda{opacity:1}
     <span class="barra"></span>
     <span class="eyebrow">CICLO 2.1 · CONCEITO</span>
     <h2>O que é infraestrutura de tecnologia da informação</h2>
-    <p class="sub">A base que faz qualquer sistema funcionar, e que quase nunca aparece para quem usa</p>
+    <p class="sub">A base que faz qualquer sistema funcionar e que quase nunca aparece para quem usa</p>
     <div class="corpo"><div class="conceito">
     <div class="def" style="border-left-color:#8D0333">
       <span class="rot">INFRAESTRUTURA DE TI</span>
-      <p>É o conjunto de equipamentos, programas e conexões que precisa existir para que um sistema funcione. Quando alguém diz "o sistema caiu", o que falhou é quase sempre alguma parte da infraestrutura, e não o sistema em si.</p>
+      <p>Conjunto de equipamentos, programas, conexões e dados que precisa existir para que um sistema funcione. Quando alguém diz "o sistema caiu", em geral falhou uma parte da infraestrutura.</p>
     </div>
     <div class="pontos cols-2">
       <div class="pt">
         <span class="rule" style="background:#8D0333"></span>
-        <span class="rot">Equipamento</span>
-        <p>As máquinas físicas: computadores, telefones, servidores, cabos e os aparelhos que ligam tudo. Em inglês se chama hardware, que é o que se pode derrubar no chão.</p>
+        <span class="rot">Equipamento (hardware)</span>
+        <p>As máquinas físicas: computadores, telefones, servidores, cabos e os aparelhos que ligam tudo.</p>
       </div>
       <div class="pt">
         <span class="rule" style="background:#8D0333"></span>
-        <span class="rot">Programa</span>
-        <p>As instruções que fazem o equipamento executar alguma coisa: o sistema operacional, o editor de texto, o sistema de folha. Em inglês, software.</p>
+        <span class="rot">Programa (software)</span>
+        <p>As instruções que fazem o equipamento executar uma tarefa: o sistema operacional, o editor de texto, o sistema de folha de pagamento.</p>
       </div>
       <div class="pt">
         <span class="rule" style="background:#8D0333"></span>
         <span class="rot">Rede</span>
-        <p>O caminho por onde os dados trafegam de uma máquina para outra, dentro do prédio ou pela internet. Sem rede, o equipamento funciona sozinho e não conversa com nada.</p>
+        <p>O caminho por onde os dados passam de uma máquina para outra, dentro do prédio ou pela internet. Sem rede, cada equipamento funciona isolado.</p>
       </div>
       <div class="pt">
         <span class="rule" style="background:#8D0333"></span>
         <span class="rot">Dado</span>
-        <p>O conteúdo que os programas leem e gravam. É a única parte que a organização não consegue recomprar se perder.</p>
+        <p>O conteúdo que os programas leem e gravam. Equipamento e programa se compram de novo. O dado perdido sem cópia não volta.</p>
       </div></div>
-    <div class="analogia"><span class="rot">PARA FIXAR</span><p>É a mesma diferença entre o prédio e o serviço que acontece dentro dele. O atendimento ao público é o serviço; a energia, a estrutura, as salas e o telefone são a infraestrutura. Ninguém elogia a fiação, e todo mundo percebe quando ela falha.</p></div>
+    <div class="analogia"><span class="rot">PARA FIXAR</span><p>Pense no prédio de uma agência do INSS. O atendimento é o serviço. Energia, salas, cabos e telefones são a infraestrutura. O público só percebe a infraestrutura quando ela falha e o atendimento para.</p></div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
@@ -321,54 +454,24 @@ body.mexeu #ajuda{opacity:1}
 <section class="slide conteudo" data-i="5">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 2.1 · CONCEITO</span>
-    <h2>Programa, arquivo e sistema não são a mesma coisa</h2>
+    <h2>Programa, arquivo e sistema</h2>
     <p class="sub">Três palavras que a conversa do dia a dia mistura e que este encontro separa</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">PROGRAMA</header>
-      <h3>Aquilo que executa uma tarefa</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que é</span>
-          <p>Um conjunto de instruções que o computador cumpre quando você manda. O Excel é um programa. O navegador é um programa.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Como reconhecer</span>
-          <p>Você abre, ele faz alguma coisa e você fecha. Ele não guarda o seu conteúdo: guarda a capacidade de trabalhar sobre ele.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">ARQUIVO</header>
-      <h3>O conteúdo gravado, com nome</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que é</span>
-          <p>Aquilo que fica depois de você fechar o programa: a planilha, o relatório, a foto. O programa é a ferramenta; o arquivo é a peça.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Como reconhecer</span>
-          <p>Tem nome e tem extensão, o pedacinho depois do ponto, que diz de que tipo ele é: .docx, .csv, .pdf.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">SISTEMA</header>
-      <h3>Vários programas e dados trabalhando juntos</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que é</span>
-          <p>Um conjunto organizado de programas, banco de dados e regras que atende a um processo inteiro da organização. O SIGAA é um sistema, não um programa.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Como reconhecer</span>
-          <p>Tem várias telas, vários tipos de usuário, e alguém responsável por mantê-lo funcionando.</p>
-        </div>
-    </article></div></div>
+    <div class="corpo"><table class="tab">
+      <tr><th style="width:15%">TERMO</th><th style="width:31%">O QUE É</th><th style="width:30%">COMO RECONHECER</th><th style="width:24%">EXEMPLO</th></tr>
+      <tr><td><strong>Programa</strong><span class="s">aquilo que executa a tarefa</span></td>
+          <td>Conjunto de instruções que o computador cumpre quando você manda.</td>
+          <td>Você abre, ele faz alguma coisa e você fecha. O conteúdo que você produz fica gravado fora dele.</td>
+          <td>Excel, navegador, Bloco de Notas</td></tr>
+      <tr><td><strong>Arquivo</strong><span class="s">o conteúdo gravado, com nome</span></td>
+          <td>O que continua existindo depois que o programa fecha: a planilha, o relatório, a foto.</td>
+          <td>Tem nome e extensão, a parte depois do ponto que indica o tipo: .docx, .csv, .pdf.</td>
+          <td>orcamento-2026.xlsx, ata-reuniao.docx</td></tr>
+      <tr><td><strong>Sistema</strong><span class="s">programas e dados que atendem a um processo</span></td>
+          <td>Conjunto organizado de programas, banco de dados e regras que atende a um processo inteiro da organização.</td>
+          <td>Tem várias telas, perfis de usuário diferentes e uma equipe responsável por mantê-lo funcionando.</td>
+          <td>SIGAA na UFMA, SIAFI no governo federal, SEI para processos</td></tr>
+    </table>
+    <div class="caixa dourado" style="margin-top:18px"><span class="rot">NA PRÁTICA</span><p>O SIGAA é um sistema. Ele reúne vários programas e um banco de dados, atende a alunos, professores e secretarias e tem uma equipe de TI responsável. O comprovante de matrícula que você baixa dele é um arquivo.</p></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 2.1 · Conceito</span>
@@ -379,68 +482,43 @@ body.mexeu #ajuda{opacity:1}
     <span class="barra"></span>
     <span class="eyebrow">CICLO 2.1 · TEORIA</span>
     <h2>Três lugares onde um programa pode rodar</h2>
-    <p class="sub">"Rodar" quer dizer estar sendo executado por alguma máquina, neste momento. A pergunta é qual máquina.</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">NA MÁQUINA</header>
-      <h3>No computador que está à sua frente</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que significa</span>
-          <p>O programa foi instalado ali e usa a capacidade daquele equipamento. Se você desligar da internet, ele continua funcionando.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que isso implica</span>
-          <p>O dado não sai da máquina. A capacidade é a que a máquina tem. A licença é por equipamento.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Exemplo na gestão</span>
-          <p>Excel instalado, um editor de texto, um modelo de linguagem pequeno rodando local.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">NO SERVIDOR</header>
-      <h3>Numa máquina da própria organização</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que significa</span>
-          <p>Servidor é um computador potente, guardado numa sala própria, que fica ligado o tempo todo para atender vários usuários ao mesmo tempo.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que isso implica</span>
-          <p>A organização compra, instala, atualiza e responde pela segurança. Custo alto e previsível.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Exemplo na gestão</span>
-          <p>Sistema de folha instalado no data center do órgão, sistema acadêmico da universidade.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">NA NUVEM</header>
-      <h3>Numa máquina de outra empresa, pela internet</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que significa</span>
-          <p>O programa roda no equipamento de um fornecedor, e o que chega até você é a tela. Sem internet, você não alcança nada.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que isso implica</span>
-          <p>Paga-se pelo uso. O dado sai da organização. A disponibilidade depende de contrato e de conexão.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Exemplo na gestão</span>
-          <p>Sistema por assinatura, armazenamento em nuvem, modelo de linguagem acessado por conta.</p>
-        </div>
-    </article></div></div>
+    <p class="sub">Rodar quer dizer estar sendo executado por alguma máquina neste momento. A pergunta é qual máquina</p>
+    <div class="corpo"><svg class="fig" viewBox="0 0 1168 196" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="12" width="700" height="180" fill="#FAF7F8" stroke="#C9962E" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="16" y="32" font-size="13" font-weight="700" fill="#6B6B6B" letter-spacing="1">REDE DA ORGANIZAÇÃO</text>
+  <!-- computador -->
+  <rect x="96" y="56" width="130" height="80" fill="#fff" stroke="#1A1A1A" stroke-width="2"/>
+  <rect x="106" y="66" width="110" height="60" fill="#F3E9D6"/>
+  <rect x="150" y="136" width="22" height="12" fill="#1A1A1A"/><rect x="128" y="148" width="66" height="5" fill="#1A1A1A"/>
+  <circle cx="72" cy="78" r="15" fill="#8D0333"/><text x="72" y="83" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">1</text>
+  <text x="161" y="176" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="middle">Na máquina</text>
+  <!-- rede interna -->
+  <line x1="232" y1="96" x2="440" y2="96" stroke="#6B6B6B" stroke-width="2"/>
+  <text x="336" y="88" font-size="13" fill="#6B6B6B" text-anchor="middle">rede interna</text>
+  <!-- servidor -->
+  <rect x="452" y="44" width="110" height="112" fill="#fff" stroke="#1A1A1A" stroke-width="2"/>
+  <g fill="#0AB0AB"><rect x="462" y="54" width="90" height="16"/><rect x="462" y="76" width="90" height="16"/><rect x="462" y="98" width="90" height="16"/><rect x="462" y="120" width="90" height="16"/></g>
+  <circle cx="430" cy="62" r="15" fill="#8D0333"/><text x="430" y="67" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">2</text>
+  <text x="507" y="176" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="middle">No servidor da organização</text>
+  <!-- internet -->
+  <line x1="566" y1="100" x2="852" y2="100" stroke="#8D0333" stroke-width="2.5" stroke-dasharray="8 6"/>
+  <polygon points="852,92 868,100 852,108" fill="#8D0333"/>
+  <text x="780" y="90" font-size="13" font-weight="700" fill="#8D0333" text-anchor="middle">internet</text>
+  <!-- data center -->
+  <rect x="876" y="30" width="288" height="138" fill="#F6DCE5" stroke="#8D0333" stroke-width="1.5"/>
+  <text x="890" y="50" font-size="13" font-weight="700" fill="#8D0333" letter-spacing="1">DATA CENTER DO FORNECEDOR</text>
+  <g fill="#fff" stroke="#1A1A1A" stroke-width="1.5"><rect x="920" y="64" width="54" height="88"/><rect x="994" y="64" width="54" height="88"/><rect x="1068" y="64" width="54" height="88"/></g>
+  <g fill="#D4B277"><rect x="928" y="74" width="38" height="10"/><rect x="928" y="92" width="38" height="10"/><rect x="928" y="110" width="38" height="10"/><rect x="1002" y="74" width="38" height="10"/><rect x="1002" y="92" width="38" height="10"/><rect x="1002" y="110" width="38" height="10"/><rect x="1076" y="74" width="38" height="10"/><rect x="1076" y="92" width="38" height="10"/><rect x="1076" y="110" width="38" height="10"/></g>
+  <circle cx="1140" cy="150" r="15" fill="#8D0333"/><text x="1140" y="155" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">3</text>
+  <text x="1020" y="190" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="middle">Na nuvem</text>
+</svg>
+    <table class="tab apertada" style="margin-top:12px">
+      <tr><th style="width:19%"></th><th style="width:27%">1 · NA MÁQUINA</th><th style="width:27%">2 · NO SERVIDOR DA ORGANIZAÇÃO</th><th style="width:27%">3 · NA NUVEM</th></tr>
+      <tr><td><strong>Onde o dado fica</strong></td><td>No disco do computador que você usa</td><td>Na sala de servidores do órgão</td><td>No data center de outra empresa</td></tr>
+      <tr><td><strong>Quem compra e mantém</strong></td><td>Você ou o setor, por equipamento</td><td>A equipe de TI da organização</td><td>O fornecedor, cobrando pelo uso</td></tr>
+      <tr><td><strong>Sem internet</strong></td><td>Continua funcionando</td><td>Funciona dentro da rede interna</td><td>Para de funcionar</td></tr>
+      <tr><td><strong>Exemplo</strong></td><td>Excel instalado no computador</td><td>Sistema de folha no data center da prefeitura</td><td>Armazenamento por assinatura, modelo de linguagem por conta</td></tr>
+    </table></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 2.1 · Teoria</span>
@@ -450,35 +528,35 @@ body.mexeu #ajuda{opacity:1}
 <section class="slide conteudo" data-i="7">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 2.1 · CONCEITO</span>
-    <h2>A nuvem é o computador de outra pessoa</h2>
-    <p class="sub">O nome sugere algo etéreo, e o assunto é bem concreto</p>
+    <h2>A nuvem é o computador de outra empresa</h2>
+    <p class="sub">O nome sugere algo abstrato, e o assunto é bem concreto</p>
     <div class="corpo"><div class="conceito">
-    <div class="def" style="border-left-color:#0AB0AB">
-      <span class="rot">COMPUTAÇÃO EM NUVEM</span>
-      <p>É usar, pela internet, equipamento que pertence a outra empresa, pagando pelo uso em vez de comprar a máquina. Os seus arquivos "na nuvem" estão gravados em discos reais, dentro de galpões reais, que pertencem a alguém com endereço e contrato.</p>
+    <div class="def" style="border-left-color:#8D0333">
+      <span class="rot">COMPUTAÇÃO EM NUVEM (CLOUD COMPUTING)</span>
+      <p>Uso, pela internet, de equipamento e programas de outra empresa, contratados sob demanda e pagos conforme o uso. Os arquivos "na nuvem" estão gravados em discos de um data center, com endereço e contrato.<span class="fonte">Definição adaptada de Mell e Grance, The NIST Definition of Cloud Computing, NIST SP 800-145 (2011).</span></p>
     </div>
     <div class="pontos cols-2">
       <div class="pt">
-        <span class="rule" style="background:#0AB0AB"></span>
-        <span class="rot">O que você deixa de ter</span>
-        <p>O equipamento, o custo de comprá-lo e o trabalho de mantê-lo. Também deixa de ter o controle físico sobre onde o dado está gravado.</p>
+        <span class="rule" style="background:#8D0333"></span>
+        <span class="rot">O que a organização deixa de ter</span>
+        <p>A compra do equipamento e o trabalho de mantê-lo. Também deixa de ter controle físico sobre o local onde o dado está gravado.</p>
       </div>
       <div class="pt">
-        <span class="rule" style="background:#0AB0AB"></span>
-        <span class="rot">O que você passa a ter</span>
-        <p>Capacidade que cresce e diminui conforme o uso, sem obra e sem compra, e um custo que aparece todo mês em vez de uma vez só.</p>
+        <span class="rule" style="background:#8D0333"></span>
+        <span class="rot">O que passa a ter</span>
+        <p>Capacidade que aumenta e diminui conforme o uso, sem obra nem compra, e uma despesa mensal no lugar de um investimento único.</p>
       </div>
       <div class="pt">
-        <span class="rule" style="background:#0AB0AB"></span>
-        <span class="rot">A pergunta do administrador</span>
-        <p>Não é onde fica o galpão. É quem responde quando o serviço cai, o que o contrato garante e o que acontece com o dado se você parar de pagar.</p>
+        <span class="rule" style="background:#8D0333"></span>
+        <span class="rot">As perguntas do administrador</span>
+        <p>Quem responde quando o serviço cai, qual disponibilidade o contrato garante e o que acontece com o dado se o pagamento parar.</p>
       </div>
       <div class="pt">
-        <span class="rule" style="background:#0AB0AB"></span>
-        <span class="rot">O risco que se assume</span>
-        <p>Sem internet, não há trabalho. E sair de um fornecedor de nuvem depois de anos de uso costuma ser caro, porque o dado precisa ser convertido e migrado.</p>
+        <span class="rule" style="background:#8D0333"></span>
+        <span class="rot">O risco assumido</span>
+        <p>Sem internet, o trabalho para. Trocar de fornecedor depois de anos custa caro, porque o dado precisa ser exportado, convertido e migrado.</p>
       </div></div>
-    <div class="analogia"><span class="rot">PARA FIXAR</span><p>É a diferença entre comprar uma sala e alugar uma sala mobiliada. Alugar é mais barato para começar, dá flexibilidade e evita obra. Em compensação, você depende do proprietário, e mudar de endereço depois de cinco anos dá bem mais trabalho do que parecia no começo.</p></div>
+    <div class="analogia"><span class="rot">PARA FIXAR</span><p>É a diferença entre comprar uma sala e alugar uma sala mobiliada. O aluguel custa menos para começar e evita obra. Em troca, você depende do proprietário, e a mudança depois de cinco anos dá mais trabalho do que parecia no começo.</p></div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
@@ -490,20 +568,34 @@ body.mexeu #ajuda{opacity:1}
     <span class="barra"></span>
     <span class="eyebrow">CICLO 2.1 · TEORIA</span>
     <h2>Quem paga, e o que se paga</h2>
-    <p class="sub">Custo total de propriedade é a soma de tudo que um sistema custa enquanto existe, e não o preço da compra</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Aquisição</strong><p>Licença, equipamento, implantação. É a única parcela que aparece na proposta comercial, e costuma ser menos da metade do custo do ciclo de vida.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Operação</strong><p>Energia, conexão, suporte, atualização e o tempo da equipe interna que mantém o sistema funcionando. Aparece diluído em outras rubricas do orçamento.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Treinamento e adaptação</strong><p>O tempo em que a equipe produz menos porque está aprendendo, e o retrabalho do período de transição. Raramente é orçado, e sempre acontece.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Saída</strong><p>O que custa sair do fornecedor: exportar o dado, converter formato, contratar outro. Quando é caro demais, a organização fica presa a uma decisão antiga, e isso tem nome: dependência de fornecedor.</p></div>
-    </li></ol></div>
+    <p class="sub">A proposta comercial mostra só a primeira parcela do custo de um sistema</p>
+    <div class="corpo"><div class="def"><span class="rot">Custo total de propriedade (total cost of ownership, TCO)</span>
+      <p>Soma de tudo o que um sistema custa durante o tempo em que é usado, da compra à substituição. O conceito foi difundido pelo Gartner para comparar opções de TI além do preço de aquisição.</p></div>
+    <p style="font-size:15px;color:var(--muted);margin:12px 0 6px">Sistema de protocolo eletrônico de uma prefeitura, em cinco anos de uso. Total de R$ 500 mil.</p><svg class="fig" viewBox="0 0 1168 66" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="350" height="44" fill="#8D0333"/>
+  <rect x="350" y="0" width="584" height="44" fill="#D4B277"/>
+  <rect x="934" y="0" width="117" height="44" fill="#0AB0AB"/>
+  <rect x="1051" y="0" width="117" height="44" fill="#FEC84D"/>
+  <g font-size="15" font-weight="700">
+    <text x="14" y="28" fill="#fff">Aquisição · R$ 150 mil · 30%</text>
+    <text x="364" y="28" fill="#1A1A1A">Operação · R$ 250 mil · 50%</text>
+    <text x="992" y="28" fill="#fff" text-anchor="middle">10%</text>
+    <text x="1109" y="28" fill="#1A1A1A" text-anchor="middle">10%</text>
+  </g>
+  <line x1="0" y1="52" x2="0" y2="62" stroke="#8D0333" stroke-width="2"/><line x1="350" y1="52" x2="350" y2="62" stroke="#8D0333" stroke-width="2"/>
+  <line x1="0" y1="57" x2="350" y2="57" stroke="#8D0333" stroke-width="2"/>
+  <text x="362" y="62" font-size="13.5" font-weight="700" fill="#8D0333">valor que aparece na proposta comercial</text>
+  <text x="992" y="62" font-size="13" fill="#6B6B6B" text-anchor="middle">Treinamento</text>
+  <text x="1109" y="62" font-size="13" fill="#6B6B6B" text-anchor="middle">Saída</text>
+</svg>
+    <table class="tab apertada" style="margin-top:8px">
+      <tr><th style="width:23%">PARCELA</th><th style="width:47%">O QUE INCLUI NO EXEMPLO</th><th style="width:13%">5 ANOS</th><th style="width:17%">ONDE APARECE</th></tr>
+      <tr><td><strong>Aquisição</strong></td><td>Licença e implantação</td><td>R$ 150 mil</td><td>Proposta comercial</td></tr>
+      <tr><td><strong>Operação</strong></td><td>Hospedagem, suporte e equipe interna, R$ 50 mil por ano</td><td>R$ 250 mil</td><td>Diluída no orçamento</td></tr>
+      <tr><td><strong>Treinamento e adaptação</strong></td><td>25 servidores × 40 horas × R$ 50 por hora de trabalho</td><td>R$ 50 mil</td><td>Raramente orçada</td></tr>
+      <tr><td><strong>Saída</strong></td><td>Exportar, converter e migrar os dados ao fim do contrato</td><td>R$ 50 mil</td><td>Descoberta no fim</td></tr>
+    </table>
+    <p class="fonte-nota">Exemplo ilustrativo, com valores fictícios. Quando a saída custa caro demais, a organização fica presa ao fornecedor. Esse efeito se chama dependência de fornecedor (vendor lock-in).</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 2.1 · Teoria</span>
@@ -514,53 +606,15 @@ body.mexeu #ajuda{opacity:1}
     <span class="barra"></span>
     <span class="eyebrow">CICLO 2.1 · DEMONSTRAÇÃO</span>
     <h2>Onde roda o modelo que você vai usar</h2>
-    <p class="sub">A ferramenta da disciplina, submetida à mesma pergunta</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">O PROGRAMA</header>
-      <h3>opencode desktop, instalado na máquina</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Onde roda</span>
-          <p>No computador do laboratório. Ele lê e escreve arquivos da pasta que você abrir.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Consequência</span>
-          <p>Se a máquina for restaurada, você reinstala. Por isso o repositório existe.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">O MODELO</header>
-      <h3>Roda na nuvem do provedor</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Onde roda</span>
-          <p>Numa máquina de terceiro. O texto que você envia sai do laboratório pela internet.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Consequência</span>
-          <p>Vale a regra da seção 9 do programa: nada de dado pessoal identificável de terceiro.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">A CONTA</header>
-      <h3>Camada gratuita, com cota diária</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Como funciona</span>
-          <p>Sem custo, com limite de pedidos por dia e por minuto, que varia sem aviso.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Consequência</span>
-          <p>Poucos pedidos longos por atividade. O roteiro traz o resultado esperado por escrito.</p>
-        </div>
-    </article></div></div>
+    <p class="sub">A ferramenta da disciplina submetida às mesmas perguntas</p>
+    <div class="corpo"><div class="fluxo" style="--n:4"><div class="etapa" style="--cor:#D4B277"><span class="n">1</span><h4>Você pede</h4><p>Escreve o pedido no opencode desktop, instalado no computador do laboratório.</p></div><div class="etapa" style="--cor:#D4B277"><span class="n">2</span><h4>O agente lê</h4><p>O opencode abre os arquivos da pasta que o pedido cita. Isso acontece na máquina.</p></div><div class="etapa" style="--cor:#8D0333"><span class="n">3</span><h4>O texto viaja</h4><p>Pedido e conteúdo lido vão pela internet ao servidor do provedor, nos EUA ou na União Europeia.</p></div><div class="etapa" style="--cor:#0AB0AB"><span class="n">4</span><h4>A resposta volta</h4><p>O modelo responde e o opencode grava o resultado como arquivo na sua pasta.</p></div></div>
+    <table class="tab apertada" style="margin-top:16px">
+      <tr><th style="width:15%">PARTE</th><th style="width:27%">ONDE RODA</th><th style="width:58%">CONSEQUÊNCIA PARA VOCÊ</th></tr>
+      <tr><td><strong>Programa</strong></td><td>Na máquina, como o Excel</td><td>Se o computador do laboratório for restaurado, você reinstala. O trabalho fica salvo no repositório do ciclo 2.4.</td></tr>
+      <tr><td><strong>Modelo</strong></td><td>Na nuvem do provedor</td><td>Todo conteúdo que o agente lê sai do laboratório. Dado pessoal de terceiro sai do arquivo antes do pedido.</td></tr>
+      <tr><td><strong>Conta</strong></td><td>Gratuita, individual</td><td>Modelos gratuitos com limite de uso que o provedor não publica e que pode mudar sem aviso.</td></tr>
+    </table>
+    <p class="fonte-nota">Local dos servidores conforme opencode.ai/docs/zen. Envio de dado pessoal ao exterior é transferência internacional (Lei nº 13.709/2018, art. 33, e Resolução CD/ANPD nº 19/2024). Consulta em 02/11/2026.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 2.1 · Demonstração</span>
@@ -570,20 +624,20 @@ body.mexeu #ajuda{opacity:1}
 <section class="slide conteudo" data-i="10">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 2.1 · PRÁTICA</span>
-    <h2>Sua vez: um sistema que você usa</h2>
+    <h2>Sua vez com um sistema que você usa</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Escolha um sistema que você usa de verdade</strong><p>O SIGAA, o sistema do seu estágio, o aplicativo do banco, o armazenamento onde estão seus arquivos.</p></div>
+      <div><strong>Escolha um sistema que você usa de verdade</strong><p>O SIGAA, o sistema do seu estágio, o aplicativo do banco ou o serviço onde guarda seus arquivos.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Descubra onde ele roda</strong><p>Máquina, servidor da organização ou nuvem. Procure na página do serviço, nos termos de uso ou pergunte a quem administra.</p></div>
+      <div><strong>Descubra onde ele roda</strong><p>Na máquina, em servidor da organização ou na nuvem. Procure na página do serviço, nos termos de uso, ou pergunte a quem administra. Anote de onde tirou a informação.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Responda às três perguntas</strong><p>Quem controla o dado, quem paga a conta e a quem você reclama quando cai.</p></div>
+      <div><strong>Responda às três perguntas</strong><p>Quem controla o dado, quem paga a conta e a quem você reclama quando o serviço cai.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Identifique o custo de saída</strong><p>Se você quisesse parar de usar amanhã, o que aconteceria com os seus dados?</p></div>
+      <div><strong>Descreva o custo de saída</strong><p>Se você parasse de usar amanhã, o que aconteceria com os seus dados e quanto trabalho daria levá-los para outro serviço.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
@@ -599,16 +653,16 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>O sistema escolhido e para que você o usa.</li><li>Onde ele roda, com a evidência de onde você tirou essa informação.</li><li>Quem controla o dado, quem paga e a quem se reclama.</li><li>O custo de saída, em uma frase.</li></ul>
+      <ul><li>O sistema escolhido e para que você o usa.</li><li>Onde ele roda, com a fonte de onde você tirou essa informação.</li><li>Quem controla o dado, quem paga e a quem se reclama.</li><li>O custo de saída, em uma frase.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>entregas/modulo2-ciclo1-infraestrutura.md<br><br>O arquivo é criado neste encontro, no ciclo 2.2.</p>
+        <p>entregas/modulo2-ciclo1-infraestrutura.md<br><br>A pasta entregas/ é criada no ciclo 2.2. Até lá, anote no caderno.</p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>"Roda na nuvem" sem indicação de onde você leu isso não conta como resposta.</p>
+        <p>"Roda na nuvem" sem a fonte da informação não conta como resposta. O script do ciclo 2.4 procura um arquivo em entregas/ com nome iniciado por modulo2-ciclo1.</p>
       </section>
     </div>
   </div></div>
@@ -631,34 +685,34 @@ body.mexeu #ajuda{opacity:1}
     <span class="barra"></span>
     <span class="eyebrow">CICLO 2.2 · CONCEITO</span>
     <h2>Arquivo, pasta e caminho</h2>
-    <p class="sub">O vocabulário mínimo para o resto do semestre. Sem ele, nenhuma instrução ao agente funciona.</p>
+    <p class="sub">O vocabulário mínimo para o resto do semestre e para toda instrução ao agente</p>
     <div class="corpo"><div class="conceito">
-    <div class="def" style="border-left-color:#0AB0AB">
+    <div class="def" style="border-left-color:#8D0333">
       <span class="rot">COMO O COMPUTADOR GUARDA AS COISAS</span>
-      <p>Todo conteúdo gravado é um arquivo. Arquivos ficam dentro de pastas, e pastas podem estar dentro de outras pastas. O caminho é o endereço completo de um arquivo: a sequência de pastas até chegar nele.</p>
+      <p>Todo conteúdo gravado é um arquivo. Arquivos ficam dentro de pastas, e pastas podem estar dentro de outras pastas. O caminho (path) é o endereço completo de um arquivo, com a sequência de pastas até ele.</p>
     </div>
     <div class="pontos cols-2">
       <div class="pt">
-        <span class="rule" style="background:#0AB0AB"></span>
-        <span class="rot">A extensão diz o tipo</span>
-        <p>É o final depois do ponto: relatorio.docx, base.csv, leiame.md. Ela informa ao computador qual programa abre aquele arquivo. Trocar a extensão não converte o arquivo, só confunde o programa.</p>
+        <span class="rule" style="background:#8D0333"></span>
+        <span class="rot">A extensão indica o tipo</span>
+        <p>É o final depois do ponto: relatorio.docx, base.csv, leiame.md. Ela diz ao computador qual programa abre o arquivo. Mudar a extensão no nome não converte o conteúdo.</p>
       </div>
       <div class="pt">
-        <span class="rule" style="background:#0AB0AB"></span>
+        <span class="rule" style="background:#8D0333"></span>
         <span class="rot">O caminho é o endereço</span>
-        <p>dados/vendas-2025.csv quer dizer: o arquivo vendas-2025.csv, dentro da pasta dados. É assim que você vai citar arquivos nas instruções ao agente.</p>
+        <p>dados/vendas-2025.csv indica o arquivo vendas-2025.csv dentro da pasta dados. É assim que você vai citar arquivos nas instruções ao agente.</p>
       </div>
       <div class="pt">
-        <span class="rule" style="background:#0AB0AB"></span>
+        <span class="rule" style="background:#8D0333"></span>
         <span class="rot">Nome sem espaço e sem acento</span>
-        <p>Use minúsculas e hífen: base-de-vendas.csv em vez de Base de Vendas.csv. Espaço e acento funcionam no Windows e quebram na hora de publicar ou de rodar um script.</p>
+        <p>Use minúsculas e hífen, como base-de-vendas.csv no lugar de Base de Vendas.csv. Espaço e acento funcionam no Windows e causam erro ao publicar ou ao rodar um script.</p>
       </div>
       <div class="pt">
-        <span class="rule" style="background:#0AB0AB"></span>
+        <span class="rule" style="background:#8D0333"></span>
         <span class="rot">A pasta é a unidade de trabalho</span>
-        <p>Nesta disciplina você não vai ter arquivos soltos na área de trabalho. Tudo vive dentro de uma pasta de projeto, que é o que o agente enxerga e o que vai ser entregue.</p>
+        <p>Nesta disciplina nenhum arquivo fica solto na área de trabalho. Tudo fica dentro da pasta do projeto, que o agente lê e que você entrega.</p>
       </div></div>
-    <div class="analogia"><span class="rot">PARA FIXAR</span><p>A pasta é o armário, a subpasta é a gaveta e o arquivo é o documento dentro dela. O caminho é o que você diria a alguém para achar o papel sem você estar junto: armário de contratos, gaveta de 2025, contrato da manutenção.</p></div>
+    <div class="analogia"><span class="rot">PARA FIXAR</span><p>A pasta é o armário, a subpasta é a gaveta e o arquivo é o documento. O caminho é a indicação que você daria a um colega para achar o papel sem você: armário de contratos, gaveta de 2025, contrato de manutenção.</p></div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
@@ -669,54 +723,23 @@ body.mexeu #ajuda{opacity:1}
 <section class="slide conteudo" data-i="14">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 2.2 · TEORIA</span>
-    <h2>A conversa some, a pasta fica</h2>
+    <h2>Conversa, pasta e repositório</h2>
     <p class="sub">Por que a unidade de trabalho da disciplina é a pasta, e não o chat</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">A CONVERSA</header>
-      <h3>Você pergunta, copia a resposta e fecha</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que sobra</span>
-          <p>Um texto colado em algum lugar, sem a pergunta que o gerou nem o dado de origem.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O problema</span>
-          <p>Três semanas depois ninguém, nem você, consegue refazer o resultado.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">A PASTA</header>
-      <h3>O agente trabalha sobre os arquivos</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que sobra</span>
-          <p>O dado de entrada, a instrução dada, o resultado gravado e a sua correção.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O ganho</span>
-          <p>O trabalho é reproduzível, ou seja, outra pessoa abre a pasta, refaz o percurso e chega ao mesmo resultado.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">O REPOSITÓRIO</header>
-      <h3>A pasta com histórico e cópia externa</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que sobra</span>
-          <p>Todas as versões, com data e autor, e uma cópia fora da máquina do laboratório.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O ganho</span>
-          <p>Máquina restaurada não apaga o semestre. E a correção enxerga o percurso, e não só o resultado.</p>
-        </div>
-    </article></div></div>
+    <div class="corpo"><div class="def"><span class="rot">Reprodutibilidade (reproducibility)</span>
+      <p>Um trabalho é reprodutível quando outra pessoa, com os mesmos dados e as mesmas instruções, refaz o percurso e chega ao mesmo resultado.</p></div>
+    <table class="tab" style="margin-top:16px">
+      <tr><th style="width:18%">ONDE O TRABALHO FICA</th><th style="width:36%">O QUE FICA REGISTRADO</th><th style="width:28%">QUEM CONSEGUE REFAZER</th><th style="width:18%">REPRODUTÍVEL</th></tr>
+      <tr><td><strong>Conversa no chat</strong><span class="s">você pergunta, copia e fecha</span></td>
+          <td>Um texto colado em algum lugar, sem a pergunta que o gerou nem o dado de origem.</td>
+          <td>Ninguém, nem você três semanas depois.</td><td><span class="chip ruim">NÃO</span></td></tr>
+      <tr><td><strong>Pasta do projeto</strong><span class="s">o agente trabalha sobre arquivos</span></td>
+          <td>O dado de entrada, a instrução em prompts/, o resultado em saidas/ e a sua correção.</td>
+          <td>Quem tiver acesso a esta máquina.</td><td><span class="chip med">SÓ NESTA MÁQUINA</span></td></tr>
+      <tr><td><strong>Repositório</strong><span class="s">a pasta com histórico e cópia externa</span></td>
+          <td>Tudo o que está na pasta, mais cada versão gravada, com data, autor e descrição.</td>
+          <td>Você e o professor, de qualquer computador.</td><td><span class="chip ok">SIM</span></td></tr>
+    </table>
+    <p class="fonte-nota">O repositório é montado no ciclo 2.4. Ele também protege o semestre quando o computador do laboratório é restaurado.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 2.2 · Teoria</span>
@@ -727,23 +750,65 @@ body.mexeu #ajuda{opacity:1}
     <span class="barra"></span>
     <span class="eyebrow">CICLO 2.2 · TEORIA</span>
     <h2>A estrutura padrão da disciplina</h2>
-    <p class="sub">Cinco pastas e três arquivos. Todos os alunos usam a mesma, o semestre inteiro.</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:5">
-    <li><span class="num">1</span>
-      <div><strong>dados/</strong><p>Os arquivos de entrada como vieram da fonte, sem edição. Se você alterar o original, perde a possibilidade de refazer o trabalho do zero.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>prompts/</strong><p>Prompt é a instrução que você escreve para o modelo. Aqui ficam as suas, uma por técnica. É o seu caderno de instruções, cobrado na entrega final.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>saidas/</strong><p>O que o agente produziu: rascunhos, tabelas intermediárias, gráficos de teste. Material de trabalho, não entrega.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>entregas/</strong><p>Os arquivos que valem nota. Um por atividade, com o nome padronizado que o roteiro indica.</p></div>
-    </li>
-    <li><span class="num">5</span>
-      <div><strong>AGENTS.md, README.md e .gitignore</strong><p>A configuração do agente, a descrição do projeto e a lista do que não deve ser publicado. Os três ficam soltos na raiz, que é o primeiro nível da pasta.</p></div>
-    </li></ol></div>
+    <p class="sub">Quatro pastas e três arquivos de configuração, iguais para todos durante o semestre</p>
+    <div class="corpo"><svg class="fig" viewBox="0 0 1168 404" xmlns="http://www.w3.org/2000/svg">
+<text x="0" y="20" font-size="17" font-weight="700" fill="#8D0333" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">projeto-maria-souza/</text>
+<text x="300" y="20" font-size="13" font-weight="700" fill="#6B6B6B" letter-spacing=".6">CRIADO DENTRO</text>
+<text x="450" y="20" font-size="13" font-weight="700" fill="#6B6B6B" letter-spacing=".6">O QUE GUARDA</text>
+<line x1="14" y1="28" x2="14" y2="362" stroke="#6B6B6B" stroke-width="1.5"/>
+<line x1="14" y1="54" x2="34" y2="54" stroke="#6B6B6B" stroke-width="1.5"/>
+<path d="M38 44 h10 l4 4 h14 v16 h-28 z" fill="#0AB0AB"/>
+<text x="76" y="59" font-size="16" font-weight="700" fill="#1A1A1A" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">dados/</text>
+<text x="300" y="59" font-size="14" fill="#6B6B6B" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">.manter</text>
+<line x1="420" y1="54" x2="440" y2="54" stroke="#C9962E" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="450" y="59" font-size="16" fill="#333333">Arquivos de entrada como vieram da fonte. Não se editam.</text>
+<line x1="0" y1="76" x2="1168" y2="76" stroke="#EDEDED" stroke-width="1"/>
+<line x1="14" y1="98" x2="34" y2="98" stroke="#6B6B6B" stroke-width="1.5"/>
+<path d="M38 88 h10 l4 4 h14 v16 h-28 z" fill="#0AB0AB"/>
+<text x="76" y="103" font-size="16" font-weight="700" fill="#1A1A1A" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">prompts/</text>
+<text x="300" y="103" font-size="14" fill="#6B6B6B" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">LEIA-ME.md</text>
+<line x1="420" y1="98" x2="440" y2="98" stroke="#C9962E" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="450" y="103" font-size="16" fill="#333333">As instruções dadas ao agente, um arquivo por técnica.</text>
+<line x1="0" y1="120" x2="1168" y2="120" stroke="#EDEDED" stroke-width="1"/>
+<line x1="14" y1="142" x2="34" y2="142" stroke="#6B6B6B" stroke-width="1.5"/>
+<path d="M38 132 h10 l4 4 h14 v16 h-28 z" fill="#0AB0AB"/>
+<text x="76" y="147" font-size="16" font-weight="700" fill="#1A1A1A" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">saidas/</text>
+<text x="300" y="147" font-size="14" fill="#6B6B6B" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">.manter</text>
+<line x1="420" y1="142" x2="440" y2="142" stroke="#C9962E" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="450" y="147" font-size="16" fill="#333333">Material de trabalho produzido pelo agente. Não vale nota.</text>
+<line x1="0" y1="164" x2="1168" y2="164" stroke="#EDEDED" stroke-width="1"/>
+<line x1="14" y1="186" x2="34" y2="186" stroke="#6B6B6B" stroke-width="1.5"/>
+<path d="M38 176 h10 l4 4 h14 v16 h-28 z" fill="#0AB0AB"/>
+<text x="76" y="191" font-size="16" font-weight="700" fill="#1A1A1A" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">entregas/</text>
+<text x="300" y="191" font-size="14" fill="#6B6B6B" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">LEIA-ME.md</text>
+<line x1="420" y1="186" x2="440" y2="186" stroke="#C9962E" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="450" y="191" font-size="16" fill="#333333">Os arquivos que valem nota, com o nome indicado no slide de entrega.</text>
+<line x1="0" y1="208" x2="1168" y2="208" stroke="#EDEDED" stroke-width="1"/>
+<line x1="14" y1="230" x2="34" y2="230" stroke="#6B6B6B" stroke-width="1.5"/>
+<path d="M40 218 h16 l6 6 v18 h-22 z" fill="#D4B277"/>
+<text x="76" y="235" font-size="16" font-weight="700" fill="#1A1A1A" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">README.md</text>
+<line x1="420" y1="230" x2="440" y2="230" stroke="#C9962E" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="450" y="235" font-size="16" fill="#333333">Nome, matrícula, organização escolhida e declaração de uso de IA.</text>
+<line x1="0" y1="252" x2="1168" y2="252" stroke="#EDEDED" stroke-width="1"/>
+<line x1="14" y1="274" x2="34" y2="274" stroke="#6B6B6B" stroke-width="1.5"/>
+<path d="M40 262 h16 l6 6 v18 h-22 z" fill="#D4B277"/>
+<text x="76" y="279" font-size="16" font-weight="700" fill="#1A1A1A" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">AGENTS.md</text>
+<line x1="420" y1="274" x2="440" y2="274" stroke="#C9962E" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="450" y="279" font-size="16" fill="#333333">Instruções que o agente lê em todo pedido feito nesta pasta.</text>
+<line x1="0" y1="296" x2="1168" y2="296" stroke="#EDEDED" stroke-width="1"/>
+<line x1="14" y1="318" x2="34" y2="318" stroke="#6B6B6B" stroke-width="1.5"/>
+<path d="M40 306 h16 l6 6 v18 h-22 z" fill="#D4B277"/>
+<text x="76" y="323" font-size="16" font-weight="700" fill="#1A1A1A" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">.gitignore</text>
+<line x1="420" y1="318" x2="440" y2="318" stroke="#C9962E" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="450" y="323" font-size="16" fill="#333333">Lista do que o GitHub Desktop não deve gravar nem publicar.</text>
+<line x1="0" y1="340" x2="1168" y2="340" stroke="#EDEDED" stroke-width="1"/>
+<line x1="14" y1="362" x2="34" y2="362" stroke="#6B6B6B" stroke-width="1.5"/>
+<path d="M40 350 h16 l6 6 v18 h-22 z" fill="#FEC84D"/>
+<text x="76" y="367" font-size="16" font-weight="700" fill="#1A1A1A" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">atividade_modulo2.py</text>
+<line x1="420" y1="362" x2="440" y2="362" stroke="#C9962E" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="450" y="367" font-size="16" fill="#333333">O script da atividade, que você salva na raiz.</text>
+</svg>
+    <p class="fonte-nota" style="bottom:-6px">Nomes conforme o comando criar de atividade_modulo2.py. O arquivo vazio .manter existe para que o GitHub Desktop registre as pastas dados/ e saidas/ enquanto estão vazias.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 2.2 · Teoria</span>
@@ -755,47 +820,31 @@ body.mexeu #ajuda{opacity:1}
     <span class="eyebrow">CICLO 2.2 · CONCEITO</span>
     <h2>Texto puro e arquivo fechado</h2>
     <p class="sub">A diferença que decide se você vai conseguir abrir o arquivo daqui a cinco anos</p>
-    <div class="corpo"><div class="cards cols-2">
-    <article class="card">
-      <header style="background:#0AB0AB">TEXTO PURO</header>
-      <h3>O arquivo é só o texto que você vê</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que é</span>
-          <p>Um arquivo .txt, .csv ou .md guarda apenas caracteres. Qualquer programa consegue abrir, e daqui a vinte anos ainda vai conseguir.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que você ganha</span>
-          <p>O histórico de versões mostra exatamente qual linha mudou, porque o computador consegue comparar linha a linha.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que você perde</span>
-          <p>Formatação. Não existe negrito, cor nem coluna com largura definida.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#D4B277">ARQUIVO FECHADO</header>
-      <h3>O conteúdo vem embrulhado</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que é</span>
-          <p>Um .docx ou .xlsx é, por dentro, um pacote compactado com vários pedaços. Abrir sem o programa certo devolve símbolos sem sentido.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que você ganha</span>
-          <p>Formatação, fórmula, imagem, tudo que faz o documento ficar apresentável para uma pessoa.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que você perde</span>
-          <p>O histórico de versões só sabe dizer que o arquivo mudou, e não o que mudou dentro dele.</p>
-        </div>
-    </article></div></div>
+    <div class="corpo"><div class="duascol" style="--esq:1fr;--dir:1fr;height:auto">
+      <div class="col" style="gap:8px">
+        <div class="def"><span class="rot">Texto puro (plain text)</span>
+          <p>Arquivo que guarda só caracteres. Abre em qualquer programa, inclusive no Bloco de Notas, e continuará legível daqui a vinte anos. Exemplos: .txt, .csv, .md.</p></div>
+        <pre class="codigo"><b># Mapa de tarefas</b>
+
+- Conferir notas fiscais de compra
+- Lançar empenho no sistema
+- Emitir relatório mensal de gastos</pre>
+        <p style="font-size:14px;color:var(--muted)">Arquivo .md aberto no Bloco de Notas (exemplo)</p>
+      </div>
+      <div class="col" style="gap:8px">
+        <div class="def" style="border-left-color:var(--dourado)"><span class="rot">Arquivo fechado (binário)</span>
+          <p>Um .docx ou .xlsx é, por dentro, um pacote compactado com vários arquivos. Sem o programa certo, o conteúdo aparece como símbolos.</p></div>
+        <pre class="terminal" style="font-size:14px">PK♦♣ ▒ ┘ ¶!ßÖ ╚ [Content_Types].xml ▒
+ìT╦n┬0▒╝W¬ÿ%╝d▒ ...
+PK♦♣ ▒ word/document.xml ìR┴n▒0...
+╛▓▒▒ ╗ ÷▒»çÆ┤¼╝ ...</pre>
+        <p style="font-size:14px;color:var(--muted)">relatorio.docx aberto no Bloco de Notas (trecho)</p>
+      </div>
+    </div>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:10px">
+      <div class="caixa teal"><span class="rot">NO HISTÓRICO DE VERSÕES</span><p>O histórico compara texto puro linha a linha e mostra qual linha mudou.</p></div>
+      <div class="caixa vinho"><span class="rot">NO HISTÓRICO DE VERSÕES</span><p>Do arquivo fechado, o histórico registra só que ele mudou, sem mostrar onde.</p></div>
+    </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 2.2 · Conceito</span>
@@ -805,69 +854,28 @@ body.mexeu #ajuda{opacity:1}
 <section class="slide conteudo" data-i="17">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 2.2 · TEORIA</span>
-    <h2>Formatos: qual usar para quê</h2>
-    <p class="sub">A regra da disciplina: trabalhar em texto puro e converter no fim, quando for para outra pessoa</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">CSV</header>
-      <h3>Tabela em texto puro</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que é</span>
-          <p>Cada linha do arquivo é uma linha da tabela, e as colunas são separadas por um sinal, quase sempre ponto e vírgula ou vírgula.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Quando usar</span>
-          <p>Sempre que o dado for tabular e precisar ser lido por qualquer programa.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Cuidado</span>
-          <p>No Brasil o separador costuma ser ponto e vírgula, porque a vírgula já é o separador decimal.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">MARKDOWN</header>
-      <h3>Texto com marcação simples, extensão .md</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que é</span>
-          <p>Texto comum com algumas convenções: um # antes do título, um hífen antes de cada item de lista. Nada além disso.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Quando usar</span>
-          <p>Relatórios, anotações e todas as entregas escritas desta disciplina.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Vantagem</span>
-          <p>Abre em qualquer editor, e o histórico mostra o que mudou linha a linha.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">XLSX E DOCX</header>
-      <h3>Formatos do Excel e do Word</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que é</span>
-          <p>Arquivos fechados, com formatação e fórmula guardadas junto do conteúdo.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Quando usar</span>
-          <p>Quando o destinatário for uma pessoa que vai abrir no Excel ou no Word.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Cuidado</span>
-          <p>Servem para entregar, não para trabalhar. O controle de versão não enxerga dentro deles.</p>
-        </div>
-    </article></div></div>
+    <h2>Qual formato usar para quê</h2>
+    <p class="sub">A regra da disciplina é trabalhar em texto puro e converter no fim, quando o arquivo vai para outra pessoa</p>
+    <div class="corpo"><table class="tab">
+      <tr><th style="width:17%">FORMATO</th><th style="width:15%">TIPO</th><th style="width:33%">O QUE GUARDA</th><th style="width:35%">USO NA DISCIPLINA</th></tr>
+      <tr><td><strong>CSV</strong><span class="s">.csv</span></td><td><span class="chip ok">TEXTO PURO</span></td>
+          <td>Tabela. Cada linha do arquivo é uma linha da tabela, e um sinal separa as colunas.</td>
+          <td>Toda base de dados de entrada e toda tabela produzida por script.</td></tr>
+      <tr><td><strong>Markdown</strong><span class="s">.md</span></td><td><span class="chip ok">TEXTO PURO</span></td>
+          <td>Texto com marcação simples, como # antes do título e hífen antes de cada item.</td>
+          <td>Relatórios, anotações, README, AGENTS.md e as entregas escritas.</td></tr>
+      <tr><td><strong>Script Python</strong><span class="s">.py</span></td><td><span class="chip ok">TEXTO PURO</span></td>
+          <td>Sequência de passos que o computador executa.</td>
+          <td>Os scripts das atividades e os que o agente escreve para calcular.</td></tr>
+      <tr><td><strong>Planilha e documento</strong><span class="s">.xlsx, .docx</span></td><td><span class="chip med">FECHADO</span></td>
+          <td>Conteúdo com formatação, fórmula e imagem no mesmo pacote.</td>
+          <td>Só na versão final, quando o destinatário vai abrir no Excel ou no Word.</td></tr>
+      <tr><td><strong>PDF</strong><span class="s">.pdf</span></td><td><span class="chip ruim">FECHADO</span></td>
+          <td>Página pronta para leitura e impressão.</td>
+          <td>Fonte de consulta. Para analisar, o conteúdo é extraído para .csv ou .md.</td></tr>
+    </table>
+    <div class="caixa dourado" style="margin-top:14px"><span class="rot">O SEPARADOR DO CSV NO BRASIL</span><p>A especificação do formato usa a vírgula entre colunas. O Excel configurado em português grava o CSV com ponto e vírgula, porque a vírgula já separa as casas decimais. Antes de pedir uma análise, abra o arquivo no Bloco de Notas e veja qual sinal ele usa.</p></div>
+    <p class="fonte-nota">Shafranovich, RFC 4180, Common Format and MIME Type for CSV Files (IETF, 2005). Gruber, Markdown (daringfireball.net, 2004).</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 2.2 · Teoria</span>
@@ -879,19 +887,44 @@ body.mexeu #ajuda{opacity:1}
     <span class="eyebrow">CICLO 2.2 · DEMONSTRAÇÃO</span>
     <h2>Um script cria a estrutura inteira</h2>
     <p class="sub">Script é um arquivo com uma sequência de passos que o computador executa de uma vez</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><div class="duascol" style="--esq:1fr;--dir:1fr">
+      <div class="col"><ol class="steps cols-1 compacto">
     <li><span class="num">1</span>
-      <div><strong>Baixe o arquivo atividade_modulo2.py</strong><p>Está no material do encontro, na turma virtual. A extensão .py indica que é um script escrito em Python. Salve numa pasta nova, com o nome do seu projeto.</p></div>
+      <div><strong>Baixe atividade_modulo2.py</strong><p>Está no material do encontro, na turma virtual. A extensão .py indica um script em Python. Salve o arquivo numa pasta nova, com o nome do seu projeto.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Abra essa pasta no opencode desktop</strong><p>A instalação é o ciclo 2.3. Neste ciclo, o professor executa na projeção e você acompanha.</p></div>
+      <div><strong>Abra essa pasta no opencode desktop</strong><p>A instalação é o ciclo 2.3. Neste ciclo o professor executa na projeção e a turma acompanha.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Peça ao agente para executar</strong><p>Diga: "execute o arquivo atividade_modulo2.py com o comando criar". Você não digita comando nenhum.</p></div>
+      <div><strong>Peça ao agente que execute</strong><p>Escreva "execute o arquivo atividade_modulo2.py com o comando criar". Você não digita comando.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Confira o que foi criado</strong><p>Cinco pastas, três arquivos e um modelo de entrega em cada pasta. O script imprime a lista do que fez.</p></div>
-    </li></ol></div>
+      <div><strong>Confira o que foi criado</strong><p>O script lista cada pasta e arquivo criado. Se a pasta já existir, ele não sobrescreve e lista o item como JA EXISTIA.</p></div>
+    </li></ol>
+      </div>
+      <div class="col" style="gap:4px">
+        <pre class="terminal" style="font-size:13.5px;line-height:1.33">=============================================
+ MODULO 2 - CRIACAO DA PASTA DO PROJETO
+=============================================
+
+CRIADO (11):
+  + dados/
+  + prompts/
+  + saidas/
+  + entregas/
+  + README.md
+  + AGENTS.md
+  + .gitignore
+  + entregas/LEIA-ME.md
+  + prompts/LEIA-ME.md
+  + dados/.manter
+  + saidas/.manter
+
+<span class="hl">PROXIMOS PASSOS, NESTA ORDEM</span>
+  1. Abra README.md e substitua os PREENCHER ...</pre>
+        <p style="font-size:13.5px;color:var(--muted)">Saída do comando criar numa pasta vazia, trecho inicial</p>
+      </div>
+    </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 2.2 · Demonstração</span>
@@ -901,20 +934,20 @@ body.mexeu #ajuda{opacity:1}
 <section class="slide conteudo" data-i="19">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 2.2 · PRÁTICA</span>
-    <h2>Sua vez: monte o seu projeto</h2>
+    <h2>Sua vez de montar o projeto</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Escolha o nome da pasta</strong><p>Use letras minúsculas, sem espaço e sem acento. Por exemplo: projeto-tadeu-teixeira.</p></div>
+      <div><strong>Escolha o nome da pasta</strong><p>Minúsculas, sem espaço e sem acento, por exemplo projeto-maria-souza. Crie a pasta em Documentos e salve nela o script.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Rode o script com o comando criar</strong><p>Ele monta a estrutura e escreve o README com o seu nome, que ele pergunta na primeira execução.</p></div>
+      <div><strong>Rode o script com o comando criar</strong><p>Ele monta as quatro pastas e os três arquivos de configuração. Se o opencode ainda não estiver instalado na sua máquina, rode o comando logo após a instalação, no ciclo 2.3.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Registre a organização do seu projeto</strong><p>No README, escreva qual organização ou base pública você vai usar no semestre. Pode mudar até o encontro 6.</p></div>
+      <div><strong>Preencha o README.md</strong><p>Troque cada PREENCHER pelo nome, pela matrícula e pela organização ou base pública do semestre, que pode mudar até o encontro 6. O campo do modelo usado fica para o ciclo 2.3.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Mova as entregas do módulo 1 para entregas/</strong><p>As quatro fichas do encontro passado entram agora na estrutura.</p></div>
+      <div><strong>Mova as entregas do módulo 1 para entregas/</strong><p>Os quatro arquivos .md do encontro anterior, com os nomes que o script procura, listados no slide seguinte.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
@@ -930,7 +963,7 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>A pasta do projeto com as cinco subpastas criadas.</li><li>O README.md preenchido com seu nome, matrícula e a organização escolhida.</li><li>As quatro entregas do módulo 1 movidas para entregas/.</li><li>A ficha do ciclo 2.1 salva em entregas/.</li></ul>
+      <ul><li>A pasta do projeto com dados/, prompts/, saidas/ e entregas/.</li><li>O README.md com nome, matrícula e organização escolhida.</li><li>Em entregas/, os arquivos do módulo 1 com estes nomes: <span class="mono" style="font-size:15px">modulo1-ciclo1-verificacao.md, modulo1-ciclo2-comparacao.md, modulo1-ciclo3-tarefas.md, modulo1-mapa-de-tarefas.md</span></li><li>A ficha do ciclo 2.1 salva em entregas/.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
@@ -939,7 +972,7 @@ body.mexeu #ajuda{opacity:1}
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Faz parte da entrega A1. O script confere a estrutura e aponta o que falta.</p>
+        <p>Faz parte da entrega A1. O comando conferir verifica as quatro pastas, procura cada PREENCHER no README e confere os quatro nomes do módulo 1.</p>
       </section>
     </div>
   </div></div>
@@ -962,34 +995,34 @@ body.mexeu #ajuda{opacity:1}
     <span class="barra"></span>
     <span class="eyebrow">CICLO 2.3 · CONCEITO</span>
     <h2>O que é um modelo de linguagem</h2>
-    <p class="sub">A versão curta agora, para você saber o que está instalando. O encontro 4 trata disso a fundo.</p>
+    <p class="sub">A versão curta, para você saber o que está instalando. O encontro 4 trata do tema em detalhe</p>
     <div class="corpo"><div class="conceito">
     <div class="def" style="border-left-color:#8D0333">
-      <span class="rot">MODELO DE LINGUAGEM</span>
-      <p>É um programa que leu uma quantidade enorme de texto e aprendeu quais palavras costumam vir depois de quais. Quando você escreve uma pergunta, ele vai escolhendo a continuação mais provável, palavra por palavra, até formar a resposta.</p>
+      <span class="rot">MODELO DE LINGUAGEM (LANGUAGE MODEL)</span>
+      <p>Programa treinado com uma quantidade muito grande de texto para estimar qual palavra tende a vir depois de outra. Ao receber uma pergunta, ele escreve a resposta escolhendo, parte por parte, a continuação mais provável.</p>
     </div>
     <div class="pontos cols-2">
       <div class="pt">
         <span class="rule" style="background:#8D0333"></span>
-        <span class="rot">Ele não consulta uma base de verdades</span>
-        <p>Não existe, por trás, uma enciclopédia sendo pesquisada. Existe um cálculo de probabilidade sobre linguagem. É por isso que ele erra com a mesma confiança com que acerta.</p>
+        <span class="rot">Ele não consulta uma base de fatos</span>
+        <p>A resposta sai de um cálculo de probabilidade sobre linguagem. Por isso o erro vem escrito com a mesma segurança do acerto.</p>
       </div>
       <div class="pt">
         <span class="rule" style="background:#8D0333"></span>
-        <span class="rot">Ele é muito bom em forma</span>
-        <p>Estruturar, resumir, reescrever, padronizar, traduzir, organizar em tabela. Nessas tarefas, o texto de saída costuma ser melhor que o de entrada.</p>
+        <span class="rot">Ele trabalha bem a forma do texto</span>
+        <p>Estruturar, resumir, reescrever, padronizar, traduzir e organizar em tabela são tarefas em que ele costuma acertar.</p>
       </div>
       <div class="pt">
         <span class="rule" style="background:#8D0333"></span>
-        <span class="rot">Ele é fraco em fato e em conta</span>
-        <p>Data, número, artigo de lei, referência bibliográfica e cálculo são exatamente onde ele inventa. Isso tem nome, alucinação, e é o assunto do encontro 4.</p>
+        <span class="rot">Ele erra em fato e em conta</span>
+        <p>Data, número, artigo de lei, referência bibliográfica e cálculo. Quando falta a informação, ele preenche com algo plausível. Isso se chama confabulação, ou alucinação, e é tema do encontro 4.</p>
       </div>
       <div class="pt">
         <span class="rule" style="background:#8D0333"></span>
         <span class="rot">Prompt é a instrução que você escreve</span>
-        <p>É a palavra que vai aparecer o semestre inteiro. Prompt bom descreve o papel, a tarefa, o formato de saída e o que não fazer.</p>
+        <p>Um bom prompt diz o papel, a tarefa, o arquivo de entrada, o formato de saída e o que não fazer.</p>
       </div></div>
-    <div class="analogia"><span class="rot">PARA FIXAR</span><p>Pense num estagiário que leu tudo que existe sobre o assunto, escreve muito bem, trabalha rápido e nunca diz que não sabe. Você aproveita bastante o trabalho dele, e confere todo número antes de assinar embaixo.</p></div>
+    <div class="analogia"><span class="rot">PARA FIXAR</span><p>Imagine um estagiário que leu tudo sobre o assunto, escreve bem, trabalha rápido e nunca diz que não sabe. Você aproveita o texto dele e confere cada número antes de assinar.</p></div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
@@ -1000,35 +1033,35 @@ body.mexeu #ajuda{opacity:1}
 <section class="slide conteudo" data-i="23">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 2.3 · CONCEITO</span>
-    <h2>O que é um agente, e por que não é um chat</h2>
+    <h2>O que é um agente e como ele difere do chat</h2>
     <p class="sub">A diferença que muda o modo de trabalhar desta disciplina</p>
     <div class="corpo"><div class="conceito">
-    <div class="def" style="border-left-color:#FEC84D">
-      <span class="rot">AGENTE</span>
-      <p>É um modelo de linguagem com permissão para agir dentro de uma pasta sua: abrir os arquivos que estão lá, gravar arquivos novos e executar programas, sempre a seu pedido e mostrando o que fez.</p>
+    <div class="def" style="border-left-color:#8D0333">
+      <span class="rot">AGENTE DE IA (AI AGENT)</span>
+      <p>Modelo de linguagem ligado a ferramentas que permitem agir sobre uma pasta sua: abrir os arquivos, gravar arquivos novos e executar programas, a seu pedido e mostrando cada ação.</p>
     </div>
     <div class="pontos cols-2">
       <div class="pt">
-        <span class="rule" style="background:#FEC84D"></span>
-        <span class="rot">No chat, você é o carregador</span>
-        <p>Você abre o arquivo, copia o conteúdo, cola na conversa, lê a resposta, copia de volta e salva. Todo transporte de informação é feito por você, e é aí que o erro entra.</p>
+        <span class="rule" style="background:#8D0333"></span>
+        <span class="rot">No chat, você transporta a informação</span>
+        <p>Você abre o arquivo, copia, cola na conversa, lê a resposta, copia de volta e salva. Cada cópia manual é uma chance de erro.</p>
       </div>
       <div class="pt">
-        <span class="rule" style="background:#FEC84D"></span>
-        <span class="rot">Com o agente, você é o revisor</span>
-        <p>Você diz o que quer, ele lê o arquivo certo, grava o resultado no lugar certo, e o seu trabalho passa a ser conferir o que ele fez.</p>
+        <span class="rule" style="background:#8D0333"></span>
+        <span class="rot">Com o agente, você revisa</span>
+        <p>Você diz o que quer e cita o arquivo. Ele lê, grava o resultado no lugar indicado, e o seu trabalho passa a ser conferir o que ele fez.</p>
       </div>
       <div class="pt">
-        <span class="rule" style="background:#FEC84D"></span>
-        <span class="rot">Ele age só onde você abriu</span>
-        <p>O agente enxerga a pasta que você abriu e nada além dela. Ele não passeia pelo computador nem acessa o que você não mostrou.</p>
+        <span class="rule" style="background:#8D0333"></span>
+        <span class="rot">O que ele lê vai ao provedor</span>
+        <p>Para responder, o agente envia ao servidor do modelo o pedido e o conteúdo dos arquivos que leu. Abra só a pasta do projeto, e nunca a pasta Documentos inteira.</p>
       </div>
       <div class="pt">
-        <span class="rule" style="background:#FEC84D"></span>
+        <span class="rule" style="background:#8D0333"></span>
         <span class="rot">A responsabilidade continua sua</span>
-        <p>Ele executa; você responde pelo resultado. Nesta disciplina, a nota está na conferência que você faz, e não no que o agente produziu.</p>
+        <p>O agente executa e você responde pelo resultado. Nesta disciplina a nota recai sobre a conferência que você registra.</p>
       </div></div>
-    
+    <div class="analogia"><span class="rot">PARA FIXAR</span><p>No chat, você é o mensageiro que leva e traz papéis entre o arquivo e o consultor. Com o agente, o consultor trabalha na sua mesa, e você confere o que ele deixou pronto antes de assinar.</p></div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
@@ -1040,53 +1073,13 @@ body.mexeu #ajuda{opacity:1}
     <span class="barra"></span>
     <span class="eyebrow">CICLO 2.3 · TEORIA</span>
     <h2>O que o opencode desktop faz</h2>
-    <p class="sub">Três verbos, e o semestre inteiro cabe neles</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">LÊ</header>
-      <h3>Abre os arquivos da pasta sem você anexar</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que muda</span>
-          <p>Você cita o arquivo pelo nome na instrução e ele localiza, abre e lê.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Por que importa</span>
-          <p>Some o passo de anexar, e some o risco de trabalhar sobre uma versão antiga.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">ESCREVE</header>
-      <h3>Grava o resultado como arquivo na pasta</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que muda</span>
-          <p>A resposta não fica na tela para você copiar. Vira arquivo, com nome e lugar.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Por que importa</span>
-          <p>O resultado entra no histórico de versões e pode ser corrigido depois.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">EXECUTA</header>
-      <h3>Roda scripts e mostra a saída</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que muda</span>
-          <p>Você pede em português. Quem digita comando é o agente.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Por que importa</span>
-          <p>Você responde pelo resultado, não pela sintaxe. Confira sempre a saída.</p>
-        </div>
-    </article></div></div>
+    <p class="sub">Três ações do agente e uma sua, que se repetem o semestre inteiro</p>
+    <div class="corpo"><div class="fluxo" style="--n:4"><div class="etapa" style="--cor:#D4B277"><span class="n">1</span><h4>Lê</h4><p>Abre os arquivos da pasta que o pedido cita pelo caminho, sem anexo e sem cópia.</p><span class="arq">dados/vendas-2025.csv</span></div><div class="etapa" style="--cor:#0AB0AB"><span class="n">2</span><h4>Grava</h4><p>O resultado vira arquivo, com nome e lugar, e entra no histórico de versões.</p><span class="arq">saidas/resumo-vendas.md</span></div><div class="etapa" style="--cor:#FEC84D"><span class="n">3</span><h4>Executa</h4><p>Roda scripts e mostra a saída. Você pede em português e o agente digita o comando.</p><span class="arq">atividade_modulo2.py criar</span></div><div class="etapa" style="--cor:#8D0333"><span class="n">4</span><h4>Você confere</h4><p>Abre o arquivo gerado e compara com a fonte. Todo cálculo vem de script gravado em saidas/.</p><span class="arq">dois números conferidos à mão</span></div></div>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:18px">
+      <div class="caixa teal"><span class="rot">MODO BUILD</span><p>O modo padrão. O agente lê, grava e executa na pasta aberta. É o modo das atividades da disciplina.</p></div>
+      <div class="caixa dourado"><span class="rot">MODO PLAN</span><p>Modo de análise. O agente lê e responde sem alterar arquivos e pede permissão antes de executar comandos. Use para perguntar sobre a pasta sem mexer nela.</p></div>
+    </div>
+    <p class="fonte-nota">Modos build e plan conforme o README do projeto opencode (github.com/anomalyco/opencode). Consulta em 02/11/2026.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 2.3 · Teoria</span>
@@ -1096,21 +1089,24 @@ body.mexeu #ajuda{opacity:1}
 <section class="slide conteudo" data-i="25">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 2.3 · TEORIA</span>
-    <h2>Modelo gratuito: o que esperar</h2>
-    <p class="sub">Cota é o número de pedidos que a conta gratuita aceita num período. A conta é sua, individual, e a cota também.</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Existe limite diário e por minuto</strong><p>Ele varia por provedor e muda sem aviso. Numa turma inteira pedindo ao mesmo tempo, alguém atinge o limite antes do fim da aula.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Por isso a atividade é curta</strong><p>Cada ciclo prevê no máximo dois pedidos longos. Guarde a cota para o que importa e evite refazer o mesmo pedido por impaciência.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>O modelo gratuito erra mais</strong><p>Especialmente em cálculo e em geração de código. Isso não invalida a atividade: o que se avalia é a sua conferência.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Se a cota acabar, a aula continua</strong><p>O roteiro de cada atividade traz o resultado esperado por escrito. Você segue a análise e a discussão sem o modelo, e registra que a cota terminou.</p></div>
-    </li></ol></div>
+    <h2>O que cada modelo gratuito faz com o seu texto</h2>
+    <p class="sub">A conta é individual e gratuita. A política de dados muda de um modelo para outro</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:30%">MODELOS GRATUITOS DO OPENCODE ZEN</th><th style="width:46%">USO DOS DADOS DECLARADO NA DOCUMENTAÇÃO</th><th style="width:24%">NA DISCIPLINA</th></tr>
+      <tr><td><strong>GLM-5.3-Flash Free</strong><br><strong>DeepSeek V4.1 Flash Free</strong></td>
+          <td>O provedor não retém os dados e não os usa para treinar o modelo.</td><td><span class="chip ok">PREFERIR</span></td></tr>
+      <tr><td><strong>Beam Free</strong></td>
+          <td>Não usa para treino. Guarda os dados por 30 dias, por segurança.</td><td><span class="chip ok">ACEITÁVEL</span></td></tr>
+      <tr><td><strong>Big Pickle, MiMo-V2.6-Flash Free, Flint 40B Free</strong></td>
+          <td>Durante o período gratuito, os dados coletados podem ser usados para aprimorar o modelo. O Flint 40B guarda por 30 dias.</td><td><span class="chip med">EVITAR</span></td></tr>
+      <tr><td><strong>Nemotron 3 Ultra Free, Nemotron 3.5 Lightning Free e Super VL Free</strong></td>
+          <td>Uso experimental em servidores da NVIDIA, com registro do uso. A orientação é não enviar dado pessoal ou confidencial.</td><td><span class="chip ruim">NÃO USAR</span></td></tr>
+    </table>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:12px">
+      <div class="caixa vinho"><span class="rot">COTA DE USO</span><p>A documentação não publica o limite dos modelos gratuitos. Relatos de outubro de 2026 descrevem bloqueio temporário quando muitos pedidos saem da mesma conta ou rede. Cada ciclo prevê no máximo dois pedidos longos.</p></div>
+      <div class="caixa dourado"><span class="rot">SE O MODELO PARAR</span><p>Troque por outro modelo da primeira linha. Se nenhum responder, registre na entrega e siga com o resultado esperado que o roteiro traz por escrito.</p></div>
+    </div>
+    <p class="fonte-nota">opencode.ai/docs/zen, seções de modelos gratuitos e de privacidade. Os modelos ficam em servidores nos EUA e na União Europeia. A lista muda sem aviso e deve ser reconferida na aula. Consulta em 02/11/2026.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 2.3 · Teoria</span>
@@ -1120,27 +1116,74 @@ body.mexeu #ajuda{opacity:1}
 <section class="slide conteudo" data-i="26">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 2.3 · DEMONSTRAÇÃO</span>
-    <h2>Instalação, passo a passo</h2>
-    <p class="sub">Acompanhe na sua máquina. Quem travar levanta a mão e o monitor vai até a mesa.</p>
-    <div class="corpo"><ol class="steps cols-2" style="--linhas:3">
-    <li><span class="num">1</span>
-      <div><strong>Baixe o instalador</strong><p>Use o endereço indicado na turma virtual. Escolha a versão para Windows.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Instale e abra</strong><p>Aceite os padrões. Se o antivírus do laboratório perguntar, chame o professor antes de autorizar.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Crie a conta e autentique</strong><p>Use o seu e-mail. A conta é individual e você vai usá-la o semestre todo.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Escolha o modelo gratuito</strong><p>Na configuração, selecione o provedor gratuito indicado na turma virtual.</p></div>
-    </li>
-    <li><span class="num">5</span>
-      <div><strong>Abra a pasta do seu projeto</strong><p>A pasta que você criou no ciclo 2.2. É ela, e só ela, que o agente vai enxergar.</p></div>
-    </li>
-    <li><span class="num">6</span>
-      <div><strong>Confirme que funcionou</strong><p>Peça: "liste os arquivos desta pasta". Se ele listar, está pronto.</p></div>
-    </li></ol></div>
+    <h2>A tela do opencode desktop</h2>
+    <p class="sub">Seis elementos que você vai usar hoje, num esquema da versão de novembro de 2026</p>
+    <div class="corpo"><svg class="fig" viewBox="0 0 1168 388" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="780" height="388" fill="#fff" stroke="#6B6B6B" stroke-width="1.5"/>
+  <rect x="0" y="0" width="780" height="26" fill="#EDEDED"/>
+  <circle cx="16" cy="13" r="5" fill="#C8C8C8"/><circle cx="32" cy="13" r="5" fill="#C8C8C8"/><circle cx="48" cy="13" r="5" fill="#C8C8C8"/>
+  <text x="390" y="18" font-size="13" fill="#6B6B6B" text-anchor="middle">projeto-maria-souza</text>
+  <!-- abas -->
+  <rect x="10" y="34" width="150" height="26" fill="#F6DCE5" stroke="#8D0333"/><text x="22" y="52" font-size="13" fill="#1A1A1A">Sessão 1</text>
+  <rect x="166" y="34" width="150" height="26" fill="#F5F5F5" stroke="#d0d0d0"/><text x="178" y="52" font-size="13" fill="#6B6B6B">Sessão 2</text>
+  <!-- conversa -->
+  <rect x="10" y="70" width="500" height="200" fill="#FAFAFA" stroke="#e3e3e3"/>
+  <rect x="200" y="82" width="298" height="30" fill="#F3E9D6"/><text x="212" y="102" font-size="13.5" fill="#1A1A1A">liste os arquivos desta pasta</text>
+  <text x="22" y="134" font-size="13" fill="#6B6B6B" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">▸ list .</text>
+  <text x="22" y="156" font-size="13.5" fill="#1A1A1A">A pasta tem 4 pastas e 4 arquivos:</text>
+  <text x="34" y="176" font-size="13" fill="#1A1A1A" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">dados/  prompts/  saidas/  entregas/</text>
+  <text x="34" y="194" font-size="13" fill="#1A1A1A" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">README.md  AGENTS.md  .gitignore</text>
+  <text x="34" y="212" font-size="13" fill="#1A1A1A" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">atividade_modulo2.py</text>
+  <!-- caixa de pedido -->
+  <rect x="10" y="280" width="500" height="52" fill="#fff" stroke="#8D0333" stroke-width="1.5"/>
+  <text x="22" y="304" font-size="13.5" fill="#9a9a9a">Escreva o pedido</text>
+  <rect x="22" y="312" width="176" height="16" fill="#E9F7F6"/><text x="28" y="324" font-size="12" font-weight="700" fill="#0A7F7B">GLM-5.3-Flash Free ▾</text>
+  <!-- terminal -->
+  <rect x="10" y="342" width="500" height="38" fill="#262626"/><text x="20" y="366" font-size="12.5" fill="#e9e9e9" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">terminal integrado</text>
+  <!-- painel de revisão -->
+  <rect x="520" y="34" width="250" height="346" fill="#F5F5F5" stroke="#e3e3e3"/>
+  <text x="532" y="56" font-size="13" font-weight="700" fill="#6B6B6B" letter-spacing=".6">REVISÃO</text>
+  <g font-size="12.5" fill="#1A1A1A" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">
+    <text x="532" y="82">dados/</text><text x="532" y="102">entregas/</text><text x="532" y="122">prompts/</text><text x="532" y="142">saidas/</text>
+    <text x="532" y="162">AGENTS.md</text><text x="532" y="182">README.md</text>
+  </g>
+  <rect x="532" y="200" width="226" height="68" fill="#fff" stroke="#e3e3e3"/>
+  <rect x="536" y="208" width="218" height="14" fill="#D7F1F0"/><rect x="536" y="226" width="218" height="14" fill="#D7F1F0"/><rect x="536" y="244" width="160" height="14" fill="#F6DCE5"/>
+  <text x="532" y="290" font-size="12" fill="#6B6B6B">linhas incluídas e removidas</text>
+  <!-- marcadores -->
+  <g font-size="13" font-weight="700" fill="#fff" text-anchor="middle">
+    <circle cx="330" cy="47" r="12" fill="#8D0333"/><text x="330" y="52">1</text>
+    <circle cx="496" cy="136" r="12" fill="#8D0333"/><text x="496" y="141">2</text>
+    <circle cx="496" cy="296" r="12" fill="#8D0333"/><text x="496" y="301">3</text>
+    <circle cx="212" cy="320" r="12" fill="#8D0333"/><text x="212" y="325">4</text>
+    <circle cx="756" cy="52" r="12" fill="#8D0333"/><text x="756" y="57">5</text>
+    <circle cx="496" cy="361" r="12" fill="#8D0333"/><text x="496" y="366">6</text>
+  </g>
+  <!-- legenda -->
+  <g font-size="15">
+    <circle cx="824" cy="22" r="12" fill="#8D0333"/><text x="824" y="27" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">1</text>
+    <text x="846" y="20" font-weight="700" fill="#1A1A1A">Abas de sessão</text>
+    <text x="846" y="40" font-size="14" fill="#333333">Cada conversa com o agente fica numa aba.</text>
+    <circle cx="824" cy="82" r="12" fill="#8D0333"/><text x="824" y="87" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">2</text>
+    <text x="846" y="80" font-weight="700" fill="#1A1A1A">Conversa</text>
+    <text x="846" y="100" font-size="14" fill="#333333">Seus pedidos e cada ação do agente,</text>
+    <text x="846" y="118" font-size="14" fill="#333333">como ler, gravar ou executar.</text>
+    <circle cx="824" cy="160" r="12" fill="#8D0333"/><text x="824" y="165" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">3</text>
+    <text x="846" y="158" font-weight="700" fill="#1A1A1A">Caixa de pedido</text>
+    <text x="846" y="178" font-size="14" fill="#333333">Onde você escreve a instrução.</text>
+    <circle cx="824" cy="220" r="12" fill="#8D0333"/><text x="824" y="225" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">4</text>
+    <text x="846" y="218" font-weight="700" fill="#1A1A1A">Nome do modelo</text>
+    <text x="846" y="238" font-size="14" fill="#333333">Abre a lista de modelos e, pelo botão</text>
+    <text x="846" y="256" font-size="14" fill="#333333">de configurações, a conexão da conta.</text>
+    <circle cx="824" cy="298" r="12" fill="#8D0333"/><text x="824" y="303" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">5</text>
+    <text x="846" y="296" font-weight="700" fill="#1A1A1A">Painel de revisão</text>
+    <text x="846" y="316" font-size="14" fill="#333333">Arquivos da pasta e o que o agente mudou.</text>
+    <circle cx="824" cy="356" r="12" fill="#8D0333"/><text x="824" y="361" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">6</text>
+    <text x="846" y="354" font-weight="700" fill="#1A1A1A">Terminal</text>
+    <text x="846" y="374" font-size="14" fill="#333333">Saída dos comandos que o agente executa.</text>
+  </g>
+</svg>
+    <p class="fonte-nota" style="bottom:-20px">Esquema simplificado, sem escala. A posição dos elementos muda entre versões. Fontes: opencode.school, lição Models, e daleseo.com/opencode (atualizado em 26/09/2026). Consulta em 02/11/2026.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 2.3 · Demonstração</span>
@@ -1150,21 +1193,26 @@ body.mexeu #ajuda{opacity:1}
 <section class="slide conteudo" data-i="27">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 2.3 · DEMONSTRAÇÃO</span>
-    <h2>A primeira instrução útil</h2>
-    <p class="sub">Repare no que a instrução tem: o arquivo citado pelo caminho, o formato pedido e uma proibição</p>
-    <div class="corpo"><div class="prompt">
-    <span class="rot">INSTRUÇÃO DADA AO AGENTE</span>
-    <p>"Leia o arquivo entregas/modulo1-mapa-de-tarefas.md desta pasta. Escreva em saidas/resumo-mapa.md um resumo de cinco linhas do que ele contém, listando apenas as três tarefas de maior prioridade. Não acrescente nenhuma tarefa que não esteja no arquivo."</p>
-  </div>
-<ol class="steps cols-3" style="--linhas:1">
+    <h2>Instalação passo a passo</h2>
+    <p class="sub">Acompanhe na sua máquina. Se travar, levante a mão e o monitor vai até a sua mesa</p>
+    <div class="corpo"><ol class="steps cols-2 " style="--linhas:3">
     <li><span class="num">1</span>
-      <div><strong>O agente lê o arquivo da pasta</strong><p>Sem anexo. Ele localiza pelo caminho que você citou.</p></div>
+      <div><strong>Baixe o instalador</strong><p>Em opencode.ai/download, seção OpenCode Desktop, clique em Windows (x64). O link baixa sempre a versão mais recente.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Grava o resultado como arquivo</strong><p>Em saidas/, e não na tela para você copiar.</p></div>
+      <div><strong>Instale e abra</strong><p>Execute o arquivo baixado e aceite as opções padrão. Se o antivírus ou o Windows pedir confirmação, chame o professor antes de autorizar.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Você abre e confere</strong><p>As três tarefas são mesmo as do seu mapa?</p></div>
+      <div><strong>Abra a pasta do projeto</strong><p>Escolha a pasta criada no ciclo 2.2, e só ela. O agente lê o que estiver dentro da pasta aberta.</p></div>
+    </li>
+    <li><span class="num">4</span>
+      <div><strong>Conecte a sua conta</strong><p>Clique no nome do modelo, abaixo da caixa de pedido, e depois em configurações. Escolha OpenCode Zen e entre com o seu e-mail. Se aparecer pedido de cartão de crédito, pare e chame o professor.</p></div>
+    </li>
+    <li><span class="num">5</span>
+      <div><strong>Escolha o modelo</strong><p>Na lista de modelos, escolha GLM-5.3-Flash Free ou DeepSeek V4.1 Flash Free, a primeira linha da tabela do slide 26.</p></div>
+    </li>
+    <li><span class="num">6</span>
+      <div><strong>Confirme que funcionou</strong><p>Peça "liste os arquivos desta pasta". Se a resposta trouxer as quatro pastas e os arquivos da raiz, a instalação está pronta.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
@@ -1174,68 +1222,106 @@ body.mexeu #ajuda{opacity:1}
   </section>
 <section class="slide conteudo" data-i="28">
     <span class="barra"></span>
-    <span class="eyebrow">CICLO 2.3 · CONCEITO</span>
-    <h2>AGENTS.md: instruir uma vez, valer sempre</h2>
-    <p class="sub">O arquivo que define como o agente se comporta neste projeto</p>
-    <div class="corpo"><div class="conceito">
-    <div class="def" style="border-left-color:#8D0333">
-      <span class="rot">AGENTS.MD</span>
-      <p>É um arquivo de texto na raiz da pasta que o agente lê antes de cada pedido. O que estiver escrito nele vale para todas as instruções daquele projeto, sem você precisar repetir.</p>
-    </div>
-    <div class="pontos cols-2">
-      <div class="pt">
-        <span class="rule" style="background:#8D0333"></span>
-        <span class="rot">O problema que ele resolve</span>
-        <p>Sem ele, você repete em todo pedido quem é você, em que nível escrever e o que nunca fazer. Com ele, isso fica escrito uma vez.</p>
-      </div>
-      <div class="pt">
-        <span class="rule" style="background:#8D0333"></span>
-        <span class="rot">Papel e contexto</span>
-        <p>Quem é você, em que área trabalha, quem vai ler o que for produzido. Por exemplo: estudante de Administração, sexto período, trabalhos avaliados por um professor.</p>
-      </div>
-      <div class="pt">
-        <span class="rule" style="background:#8D0333"></span>
-        <span class="rot">Formato e vocabulário</span>
-        <p>Como as respostas devem sair por padrão. Por exemplo: análises com passo a passo, interpretação e limitação declarada; termos técnicos definidos na primeira ocorrência.</p>
-      </div>
-      <div class="pt">
-        <span class="rule" style="background:#8D0333"></span>
-        <span class="rot">As regras fixas</span>
-        <p>O que o agente nunca deve fazer. Nunca inventar referência bibliográfica. Nunca apresentar número sem dizer de onde veio. Nunca escrever o texto final no lugar do aluno.</p>
-      </div></div>
-    <div class="analogia"><span class="rot">PARA FIXAR</span><p>É o que você diria a alguém no primeiro dia de trabalho, e que não precisa repetir toda manhã: com quem estamos falando, em que tom se escreve aqui e o que nesta casa não se faz.</p></div>
-  </div></div>
+    <span class="eyebrow">CICLO 2.3 · DEMONSTRAÇÃO</span>
+    <h2>A primeira instrução útil</h2>
+    <p class="sub">O arquivo citado pelo caminho, o formato pedido e uma proibição</p>
+    <div class="corpo"><div class="prompt compacto">
+    <span class="rot">INSTRUÇÃO DADA AO AGENTE</span>
+    <p>"Leia o arquivo entregas/modulo1-mapa-de-tarefas.md desta pasta. Escreva em saidas/resumo-mapa.md um resumo de cinco linhas do que ele contém, listando apenas as três tarefas de maior prioridade. Não acrescente tarefa que não esteja no arquivo."</p>
+  </div>
+  <div class="fluxo" style="--n:3"><div class="etapa" style="--cor:#D4B277"><span class="n">1</span><h4>O agente lê o arquivo</h4><p>Localiza o arquivo pelo caminho citado, sem anexo.</p><span class="arq">entregas/modulo1-mapa-de-tarefas.md</span></div><div class="etapa" style="--cor:#0AB0AB"><span class="n">2</span><h4>Grava o resultado</h4><p>O resumo vai para saidas/, e não para a tela.</p><span class="arq">saidas/resumo-mapa.md</span></div><div class="etapa" style="--cor:#8D0333"><span class="n">3</span><h4>Você abre e confere</h4><p>As três tarefas do resumo estão mesmo no seu mapa, com a prioridade que você deu?</p></div></div>
+  <div class="caixa dourado" style="margin-top:16px"><span class="rot">AS TRÊS PARTES DA INSTRUÇÃO</span><p>O arquivo de entrada citado pelo caminho, o arquivo de saída com nome e formato definidos e uma proibição no fim. A proibição reduz a chance de o modelo acrescentar uma tarefa que você não escreveu.</p></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 2.3 · Conceito</span>
+      <span class="centro">Ciclo 2.3 · Demonstração</span>
       <span class="pag">29 / 46</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="29">
     <span class="barra"></span>
-    <span class="eyebrow">CICLO 2.3 · PRÁTICA</span>
-    <h2>Sua vez: escreva o seu AGENTS.md</h2>
-    <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Abra o AGENTS.md que o script criou</strong><p>Ele já vem com o esqueleto das quatro seções e comentários explicando cada uma.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Preencha as quatro seções</strong><p>Papel e contexto, formato de saída, vocabulário e regras fixas. Entre oito e quinze linhas no total.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Teste com três pedidos diferentes</strong><p>Um de conceito, um de análise e um de redação. Veja se o tom e o formato saíram como você definiu.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Ajuste o que saiu errado</strong><p>Tom errado, ajuste a seção de vocabulário. Formato errado, ajuste a seção de formato. Anote o que mudou.</p></div>
-    </li></ol></div>
+    <span class="eyebrow">CICLO 2.3 · CONCEITO</span>
+    <h2>AGENTS.md: instruir uma vez, valer sempre</h2>
+    <p class="sub">As quatro seções do arquivo que o script criou na sua pasta</p>
+    <div class="corpo"><div class="conceito">
+    <div class="def" style="border-left-color:#8D0333">
+      <span class="rot">AGENTS.MD</span>
+      <p>Arquivo de texto na raiz da pasta que o agente lê junto com cada pedido. O que estiver escrito nele vale para todas as instruções daquele projeto. É um formato aberto, lido pelo opencode e por outras ferramentas de agente.<span class="fonte">O AGENTS.md é mantido desde dezembro de 2025 pela Agentic AI Foundation, ligada à Linux Foundation (openai.com/blog/agentic-ai-foundation). Consulta em 02/11/2026.</span></p>
+    </div>
+    <div class="pontos cols-2">
+      <div class="pt">
+        <span class="rule" style="background:#8D0333"></span>
+        <span class="rot">1. Papel e contexto</span>
+        <p>Quem você é, em que área estuda ou trabalha e quem vai ler o que for produzido.</p>
+      </div>
+      <div class="pt">
+        <span class="rule" style="background:#8D0333"></span>
+        <span class="rot">2. Formato de saída padrão</span>
+        <p>Como as respostas devem sair, por exemplo análise com passo a passo, interpretação e limitação declarada.</p>
+      </div>
+      <div class="pt">
+        <span class="rule" style="background:#8D0333"></span>
+        <span class="rot">3. Vocabulário e tom</span>
+        <p>Formal ou informal, técnico ou acessível, e o que fazer com os termos da área.</p>
+      </div>
+      <div class="pt">
+        <span class="rule" style="background:#8D0333"></span>
+        <span class="rot">4. Regras fixas</span>
+        <p>O que o agente nunca deve fazer, como inventar referência ou apresentar número sem dizer de onde veio.</p>
+      </div></div>
+    <div class="analogia"><span class="rot">PARA FIXAR</span><p>É o que você diria a um colega no primeiro dia de trabalho e não precisa repetir toda manhã: para quem escrevemos, em que tom e o que a casa não aceita.</p></div>
+  </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 2.3 · Prática</span>
+      <span class="centro">Ciclo 2.3 · Conceito</span>
       <span class="pag">30 / 46</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="30">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 2.3 · PRÁTICA</span>
+    <h2>Sua vez de escrever o AGENTS.md</h2>
+    <p class="sub">Individual</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.25fr;--dir:1fr">
+      <div class="col"><ol class="steps cols-1 compacto">
+    <li><span class="num">1</span>
+      <div><strong>Abra o AGENTS.md que o script criou</strong><p>Ele traz as quatro seções com um comentário entre parênteses explicando cada uma. Mantenha os títulos numerados, porque o script procura por eles.</p></div>
+    </li>
+    <li><span class="num">2</span>
+      <div><strong>Preencha as quatro seções</strong><p>Entre oito e quinze linhas no total. Seção com menos de 25 caracteres, fora o comentário, aparece como curta demais na conferência.</p></div>
+    </li>
+    <li><span class="num">3</span>
+      <div><strong>Teste com três pedidos diferentes</strong><p>Um de conceito, um de análise e um de redação. Veja se tom e formato saíram como você definiu.</p></div>
+    </li>
+    <li><span class="num">4</span>
+      <div><strong>Ajuste e complete o README</strong><p>Tom errado, ajuste a seção 3. Formato errado, ajuste a seção 2. No README, preencha a ferramenta e o modelo usados.</p></div>
+    </li></ol>
+      </div>
+      <div class="col" style="gap:4px">
+        <pre class="codigo" style="font-size:13.5px;line-height:1.45"><b>## 1. Papel e contexto</b>
+Voce assiste uma estudante de Administracao
+da UFMA. Os textos sao lidos pelo professor.
+
+<b>## 2. Formato de saida padrao</b>
+Analises com passo a passo, interpretacao e
+limitacao declarada.
+
+<b>## 3. Vocabulario e tom</b>
+Linguagem tecnica. Termos definidos na
+primeira ocorrencia. Frases curtas.
+
+<b>## 4. Regras fixas</b>
+Nunca inventar referencia: escrever NAO SEI.
+Nunca apresentar numero sem dizer a fonte.</pre>
+        <p style="font-size:13.5px;color:var(--muted)">AGENTS.md preenchido, exemplo ilustrativo</p>
+      </div>
+    </div></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 2.3 · Prática</span>
+      <span class="pag">31 / 46</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="31">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 2.3 · ENTREGA</span>
     <h2>AGENTS.md da sua área</h2>
@@ -1243,7 +1329,7 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>O AGENTS.md preenchido, com as quatro seções.</li><li>Os três pedidos de teste, salvos em prompts/.</li><li>Uma nota do que você ajustou depois dos testes, e por quê.</li><li>O arquivo saidas/resumo-mapa.md gerado na demonstração.</li></ul>
+      <ul><li>O AGENTS.md com as quatro seções preenchidas e os comentários apagados.</li><li>Os três pedidos de teste e o que cada um produziu, em prompts/modulo2-testes-agents.md.</li><li>Uma nota do que você ajustou depois dos testes e por quê, no mesmo arquivo.</li><li>O arquivo saidas/resumo-mapa.md gerado na demonstração.</li><li>No README, a ferramenta e o modelo usados.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
@@ -1252,115 +1338,58 @@ body.mexeu #ajuda{opacity:1}
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>AGENTS.md sem nenhuma regra fixa, ou com regras que não poderiam ser violadas, indica que a seção não foi pensada.</p>
+        <p>AGENTS.md sem regra fixa, ou com regras que nenhum pedido poderia violar, indica que a seção não foi pensada. O comando conferir aponta seção vazia ou curta demais.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 2.3 · Entrega</span>
-      <span class="pag">31 / 46</span>
+      <span class="pag">32 / 46</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="31">
+<section class="slide divisor" data-i="32">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">2.4</span></div>
       <div class="dir">
         <h2>GitHub Desktop e a entrega A1</h2>
         <p class="etapas">Conceito · Teoria · Demonstração · Conferência · Entrega</p>
       </div>
-      <span class="pag">32 / 46</span>
+      <span class="pag">33 / 46</span>
     </section>
-<section class="slide conteudo" data-i="32">
+<section class="slide conteudo" data-i="33">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 2.4 · CONCEITO</span>
     <h2>O que é versionar um trabalho</h2>
-    <p class="sub">Você já versiona hoje. A diferença é que o computador faz isso melhor que você.</p>
+    <p class="sub">Você já versiona hoje, à mão. O programa faz o mesmo com registro de data e autor</p>
     <div class="corpo"><div class="conceito">
     <div class="def" style="border-left-color:#8D0333">
-      <span class="rot">CONTROLE DE VERSÃO</span>
-      <p>É guardar o histórico de um trabalho em um só lugar: cada vez que você termina uma etapa, o computador grava o estado dos arquivos naquele momento, com data, autor e uma frase sua dizendo o que mudou.</p>
+      <span class="rot">CONTROLE DE VERSÃO (VERSION CONTROL)</span>
+      <p>Registro do histórico de um trabalho num só lugar. A cada etapa concluída, o programa grava o estado dos arquivos naquele momento, com data, autor e uma frase sua dizendo o que mudou.</p>
     </div>
     <div class="pontos cols-2">
       <div class="pt">
         <span class="rule" style="background:#8D0333"></span>
         <span class="rot">O que você faz hoje</span>
-        <p>relatorio.docx, relatorio-v2.docx, relatorio-final.docx, relatorio-final-agora-vai.docx. É versionamento manual, e ele falha exatamente quando você mais precisa dele.</p>
+        <p>relatorio.docx, relatorio-v2.docx, relatorio-final.docx, relatorio-final-agora-vai.docx. É versionamento manual, e ninguém sabe ao certo qual cópia é a última.</p>
       </div>
       <div class="pt">
         <span class="rule" style="background:#8D0333"></span>
         <span class="rot">O que muda</span>
-        <p>Passa a existir um arquivo só, e um histórico ao lado dele. Nenhuma versão se perde, e cada uma tem a explicação do que mudou.</p>
+        <p>Fica um arquivo só, com o histórico ao lado. Nenhuma versão se perde e cada uma traz a explicação do que mudou.</p>
       </div>
       <div class="pt">
         <span class="rule" style="background:#8D0333"></span>
         <span class="rot">Você pode voltar</span>
-        <p>Qualquer versão anterior pode ser recuperada, inclusive de um arquivo que você apagou. É isso que permite mexer sem medo.</p>
+        <p>Qualquer versão gravada pode ser recuperada, inclusive a de um arquivo apagado. Por isso dá para mexer sem medo de perder o que funcionava.</p>
       </div>
       <div class="pt">
         <span class="rule" style="background:#8D0333"></span>
-        <span class="rot">O percurso vira parte do trabalho</span>
-        <p>Nesta disciplina, o histórico mostra como você chegou ao resultado, e é isso que a correção acompanha.</p>
+        <span class="rot">O percurso entra na avaliação</span>
+        <p>O histórico mostra como você chegou ao resultado. A correção acompanha esse percurso, além do arquivo final.</p>
       </div></div>
-    <div class="analogia"><span class="rot">PARA FIXAR</span><p>É a diferença entre um processo com todas as folhas numeradas, datadas e assinadas, e uma pilha de cópias soltas em cima da mesa, em que ninguém sabe qual é a última.</p></div>
+    <div class="analogia"><span class="rot">PARA FIXAR</span><p>É a diferença entre um processo administrativo com folhas numeradas, datadas e assinadas e uma pilha de cópias soltas sobre a mesa, em que ninguém sabe qual é a última.</p></div>
   </div></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 2.4 · Conceito</span>
-      <span class="pag">33 / 46</span>
-    </footer>
-  </section>
-<section class="slide conteudo" data-i="33">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 2.4 · CONCEITO</span>
-    <h2>Git, GitHub e repositório: três coisas diferentes</h2>
-    <p class="sub">É onde quase todo mundo se perde na primeira semana</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">GIT</header>
-      <h3>O programa que guarda o histórico</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que é</span>
-          <p>O mecanismo que registra cada versão dos arquivos, na sua máquina. Ele funciona sem internet e não pertence a nenhuma empresa.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Na disciplina</span>
-          <p>Você nunca vai usá-lo direto. O GitHub Desktop é a tela que aciona o git por você, com botões.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">GITHUB</header>
-      <h3>O site que hospeda a cópia</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que é</span>
-          <p>Uma empresa que guarda repositórios na nuvem. É onde fica a cópia externa, acessível de qualquer computador.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Na disciplina</span>
-          <p>É por lá que você entrega. O professor é adicionado como colaborador e acompanha o histórico.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">REPOSITÓRIO</header>
-      <h3>A pasta do projeto com histórico</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que é</span>
-          <p>A sua pasta, depois que o git começou a registrar as versões dela. O repositório local fica na máquina; o remoto, no GitHub.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Na disciplina</span>
-          <p>Um repositório por aluno, criado hoje, usado até o encontro 16.</p>
-        </div>
-    </article></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 2.4 · Conceito</span>
@@ -1369,78 +1398,75 @@ body.mexeu #ajuda{opacity:1}
   </section>
 <section class="slide conteudo" data-i="34">
     <span class="barra"></span>
-    <span class="eyebrow">CICLO 2.4 · TEORIA</span>
-    <h2>Por que versionar o trabalho</h2>
-    <p class="sub">Três problemas que o versionamento resolve, e que você já teve</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">PERDA</header>
-      <h3>A máquina do laboratório é restaurada</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Sem versionamento</span>
-          <p>O semestre inteiro estava numa pasta local que sumiu na manutenção.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Com versionamento</span>
-          <p>Existe uma cópia fora da máquina. Você abre em qualquer computador.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">CONFUSÃO</header>
-      <h3>relatorio-final-v3-agora-vai.docx</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Sem versionamento</span>
-          <p>Cinco arquivos parecidos e nenhuma certeza sobre qual é o bom.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Com versionamento</span>
-          <p>Um arquivo, com todas as versões anteriores acessíveis por data.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">OPACIDADE</header>
-      <h3>Ninguém sabe o que mudou nem quando</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Sem versionamento</span>
-          <p>O texto final não mostra o percurso, e a correção só vê o resultado.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Com versionamento</span>
-          <p>Cada gravação registra o que mudou. O percurso vira parte da entrega.</p>
-        </div>
-    </article></div></div>
+    <span class="eyebrow">CICLO 2.4 · CONCEITO</span>
+    <h2>Git, GitHub Desktop, GitHub e repositório</h2>
+    <p class="sub">Quatro nomes parecidos para coisas diferentes, onde quase todo mundo se perde na primeira semana</p>
+    <div class="corpo"><table class="tab">
+      <tr><th style="width:17%">NOME</th><th style="width:33%">O QUE É</th><th style="width:20%">ONDE FICA</th><th style="width:30%">NA DISCIPLINA</th></tr>
+      <tr><td><strong>Git</strong><span class="s">o programa</span></td>
+          <td>O programa que grava cada versão dos arquivos. Funciona sem internet e é software livre, criado em 2005 por Linus Torvalds.</td>
+          <td>No seu computador</td><td>Você não o usa diretamente. Ele vem dentro do GitHub Desktop.</td></tr>
+      <tr><td><strong>GitHub Desktop</strong><span class="s">a tela com botões</span></td>
+          <td>Programa da empresa GitHub que aciona o git por botões, sem comando digitado.</td>
+          <td>No seu computador</td><td>É onde você grava e publica as versões.</td></tr>
+      <tr><td><strong>GitHub</strong><span class="s">o site</span></td>
+          <td>Serviço de nuvem que guarda repositórios. O plano gratuito permite repositório privado com colaboradores sem limite de número.</td>
+          <td>Em data centers da empresa</td><td>Guarda a cópia externa. O professor entra como colaborador e acompanha o histórico.</td></tr>
+      <tr><td><strong>Repositório</strong><span class="s">a pasta com histórico</span></td>
+          <td>A sua pasta depois que o git passa a registrar as versões dela. O histórico fica numa pasta oculta chamada .git.</td>
+          <td>Local na máquina, remoto no GitHub</td><td>Um por aluno, criado hoje e usado até o encontro 16.</td></tr>
+    </table>
+    <p class="fonte-nota">Plano gratuito com repositórios privados e colaboradores ilimitados desde 14/04/2020 (github.blog, "GitHub is now free for teams"). Consulta em 02/11/2026.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 2.4 · Teoria</span>
+      <span class="centro">Ciclo 2.4 · Conceito</span>
       <span class="pag">35 / 46</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="35">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 2.4 · TEORIA</span>
-    <h2>Quatro gestos, e nada além disso</h2>
-    <p class="sub">Os nomes estão em inglês porque é assim que aparecem nos botões do programa</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <h2>Os quatro gestos do controle de versão</h2>
+    <p class="sub">Os nomes estão em inglês porque é assim que aparecem nos botões do GitHub Desktop</p>
+    <div class="corpo"><svg class="fig" viewBox="0 0 1168 196" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="10" width="280" height="120" fill="#F5F5F5" stroke="#e3e3e3"/><rect x="0" y="10" width="280" height="6" fill="#D4B277"/>
+  <text x="16" y="42" font-size="16" font-weight="700" fill="#1A1A1A">Pasta de trabalho</text>
+  <text x="16" y="64" font-size="14" fill="#333333">Os arquivos que você edita.</text>
+  <text x="16" y="84" font-size="14" fill="#333333">Mudança ainda não gravada</text>
+  <text x="16" y="102" font-size="14" fill="#333333">aparece na aba Changes.</text>
+  <rect x="444" y="10" width="280" height="120" fill="#F5F5F5" stroke="#e3e3e3"/><rect x="444" y="10" width="280" height="6" fill="#0AB0AB"/>
+  <text x="460" y="42" font-size="16" font-weight="700" fill="#1A1A1A">Histórico local</text>
+  <text x="460" y="64" font-size="14" fill="#333333">As versões gravadas, na pasta</text>
+  <text x="460" y="84" font-size="14" fill="#333333">oculta .git do seu computador.</text>
+  <rect x="888" y="10" width="280" height="120" fill="#F6DCE5" stroke="#e3e3e3"/><rect x="888" y="10" width="280" height="6" fill="#8D0333"/>
+  <text x="904" y="42" font-size="16" font-weight="700" fill="#1A1A1A">GitHub</text>
+  <text x="904" y="64" font-size="14" fill="#333333">A cópia remota, que o</text>
+  <text x="904" y="84" font-size="14" fill="#333333">professor vê e que sobrevive</text>
+  <text x="904" y="102" font-size="14" fill="#333333">à restauração da máquina.</text>
+  <line x1="290" y1="70" x2="424" y2="70" stroke="#8D0333" stroke-width="3"/><polygon points="424,62 440,70 424,78" fill="#8D0333"/>
+  <text x="362" y="60" font-size="15" font-weight="700" fill="#8D0333" text-anchor="middle">1 · commit</text>
+  <line x1="734" y1="70" x2="868" y2="70" stroke="#8D0333" stroke-width="3"/><polygon points="868,62 884,70 868,78" fill="#8D0333"/>
+  <text x="806" y="60" font-size="15" font-weight="700" fill="#8D0333" text-anchor="middle">2 · push</text>
+  <!-- linha do tempo -->
+  <line x1="470" y1="168" x2="700" y2="168" stroke="#0AB0AB" stroke-width="3"/>
+  <g fill="#0AB0AB"><circle cx="480" cy="168" r="8"/><circle cx="560" cy="168" r="8"/><circle cx="640" cy="168" r="8"/></g>
+  <circle cx="700" cy="168" r="8" fill="#fff" stroke="#8D0333" stroke-width="3"/>
+  <text x="440" y="173" font-size="14" font-weight="700" fill="#0A7F7B" text-anchor="end">3 · history</text>
+  <path d="M700 156 C 690 128, 650 130, 642 156" fill="none" stroke="#8D0333" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="716" y="173" font-size="14" font-weight="700" fill="#8D0333">4 · revert cria uma versão nova que desfaz a anterior</text>
+  <line x1="584" y1="132" x2="584" y2="150" stroke="#C9962E" stroke-width="1.5" stroke-dasharray="3 3"/>
+</svg><ol class="steps cols-2 compacto" style="--linhas:2;height:auto;margin-top:16px">
     <li><span class="num">1</span>
-      <div><strong>Gravar uma versão, o commit</strong><p>Você escreve uma frase dizendo o que mudou e confirma. A frase importa: "entrega do ciclo 2.3" serve, "atualizações" não serve. O commit fica só na sua máquina.</p></div>
+      <div><strong>Gravar uma versão (commit)</strong><p>Escreva o que mudou e clique em Commit to main. "Entrega do ciclo 2.3" informa. "Atualizações" não informa. A versão fica só no seu computador.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Publicar, o push</strong><p>Envia as versões gravadas para a cópia no GitHub. Sem isso, tudo continua apenas na máquina do laboratório, e a entrega não existe para o professor.</p></div>
+      <div><strong>Publicar (push)</strong><p>Push origin envia as versões gravadas ao GitHub. Antes disso, o professor não vê a entrega.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Ver o histórico, o history</strong><p>A lista de tudo que você gravou, com data e a descrição de cada mudança. É por aqui que a correção acompanha o percurso.</p></div>
+      <div><strong>Ver o histórico (history)</strong><p>A aba History lista cada versão, com data e a frase escrita. A correção acompanha o percurso por ela.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Desfazer, o revert</strong><p>Volta o arquivo a uma versão anterior sem apagar o que veio depois. É a razão de não ter medo de errar.</p></div>
+      <div><strong>Desfazer (revert)</strong><p>Com o botão direito sobre uma versão, Revert Changes in Commit grava uma nova versão que desfaz aquela. As duas ficam no histórico.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
@@ -1452,25 +1478,25 @@ body.mexeu #ajuda{opacity:1}
     <span class="barra"></span>
     <span class="eyebrow">CICLO 2.4 · DEMONSTRAÇÃO</span>
     <h2>Do zero ao repositório publicado</h2>
-    <p class="sub">Acompanhe na sua máquina. Este é o caminho crítico do encontro.</p>
-    <div class="corpo"><ol class="steps cols-2" style="--linhas:3">
+    <p class="sub">Acompanhe na sua máquina. Este é o trecho do encontro que não pode ficar pendente</p>
+    <div class="corpo"><ol class="steps cols-2 " style="--linhas:3">
     <li><span class="num">1</span>
-      <div><strong>Crie a conta no GitHub</strong><p>Use o mesmo e-mail do opencode. Guarde a senha: você vai usar a conta o semestre inteiro.</p></div>
+      <div><strong>Crie a conta no GitHub</strong><p>Em github.com, Sign up, com um e-mail que você acessa. Guarde a senha, porque a conta vale o semestre inteiro.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Instale e abra o GitHub Desktop</strong><p>Entre com a conta que você acabou de criar.</p></div>
+      <div><strong>Instale e entre no GitHub Desktop</strong><p>Baixe em desktop.github.com, instale e clique em Sign in to GitHub.com. O navegador abre para você autorizar o acesso.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Adicione a pasta do projeto</strong><p>Menu File, opção Add Local Repository, e aponte para a sua pasta. Se ele pedir para criar um repositório, aceite.</p></div>
+      <div><strong>Adicione a pasta do projeto</strong><p>File, Add local repository, Choose... e selecione a pasta. O programa avisa que ela ainda não é repositório. Clique no link create a repository.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Confira o que vai ser enviado</strong><p>A lista da esquerda mostra os arquivos. Verifique se não há nada da lista do próximo slide.</p></div>
+      <div><strong>Crie o repositório sem sobrescrever</strong><p>Confira o nome e o caminho. Deixe desmarcado Initialize this repository with a README e Git ignore em None, porque o script já criou esses arquivos. Clique em Create repository.</p></div>
     </li>
     <li><span class="num">5</span>
-      <div><strong>Grave a primeira versão</strong><p>Escreva na caixa: "estrutura do projeto e entregas do modulo 1". Clique em Commit to main.</p></div>
+      <div><strong>Confira a primeira versão</strong><p>O programa grava sozinho a versão Initial commit. Na aba History, confira a lista de arquivos e procure algo da lista do slide 38.</p></div>
     </li>
     <li><span class="num">6</span>
-      <div><strong>Publique como repositório privado</strong><p>Clique em Publish repository. Deixe marcada a opção Keep this code private.</p></div>
+      <div><strong>Publique como privado</strong><p>Clique em Publish repository, deixe marcado Keep this code private e confirme. O repositório passa a existir no GitHub.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
@@ -1482,8 +1508,20 @@ body.mexeu #ajuda{opacity:1}
     <span class="barra"></span>
     <span class="eyebrow">CICLO 2.4 · ATENÇÃO</span>
     <h2>O que nunca vai para o repositório</h2>
-    <p class="sub">Publicado é publicado. Apagar depois não desfaz, porque o histórico guarda o que foi gravado.</p>
-    <div class="corpo"><ul class="bullets"><li>Dado pessoal identificável de terceiro: nome com CPF, endereço, telefone, matrícula, prontuário. Anonimize antes de colocar na pasta, não depois.</li><li>Senha, chave de acesso ou token de qualquer serviço. Token é o código que autoriza um programa a usar a sua conta, e vale como senha.</li><li>Documento interno de organização que você não tem autorização para divulgar, ainda que o repositório seja privado.</li><li>Arquivo grande de dado bruto acima de cem megabytes. Guarde a fonte e o procedimento de download, não o arquivo.</li><li>O arquivo .gitignore criado pelo script já bloqueia os casos mais comuns. Ele não substitui a sua conferência antes de gravar.</li></ul></div>
+    <p class="sub">O .gitignore bloqueia parte dos casos pelo nome do arquivo. O restante depende da sua conferência</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:24%">O QUE NÃO PUBLICAR</th><th style="width:30%">EXEMPLO</th><th style="width:28%">O QUE O .GITIGNORE DO SCRIPT BLOQUEIA</th><th style="width:18%">QUEM CONFERE</th></tr>
+      <tr><td><strong>Dado pessoal de terceiro</strong></td><td>Nome com CPF, endereço, telefone, matrícula, prontuário</td>
+          <td><span class="mono" style="font-size:13px">*sigiloso*, *confidencial*, *pessoal*, dados/brutos-nao-anonimizados/</span></td><td><span class="chip med">VOCÊ</span><br>Retire o dado antes de colocar na pasta.</td></tr>
+      <tr><td><strong>Senha, chave ou token</strong><span class="s">token é o código que autoriza um programa a usar a sua conta</span></td><td>Arquivo .env, chave de API, senha anotada num .txt</td>
+          <td><span class="mono" style="font-size:13px">.env, *.key, *.pem, credenciais*, senha*, token*</span></td><td><span class="chip ok">.GITIGNORE</span><br>Se o nome seguir o padrão.</td></tr>
+      <tr><td><strong>Documento interno sem autorização</strong></td><td>Relatório da organização do estágio, ainda que o repositório seja privado</td>
+          <td>Nada. Não há padrão de nome que identifique.</td><td><span class="chip ruim">SÓ VOCÊ</span></td></tr>
+      <tr><td><strong>Arquivo grande de dado bruto</strong></td><td>Base completa de microdados, arquivo compactado</td>
+          <td><span class="mono" style="font-size:13px">*.zip, *.7z, *.bak</span></td><td><span class="chip ok">.GITIGNORE</span><br>Guarde o endereço da fonte.</td></tr>
+    </table>
+    <div class="caixa vinho" style="margin-top:14px"><span class="rot">APAGAR DEPOIS NÃO RESOLVE</span><p>Arquivo apagado continua nas versões anteriores do histórico. O GitHub também recusa arquivo acima de 100 MB. Antes de cada commit, leia a lista de arquivos na aba Changes.</p></div>
+    <p class="fonte-nota">Padrões copiados do .gitignore gerado por atividade_modulo2.py. Limite de arquivo em docs.github.com, About large files on GitHub. Consulta em 02/11/2026.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 2.4 · Atenção</span>
@@ -1493,24 +1531,46 @@ body.mexeu #ajuda{opacity:1}
 <section class="slide conteudo" data-i="38">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 2.4 · PRÁTICA</span>
-    <h2>Sua vez: publique e confira</h2>
-    <p class="sub">Individual. Ninguém sai antes de concluir.</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:5">
+    <h2>Sua vez de publicar e conferir</h2>
+    <p class="sub">Individual. Ninguém sai antes de concluir</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.12fr;--dir:1fr">
+      <div class="col"><ol class="steps cols-1 compacto">
     <li><span class="num">1</span>
-      <div><strong>Percorra os seis passos da demonstração</strong><p>Se travar em algum, levante a mão. Não pule para o seguinte.</p></div>
+      <div><strong>Percorra os seis passos da demonstração</strong><p>Se travar em algum, levante a mão e não pule para o seguinte.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Rode a conferência do script</strong><p>Peça: "execute atividade_modulo2.py com o comando conferir". Ele verifica a estrutura, o README, o AGENTS.md e o repositório.</p></div>
+      <div><strong>Rode a conferência</strong><p>Peça "execute atividade_modulo2.py com o comando conferir". O script verifica nove itens e grava entregas/A1-relatorio.md.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Corrija o que o script apontar</strong><p>Ele imprime uma lista do que falta, item por item.</p></div>
+      <div><strong>Corrija cada FALTA e grave de novo</strong><p>Depois de cada correção, Commit to main e Push origin. Repita o conferir até ler Concluidos: 9 de 9.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Grave e publique a versão final</strong><p>Com a mensagem: "entrega A1". Confira no site do GitHub que os arquivos estão lá.</p></div>
+      <div><strong>Assine o relatório e publique</strong><p>Preencha nome e matrícula no fim do relatório depois do último conferir, porque cada execução reescreve o arquivo. Grave com a mensagem entrega A1 e clique em Push origin.</p></div>
     </li>
     <li><span class="num">5</span>
-      <div><strong>Envie o endereço do repositório na turma virtual</strong><p>E adicione o professor como colaborador, conforme a instrução da turma virtual.</p></div>
-    </li></ol></div>
+      <div><strong>Dê acesso e envie o endereço</strong><p>No site, Settings, Collaborators, Add people, com o usuário do professor. Envie o endereço do repositório na turma virtual.</p></div>
+    </li></ol>
+      </div>
+      <div class="col" style="gap:4px">
+        <pre class="terminal" style="font-size:13px;line-height:1.36"> MODULO 2 - CONFERENCIA DA ENTREGA A1
+
+  [OK]    Estrutura de pastas
+  [OK]    README.md preenchido
+  [OK]    AGENTS.md com as quatro secoes
+  [OK]    Entregas do modulo 1 na pasta entregas/
+  [OK]    Ficha de infraestrutura do ciclo 2.1
+  [OK]    Arquivo .gitignore presente
+  [OK]    Pasta sob controle de versao
+<span class="hl">  [FALTA] Pelo menos duas versoes gravadas
+           1 versao(oes) gravada(s).</span>
+  [OK]    Repositorio publicado
+
+Concluidos: 8 de 9.
+
+Relatorio escrito em entregas/A1-relatorio.md</pre>
+        <p style="font-size:13.5px;color:var(--muted)">Saída do conferir logo após o Initial commit e a publicação, sem as linhas de detalhe dos itens OK. Projeto fictício. A segunda versão gravada resolve o item.</p>
+      </div>
+    </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 2.4 · Prática</span>
@@ -1520,12 +1580,12 @@ body.mexeu #ajuda{opacity:1}
 <section class="slide conteudo" data-i="39">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 2.4 · ENTREGA A1</span>
-    <h2>Entrega A1: vale 40% da nota 1</h2>
+    <h2>Entrega A1, 40% da nota 1</h2>
     
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>Repositório privado publicado no GitHub, com o professor como colaborador.</li><li>Estrutura de cinco pastas, README.md preenchido e AGENTS.md com as quatro seções.</li><li>As quatro entregas do módulo 1 e a ficha do ciclo 2.1 dentro de entregas/.</li><li>Ao menos duas versões gravadas, com mensagens que digam o que mudou.</li><li>O relatório entregas/A1-relatorio.md, gerado pelo script.</li></ul>
+      <ul><li>Repositório privado publicado no GitHub, com o professor como colaborador.</li><li>As quatro pastas, README.md sem nenhum PREENCHER e AGENTS.md com as quatro seções.</li><li>Os quatro arquivos do módulo 1 e a ficha do ciclo 2.1 dentro de entregas/.</li><li>Pelo menos duas versões gravadas, com mensagens que digam o que mudou.</li><li>O relatório entregas/A1-relatorio.md com nove itens concluídos, nome e matrícula.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
@@ -1534,7 +1594,7 @@ body.mexeu #ajuda{opacity:1}
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Quem sair sem repositório funcionando não acompanha os encontros seguintes. Esta entrega é cobrada hoje por essa razão.</p>
+        <p>Quem sair sem repositório funcionando não acompanha os encontros seguintes, que gravam trabalho nesta pasta. Por isso a entrega é cobrada hoje.</p>
       </section>
     </div>
   </div></div>
@@ -1548,53 +1608,13 @@ body.mexeu #ajuda{opacity:1}
     <span class="barra"></span>
     <span class="eyebrow">BALANÇO</span>
     <h2>O que você tem agora</h2>
-    
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">AMBIENTE</header>
-      <h3>Duas ferramentas instaladas e funcionando</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que é</span>
-          <p>opencode desktop com conta e modelo configurados, e GitHub Desktop conectado à sua conta.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Para que serve</span>
-          <p>É o ambiente de todos os treze encontros seguintes. Não muda mais.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">PROJETO</header>
-      <h3>Uma pasta com estrutura e histórico</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que é</span>
-          <p>Cinco pastas, README, AGENTS.md e as entregas do módulo 1, tudo versionado e publicado.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Para que serve</span>
-          <p>Recebe o trabalho do semestre inteiro e é o meio de entrega de todas as atividades.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">MÉTODO</header>
-      <h3>Instrução, resultado em arquivo, conferência</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que é</span>
-          <p>O ciclo que se repete em todos os módulos: pedir, gravar, conferir e registrar a correção.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Para que serve</span>
-          <p>É o que a correção avalia, e é o que sobra depois que a disciplina acabar.</p>
-        </div>
-    </article></div></div>
+    <p class="sub">O ambiente e o projeto ficam prontos hoje. O método se repete nos próximos encontros</p>
+    <div class="corpo"><div class="duascol" style="--esq:1fr;--dir:1fr;height:auto">
+      <div class="caixa dourado"><span class="rot">AMBIENTE</span><p>opencode desktop com conta e modelo gratuito escolhido, e GitHub Desktop conectado à sua conta. É o ambiente dos treze encontros seguintes.</p></div>
+      <div class="caixa teal"><span class="rot">PROJETO</span><p>Uma pasta com quatro pastas, README, AGENTS.md e as entregas do módulo 1, com histórico e cópia no GitHub. Todas as atividades do semestre são entregues por ela.</p></div>
+    </div>
+    <p style="font-size:14px;font-weight:700;letter-spacing:1px;color:var(--muted);margin:22px 0 10px">O MÉTODO QUE SE REPETE EM TODOS OS MÓDULOS</p>
+    <div class="fluxo" style="--n:4"><div class="etapa" style="--cor:#D4B277"><span class="n">1</span><h4>Pedir</h4><p>Instrução com o arquivo citado pelo caminho, o formato da saída e uma proibição.</p></div><div class="etapa" style="--cor:#0AB0AB"><span class="n">2</span><h4>Gravar</h4><p>O resultado vira arquivo em saidas/ ou entregas/. Cálculo vem de script.</p></div><div class="etapa" style="--cor:#FEC84D"><span class="n">3</span><h4>Conferir</h4><p>Você compara com a fonte e anota a correção na entrega.</p></div><div class="etapa" style="--cor:#8D0333"><span class="n">4</span><h4>Registrar</h4><p>Commit com a frase do que mudou e push para o GitHub.</p></div></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Balanço do módulo</span>
@@ -1605,30 +1625,36 @@ body.mexeu #ajuda{opacity:1}
     <span class="barra"></span>
     <span class="eyebrow">VOCABULÁRIO · 1 DE 2</span>
     <h2>As palavras deste encontro</h2>
-    <p class="sub">Infraestrutura e arquivos. Guarde estes dois slides: os termos voltam o semestre inteiro.</p>
-    <div class="corpo"><ol class="steps cols-2" style="--linhas:4">
+    <p class="sub">Infraestrutura e arquivos. Os termos voltam o semestre inteiro</p>
+    <div class="corpo"><ol class="steps cols-2 compacto" style="--linhas:5">
     <li><span class="num">1</span>
-      <div><strong>Infraestrutura de TI</strong><p>Equipamento, programa, rede e dado: a base que faz um sistema funcionar.</p></div>
+      <div><strong>Infraestrutura de TI</strong><p>Equipamento, programa, rede e dado que um sistema precisa para funcionar.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Nuvem</strong><p>Equipamento de outra empresa, usado pela internet e pago por uso.</p></div>
+      <div><strong>Servidor</strong><p>Computador ligado o tempo todo que atende vários usuários ao mesmo tempo.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Servidor</strong><p>Computador da organização, ligado o tempo todo, que atende vários usuários.</p></div>
+      <div><strong>Nuvem</strong><p>Equipamento de outra empresa, usado pela internet e pago conforme o uso.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Sistema</strong><p>Vários programas e dados que atendem juntos a um processo da organização.</p></div>
+      <div><strong>Custo total de propriedade</strong><p>Soma de aquisição, operação, treinamento e saída ao longo do uso.</p></div>
     </li>
     <li><span class="num">5</span>
-      <div><strong>Arquivo, pasta e caminho</strong><p>O conteúdo gravado, onde ele fica e o endereço completo até ele.</p></div>
+      <div><strong>Dependência de fornecedor</strong><p>Situação em que sair do fornecedor custa caro demais.</p></div>
     </li>
     <li><span class="num">6</span>
-      <div><strong>Extensão</strong><p>O final depois do ponto, que diz o tipo do arquivo: .csv, .md, .docx.</p></div>
+      <div><strong>Sistema</strong><p>Programas, dados e regras que atendem a um processo da organização.</p></div>
     </li>
     <li><span class="num">7</span>
-      <div><strong>Texto puro</strong><p>Arquivo que guarda só caracteres, legível por qualquer programa.</p></div>
+      <div><strong>Arquivo, pasta e caminho</strong><p>O conteúdo gravado, onde ele fica e o endereço completo até ele.</p></div>
     </li>
     <li><span class="num">8</span>
+      <div><strong>Extensão</strong><p>O final depois do ponto, que indica o tipo do arquivo.</p></div>
+    </li>
+    <li><span class="num">9</span>
+      <div><strong>Texto puro</strong><p>Arquivo que guarda só caracteres e abre em qualquer programa.</p></div>
+    </li>
+    <li><span class="num">10</span>
       <div><strong>Script</strong><p>Arquivo com uma sequência de passos que o computador executa de uma vez.</p></div>
     </li></ol></div>
     <footer>
@@ -1642,29 +1668,35 @@ body.mexeu #ajuda{opacity:1}
     <span class="eyebrow">VOCABULÁRIO · 2 DE 2</span>
     <h2>As palavras deste encontro</h2>
     <p class="sub">Modelo, agente e controle de versão</p>
-    <div class="corpo"><ol class="steps cols-2" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-2 compacto" style="--linhas:5">
     <li><span class="num">1</span>
-      <div><strong>Modelo de linguagem</strong><p>Programa que escreve prevendo a continuação provável do texto.</p></div>
+      <div><strong>Modelo de linguagem</strong><p>Programa que escreve estimando a continuação mais provável do texto.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Prompt</strong><p>A instrução que você escreve para o modelo.</p></div>
+      <div><strong>Confabulação</strong><p>Informação plausível e falsa que o modelo produz quando não recebeu o dado.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Agente</strong><p>Modelo com permissão de ler, gravar e executar dentro da sua pasta.</p></div>
+      <div><strong>Prompt</strong><p>A instrução que você escreve para o modelo.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Cota</strong><p>Número de pedidos que a conta gratuita aceita por dia e por minuto.</p></div>
+      <div><strong>Agente</strong><p>Modelo com ferramentas para ler, gravar e executar dentro da sua pasta.</p></div>
     </li>
     <li><span class="num">5</span>
-      <div><strong>Git e GitHub</strong><p>O programa que guarda o histórico, e o site que hospeda a cópia externa.</p></div>
+      <div><strong>AGENTS.md</strong><p>Arquivo na raiz com as instruções que valem para todo pedido do projeto.</p></div>
     </li>
     <li><span class="num">6</span>
-      <div><strong>Repositório</strong><p>A pasta do projeto com histórico de versões, local e no GitHub.</p></div>
+      <div><strong>Cota</strong><p>Limite de uso que a conta gratuita aceita num período.</p></div>
     </li>
     <li><span class="num">7</span>
-      <div><strong>Commit</strong><p>Gravar uma versão, com uma frase dizendo o que mudou.</p></div>
+      <div><strong>Git e GitHub</strong><p>O programa que grava as versões e o site que guarda a cópia externa.</p></div>
     </li>
     <li><span class="num">8</span>
+      <div><strong>Repositório</strong><p>A pasta do projeto com histórico de versões, local e no GitHub.</p></div>
+    </li>
+    <li><span class="num">9</span>
+      <div><strong>Commit</strong><p>Gravar uma versão, com uma frase dizendo o que mudou.</p></div>
+    </li>
+    <li><span class="num">10</span>
       <div><strong>Push</strong><p>Enviar as versões gravadas para a cópia no GitHub.</p></div>
     </li></ol></div>
     <footer>
@@ -1677,23 +1709,18 @@ body.mexeu #ajuda{opacity:1}
     <span class="barra"></span>
     <span class="eyebrow">SOLUÇÃO DE PROBLEMAS</span>
     <h2>Quando alguma coisa der errado</h2>
-    <p class="sub">Os cinco problemas que aparecem neste encontro</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:5">
-    <li><span class="num">1</span>
-      <div><strong>O instalador é bloqueado pelo antivírus</strong><p>Não autorize por conta própria. Chame o professor. A liberação é feita com o técnico do laboratório.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>A conta não recebe o e-mail de confirmação</strong><p>Verifique a caixa de spam. Se não chegar em cinco minutos, use outro endereço de e-mail e siga.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>O agente diz que não encontra o arquivo</strong><p>Quase sempre a pasta aberta não é a do projeto. Feche e abra de novo pela pasta certa.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>A cota do modelo acabou no meio da aula</strong><p>Registre isso na entrega, siga a atividade com o resultado esperado do roteiro e retome depois.</p></div>
-    </li>
-    <li><span class="num">5</span>
-      <div><strong>O GitHub Desktop não deixa publicar</strong><p>Confirme que você está autenticado e que o repositório tem ao menos uma versão gravada antes de publicar.</p></div>
-    </li></ol></div>
+    <p class="sub">Os problemas mais comuns deste encontro e a primeira providência para cada um</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:27%">O QUE ACONTECE</th><th style="width:28%">CAUSA PROVÁVEL</th><th style="width:45%">O QUE FAZER</th></tr>
+      <tr><td><strong>Antivírus ou Windows bloqueia o instalador</strong></td><td>Política do laboratório</td><td>Não autorize por conta própria. O professor resolve com o técnico.</td></tr>
+      <tr><td><strong>E-mail de confirmação não chega</strong></td><td>Filtro de spam</td><td>Verifique o spam. Depois de cinco minutos, use outro endereço e siga.</td></tr>
+      <tr><td><strong>O agente não encontra o arquivo</strong></td><td>Pasta aberta errada ou caminho digitado errado</td><td>Abra de novo pela pasta do projeto e cite o caminho a partir dela, como entregas/modulo1-mapa-de-tarefas.md.</td></tr>
+      <tr><td><strong>Aviso de limite de uso do modelo</strong></td><td>Cota gratuita esgotada na conta ou na rede</td><td>Troque para o outro modelo da primeira linha do slide 26. Se persistir, registre na entrega e siga com o resultado esperado do roteiro.</td></tr>
+      <tr><td><strong>GitHub pede verificação em duas etapas</strong></td><td>Exigência para contas com atividade de contribuição, com prazo de 45 dias</td><td>Ative com um aplicativo autenticador no celular e guarde os códigos de recuperação fora do repositório.</td></tr>
+      <tr><td><strong>Não aparece Publish repository</strong></td><td>Conta não conectada ou pasta ainda sem repositório</td><td>File, Options, Accounts para entrar. Depois File, Add local repository.</td></tr>
+      <tr><td><strong>conferir mostra 1 versão gravada</strong></td><td>Só existe o Initial commit</td><td>Grave a próxima mudança com Commit to main e rode o conferir de novo.</td></tr>
+    </table>
+    <p class="fonte-nota">Verificação em duas etapas conforme docs.github.com, About mandatory two-factor authentication. Consulta em 02/11/2026.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Solução de problemas</span>
@@ -1705,18 +1732,18 @@ body.mexeu #ajuda{opacity:1}
     <span class="eyebrow">PRÓXIMOS PASSOS</span>
     <h2>Módulo 3: o que preparar</h2>
     <p class="sub">Inteligência artificial, modelos de linguagem e engenharia de prompt</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Traga o repositório funcionando</strong><p>No próximo encontro você começa gravando na mesma pasta. Se hoje ficou pendente, resolva antes.</p></div>
+      <div><strong>Traga o repositório funcionando</strong><p>No próximo encontro você começa gravando na mesma pasta. Se algo ficou pendente hoje, resolva antes, no atendimento da semana.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Leia o capítulo 1 de Taulli</strong><p>Introdução à inteligência artificial: uma abordagem não técnica, capítulo 1, Fundamentos da IA. Está na turma virtual.</p></div>
+      <div><strong>Leia o capítulo 1 de Taulli</strong><p>Introdução à inteligência artificial: uma abordagem não técnica (Novatec, 2020), capítulo 1, Fundamentos da IA. Está na turma virtual.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Traga uma referência bibliográfica que você usa</strong><p>De um trabalho seu, com autor, título e ano. Vai ser usada no exercício de alucinação.</p></div>
+      <div><strong>Traga uma referência bibliográfica que você usa</strong><p>De um trabalho seu, com autor, título e ano. Ela será usada no exercício sobre confabulação.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Revise o seu AGENTS.md</strong><p>Ele vai ser testado com pedidos mais difíceis no módulo 3, e você vai ajustá-lo.</p></div>
+      <div><strong>Revise o seu AGENTS.md</strong><p>O módulo 3 testa o arquivo com pedidos mais difíceis, e você vai ajustá-lo.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>

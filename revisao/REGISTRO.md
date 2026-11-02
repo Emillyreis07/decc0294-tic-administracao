@@ -8,10 +8,10 @@ Os sinais vêm de `python revisao/auditar_texto.py`, rodado em 2 nov. 2026. Elem
 
 | Mód. | Enc. | Deck | Slides | Sinais | Elementos visuais | Situação |
 |---|---|---|---|---|---|---|
-| 1 | 2 | Transformação digital | 34 | 2 | nenhum | ajustes pontuais em set. 2026, revisão pelo padrão pendente |
-| 2 | 3 | Ambiente de trabalho digital | 46 | 8 | nenhum | revisado em set. 2026 para turma sem contato prévio, linguagem pendente |
-| 3 | 4 | IA e engenharia de prompt | 42 | 13 | nenhum | revisado em set. 2026 para turma sem contato prévio, linguagem e atualização sobre IA pendentes |
-| 4 | 5 | Do prompt ao artefato | 40 | 8 | nenhum | revisado em set. 2026 para turma sem contato prévio, linguagem pendente |
+| 1 | 2 | Transformação digital | 36 | 1 | 17 | revisado em 2 nov. 2026, deck inteiro. O sinal restante é "Ensino fundamental", falso positivo |
+| 2 | 3 | Ambiente de trabalho digital | 46 | 0 | 21 | revisado em 2 nov. 2026, deck inteiro, mantida a adaptação de set. 2026 |
+| 3 | 4 | IA e engenharia de prompt | 44 | 0 | 20 | revisado em 2 nov. 2026, deck inteiro, mantida a adaptação de set. 2026 |
+| 4 | 5 | Do prompt ao artefato | 42 | 0 | 20 | revisado em 2 nov. 2026, deck inteiro, mantida a adaptação de set. 2026 |
 | 5 | 6 | Dados na Administração | 32 | 0 | 11 | revisado em 2 nov. 2026, slides 6 a 32 (ver abaixo) |
 | 6 | 7 | Análise exploratória | 31 | 2 | 15 | revisado em 2 nov. 2026, deck inteiro (ver abaixo). Os dois sinais restantes são falsos positivos: "significativa" como termo estatístico e o separador ';' na saída do script |
 | 7 | 8 | Dados estruturados e consulta | 31 | 0 | 14 | revisado em 2 nov. 2026, deck inteiro |
@@ -24,11 +24,25 @@ Os sinais vêm de `python revisao/auditar_texto.py`, rodado em 2 nov. 2026. Elem
 | 14 | 15 | Produto digital e ágil | 27 | 0 | 10 | revisado em 2 nov. 2026, deck inteiro |
 | 15 | 16 | Projeto integrador | 26 | 0 | 12 | revisado em 2 nov. 2026, deck inteiro |
 
-Ordem sugerida: módulos 1 a 4, os únicos ainda pendentes. Eles passaram por uma revisão de conteúdo em setembro, mas não pelo padrão de linguagem e de elementos visuais.
+Todos os 15 decks foram revisados pelo padrão do guia em 2 nov. 2026. Próximas ações: resolver as pendências dos scripts listadas abaixo, reconferir antes de cada encontro as informações datadas (modelos gratuitos do OpenCode Zen, PL 2338/2023, regulamentação da ANPD) e abrir os decks no laboratório com a Segoe UI.
 
 Em 2 nov. 2026 os marcadores de tempo foram retirados de todos os decks (ver histórico). A contagem de slides acima já reflete o estado posterior.
 
 ## Histórico
+
+### 2 nov. 2026, módulos 1, 2, 3 e 4, decks inteiros
+
+Os módulos 2 a 4 mantiveram a adaptação de setembro para turma sem contato prévio (componentes `.conceito` e `.duas`). O módulo 1 recebeu o componente `.conceito`, que não tinha. Auditoria com zero sinais nos módulos 2 a 4 e um falso positivo no módulo 1. Conferência visual com Liberation Sans e DejaVu Sans.
+
+Módulo 1 (encontro 2), de 34 para 36 slides. Novos: 6, velocidade de adoção da IA generativa, e 20, quanto do trabalho a IA generativa alcança. Correções: Schwab usa velocidade, amplitude e profundidade, e impacto sistêmico. Saíram uma afirmação sem fonte sobre o emprego no Maranhão e uma comparação de "ordem de grandeza" que era de cerca de cinco vezes. Dados: TIC Empresas 2025 (17% das empresas usam IA), TIC Domicílios 2025 (32% dos usuários de internet usam IA generativa), PNAD TIC 2025, Pintec Semestral 2024, Eurostat, Bick, Blandin e Deming, OIT e NASK (2025), Eloundou et al. Conferir antes da aula se o STF concluiu o Tema 1291.
+
+Módulo 2 (encontro 3), 46 slides. Saiu o antigo 35 (repetia 15 e 34) e entrou o 27, esquema anotado da tela do opencode desktop. Correções: o comando `criar` cria quatro pastas, e o deck dizia cinco. O GitHub Desktop grava sozinho o Initial commit, e o README não pode ser marcado na criação. Cada `conferir` reescreve o relatório A1. Tabela dos modelos gratuitos do OpenCode Zen com a política de dados de cada um. Verificação em duas etapas obrigatória no GitHub.
+
+Módulo 3 (encontro 4), de 42 para 44 slides. Novos: 7, tokens e previsão do próximo token, 10, o que ocupa a janela de contexto, e 11, o ciclo do agente com ferramentas. Correções: a janela cheia é compactada pelo opencode (resumo da conversa antiga), e o deck dizia que o começo era descartado. Janelas atuais de cerca de 1 milhão de tokens. Passo a passo dispensável em modelos de raciocínio, com o esforço de raciocínio como parâmetro. Repetição de um número entre execuções não prova que ele está certo. Alucinação com os dados do SimpleQA (acerto, erro e abstenção) e Kalai et al. (2025). MCP e AGENTS.md na Agentic AI Foundation desde 9 dez. 2025.
+
+Módulo 4 (encontro 5), de 40 para 42 slides. Novos: 14, o que a segunda rodada mostra (Gloaguen et al., 2026, sobre o efeito de arquivos AGENTS.md, conferido), e 16, o registro das rodadas e o comando conferir. Correções: o bloco de MCP estava no formato `mcpServers`, que o opencode não lê. O correto é o bloco `mcp` em `opencode.json`. Skills e subagentes do opencode. Limite de 10 anos por consulta no SGS do Banco Central desde mar. 2025. CNPJ da UFMA (06.279.103/0001-19, conferido) na demonstração do MCP. As oito APIs públicas não puderam ser testadas: o proxy recusou os oito domínios no contêiner e no computador do professor. O slide 27 mostra essas saídas reais. O teste com `python scripts/atividade_modulo4.py apis testar` precisa ser feito na rede do laboratório.
+
+Roteiros 1 a 4 renumerados, com descrições de teoria e demonstração atualizadas e travessões retirados dos títulos.
 
 ### 2 nov. 2026, módulos 13, 14 e 15, decks inteiros
 
@@ -142,6 +156,11 @@ Defeitos nos scripts encontrados na revisão de 2 nov. 2026. Os scripts não for
 - Roteiro 10, ciclo 10.3: fala em duplas e diz que o ciclo não usa modelo de linguagem, mas o script prevê a coluna `categoria_agente`. O deck segue o script. Decidir qual desenho vale.
 - `atividade_modulo11.py`: o `conferir` recusa "não" com acento, porque compara com "nao" (o deck avisa).
 - Roteiro 11: diz que o encontro não tem entrega avaliada, mas o deck tem slide de entrega com critério de correção. Decidir.
+- `atividade_modulo1.py`: a linha de exemplo diz "quatro vezes por mes", mas a conta de 6 h só fecha com quatro unidades. Tarefa com texto igual ao do exemplo é ignorada. No encontro 2 não há opencode: confirmar quem executa o `conferir`.
+- `atividade_modulo2.py`: a prática 2.2 pede o comando `criar` antes da instalação do opencode, que só ocorre no 2.3 (o deck manda rodar logo após a instalação). Em repositório clonado em outra máquina, o `conferir` conta zero versões. Confirmar se a conexão ao OpenCode Zen pede cartão.
+- `atividade_modulo3.py`: só aceita rótulos e vereditos sem acento ("nao verificavel"). O deck orienta escrever sem acento. "sem erro" conta como um dos três tipos mínimos.
+- `atividade_modulo4.py`: a mensagem "Esta URL e o que uma ferramenta de MCP executaria" não vale para `municipios` (o script chama o IBGE direto, e o MCP passa pela BrasilAPI). O CNPJ é pedido "so numeros", e há CNPJ alfanumérico desde jul. 2026. Parâmetros do PNCP vieram de fontes secundárias.
+- Acentos: os scripts dos módulos 3, 11 e outros recusam "não" e rótulos acentuados. Uma normalização de acentos na leitura dos formulários resolveria o problema em todos de uma vez.
 - `atividade_modulo15.py`, lista `ENTREGAS` usada pelo comando `c2`: para os encontros 10 e 11 espera arquivos que começam por `entregas/modulo9-ciclo4` e `entregas/modulo10-ciclo3`, que nenhum deck nem script manda criar (as entregas reais são `modulo9-relatorio.md`, `modulo9-fluxo.csv` e `modulo10-codificacao.csv`). No encontro 4, o prefixo `modulo3-ciclo` não encontra o diário de alucinação. Um aluno que fez tudo verá esses encontros como ausentes na conferência da C2. Correção recomendada antes do encontro 16. O deck orienta o aluno a mostrar o arquivo e o commit.
 - `atividade_modulo13.py`: o `conferir` exige "nao consta" mesmo quando o documento trata das cinco categorias (o deck orienta a escrever "categorias que nao constam: nenhuma"). A docstring fala em quatro seções, e o modelo tem cinco. O `c1` só confere se os arquivos dos encontros 12 e 13 existem. A comparação com o critério escrito em casa foi para a seção 3 da devolutiva, porque o script não prevê arquivo próprio. Confirmar.
 - `atividade_modulo14.py`: aceita público genérico ("os gestores da secretaria") e história que descreve solução em vez de necessidade ("quero um botão de exportar para PDF"). O deck mostra o segundo caso como aceito e inadequado. O deck pede dois pedidos longos ao modelo por história, e o planejamento fala em dois por ciclo prático. Decidir.

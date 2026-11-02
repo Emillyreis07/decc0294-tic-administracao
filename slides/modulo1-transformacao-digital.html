@@ -147,6 +147,151 @@ body.mexeu #ajuda{opacity:1}
   #barra,#ajuda{display:none}
   .slide{display:block!important;page-break-after:always;box-shadow:none;transform:none!important}
 }
+/* ---- componentes acrescentados na revisão de nov. 2026 ---- */
+.mono{font-family:Consolas,"Cascadia Mono","Courier New",monospace}
+.fonte-nota{position:absolute;left:0;right:0;bottom:-2px;font-size:13px;color:var(--muted);line-height:1.3}
+.prompt.compacto{padding:12px 20px;margin-bottom:16px}
+.prompt.compacto p{font-size:17px;line-height:1.4;margin-top:6px}
+.prompt.compacto p+p{margin-top:6px}
+.prompt .cmd{font-style:normal;font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:16px}
+
+/* tabela de dados */
+.tab{width:100%;border-collapse:collapse;font-size:15px;line-height:1.3;color:var(--body)}
+.tab th{background:var(--vinho);color:#fff;font-weight:700;text-align:left;padding:7px 10px;font-size:14px;letter-spacing:.3px}
+.tab td{border-bottom:1px solid #e1e1e1;padding:7px 10px;vertical-align:top;background:#fff}
+.tab tr:nth-child(even) td{background:#fafafa}
+.tab td.lac{background:#FFF3D1!important;color:#7a5600;font-weight:700}
+.tab td .s{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+.tab td strong{color:var(--txt)}
+.chip{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.5px;padding:2px 8px;margin-bottom:4px;color:var(--txt)}
+.chip.ok{background:#CFEFEE}.chip.med{background:#FFE7A8}.chip.ruim{background:#F2CDD8;color:var(--vinho)}
+.badge{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--vinho);
+  color:#fff;font-size:12px;font-weight:700;margin-right:6px;vertical-align:1px;font-style:normal}
+
+/* duas colunas */
+.duascol{display:grid;grid-template-columns:var(--esq,1.4fr) var(--dir,1fr);gap:28px;height:100%}
+.duascol .col{display:flex;flex-direction:column;gap:14px;min-height:0}
+.steps.compacto{gap:12px}
+.steps.compacto strong{font-size:18px}
+.steps.compacto p{font-size:16px;line-height:1.35}
+.steps.compacto .num{flex:0 0 28px;height:28px;font-size:15px}
+
+/* fluxo horizontal */
+.fluxo{display:grid;grid-template-columns:repeat(var(--n,4),1fr);gap:34px;position:relative}
+.etapa{background:var(--card);border:1px solid #e3e3e3;border-top:6px solid var(--cor,var(--vinho));
+  padding:12px 16px 14px;position:relative}
+.etapa:not(:last-child)::after{content:"";position:absolute;right:-27px;top:50%;margin-top:-11px;
+  border-left:16px solid var(--vinho);border-top:11px solid transparent;border-bottom:11px solid transparent}
+.etapa .n{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;
+  background:var(--vinho);color:#fff;font-size:14px;font-weight:700}
+.etapa h4{display:inline;font-size:18px;color:var(--txt);margin-left:6px;vertical-align:2px}
+.etapa p{font-size:15.5px;line-height:1.38;margin-top:8px}
+.etapa .arq{display:block;margin-top:8px;font-size:13.5px;color:var(--vinho);
+  font-family:Consolas,"Cascadia Mono","Courier New",monospace;word-break:break-all}
+.trilha{margin-top:18px}
+.trilha .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1px;color:var(--muted);margin-bottom:6px}
+.trilha .barra-g{height:14px;background:linear-gradient(90deg,var(--teal) 0%,#9fd6c4 30%,var(--amarelo) 55%,var(--vinho) 100%)}
+.trilha .marcas{display:grid;grid-template-columns:repeat(4,1fr);gap:34px;font-size:13.5px;color:var(--muted);margin-top:5px}
+
+/* conceito (mesmo padrão dos módulos 2 e 3) */
+.def{background:var(--card2);border:1px solid #e3e3e3;border-left:9px solid var(--vinho);padding:12px 20px}
+.def .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1.2px;color:var(--vinho);text-transform:uppercase}
+.def p{font-size:17px;line-height:1.4;color:var(--txt);margin-top:5px}
+
+/* eixo acima dos cartões */
+.eixo{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;margin-bottom:14px;
+  font-size:14px;font-weight:700;color:var(--muted);letter-spacing:.4px}
+.eixo .seta{height:10px;position:relative;background:linear-gradient(90deg,var(--dourado),var(--teal))}
+.eixo .seta::after{content:"";position:absolute;right:-14px;top:-7px;border-left:16px solid var(--teal);
+  border-top:12px solid transparent;border-bottom:12px solid transparent}
+.cards.baixos{height:calc(100% - 40px)}
+.cards.baixos .card h3{font-size:18px;padding:12px 16px 2px}
+.cards.baixos .card .bloco{padding:8px 16px 0}
+.cards.baixos .card .bloco p{font-size:15.5px;line-height:1.36}
+
+/* grade de dimensões */
+.grade{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:14px;height:calc(100% - 22px)}
+.dim{background:var(--card);border:1px solid #e3e3e3;border-top:5px solid var(--cor);padding:10px 16px}
+.dim h4{font-size:19px;color:var(--vinho)}
+.dim h4 small{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.dim p{font-size:15.5px;line-height:1.36;margin-top:5px}
+.dim .med{display:block;font-size:14px;color:var(--txt);margin-top:7px;border-top:1px solid #ddd;padding-top:6px}
+.dim .med b{color:var(--muted);font-size:12.5px;letter-spacing:.6px}
+
+/* caixa lateral */
+.caixa{background:var(--card2);border:1px solid #e3e3e3;padding:12px 16px}
+.caixa.vinho{border-left:6px solid var(--vinho)}
+.caixa.dourado{border-left:6px solid var(--dourado)}
+.caixa.teal{border-left:6px solid var(--teal)}
+.caixa .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1px;color:var(--vinho);margin-bottom:4px}
+.caixa p{font-size:15.5px;line-height:1.38}
+.caixa p+p{margin-top:6px}
+.legenda{list-style:none}
+.legenda li{font-size:15.5px;line-height:1.35;margin-bottom:8px;display:flex;gap:6px}
+.legenda li b{color:var(--txt)}
+
+/* ficha do mapa de dados */
+.ficha{display:grid;grid-template-columns:1fr 1fr;gap:14px;height:calc(100% - 64px)}
+.ficha .grupo{background:var(--card);border:1px solid #e3e3e3;border-top:5px solid var(--cor)}
+.ficha .grupo>header{font-size:16px;font-weight:700;color:var(--vinho);padding:8px 14px 2px}
+.ficha .grupo>header span{color:var(--muted);font-weight:400;font-size:14px;margin-left:6px}
+.ficha dl{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;padding:6px 14px 10px;font-size:14.5px;line-height:1.3}
+.ficha dt{font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:13.5px;color:var(--vinho);padding-top:1px}
+.ficha dd{color:var(--txt)}
+.rodape-corpo{margin-top:12px;font-size:15.5px;line-height:1.4;color:var(--body)}
+
+/* svg */
+.fig{display:block;width:100%;height:auto}
+.fig text{font-family:"Segoe UI",Calibri,"Helvetica Neue",Arial,sans-serif}
+
+/* ajustes após conferência visual */
+.tab.apertada{font-size:14.5px}
+.tab.apertada td{padding:6px 10px}
+.legenda .badge{flex:0 0 20px;margin-top:1px}
+.dim p{font-size:17px}
+.dim .med{font-size:15.5px}
+.dim h4{font-size:21px}
+.cards.baixos .card .bloco p{font-size:16.5px}
+.eixo{gap:26px}
+.ficha dl{font-size:16.5px;gap:6px 14px;padding:8px 14px 12px}
+.ficha dt{font-size:15px}
+.ficha .grupo>header{font-size:17.5px}
+.etapa p{font-size:16.5px}
+.etapa .arq{word-break:normal;overflow-wrap:break-word}
+.steps.cols-3.compacto p{font-size:17px}
+.steps.cols-3.compacto strong{font-size:19px}
+
+/* blocos de saída de terminal */
+.terminal{background:#262626;color:#e9e9e9;font-family:Consolas,"Cascadia Mono","Courier New",monospace;
+  font-size:14px;line-height:1.38;padding:12px 16px;white-space:pre;overflow:hidden;margin:0}
+.terminal .hl{color:#FEC84D;font-weight:700}
+
+/* conceito com definição, pontos e analogia (copiado do módulo 2) */
+.conceito{display:flex;flex-direction:column;height:100%;gap:18px}
+.conceito .def{background:var(--card2);border:1px solid #e3e3e3;border-left:9px solid var(--vinho);
+  padding:16px 24px}
+.conceito .def .rot{display:block;font-size:14px;font-weight:700;letter-spacing:1.2px;
+  color:var(--vinho);text-transform:uppercase}
+.conceito .def p{font-size:23px;line-height:1.35;color:var(--txt);margin-top:8px}
+.conceito .pontos{display:grid;gap:16px 30px}
+.conceito .pontos.cols-2{grid-template-columns:repeat(2,1fr)}
+.conceito .pontos.cols-3{grid-template-columns:repeat(3,1fr)}
+.conceito .pt .rule{display:block;height:3px;margin-bottom:8px}
+.conceito .pt .rot{display:block;font-size:15px;font-weight:700;color:var(--txt)}
+.conceito .pt p{font-size:17px;line-height:1.4;margin-top:3px}
+.conceito .analogia{margin-top:auto;background:var(--card);border-left:6px solid var(--dourado);
+  padding:12px 20px}
+.conceito .analogia .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1.1px;
+  color:var(--muted)}
+.conceito .analogia p{font-size:18px;line-height:1.4;color:var(--txt);margin-top:4px}
+
+
+/* módulo 1: rótulos dentro das etapas do fluxo das revoluções */
+.fluxo.rev .etapa .rot{display:block;font-size:12.5px;font-weight:700;letter-spacing:.8px;color:var(--muted);margin-top:9px}
+.fluxo.rev .etapa p{margin-top:2px;font-size:16px;line-height:1.34}
+.fluxo.rev .etapa h4{font-size:19px}
+.fluxo.peq .etapa p{font-size:15px;line-height:1.34}
+.fluxo.peq .etapa{padding:10px 14px 12px}
 </style>
 </head>
 <body>
@@ -164,52 +309,52 @@ body.mexeu #ajuda{opacity:1}
     <span class="barra"></span>
     <span class="eyebrow">VISÃO GERAL DO MÓDULO</span>
     <h2>O que você vai construir hoje</h2>
-    
+    <p class="sub">Quatro ciclos, cada um com uma entrega que vai para a pasta do projeto no encontro 3</p>
     <div class="corpo"><div class="overview">
     <article class="ciclo">
       <span class="topo" style="background:#D4B277"></span>
-      <span class="rot" >CICLO 1.1</span>
+      <span class="rot">CICLO 1.1</span>
       <h3>A quarta revolução industrial</h3>
       <div class="pe">
         <span class="rule" style="background:#D4B277"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Ficha de verificação de uma afirmação</p>
+        <p>Ficha de verificação de uma afirmação contra a fonte</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#0AB0AB"></span>
-      <span class="rot" >CICLO 1.2</span>
+      <span class="rot">CICLO 1.2</span>
       <h3>Sociedade informacional e a empresa brasileira</h3>
       <div class="pe">
         <span class="rule" style="background:#0AB0AB"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Comparação entre dois setores</p>
+        <p>Comparação entre dois setores com números copiados da fonte</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#FEC84D"></span>
-      <span class="rot" >CICLO 1.3</span>
-      <h3>Automação do trabalho: tarefa, não ocupação</h3>
+      <span class="rot">CICLO 1.3</span>
+      <h3>Automação do trabalho medida por tarefa</h3>
       <div class="pe">
         <span class="rule" style="background:#FEC84D"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Classificação de dez tarefas</p>
+        <p>Dez tarefas de um cargo real, classificadas e revisadas</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#D4B277"></span>
-      <span class="rot" >CICLO 1.4</span>
+      <span class="rot">CICLO 1.4</span>
       <h3>Mapa de tarefas automatizáveis</h3>
       <div class="pe">
         <span class="rule" style="background:#D4B277"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Mapa de tarefas do seu trabalho</p>
+        <p>Mapa gerado pelo script, com a sua primeira ação escrita</p>
       </div>
     </article></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Estrutura do módulo</span>
-      <span class="pag">2 / 34</span>
+      <span class="pag">2 / 36</span>
     </footer>
   </section>
 <section class="slide divisor" data-i="2">
@@ -219,197 +364,195 @@ body.mexeu #ajuda{opacity:1}
         <h2>A quarta revolução industrial</h2>
         <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">3 / 34</span>
+      <span class="pag">3 / 36</span>
     </section>
 <section class="slide conteudo" data-i="3">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 1.1 · TEORIA</span>
-    <h2>Quatro revoluções, quatro deslocamentos</h2>
-    <p class="sub">O que foi mecanizado em cada uma delas</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">PRIMEIRA</header>
-      <h3>Força mecânica substitui força muscular</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Quando</span>
-          <p>A partir de 1760, com vapor e tear mecânico.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Efeito na gestão</span>
-          <p>Nasce a fábrica e a supervisão direta do trabalho.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">SEGUNDA</header>
-      <h3>Energia elétrica e produção em série</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Quando</span>
-          <p>Fim do século XIX, com linha de montagem.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Efeito na gestão</span>
-          <p>Administração científica, cronometragem, cargo definido por tarefa.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">TERCEIRA</header>
-      <h3>Eletrônica e automação por programa</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Quando</span>
-          <p>A partir de 1960, com computador e controle numérico.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Efeito na gestão</span>
-          <p>Sistemas transacionais, ERP, informação como registro.</p>
-        </div>
-    </article></div></div>
+    <h2>Quatro revoluções industriais</h2>
+    <p class="sub">O que cada fase transferiu para a máquina e o efeito sobre a forma de administrar</p>
+    <div class="corpo"><div class="trilha" style="margin:0 0 12px">
+      <span class="barra-g"></span>
+      <div class="marcas"><span>c. 1760 a 1840</span><span>fim do século XIX</span><span>a partir de 1960</span><span>virada do século XXI</span></div>
+    </div>
+    <div class="fluxo rev" style="--n:4"><div class="etapa" style="--cor:#D4B277"><span class="n">1</span><h4>Primeira</h4><span class="rot">TECNOLOGIA</span><p>Máquina a vapor, ferrovia e tear mecânico.</p><span class="rot">PASSA PARA A MÁQUINA</span><p>A força muscular.</p><span class="rot">EFEITO NA GESTÃO</span><p>Surge a fábrica, com supervisão direta do trabalho.</p></div><div class="etapa" style="--cor:#FEC84D"><span class="n">2</span><h4>Segunda</h4><span class="rot">TECNOLOGIA</span><p>Eletricidade e linha de montagem.</p><span class="rot">PASSA PARA A MÁQUINA</span><p>O ritmo da produção em série.</p><span class="rot">EFEITO NA GESTÃO</span><p>Administração científica (Taylor, 1911) e cargo definido por tarefa.</p></div><div class="etapa" style="--cor:#0AB0AB"><span class="n">3</span><h4>Terceira</h4><span class="rot">TECNOLOGIA</span><p>Computador, semicondutor e, nos anos 1990, a internet.</p><span class="rot">PASSA PARA A MÁQUINA</span><p>O registro e o cálculo repetitivo.</p><span class="rot">EFEITO NA GESTÃO</span><p>Sistemas transacionais e de gestão integrada (ERP).</p></div><div class="etapa" style="--cor:#8D0333"><span class="n">4</span><h4>Quarta</h4><span class="rot">TECNOLOGIA</span><p>Internet móvel, sensores baratos e aprendizado de máquina.</p><span class="rot">PASSA PARA A MÁQUINA</span><p>Parte do reconhecimento de padrões e da redação.</p><span class="rot">EFEITO NA GESTÃO</span><p>Plataformas digitais e decisão apoiada em dados.</p></div></div>
+    <p class="fonte-nota">Periodização de Schwab, K. A quarta revolução industrial. São Paulo: Edipro, 2016, cap. 1. Taylor, F. W. The principles of scientific management, 1911.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 1.1 · Teoria</span>
-      <span class="pag">4 / 34</span>
+      <span class="pag">4 / 36</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="4">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 1.1 · TEORIA</span>
-    <h2>A quarta: o que Schwab diz que muda</h2>
-    <p class="sub">Três características que ele usa para separar a quarta das anteriores</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">VELOCIDADE</header>
-      <h3>A difusão deixa de ser linear</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O argumento</span>
-          <p>Tecnologias se espalham em anos, não em décadas, porque dependem de software e não de fábrica.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que verificar</span>
-          <p>Compare o tempo até 100 milhões de usuários de telefone, internet e IA generativa.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">AMPLITUDE</header>
-      <h3>Atinge todos os setores ao mesmo tempo</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O argumento</span>
-          <p>Não há setor protegido, porque o insumo afetado é a informação, presente em todos.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que verificar</span>
-          <p>Procure um setor da economia maranhense sem adoção digital relevante.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">PROFUNDIDADE</header>
-      <h3>Muda sistemas inteiros, não só ferramentas</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O argumento</span>
-          <p>Altera modelo de negócio, cadeia de fornecimento, regulação e relação de trabalho.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que verificar</span>
-          <p>Identifique o que mudou na regulação do transporte por aplicativo.</p>
-        </div>
-    </article></div></div>
+    <h2>A quarta revolução segundo Schwab</h2>
+    <p class="sub">A definição do autor e as três características que, segundo ele, separam esta fase das anteriores</p>
+    <div class="corpo"><div class="conceito">
+    <div class="def" style="border-left-color:#8D0333">
+      <span class="rot">QUARTA REVOLUÇÃO INDUSTRIAL (FOURTH INDUSTRIAL REVOLUTION)</span>
+      <p style="font-size:21px">Para Schwab (2016), é a fase iniciada na virada do século XXI em que tecnologias digitais, físicas e biológicas se combinam. O autor a separa da terceira revolução por três características, e cada uma pode ser medida.</p>
+    </div>
+    <div class="pontos cols-3">
+      <div class="pt">
+        <span class="rule" style="background:#8D0333"></span>
+        <span class="rot">Velocidade</span>
+        <p>A difusão segue ritmo exponencial, porque cada tecnologia nova usa a rede e os aparelhos que já existem. Pode ser medida em anos até a metade da população usar.</p>
+      </div>
+      <div class="pt">
+        <span class="rule" style="background:#8D0333"></span>
+        <span class="rot">Amplitude e profundidade</span>
+        <p>Várias tecnologias mudam ao mesmo tempo o produto, o processo e o modelo de negócio. Pode ser medida pelos setores com adoção registrada em pesquisa oficial.</p>
+      </div>
+      <div class="pt">
+        <span class="rule" style="background:#8D0333"></span>
+        <span class="rot">Impacto sistêmico</span>
+        <p>A mudança alcança sistemas inteiros, entre países, empresas e setores. Pode ser medido pelas regras criadas por causa da tecnologia, como a do transporte por aplicativo.</p>
+      </div></div>
+    <div class="analogia"><span class="rot">PARA FIXAR</span><p>Uma reforma troca o mobiliário da sala. Uma mudança de sistema altera a planta do prédio, a porta de entrada e quem pode usar cada andar. Schwab sustenta que a fase atual se parece com o segundo caso.</p></div>
+  </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 1.1 · Teoria</span>
-      <span class="pag">5 / 34</span>
+      <span class="pag">5 / 36</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="5">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 1.1 · TEORIA</span>
-    <h2>Onde o argumento de Schwab é frágil</h2>
-    <p class="sub">Ler um autor não é concordar com ele</p>
-    <div class="corpo"><ol class="steps cols-1">
-    <li><span class="num">1</span>
-      <div><strong>O livro é de 2016</strong><p>A quarta revolução industrial foi escrito antes dos modelos de linguagem atuais. As tecnologias que ele lista como decisivas (impressão 3D, blockchain) tiveram adoção menor que a prevista.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>A tese da ruptura é disputada</strong><p>Economistas como Robert Gordon sustentam que a produtividade agregada cresceu menos desde 2005 do que no período 1920-1970, o que contraria a ideia de mudança sem precedentes.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>O texto é de um fórum empresarial</strong><p>Schwab escreve como presidente do Fórum Econômico Mundial. O gênero é o de agenda, não o de pesquisa. Isso não invalida os dados, mas explica a ênfase.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Por que ainda serve</strong><p>O vocabulário do livro organiza o debate público e você vai encontrá-lo em relatório de consultoria, edital e plano diretor. Conhecer o argumento permite discuti-lo.</p></div>
-    </li></ol></div>
+    <h2>Velocidade de adoção da IA generativa</h2>
+    <p class="sub">Proporção de adultos que usavam cada tecnologia nos primeiros anos depois do lançamento</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.3fr;--dir:1fr;height:calc(100% - 40px)">
+      <div class="col"><svg class="fig" viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg">
+<line x1="236.0" y1="30" x2="236.0" y2="278" stroke="#bdbdbd" />
+<text x="236.0" y="296" font-size="13" fill="#6B6B6B" text-anchor="middle">0%</text>
+<line x1="401.0" y1="30" x2="401.0" y2="278" stroke="#e1e1e1" stroke-dasharray="3 3"/>
+<text x="401.0" y="296" font-size="13" fill="#6B6B6B" text-anchor="middle">25%</text>
+<line x1="566.0" y1="30" x2="566.0" y2="278" stroke="#e1e1e1" stroke-dasharray="3 3"/>
+<text x="566.0" y="296" font-size="13" fill="#6B6B6B" text-anchor="middle">50%</text>
+<text x="0" y="20" font-size="13" font-weight="700" fill="#6B6B6B" letter-spacing=".6">USO GERAL, DOIS ANOS APÓS O PRIMEIRO PRODUTO DE MASSA</text>
+<text x="224" y="60" font-size="16" fill="#1A1A1A" text-anchor="end">IA generativa</text>
+<rect x="236" y="35" width="257.4" height="40" fill="#8D0333"/>
+<text x="501.4" y="61" font-size="17" font-weight="700" fill="#1A1A1A">39%</text>
+<text x="224" y="110" font-size="16" fill="#1A1A1A" text-anchor="end">Internet</text>
+<rect x="236" y="85" width="132.0" height="40" fill="#D4B277"/>
+<text x="376.0" y="111" font-size="17" font-weight="700" fill="#1A1A1A">20%</text>
+<text x="0" y="164" font-size="13" font-weight="700" fill="#6B6B6B" letter-spacing=".6">USO NO TRABALHO</text>
+<text x="224" y="204" font-size="16" fill="#1A1A1A" text-anchor="end">IA generativa, 2º ano</text>
+<rect x="236" y="179" width="178.2" height="40" fill="#8D0333"/>
+<text x="422.2" y="205" font-size="17" font-weight="700" fill="#1A1A1A">27%</text>
+<text x="224" y="254" font-size="16" fill="#1A1A1A" text-anchor="end">Computador, 3º ano</text>
+<rect x="236" y="229" width="165.0" height="40" fill="#D4B277"/>
+<text x="409.0" y="255" font-size="17" font-weight="700" fill="#1A1A1A">25%</text>
+<text x="236" y="318" font-size="13" fill="#6B6B6B">Percentual de adultos de 18 a 64 anos, Estados Unidos</text>
+</svg></div>
+      <div class="col">
+        <div class="caixa teal"><span class="rot">NO BRASIL, 2025</span>
+          <p>32% dos usuários de internet com 10 anos ou mais usaram IA generativa, cerca de 50 milhões de pessoas.</p>
+          <p>Classe A, 69%. Classes D e E, 16%. Ensino superior, 59%. Ensino fundamental, 17%.</p></div>
+        <div class="caixa dourado"><span class="rot">COMO LER O GRÁFICO</span>
+          <p>O estudo conta o tempo desde o primeiro produto de massa de cada tecnologia. Para a IA generativa, o ponto de partida é o ChatGPT, lançado em novembro de 2022.</p>
+          <p>Com esses dados, a velocidade descrita por Schwab pode ser conferida. A desigualdade de uso no Brasil volta no ciclo 1.2.</p></div>
+      </div>
+    </div>
+    <p class="fonte-nota">Bick, A., Blandin, A. e Deming, D. J. The rapid adoption of generative AI. NBER Working Paper 32966, versão de fev. 2025. Cetic.br, TIC Domicílios 2025, divulgada em 9 dez. 2025. Consulta em 2 nov. 2026.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 1.1 · Teoria</span>
-      <span class="pag">6 / 34</span>
+      <span class="pag">6 / 36</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="6">
     <span class="barra"></span>
-    <span class="eyebrow">CICLO 1.1 · DEMONSTRAÇÃO</span>
-    <h2>Verificar uma afirmação antes de repeti-la</h2>
-    <p class="sub">A rotina que vai valer para o semestre inteiro</p>
-    <div class="corpo"><div class="prompt">
-    <span class="rot">INSTRUÇÃO DADA AO AGENTE, NO OPENCODE DESKTOP</span>
-    <p>"Schwab afirma que a quarta revolução industrial se difunde mais rápido que as anteriores. Liste três indicadores quantitativos que permitiriam testar essa afirmação, e para cada um informe a fonte primária que publica o dado e o ano da última medição. Não invente número. Se não souber a fonte, escreva NÃO SEI."</p>
-  </div>
-<ol class="steps cols-3">
+    <span class="eyebrow">CICLO 1.1 · TEORIA</span>
+    <h2>Onde o argumento de Schwab é frágil</h2>
+    <p class="sub">Quatro limites a considerar sempre que o livro for citado</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.55fr;--dir:1fr">
+      <div class="col"><ol class="steps cols-1 compacto">
     <li><span class="num">1</span>
-      <div><strong>O agente responde</strong><p>Três indicadores e três fontes.</p></div>
+      <div><strong>O livro é de 2016</strong><p>Foi escrito antes dos modelos de linguagem atuais. O apêndice lista mudanças que executivos consultados pelo Fórum esperavam até 2025. O prazo venceu e cada item pode ser conferido.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Você confere cada fonte</strong><p>Abra o site indicado. A fonte existe? O dado está lá?</p></div>
+      <div><strong>A tese da ruptura é disputada</strong><p>Gordon (2016) mostra que a produtividade nos EUA cresceu mais entre 1920 e 1970 do que nas décadas da computação, como indica o gráfico.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Você registra o resultado</strong><p>Anote o que conferiu, o que bateu e o que não bateu.</p></div>
-    </li></ol>
-<p class="nota" style="color:#8D0333">O que se avalia neste ciclo não é a resposta do agente. É a sua conferência.</p></div>
+      <div><strong>O autor fala pelo Fórum Econômico Mundial</strong><p>Schwab fundou o Fórum em 1971. O livro tem caráter de agenda para governos e empresas, sem o método declarado de uma pesquisa. Os números pedem conferência antes do uso.</p></div>
+    </li>
+    <li><span class="num">4</span>
+      <div><strong>O vocabulário circula</strong><p>Os termos do livro aparecem em relatório de consultoria, edital e plano de governo. Conhecer o argumento permite discuti-lo com dado na mão.</p></div>
+    </li></ol></div>
+      <div class="col"><svg class="fig" viewBox="0 0 440 276" xmlns="http://www.w3.org/2000/svg">
+<rect x="40" y="31.2" width="96" height="174.8" fill="#8D0333"/>
+<text x="88" y="23.2" font-size="17" font-weight="700" fill="#1A1A1A" text-anchor="middle">2,82</text>
+<text x="88" y="226" font-size="14" fill="#1A1A1A" text-anchor="middle">1920 a 1970</text>
+<rect x="176" y="65.9" width="96" height="140.1" fill="#D4B277"/>
+<text x="224" y="57.9" font-size="17" font-weight="700" fill="#1A1A1A" text-anchor="middle">2,26</text>
+<text x="224" y="226" font-size="14" fill="#1A1A1A" text-anchor="middle">1994 a 2004</text>
+<rect x="312" y="120.4" width="96" height="85.6" fill="#0AB0AB"/>
+<text x="360" y="112.4" font-size="17" font-weight="700" fill="#1A1A1A" text-anchor="middle">1,38</text>
+<text x="360" y="226" font-size="14" fill="#1A1A1A" text-anchor="middle">1970 a 1994 e</text>
+<text x="360" y="243" font-size="14" fill="#1A1A1A" text-anchor="middle">2004 a 2015</text>
+<line x1="24" y1="206" x2="430" y2="206" stroke="#9b9b9b" stroke-width="1.5"/>
+<text x="24" y="268" font-size="13" fill="#6B6B6B">Produto por hora trabalhada, EUA, % ao ano</text>
+</svg>
+        <div class="caixa vinho"><span class="rot">LEITURA DO GRÁFICO</span><p>A média do período da computação e da internet fica abaixo da metade do ritmo de 1920 a 1970. O único intervalo recente próximo daquele ritmo durou dez anos.</p></div>
+      </div>
+    </div>
+    <p class="fonte-nota">Gordon, R. J. The rise and fall of American growth. Princeton University Press, 2016. Valores do autor em Finance &amp; Development, FMI, jun. 2016.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 1.1 · Demonstração</span>
-      <span class="pag">7 / 34</span>
+      <span class="centro">Ciclo 1.1 · Teoria</span>
+      <span class="pag">7 / 36</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="7">
     <span class="barra"></span>
+    <span class="eyebrow">CICLO 1.1 · DEMONSTRAÇÃO</span>
+    <h2>Verificar uma afirmação antes de repeti-la</h2>
+    <p class="sub">Resultado ilustrativo da conferência de três fontes propostas pelo assistente</p>
+    <div class="corpo"><div class="prompt compacto">
+    <span class="rot">INSTRUÇÃO DADA AO ASSISTENTE DE IA, NA PROJEÇÃO</span>
+    <p>"Schwab afirma que a quarta revolução industrial se difunde mais rápido que as anteriores. Liste três indicadores quantitativos que permitiriam testar essa afirmação e, para cada um, informe a fonte primária que publica o dado e o ano da última medição. Não invente número. Se não souber a fonte, escreva NÃO SEI."</p>
+  </div>
+  <table class="tab apertada">
+    <tr><th style="width:30%">INDICADOR PROPOSTO</th><th style="width:34%">FONTE INDICADA PELO ASSISTENTE</th><th style="width:36%">RESULTADO DA CONFERÊNCIA</th></tr>
+    <tr><td>Usuários de IA generativa no Brasil</td><td>Cetic.br, TIC Domicílios 2025</td><td><span class="chip ok">EXISTE E TRAZ O DADO</span> 32% dos usuários de internet</td></tr>
+    <tr><td>Empresas que usam IA, por porte</td><td>IBGE, PNAD Contínua</td><td><span class="chip med">EXISTE E NÃO TRAZ O DADO</span><br>A PNAD pesquisa domicílios. O dado por empresa está na TIC Empresas.</td></tr>
+    <tr><td>Anos até 100 milhões de usuários</td><td>Relatório citado com título e tabela</td><td><span class="chip ruim">NÃO ENCONTRADA</span><br>Título ausente no site do órgão indicado.</td></tr>
+  </table>
+  <div class="def" style="margin-top:12px"><span class="rot">Confabulação (confabulation)</span>
+    <p>Resposta plausível sem base no que o modelo recebeu ou encontrou, como na terceira linha. É a falha que esta conferência procura.</p></div></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 1.1 · Demonstração</span>
+      <span class="pag">8 / 36</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="8">
+    <span class="barra"></span>
     <span class="eyebrow">CICLO 1.1 · PRÁTICA</span>
     <h2>Sua vez: escolha uma afirmação e teste</h2>
-    <p class="sub">Individual, no seu computador</p>
-    <div class="corpo"><ol class="steps cols-1">
+    <p class="sub">Individual, no navegador</p>
+    <div class="corpo"><ol class="steps cols-1 ">
     <li><span class="num">1</span>
-      <div><strong>Escolha uma afirmação sobre transformação digital</strong><p>Pode ser de Schwab, de uma notícia recente ou de um relatório de consultoria. Copie a frase exata.</p></div>
+      <div><strong>Escolha uma afirmação sobre transformação digital</strong><p>Pode ser de Schwab, de uma notícia ou de um relatório de consultoria. Copie a frase exata e anote de onde ela veio.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Peça ao agente os indicadores e as fontes</strong><p>Use a instrução do slide anterior, trocando a afirmação.</p></div>
+      <div><strong>Peça ao assistente de IA os indicadores e as fontes</strong><p>Use a instrução do slide anterior, com a sua afirmação no lugar. Registre o serviço e o modelo que você usou.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Confira as fontes uma a uma</strong><p>Abra cada link. Marque: existe, não existe, existe mas não diz isso.</p></div>
+      <div><strong>Abra cada fonte e classifique</strong><p>Use as três marcas da demonstração. Existe e traz o dado, existe e não traz o dado, ou não encontrada.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Escreva sua conclusão em três linhas</strong><p>A afirmação se sustenta, se sustenta em parte ou não se sustenta. E por quê.</p></div>
+      <div><strong>Escreva a sua conclusão em até três linhas</strong><p>A afirmação se sustenta, se sustenta em parte ou não se sustenta. Diga por quê, citando a fonte que você abriu.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 1.1 · Prática</span>
-      <span class="pag">8 / 34</span>
+      <span class="pag">9 / 36</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="8">
+<section class="slide conteudo" data-i="9">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 1.1 · ENTREGA</span>
     <h2>Ficha de verificação</h2>
@@ -417,219 +560,239 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>A afirmação testada, copiada na íntegra, com a origem.</li><li>A instrução que você deu ao agente, copiada na íntegra.</li><li>Os indicadores e fontes que o agente devolveu.</li><li>O resultado da conferência de cada fonte.</li><li>Sua conclusão em até três linhas.</li></ul>
+      <ul><li>A afirmação testada, copiada na íntegra, com a origem.</li><li>A instrução dada ao assistente, copiada na íntegra, com o serviço e o modelo.</li><li>Os indicadores e as fontes que o assistente devolveu.</li><li>A marca de cada fonte depois da conferência.</li><li>A sua conclusão em até três linhas.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>Pasta do projeto, arquivo entregas/modulo1-ciclo1-verificacao.md<br><br>A pasta é criada no módulo 2. Hoje, use uma pasta local com esse nome.</p>
+        <p>Arquivo <span class="mono">modulo1-ciclo1-verificacao.md</span>.<br><br>A pasta do projeto é criada no encontro 3, e o arquivo vai para <span class="mono">entregas/</span>. Hoje, guarde numa pasta local.</p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Uma fonte inventada que passou sem detecção zera o item. Uma fonte inventada que você identificou vale nota cheia.</p>
+        <p>Fonte inventada que passou sem detecção zera o item. Fonte inventada que você identificou e registrou vale nota cheia.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 1.1 · Entrega</span>
-      <span class="pag">9 / 34</span>
+      <span class="pag">10 / 36</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="9">
+<section class="slide divisor" data-i="10">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">1.2</span></div>
       <div class="dir">
         <h2>Sociedade informacional e a empresa brasileira</h2>
         <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">10 / 34</span>
+      <span class="pag">11 / 36</span>
     </section>
-<section class="slide conteudo" data-i="10">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 1.2 · TEORIA</span>
-    <h2>O que muda quando a informação vira insumo</h2>
-    <p class="sub">Da empresa que produz coisas à empresa que coordena fluxos</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">PRODUTO</header>
-      <h3>O que a empresa vende deixa de ser só o bem</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Antes</span>
-          <p>A montadora vendia o carro e a garantia terminava a relação.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Agora</span>
-          <p>Vende assinatura, atualização de software e serviço conectado ao uso.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">ESTRUTURA</header>
-      <h3>A coordenação substitui parte da hierarquia</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Antes</span>
-          <p>Camadas de supervisão para transmitir e conferir informação.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Agora</span>
-          <p>O sistema transmite e confere. Sobram menos camadas e mais exigência de análise.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">FRONTEIRA</header>
-      <h3>Onde a empresa termina fica menos nítido</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Antes</span>
-          <p>Empregado dentro, fornecedor fora, contrato definindo os dois.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Agora</span>
-          <p>Plataforma, trabalho intermediado por aplicativo e disputa sobre o vínculo.</p>
-        </div>
-    </article></div></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 1.2 · Teoria</span>
-      <span class="pag">11 / 34</span>
-    </footer>
-  </section>
 <section class="slide conteudo" data-i="11">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 1.2 · TEORIA</span>
-    <h2>Economia de plataforma: o que a plataforma faz</h2>
-    <p class="sub">A intermediação como negócio, e a assimetria que ela cria</p>
-    <div class="corpo"><ol class="steps cols-1">
-    <li><span class="num">1</span>
-      <div><strong>Reduz o custo de encontrar a contraparte</strong><p>Motorista e passageiro, hóspede e anfitrião, comprador e vendedor. O ganho é real e explica a adoção rápida.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Concentra o dado da transação</strong><p>A plataforma sabe preço, tempo, rota e avaliação de todas as partes. Cada participante sabe apenas o que lhe diz respeito.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Define a regra sem negociá-la</strong><p>Comissão, ranqueamento e critério de desligamento são definidos por quem opera o sistema e alterados unilateralmente.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>A disputa regulatória decorre disso</strong><p>Vínculo de trabalho, tributação e concorrência entram em litígio porque a forma jurídica anterior não descreve o arranjo.</p></div>
-    </li></ol></div>
+    <h2>O que muda quando a informação vira insumo</h2>
+    <p class="sub">O conceito de Castells e três mudanças visíveis na empresa</p>
+    <div class="corpo"><div class="conceito">
+    <div class="def" style="border-left-color:#0AB0AB">
+      <span class="rot">SOCIEDADE INFORMACIONAL (INFORMATIONAL SOCIETY)</span>
+      <p style="font-size:21px">Termo de Castells (1996) para a organização social em que gerar, processar e transmitir informação são as principais fontes de produtividade e de poder. O autor o distingue de sociedade da informação, expressão que indica apenas que a informação circula muito.</p>
+    </div>
+    <div class="pontos cols-3">
+      <div class="pt">
+        <span class="rule" style="background:#0AB0AB"></span>
+        <span class="rot">Produto</span>
+        <p>A montadora vendia o carro, e a garantia encerrava a relação. Hoje vende também assinatura, atualização de software e serviço ligado ao uso do veículo.</p>
+      </div>
+      <div class="pt">
+        <span class="rule" style="background:#0AB0AB"></span>
+        <span class="rot">Estrutura</span>
+        <p>Camadas de supervisão existiam para transmitir e conferir informação. Quando o sistema faz isso, sobram menos camadas e cresce a exigência de análise.</p>
+      </div>
+      <div class="pt">
+        <span class="rule" style="background:#0AB0AB"></span>
+        <span class="rot">Fronteira</span>
+        <p>Empregado dentro, fornecedor fora e um contrato para cada um. A plataforma intermedeia trabalho sem contrato de emprego, e o vínculo passa a ser disputado.</p>
+      </div></div>
+    <div class="analogia"><span class="rot">PARA FIXAR</span><p>Numa farmácia de bairro, o estoque é decidido olhando a prateleira. Numa rede com aplicativo, o registro das compras decide o que vai para a prateleira, o preço em cada loja e a promoção enviada ao celular do cliente.</p></div>
+  </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 1.2 · Teoria</span>
-      <span class="pag">12 / 34</span>
+      <span class="pag">12 / 36</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="12">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 1.2 · TEORIA</span>
-    <h2>O recorte brasileiro</h2>
-    <p class="sub">Adoção desigual, e por quê</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">ACESSO</header>
-      <h3>Conectividade não é uniforme</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O dado a buscar</span>
-          <p>Pesquisa TIC Domicílios, do Cetic.br, mede acesso por região, renda e tipo de conexão.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Por que importa</span>
-          <p>Um serviço digital exclui quem não tem conexão estável, e isso tem geografia.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">PORTE</header>
-      <h3>A empresa pequena adota menos e depois</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O dado a buscar</span>
-          <p>Pesquisa TIC Empresas mede uso de sistemas de gestão por faixa de pessoal ocupado.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Por que importa</span>
-          <p>A maior parte do emprego formal no Maranhão está em empresas de pequeno porte.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">SETOR</header>
-      <h3>Serviço financeiro adota; construção, menos</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O dado a buscar</span>
-          <p>Compare dois setores na mesma fonte, no mesmo ano.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Por que importa</span>
-          <p>A média nacional esconde diferença setorial de mais de uma ordem de grandeza.</p>
-        </div>
-    </article></div></div>
+    <h2>Plataforma e assimetria de informação</h2>
+    <p class="sub">A plataforma liga dois grupos e guarda o registro de todas as transações</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.1fr;--dir:1fr;height:calc(100% - 34px)">
+      <div class="col"><svg class="fig" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="sp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8D0333"/></marker></defs>
+<rect x="0" y="40" width="160" height="96" fill="#F5F5F5" stroke="#d6d6d6"/>
+<rect x="0" y="40" width="160" height="6" fill="#D4B277"/>
+<text x="80" y="82" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="middle">Motoristas</text>
+<text x="80" y="106" font-size="14" fill="#6B6B6B" text-anchor="middle">lado da oferta</text>
+<rect x="440" y="40" width="160" height="96" fill="#F5F5F5" stroke="#d6d6d6"/>
+<rect x="440" y="40" width="160" height="6" fill="#D4B277"/>
+<text x="520" y="82" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="middle">Passageiros</text>
+<text x="520" y="106" font-size="14" fill="#6B6B6B" text-anchor="middle">lado da demanda</text>
+<rect x="210" y="28" width="180" height="120" fill="#8D0333"/>
+<text x="300" y="80" font-size="19" font-weight="700" fill="#ffffff" text-anchor="middle">Plataforma</text>
+<text x="300" y="104" font-size="14" fill="#f1d9e2" text-anchor="middle">liga os dois lados</text>
+<text x="300" y="122" font-size="14" fill="#f1d9e2" text-anchor="middle">e cobra comissão</text>
+<line x1="162" y1="72" x2="206" y2="72" stroke="#8D0333" stroke-width="2.5" marker-end="url(#sp)"/>
+<line x1="206" y1="112" x2="162" y2="112" stroke="#8D0333" stroke-width="2.5" marker-end="url(#sp)"/>
+<line x1="438" y1="72" x2="394" y2="72" stroke="#8D0333" stroke-width="2.5" marker-end="url(#sp)"/>
+<line x1="394" y1="112" x2="438" y2="112" stroke="#8D0333" stroke-width="2.5" marker-end="url(#sp)"/>
+<path d="M190,200 v62 a110,13 0 0 0 220,0 v-62" fill="#FAF7F8" stroke="#8D0333" stroke-width="2"/>
+<ellipse cx="300" cy="200" rx="110" ry="13" fill="#F2CDD8" stroke="#8D0333" stroke-width="2"/>
+<line x1="300" y1="150" x2="300" y2="184" stroke="#8D0333" stroke-width="2.5" marker-end="url(#sp)"/>
+<text x="300" y="232" font-size="13" font-weight="700" fill="#1A1A1A" text-anchor="middle">Dado de todas as transações</text>
+<text x="300" y="252" font-size="13.5" fill="#333333" text-anchor="middle">preço, rota, tempo, avaliação</text>
+<text x="0" y="186" font-size="14" font-weight="400" fill="#333333" text-anchor="start"><tspan x="0" dy="0">Cada motorista vê só</tspan><tspan x="0" dy="18.2">as próprias</tspan><tspan x="0" dy="18.2">corridas.</tspan></text>
+<text x="440" y="186" font-size="14" font-weight="400" fill="#333333" text-anchor="start"><tspan x="440" dy="0">Cada passageiro vê</tspan><tspan x="440" dy="18.2">só o próprio pedido.</tspan></text>
+<text x="300" y="290" font-size="13.5" fill="#6B6B6B" text-anchor="middle">Comissão, ranqueamento e desligamento são definidos pela plataforma</text>
+</svg>
+        <div class="def"><span class="rot">Mercado de dois lados (two-sided market)</span>
+          <p>Um intermediário atende dois grupos que precisam um do outro. O valor para cada lado cresce com o tamanho do outro (efeito de rede).</p></div>
+      </div>
+      <div class="col">
+        <table class="tab apertada">
+          <tr><th>TRABALHO NO SETOR PRIVADO, 2024</th><th>PLATAFORMA</th><th>DEMAIS</th></tr>
+          <tr><td>Pessoas ocupadas</td><td>1,7 milhão<span class="s">1,9% do total</span></td><td></td></tr>
+          <tr><td>Contribuem para a previdência</td><td>35,9%</td><td>61,9%</td></tr>
+          <tr><td>Horas trabalhadas por semana</td><td>44,8</td><td>39,3</td></tr>
+          <tr><td>Rendimento por hora</td><td>R$ 15,40</td><td>R$ 16,80</td></tr>
+        </table>
+        <div class="caixa vinho"><span class="rot">A DISPUTA REGULATÓRIA</span>
+          <p>A Lei 13.640/2018 autoriza os municípios a regulamentar o transporte por aplicativo. O vínculo de emprego está em julgamento no STF (Tema 1291), sem decisão final localizada até 2 nov. 2026.</p></div>
+      </div>
+    </div>
+    <p class="fonte-nota">IBGE, PNAD Contínua, trabalho por meio de plataformas digitais 2024, divulgada em 17 out. 2025. Rochet e Tirole (2003). Consulta em 2 nov. 2026.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 1.2 · Teoria</span>
-      <span class="pag">13 / 34</span>
+      <span class="pag">13 / 36</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="13">
     <span class="barra"></span>
-    <span class="eyebrow">CICLO 1.2 · DEMONSTRAÇÃO</span>
-    <h2>Comparar dois setores com fonte declarada</h2>
-    <p class="sub">A instrução pede a fonte antes de pedir o número</p>
-    <div class="corpo"><div class="prompt">
-    <span class="rot">INSTRUÇÃO DADA AO AGENTE</span>
-    <p>"Quero comparar a adoção de tecnologia digital em dois setores da economia brasileira. Antes de qualquer número, liste as fontes públicas brasileiras que publicam esse tipo de dado, com o nome do órgão, o nome da pesquisa e o endereço. Só depois que eu escolher a fonte, apresente os dados. Se um dado não estiver na fonte que eu escolher, diga que não está."</p>
-  </div>
-<ol class="steps cols-2">
-    <li><span class="num">1</span>
-      <div><strong>Por que pedir a fonte primeiro</strong><p>Invertendo a ordem, o modelo produz o número e depois procura justificativa. A fonte vira decoração.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Por que autorizar o NÃO SEI</strong><p>Sem essa saída explícita, o modelo preenche a lacuna com algo plausível. A instrução precisa dar permissão de não responder.</p></div>
-    </li></ol></div>
+    <span class="eyebrow">CICLO 1.2 · TEORIA</span>
+    <h2>O recorte brasileiro: acesso, porte e setor</h2>
+    <p class="sub">Empresas que usaram inteligência artificial em 2025, por porte e por setor</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.45fr;--dir:1fr;height:calc(100% - 34px)">
+      <div class="col"><svg class="fig" viewBox="0 0 650 412" xmlns="http://www.w3.org/2000/svg">
+<text x="0" y="14" font-size="12.5" font-weight="700" fill="#6B6B6B" letter-spacing=".6">TOTAL</text>
+<text x="276" y="35" font-size="14" fill="#1A1A1A" text-anchor="end">Brasil, TIC Empresas</text>
+<rect x="286" y="22" width="102.0" height="18" fill="#8D0333"/>
+<text x="394.0" y="36" font-size="14" font-weight="700" fill="#1A1A1A">17%</text>
+<text x="276" y="58" font-size="14" fill="#1A1A1A" text-anchor="end">União Europeia, Eurostat</text>
+<rect x="286" y="45" width="120.0" height="18" fill="#9b9b9b"/>
+<text x="412.0" y="59" font-size="14" font-weight="700" fill="#1A1A1A">20%</text>
+<text x="0" y="86" font-size="12.5" font-weight="700" fill="#6B6B6B" letter-spacing=".6">POR PORTE (PESSOAS OCUPADAS)</text>
+<text x="276" y="107" font-size="14" fill="#1A1A1A" text-anchor="end">10 a 49</text>
+<rect x="286" y="94" width="90.0" height="18" fill="#D4B277"/>
+<text x="382.0" y="108" font-size="14" font-weight="700" fill="#1A1A1A">15%</text>
+<text x="276" y="130" font-size="14" fill="#1A1A1A" text-anchor="end">50 a 249</text>
+<rect x="286" y="117" width="192.0" height="18" fill="#D4B277"/>
+<text x="484.0" y="131" font-size="14" font-weight="700" fill="#1A1A1A">32%</text>
+<text x="276" y="153" font-size="14" fill="#1A1A1A" text-anchor="end">250 ou mais</text>
+<rect x="286" y="140" width="300.0" height="18" fill="#D4B277"/>
+<text x="592.0" y="154" font-size="14" font-weight="700" fill="#1A1A1A">50%</text>
+<text x="0" y="181" font-size="12.5" font-weight="700" fill="#6B6B6B" letter-spacing=".6">POR SETOR</text>
+<text x="276" y="202" font-size="14" fill="#1A1A1A" text-anchor="end">Informação e comunicação</text>
+<rect x="286" y="189" width="294.0" height="18" fill="#0AB0AB"/>
+<text x="586.0" y="203" font-size="14" font-weight="700" fill="#1A1A1A">49%</text>
+<text x="276" y="225" font-size="14" fill="#1A1A1A" text-anchor="end">Serviços profissionais e adm.</text>
+<rect x="286" y="212" width="144.0" height="18" fill="#0AB0AB"/>
+<text x="436.0" y="226" font-size="14" font-weight="700" fill="#1A1A1A">24%</text>
+<text x="276" y="248" font-size="14" fill="#1A1A1A" text-anchor="end">Artes, cultura e outros serviços</text>
+<rect x="286" y="235" width="114.0" height="18" fill="#0AB0AB"/>
+<text x="406.0" y="249" font-size="14" font-weight="700" fill="#1A1A1A">19%</text>
+<text x="276" y="271" font-size="14" fill="#1A1A1A" text-anchor="end">Comércio</text>
+<rect x="286" y="258" width="102.0" height="18" fill="#0AB0AB"/>
+<text x="394.0" y="272" font-size="14" font-weight="700" fill="#1A1A1A">17%</text>
+<text x="276" y="294" font-size="14" fill="#1A1A1A" text-anchor="end">Transporte e armazenagem</text>
+<rect x="286" y="281" width="96.0" height="18" fill="#0AB0AB"/>
+<text x="388.0" y="295" font-size="14" font-weight="700" fill="#1A1A1A">16%</text>
+<text x="276" y="317" font-size="14" fill="#1A1A1A" text-anchor="end">Indústria de transformação</text>
+<rect x="286" y="304" width="84.0" height="18" fill="#0AB0AB"/>
+<text x="376.0" y="318" font-size="14" font-weight="700" fill="#1A1A1A">14%</text>
+<text x="276" y="340" font-size="14" fill="#1A1A1A" text-anchor="end">Construção</text>
+<rect x="286" y="327" width="84.0" height="18" fill="#0AB0AB"/>
+<text x="376.0" y="341" font-size="14" font-weight="700" fill="#1A1A1A">14%</text>
+<text x="276" y="363" font-size="14" fill="#1A1A1A" text-anchor="end">Alojamento e alimentação</text>
+<rect x="286" y="350" width="60.0" height="18" fill="#0AB0AB"/>
+<text x="352.0" y="364" font-size="14" font-weight="700" fill="#1A1A1A">10%</text>
+</svg></div>
+      <div class="col">
+        <div class="caixa teal"><span class="rot">ACESSO, 2025</span>
+          <p>95,0% dos domicílios têm internet. O Nordeste tem a menor proporção entre as regiões (92,7%), e a área rural fica em 88,0%.</p></div>
+        <div class="caixa dourado"><span class="rot">INDÚSTRIA DE MAIOR PORTE</span>
+          <p>Nas indústrias com 100 ou mais pessoas ocupadas, o uso de IA passou de 16,9% em 2022 para 41,9% em 2024. Entre as que usam, 87,9% aplicam IA em funções administrativas.</p></div>
+        <div class="caixa vinho"><span class="rot">O QUE A MÉDIA ESCONDE</span>
+          <p>A média de 17% junta setores que vão de 10% a 49% e portes que vão de 15% a 50%. A diferença é de cerca de cinco vezes nos dois recortes.</p></div>
+      </div>
+    </div>
+    <p class="fonte-nota">Gráfico: Cetic.br, TIC Empresas 2025, indicador H9, empresas com 10 ou mais pessoas ocupadas, divulgada em 15 jun. 2026. UE: Eurostat, dez. 2025. IBGE, PNAD Contínua TIC 2025 (jul. 2026) e Pintec Semestral 2024 (set. 2025). Consulta em 2 nov. 2026.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 1.2 · Demonstração</span>
-      <span class="pag">14 / 34</span>
+      <span class="centro">Ciclo 1.2 · Teoria</span>
+      <span class="pag">14 / 36</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="14">
     <span class="barra"></span>
+    <span class="eyebrow">CICLO 1.2 · DEMONSTRAÇÃO</span>
+    <h2>Comparar dois setores com fonte declarada</h2>
+    <p class="sub">Três fontes públicas que o assistente deveria listar, e o motivo da ordem do pedido</p>
+    <div class="corpo"><div class="prompt compacto">
+    <span class="rot">INSTRUÇÃO DADA AO ASSISTENTE DE IA</span>
+    <p>"Quero comparar a adoção de tecnologia digital em dois setores da economia brasileira. Antes de qualquer número, liste as fontes públicas brasileiras que publicam esse dado por setor, com o órgão, o nome da pesquisa e o endereço. Só depois que eu escolher a fonte, apresente os dados. Se um dado não estiver na fonte escolhida, diga que não está."</p>
+  </div>
+  <table class="tab apertada">
+    <tr><th style="width:12%">ÓRGÃO</th><th style="width:26%">PESQUISA</th><th style="width:28%">UNIDADE PESQUISADA</th><th style="width:12%">ÚLTIMO ANO</th><th style="width:22%">RECORTES</th></tr>
+    <tr><td><strong>Cetic.br</strong></td><td>TIC Empresas</td><td>empresa com 10 ou mais pessoas ocupadas</td><td>2025</td><td>porte, região, setor</td></tr>
+    <tr><td><strong>IBGE</strong></td><td>Pintec Semestral</td><td>indústria com 100 ou mais pessoas ocupadas</td><td>2024</td><td>porte, tecnologia</td></tr>
+    <tr><td><strong>IBGE</strong></td><td>PNAD Contínua, módulo TIC</td><td>domicílio e pessoa</td><td>2025</td><td>região, área urbana e rural</td></tr>
+  </table>
+  <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:14px">
+    <div class="caixa vinho"><span class="rot">POR QUE A FONTE VEM PRIMEIRO</span><p>Na ordem inversa, o modelo escreve o número e depois procura uma fonte que o justifique. Com a fonte escolhida antes, o número pode ser conferido na tabela.</p></div>
+    <div class="caixa dourado"><span class="rot">POR QUE AUTORIZAR O NÃO SEI</span><p>Sem uma saída explícita, o modelo preenche a lacuna com um valor plausível (confabulação). A instrução precisa permitir que ele declare a falta do dado.</p></div>
+  </div></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 1.2 · Demonstração</span>
+      <span class="pag">15 / 36</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="15">
+    <span class="barra"></span>
     <span class="eyebrow">CICLO 1.2 · PRÁTICA</span>
     <h2>Sua vez: dois setores, uma fonte</h2>
-    <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1">
+    <p class="sub">Individual, no navegador</p>
+    <div class="corpo"><ol class="steps cols-1 ">
     <li><span class="num">1</span>
-      <div><strong>Escolha dois setores contrastantes</strong><p>Um em que você imagina adoção alta e outro em que imagina adoção baixa. Registre sua expectativa antes de olhar o dado.</p></div>
+      <div><strong>Escolha dois setores e registre a expectativa</strong><p>Um em que você espera adoção alta e outro em que espera adoção baixa. Escreva o percentual que imagina antes de abrir qualquer fonte.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Peça as fontes ao agente e escolha uma</strong><p>Abra a fonte escolhida no navegador e confirme que ela existe e cobre os dois setores.</p></div>
+      <div><strong>Peça as fontes ao assistente e escolha uma</strong><p>Abra a fonte no navegador e confirme que ela cobre os dois setores no mesmo ano.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Extraia os números da própria fonte</strong><p>Não do agente. Da página ou da tabela que você abriu.</p></div>
+      <div><strong>Copie os números da própria fonte</strong><p>Da tabela que você abriu, com o título ou código da tabela. O número escrito na resposta do assistente fica fora da ficha.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Compare com sua expectativa inicial</strong><p>Onde você errou? Essa é a parte que vale nota.</p></div>
+      <div><strong>Compare com a sua expectativa</strong><p>Anote a diferença em pontos percentuais e o que explicaria o seu erro de estimativa.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 1.2 · Prática</span>
-      <span class="pag">15 / 34</span>
+      <span class="pag">16 / 36</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="15">
+<section class="slide conteudo" data-i="16">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 1.2 · ENTREGA</span>
     <h2>Comparação setorial</h2>
@@ -637,186 +800,228 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>Os dois setores escolhidos e sua expectativa registrada antes da consulta.</li><li>A fonte usada: órgão, pesquisa, ano e endereço.</li><li>Os números extraídos, com a indicação da tabela ou página.</li><li>A diferença entre a expectativa e o dado, comentada em até cinco linhas.</li></ul>
+      <ul><li>Os dois setores escolhidos e a expectativa registrada antes da consulta.</li><li>A fonte usada, com órgão, pesquisa, ano e endereço.</li><li>Os números copiados, com o título ou código da tabela.</li><li>A diferença entre a expectativa e o dado, comentada em até cinco linhas.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>entregas/modulo1-ciclo2-comparacao.md</p>
+        <p>Arquivo <span class="mono">modulo1-ciclo2-comparacao.md</span>, que vai para <span class="mono">entregas/</span> no encontro 3.</p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Número sem indicação de onde foi extraído não conta. Expectativa registrada só depois da consulta é fácil de reconhecer.</p>
+        <p>Número sem indicação da tabela de origem não conta. A expectativa precisa ter sido escrita antes da consulta.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 1.2 · Entrega</span>
-      <span class="pag">16 / 34</span>
+      <span class="pag">17 / 36</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="16">
+<section class="slide divisor" data-i="17">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">1.3</span></div>
       <div class="dir">
-        <h2>Automação do trabalho: tarefa, não ocupação</h2>
+        <h2>Automação do trabalho medida por tarefa</h2>
         <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">17 / 34</span>
+      <span class="pag">18 / 36</span>
     </section>
-<section class="slide conteudo" data-i="17">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 1.3 · TEORIA</span>
-    <h2>A distinção que organiza o debate</h2>
-    <p class="sub">Ocupação é um conjunto de tarefas, e as tarefas não têm o mesmo destino</p>
-    <div class="corpo"><ol class="steps cols-1">
-    <li><span class="num">1</span>
-      <div><strong>A previsão por ocupação exagera</strong><p>O estudo de Frey e Osborne, de 2013, estimou que 47% dos empregos nos Estados Unidos estariam em risco alto. A unidade de análise era a ocupação inteira.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>A correção veio pela tarefa</strong><p>Trabalhos posteriores refizeram a conta por tarefa e chegaram a proporções bem menores de ocupações inteiramente automatizáveis. Muda o método, muda o número.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>O que isso significa na prática</strong><p>Poucas ocupações desaparecem. Muitas mudam de composição: algumas tarefas somem, outras crescem, e o cargo passa a exigir competências diferentes.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Consequência para o administrador</strong><p>A pergunta útil não é se a sua profissão vai acabar. É quais das suas tarefas mudam de dono, e o que sobra para você fazer.</p></div>
-    </li></ol></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 1.3 · Teoria</span>
-      <span class="pag">18 / 34</span>
-    </footer>
-  </section>
 <section class="slide conteudo" data-i="18">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 1.3 · TEORIA</span>
-    <h2>Três destinos possíveis para uma tarefa</h2>
-    <p class="sub">A classificação que você vai usar no mapa do ciclo 1.4</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">AUTOMATIZAR</header>
-      <h3>A máquina faz e você confere por amostra</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Quando cabe</span>
-          <p>Tarefa repetitiva, com regra estável, dado disponível e custo baixo do erro individual.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Exemplo</span>
-          <p>Padronizar o formato de mil linhas de endereço numa planilha de cadastro.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">AUMENTAR</header>
-      <h3>A máquina faz o rascunho e você decide</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Quando cabe</span>
-          <p>Tarefa que exige julgamento, mas cuja preparação consome a maior parte do tempo.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Exemplo</span>
-          <p>Redigir a primeira versão de um parecer que você vai revisar, corrigir e assinar.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">MANTER HUMANA</header>
-      <h3>A máquina fica fora</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Quando cabe</span>
-          <p>Erro caro e irreversível, responsabilidade legal pessoal, ou relação que depende de presença.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Exemplo</span>
-          <p>Comunicar um desligamento, negociar um acordo, decidir sobre denúncia de assédio.</p>
-        </div>
-    </article></div></div>
+    <h2>Tarefa e ocupação</h2>
+    <p class="sub">A unidade de análise muda o tamanho da previsão</p>
+    <div class="corpo"><div class="conceito">
+    <div class="def" style="border-left-color:#FEC84D">
+      <span class="rot">TAREFA (TASK) E OCUPAÇÃO (OCCUPATION)</span>
+      <p style="font-size:21px">Tarefa é uma unidade de trabalho com verbo e objeto, como conferir as notas fiscais do mês. Ocupação é o conjunto de tarefas que define um cargo. A CBO descreve a ocupação 4110-10, assistente administrativo, por uma lista de atividades.</p>
+    </div>
+    <div class="pontos cols-3">
+      <div class="pt">
+        <span class="rule" style="background:#FEC84D"></span>
+        <span class="rot">Estimativa por ocupação</span>
+        <p>Frey e Osborne (2013) classificaram ocupações inteiras e estimaram 47% do emprego dos EUA em risco alto de automação.</p>
+      </div>
+      <div class="pt">
+        <span class="rule" style="background:#FEC84D"></span>
+        <span class="rot">Estimativa por tarefa</span>
+        <p>Arntz, Gregory e Zierahn (2016), em estudo da OCDE, refizeram a conta pelas tarefas de cada trabalhador e chegaram a 9% dos empregos.</p>
+      </div>
+      <div class="pt">
+        <span class="rule" style="background:#FEC84D"></span>
+        <span class="rot">Mudança na composição</span>
+        <p>Nedelkoska e Quintini (2018), também pela OCDE, estimaram 14% dos empregos em risco alto e 32% com mudança grande nas tarefas.</p>
+      </div></div>
+    <div class="analogia"><span class="rot">PARA FIXAR</span><p>Uma receita tem dez passos e a batedeira assume dois deles. O bolo continua dependendo de quem escolhe os ingredientes, mede e controla o forno. Contar a receita inteira como automatizada exagera a mudança.</p></div>
+  </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 1.3 · Teoria</span>
-      <span class="pag">19 / 34</span>
+      <span class="pag">19 / 36</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="19">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 1.3 · TEORIA</span>
-    <h2>Quatro critérios para classificar</h2>
-    <p class="sub">Aplicados a cada tarefa, não ao cargo</p>
-    <div class="corpo"><ol class="steps cols-1">
-    <li><span class="num">1</span>
-      <div><strong>Repetição</strong><p>Com que frequência a tarefa se repete? Uma vez por ano não compensa automatizar, ainda que seja tecnicamente possível.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Estabilidade da regra</strong><p>A tarefa segue um critério que você conseguiria escrever em cinco linhas? Se depende de contexto que muda a cada caso, a regra não é estável.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Disponibilidade do dado</strong><p>A informação necessária já existe em formato legível, ou está em papel, em e-mail e na cabeça de alguém?</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Custo do erro</strong><p>O que acontece se sair errado e ninguém perceber? Se a resposta envolve dinheiro, processo ou pessoa, o erro é caro.</p></div>
-    </li></ol></div>
+    <h2>Quanto do trabalho a IA generativa alcança</h2>
+    <p class="sub">Estimativas por tarefa publicadas entre 2024 e 2025, e o que cada uma mede</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:23%">ESTUDO</th><th style="width:15%">RECORTE</th><th style="width:28%">O QUE MEDE</th><th style="width:34%">RESULTADO</th></tr>
+      <tr><td><strong>Eloundou et al. (2024)</strong><span class="s">Science</span></td><td>EUA</td>
+          <td>Parcela das tarefas de cada ocupação cujo tempo um modelo de linguagem reduz à metade ou menos, com a mesma qualidade</td>
+          <td>Cerca de 80% dos trabalhadores têm ao menos 10% das tarefas expostas, e 19% têm metade ou mais.</td></tr>
+      <tr><td><strong>OIT e NASK (2025)</strong><span class="s">índice global refinado</span></td><td>Mundo</td>
+          <td>Exposição das tarefas de cada ocupação, em quatro graus</td>
+          <td>25% do emprego em ocupações expostas, 3,3% no grau mais alto. Apoio administrativo é o grupo mais exposto. Nos países de renda alta, 34%.</td></tr>
+      <tr><td><strong>Gmyrek, Winkler e Garganta (2024)</strong><span class="s">OIT e Banco Mundial</span></td><td>América Latina e Caribe</td>
+          <td>Exposição e acesso a tecnologia digital no trabalho</td>
+          <td>26% a 38% do emprego exposto. De 2% a 5% com risco de automação e de 8% a 14% com ganho provável de produtividade.</td></tr>
+      <tr><td><strong>Brynjolfsson, Li e Raymond (2025)</strong><span class="s">Quarterly Journal of Economics</span></td><td>Atendentes de suporte</td>
+          <td>Efeito de um assistente de IA sobre a produção de cada atendente</td>
+          <td>14% mais atendimentos resolvidos por hora. Entre os novatos, 34%.</td></tr>
+    </table>
+    <div class="caixa vinho" style="margin-top:12px"><span class="rot">EXPOSIÇÃO E SUBSTITUIÇÃO</span>
+      <p>Exposição indica que um modelo consegue fazer ou acelerar a tarefa. A substituição depende ainda de custo, de regra, de responsabilidade legal e de quem confere o resultado. Por isso os estudos da OIT preveem mais transformação de cargos do que eliminação.</p></div>
+    <p class="fonte-nota">OIT e NASK, Generative AI and jobs, maio 2025. Gmyrek, Winkler e Garganta, ILO Working Paper 121, jul. 2024. Consulta em 2 nov. 2026.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 1.3 · Teoria</span>
-      <span class="pag">20 / 34</span>
+      <span class="pag">20 / 36</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="20">
     <span class="barra"></span>
-    <span class="eyebrow">CICLO 1.3 · DEMONSTRAÇÃO</span>
-    <h2>Classificar as tarefas de um cargo</h2>
-    <p class="sub">Exemplo conduzido: assistente administrativo de uma secretaria municipal</p>
-    <div class="corpo"><div class="prompt">
-    <span class="rot">INSTRUÇÃO DADA AO AGENTE</span>
-    <p>"Abaixo estão dez tarefas de um assistente administrativo. Para cada uma, avalie os quatro critérios (repetição, estabilidade da regra, disponibilidade do dado, custo do erro) numa escala de 1 a 5 e proponha um destino: automatizar, aumentar ou manter humana. Apresente em tabela. Ao final, indique as duas classificações de que você tem menos certeza e explique por quê."</p>
-  </div>
-<ol class="steps cols-2">
-    <li><span class="num">1</span>
-      <div><strong>O pedido da incerteza é deliberado</strong><p>Obrigar o modelo a apontar onde tem menos certeza produz um ponto de entrada para a sua revisão. Sem isso, tudo volta com a mesma confiança aparente.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Você revisa a tabela inteira</strong><p>A classificação final é sua. O agente propõe, você corrige, e a correção é o que fica registrado.</p></div>
-    </li></ol></div>
+    <span class="eyebrow">CICLO 1.3 · TEORIA</span>
+    <h2>Três destinos possíveis para uma tarefa</h2>
+    <p class="sub">A classificação que o formulário do ciclo 1.4 usa</p>
+    <div class="corpo"><div class="eixo"><span>A MÁQUINA EXECUTA</span><span class="seta"></span><span>A PESSOA EXECUTA</span></div>
+    <div class="cards cols-3 baixos" style="height:calc(100% - 66px)">
+    <article class="card">
+      <header style="background:#D4B277">AUTOMATIZAR</header>
+      <h3>A máquina faz e você confere por amostra</h3>
+        <div class="bloco">
+          <span class="rule" style="background:#D4B277"></span>
+          <span class="rot">Quando cabe</span>
+          <p>Tarefa repetitiva, com regra estável, dado disponível e erro individual barato.</p>
+        </div>
+        <div class="bloco">
+          <span class="rule" style="background:#D4B277"></span>
+          <span class="rot">Exemplo</span>
+          <p>Consolidar as folhas de ponto das quatro unidades numa planilha.</p>
+        </div>
+    </article>
+    <article class="card">
+      <header style="background:#0AB0AB">AUMENTAR</header>
+      <h3>A máquina faz o rascunho e você decide</h3>
+        <div class="bloco">
+          <span class="rule" style="background:#0AB0AB"></span>
+          <span class="rot">Quando cabe</span>
+          <p>Tarefa que exige julgamento, mas cuja preparação toma a maior parte do tempo.</p>
+        </div>
+        <div class="bloco">
+          <span class="rule" style="background:#0AB0AB"></span>
+          <span class="rot">Exemplo</span>
+          <p>Redigir a primeira versão de um ofício que você revisa e assina.</p>
+        </div>
+    </article>
+    <article class="card">
+      <header style="background:#8D0333;color:#fff">MANTER HUMANA</header>
+      <h3>A máquina fica fora</h3>
+        <div class="bloco">
+          <span class="rule" style="background:#8D0333"></span>
+          <span class="rot">Quando cabe</span>
+          <p>Erro caro e irreversível, responsabilidade legal pessoal ou relação que depende de presença.</p>
+        </div>
+        <div class="bloco">
+          <span class="rule" style="background:#8D0333"></span>
+          <span class="rot">Exemplo</span>
+          <p>Comunicar um desligamento, negociar um acordo, apurar denúncia de assédio.</p>
+        </div>
+    </article></div>
+    <p class="fonte-nota">No formulário do ciclo 1.4, a coluna destino aceita só automatizar, aumentar ou manter humana. Os termos automatizar e aumentar (automation e augmentation) são os usados pela OIT.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 1.3 · Demonstração</span>
-      <span class="pag">21 / 34</span>
+      <span class="centro">Ciclo 1.3 · Teoria</span>
+      <span class="pag">21 / 36</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="21">
     <span class="barra"></span>
+    <span class="eyebrow">CICLO 1.3 · TEORIA</span>
+    <h2>Quatro critérios para classificar uma tarefa</h2>
+    <p class="sub">Aplicados a cada tarefa, com nota de 1 a 5</p>
+    <div class="corpo"><table class="tab">
+      <tr><th style="width:17%">CRITÉRIO</th><th style="width:29%">PERGUNTA</th><th style="width:19%">NOTA 1</th><th style="width:21%">NOTA 5</th><th style="width:14%">NOTA ALTA INDICA</th></tr>
+      <tr><td><strong>Repetição</strong></td><td>Com que frequência a tarefa ocorre?</td><td>uma vez por ano</td><td>várias vezes por dia</td><td>automatizar</td></tr>
+      <tr><td><strong>Estabilidade da regra</strong></td><td>O critério cabe em cinco linhas escritas?</td><td>cada caso é diferente</td><td>regra fixa e escrita</td><td>automatizar</td></tr>
+      <tr><td><strong>Disponibilidade do dado</strong></td><td>A informação já está em arquivo legível?</td><td>papel, e-mail ou memória de alguém</td><td>planilha ou sistema que exporta</td><td>automatizar</td></tr>
+      <tr><td><strong>Custo do erro</strong></td><td>O que acontece se sair errado e ninguém perceber?</td><td>corrige-se sozinho</td><td>dano a terceiro, sanção ou perda irreversível</td><td>manter humana</td></tr>
+    </table>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:16px">
+      <div class="caixa dourado"><span class="rot">COMO COMBINAR</span><p>Três primeiras notas altas e custo do erro baixo indicam automatizar. Preparação longa com julgamento no fim indica aumentar.</p></div>
+      <div class="caixa vinho"><span class="rot">CUSTO DO ERRO ALTO</span><p>Nota 4 ou 5 indica manter humana ou deixar para depois. O script do ciclo 1.4 separa essas tarefas da primeira leva.</p></div>
+    </div>
+    <p class="fonte-nota">Os critérios de repetição e de regra seguem a abordagem de tarefas rotineiras de Autor, Levy e Murnane (2003), Quarterly Journal of Economics.</p></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 1.3 · Teoria</span>
+      <span class="pag">22 / 36</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="22">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 1.3 · DEMONSTRAÇÃO</span>
+    <h2>Classificar as tarefas de um cargo</h2>
+    <p class="sub">Exemplo conduzido: assistente administrativo de uma secretaria municipal</p>
+    <div class="corpo"><div class="prompt compacto">
+    <span class="rot">INSTRUÇÃO DADA AO ASSISTENTE DE IA</span>
+    <p>"Abaixo estão dez tarefas de um assistente administrativo. Para cada uma, avalie repetição, estabilidade da regra, disponibilidade do dado e custo do erro numa escala de 1 a 5 e proponha um destino entre automatizar, aumentar e manter humana. Apresente em tabela. Ao final, indique as duas classificações de que você tem menos certeza e explique por quê."</p>
+  </div>
+  <table class="tab apertada">
+    <tr><th style="width:33%">TAREFA</th><th>REP.</th><th>REGRA</th><th>DADO</th><th>ERRO</th><th style="width:13%">ASSISTENTE</th><th style="width:28%">REVISÃO</th></tr>
+    <tr><td>Consolidar as folhas de ponto das quatro unidades</td><td>3</td><td>5</td><td>4</td><td>2</td><td>automatizar</td><td>mantido</td></tr>
+    <tr><td>Responder pedidos de informação sobre processos</td><td>5</td><td>3</td><td>4</td><td>2</td><td>automatizar</td><td class="lac">aumentar. Cada resposta trata de um caso</td></tr>
+    <tr><td>Conferir as notas fiscais do mês contra os empenhos</td><td>3</td><td>4</td><td>4</td><td>4</td><td>automatizar</td><td class="lac">aumentar. Erro de pagamento é caro</td></tr>
+    <tr><td>Atender servidor com dúvida sobre férias e licenças</td><td>5</td><td>2</td><td>3</td><td>3</td><td>aumentar</td><td class="lac">manter humana. Depende de conversa</td></tr>
+  </table>
+  <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:12px">
+    <div class="caixa teal"><span class="rot">O PEDIDO DE INCERTEZA</span><p>As duas classificações de menor certeza indicam onde começar a revisão. Sem esse pedido, todas as linhas chegam com a mesma confiança aparente.</p></div>
+    <div class="caixa vinho"><span class="rot">QUEM DECIDE</span><p>O assistente propõe e você corrige. Cada correção, com a razão em uma linha, fica registrada na entrega.</p></div>
+  </div>
+  <p class="fonte-nota">Saída ilustrativa, quatro das dez linhas. As mesmas tarefas reaparecem no mapa do ciclo 1.4.</p></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 1.3 · Demonstração</span>
+      <span class="pag">23 / 36</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="23">
+    <span class="barra"></span>
     <span class="eyebrow">CICLO 1.3 · PRÁTICA</span>
     <h2>Sua vez: dez tarefas de um cargo real</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1">
+    <div class="corpo"><ol class="steps cols-1 ">
     <li><span class="num">1</span>
-      <div><strong>Escolha um cargo que você conhece de perto</strong><p>O seu, o do seu estágio, ou o de alguém com quem você possa conferir. Cargo genérico de internet não serve.</p></div>
+      <div><strong>Escolha um cargo que você conhece de perto</strong><p>O seu, o do seu estágio ou o de alguém com quem você possa conferir as tarefas. Descrição genérica de cargo copiada da internet fica fora.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Liste dez tarefas concretas</strong><p>Tarefa é o que se faz, com verbo no infinitivo e objeto definido. "Cuidar do setor" não é tarefa.</p></div>
+      <div><strong>Liste dez tarefas com verbo e objeto</strong><p>Verbo no infinitivo e objeto definido. Cuidar do setor descreve uma área, e conferir as notas fiscais do mês descreve uma tarefa.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Peça a classificação ao agente e revise</strong><p>Onde você discorda, mude e escreva a razão em uma linha.</p></div>
+      <div><strong>Peça a classificação e revise linha a linha</strong><p>Onde discordar, mude o destino e escreva a razão em uma linha. Tire do texto nomes de colegas, de cidadãos e de empresas, porque o que você digita vai ao servidor do provedor do modelo.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Marque as duas tarefas de destino mais disputado</strong><p>Aquelas em que o critério puxa para lados opostos. São as interessantes.</p></div>
+      <div><strong>Marque as duas tarefas de destino disputado</strong><p>São aquelas em que um critério indica automatizar e outro indica manter humana.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 1.3 · Prática</span>
-      <span class="pag">22 / 34</span>
+      <span class="pag">24 / 36</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="22">
+<section class="slide conteudo" data-i="24">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 1.3 · ENTREGA</span>
     <h2>Classificação de dez tarefas</h2>
@@ -824,12 +1029,12 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>O cargo escolhido e como você o conhece.</li><li>As dez tarefas, com verbo e objeto.</li><li>A tabela de classificação, com as quatro notas e o destino.</li><li>As linhas em que você discordou do agente, com a razão.</li><li>As duas tarefas de destino disputado, comentadas.</li></ul>
+      <ul><li>O cargo escolhido e como você o conhece.</li><li>As dez tarefas, com verbo e objeto.</li><li>A tabela de classificação, com as quatro notas e o destino.</li><li>As linhas em que você discordou do assistente, com a razão.</li><li>As duas tarefas de destino disputado, comentadas.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>entregas/modulo1-ciclo3-tarefas.md</p>
+        <p>Arquivo <span class="mono">modulo1-ciclo3-tarefas.md</span>, que vai para <span class="mono">entregas/</span> no encontro 3.</p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
@@ -840,148 +1045,200 @@ body.mexeu #ajuda{opacity:1}
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 1.3 · Entrega</span>
-      <span class="pag">23 / 34</span>
+      <span class="pag">25 / 36</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="23">
+<section class="slide divisor" data-i="25">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">1.4</span></div>
       <div class="dir">
         <h2>Mapa de tarefas automatizáveis</h2>
         <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">24 / 34</span>
+      <span class="pag">26 / 36</span>
     </section>
-<section class="slide conteudo" data-i="24">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 1.4 · TEORIA</span>
-    <h2>De classificação a mapa</h2>
-    <p class="sub">O mapa ordena por onde começar, e é isso que um gestor precisa</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">ESFORÇO</header>
-      <h3>Quanto custa mudar a tarefa</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Como estimar</span>
-          <p>Dado disponível e regra estável reduzem o esforço. Dado em papel e regra variável aumentam.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Escala</span>
-          <p>De 1 (uma tarde) a 5 (projeto de meses com outras áreas envolvidas).</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">GANHO</header>
-      <h3>Quanto tempo ou erro se evita por mês</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Como estimar</span>
-          <p>Frequência multiplicada pelo tempo médio da execução, mais o custo do retrabalho.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Escala</span>
-          <p>Em horas por mês. Estimativa grosseira serve, chute sem base não serve.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">RISCO</header>
-      <h3>O que acontece se der errado</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Como estimar</span>
-          <p>Considere quem é afetado e se o erro é detectável antes de causar dano.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Escala</span>
-          <p>De 1 (corrige-se sozinho) a 5 (dano a terceiro, sanção ou perda irreversível).</p>
-        </div>
-    </article></div></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 1.4 · Teoria</span>
-      <span class="pag">25 / 34</span>
-    </footer>
-  </section>
-<section class="slide conteudo" data-i="25">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 1.4 · TEORIA</span>
-    <h2>A ordem de ataque</h2>
-    <p class="sub">Onde um projeto de automação costuma começar, e onde costuma fracassar</p>
-    <div class="corpo"><ol class="steps cols-1">
-    <li><span class="num">1</span>
-      <div><strong>Comece pelo ganho alto com esforço baixo e risco baixo</strong><p>É onde o resultado aparece rápido e o erro é barato. Serve para construir confiança de quem vai usar.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Depois, ganho alto com esforço alto</strong><p>Vira projeto, com prazo e responsável. Precisa de patrocínio de alguém com poder de decisão.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Nunca comece pelo risco alto</strong><p>Mesmo com ganho grande. Um erro visível numa primeira iniciativa encerra o assunto na organização por anos.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Descarte o ganho baixo com esforço alto</strong><p>Existe sempre, é tecnicamente interessante e consome o tempo que faltaria para o resto.</p></div>
-    </li></ol></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 1.4 · Teoria</span>
-      <span class="pag">26 / 34</span>
-    </footer>
-  </section>
 <section class="slide conteudo" data-i="26">
     <span class="barra"></span>
-    <span class="eyebrow">CICLO 1.4 · DEMONSTRAÇÃO</span>
-    <h2>O script da atividade</h2>
-    <p class="sub">Um único arquivo conduz a atividade do começo ao fim</p>
-    <div class="corpo"><ol class="steps cols-1">
-    <li><span class="num">1</span>
-      <div><strong>Peça ao agente para executar o script</strong><p>Diga: "execute o arquivo atividade_modulo1.py com o comando iniciar". O agente roda e mostra a saída.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>O script cria o formulário</strong><p>Ele grava entregas/modulo1-mapa-de-tarefas.csv com o cabeçalho, uma linha de exemplo e as instruções de preenchimento.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Você preenche as suas dez tarefas</strong><p>Abra o arquivo no Excel ou no editor. Uma tarefa por linha, com as notas de esforço, ganho e risco.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Peça ao agente para conferir</strong><p>Diga: "execute atividade_modulo1.py com o comando conferir". O script valida o preenchimento, ordena as tarefas e gera o mapa em entregas/modulo1-mapa-de-tarefas.md.</p></div>
-    </li></ol></div>
+    <span class="eyebrow">CICLO 1.4 · TEORIA</span>
+    <h2>Esforço, ganho e risco</h2>
+    <p class="sub">As notas que o formulário pede para cada tarefa, com a linha de exemplo calculada</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.6fr;--dir:1fr">
+      <div class="col">
+        <table class="tab apertada">
+          <tr><th style="width:24%">COLUNA</th><th style="width:30%">O QUE MEDE</th><th style="width:46%">ESCALA E COMO ESTIMAR</th></tr>
+          <tr><td class="mono">esforco_1a5</td><td>Quanto custa mudar a tarefa</td><td>1 é uma tarde, 5 é projeto de meses com outras áreas. Dado disponível e regra estável reduzem a nota.</td></tr>
+          <tr><td class="mono">ganho_horas_mes</td><td>Horas poupadas por mês</td><td>Número, aceita vírgula. Vezes por mês × horas por vez × parcela poupada.</td></tr>
+          <tr><td class="mono">risco_1a5</td><td>O que acontece se der errado e ninguém perceber</td><td>1 é erro que se corrige sozinho, 5 é dano a terceiro, sanção ou perda irreversível.</td></tr>
+          <tr><td class="mono">base_da_estimativa</td><td>A conta que gerou o ganho</td><td>Obrigatória. O script recusa a linha quando ela tem menos de 15 caracteres.</td></tr>
+        </table>
+      </div>
+      <div class="col">
+        <div class="def"><span class="rot">A linha de exemplo do formulário</span>
+          <p>Consolidar as planilhas de frequência das quatro unidades num arquivo único.</p>
+          <p class="mono" style="font-size:15px;color:#8D0333">leva cerca de 1h30 por unidade, quatro vezes por mes</p>
+          <p>Ganho: 1,5 h × 4 = 6 h por mês.<br>Esforço 2, risco 2.<br>Prioridade: 6 ÷ 2 = 3,0.</p></div>
+        <div class="caixa dourado"><span class="rot">ESTIMATIVA GROSSEIRA</span><p>É aceita quando a conta está escrita. Número sem base declarada fica fora do mapa.</p></div>
+      </div>
+    </div>
+    <p class="fonte-nota">Colunas, escalas e regra de recusa conforme atividade_modulo1.py. O script ignora a linha de exemplo e avisa que ela continua no arquivo.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 1.4 · Demonstração</span>
-      <span class="pag">27 / 34</span>
+      <span class="centro">Ciclo 1.4 · Teoria</span>
+      <span class="pag">27 / 36</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="27">
     <span class="barra"></span>
-    <span class="eyebrow">CICLO 1.4 · PRÁTICA</span>
-    <h2>Sua vez: construa o mapa</h2>
-    <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1">
+    <span class="eyebrow">CICLO 1.4 · TEORIA</span>
+    <h2>A ordem de ataque</h2>
+    <p class="sub">O script ordena por ganho ÷ esforço e separa risco alto e destino humano</p>
+    <div class="corpo"><div class="duascol" style="--esq:1fr;--dir:1.05fr">
+      <div class="col"><svg class="fig" viewBox="0 0 560 356" xmlns="http://www.w3.org/2000/svg">
+<rect x="62" y="25" width="460" height="265" fill="#FAF7F8" stroke="#e1e1e1"/>
+<line x1="62" y1="290.0" x2="522" y2="290.0" stroke="#ececec"/>
+<text x="54" y="294.0" font-size="13" fill="#6B6B6B" text-anchor="end">0</text>
+<line x1="62" y1="240.0" x2="522" y2="240.0" stroke="#ececec"/>
+<text x="54" y="244.0" font-size="13" fill="#6B6B6B" text-anchor="end">2</text>
+<line x1="62" y1="190.0" x2="522" y2="190.0" stroke="#ececec"/>
+<text x="54" y="194.0" font-size="13" fill="#6B6B6B" text-anchor="end">4</text>
+<line x1="62" y1="140.0" x2="522" y2="140.0" stroke="#ececec"/>
+<text x="54" y="144.0" font-size="13" fill="#6B6B6B" text-anchor="end">6</text>
+<line x1="62" y1="90.0" x2="522" y2="90.0" stroke="#ececec"/>
+<text x="54" y="94.0" font-size="13" fill="#6B6B6B" text-anchor="end">8</text>
+<line x1="62" y1="40.0" x2="522" y2="40.0" stroke="#ececec"/>
+<text x="54" y="44.0" font-size="13" fill="#6B6B6B" text-anchor="end">10</text>
+<text x="108.0" y="320" font-size="13" fill="#6B6B6B" text-anchor="middle">1</text>
+<text x="200.0" y="320" font-size="13" fill="#6B6B6B" text-anchor="middle">2</text>
+<text x="292.0" y="320" font-size="13" fill="#6B6B6B" text-anchor="middle">3</text>
+<text x="384.0" y="320" font-size="13" fill="#6B6B6B" text-anchor="middle">4</text>
+<text x="476.0" y="320" font-size="13" fill="#6B6B6B" text-anchor="middle">5</text>
+<line x1="62.0" y1="265.0" x2="503.6" y2="25.0" stroke="#C9962E" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="356.4" y="135.0" font-size="12.5" fill="#C9962E" font-weight="700">ganho ÷ esforço = 2</text>
+<circle cx="200.0" cy="40.0" r="12" fill="#0AB0AB"/>
+<text x="200.0" y="44.5" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">A</text>
+<circle cx="108.0" cy="165.0" r="12" fill="#0AB0AB"/>
+<text x="108.0" y="169.5" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">B</text>
+<circle cx="200.0" cy="140.0" r="12" fill="#0AB0AB"/>
+<text x="200.0" y="144.5" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">C</text>
+<circle cx="108.0" cy="240.0" r="12" fill="#0AB0AB"/>
+<text x="108.0" y="244.5" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">D</text>
+<circle cx="200.0" cy="215.0" r="12" fill="#0AB0AB"/>
+<text x="200.0" y="219.5" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">E</text>
+<circle cx="276.0" cy="190.0" r="12" fill="#0AB0AB"/>
+<text x="276.0" y="194.5" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">F</text>
+<circle cx="308.0" cy="190.0" r="12" fill="#8D0333"/>
+<text x="308.0" y="194.5" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">G</text>
+<circle cx="292.0" cy="265.0" r="12" fill="#8D0333"/>
+<text x="292.0" y="269.5" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">H</text>
+<circle cx="384.0" cy="290.0" r="12" fill="#9b9b9b"/>
+<text x="384.0" y="294.5" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">I</text>
+<circle cx="476.0" cy="290.0" r="12" fill="#9b9b9b"/>
+<text x="476.0" y="294.5" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">J</text>
+<text x="292" y="340" font-size="13" fill="#6B6B6B" text-anchor="middle">esforço (1 a 5)</text>
+<text x="16" y="165.0" font-size="13" fill="#6B6B6B" text-anchor="middle" transform="rotate(-90 16 165.0)">ganho (h/mês)</text>
+</svg>
+        <ul class="legenda" style="display:flex;gap:18px;font-size:14px;margin-top:-6px">
+          <li><span class="badge" style="background:#0AB0AB"></span>primeira leva</li>
+          <li><span class="badge"></span>risco 4 ou 5</li>
+          <li><span class="badge" style="background:#9b9b9b"></span>manter humana</li></ul>
+      </div>
+      <div class="col"><ol class="steps cols-1 compacto">
     <li><span class="num">1</span>
-      <div><strong>Reaproveite as dez tarefas do ciclo 1.3</strong><p>Não invente tarefas novas. O mapa é a continuação da classificação anterior.</p></div>
+      <div><strong>Comece por ganho alto, esforço baixo e risco baixo</strong><p>O resultado aparece cedo e o erro custa pouco, o que cria confiança em quem vai usar. No exemplo, A, B e C somam 21 h por mês.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Preencha esforço, ganho e risco</strong><p>Use as escalas do slide de teoria. Ganho em horas por mês, esforço e risco de 1 a 5.</p></div>
+      <div><strong>Depois, ganho alto com esforço alto</strong><p>Vira projeto, com prazo, responsável e apoio de quem decide.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Rode a conferência e leia a ordem proposta</strong><p>O script ordena por ganho dividido por esforço, e separa o que tem risco 4 ou 5.</p></div>
+      <div><strong>Risco 4 ou 5 fica para depois</strong><p>Mesmo com ganho alto, como G. Um erro visível na primeira iniciativa pode encerrar o assunto na organização por anos.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Escreva a sua primeira ação</strong><p>Uma tarefa, uma frase: o que você faria na segunda-feira. Essa frase é o resultado do módulo.</p></div>
+      <div><strong>Descarte ganho baixo com esforço alto</strong><p>Tarefas como H tomam o tempo que faltaria às demais.</p></div>
     </li></ol></div>
+    </div>
+    <p class="fonte-nota">Dados ilustrativos, com as dez tarefas do assistente administrativo da demonstração do ciclo 1.3. Letras na ordem do mapa gerado pelo script.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 1.4 · Prática</span>
-      <span class="pag">28 / 34</span>
+      <span class="centro">Ciclo 1.4 · Teoria</span>
+      <span class="pag">28 / 36</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="28">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 1.4 · DEMONSTRAÇÃO</span>
+    <h2>O script da atividade</h2>
+    <p class="sub">Dois comandos levam do formulário vazio ao mapa ordenado</p>
+    <div class="corpo"><div class="fluxo peq" style="--n:4">
+      <div class="etapa" style="--cor:#D4B277"><span class="n">1</span><h4>iniciar</h4>
+        <p>Cria o formulário com cabeçalho, linha de exemplo e dez linhas vazias.</p>
+        <span class="arq">entregas/modulo1-mapa-de-tarefas.csv</span></div>
+      <div class="etapa" style="--cor:#0AB0AB"><span class="n">2</span><h4>preencher</h4>
+        <p>No Excel ou no editor, uma tarefa por linha, em CSV separado por ponto e vírgula.</p></div>
+      <div class="etapa" style="--cor:#FEC84D"><span class="n">3</span><h4>conferir</h4>
+        <p>Valida, ordena por ganho ÷ esforço e grava o mapa. Com problema, não grava.</p>
+        <span class="arq">entregas/modulo1-mapa-de-tarefas.md</span></div>
+      <div class="etapa" style="--cor:#8D0333"><span class="n">4</span><h4>escrever</h4>
+        <p>No mapa, a primeira ação (seção 6) e o que mudaria com mais informação (seção 7).</p></div>
+    </div>
+    <div class="duascol" style="--esq:1.75fr;--dir:1fr;height:auto;margin-top:14px">
+      <pre class="terminal" style="font-size:13px;line-height:1.36">MODULO 1 - CICLO 1.4 - CONFERENCIA E GERACAO DO MAPA
+Nenhum problema de preenchimento encontrado.
+
+PONTOS PARA VOCE REVER (1):
+<span class="hl">  - linha 9: destino 'manter humana' com risco baixo. Confira se e mesmo o caso.</span>
+Tarefas validas: 10 de 10 esperadas.
+Mapa gerado em: entregas/modulo1-mapa-de-tarefas.md</pre>
+      <div class="col">
+        <div class="caixa dourado"><span class="rot">OS DOIS PEDIDOS AO AGENTE</span><p class="mono" style="font-size:13.5px">"execute atividade_modulo1.py com o comando iniciar"<br>"execute atividade_modulo1.py com o comando conferir"</p></div>
+        <div class="caixa teal"><span class="rot">NESTE ENCONTRO</span><p>O opencode é instalado no encontro 3. Hoje o professor executa os comandos na projeção.</p></div>
+      </div>
+    </div>
+    <p class="fonte-nota">Saída real do script sobre as dez tarefas ilustrativas, sem as linhas finais de instrução. O aviso não impede a geração do mapa.</p></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 1.4 · Demonstração</span>
+      <span class="pag">29 / 36</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="29">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 1.4 · PRÁTICA</span>
+    <h2>Sua vez: construa o mapa</h2>
+    <p class="sub">Individual</p>
+    <div class="corpo"><div class="duascol" style="--esq:1fr;--dir:1fr">
+      <div class="col"><ol class="steps cols-1 compacto">
+    <li><span class="num">1</span>
+      <div><strong>Reaproveite as dez tarefas do ciclo 1.3</strong><p>Use o destino que ficou depois da sua revisão, com as correções feitas.</p></div>
+    </li>
+    <li><span class="num">2</span>
+      <div><strong>Preencha as oito colunas</strong><p>Uma tarefa por linha. Apague a linha de exemplo, que o script ignora e aponta como pendente.</p></div>
+    </li>
+    <li><span class="num">3</span>
+      <div><strong>Rode o conferir e corrija o que ele recusar</strong><p>Leia a ordem proposta e confira à mão a prioridade de duas linhas (ganho ÷ esforço).</p></div>
+    </li>
+    <li><span class="num">4</span>
+      <div><strong>Escreva a sua primeira ação</strong><p>Na seção 6 do mapa, uma frase com o que você faria na segunda-feira.</p></div>
+    </li></ol></div>
+      <div class="col">
+        <table class="tab apertada">
+          <tr><th>O CONFERIR RECUSA A LINHA QUANDO</th></tr>
+          <tr><td><span class="mono">tarefa</span> tem menos de três palavras</td></tr>
+          <tr><td><span class="mono">destino</span> difere de automatizar, aumentar e manter humana</td></tr>
+          <tr><td><span class="mono">quem_executa</span> ou <span class="mono">frequencia</span> está vazio</td></tr>
+          <tr><td><span class="mono">base_da_estimativa</span> tem menos de 15 caracteres</td></tr>
+          <tr><td><span class="mono">esforco_1a5</span> ou <span class="mono">risco_1a5</span> fora de 1 a 5 ou com decimal</td></tr>
+          <tr><td><span class="mono">ganho_horas_mes</span> vazio, negativo ou sem formato de número</td></tr>
+        </table>
+        <div class="caixa vinho"><span class="rot">AVISO SEM RECUSA</span><p>Destino manter humana com risco 1 ou 2, e destino automatizar com risco 4 ou 5. O script pede que você reveja.</p></div>
+      </div>
+    </div></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 1.4 · Prática</span>
+      <span class="pag">30 / 36</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="30">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 1.4 · ENTREGA</span>
     <h2>Mapa de tarefas automatizáveis</h2>
@@ -989,26 +1246,26 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>O arquivo modulo1-mapa-de-tarefas.csv preenchido com dez tarefas.</li><li>O arquivo modulo1-mapa-de-tarefas.md gerado pelo script.</li><li>A sua primeira ação, escrita em uma frase, ao final do arquivo .md.</li><li>Uma linha dizendo o que você mudaria no mapa se tivesse acesso a mais informação.</li></ul>
+      <ul><li>O arquivo modulo1-mapa-de-tarefas.csv preenchido com dez tarefas.</li><li>O arquivo modulo1-mapa-de-tarefas.md gerado pelo script.</li><li>A sua primeira ação, em uma frase, na seção 6 do arquivo .md.</li><li>Uma linha na seção 7 com o que você mudaria no mapa se tivesse mais informação.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>entregas/modulo1-mapa-de-tarefas.csv<br>entregas/modulo1-mapa-de-tarefas.md</p>
+        <p><span class="mono">entregas/modulo1-mapa-de-tarefas.csv</span><br><span class="mono">entregas/modulo1-mapa-de-tarefas.md</span></p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Este item compõe a entrega A2, avaliada no encontro 6. Ganho estimado sem base declarada perde metade do valor do item.</p>
+        <p>Compõe a entrega A2, conferida no encontro 6. Linha sem base declarada é recusada pelo script, e o mapa só é gerado depois da correção.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 1.4 · Entrega</span>
-      <span class="pag">29 / 34</span>
+      <span class="pag">31 / 36</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="29">
+<section class="slide conteudo" data-i="31">
     <span class="barra"></span>
     <span class="eyebrow">BALANÇO</span>
     <h2>O que você produziu hoje</h2>
@@ -1017,118 +1274,124 @@ body.mexeu #ajuda{opacity:1}
     <article class="card">
       <header style="background:#D4B277">CICLOS 1.1 E 1.2</header>
       <h3>Duas fichas de verificação</h3>
-      
         <div class="bloco">
           <span class="rule" style="background:#D4B277"></span>
           <span class="rot">O que são</span>
-          <p>Uma afirmação testada contra fonte, e uma comparação setorial com dado extraído da própria fonte.</p>
+          <p>Uma afirmação testada contra a fonte e uma comparação entre setores com números copiados da própria tabela.</p>
         </div>
         <div class="bloco">
           <span class="rule" style="background:#D4B277"></span>
           <span class="rot">Para que servem</span>
-          <p>São o primeiro registro do seu hábito de conferência, que vai ser cobrado em todas as entregas.</p>
+          <p>Registram a rotina de conferência cobrada em todas as entregas do semestre.</p>
         </div>
     </article>
     <article class="card">
       <header style="background:#0AB0AB">CICLO 1.3</header>
       <h3>Dez tarefas classificadas</h3>
-      
         <div class="bloco">
           <span class="rule" style="background:#0AB0AB"></span>
           <span class="rot">O que é</span>
-          <p>A decomposição de um cargo real em tarefas, com destino atribuído a cada uma.</p>
+          <p>Um cargo real decomposto em tarefas, com o destino de cada uma e a razão de cada discordância.</p>
         </div>
         <div class="bloco">
           <span class="rule" style="background:#0AB0AB"></span>
           <span class="rot">Para que serve</span>
-          <p>É a base do mapa, e o exercício de ler trabalho por tarefa e não por rótulo.</p>
+          <p>É a base do mapa e treina a leitura do trabalho por tarefa.</p>
         </div>
     </article>
     <article class="card">
       <header style="background:#FEC84D">CICLO 1.4</header>
       <h3>Um mapa e uma ação</h3>
-      
         <div class="bloco">
           <span class="rule" style="background:#FEC84D"></span>
           <span class="rot">O que é</span>
-          <p>As dez tarefas ordenadas por ganho, esforço e risco, com uma primeira ação escolhida.</p>
+          <p>As tarefas ordenadas pelo script, com as de risco alto separadas e uma primeira ação escrita.</p>
         </div>
         <div class="bloco">
           <span class="rule" style="background:#FEC84D"></span>
           <span class="rot">Para que serve</span>
-          <p>Compõe a entrega A2 e é o formato que você vai usar em qualquer diagnóstico de processo.</p>
+          <p>Compõe a entrega A2. O mesmo formato serve a qualquer diagnóstico de processo.</p>
         </div>
     </article></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Balanço do módulo</span>
-      <span class="pag">30 / 34</span>
-    </footer>
-  </section>
-<section class="slide conteudo" data-i="30">
-    <span class="barra"></span>
-    <span class="eyebrow">PRÓXIMOS PASSOS</span>
-    <h2>Módulo 2: o que trazer no próximo encontro</h2>
-    <p class="sub">Ambiente de trabalho digital. O encontro tem a primeira entrega avaliada.</p>
-    <div class="corpo"><ol class="steps cols-1">
-    <li><span class="num">1</span>
-      <div><strong>Uma conta de e-mail que você acesse na aula</strong><p>Será usada para criar a conta no GitHub. Confira antes se você consegue receber o código de confirmação.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Os arquivos deste módulo</strong><p>As quatro entregas de hoje entram na estrutura de pastas que você vai criar no encontro 3.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Decisão sobre a organização do seu projeto</strong><p>Pense em qual organização ou base pública você quer trabalhar no semestre. A escolha é registrada no encontro 3.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Atenção: entrega A1 vale nota</strong><p>Quem sair do encontro 3 sem repositório funcionando não acompanha os encontros seguintes. Não falte.</p></div>
-    </li></ol></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Próximos passos</span>
-      <span class="pag">31 / 34</span>
-    </footer>
-  </section>
-<section class="slide conteudo" data-i="31">
-    <span class="barra"></span>
-    <span class="eyebrow">DÚVIDAS FREQUENTES</span>
-    <h2>Perguntas que aparecem neste módulo</h2>
-    
-    <div class="corpo"><ol class="steps cols-1">
-    <li><span class="num">1</span>
-      <div><strong>"O agente errou a fonte. Devo refazer o exercício?"</strong><p>Não. O erro detectado é o produto do exercício. Registre o erro, corrija e siga.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>"Posso usar outro modelo, fora o do opencode?"</strong><p>Pode, desde que você registre qual usou. A comparação entre modelos é bem-vinda na entrega.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>"Minha estimativa de ganho é um chute."</strong><p>Estimativa grosseira com base declarada serve. Diga como chegou nela, ainda que seja "cerca de duas horas por semana, pela minha experiência".</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>"E se a minha tarefa não couber em nenhum dos três destinos?"</strong><p>Escreva isso. Tarefa que não se encaixa costuma ser tarefa mal descrita, ou duas tarefas juntas.</p></div>
-    </li>
-    <li><span class="num">5</span>
-      <div><strong>"Preciso instalar algo hoje?"</strong><p>Não. Hoje o trabalho é de leitura, consulta e escrita. A instalação é no encontro 3.</p></div>
-    </li></ol></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Dúvidas frequentes</span>
-      <span class="pag">32 / 34</span>
+      <span class="pag">32 / 36</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="32">
     <span class="barra"></span>
+    <span class="eyebrow">PRÓXIMOS PASSOS</span>
+    <h2>Módulo 2: o que trazer no próximo encontro</h2>
+    <p class="sub">Ambiente de trabalho digital, com a primeira entrega avaliada</p>
+    <div class="corpo"><ol class="steps cols-1 ">
+    <li><span class="num">1</span>
+      <div><strong>Um e-mail que você consiga abrir na aula</strong><p>Ele confirma a conta no GitHub. Teste antes se o código de confirmação chega.</p></div>
+    </li>
+    <li><span class="num">2</span>
+      <div><strong>As quatro entregas deste módulo</strong><p>As três fichas dos ciclos 1.1 a 1.3 e o mapa (.csv e .md). Elas vão para a pasta entregas/ do projeto criado no encontro 3.</p></div>
+    </li>
+    <li><span class="num">3</span>
+      <div><strong>A escolha da organização do seu projeto</strong><p>Pense em qual organização ou base pública você quer estudar no semestre. A escolha é registrada no encontro 3.</p></div>
+    </li>
+    <li><span class="num">4</span>
+      <div><strong>Entrega A1, feita em sala</strong><p>Vale 40% da nota 1. Os encontros seguintes usam a pasta e o repositório criados nela.</p></div>
+    </li></ol></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Próximos passos</span>
+      <span class="pag">33 / 36</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="33">
+    <span class="barra"></span>
+    <span class="eyebrow">DÚVIDAS FREQUENTES</span>
+    <h2>Perguntas que aparecem neste módulo</h2>
+    
+    <div class="corpo"><ol class="steps cols-2 compacto" style="--linhas:3">
+    <li><span class="num">1</span>
+      <div><strong>"O assistente errou a fonte. Refaço o exercício?"</strong><p>Não. Registre a fonte errada e o que você encontrou no lugar. Fonte inventada identificada vale nota cheia.</p></div>
+    </li>
+    <li><span class="num">2</span>
+      <div><strong>"Posso usar outro serviço de IA?"</strong><p>Pode, desde que registre o serviço e o modelo. A comparação entre modelos é bem-vinda na entrega.</p></div>
+    </li>
+    <li><span class="num">3</span>
+      <div><strong>"Minha estimativa de ganho é um chute."</strong><p>Estimativa grosseira com a conta escrita é aceita, como cerca de 2 horas por semana, pela minha experiência.</p></div>
+    </li>
+    <li><span class="num">4</span>
+      <div><strong>"Minha tarefa não cabe em nenhum destino."</strong><p>Registre isso. Em geral a tarefa está mal descrita ou junta duas tarefas, e separá-las resolve.</p></div>
+    </li>
+    <li><span class="num">5</span>
+      <div><strong>"Preciso instalar algo hoje?"</strong><p>Não. Hoje o trabalho é de leitura, consulta e escrita. A instalação é no encontro 3.</p></div>
+    </li>
+    <li><span class="num">6</span>
+      <div><strong>"Os números de adoção de IA vão mudar?"</strong><p>Vão. Por isso os slides trazem pesquisa e data de consulta. Na ficha, registre o ano da pesquisa e o dia em que abriu a fonte.</p></div>
+    </li></ol></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Dúvidas frequentes</span>
+      <span class="pag">34 / 36</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="34">
+    <span class="barra"></span>
     <span class="eyebrow">USO RESPONSÁVEL</span>
     <h2>Regras que valem em todas as entregas</h2>
-    <p class="sub">Constam da seção 9 do programa da disciplina</p>
-    <div class="corpo"><ul class="bullets"><li>O uso de inteligência artificial é obrigatório e deve ser declarado em toda entrega.</li><li>Toda instrução dada ao agente que gerou material entregue precisa estar registrada.</li><li>Referência bibliográfica gerada e não verificada equivale a referência inexistente.</li><li>É vedado inserir dados pessoais identificáveis de terceiros nas ferramentas da disciplina. Anonimize antes.</li><li>A conclusão é sua. O agente redige, calcula e organiza. Quem decide o que vale assina a entrega.</li></ul></div>
+    <p class="sub">Seção 9 do programa da disciplina</p>
+    <div class="corpo"><ul class="bullets">
+      <li>O uso de inteligência artificial é obrigatório nas atividades e deve ser declarado em toda entrega.</li>
+      <li>Toda instrução dada ao assistente que gerou material entregue precisa estar registrada.</li>
+      <li>Referência bibliográfica gerada por IA e não verificada na fonte equivale a referência inexistente.</li>
+      <li>É vedado inserir dados pessoais identificáveis de terceiros nas ferramentas usadas em aula (Lei 13.709/2018). O texto digitado vai ao servidor do provedor do modelo.</li>
+      <li>A conclusão é de quem assina a entrega. O assistente redige e organiza, e a decisão sobre o que vale é sua.</li>
+    </ul></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Uso responsável</span>
-      <span class="pag">33 / 34</span>
+      <span class="pag">35 / 36</span>
     </footer>
   </section>
-<section class="slide fim" data-i="33">
+<section class="slide fim" data-i="35">
       <span class="filete"></span>
       <h1>Módulo 1 concluído</h1>
       <p>Próximo encontro: ambiente de trabalho digital, instalação do opencode desktop e do GitHub Desktop, e a entrega A1.</p>
@@ -1137,7 +1400,7 @@ body.mexeu #ajuda{opacity:1}
 </div>
 <div id="barra">
   <button id="ant" title="Anterior">&#8249;</button>
-  <input id="atual" value="1" title="Ir para o slide"> <span>/ 34</span>
+  <input id="atual" value="1" title="Ir para o slide"> <span>/ 36</span>
   <button id="prox" title="Próximo">&#8250;</button>
   <button id="tela" title="Tela cheia">&#9744;</button>
 </div>
