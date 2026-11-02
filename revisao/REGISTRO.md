@@ -20,15 +20,27 @@ Os sinais vêm de `python revisao/auditar_texto.py`, rodado em 2 nov. 2026. Elem
 | 10 | 11 | Pesquisa e análise qualitativa | 31 | 0 | 13 | revisado em 2 nov. 2026, deck inteiro |
 | 11 | 12 | Aprendizado de máquina | 29 | 0 | 11 | revisado em 2 nov. 2026, deck inteiro |
 | 12 | 13 | Governança, LGPD e cibersegurança | 29 | 0 | 11 | revisado em 2 nov. 2026, deck inteiro |
-| 13 | 14 | Decisão apoiada por IA | 26 | 6 | nenhum | pendente, próximo da fila |
-| 14 | 15 | Produto digital e ágil | 25 | 4 | nenhum | pendente |
-| 15 | 16 | Projeto integrador | 20 | 7 | nenhum | pendente |
+| 13 | 14 | Decisão apoiada por IA | 28 | 0 | 10 | revisado em 2 nov. 2026, deck inteiro |
+| 14 | 15 | Produto digital e ágil | 27 | 0 | 10 | revisado em 2 nov. 2026, deck inteiro |
+| 15 | 16 | Projeto integrador | 26 | 0 | 12 | revisado em 2 nov. 2026, deck inteiro |
 
-Ordem sugerida: seguir o calendário dos encontros (módulo 13 em diante) e depois voltar aos módulos 1 a 4, que já passaram por uma revisão de conteúdo em setembro.
+Ordem sugerida: módulos 1 a 4, os únicos ainda pendentes. Eles passaram por uma revisão de conteúdo em setembro, mas não pelo padrão de linguagem e de elementos visuais.
 
 Em 2 nov. 2026 os marcadores de tempo foram retirados de todos os decks (ver histórico). A contagem de slides acima já reflete o estado posterior.
 
 ## Histórico
+
+### 2 nov. 2026, módulos 13, 14 e 15, decks inteiros
+
+Auditoria com zero sinais nos três. Conferência visual com Liberation Sans e DejaVu Sans.
+
+Módulo 13 (encontro 14), de 26 para 28 slides. Novos: 6, do critério vago ao critério verificável, e 18, o comando conferir diante de uma devolutiva incompleta. Correções: o script aponta a norma não conferida e não a retira. A devolutiva tem cinco seções no modelo do script, e o deck falava em quatro. Art. 50 da Lei 9.784 com incisos e § 1º. A Lei 14.133 usa "extinção" no lugar de "rescisão". Fontes: guia de licitações e contratos do TCU (arts. 36, 92, 117 e 140 da Lei 14.133), LINDB arts. 20 e 28, Keeney (1992), Jakesch et al. (2023). O empate técnico de 5% é a regra do script para a matriz de decisão, e não o critério legal de empate em licitação.
+
+Módulo 14 (encontro 15), de 25 para 27 slides. Novos: 12, valor sobre esforço num backlog de exemplo, com saída real do comando `priorizar`, e 17, agentes de IA no desenvolvimento em 2025 e 2026 (DORA 2025, METR jul. 2025 e atualização de fev. 2026, Spec Kit). O Guia do Scrum de nov. 2020 continua a versão oficial. O "AI and Scrum" v2026.1 (Jocham e Sutherland, jan. 2026) é complemento do Scrum Guide Expansion Pack (conferido). Correções: a recusa da ficha vem do `conferir`, e não do `produto`. Teste com usuários pela curva de Nielsen (2000): cerca de 31% dos problemas por usuário e 85% com cinco. Os números do projeto Sentinel do FBI vieram de resenha do livro de Sutherland e devem ser conferidos na edição da Leya.
+
+Módulo 15 (encontro 16), de 20 para 26 slides. Novos: 4, o semestre na pasta do projeto, 6, a conferência da C2 na projeção, 11, o produto diante do dado errado, 13, o formulário conferido pelo script, 20, o índice do semestre, 24, depois da disciplina. Correções: o comando `c2` confere os encontros 3 a 16 e só verifica se os arquivos existem. O comando `apresentacao` passou a constar no deck. O `portfolio` grava um índice e três campos, sem espaço por bloco. Os tempos do roteiro de apresentação do aluno (2, 2, 4 e 2 min) ficaram, por serem parte da tarefa. Fontes: OWASP sobre validação de entrada, Topping (1998) e Hattie e Timperley (2007) sobre avaliação por pares e devolutiva.
+
+Roteiros 13, 14 e 15 renumerados, com descrições de teoria e demonstração atualizadas.
 
 ### 2 nov. 2026, módulos 10, 11 e 12, decks inteiros
 
@@ -130,6 +142,10 @@ Defeitos nos scripts encontrados na revisão de 2 nov. 2026. Os scripts não for
 - Roteiro 10, ciclo 10.3: fala em duplas e diz que o ciclo não usa modelo de linguagem, mas o script prevê a coluna `categoria_agente`. O deck segue o script. Decidir qual desenho vale.
 - `atividade_modulo11.py`: o `conferir` recusa "não" com acento, porque compara com "nao" (o deck avisa).
 - Roteiro 11: diz que o encontro não tem entrega avaliada, mas o deck tem slide de entrega com critério de correção. Decidir.
+- `atividade_modulo15.py`, lista `ENTREGAS` usada pelo comando `c2`: para os encontros 10 e 11 espera arquivos que começam por `entregas/modulo9-ciclo4` e `entregas/modulo10-ciclo3`, que nenhum deck nem script manda criar (as entregas reais são `modulo9-relatorio.md`, `modulo9-fluxo.csv` e `modulo10-codificacao.csv`). No encontro 4, o prefixo `modulo3-ciclo` não encontra o diário de alucinação. Um aluno que fez tudo verá esses encontros como ausentes na conferência da C2. Correção recomendada antes do encontro 16. O deck orienta o aluno a mostrar o arquivo e o commit.
+- `atividade_modulo13.py`: o `conferir` exige "nao consta" mesmo quando o documento trata das cinco categorias (o deck orienta a escrever "categorias que nao constam: nenhuma"). A docstring fala em quatro seções, e o modelo tem cinco. O `c1` só confere se os arquivos dos encontros 12 e 13 existem. A comparação com o critério escrito em casa foi para a seção 3 da devolutiva, porque o script não prevê arquivo próprio. Confirmar.
+- `atividade_modulo14.py`: aceita público genérico ("os gestores da secretaria") e história que descreve solução em vez de necessidade ("quero um botão de exportar para PDF"). O deck mostra o segundo caso como aceito e inadequado. O deck pede dois pedidos longos ao modelo por história, e o planejamento fala em dois por ciclo prático. Decidir.
+- Roteiros 13, 14 e 15: trechos antigos, fora das descrições atualizadas, ainda têm travessão em títulos, ponto e vírgula e "vale mais que".
 - `atividade_modulo12.py`: quando nenhuma linha é eliminável, o script manda escrever "nao - revisado", e a conferência recusa (só aceita linha que começa com "s"). A recusa de responsável vago compara o texto exato ("a equipe de TI" passa). Falta a base do art. 11, II, g (prevenção à fraude). Não confere `entregas/modulo12-ciclo3-exemplo.md`.
 
 - Em 2 nov. 2026 os decks (e os dois .pptx antigos) foram movidos para `slides/` e os scripts das atividades para `scripts/`. Na mesma data, os roteiros foram para `roteiros/`. Foram atualizados `index.html`, `README.md`, `indice-material-2026-2.md`, os roteiros e as ferramentas de `revisao/`. Os scripts receberam um ajuste de poucas linhas que muda o diretório de trabalho para a raiz quando estão em `scripts/`. O texto dos decks continua dizendo "execute atividade_moduloN.py", porque na turma o script é copiado para a raiz do projeto do aluno. Os endereços antigos do GitHub Pages (sem `slides/`) deixam de funcionar depois do próximo push.

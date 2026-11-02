@@ -147,6 +147,132 @@ body.mexeu #ajuda{opacity:1}
   #barra,#ajuda{display:none}
   .slide{display:block!important;page-break-after:always;box-shadow:none;transform:none!important}
 }
+/* ---- componentes acrescentados na revisão de nov. 2026 ---- */
+.mono{font-family:Consolas,"Cascadia Mono","Courier New",monospace}
+.fonte-nota{position:absolute;left:0;right:0;bottom:-2px;font-size:13px;color:var(--muted);line-height:1.3}
+.prompt.compacto{padding:12px 20px;margin-bottom:16px}
+.prompt.compacto p{font-size:17px;line-height:1.4;margin-top:6px}
+.prompt.compacto p+p{margin-top:6px}
+.prompt .cmd{font-style:normal;font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:16px}
+
+/* tabela de dados */
+.tab{width:100%;border-collapse:collapse;font-size:15px;line-height:1.3;color:var(--body)}
+.tab th{background:var(--vinho);color:#fff;font-weight:700;text-align:left;padding:7px 10px;font-size:14px;letter-spacing:.3px}
+.tab td{border-bottom:1px solid #e1e1e1;padding:7px 10px;vertical-align:top;background:#fff}
+.tab tr:nth-child(even) td{background:#fafafa}
+.tab td.lac{background:#FFF3D1!important;color:#7a5600;font-weight:700}
+.tab td .s{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+.tab td strong{color:var(--txt)}
+.chip{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.5px;padding:2px 8px;margin-bottom:4px;color:var(--txt)}
+.chip.ok{background:#CFEFEE}.chip.med{background:#FFE7A8}.chip.ruim{background:#F2CDD8;color:var(--vinho)}
+.badge{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--vinho);
+  color:#fff;font-size:12px;font-weight:700;margin-right:6px;vertical-align:1px;font-style:normal}
+
+/* duas colunas */
+.duascol{display:grid;grid-template-columns:var(--esq,1.4fr) var(--dir,1fr);gap:28px;height:100%}
+.duascol .col{display:flex;flex-direction:column;gap:14px;min-height:0}
+.steps.compacto{gap:12px}
+.steps.compacto strong{font-size:18px}
+.steps.compacto p{font-size:16px;line-height:1.35}
+.steps.compacto .num{flex:0 0 28px;height:28px;font-size:15px}
+
+/* fluxo horizontal */
+.fluxo{display:grid;grid-template-columns:repeat(var(--n,4),1fr);gap:34px;position:relative}
+.etapa{background:var(--card);border:1px solid #e3e3e3;border-top:6px solid var(--cor,var(--vinho));
+  padding:12px 16px 14px;position:relative}
+.etapa:not(:last-child)::after{content:"";position:absolute;right:-27px;top:50%;margin-top:-11px;
+  border-left:16px solid var(--vinho);border-top:11px solid transparent;border-bottom:11px solid transparent}
+.etapa .n{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;
+  background:var(--vinho);color:#fff;font-size:14px;font-weight:700}
+.etapa h4{display:inline;font-size:18px;color:var(--txt);margin-left:6px;vertical-align:2px}
+.etapa p{font-size:15.5px;line-height:1.38;margin-top:8px}
+.etapa .arq{display:block;margin-top:8px;font-size:13.5px;color:var(--vinho);
+  font-family:Consolas,"Cascadia Mono","Courier New",monospace;word-break:break-all}
+.trilha{margin-top:18px}
+.trilha .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1px;color:var(--muted);margin-bottom:6px}
+.trilha .barra-g{height:14px;background:linear-gradient(90deg,var(--teal) 0%,#9fd6c4 30%,var(--amarelo) 55%,var(--vinho) 100%)}
+.trilha .marcas{display:grid;grid-template-columns:repeat(4,1fr);gap:34px;font-size:13.5px;color:var(--muted);margin-top:5px}
+
+/* conceito (mesmo padrão dos módulos 2 e 3) */
+.def{background:var(--card2);border:1px solid #e3e3e3;border-left:9px solid var(--vinho);padding:12px 20px}
+.def .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1.2px;color:var(--vinho);text-transform:uppercase}
+.def p{font-size:17px;line-height:1.4;color:var(--txt);margin-top:5px}
+
+/* eixo acima dos cartões */
+.eixo{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;margin-bottom:14px;
+  font-size:14px;font-weight:700;color:var(--muted);letter-spacing:.4px}
+.eixo .seta{height:10px;position:relative;background:linear-gradient(90deg,var(--dourado),var(--teal))}
+.eixo .seta::after{content:"";position:absolute;right:-14px;top:-7px;border-left:16px solid var(--teal);
+  border-top:12px solid transparent;border-bottom:12px solid transparent}
+.cards.baixos{height:calc(100% - 40px)}
+.cards.baixos .card h3{font-size:18px;padding:12px 16px 2px}
+.cards.baixos .card .bloco{padding:8px 16px 0}
+.cards.baixos .card .bloco p{font-size:15.5px;line-height:1.36}
+
+/* grade de dimensões */
+.grade{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:14px;height:calc(100% - 22px)}
+.dim{background:var(--card);border:1px solid #e3e3e3;border-top:5px solid var(--cor);padding:10px 16px}
+.dim h4{font-size:19px;color:var(--vinho)}
+.dim h4 small{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.dim p{font-size:15.5px;line-height:1.36;margin-top:5px}
+.dim .med{display:block;font-size:14px;color:var(--txt);margin-top:7px;border-top:1px solid #ddd;padding-top:6px}
+.dim .med b{color:var(--muted);font-size:12.5px;letter-spacing:.6px}
+
+/* caixa lateral */
+.caixa{background:var(--card2);border:1px solid #e3e3e3;padding:12px 16px}
+.caixa.vinho{border-left:6px solid var(--vinho)}
+.caixa.dourado{border-left:6px solid var(--dourado)}
+.caixa.teal{border-left:6px solid var(--teal)}
+.caixa .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1px;color:var(--vinho);margin-bottom:4px}
+.caixa p{font-size:15.5px;line-height:1.38}
+.caixa p+p{margin-top:6px}
+.legenda{list-style:none}
+.legenda li{font-size:15.5px;line-height:1.35;margin-bottom:8px;display:flex;gap:6px}
+.legenda li b{color:var(--txt)}
+
+/* ficha do mapa de dados */
+.ficha{display:grid;grid-template-columns:1fr 1fr;gap:14px;height:calc(100% - 64px)}
+.ficha .grupo{background:var(--card);border:1px solid #e3e3e3;border-top:5px solid var(--cor)}
+.ficha .grupo>header{font-size:16px;font-weight:700;color:var(--vinho);padding:8px 14px 2px}
+.ficha .grupo>header span{color:var(--muted);font-weight:400;font-size:14px;margin-left:6px}
+.ficha dl{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;padding:6px 14px 10px;font-size:14.5px;line-height:1.3}
+.ficha dt{font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:13.5px;color:var(--vinho);padding-top:1px}
+.ficha dd{color:var(--txt)}
+.rodape-corpo{margin-top:12px;font-size:15.5px;line-height:1.4;color:var(--body)}
+
+/* svg */
+.fig{display:block;width:100%;height:auto}
+.fig text{font-family:"Segoe UI",Calibri,"Helvetica Neue",Arial,sans-serif}
+
+/* ajustes após conferência visual */
+.tab.apertada{font-size:14.5px}
+.tab.apertada td{padding:6px 10px}
+.legenda .badge{flex:0 0 20px;margin-top:1px}
+.dim p{font-size:17px}
+.dim .med{font-size:15.5px}
+.dim h4{font-size:21px}
+.cards.baixos .card .bloco p{font-size:16.5px}
+.eixo{gap:26px}
+.ficha dl{font-size:16.5px;gap:6px 14px;padding:8px 14px 12px}
+.ficha dt{font-size:15px}
+.ficha .grupo>header{font-size:17.5px}
+.etapa p{font-size:16.5px}
+.etapa .arq{word-break:normal;overflow-wrap:break-word}
+.steps.cols-3.compacto p{font-size:17px}
+.steps.cols-3.compacto strong{font-size:19px}
+
+/* blocos de saída de terminal */
+.terminal{background:#262626;color:#e9e9e9;font-family:Consolas,"Cascadia Mono","Courier New",monospace;
+  font-size:14px;line-height:1.38;padding:12px 16px;white-space:pre;overflow:hidden;margin:0}
+.terminal .hl{color:#FEC84D;font-weight:700}
+
+/* acrescentado no módulo 9: trecho de arquivo de texto */
+.codigo{background:#F7F4EE;border:1px solid #e3e3e3;border-left:6px solid var(--dourado);color:var(--txt);
+  font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:14px;line-height:1.55;padding:10px 14px;
+  white-space:pre;overflow:hidden;margin:0}
+.codigo b{color:var(--vinho)}
+.tab.mini td{padding:4px 10px}
+.tab td.mono{font-size:14px;color:var(--vinho)}
 </style>
 </head>
 <body>
@@ -157,59 +283,59 @@ body.mexeu #ajuda{opacity:1}
       <span class="mod">MÓDULO 13</span>
       <h1>Decisão apoiada por IA: contratos, editais e devolutivas</h1>
       <span class="tracinho"></span>
-      <p class="sub">Encontro 14 · Entrega C1, 40% da nota 3</p>
+      <p class="sub">Encontro 14 · Matriz de critérios, leitura de contrato, devolutiva e entrega C1</p>
       <p class="pe">DECC0294 · Tecnologia da Informação e Comunicação Aplicada à Administração · 2026.2</p>
     </section>
 <section class="slide conteudo" data-i="1">
     <span class="barra"></span>
     <span class="eyebrow">VISÃO GERAL DO MÓDULO</span>
     <h2>O que você vai construir hoje</h2>
-    <p class="sub">O encontro em que tudo que você fez até aqui vira uma decisão escrita e assinável.</p>
+    <p class="sub">A decisão do documento que você trouxe, escrita de modo que outra pessoa possa refazer a conta</p>
     <div class="corpo"><div class="overview">
     <article class="ciclo">
       <span class="topo" style="background:#D4B277"></span>
-      <span class="rot" >CICLO 13.1</span>
+      <span class="rot">CICLO 13.1</span>
       <h3>O critério vem antes da alternativa</h3>
       <div class="pe">
         <span class="rule" style="background:#D4B277"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Matriz de critérios com pesos justificados</p>
+        <p>Matriz com critérios verificáveis e pesos justificados</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#0AB0AB"></span>
-      <span class="rot" >CICLO 13.2</span>
+      <span class="rot">CICLO 13.2</span>
       <h3>Leitura crítica de documento de decisão</h3>
       <div class="pe">
         <span class="rule" style="background:#0AB0AB"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Mapa de riscos e obrigações do documento</p>
+        <p>Mapa do documento com trecho de origem e ausências marcadas</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#FEC84D"></span>
-      <span class="rot" >CICLO 13.3</span>
+      <span class="rot">CICLO 13.3</span>
       <h3>A devolutiva escrita e assinada</h3>
       <div class="pe">
         <span class="rule" style="background:#FEC84D"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Devolutiva com fundamentação</p>
+        <p>Devolutiva com recomendação própria e norma conferida</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#D4B277"></span>
-      <span class="rot" >CICLO 13.4</span>
-      <h3>Entrega C1</h3>
+      <span class="rot">CICLO 13.4</span>
+      <h3>Sensibilidade da decisão e entrega C1</h3>
       <div class="pe">
         <span class="rule" style="background:#D4B277"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Decisão recomendada e teste de sensibilidade</p>
+        <p>Matriz avaliada pelo script e C1 conferida arquivo por arquivo</p>
       </div>
     </article></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Estrutura do módulo</span>
-      <span class="pag">2 / 26</span>
+      <span class="pag">2 / 28</span>
     </footer>
   </section>
 <section class="slide divisor" data-i="2">
@@ -219,139 +345,151 @@ body.mexeu #ajuda{opacity:1}
         <h2>O critério vem antes da alternativa</h2>
         <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">3 / 26</span>
+      <span class="pag">3 / 28</span>
     </section>
 <section class="slide conteudo" data-i="3">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 13.1 · TEORIA</span>
-    <h2>Por que a ordem importa</h2>
-    <p class="sub">Critério escolhido depois de ver as opções é justificativa, não critério</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Quem escolhe o critério depois já escolheu a alternativa</strong><p>A ordem inversa produz uma decisão tomada por outro motivo e vestida de análise. Ela desmonta na primeira auditoria e no primeiro recurso.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>O peso declarado é o que se discute</strong><p>Duas pessoas podem discordar de quanto vale o prazo contra o preço. Não podem discordar da conta, se o peso está escrito.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>A motivação é exigência legal, não formalidade</strong><p>Lei 9.784, artigo 50: atos que neguem, limitem ou afetem direitos, e os que decidam processos administrativos, precisam de motivação explícita, clara e congruente.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>O modelo não decide, e não assina</strong><p>Ele organiza, compara e redige. A escolha do critério, a atribuição do peso e a assinatura são de quem responde pelo ato.</p></div>
-    </li></ol></div>
+    <h2>Critério e peso antes de abrir as propostas</h2>
+    <p class="sub">A ordem dos cinco passos é a que permite a outra pessoa conferir a decisão depois</p>
+    <div class="corpo"><div class="fluxo" style="--n:5">
+      <div class="etapa" style="--cor:#D4B277"><span class="n">1</span><h4>Critérios</h4>
+        <p>De quatro a sete, cada um com o lugar do documento onde se verifica.</p></div>
+      <div class="etapa" style="--cor:#D4B277"><span class="n">2</span><h4>Pesos</h4>
+        <p>Somando 100, com uma frase de justificativa por critério.</p></div>
+      <div class="etapa" style="--cor:#0AB0AB"><span class="n">3</span><h4>Alternativas</h4>
+        <p>As propostas ou opções em exame, lidas só depois dos passos 1 e 2.</p></div>
+      <div class="etapa" style="--cor:#0AB0AB"><span class="n">4</span><h4>Notas</h4>
+        <p>De 0 a 10 por critério, com a razão e a fonte no documento.</p></div>
+      <div class="etapa" style="--cor:#8D0333"><span class="n">5</span><h4>Sensibilidade</h4>
+        <p>O script move o maior peso e informa se a vencedora muda.</p></div>
+    </div>
+    <div class="def" style="margin-top:18px"><span class="rot">Pensamento orientado a valores (value-focused thinking)</span>
+      <p>Keeney (1992) propõe definir o que importa na decisão antes de listar as alternativas. Quem escolhe o critério depois de ler as propostas tende a descrever as qualidades da proposta que já prefere.</p></div>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:14px">
+      <div class="caixa dourado"><span class="rot">LICITAÇÃO (LEI Nº 14.133/2021)</span><p>Os fatores de julgamento estão no edital, publicado antes das propostas. Na técnica e preço, a ponderação é fixada no edital e a proposta técnica vale no máximo 70% (art. 36, § 2º).</p></div>
+      <div class="caixa vinho"><span class="rot">LINDB, ART. 20, PARÁGRAFO ÚNICO</span><p>A motivação demonstra a necessidade e a adequação da medida, inclusive em face das possíveis alternativas. A matriz registra quais alternativas foram comparadas e por qual régua.</p></div>
+    </div>
+    <p class="fonte-nota">Keeney, Value-Focused Thinking, Harvard University Press, 1992. TCU, Licitações e Contratos, 3.4.4. Decreto-Lei nº 4.657/1942, com redação da Lei nº 13.655/2018. Consulta em 02/11/2026.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 13.1 · Teoria</span>
-      <span class="pag">4 / 26</span>
+      <span class="pag">4 / 28</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="4">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 13.1 · TEORIA</span>
-    <h2>A matriz de decisão</h2>
-    <p class="sub">Quatro colunas que transformam opinião em conta conferível</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">CRITÉRIO</header>
-      <h3>O que importa nesta decisão</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Como escrever</span>
-          <p>Um por linha, mensurável ou verificável. "Prazo de entrega em dias" serve. "Qualidade" não serve enquanto não for definida.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Quantos</span>
-          <p>Entre quatro e sete. Menos que isso esconde a decisão; mais que isso dilui tudo e o resultado empata.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">PESO</header>
-      <h3>Quanto cada critério vale</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Como atribuir</span>
-          <p>Percentual, somando cem. O peso vem antes de ver as alternativas e fica registrado com a justificativa.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que ele revela</span>
-          <p>Preço com peso 40 e prazo de entrega com peso 35: cinco pontos de diferença. Quando dois critérios ficam quase no mesmo peso, provavelmente um dos dois não é critério, é consequência do outro.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">NOTA E SENSIBILIDADE</header>
-      <h3>A avaliação e o teste dela</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">A nota</span>
-          <p>De 0 a 10 por alternativa em cada critério, com a razão escrita. Nota 8 em preço com peso 40 dá 3,2 pontos ponderados; nota 6 em prazo com peso 35 dá 2,1. O script soma essas parcelas em todos os critérios e ordena o resultado.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O teste</span>
-          <p>O script move o maior peso para cima e para baixo e diz se a vencedora muda. Decisão que vira com pouca mudança de peso é decisão frágil, e isso precisa constar.</p>
-        </div>
-    </article></div></div>
+    <h2>A matriz de decisão por soma ponderada</h2>
+    <p class="sub">Cada nota tem a razão escrita abaixo dela. A coluna de peso foi preenchida antes das três seguintes</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:30%">CRITÉRIO</th><th style="width:9%">PESO</th><th style="width:20%">PROPOSTA A</th><th style="width:20%">PROPOSTA B</th><th style="width:21%">PROPOSTA C</th></tr>
+      <tr><td><strong>Preço total</strong></td><td>40</td><td>9 <span class="s">R$ 412 mil, a menor</span></td><td>6 <span class="s">R$ 468 mil, 13,6% acima</span></td><td>7 <span class="s">R$ 449 mil, 9,0% acima</span></td></tr>
+      <tr><td><strong>Prazo de atendimento de chamado</strong></td><td>25</td><td>5 <span class="s">48 horas</span></td><td>9 <span class="s">8 horas</span></td><td>7 <span class="s">24 horas</span></td></tr>
+      <tr><td><strong>Experiência comprovada</strong></td><td>20</td><td>6 <span class="s">2 atestados</span></td><td>8 <span class="s">5 atestados</span></td><td>7 <span class="s">3 atestados</span></td></tr>
+      <tr><td><strong>Garantia dos serviços</strong></td><td>15</td><td>6 <span class="s">90 dias</span></td><td>8 <span class="s">180 dias</span></td><td>6 <span class="s">90 dias</span></td></tr>
+      <tr><td><strong>Nota ponderada</strong></td><td>100</td><td><strong>6,95</strong></td><td class="lac">7,45</td><td><strong>6,85</strong></td></tr>
+    </table>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:14px">
+      <div class="def"><span class="rot">Soma ponderada (weighted sum)</span>
+        <p>Nota final = soma de peso × nota ÷ 100, em todos os critérios. O resultado fica na escala de 0 a 10. É o cálculo do comando avaliar.</p></div>
+      <div class="caixa dourado"><span class="rot">A CONTA DA PROPOSTA B</span>
+        <p class="mono" style="font-size:15px">0,40×6 + 0,25×9 + 0,20×8 + 0,15×8<br>= 2,40 + 2,25 + 1,60 + 1,20 = 7,45</p>
+        <p>A diferença para a segunda colocada é (7,45 − 6,95) ÷ 7,45 = 6,71%.</p></div>
+    </div>
+    <p class="fonte-nota">Exemplo ilustrativo, com propostas fictícias para manutenção predial. Os mesmos números aparecem na demonstração e no teste de sensibilidade do ciclo 13.4.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 13.1 · Teoria</span>
-      <span class="pag">5 / 26</span>
+      <span class="pag">5 / 28</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="5">
     <span class="barra"></span>
-    <span class="eyebrow">CICLO 13.1 · DEMONSTRAÇÃO</span>
-    <h2>Uma matriz montada na projeção</h2>
-    <p class="sub">Contratação de serviço de manutenção, com três propostas</p>
-    <div class="corpo"><div class="prompt">
-    <span class="rot">COMANDOS EXECUTADOS PELO AGENTE</span>
-    <p>python atividade_modulo13.py matriz<br><br>python atividade_modulo13.py avaliar<br><br>O primeiro cria a planilha com critérios, pesos e alternativas. O segundo confere se os pesos somam cem, calcula a nota ponderada de cada alternativa e roda o teste de sensibilidade sobre o critério de maior peso.</p>
-  </div>
-<ol class="steps cols-3" style="--linhas:1">
-    <li><span class="num">1</span>
-      <div><strong>Os pesos entram antes das notas</strong><p>É a única ordem que sustenta a decisão depois.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>A justificativa do peso é obrigatória</strong><p>Sem ela, o script recusa a avaliação.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>O empate técnico é resultado</strong><p>Diferença menor que 5% não decide nada, e o script avisa.</p></div>
-    </li></ol></div>
+    <span class="eyebrow">CICLO 13.1 · TEORIA</span>
+    <h2>Do critério vago ao critério verificável</h2>
+    <p class="sub">A régua da nota é escrita junto com o critério e antes de abrir as propostas</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:17%">CRITÉRIO VAGO</th><th style="width:27%">VERSÃO VERIFICÁVEL</th><th style="width:22%">ONDE SE VERIFICA</th><th style="width:34%">RÉGUA DA NOTA, DEFINIDA ANTES</th></tr>
+      <tr><td>Qualidade</td><td>Atestados de serviço semelhante nos últimos cinco anos</td><td>Anexo de habilitação da proposta</td><td>5 ou mais = 8. De 3 a 4 = 7. Até 2 = 6.</td></tr>
+      <tr><td>Agilidade</td><td>Prazo de atendimento de chamado, em horas</td><td>Item de nível de serviço da proposta</td><td>Até 8 h = 9. Até 24 h = 7. Até 48 h = 5.</td></tr>
+      <tr><td>Boa proposta</td><td>Preço total em relação à menor proposta válida</td><td>Planilha de preços</td><td>Menor preço = 9. Até 10% acima = 7. Até 15% acima = 6.</td></tr>
+      <tr><td>Confiabilidade</td><td>Prazo de garantia dos serviços, em dias</td><td>Cláusula de garantia</td><td>180 dias ou mais = 8. De 90 a 179 dias = 6.</td></tr>
+    </table>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:16px">
+      <div class="caixa vinho"><span class="rot">CRITÉRIO QUE NÃO SEPARA</span><p>Se todas as propostas oferecem a mesma garantia, o critério dá a mesma nota a todas e não altera a ordem, qualquer que seja o peso. Keeney (1992, p. 147) chama de erro crítico mais comum fixar o peso sem olhar a distância entre a melhor e a pior alternativa no critério.</p></div>
+      <div class="caixa teal"><span class="rot">DUAS PERGUNTAS PARA CADA LINHA</span><p>Outra pessoa, com o mesmo documento, chegaria à mesma nota? O documento tem a informação que o critério pede? Se a resposta for não, o critério volta para a reescrita.</p></div>
+    </div>
+    <p class="fonte-nota">Keeney, Value-Focused Thinking, 1992, p. 147, citado por J. Baron sobre sensibilidade à amplitude (sas.upenn.edu/~baron), consulta em 02/11/2026. Réguas ilustrativas, as da matriz do slide anterior.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 13.1 · Demonstração</span>
-      <span class="pag">6 / 26</span>
+      <span class="centro">Ciclo 13.1 · Teoria</span>
+      <span class="pag">6 / 28</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="6">
     <span class="barra"></span>
+    <span class="eyebrow">CICLO 13.1 · DEMONSTRAÇÃO</span>
+    <h2>A matriz avaliada pelo script</h2>
+    <p class="sub">Contratação de manutenção predial com três propostas, a mesma matriz do slide 5</p>
+    <div class="corpo"><div class="prompt compacto">
+    <span class="rot">INSTRUÇÕES DADAS AO AGENTE</span>
+    <p><span class="cmd">"execute atividade_modulo13.py com o comando matriz"</span> e, com a matriz preenchida, <span class="cmd">"execute atividade_modulo13.py com o comando avaliar"</span></p>
+  </div>
+  <div class="duascol" style="--esq:1.22fr;--dir:1fr;height:auto">
+    <div class="col" style="gap:6px">
+      <pre class="terminal">AVALIACAO DA MATRIZ
+Ranking (nota ponderada, de 0 a 10)
+  1. Proposta B                     <span class="hl">7,45</span>
+  2. Proposta A                     6,95
+  3. Proposta C                     6,85
+A diferenca entre a primeira e a segunda e de 6,71%.
+TESTE DE SENSIBILIDADE sobre 'preco total' (peso atual 40,00)
+  peso para cima para 60,00: <span class="hl">muda para Proposta A</span>
+  peso para baixo para 20,00: continua Proposta B
+A vencedora MUDA dentro da faixa testada. A decisao
+depende de um julgamento de peso, e a devolutiva precisa
+dizer qual julgamento e quem o fez.
+Resultado gravado em saidas/resultado-decisao.md</pre>
+      <p class="fonte-nota" style="position:static">Saída do script com a matriz do slide 5, abreviada, com uma quebra de linha acrescentada.</p>
+    </div>
+    <div class="col" style="gap:9px">
+      <div class="caixa vinho"><span class="rot">O SCRIPT RECUSA A AVALIAÇÃO</span><p>Menos de 4 ou mais de 7 critérios. Pesos que não somam 100. Justificativa, razão ou fonte vazia. Nota fora de 0 a 10. Alternativa sem nota. Peso diferente no mesmo critério.</p></div>
+      <div class="caixa dourado"><span class="rot">FORMATO DO ARQUIVO</span><p>Uma linha por par de critério e alternativa, colunas separadas por ponto e vírgula. Critério iniciado por EXEMPLO é ignorado.</p></div>
+      <div class="caixa teal"><span class="rot">CONFERÊNCIA À MÃO</span><p>Refaça a conta da vencedora, como no slide 5, antes de usar o resultado.</p></div>
+    </div>
+  </div></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 13.1 · Demonstração</span>
+      <span class="pag">7 / 28</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="7">
+    <span class="barra"></span>
     <span class="eyebrow">CICLO 13.1 · PRÁTICA</span>
     <h2>Sua vez: a matriz do seu caso</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Pegue a decisão do documento que você trouxe</strong><p>Escolha de proposta, aprovação de pedido, priorização de demanda, renovação de contrato.</p></div>
+      <div><strong>Escolha a decisão do documento que você trouxe</strong><p>Escolha de proposta, renovação de contrato, aprovação de pedido ou priorização de demanda. Liste as alternativas, sem lê-las em detalhe.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Escreva de quatro a sete critérios</strong><p>Cada um mensurável ou verificável no documento.</p></div>
+      <div><strong>Escreva de quatro a sete critérios com régua</strong><p>Cada um com o lugar do documento onde se verifica. Depois, peça ao agente critérios para esse tipo de decisão, sem mostrar as alternativas, e compare com os seus.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Atribua os pesos e justifique cada um</strong><p>Somando cem. A justificativa é uma frase por critério.</p></div>
+      <div><strong>Crie a matriz e atribua os pesos</strong><p>"execute atividade_modulo13.py com o comando matriz" grava entregas/matriz-decisao.csv. Apague as linhas EXEMPLO. Pesos somando 100 e uma frase de justificativa por critério.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Compare com o critério que você escreveu em casa</strong><p>Mudou depois de olhar o documento? Registre o que mudou e por quê.</p></div>
+      <div><strong>Compare com o critério escrito em casa</strong><p>Registre em três linhas o que mudou depois de ler o documento e por quê. O texto entra na seção 3 da devolutiva, no ciclo 13.3.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 13.1 · Prática</span>
-      <span class="pag">7 / 26</span>
+      <span class="pag">8 / 28</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="7">
+<section class="slide conteudo" data-i="8">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 13.1 · ENTREGA</span>
     <h2>Matriz de critérios com pesos justificados</h2>
@@ -359,111 +497,119 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>De quatro a sete critérios, cada um mensurável ou verificável.</li><li>Os pesos somando cem, com uma frase de justificativa por critério.</li><li>A comparação com o critério que você escreveu antes de ver o documento.</li><li>As alternativas identificadas, ainda sem nota.</li></ul>
+      <ul><li>De quatro a sete critérios, cada um com o lugar de verificação no documento.</li><li>Os pesos somando 100, com a justificativa de cada um.</li><li>As alternativas, uma linha por par de critério e alternativa, ainda sem nota.</li><li>A comparação com o critério escrito em casa, guardada para a devolutiva.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>entregas/matriz-decisao.csv</p>
+        <p><span class="mono" style="font-size:15px">entregas/matriz-decisao.csv</span></p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Critério que não pode ser verificado no documento não é critério nesta decisão. O script pede a fonte de cada avaliação no ciclo 13.4.</p>
+        <p>Critério sem lugar de verificação no documento é devolvido para reescrita. As notas ficam para o ciclo 13.4, quando o script exige razao_da_nota e fonte_no_documento em cada linha.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 13.1 · Entrega</span>
-      <span class="pag">8 / 26</span>
+      <span class="pag">9 / 28</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="8">
+<section class="slide divisor" data-i="9">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">13.2</span></div>
       <div class="dir">
         <h2>Leitura crítica de documento de decisão</h2>
         <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">9 / 26</span>
+      <span class="pag">10 / 28</span>
     </section>
-<section class="slide conteudo" data-i="9">
+<section class="slide conteudo" data-i="10">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 13.2 · TEORIA</span>
-    <h2>O que se procura em um contrato ou edital</h2>
-    <p class="sub">Cinco categorias que cobrem quase todo risco de documento administrativo</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:5">
-    <li><span class="num">1</span>
-      <div><strong>Obrigações de cada parte, com prazo</strong><p>Quem faz o quê, até quando. A obrigação sem prazo é a que gera conflito no sexto mês.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Condições de pagamento e reajuste</strong><p>Quando vence, o que precisa estar aprovado antes, qual índice corrige e a partir de quando.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Penalidades e rescisão</strong><p>O que acontece no atraso, quanto custa, quem aplica e como se rescinde. É a parte menos lida e a mais cara.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Escopo e o que ficou de fora</strong><p>O silêncio do documento é onde nasce o aditivo. Uma lista do que não está incluído vale tanto quanto a do que está.</p></div>
-    </li>
-    <li><span class="num">5</span>
-      <div><strong>Fiscalização e aceite</strong><p>Quem atesta, contra qual critério, com que registro. Sem isso, o pagamento fica sem base e o gestor fica exposto.</p></div>
-    </li></ol></div>
+    <h2>Cinco categorias e as cláusulas exigidas por lei</h2>
+    <p class="sub">O art. 92 lista dezenove cláusulas necessárias em todo contrato administrativo. O mapa usa cinco grupos delas</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:18%">CATEGORIA DO MAPA</th><th style="width:32%">O QUE PROCURAR</th><th style="width:17%">LEI Nº 14.133/2021</th><th style="width:33%">RISCO QUANDO FALTA</th></tr>
+      <tr><td><strong>Obrigações com prazo</strong></td><td>Quem faz o quê e até quando. Início, etapas, entrega.</td><td>art. 92, VII e XIV</td><td>Sem prazo escrito, não há atraso a apurar nem multa a aplicar.</td></tr>
+      <tr><td><strong>Pagamento e reajuste</strong></td><td>Preço, condição de pagamento, prazo de liquidação, data-base e periodicidade do reajuste.</td><td>art. 92, V e VI</td><td>Pedido de reajuste sem índice nem data-base para comparar.</td></tr>
+      <tr><td><strong>Penalidades e rescisão</strong></td><td>Multas e sua base de cálculo. Casos de extinção, termo que a lei usa no lugar de rescisão.</td><td>art. 92, XIV e XIX</td><td>Multa sem base de cálculo, contestada pela contratada.</td></tr>
+      <tr><td><strong>Escopo e exclusões</strong></td><td>Objeto e seus elementos característicos. Lista do que não está incluído.</td><td>art. 92, I</td><td>Serviço não descrito vira pedido de termo aditivo.</td></tr>
+      <tr><td><strong>Fiscalização e aceite</strong></td><td>Fiscal designado, modelo de gestão, recebimento provisório e definitivo.</td><td>arts. 92, XVIII, 117 e 140</td><td>Nota fiscal atestada sem critério de aceite registrado.</td></tr>
+    </table>
+    <div class="duascol" style="--esq:1fr;--dir:1fr;height:auto;margin-top:14px">
+      <div class="caixa dourado"><span class="rot">CONTRATO ENTRE EMPRESAS</span><p>Não segue o art. 92. As cinco categorias continuam como roteiro de leitura, e a ausência de uma delas é o primeiro item do mapa.</p></div>
+      <div class="caixa teal"><span class="rot">EDITAL E TERMO DE REFERÊNCIA</span><p>Quando há minuta de contrato, ela vem anexa ao edital. O mapa pode ser feito sobre a minuta, antes da assinatura.</p></div>
+    </div>
+    <p class="fonte-nota">TCU, Licitações e Contratos: Orientações e Jurisprudência, itens 5.11.1 e 6.1.4 (licitacoesecontratos.tcu.gov.br). Consulta em 02/11/2026.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 13.2 · Teoria</span>
-      <span class="pag">10 / 26</span>
-    </footer>
-  </section>
-<section class="slide conteudo" data-i="10">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 13.2 · DEMONSTRAÇÃO</span>
-    <h2>Extração com trecho de origem</h2>
-    <p class="sub">A técnica do encontro 11, aplicada a documento que gera obrigação</p>
-    <div class="corpo"><div class="prompt">
-    <span class="rot">INSTRUÇÃO DADA AO AGENTE</span>
-    <p>"Leia o documento em anexo. Para cada uma das cinco categorias (obrigações com prazo, pagamento e reajuste, penalidades e rescisão, escopo e exclusões, fiscalização e aceite), liste o que o documento diz. Para cada item, transcreva entre aspas o trecho exato e informe a cláusula ou o item onde ele está. Se uma categoria não estiver tratada no documento, escreva NAO CONSTA e não preencha com o que costuma constar. Grave em entregas/mapa-documento.md."</p>
-  </div>
-<ol class="steps cols-3" style="--linhas:1">
-    <li><span class="num">1</span>
-      <div><strong>O "não preencha com o que costuma constar" é o núcleo</strong><p>Sem essa frase, o modelo completa o documento com o edital médio que ele viu no treino.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>NAO CONSTA é o achado mais valioso</strong><p>A cláusula ausente é o risco que ninguém viu.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Cada trecho é conferido no documento</strong><p>Por amostragem, na frente da turma.</p></div>
-    </li></ol></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 13.2 · Demonstração</span>
-      <span class="pag">11 / 26</span>
+      <span class="pag">11 / 28</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="11">
     <span class="barra"></span>
+    <span class="eyebrow">CICLO 13.2 · DEMONSTRAÇÃO</span>
+    <h2>Extração com trecho de origem e ausências</h2>
+    <p class="sub">A conferência de três trechos no documento é feita na projeção, com a busca do leitor de PDF</p>
+    <div class="corpo"><div class="prompt compacto">
+    <span class="rot">INSTRUÇÃO DADA AO AGENTE</span>
+    <p>"Para cada uma das cinco categorias, transcreva entre aspas o trecho exato e informe a cláusula. Se a categoria não estiver tratada, escreva NAO CONSTA e não preencha com o que costuma constar. Grave em entregas/mapa-documento.md."</p>
+  </div>
+  <div class="duascol" style="--esq:1.08fr;--dir:1fr;height:auto">
+    <div class="col" style="gap:6px">
+      <pre class="codigo"><b>## Pagamento e reajuste</b>
+- "O pagamento sera efetuado em ate 30 dias
+  apos o atesto da nota fiscal." (clausula 6.1)
+- Reajuste: NAO CONSTA
+<b>## Escopo e exclusoes</b>
+- "Manutencao preventiva e corretiva das
+  instalacoes eletricas e hidraulicas." (clausula 2.1)
+- Exclusoes: NAO CONSTA
+<b>## Fiscalizacao e aceite</b>
+- "A fiscalizacao sera exercida por servidor
+  designado por portaria." (clausula 11.1)</pre>
+      <p class="fonte-nota" style="position:static">Trecho ilustrativo do mapa, com três das cinco categorias, sobre um contrato fictício de manutenção predial.</p>
+    </div>
+    <div class="col" style="gap:9px">
+      <div class="caixa vinho"><span class="rot">POR QUE A REGRA DE AUSÊNCIA</span><p>Sem ela, o modelo que não acha a cláusula tende a escrever a de contratos parecidos, com número de item plausível. É confabulação.</p></div>
+      <div class="caixa dourado"><span class="rot">O QUE O COMANDO CONFERIR VERIFICA</span><p>As cinco categorias pelo nome, ao menos um trecho entre aspas e ao menos uma marca NAO CONSTA. Ele não verifica se o trecho existe no documento.</p></div>
+      <div class="caixa teal"><span class="rot">POR SEÇÃO</span><p>Em texto longo, o trecho do meio é recuperado com menos acerto (módulo 10). Peça uma seção por vez.</p></div>
+    </div>
+  </div></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 13.2 · Demonstração</span>
+      <span class="pag">12 / 28</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="12">
+    <span class="barra"></span>
     <span class="eyebrow">CICLO 13.2 · PRÁTICA</span>
     <h2>Sua vez: mapa do documento</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Rode a extração por seção, não pelo arquivo inteiro</strong><p>Documento longo estoura o contexto do modelo gratuito. Duas requisições bastam.</p></div>
+      <div><strong>Peça a extração seção por seção</strong><p>A instrução do slide anterior, uma vez para cada parte do documento. O agente acrescenta ao mesmo arquivo, entregas/mapa-documento.md.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Confira três trechos escolhidos por você</strong><p>Procure a citação no documento. Se não achar, marque como não confirmada.</p></div>
+      <div><strong>Confira três trechos escolhidos por você</strong><p>Busque cada citação no documento. Se não encontrar, marque o item como não confirmado e mantenha o registro da tentativa.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Liste o que ficou como NAO CONSTA</strong><p>Essa lista vira a seção de riscos da sua devolutiva.</p></div>
+      <div><strong>Escreva o risco de cada NAO CONSTA</strong><p>Uma linha por ausência. Se o documento trata das cinco categorias, escreva a linha "categorias que nao constam: nenhuma", porque o script procura essa marca.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Marque quais itens alimentam a matriz</strong><p>Cada critério do ciclo 13.1 precisa ter onde ser verificado.</p></div>
+      <div><strong>Ligue o mapa à matriz</strong><p>Ao lado de cada critério do ciclo 13.1, o item do mapa onde ele se verifica. Critério sem item no mapa volta para a reescrita.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 13.2 · Prática</span>
-      <span class="pag">12 / 26</span>
+      <span class="pag">13 / 28</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="12">
+<section class="slide conteudo" data-i="13">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 13.2 · ENTREGA</span>
     <h2>Mapa de riscos e obrigações do documento</h2>
@@ -471,158 +617,143 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>As cinco categorias preenchidas, com trecho de origem e localização.</li><li>A lista do que consta como NAO CONSTA, com o risco de cada ausência.</li><li>A conferência de três trechos, com o resultado de cada uma.</li><li>A ligação entre os itens do mapa e os critérios da matriz.</li></ul>
+      <ul><li>As cinco categorias, com trecho entre aspas e cláusula de origem.</li><li>Cada ausência marcada como NAO CONSTA, com o risco que ela cria.</li><li>A conferência de três trechos, com o resultado de cada uma.</li><li>A ligação entre os itens do mapa e os critérios da matriz.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>entregas/mapa-documento.md</p>
+        <p><span class="mono" style="font-size:15px">entregas/mapa-documento.md</span></p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Trecho que não foi localizado no documento sai do mapa ou vai marcado como não confirmado. Não se apaga o registro da tentativa.</p>
+        <p>O comando conferir procura as cinco categorias, trechos entre aspas e a marca NAO CONSTA. A correção abre o documento e confere trechos por amostragem. Trecho não localizado fica no mapa como não confirmado.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 13.2 · Entrega</span>
-      <span class="pag">13 / 26</span>
+      <span class="pag">14 / 28</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="13">
+<section class="slide divisor" data-i="14">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">13.3</span></div>
       <div class="dir">
         <h2>A devolutiva escrita e assinada</h2>
-        <p class="etapas">Teoria · Prática · Entrega</p>
+        <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">14 / 26</span>
+      <span class="pag">15 / 28</span>
     </section>
-<section class="slide conteudo" data-i="14">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 13.3 · TEORIA</span>
-    <h2>A estrutura de uma devolutiva que se sustenta</h2>
-    <p class="sub">Vale para parecer, nota técnica, resposta a recurso e devolutiva de avaliação</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">O QUE FOI PEDIDO</header>
-      <h3>Objeto e limite</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que entra</span>
-          <p>A pergunta exata que se responde e o que ficou fora do exame.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Por que importa</span>
-          <p>Devolutiva sem limite declarado é lida como se respondesse tudo, inclusive o que não foi analisado.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">O QUE FOI EXAMINADO</header>
-      <h3>Base da análise</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que entra</span>
-          <p>Documentos, dados e datas. Onde cada informação foi buscada.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Por que importa</span>
-          <p>É o que permite a outra pessoa refazer o caminho e chegar ao mesmo lugar, ou discordar com fundamento.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">A CONCLUSÃO E O FUNDAMENTO</header>
-      <h3>Resposta e por quê</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que entra</span>
-          <p>A recomendação, o critério que a sustenta e a norma ou cláusula aplicável.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Por que importa</span>
-          <p>Conclusão sem fundamento explícito é opinião. Motivação clara e congruente é o que o artigo 50 exige.</p>
-        </div>
-    </article></div></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 13.3 · Teoria</span>
-      <span class="pag">15 / 26</span>
-    </footer>
-  </section>
 <section class="slide conteudo" data-i="15">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 13.3 · TEORIA</span>
-    <h2>O que o modelo escreve e o que ele não pode escrever</h2>
-    <p class="sub">A divisão que protege quem assina</p>
-    <div class="corpo"><div class="cards cols-2">
-    <article class="card">
-      <header style="background:#0AB0AB">O MODELO FAZ BEM</header>
-      <h3>Forma, organização e clareza</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que delegar</span>
-          <p>Estruturar a seção, padronizar a linguagem, reduzir a redundância, listar o que foi examinado, apontar contradição entre trechos.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Como conferir</span>
-          <p>Você lê e reconhece o próprio raciocínio, com melhor redação. Se não reconhecer, não é sua devolutiva.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#D4B277">O MODELO NÃO PODE</header>
-      <h3>Fundamento, número e norma</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que não delegar</span>
-          <p>Citar artigo de lei sem conferência, atribuir valor que não está no documento, concluir pela recomendação, inventar o histórico do processo.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O risco concreto</span>
-          <p>Artigo trocado em parecer administrativo é o erro mais frequente e o mais caro, porque parece certo até alguém abrir a lei.</p>
-        </div>
-    </article></div></div>
+    <h2>As cinco seções da devolutiva</h2>
+    <p class="sub">Modelo criado pelo comando devolutiva. Vale para parecer, nota técnica e resposta a recurso</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:22%">SEÇÃO</th><th style="width:36%">CAMPOS DO ARQUIVO</th><th style="width:42%">O QUE ESCREVER</th></tr>
+      <tr><td><strong>1. Objeto e limite</strong></td><td class="mono">objeto, o_que_ficou_fora</td><td>A pergunta exata que se responde e o que não foi examinado.</td></tr>
+      <tr><td><strong>2. O que foi examinado</strong></td><td class="mono">documentos_examinados, dados_utilizados</td><td>Documentos com data e origem. De onde vieram os números.</td></tr>
+      <tr><td><strong>3. Análise</strong></td><td>texto livre, 200 caracteres ou mais</td><td>Cada ponto ligado a um critério da matriz e a um trecho do mapa.</td></tr>
+      <tr><td><strong>4. Conclusão fundamentada</strong></td><td class="mono">recomendacao, criterio_que_sustenta, resultado_da_sensibilidade, norma_aplicavel, norma_conferida_em</td><td>A recomendação em uma frase, o critério que decide, o resultado do teste e a norma com o registro de onde e quando foi conferida.</td></tr>
+      <tr><td><strong>5. Responsabilidade</strong></td><td class="mono">cargo_de_quem_assina, uso_de_ferramenta</td><td>O cargo, sem o nome. O que a ferramenta de IA fez.</td></tr>
+    </table>
+    <div class="def" style="margin-top:14px"><span class="rot">Motivação (Lei nº 9.784/1999, art. 50)</span>
+      <p>O ato que nega, limita ou afeta direitos, dispensa licitação ou decide recurso indica os fatos e os fundamentos jurídicos. A motivação deve ser explícita, clara e congruente e pode consistir em concordância com parecer anterior, que passa a integrar o ato (§ 1º).</p></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 13.3 · Teoria</span>
-      <span class="pag">16 / 26</span>
+      <span class="pag">16 / 28</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="16">
     <span class="barra"></span>
+    <span class="eyebrow">CICLO 13.3 · TEORIA</span>
+    <h2>Redação pelo modelo e decisão de quem assina</h2>
+    <p class="sub">A redação pode ser delegada. A recomendação, o número e a norma conferida ficam com quem assina</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.5fr;--dir:1fr;height:auto;align-items:start">
+    <table class="tab apertada">
+      <tr><th style="width:36%">TAREFA</th><th style="width:20%">AO MODELO</th><th>CONFERÊNCIA</th></tr>
+      <tr><td>Organizar seções e uniformizar a linguagem</td><td><span class="chip ok">SIM</span></td><td>Você reconhece o próprio raciocínio no texto.</td></tr>
+      <tr><td>Apontar contradição entre trechos</td><td><span class="chip ok">SIM</span></td><td>Abrir os dois trechos no documento.</td></tr>
+      <tr><td>Indicar artigo de lei</td><td><span class="chip med">RASCUNHO</span></td><td>Texto oficial aberto, com as classes de erro do módulo 10.</td></tr>
+      <tr><td>Pôr número na análise</td><td><span class="chip ruim">NÃO</span></td><td>O número vem de saidas/ ou do documento.</td></tr>
+      <tr><td>Escrever a recomendação</td><td><span class="chip ruim">NÃO</span></td><td>Uma frase sua, escrita antes de pedir redação.</td></tr>
+    </table>
+    <div class="col" style="gap:9px">
+      <div class="caixa teal"><span class="rot">ASSISTENTE DE ESCRITA COM OPINIÃO</span><p>Em teste com mais de 1.500 pessoas, quem escreveu com um assistente enviesado teve duas vezes mais chance de defender a posição dele, e a maioria não percebeu a influência (Jakesch et al., 2023).</p></div>
+      <div class="caixa vinho"><span class="rot">LINDB, ART. 28</span><p>O agente público responde pessoalmente por decisões ou opiniões técnicas em caso de dolo ou erro grosseiro. A assinatura continua sendo de pessoa.</p></div>
+      <div class="caixa dourado"><span class="rot">PORTARIA MGI Nº 3.485/2026</span><p>No ministério, pede sinalizar o uso de IA em documentos e limita a IA generativa a informação pública.</p></div>
+    </div>
+  </div>
+  <p class="fonte-nota">Jakesch et al., Co-writing with opinionated language models affects users' views, CHI 2023. Cornell Chronicle, 15/05/2023. Contábeis, 29/04/2026, sobre a portaria de 24/04/2026. Consulta em 02/11/2026.</p></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 13.3 · Teoria</span>
+      <span class="pag">17 / 28</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="17">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 13.3 · DEMONSTRAÇÃO</span>
+    <h2>O comando conferir e uma devolutiva incompleta</h2>
+    <p class="sub">Com o comando devolutiva o arquivo é criado, e o comando conferir aponta o que falta sem alterar o texto</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.3fr;--dir:1fr">
+    <div class="col" style="gap:6px">
+      <pre class="terminal">CONFERENCIA DO MODULO 13
+A entrega ainda nao esta completa. Faltam 3 itens:
+
+ 1. devolutiva.md: o campo <span class="hl">norma_conferida_em</span> precisa
+    dizer onde e quando voce conferiu o texto do artigo.
+    Citacao nao conferida em parecer e o erro que esta
+    disciplina existe para evitar.
+ 2. devolutiva.md: a secao 3, Analise, tem menos de
+    <span class="hl">200 caracteres</span>. E a secao que liga a matriz ao
+    documento.
+ 3. devolutiva.md: o script apurou que a vencedora <span class="hl">MUDA</span>
+    no teste de sensibilidade, e a devolutiva nao diz
+    isso. Esse e o ponto que a chefia vai perguntar.
+
+Corrija e rode a conferencia de novo.</pre>
+      <p class="fonte-nota" style="position:static">Saída do script com quebras de linha acrescentadas. Devolutiva ilustrativa sobre a matriz do slide 5.</p>
+    </div>
+    <div class="col" style="gap:9px">
+      <div class="caixa vinho"><span class="rot">1. NORMA SEM CONFERÊNCIA</span><p>O campo trazia só "Planalto". Com menos de 15 caracteres, o script recusa. Passa o registro do site, do texto compilado e da data da consulta.</p></div>
+      <div class="caixa dourado"><span class="rot">2. ANÁLISE CURTA</span><p>Uma frase sobre o prazo de atendimento. A seção precisa ligar critérios da matriz a trechos do mapa.</p></div>
+      <div class="caixa teal"><span class="rot">3. SENSIBILIDADE DIVERGENTE</span><p>A devolutiva dizia "a vencedora nao muda". O script compara com saidas/resultado-decisao.md, que registra vencedora_muda: sim.</p></div>
+    </div>
+  </div></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 13.3 · Demonstração</span>
+      <span class="pag">18 / 28</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="18">
+    <span class="barra"></span>
     <span class="eyebrow">CICLO 13.3 · PRÁTICA</span>
     <h2>Sua vez: a devolutiva</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Abra o modelo da devolutiva</strong><p>python atividade_modulo13.py devolutiva cria o arquivo com as seções.</p></div>
+      <div><strong>Crie o modelo da devolutiva</strong><p>"execute atividade_modulo13.py com o comando devolutiva" grava entregas/devolutiva.md com as cinco seções.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Escreva a conclusão antes de pedir redação</strong><p>Uma frase, sua. O modelo redige em volta dela, e não no lugar dela.</p></div>
+      <div><strong>Escreva a recomendação antes de pedir redação</strong><p>Uma frase sua no campo recomendacao. O modelo pode reorganizar a análise em torno dela e não a substitui.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Confira toda norma citada na fonte oficial</strong><p>Artigo por artigo. Registre no campo de conferência o que foi verificado.</p></div>
+      <div><strong>Confira toda norma citada no texto oficial</strong><p>No campo norma_conferida_em, onde e quando você conferiu, com 15 caracteres ou mais. Sem norma aplicável, NAO SE APLICA nos dois campos.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Declare o que o modelo fez</strong><p>Uma linha ao final, dizendo em que a ferramenta foi usada. É a regra de uso de IA da disciplina.</p></div>
+      <div><strong>Declare o uso da ferramenta</strong><p>No campo uso_de_ferramenta, o que o modelo fez. Por exemplo, reorganizou a seção 3 e apontou a contradição entre as cláusulas 6.1 e 11.4.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 13.3 · Prática</span>
-      <span class="pag">17 / 26</span>
+      <span class="pag">19 / 28</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="17">
+<section class="slide conteudo" data-i="19">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 13.3 · ENTREGA</span>
     <h2>Devolutiva com fundamentação</h2>
@@ -630,227 +761,287 @@ body.mexeu #ajuda{opacity:1}
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>As quatro seções: objeto e limite, o que foi examinado, análise, conclusão fundamentada.</li><li>Toda norma citada com a conferência registrada.</li><li>A declaração de uso da ferramenta.</li><li>O cargo de quem assinaria o documento.</li></ul>
+      <ul><li>As cinco seções do modelo, com todos os campos preenchidos.</li><li>A análise ligando critérios da matriz a trechos do mapa.</li><li>Toda norma citada com o registro de onde e quando foi conferida.</li><li>O cargo de quem assinaria e a declaração de uso da ferramenta.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>entregas/devolutiva.md</p>
+        <p><span class="mono" style="font-size:15px">entregas/devolutiva.md</span></p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Norma citada sem registro de conferência é retirada da devolutiva pelo script. Citação não conferida em parecer é o erro que a disciplina inteira existe para evitar.</p>
+        <p>O comando conferir aponta campo vazio, análise curta, norma sem registro de conferência e sensibilidade diferente da apurada. Ele não altera o arquivo. A correção abre o artigo citado no texto oficial.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 13.3 · Entrega</span>
-      <span class="pag">18 / 26</span>
+      <span class="pag">20 / 28</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="18">
+<section class="slide divisor" data-i="20">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">13.4</span></div>
       <div class="dir">
-        <h2>Entrega C1</h2>
+        <h2>Sensibilidade da decisão e entrega C1</h2>
         <p class="etapas">Teoria · Prática · Entrega</p>
       </div>
-      <span class="pag">19 / 26</span>
+      <span class="pag">21 / 28</span>
     </section>
-<section class="slide conteudo" data-i="19">
+<section class="slide conteudo" data-i="21">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 13.4 · TEORIA</span>
     <h2>O teste de sensibilidade</h2>
-    <p class="sub">A pergunta que separa decisão fundamentada de decisão sortuda</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>O que o script faz</strong><p>Move o critério de maior peso vinte pontos percentuais para cima e para baixo, redistribui o resto e recalcula o ranking.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Se a vencedora não muda</strong><p>A decisão é robusta na faixa testada, e isso entra na devolutiva como argumento.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Se a vencedora muda</strong><p>A decisão depende de um julgamento de peso, e a devolutiva precisa dizer qual é esse julgamento e quem o fez. Ajustar pesos até a vencedora parar de mudar esconde essa fragilidade, que é justamente o que a auditoria procura.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Se a diferença for menor que cinco por cento</strong><p>É empate técnico. A escolha se decide por outro critério declarado, e não pela casa decimal.</p></div>
-    </li></ol></div>
+    <p class="sub">Com peso 40 vence a Proposta B. Com peso acima de 48,6 para o preço, vence a Proposta A</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.6fr;--dir:1fr">
+    <div class="col" style="gap:4px"><svg class="fig" viewBox="0 0 700 338" xmlns="http://www.w3.org/2000/svg">
+<rect x="375.3" y="22" width="176.0" height="250" fill="#FFF3D1"/>
+<text x="463.2" y="38" text-anchor="middle" font-size="13" fill="#7a5600">diferença abaixo de 5%</text>
+<line x1="70" y1="272.0" x2="620" y2="272.0" stroke="#e3e3e3" stroke-width="1"/>
+<text x="60" y="276.0" text-anchor="end" font-size="13" fill="#6B6B6B">6,0</text>
+<line x1="70" y1="215.2" x2="620" y2="215.2" stroke="#e3e3e3" stroke-width="1"/>
+<text x="60" y="219.2" text-anchor="end" font-size="13" fill="#6B6B6B">6,5</text>
+<line x1="70" y1="158.4" x2="620" y2="158.4" stroke="#e3e3e3" stroke-width="1"/>
+<text x="60" y="162.4" text-anchor="end" font-size="13" fill="#6B6B6B">7,0</text>
+<line x1="70" y1="101.5" x2="620" y2="101.5" stroke="#e3e3e3" stroke-width="1"/>
+<text x="60" y="105.5" text-anchor="end" font-size="13" fill="#6B6B6B">7,5</text>
+<line x1="70" y1="44.7" x2="620" y2="44.7" stroke="#e3e3e3" stroke-width="1"/>
+<text x="60" y="48.7" text-anchor="end" font-size="13" fill="#6B6B6B">8,0</text>
+<text x="70.0" y="292" text-anchor="middle" font-size="13" fill="#6B6B6B">20</text>
+<text x="207.5" y="292" text-anchor="middle" font-size="13" fill="#6B6B6B">30</text>
+<text x="345.0" y="292" text-anchor="middle" font-size="13" fill="#6B6B6B">40</text>
+<text x="482.5" y="292" text-anchor="middle" font-size="13" fill="#6B6B6B">50</text>
+<text x="620.0" y="292" text-anchor="middle" font-size="13" fill="#6B6B6B">60</text>
+<line x1="70" y1="272" x2="620" y2="272" stroke="#6B6B6B" stroke-width="1.5"/>
+<text x="345" y="314" text-anchor="middle" font-size="13.5" fill="#333">peso do preço total, com os demais pesos redistribuídos na mesma proporção</text>
+<text x="0" y="12" font-size="13" font-weight="700" fill="#6B6B6B">NOTA PONDERADA</text>
+<line x1="345.0" y1="22" x2="345.0" y2="272" stroke="#C9962E" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="339.0" y="262" text-anchor="end" font-size="13" fill="#8a6514">peso atual 40</text>
+<line x1="70.0" y1="241.7" x2="620.0" y2="86.4" stroke="#8D0333" stroke-width="3.5"/>
+<circle cx="70.0" cy="241.7" r="4.5" fill="#8D0333"/>
+<circle cx="345.0" cy="164.0" r="4.5" fill="#8D0333"/>
+<circle cx="620.0" cy="86.4" r="4.5" fill="#8D0333"/>
+<line x1="70.0" y1="52.3" x2="620.0" y2="162.2" stroke="#0AB0AB" stroke-width="3.5"/>
+<circle cx="70.0" cy="52.3" r="4.5" fill="#0AB0AB"/>
+<circle cx="345.0" cy="107.2" r="4.5" fill="#0AB0AB"/>
+<circle cx="620.0" cy="162.2" r="4.5" fill="#0AB0AB"/>
+<line x1="70.0" y1="181.1" x2="620.0" y2="169.7" stroke="#C9962E" stroke-width="3.5"/>
+<circle cx="70.0" cy="181.1" r="4.5" fill="#C9962E"/>
+<circle cx="345.0" cy="175.4" r="4.5" fill="#C9962E"/>
+<circle cx="620.0" cy="169.7" r="4.5" fill="#C9962E"/>
+<text x="630" y="91.4" font-size="14" font-weight="700" fill="#8D0333">A 7,63</text>
+<text x="630" y="161.2" font-size="14" font-weight="700" fill="#0AB0AB">B 6,97</text>
+<text x="630" y="185.7" font-size="14" font-weight="700" fill="#C9962E">C 6,90</text>
+<text x="80" y="43.3" font-size="14" font-weight="700" fill="#0AB0AB">B 7,93</text>
+<text x="80" y="172.1" font-size="14" font-weight="700" fill="#C9962E">C 6,80</text>
+<text x="80" y="261.7" font-size="14" font-weight="700" fill="#8D0333">A 6,27</text>
+<circle cx="462.9" cy="130.8" r="8" fill="none" stroke="#1A1A1A" stroke-width="2"/>
+<text x="476.9" y="154.8" font-size="13.5" fill="#1A1A1A">A passa B em 48,6</text>
+</svg>
+      <p class="rodape-corpo" style="margin-top:0;font-size:14px;color:#6B6B6B">Matriz ilustrativa do slide 5. O script calcula os pontos 20, 40 e 60. As linhas, o cruzamento e a faixa amarela foram calculados para o exemplo, fora do script.</p>
+    </div>
+    <div class="col" style="gap:9px">
+      <div class="caixa dourado"><span class="rot">O QUE O SCRIPT FAZ</span><p>Move o critério de maior peso 20 pontos para cima e para baixo, redistribui os demais na mesma proporção e refaz o ranking.</p></div>
+      <div class="caixa teal"><span class="rot">VENCEDORA NÃO MUDA</span><p>A recomendação vale para toda a faixa testada. Isso entra na devolutiva como argumento.</p></div>
+      <div class="caixa vinho"><span class="rot">VENCEDORA MUDA</span><p>A decisão depende de quanto vale o preço. A devolutiva diz qual peso foi adotado, por quê e por quem. Ajustar pesos até a mudança sumir esconde o ponto que a auditoria procura.</p></div>
+      <div class="caixa dourado"><span class="rot">EMPATE TÉCNICO</span><p>Diferença menor que 5% da nota da primeira. A escolha vai para um critério novo, declarado.</p></div>
+    </div>
+  </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 13.4 · Teoria</span>
-      <span class="pag">20 / 26</span>
+      <span class="pag">22 / 28</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="20">
+<section class="slide conteudo" data-i="22">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 13.4 · PRÁTICA</span>
     <h2>Sua vez: fechar a decisão</h2>
     <p class="sub">Individual</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Dê nota a cada alternativa em cada critério</strong><p>De 0 a 10, com a razão escrita e a fonte no documento.</p></div>
+      <div><strong>Dê nota a cada alternativa em cada critério</strong><p>De 0 a 10, pela régua definida no ciclo 13.1, com razao_da_nota e fonte_no_documento em toda linha.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Rode a avaliação</strong><p>python atividade_modulo13.py avaliar calcula, ordena e testa a sensibilidade.</p></div>
+      <div><strong>Avalie e confira a conta</strong><p>"execute atividade_modulo13.py com o comando avaliar". Leia saidas/resultado-decisao.md e refaça à mão a nota ponderada da vencedora.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Escreva a recomendação na devolutiva</strong><p>Com o resultado do teste de sensibilidade dito por extenso.</p></div>
+      <div><strong>Escreva a conclusão na devolutiva</strong><p>Campos recomendacao, criterio_que_sustenta e resultado_da_sensibilidade, este com o resultado do script por extenso. Se a vencedora muda, escreva muda.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Rode a conferência da C1</strong><p>python atividade_modulo13.py c1 lista o que falta dos encontros 12, 13 e 14.</p></div>
+      <div><strong>Confira o encontro e a C1</strong><p>"execute atividade_modulo13.py com o comando conferir". Sem pendências, "execute atividade_modulo13.py com o comando c1".</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 13.4 · Prática</span>
-      <span class="pag">21 / 26</span>
+      <span class="pag">23 / 28</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="21">
+<section class="slide conteudo" data-i="23">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 13.4 · ENTREGA</span>
-    <h2>Entrega C1: vale 40% da nota 3</h2>
-    <p class="sub">Reúne os encontros 12, 13 e 14</p>
-    <div class="corpo"><div class="entrega">
-    <section class="lista">
-      <header>O QUE ENTREGAR</header>
-      <ul><li>Do encontro 12: a ficha do modelo e o resultado comparado com o palpite simples.</li><li>Do encontro 13: o inventário com base legal, a seção de uso seguro e o plano de resposta.</li><li>Do encontro 14: a matriz avaliada com teste de sensibilidade, o mapa do documento e a devolutiva.</li><li>Tudo commitado pelo GitHub Desktop, sem a pasta de dados restritos.</li></ul>
-    </section>
-    <div class="lado">
-      <section class="box onde">
-        <span class="rot">ONDE SALVAR</span>
-        <p>A pasta do projeto, conferida por python atividade_modulo13.py c1</p>
-      </section>
-      <section class="box criterio">
-        <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>A C1 é conferida item por item pelo script. O que ele apontar como pendente conta como não entregue.</p>
-      </section>
+    <h2>Entrega C1: os onze arquivos conferidos pelo script</h2>
+    <p class="sub">Vale 40% da nota 3 e reúne os encontros 12, 13 e 14</p>
+    <div class="corpo"><div class="duascol" style="--esq:1.55fr;--dir:1fr">
+    <table class="tab apertada mini">
+      <tr><th style="width:15%">ENC.</th><th style="width:47%">ARQUIVO</th><th>CONTEÚDO</th></tr>
+      <tr><td>12</td><td class="mono">modelo/ficha-modelo.md</td><td>Ficha do modelo preditivo</td></tr>
+      <tr><td>12</td><td class="mono">modelo/resultado.md</td><td>Comparação com o palpite simples</td></tr>
+      <tr><td>13</td><td class="mono">saidas/varredura-dados-pessoais.md</td><td>Varredura de dado pessoal</td></tr>
+      <tr><td>13</td><td class="mono">entregas/inventario-dados.csv</td><td>Inventário com base legal</td></tr>
+      <tr><td>13</td><td class="mono">AGENTS.md</td><td>Seção de uso seguro</td></tr>
+      <tr><td>13</td><td class="mono">.gitignore</td><td>Pasta de dados restritos</td></tr>
+      <tr><td>13</td><td class="mono">entregas/plano-resposta-incidente.md</td><td>Plano de resposta</td></tr>
+      <tr><td>14</td><td class="mono">entregas/matriz-decisao.csv</td><td>Matriz de decisão</td></tr>
+      <tr><td>14</td><td class="mono">saidas/resultado-decisao.md</td><td>Ranking e sensibilidade</td></tr>
+      <tr><td>14</td><td class="mono">entregas/mapa-documento.md</td><td>Mapa do documento</td></tr>
+      <tr><td>14</td><td class="mono">entregas/devolutiva.md</td><td>Devolutiva fundamentada</td></tr>
+    </table>
+    <div class="col" style="gap:10px">
+      <div class="caixa vinho"><span class="rot">COMO SERÁ CORRIGIDO</span><p>O comando c1 marca cada arquivo presente e repete as verificações de conteúdo do encontro 14. O que ele apontar como pendente conta como não entregue.</p></div>
+      <div class="caixa dourado"><span class="rot">ENCONTROS 12 E 13</span><p>O c1 confere só a existência desses arquivos. O conteúdo foi verificado pelo conferir de cada módulo e é lido na correção.</p></div>
+      <div class="caixa teal"><span class="rot">O COMMIT É A ENTREGA</span><p>Pelo GitHub Desktop. Antes de confirmar, veja que dados/restrito/ não aparece na lista de arquivos.</p></div>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 13.4 · Entrega</span>
-      <span class="pag">22 / 26</span>
+      <span class="pag">24 / 28</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="22">
+<section class="slide conteudo" data-i="24">
     <span class="barra"></span>
-    <span class="eyebrow">FECHAMENTO</span>
+    <span class="eyebrow">BALANÇO</span>
     <h2>O que você tem ao fim do encontro</h2>
-    <p class="sub">Uma decisão que resiste a quem discorda dela</p>
-    <div class="corpo"><div class="cards cols-3">
+    
+    <div class="corpo"><div class="cards cols-4">
     <article class="card">
       <header style="background:#D4B277">A MATRIZ</header>
       <h3>Critérios, pesos e sensibilidade</h3>
-      
         <div class="bloco">
           <span class="rule" style="background:#D4B277"></span>
           <span class="rot">O que é</span>
-          <p>A decisão transformada em conta conferível, com o teste de quanto ela depende de um peso.</p>
+          <p>A decisão em forma de conta, com a régua de cada nota e o teste de dependência do maior peso.</p>
         </div>
         <div class="bloco">
           <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">Para que serve</span>
-          <p>É o que se apresenta quando alguém pergunta por que essa e não a outra.</p>
+          <span class="rot">Uso seguinte</span>
+          <p>Responder por que esta alternativa e não a outra.</p>
         </div>
     </article>
     <article class="card">
       <header style="background:#0AB0AB">O MAPA</header>
-      <h3>O documento lido por categoria</h3>
-      
+      <h3>O documento por categoria</h3>
         <div class="bloco">
           <span class="rule" style="background:#0AB0AB"></span>
           <span class="rot">O que é</span>
-          <p>Obrigações, pagamento, penalidades, escopo e fiscalização, com trecho de origem e as ausências marcadas.</p>
+          <p>Obrigações, pagamento, penalidades, escopo e fiscalização, com trecho de origem e ausências.</p>
         </div>
         <div class="bloco">
           <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Para que serve</span>
-          <p>A lista de NAO CONSTA é a que evita o aditivo e o conflito.</p>
+          <span class="rot">Uso seguinte</span>
+          <p>Pedir a cláusula que falta antes da assinatura.</p>
         </div>
     </article>
     <article class="card">
       <header style="background:#FEC84D">A DEVOLUTIVA</header>
       <h3>Fundamentada e assinável</h3>
-      
         <div class="bloco">
           <span class="rule" style="background:#FEC84D"></span>
           <span class="rot">O que é</span>
-          <p>Objeto, exame, análise e conclusão, com norma conferida e uso de ferramenta declarado.</p>
+          <p>Objeto, exame, análise e conclusão, com norma conferida e uso de IA declarado.</p>
         </div>
         <div class="bloco">
           <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">Para que serve</span>
-          <p>É o formato que o artigo 50 exige e que a chefia consegue assinar sem reescrever.</p>
+          <span class="rot">Uso seguinte</span>
+          <p>Base de parecer, nota técnica ou resposta a recurso.</p>
+        </div>
+    </article>
+    <article class="card">
+      <header style="background:#9fd6c4">A C1</header>
+      <h3>Onze arquivos conferidos</h3>
+        <div class="bloco">
+          <span class="rule" style="background:#9fd6c4"></span>
+          <span class="rot">O que é</span>
+          <p>Os produtos dos encontros 12, 13 e 14, verificados pelo comando c1.</p>
+        </div>
+        <div class="bloco">
+          <span class="rule" style="background:#9fd6c4"></span>
+          <span class="rot">Uso seguinte</span>
+          <p>40% da nota 3. O commit é a entrega.</p>
         </div>
     </article></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Fechamento</span>
-      <span class="pag">23 / 26</span>
+      <span class="centro">Balanço do módulo</span>
+      <span class="pag">25 / 28</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="23">
+<section class="slide conteudo" data-i="25">
     <span class="barra"></span>
     <span class="eyebrow">PRÓXIMOS PASSOS</span>
     <h2>Módulo 14: o que preparar</h2>
-    <p class="sub">Produto digital e gestão ágil</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
+    <p class="sub">Produto digital e gestão ágil, no encontro 15</p>
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Escolha o processo que você vai transformar em produto</strong><p>Pode ser o fluxo do encontro 10 ou a decisão de hoje. Precisa ser algo que outra pessoa usaria.</p></div>
+      <div><strong>Escolha o processo que vai virar produto</strong><p>Pode ser o fluxo do encontro 10 ou a decisão de hoje, desde que outra pessoa vá usar o resultado.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Anote quem é o usuário e o que ele faz hoje</strong><p>Cargo, tarefa, quantas vezes por semana, quanto tempo leva.</p></div>
+      <div><strong>Anote quem é o usuário e o que ele faz hoje</strong><p>Cargo, tarefa, quantas vezes por semana e quanto tempo leva.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Revise o painel do encontro 9</strong><p>Ele volta como parte do produto no encontro 15.</p></div>
+      <div><strong>Recupere a medida do caminho atual</strong><p>A medição feita no encontro 10 é a linha de base para saber se o produto ajudou. Quem não mediu, estima e registra que é estimativa.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Traga a lista de pendências da C1</strong><p>Se o script apontou algo, o encontro 15 é a última janela antes da C2.</p></div>
+      <div><strong>Resolva as pendências da C1</strong><p>O encontro 15 é a última janela. Traga a lista impressa pelo comando c1.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Próximos passos</span>
-      <span class="pag">24 / 26</span>
+      <span class="pag">26 / 28</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="24">
+<section class="slide conteudo" data-i="26">
     <span class="barra"></span>
     <span class="eyebrow">DÚVIDAS FREQUENTES</span>
     <h2>Perguntas que aparecem neste módulo</h2>
     
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:5">
+    <div class="corpo"><ol class="steps cols-2 compacto" style="--linhas:3">
     <li><span class="num">1</span>
-      <div><strong>"Posso mudar o peso depois de ver o resultado?"</strong><p>Pode, e precisa registrar que mudou e por quê. O que não se faz é mudar sem registro, porque aí a matriz vira enfeite da decisão já tomada.</p></div>
+      <div><strong>"Posso mudar o peso depois de ver o resultado?"</strong><p>Pode, com o peso anterior, o novo e o motivo escritos na devolutiva. Sem esse registro, a matriz passa a justificar uma escolha já feita.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>"E se as três alternativas empatarem?"</strong><p>Empate técnico é resultado. Ele significa que os critérios escolhidos não separam as opções, e a decisão precisa de um critério novo, declarado.</p></div>
+      <div><strong>"E se as alternativas empatarem?"</strong><p>Diferença abaixo de 5% da nota da primeira é empate técnico. A escolha vai para um critério novo, declarado.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>"O modelo pode citar a lei para mim?"</strong><p>Pode escrever, e você confere no Planalto antes de assinar. A conferência é registrada na devolutiva.</p></div>
+      <div><strong>"O modelo pode citar a lei para mim?"</strong><p>Pode sugerir o dispositivo. Você abre o texto oficial e registra onde e quando conferiu, no campo norma_conferida_em.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>"Meu documento tem dado pessoal."</strong><p>Aplique o que fez no encontro 13: use a versão publicada ou substitua os identificadores antes de qualquer envio ao modelo.</p></div>
+      <div><strong>"Meu documento tem dado pessoal."</strong><p>Use a versão publicada ou troque os identificadores antes de enviar ao modelo, como diz a seção de uso seguro do AGENTS.md.</p></div>
     </li>
     <li><span class="num">5</span>
-      <div><strong>"Preciso declarar que usei IA?"</strong><p>Sim, é regra da disciplina e está no programa. Uma linha dizendo em que a ferramenta foi usada.</p></div>
+      <div><strong>"Preciso declarar que usei IA?"</strong><p>Sim, é regra da disciplina. A declaração diz o que a ferramenta fez. A Portaria MGI nº 3.485/2026 pede o mesmo no ministério.</p></div>
+    </li>
+    <li><span class="num">6</span>
+      <div><strong>"O script pode tomar a decisão?"</strong><p>Ele calcula. Critérios, pesos e assinatura são de pessoa. Decisão só automatizada sobre dado pessoal segue o art. 20 da LGPD (módulo 11).</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Dúvidas frequentes</span>
-      <span class="pag">25 / 26</span>
+      <span class="pag">27 / 28</span>
     </footer>
   </section>
-<section class="slide fim" data-i="25">
+<section class="slide fim" data-i="27">
       <span class="filete"></span>
       <h1>Módulo 13 concluído</h1>
-      <p>A C1 está fechada. Você sabe montar o critério antes da escolha, ler o documento pelo que ele não diz e escrever uma devolutiva que alguém assina. Falta transformar isso em algo que outra pessoa use.</p>
+      <p>A C1 foi conferida. A decisão do seu documento tem critérios e pesos escritos antes das notas, o mapa marca o que o documento não diz e a devolutiva traz recomendação sua e norma conferida. No próximo encontro, um processo do seu setor vira produto digital.</p>
       <span class="slogan">SEMPRE+ QUALIDADE INOVAÇÃO INCLUSÃO</span>
     </section>
 </div>
 <div id="barra">
   <button id="ant" title="Anterior">&#8249;</button>
-  <input id="atual" value="1" title="Ir para o slide"> <span>/ 26</span>
+  <input id="atual" value="1" title="Ir para o slide"> <span>/ 28</span>
   <button id="prox" title="Próximo">&#8250;</button>
   <button id="tela" title="Tela cheia">&#9744;</button>
 </div>

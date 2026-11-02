@@ -22,19 +22,19 @@ Confira quem tem pendência dos encontros 12 e 13. A C1 conferida pelo script ap
 | Bloco | Duração | Slides |
 |---|---|---|
 | Abertura e visão geral | 10 min | 1 a 2 |
-| Ciclo 13.1 | 45 min | 3 a 8 |
-| Ciclo 13.2 | 50 min | 9 a 13 |
+| Ciclo 13.1 | 45 min | 3 a 9 |
+| Ciclo 13.2 | 50 min | 10 a 14 |
 | Intervalo | 15 min | |
-| Ciclo 13.3 | 45 min | 14 a 19 |
+| Ciclo 13.3 | 45 min | 15 a 20 |
 | Intervalo | 10 min | |
-| Ciclo 13.4 | 60 min | 20 a 23 |
-| Fechamento e C1 | 15 min | 24 a 26 |
+| Ciclo 13.4 | 60 min | 21 a 24 |
+| Fechamento e C1 | 15 min | 25 a 28 |
 
 ## Ciclo 13.1 — O critério vem antes da alternativa
 
-Teoria, 15 min. Por que a ordem importa, a exigência de motivação do artigo 50 da Lei 9.784, e a matriz com critério, peso, nota e sensibilidade.
+Teoria, 15 min. Slides 4 a 6. A ordem dos cinco passos (critérios, pesos, alternativas, notas, sensibilidade) no slide 4, com o pensamento orientado a valores de Keeney (1992), a técnica e preço da Lei 14.133/2021 (ponderação fixada no edital, proposta técnica com no máximo 70%, art. 36, § 2º) e o parágrafo único do art. 20 da LINDB (motivação em face das possíveis alternativas). A matriz por soma ponderada no slide 5, com três propostas ilustrativas de manutenção predial e a conta da vencedora (B, 7,45, contra 6,95 de A). O critério vago convertido em verificável, com a régua da nota escrita antes (slide 6), e o peso fixado sem olhar a amplitude entre a melhor e a pior alternativa, que Keeney (1992, p. 147) chama de erro crítico mais comum. O art. 50 da Lei 9.784 passou para o ciclo 13.3.
 
-Demonstração, 10 min. A matriz de reserva montada na projeção, com `matriz` e `avaliar`.
+Demonstração, 10 min. Slide 7. Saída real de `avaliar` com a matriz do slide 5 e as regras de recusa do script. Essa matriz vira a vencedora para A quando o peso do preço sobe para 60 e serve como matriz de reserva.
 
 Prática, 15 min. Cada aluno escreve os critérios e pesos do próprio caso.
 
@@ -48,9 +48,9 @@ Critério com nome de qualidade ("boa proposta", "confiabilidade") precisa ser c
 
 ## Ciclo 13.2 — Leitura crítica de documento de decisão
 
-Teoria, 15 min. As cinco categorias: obrigações com prazo, pagamento e reajuste, penalidades e rescisão, escopo e exclusões, fiscalização e aceite.
+Teoria, 15 min. Slide 11. As cinco categorias (obrigações com prazo, pagamento e reajuste, penalidades e rescisão, escopo e exclusões, fiscalização e aceite) ligadas às cláusulas necessárias do art. 92 da Lei 14.133/2021 (incisos I, V, VI, VII, XIV, XVIII e XIX) e aos arts. 117 e 140, com o risco de cada ausência. A lei usa "extinção" no lugar de "rescisão".
 
-Demonstração, 10 min. A extração com trecho de origem, na projeção, com a instrução completa mostrada no slide.
+Demonstração, 10 min. Slide 12. A instrução com a regra NAO CONSTA, um trecho ilustrativo do mapa e o que o comando `conferir` verifica no mapa (categorias, aspas, marca NAO CONSTA). Ele não verifica se o trecho existe no documento. Quando o documento trata das cinco categorias, o aluno escreve "categorias que nao constam: nenhuma", porque o script exige a expressão.
 
 Prática, 20 min. Cada aluno mapeia o documento que trouxe, por seção.
 
@@ -64,7 +64,9 @@ A conferência dos três trechos é obrigatória e alguém sempre encontra uma c
 
 ## Ciclo 13.3 — A devolutiva escrita e assinada
 
-Teoria, 20 min. As quatro seções da devolutiva. Depois, o que o modelo escreve bem e o que ele não pode escrever.
+Teoria, 15 min. Slides 16 e 17. As cinco seções do arquivo criado por `devolutiva` (a quinta é Responsabilidade, com cargo e uso de ferramenta), com o art. 50 da Lei 9.784/1999 e o § 1º, que faz o parecer integrar o ato quando a chefia concorda com ele. Depois, o que se delega ao modelo e o que fica com quem assina, com Jakesch et al. (2023) sobre assistente de escrita enviesado, o art. 28 da LINDB e a Portaria MGI nº 3.485/2026 (sinalização do uso de IA em documentos no ministério).
+
+Demonstração, 5 min. Slide 18. Saída real de `conferir` sobre uma devolutiva ilustrativa com três defeitos: norma sem registro de conferência, análise curta e sensibilidade declarada diferente da apurada.
 
 Prática, 20 min. Cada aluno escreve a devolutiva do próprio caso.
 
@@ -78,7 +80,7 @@ A declaração de uso da ferramenta é regra da disciplina e está no programa. 
 
 ## Ciclo 13.4 — Entrega C1
 
-Teoria, 10 min. O teste de sensibilidade e os quatro resultados possíveis, incluindo o empate técnico.
+Teoria, 10 min. Slide 22. O teste de sensibilidade em gráfico, com a matriz do slide 5. Com o peso do preço em 40 vence B. Acima de 48,6 vence A. Entre 42,2 e 55,0 a diferença fica abaixo de 5%. O script calcula só os pontos 20, 40 e 60, e o restante do gráfico foi calculado para o exemplo. Os resultados possíveis, incluindo o empate técnico.
 
 Prática, 40 min. Notas com razão e fonte, `avaliar`, recomendação escrita na devolutiva, `conferir` e depois `c1`.
 

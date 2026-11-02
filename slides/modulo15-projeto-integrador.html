@@ -147,6 +147,139 @@ body.mexeu #ajuda{opacity:1}
   #barra,#ajuda{display:none}
   .slide{display:block!important;page-break-after:always;box-shadow:none;transform:none!important}
 }
+/* ---- componentes acrescentados na revisão de nov. 2026 ---- */
+.mono{font-family:Consolas,"Cascadia Mono","Courier New",monospace}
+.fonte-nota{position:absolute;left:0;right:0;bottom:-2px;font-size:13px;color:var(--muted);line-height:1.3}
+.prompt.compacto{padding:12px 20px;margin-bottom:16px}
+.prompt.compacto p{font-size:17px;line-height:1.4;margin-top:6px}
+.prompt.compacto p+p{margin-top:6px}
+.prompt .cmd{font-style:normal;font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:16px}
+
+/* tabela de dados */
+.tab{width:100%;border-collapse:collapse;font-size:15px;line-height:1.3;color:var(--body)}
+.tab th{background:var(--vinho);color:#fff;font-weight:700;text-align:left;padding:7px 10px;font-size:14px;letter-spacing:.3px}
+.tab td{border-bottom:1px solid #e1e1e1;padding:7px 10px;vertical-align:top;background:#fff}
+.tab tr:nth-child(even) td{background:#fafafa}
+.tab td.lac{background:#FFF3D1!important;color:#7a5600;font-weight:700}
+.tab td .s{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+.tab td strong{color:var(--txt)}
+.chip{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.5px;padding:2px 8px;margin-bottom:4px;color:var(--txt)}
+.chip.ok{background:#CFEFEE}.chip.med{background:#FFE7A8}.chip.ruim{background:#F2CDD8;color:var(--vinho)}
+.badge{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--vinho);
+  color:#fff;font-size:12px;font-weight:700;margin-right:6px;vertical-align:1px;font-style:normal}
+
+/* duas colunas */
+.duascol{display:grid;grid-template-columns:var(--esq,1.4fr) var(--dir,1fr);gap:28px;height:100%}
+.duascol .col{display:flex;flex-direction:column;gap:14px;min-height:0}
+.steps.compacto{gap:12px}
+.steps.compacto strong{font-size:18px}
+.steps.compacto p{font-size:16px;line-height:1.35}
+.steps.compacto .num{flex:0 0 28px;height:28px;font-size:15px}
+
+/* fluxo horizontal */
+.fluxo{display:grid;grid-template-columns:repeat(var(--n,4),1fr);gap:34px;position:relative}
+.etapa{background:var(--card);border:1px solid #e3e3e3;border-top:6px solid var(--cor,var(--vinho));
+  padding:12px 16px 14px;position:relative}
+.etapa:not(:last-child)::after{content:"";position:absolute;right:-27px;top:50%;margin-top:-11px;
+  border-left:16px solid var(--vinho);border-top:11px solid transparent;border-bottom:11px solid transparent}
+.etapa .n{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;
+  background:var(--vinho);color:#fff;font-size:14px;font-weight:700}
+.etapa h4{display:inline;font-size:18px;color:var(--txt);margin-left:6px;vertical-align:2px}
+.etapa p{font-size:15.5px;line-height:1.38;margin-top:8px}
+.etapa .arq{display:block;margin-top:8px;font-size:13.5px;color:var(--vinho);
+  font-family:Consolas,"Cascadia Mono","Courier New",monospace;word-break:break-all}
+.trilha{margin-top:18px}
+.trilha .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1px;color:var(--muted);margin-bottom:6px}
+.trilha .barra-g{height:14px;background:linear-gradient(90deg,var(--teal) 0%,#9fd6c4 30%,var(--amarelo) 55%,var(--vinho) 100%)}
+.trilha .marcas{display:grid;grid-template-columns:repeat(4,1fr);gap:34px;font-size:13.5px;color:var(--muted);margin-top:5px}
+
+/* conceito (mesmo padrão dos módulos 2 e 3) */
+.def{background:var(--card2);border:1px solid #e3e3e3;border-left:9px solid var(--vinho);padding:12px 20px}
+.def .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1.2px;color:var(--vinho);text-transform:uppercase}
+.def p{font-size:17px;line-height:1.4;color:var(--txt);margin-top:5px}
+
+/* eixo acima dos cartões */
+.eixo{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;margin-bottom:14px;
+  font-size:14px;font-weight:700;color:var(--muted);letter-spacing:.4px}
+.eixo .seta{height:10px;position:relative;background:linear-gradient(90deg,var(--dourado),var(--teal))}
+.eixo .seta::after{content:"";position:absolute;right:-14px;top:-7px;border-left:16px solid var(--teal);
+  border-top:12px solid transparent;border-bottom:12px solid transparent}
+.cards.baixos{height:calc(100% - 40px)}
+.cards.baixos .card h3{font-size:18px;padding:12px 16px 2px}
+.cards.baixos .card .bloco{padding:8px 16px 0}
+.cards.baixos .card .bloco p{font-size:15.5px;line-height:1.36}
+
+/* grade de dimensões */
+.grade{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:14px;height:calc(100% - 22px)}
+.dim{background:var(--card);border:1px solid #e3e3e3;border-top:5px solid var(--cor);padding:10px 16px}
+.dim h4{font-size:19px;color:var(--vinho)}
+.dim h4 small{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.dim p{font-size:15.5px;line-height:1.36;margin-top:5px}
+.dim .med{display:block;font-size:14px;color:var(--txt);margin-top:7px;border-top:1px solid #ddd;padding-top:6px}
+.dim .med b{color:var(--muted);font-size:12.5px;letter-spacing:.6px}
+
+/* caixa lateral */
+.caixa{background:var(--card2);border:1px solid #e3e3e3;padding:12px 16px}
+.caixa.vinho{border-left:6px solid var(--vinho)}
+.caixa.dourado{border-left:6px solid var(--dourado)}
+.caixa.teal{border-left:6px solid var(--teal)}
+.caixa .rot{display:block;font-size:13px;font-weight:700;letter-spacing:1px;color:var(--vinho);margin-bottom:4px}
+.caixa p{font-size:15.5px;line-height:1.38}
+.caixa p+p{margin-top:6px}
+.legenda{list-style:none}
+.legenda li{font-size:15.5px;line-height:1.35;margin-bottom:8px;display:flex;gap:6px}
+.legenda li b{color:var(--txt)}
+
+/* ficha do mapa de dados */
+.ficha{display:grid;grid-template-columns:1fr 1fr;gap:14px;height:calc(100% - 64px)}
+.ficha .grupo{background:var(--card);border:1px solid #e3e3e3;border-top:5px solid var(--cor)}
+.ficha .grupo>header{font-size:16px;font-weight:700;color:var(--vinho);padding:8px 14px 2px}
+.ficha .grupo>header span{color:var(--muted);font-weight:400;font-size:14px;margin-left:6px}
+.ficha dl{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;padding:6px 14px 10px;font-size:14.5px;line-height:1.3}
+.ficha dt{font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:13.5px;color:var(--vinho);padding-top:1px}
+.ficha dd{color:var(--txt)}
+.rodape-corpo{margin-top:12px;font-size:15.5px;line-height:1.4;color:var(--body)}
+
+/* svg */
+.fig{display:block;width:100%;height:auto}
+.fig text{font-family:"Segoe UI",Calibri,"Helvetica Neue",Arial,sans-serif}
+
+/* ajustes após conferência visual */
+.tab.apertada{font-size:14.5px}
+.tab.apertada td{padding:6px 10px}
+.legenda .badge{flex:0 0 20px;margin-top:1px}
+.dim p{font-size:17px}
+.dim .med{font-size:15.5px}
+.dim h4{font-size:21px}
+.cards.baixos .card .bloco p{font-size:16.5px}
+.eixo{gap:26px}
+.ficha dl{font-size:16.5px;gap:6px 14px;padding:8px 14px 12px}
+.ficha dt{font-size:15px}
+.ficha .grupo>header{font-size:17.5px}
+.etapa p{font-size:16.5px}
+.etapa .arq{word-break:normal;overflow-wrap:break-word}
+.steps.cols-3.compacto p{font-size:17px}
+.steps.cols-3.compacto strong{font-size:19px}
+
+/* blocos de saída de terminal */
+.terminal{background:#262626;color:#e9e9e9;font-family:Consolas,"Cascadia Mono","Courier New",monospace;
+  font-size:14px;line-height:1.38;padding:12px 16px;white-space:pre;overflow:hidden;margin:0}
+.terminal .hl{color:#FEC84D;font-weight:700}
+
+/* acrescentado no módulo 9: trecho de arquivo de texto */
+.codigo{background:#F7F4EE;border:1px solid #e3e3e3;border-left:6px solid var(--dourado);color:var(--txt);
+  font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:14px;line-height:1.55;padding:10px 14px;
+  white-space:pre;overflow:hidden;margin:0}
+.codigo b{color:var(--vinho)}
+/* módulo 12 */
+.tab td.mono{font-size:14px;color:var(--vinho)}
+/* módulo 15: blocos da apresentação */
+.blocos{display:grid;grid-template-columns:230px 230px 460px 230px;gap:6px;margin-top:10px}
+.blocos .bl{background:var(--card);border:1px solid #e3e3e3;border-top:6px solid var(--vinho);padding:10px 14px 12px}
+.blocos h4{font-size:18px;color:var(--txt);line-height:1.25}
+.blocos p{font-size:15.5px;line-height:1.38;margin:6px 0 8px}
+.blocos .campo{display:block;font-family:Consolas,"Cascadia Mono","Courier New",monospace;font-size:13px;color:var(--vinho);
+  line-height:1.45;padding-left:14px;text-indent:-14px}
 </style>
 </head>
 <body>
@@ -164,52 +297,52 @@ body.mexeu #ajuda{opacity:1}
     <span class="barra"></span>
     <span class="eyebrow">VISÃO GERAL DO MÓDULO</span>
     <h2>Como funciona o último encontro</h2>
-    <p class="sub">Metade do tempo é apresentação. A outra metade fecha o que ficou aberto.</p>
+    <p class="sub">Duas rodadas de apresentação entre a conferência da C2 e o portfólio do semestre</p>
     <div class="corpo"><div class="overview">
     <article class="ciclo">
       <span class="topo" style="background:#D4B277"></span>
-      <span class="rot" >CICLO 15.1</span>
+      <span class="rot">CICLO 15.1</span>
       <h3>Conferência da C2 e últimas correções</h3>
       <div class="pe">
         <span class="rule" style="background:#D4B277"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Pasta conferida pelo script</p>
+        <p>Pasta conferida pelo comando c2 e roteiro da apresentação escrito</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#0AB0AB"></span>
-      <span class="rot" >CICLO 15.2</span>
+      <span class="rot">CICLO 15.2</span>
       <h3>Apresentações, primeira rodada</h3>
       <div class="pe">
         <span class="rule" style="background:#0AB0AB"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Demonstração e avaliação por pares</p>
+        <p>Apresentação nos quatro blocos e formulário de avaliação por pares aberto</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#FEC84D"></span>
-      <span class="rot" >CICLO 15.3</span>
+      <span class="rot">CICLO 15.3</span>
       <h3>Apresentações, segunda rodada</h3>
       <div class="pe">
         <span class="rule" style="background:#FEC84D"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Demonstração e avaliação por pares</p>
+        <p>Formulário com três apresentações avaliadas e conferido pelo script</p>
       </div>
     </article>
     <article class="ciclo">
       <span class="topo" style="background:#D4B277"></span>
-      <span class="rot" >CICLO 15.4</span>
+      <span class="rot">CICLO 15.4</span>
       <h3>O portfólio e o que continua</h3>
       <div class="pe">
         <span class="rule" style="background:#D4B277"></span>
         <span class="rot2">ENTREGA</span>
-        <p>Índice do semestre gerado</p>
+        <p>Índice do semestre gerado, com as três frases escritas por você</p>
       </div>
     </article></div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Estrutura do módulo</span>
-      <span class="pag">2 / 20</span>
+      <span class="pag">2 / 26</span>
     </footer>
   </section>
 <section class="slide divisor" data-i="2">
@@ -219,458 +352,646 @@ body.mexeu #ajuda{opacity:1}
         <h2>Conferência da C2 e últimas correções</h2>
         <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">3 / 20</span>
+      <span class="pag">3 / 26</span>
     </section>
 <section class="slide conteudo" data-i="3">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 15.1 · TEORIA</span>
-    <h2>O que a C2 reúne</h2>
-    <p class="sub">Encontros 15 e 16, mais o que ficou pendente do semestre inteiro</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">O PRODUTO</header>
-      <h3>Versão 2, funcionando</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que se avalia</span>
-          <p>Uma história completa segundo o critério de aceite, os bloqueios do teste resolvidos, o comportamento com dado errado.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que não se avalia</span>
-          <p>Quantidade de funcionalidade, sofisticação técnica e aparência da tela.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">O CAMINHO</header>
-      <h3>Ficha, backlog, teste e commits</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que se avalia</span>
-          <p>Que a construção seguiu uma ordem declarada, e que o teste com usuário mudou a fila.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">Por que isso pesa</span>
-          <p>É o que distingue um produto construído de um arquivo que apareceu pronto.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">A APRESENTAÇÃO</header>
-      <h3>Dez minutos, com demonstração ao vivo</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que se avalia</span>
-          <p>Problema, situação atual medida, o que foi construído, o que ainda não funciona.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O peso do último item</span>
-          <p>Dizer o que não funciona é parte da nota, e não desconto nela.</p>
-        </div>
-    </article></div></div>
+    <h2>O semestre na pasta do projeto</h2>
+    <p class="sub">Quinze encontros, seis entregas e o arquivo que o comando c2 procura em cada encontro</p>
+    <div class="corpo"><svg class="fig" viewBox="0 0 1168 368" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="376" height="32" fill="#F3E9D6"/>
+<rect x="0" y="0" width="6" height="32" fill="#D4B277"/>
+<text x="16" y="22" font-size="14" font-weight="700" fill="#8D0333" letter-spacing=".6">NOTA 1 · ENCONTROS 2 A 6</text>
+<line x1="18" y1="62" x2="18" y2="318" stroke="#D4B277" stroke-width="2"/>
+<circle cx="18" cy="62" r="16" fill="#D4B277"/>
+<text x="18" y="67" font-size="14" font-weight="700" fill="#1A1A1A" text-anchor="middle">2</text>
+<text x="44" y="61" font-size="15.5" font-weight="700" fill="#1A1A1A">Transformação digital</text>
+<text x="44" y="83" font-size="13.5" fill="#6B6B6B">fora da conferência do c2</text>
+<circle cx="18" cy="126" r="16" fill="#D4B277"/>
+<text x="18" y="131" font-size="14" font-weight="700" fill="#1A1A1A" text-anchor="middle">3</text>
+<text x="44" y="125" font-size="15.5" font-weight="700" fill="#1A1A1A">Ambiente de trabalho digital</text>
+<text x="44" y="147" font-size="13.5" fill="#8D0333" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">AGENTS.md, README.md</text>
+<rect x="302" y="140" width="74" height="22" fill="#FEC84D"/>
+<text x="339" y="155" font-size="12.5" font-weight="700" fill="#1A1A1A" text-anchor="middle">A1 · 40%</text>
+<circle cx="18" cy="190" r="16" fill="#D4B277"/>
+<text x="18" y="195" font-size="14" font-weight="700" fill="#1A1A1A" text-anchor="middle">4</text>
+<text x="44" y="189" font-size="15.5" font-weight="700" fill="#1A1A1A">IA, modelos de linguagem e prompt</text>
+<text x="44" y="211" font-size="13.5" fill="#8D0333" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">entregas/modulo3-ciclo…</text>
+<circle cx="18" cy="254" r="16" fill="#D4B277"/>
+<text x="18" y="259" font-size="14" font-weight="700" fill="#1A1A1A" text-anchor="middle">5</text>
+<text x="44" y="253" font-size="15.5" font-weight="700" fill="#1A1A1A">Do prompt ao artefato</text>
+<text x="44" y="275" font-size="13.5" fill="#8D0333" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">dados/api-diagnostico.md</text>
+<circle cx="18" cy="318" r="16" fill="#D4B277"/>
+<text x="18" y="323" font-size="14" font-weight="700" fill="#1A1A1A" text-anchor="middle">6</text>
+<text x="44" y="317" font-size="15.5" font-weight="700" fill="#1A1A1A">Dados na Administração</text>
+<text x="44" y="339" font-size="13.5" fill="#8D0333" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">entregas/mapa-de-dados…</text>
+<rect x="302" y="332" width="74" height="22" fill="#FEC84D"/>
+<text x="339" y="347" font-size="12.5" font-weight="700" fill="#1A1A1A" text-anchor="middle">A2 · 60%</text>
+<rect x="396" y="0" width="376" height="32" fill="#D7F1F0"/>
+<rect x="396" y="0" width="6" height="32" fill="#0AB0AB"/>
+<text x="412" y="22" font-size="14" font-weight="700" fill="#8D0333" letter-spacing=".6">NOTA 2 · ENCONTROS 7 A 11</text>
+<line x1="414" y1="62" x2="414" y2="318" stroke="#0AB0AB" stroke-width="2"/>
+<circle cx="414" cy="62" r="16" fill="#0AB0AB"/>
+<text x="414" y="67" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">7</text>
+<text x="440" y="61" font-size="15.5" font-weight="700" fill="#1A1A1A">Análise exploratória</text>
+<text x="440" y="83" font-size="13.5" fill="#8D0333" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">entregas/modulo6-…</text>
+<circle cx="414" cy="126" r="16" fill="#0AB0AB"/>
+<text x="414" y="131" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">8</text>
+<text x="440" y="125" font-size="15.5" font-weight="700" fill="#1A1A1A">Dados estruturados e consulta</text>
+<text x="440" y="147" font-size="13.5" fill="#8D0333" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">entregas/modulo7-…</text>
+<circle cx="414" cy="190" r="16" fill="#0AB0AB"/>
+<text x="414" y="195" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">9</text>
+<text x="440" y="189" font-size="15.5" font-weight="700" fill="#1A1A1A">Visualização e painéis</text>
+<text x="440" y="211" font-size="13.5" fill="#8D0333" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">entregas/painel.html</text>
+<rect x="698" y="204" width="74" height="22" fill="#FEC84D"/>
+<text x="735" y="219" font-size="12.5" font-weight="700" fill="#1A1A1A" text-anchor="middle">B1 · 60%</text>
+<circle cx="414" cy="254" r="16" fill="#0AB0AB"/>
+<text x="414" y="259" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">10</text>
+<text x="440" y="253" font-size="15.5" font-weight="700" fill="#1A1A1A">Automação de documentos</text>
+<text x="440" y="275" font-size="13.5" fill="#8D0333" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">entregas/modulo9-ciclo4…</text>
+<circle cx="414" cy="318" r="16" fill="#0AB0AB"/>
+<text x="414" y="323" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">11</text>
+<text x="440" y="317" font-size="15.5" font-weight="700" fill="#1A1A1A">Pesquisa e análise qualitativa</text>
+<text x="440" y="339" font-size="13.5" fill="#8D0333" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">entregas/modulo10-ciclo3…</text>
+<rect x="698" y="332" width="74" height="22" fill="#FEC84D"/>
+<text x="735" y="347" font-size="12.5" font-weight="700" fill="#1A1A1A" text-anchor="middle">B2 · 40%</text>
+<rect x="792" y="0" width="376" height="32" fill="#F6DCE5"/>
+<rect x="792" y="0" width="6" height="32" fill="#8D0333"/>
+<text x="808" y="22" font-size="14" font-weight="700" fill="#8D0333" letter-spacing=".6">NOTA 3 · ENCONTROS 12 A 16</text>
+<line x1="810" y1="62" x2="810" y2="318" stroke="#8D0333" stroke-width="2"/>
+<circle cx="810" cy="62" r="16" fill="#8D0333"/>
+<text x="810" y="67" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">12</text>
+<text x="836" y="61" font-size="15.5" font-weight="700" fill="#1A1A1A">Aprendizado de máquina</text>
+<text x="836" y="83" font-size="13.5" fill="#8D0333" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">modelo/ficha-modelo.md +1</text>
+<circle cx="810" cy="126" r="16" fill="#8D0333"/>
+<text x="810" y="131" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">13</text>
+<text x="836" y="125" font-size="15.5" font-weight="700" fill="#1A1A1A">LGPD e cibersegurança</text>
+<text x="836" y="147" font-size="13.5" fill="#8D0333" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">entregas/inventario-dados.csv +3</text>
+<circle cx="810" cy="190" r="16" fill="#8D0333"/>
+<text x="810" y="195" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">14</text>
+<text x="836" y="189" font-size="15.5" font-weight="700" fill="#1A1A1A">Decisão apoiada por IA</text>
+<text x="836" y="211" font-size="13.5" fill="#8D0333" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">entregas/devolutiva.md +3</text>
+<rect x="1094" y="204" width="74" height="22" fill="#FEC84D"/>
+<text x="1131" y="219" font-size="12.5" font-weight="700" fill="#1A1A1A" text-anchor="middle">C1 · 40%</text>
+<circle cx="810" cy="254" r="16" fill="#8D0333"/>
+<text x="810" y="259" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">15</text>
+<text x="836" y="253" font-size="15.5" font-weight="700" fill="#1A1A1A">Produto digital e gestão ágil</text>
+<text x="836" y="275" font-size="13.5" fill="#8D0333" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">entregas/registro-teste.md +3</text>
+<circle cx="810" cy="318" r="16" fill="#8D0333"/>
+<text x="810" y="323" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">16</text>
+<text x="836" y="317" font-size="15.5" font-weight="700" fill="#1A1A1A">Projeto integrador</text>
+<text x="836" y="339" font-size="13.5" fill="#8D0333" style="font-family:Consolas,'Cascadia Mono','Courier New',monospace">entregas/avaliacao-pares.md +1</text>
+<rect x="1094" y="332" width="74" height="22" fill="#8D0333"/>
+<text x="1131" y="347" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">C2 · 60%</text>
+</svg>
+    <p class="fonte-nota">Arquivo indicado para cada encontro conforme a lista que o comando c2 percorre em atividade_modulo15.py. O sinal … indica que o c2 aceita qualquer nome com esse início, e +N indica outros arquivos do mesmo encontro.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 15.1 · Teoria</span>
-      <span class="pag">4 / 20</span>
+      <span class="pag">4 / 26</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="4">
     <span class="barra"></span>
-    <span class="eyebrow">CICLO 15.1 · PRÁTICA</span>
-    <h2>Sua vez: conferir e corrigir</h2>
-    <p class="sub">Individual</p>
-    <div class="corpo"><div class="prompt">
-    <span class="rot">COMANDO EXECUTADO PELO AGENTE</span>
-    <p>python atividade_modulo15.py c2<br><br>O script percorre as entregas dos encontros 2 a 16, marca o que existe e o que falta, e aponta as pendências de conteúdo que os scripts anteriores já haviam registrado. O que ele listar como pendente conta como não entregue.</p>
-  </div>
-<ol class="steps cols-3" style="--linhas:1">
-    <li><span class="num">1</span>
-      <div><strong>Rode primeiro, corrija depois</strong><p>A lista do script define a ordem das correções.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Pendência da C1 ainda entra</strong><p>Esta é a última janela do semestre.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Commit ao fim de cada correção</strong><p>O histórico é parte da entrega.</p></div>
-    </li></ol></div>
+    <span class="eyebrow">CICLO 15.1 · TEORIA</span>
+    <h2>O que a C2 avalia</h2>
+    <p class="sub">Três partes, cada uma com a evidência que a correção procura no repositório</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:17%">PARTE</th><th style="width:47%">O QUE SE AVALIA</th><th style="width:36%">EVIDÊNCIA NA PASTA</th></tr>
+      <tr><td><strong>O produto</strong><span class="s">versão 2</span></td>
+          <td>Uma história do backlog completa segundo o critério de aceite. Os bloqueios do teste com usuário resolvidos ou declarados. Dado inválido recusado com mensagem que diz o que corrigir.</td>
+          <td><span class="mono">entregas/backlog.csv</span><br><span class="mono">entregas/registro-teste.md</span></td></tr>
+      <tr><td><strong>O caminho</strong><span class="s">encontros 15 e 16</span></td>
+          <td>Ordem de construção declarada na ficha e no backlog. Mudança na fila depois do teste com usuário. Commits ao longo do trabalho, com mensagem que diz o que mudou.</td>
+          <td><span class="mono">entregas/ficha-produto.md</span><br><span class="mono">saidas/backlog-priorizado.md</span><br>histórico de commits no GitHub</td></tr>
+      <tr><td><strong>A apresentação</strong><span class="s">dez minutos</span></td>
+          <td>Quatro blocos no tempo. Demonstração ao vivo de um caso completo e de um caso com dado errado. O que ainda não funciona dito pelo autor.</td>
+          <td><span class="mono">entregas/roteiro-apresentacao.md</span><br>formulários de avaliação dos colegas</td></tr>
+    </table>
+    <div class="duascol" style="--esq:1fr;--dir:1.25fr;height:auto;margin-top:14px">
+      <div class="caixa dourado"><span class="rot">FICA FORA DA AVALIAÇÃO</span><p>Quantidade de funcionalidade, sofisticação técnica e aparência da tela. O bloco 4 da apresentação, sobre o que não funciona, tem o mesmo peso dos outros três.</p></div>
+      <div class="caixa vinho"><span class="rot">CRITÉRIO COMUM ÀS SEIS ENTREGAS</span><p>O problema é real e específico, o resultado foi conferido contra a fonte, o que a IA errou está registrado, o prompt está documentado e reproduzível, e o repositório abre.</p></div>
+    </div>
+    <p class="fonte-nota">Critério comum conforme o planejamento da disciplina, seção de avaliação. A C2 vale 60% da nota 3, e a C1, entregue no encontro 14, vale 40%.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 15.1 · Prática</span>
-      <span class="pag">5 / 20</span>
+      <span class="centro">Ciclo 15.1 · Teoria</span>
+      <span class="pag">5 / 26</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="5">
     <span class="barra"></span>
+    <span class="eyebrow">CICLO 15.1 · DEMONSTRAÇÃO</span>
+    <h2>A conferência da C2 na projeção</h2>
+    <p class="sub">A lista mostra cada encontro como completo, parcial ou ausente, e o caminho de cada arquivo que falta</p>
+    <div class="corpo"><div class="prompt compacto">
+    <span class="rot">INSTRUÇÃO DADA AO AGENTE</span>
+    <p><span class="cmd">"execute atividade_modulo15.py com o comando c2"</span></p>
+  </div>
+  <div class="duascol" style="--esq:1.45fr;--dir:1fr;height:auto">
+    <div class="col" style="gap:6px">
+      <pre class="terminal" style="font-size:13.5px;line-height:1.34">CONFERENCIA DA ENTREGA C2 - 60% DA NOTA 3
+  [x] encontro  3  Ambiente montado e A1
+  ...
+  [x] encontro 14  Matriz, mapa do documento e devolutiva (C1)
+  <span class="hl">[~] encontro 15  Ficha do produto, backlog e teste com usuario</span>
+  [ ] encontro 16  Apresentacao e avaliacao por pares
+
+Faltam 3 arquivos:
+  encontro 15:
+    - <span class="hl">entregas/registro-teste.md</span>
+  encontro 16:
+    - entregas/roteiro-apresentacao.md
+    - entregas/avaliacao-pares.md
+Rode a conferencia de cada encontro para o detalhe do conteudo:
+  python atividade_modulo13.py c1     (encontros 12, 13 e 14)
+  python atividade_modulo14.py conferir  (encontro 15)</pre>
+    </div>
+    <div class="col" style="gap:9px">
+      <div class="caixa dourado"><span class="rot">[~] PARCIAL</span><p>O encontro tem parte dos arquivos. Nesta pasta falta o registro do teste com usuário do módulo 14.</p></div>
+      <div class="caixa teal"><span class="rot">ENCONTRO 16</span><p>Os dois arquivos de hoje aparecem como ausentes até você rodar os comandos apresentacao e pares.</p></div>
+      <div class="caixa vinho"><span class="rot">EXISTÊNCIA E CONTEÚDO</span><p>O c2 confere se o arquivo existe. Campo vazio e critério vago aparecem no c1 do módulo 13 e no conferir do módulo 14.</p></div>
+    </div>
+  </div>
+  <p class="fonte-nota">Saída do script, abreviada, sobre uma pasta de teste com os encontros 3 a 14 completos.</p></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 15.1 · Demonstração</span>
+      <span class="pag">6 / 26</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="6">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 15.1 · PRÁTICA</span>
+    <h2>Sua vez: conferir, corrigir e preparar o roteiro</h2>
+    <p class="sub">Individual</p>
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
+    <li><span class="num">1</span>
+      <div><strong>Rode a conferência da C2</strong><p>"execute atividade_modulo15.py com o comando c2". A lista de arquivos que faltam define a ordem das correções.</p></div>
+    </li>
+    <li><span class="num">2</span>
+      <div><strong>Confira o conteúdo dos encontros 12 a 15</strong><p>"execute atividade_modulo13.py com o comando c1" e "execute atividade_modulo14.py com o comando conferir". A pendência da C1 ainda pode ser corrigida hoje.</p></div>
+    </li>
+    <li><span class="num">3</span>
+      <div><strong>Faça um commit por correção</strong><p>Mensagem que diga o que mudou, como "Corrige critério de aceite da H3". A pasta dados/restrito/ não pode aparecer na lista de arquivos.</p></div>
+    </li>
+    <li><span class="num">4</span>
+      <div><strong>Crie e preencha o roteiro da apresentação</strong><p>"execute atividade_modulo15.py com o comando apresentacao" grava entregas/roteiro-apresentacao.md. Preencha os campos dos quatro blocos e ensaie o caso com dado errado.</p></div>
+    </li></ol></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 15.1 · Prática</span>
+      <span class="pag">7 / 26</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="7">
+    <span class="barra"></span>
     <span class="eyebrow">CICLO 15.1 · ENTREGA</span>
-    <h2>Pasta conferida pelo script</h2>
+    <h2>Pasta conferida e roteiro escrito</h2>
     
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>A rodada de c2 sem pendências, ou com a lista do que ficou e por quê.</li><li>As pendências da C1 regularizadas.</li><li>Os commits do dia, com mensagem que diz o que foi corrigido.</li><li>A pasta de dados restritos ausente da lista de arquivos do commit.</li></ul>
+      <ul><li>A rodada de c2 em que só falta entregas/avaliacao-pares.md, criado no ciclo 15.2, ou a lista do que ficou pendente e o motivo.</li><li>As pendências apontadas por c1 e por conferir corrigidas.</li><li>Os commits do dia, um por correção, com mensagem que diz o que mudou.</li><li>O roteiro da apresentação com os campos dos quatro blocos preenchidos.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>A pasta do projeto, no GitHub Desktop</p>
+        <p>A pasta do projeto, com commit pelo GitHub Desktop. Roteiro em <span class="mono" style="font-size:15px">entregas/roteiro-apresentacao.md</span></p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Pendência que o script apontar e não for corrigida hoje conta como não entregue. O semestre fecha com o que estiver na pasta.</p>
+        <p>Pendência apontada pelo script e não corrigida hoje conta como não entregue. O semestre fecha com o que estiver no repositório.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 15.1 · Entrega</span>
-      <span class="pag">6 / 20</span>
+      <span class="pag">8 / 26</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="6">
+<section class="slide divisor" data-i="8">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">15.2</span></div>
       <div class="dir">
         <h2>Apresentações, primeira rodada</h2>
-        <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
+        <p class="etapas">Teoria · Demonstração · Prática</p>
       </div>
-      <span class="pag">7 / 20</span>
+      <span class="pag">9 / 26</span>
     </section>
-<section class="slide conteudo" data-i="7">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 15.2 · FORMATO</span>
-    <h2>Dez minutos, quatro blocos</h2>
-    <p class="sub">A estrutura é a mesma para todos, e o tempo é cronometrado</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>1. O problema e quem o tem — 2 min</strong><p>O usuário pelo cargo, o que ele faz hoje, quanto tempo leva e com que frequência. Com o número da ficha.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>2. O que você construiu — 2 min</strong><p>O escopo da versão, o que ficou de fora e por quê. A decisão de corte, e não a lista de funcionalidades.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>3. Demonstração ao vivo — 4 min</strong><p>Um caso completo funcionando, e um caso com dado errado. O produto recusando entrada inválida é parte da demonstração.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>4. O que ainda não funciona — 2 min</strong><p>Os achados do teste que não foram resolvidos, o próximo item da fila e o que você faria com mais um encontro.</p></div>
-    </li></ol></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 15.2 · Formato</span>
-      <span class="pag">8 / 20</span>
-    </footer>
-  </section>
-<section class="slide conteudo" data-i="8">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 15.2 · AVALIAÇÃO</span>
-    <h2>A avaliação por pares</h2>
-    <p class="sub">Cada aluno avalia três apresentações, com critério escrito</p>
-    <div class="corpo"><div class="cards cols-2">
-    <article class="card">
-      <header style="background:#D4B277">O QUE SE AVALIA</header>
-      <h3>Quatro perguntas por apresentação</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">As perguntas</span>
-          <p>O problema ficou claro? A demonstração funcionou? O que não funciona foi dito? Você usaria esse produto no seu setor?</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">A resposta</span>
-          <p>Sim ou não, mais uma frase de justificativa em cada. Sem nota numérica.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">PARA QUE SERVE</header>
-      <h3>Não é nota, é devolutiva</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O uso</span>
-          <p>A avaliação por pares volta para quem apresentou, e entra no fechamento do semestre.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">A regra</span>
-          <p>Justificativa vazia ou elogio genérico não conta. A frase precisa dizer o que, especificamente, ficou claro ou não ficou.</p>
-        </div>
-    </article></div></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 15.2 · Avaliação</span>
-      <span class="pag">9 / 20</span>
-    </footer>
-  </section>
 <section class="slide conteudo" data-i="9">
     <span class="barra"></span>
-    <span class="eyebrow">CICLO 15.2 · PRÁTICA</span>
-    <h2>Sua vez: apresentar e avaliar</h2>
-    <p class="sub">Turma inteira</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Abra o formulário antes da primeira apresentação</strong><p>python atividade_modulo15.py pares cria o arquivo com as quatro perguntas.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Preencha durante, não depois</strong><p>A frase escrita no momento é a que serve. A escrita no fim vira elogio genérico.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Cronômetro visível para quem apresenta</strong><p>Dez minutos, com aviso aos oito. Corte no décimo, sem exceção, porque a exceção da primeira apresentação vira o padrão de todas.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Duas perguntas por apresentação, no máximo</strong><p>Para caber a turma no tempo. As demais ficam para o intervalo.</p></div>
-    </li></ol></div>
+    <span class="eyebrow">CICLO 15.2 · TEORIA</span>
+    <h2>Dez minutos em quatro blocos</h2>
+    <p class="sub">A mesma estrutura para todos, com cronômetro visível para quem apresenta</p>
+    <div class="corpo"><svg class="fig" viewBox="0 0 1168 84" xmlns="http://www.w3.org/2000/svg">
+  <g font-size="15" font-weight="700" text-anchor="middle">
+    <rect x="0" y="0" width="230" height="44" fill="#D4B277"/><text x="115" y="28" fill="#1A1A1A">BLOCO 1 · 2 MIN</text>
+    <rect x="236" y="0" width="230" height="44" fill="#0AB0AB"/><text x="351" y="28" fill="#fff">BLOCO 2 · 2 MIN</text>
+    <rect x="472" y="0" width="460" height="44" fill="#8D0333"/><text x="702" y="28" fill="#fff">BLOCO 3 · 4 MIN</text>
+    <rect x="938" y="0" width="230" height="44" fill="#FEC84D"/><text x="1053" y="28" fill="#1A1A1A">BLOCO 4 · 2 MIN</text>
+  </g>
+  <g stroke="#6B6B6B" stroke-width="1.5">
+    <line x1="1" y1="48" x2="1" y2="58"/><line x1="233" y1="48" x2="233" y2="58"/><line x1="469" y1="48" x2="469" y2="58"/>
+    <line x1="935" y1="48" x2="935" y2="58"/><line x1="1167" y1="48" x2="1167" y2="58"/>
+  </g>
+  <g font-size="14" fill="#6B6B6B">
+    <text x="0" y="76">0</text><text x="233" y="76" text-anchor="middle">2 min</text><text x="469" y="76" text-anchor="middle">4 min</text>
+  </g>
+  <g font-size="14" font-weight="700" fill="#8D0333">
+    <text x="935" y="76" text-anchor="middle">8 min · aviso</text><text x="1168" y="76" text-anchor="end">10 min · corte</text>
+  </g>
+</svg><div class="blocos"><div class="bl" style="border-top-color:#D4B277"><h4>O problema e quem o tem</h4><p>O cargo de quem usa, o caminho atual e quanto ele custa, em tempo por execução e frequência.</p><span class="campo">usuario_cargo</span><span class="campo">o_que_ele_faz_hoje</span><span class="campo">quanto_custa_hoje</span></div><div class="bl" style="border-top-color:#0AB0AB"><h4>O que você construiu</h4><p>O que a versão resolve do começo ao fim, o que ficou de fora e a razão do corte em uma frase.</p><span class="campo">escopo_da_versao</span><span class="campo">o_que_ficou_de_fora</span><span class="campo">decisao_de_corte</span></div><div class="bl" style="border-top-color:#8D0333"><h4>Demonstração ao vivo</h4><p>Um caso completo rodando na frente da turma. Em seguida, um caso com dado errado, mostrando o que o produto faz com ele. A recusa da entrada inválida faz parte da demonstração.</p><span class="campo">caso_completo</span><span class="campo">caso_com_dado_errado</span></div><div class="bl" style="border-top-color:#FEC84D"><h4>O que ainda não funciona</h4><p>Os achados do teste que ficaram sem solução, o próximo item da fila e o uso de mais um encontro.</p><span class="campo">achados_nao_resolvidos</span><span class="campo">proximo_item_da_fila</span><span class="campo">o_que_faria_com_<wbr>mais_um_encontro</span></div></div>
+    <p class="fonte-nota">Blocos, tempos e campos de entregas/roteiro-apresentacao.md, criado pelo comando apresentacao no ciclo 15.1.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 15.2 · Prática</span>
-      <span class="pag">10 / 20</span>
+      <span class="centro">Ciclo 15.2 · Teoria</span>
+      <span class="pag">10 / 26</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="10">
-      <span class="filete"></span>
-      <div class="esq"><span class="rot">CICLO</span><span class="num">15.3</span></div>
-      <div class="dir">
-        <h2>Apresentações, segunda rodada</h2>
-        <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
-      </div>
-      <span class="pag">11 / 20</span>
-    </section>
-<section class="slide conteudo" data-i="11">
+<section class="slide conteudo" data-i="10">
     <span class="barra"></span>
-    <span class="eyebrow">CICLO 15.3 · PRÁTICA</span>
-    <h2>Segunda rodada, mesmo formato</h2>
-    <p class="sub">Turma inteira</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:4">
-    <li><span class="num">1</span>
-      <div><strong>Mesma estrutura de quatro blocos</strong><p>E o mesmo formulário de avaliação por pares.</p></div>
-    </li>
-    <li><span class="num">2</span>
-      <div><strong>Quem já apresentou continua avaliando</strong><p>A avaliação de quem apresentou tende a ser a mais útil, porque reconhece o problema.</p></div>
-    </li>
-    <li><span class="num">3</span>
-      <div><strong>Anote o que você vai levar do produto do colega</strong><p>Uma ideia por apresentação assistida. Isso entra no fechamento.</p></div>
-    </li>
-    <li><span class="num">4</span>
-      <div><strong>Ao terminar, feche o seu formulário</strong><p>python atividade_modulo15.py pares confere se as justificativas foram escritas.</p></div>
-    </li></ol></div>
+    <span class="eyebrow">CICLO 15.2 · TEORIA</span>
+    <h2>Blocos 3 e 4: o produto diante do dado errado</h2>
+    <p class="sub">O caso com dado errado mostra se o critério de aceite foi construído com a recusa prevista</p>
+    <div class="corpo"><div class="def"><span class="rot">Validação de entrada (input validation)</span>
+      <p>Conferência de que o dado atende aos requisitos do sistema antes de ser usado. A validação sintática confere tipo e formato. A validação semântica confere se o valor faz sentido para a operação, como a data de fim posterior à de início (OWASP).</p></div>
+    <div class="duascol" style="--esq:1.6fr;--dir:1fr;height:auto;margin-top:12px">
+      <div class="col" style="gap:4px">
+      <table class="tab apertada">
+        <tr><th style="width:27%">CASO</th><th style="width:30%">ENTRADA</th><th style="width:43%">O QUE O PRODUTO FAZ</th></tr>
+        <tr><td><strong>Completo</strong></td><td>Pedido de 12 resmas, saldo de 40</td><td><span class="chip ok">GRAVA</span><br>Registra o pedido e o saldo passa a 28.</td></tr>
+        <tr><td><strong>Dado errado</strong><span class="s">semântico</span></td><td>Pedido de 50 resmas, saldo de 40</td><td><span class="chip ruim">RECUSA</span><br>"Saldo disponível de 40 resmas."</td></tr>
+        <tr><td><strong>Dado errado</strong><span class="s">sintático</span></td><td>Quantidade "doze"</td><td><span class="chip ruim">RECUSA</span><br>"A quantidade precisa ser um número inteiro."</td></tr>
+        <tr><td><strong>Dado errado</strong><span class="s">cadastro</span></td><td>Código de material 7741</td><td><span class="chip ruim">RECUSA</span><br>"O código 7741 não consta do catálogo."</td></tr>
+      </table>
+      </div>
+      <div class="col" style="gap:10px">
+        <div class="caixa teal"><span class="rot">BLOCO 4 VEM DO REGISTRO DO TESTE</span><p>Os achados classificados como bloqueio ou incômodo em entregas/registro-teste.md e o campo o_que_entra_na_versao_2 são a base do bloco. Bloqueio sem solução é dito na apresentação.</p></div>
+        <div class="caixa vinho"><span class="rot">QUANDO A DEMONSTRAÇÃO FALHA</span><p>Leia a mensagem de erro em voz alta, diga a causa provável e o que faria para corrigir. A leitura do erro faz parte da demonstração.</p></div>
+      </div>
+    </div>
+    <p class="fonte-nota">Produto ilustrativo de pedidos ao almoxarifado. OWASP Cheat Sheet Series, Input Validation Cheat Sheet (cheatsheetseries.owasp.org). Consulta em 02/11/2026.</p></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 15.3 · Prática</span>
-      <span class="pag">12 / 20</span>
+      <span class="centro">Ciclo 15.2 · Teoria</span>
+      <span class="pag">11 / 26</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="11">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 15.2 · TEORIA</span>
+    <h2>A avaliação por pares com critério escrito</h2>
+    <p class="sub">Cada aluno avalia três apresentações em entregas/avaliacao-pares.md, com sim ou não e uma justificativa</p>
+    <div class="corpo"><div class="def"><span class="rot">Avaliação por pares (peer assessment)</span>
+      <p>Arranjo em que estudantes do mesmo nível examinam a quantidade, o nível, o valor, a qualidade ou o sucesso do que os colegas produziram (Topping, 1998). Nesta disciplina ela é uma devolutiva escrita, sem nota numérica, que volta para quem apresentou.</p></div>
+    <table class="tab apertada" style="margin-top:12px">
+      <tr><th style="width:27%">CAMPO DO FORMULÁRIO</th><th style="width:37%">RESPOSTA ACEITA</th><th style="width:36%">RESPOSTA RECUSADA PELO SCRIPT</th></tr>
+      <tr><td class="mono">problema_ficou_claro_N</td><td>sim | 40 processos por semana, 12 minutos cada na triagem</td><td>sim | ficou bom<span class="s">justificativa com menos de quatro palavras</span></td></tr>
+      <tr><td class="mono">demonstracao_funcionou_N</td><td>sim | recusou o processo sem número SEI com mensagem clara</td><td>talvez | travou no segundo caso<span class="s">resposta diferente de sim ou não</span></td></tr>
+      <tr><td class="mono">disse_o_que_nao_funciona_N</td><td>sim | o anexo em PDF ainda não é lido pelo script</td><td>sim<span class="s">sem a barra e sem justificativa</span></td></tr>
+      <tr><td class="mono">voce_usaria_no_seu_setor_N</td><td>não | meu setor não recebe processo pelo SEI</td><td>não | não sei<span class="s">justificativa com menos de quatro palavras</span></td></tr>
+    </table>
+    <p class="rodape-corpo">Cada apresentação também pede <span class="mono">quem_apresentou_N</span> e <span class="mono">ideia_que_voce_leva_N</span>. A devolutiva útil diz aonde o trabalho quer chegar, como ele está e qual o próximo passo (Hattie e Timperley, 2007).</p>
+    <p class="fonte-nota">Respostas ilustrativas. Topping (1998), Review of Educational Research, v. 68, n. 3, p. 249-276. Hattie e Timperley (2007), Review of Educational Research, v. 77, n. 1, p. 81-112.</p></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 15.2 · Teoria</span>
+      <span class="pag">12 / 26</span>
     </footer>
   </section>
 <section class="slide conteudo" data-i="12">
     <span class="barra"></span>
+    <span class="eyebrow">CICLO 15.2 · DEMONSTRAÇÃO</span>
+    <h2>O formulário conferido pelo script</h2>
+    <p class="sub">Na primeira vez o comando cria o formulário. Nas seguintes, confere o preenchimento e aponta o que falta</p>
+    <div class="corpo"><div class="prompt compacto">
+    <span class="rot">INSTRUÇÃO DADA AO AGENTE</span>
+    <p><span class="cmd">"execute atividade_modulo15.py com o comando pares"</span></p>
+  </div>
+  <pre class="codigo">## Apresentacao 2
+quem_apresentou_2: Bruno, compras
+problema_ficou_claro_2: sim | <b>ficou bom</b>
+demonstracao_funcionou_2: <b>talvez</b> | travou no segundo caso e depois rodou
+disse_o_que_nao_funciona_2: <b>sim</b>
+voce_usaria_no_seu_setor_2: sim | uso a mesma planilha de cotacao de precos</pre>
+  <pre class="terminal" style="margin-top:10px">apresentacoes avaliadas: 2 de 3
+Faltam 5 itens:
+ 1. apresentacao 2, o problema ficou claro: a justificativa esta vazia ou curta demais. Escreva o que ...
+ 2. apresentacao 2, a demonstracao funcionou: a resposta precisa ser sim ou nao.
+ 3. apresentacao 2, disse o que nao funciona: falta a justificativa depois da barra.
+ 4. apresentacao 2: <span class="hl">falta a ideia que voce leva.</span>
+ 5. apresentacao 3: <span class="hl">nao identificada.</span></pre>
+  <p class="fonte-nota">Formulário ilustrativo e saída do script, abreviada. A apresentação 1 do mesmo formulário estava completa.</p></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 15.2 · Demonstração</span>
+      <span class="pag">13 / 26</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="13">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 15.2 · PRÁTICA</span>
+    <h2>Sua vez: apresentar e avaliar</h2>
+    <p class="sub">Turma inteira</p>
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
+    <li><span class="num">1</span>
+      <div><strong>Crie o formulário antes da primeira apresentação</strong><p>"execute atividade_modulo15.py com o comando pares" grava entregas/avaliacao-pares.md com as quatro perguntas para três apresentações.</p></div>
+    </li>
+    <li><span class="num">2</span>
+      <div><strong>Preencha durante a apresentação</strong><p>No formato sim | justificativa ou não | justificativa. A frase diz o que ficou claro ou não ficou, com quatro palavras ou mais.</p></div>
+    </li>
+    <li><span class="num">3</span>
+      <div><strong>Apresente com o cronômetro visível</strong><p>Dez minutos, com aviso aos oito e corte aos dez. O roteiro escrito no ciclo 15.1 fica aberto ao seu lado.</p></div>
+    </li>
+    <li><span class="num">4</span>
+      <div><strong>Faça no máximo duas perguntas por apresentação</strong><p>As demais ficam para o intervalo. Anote a ideia que você leva no campo ideia_que_voce_leva_N.</p></div>
+    </li></ol></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 15.2 · Prática</span>
+      <span class="pag">14 / 26</span>
+    </footer>
+  </section>
+<section class="slide divisor" data-i="14">
+      <span class="filete"></span>
+      <div class="esq"><span class="rot">CICLO</span><span class="num">15.3</span></div>
+      <div class="dir">
+        <h2>Apresentações, segunda rodada</h2>
+        <p class="etapas">Prática · Entrega</p>
+      </div>
+      <span class="pag">15 / 26</span>
+    </section>
+<section class="slide conteudo" data-i="15">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 15.3 · PRÁTICA</span>
+    <h2>Segunda rodada, mesmo formato</h2>
+    <p class="sub">Turma inteira</p>
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
+    <li><span class="num">1</span>
+      <div><strong>Mesma estrutura de quatro blocos</strong><p>Mesmo cronômetro e mesmo formulário. Quem apresentou na primeira rodada avalia nesta.</p></div>
+    </li>
+    <li><span class="num">2</span>
+      <div><strong>Avalie com o seu próprio teste em mente</strong><p>Quem já passou pelo bloco 4 reconhece no colega o achado sem solução e a decisão de corte.</p></div>
+    </li>
+    <li><span class="num">3</span>
+      <div><strong>Complete as três apresentações do formulário</strong><p>Para N de 1 a 3, quem_apresentou_N, as quatro respostas com justificativa e ideia_que_voce_leva_N.</p></div>
+    </li>
+    <li><span class="num">4</span>
+      <div><strong>Rode a conferência do formulário</strong><p>"execute atividade_modulo15.py com o comando pares" até a saída "Formulario completo". Em seguida, faça o commit.</p></div>
+    </li></ol></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 15.3 · Prática</span>
+      <span class="pag">16 / 26</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="16">
+    <span class="barra"></span>
     <span class="eyebrow">CICLO 15.3 · ENTREGA</span>
-    <h2>Demonstração e avaliação por pares</h2>
+    <h2>Apresentação e avaliação por pares</h2>
     
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>A sua apresentação, nos quatro blocos, com demonstração ao vivo.</li><li>O formulário com três apresentações avaliadas e justificativa em cada resposta.</li><li>A ideia que você leva de cada produto assistido.</li><li>O roteiro da sua apresentação, gravado na pasta.</li></ul>
+      <ul><li>A apresentação nos quatro blocos, com o caso completo e o caso com dado errado demonstrados ao vivo.</li><li>O roteiro da apresentação com os campos preenchidos.</li><li>O formulário com três apresentações identificadas, as quatro respostas justificadas e a ideia que você leva de cada uma.</li><li>O commit com os dois arquivos.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>entregas/roteiro-apresentacao.md e entregas/avaliacao-pares.md</p>
+        <p><span class="mono" style="font-size:15px">entregas/roteiro-apresentacao.md</span><br><span class="mono" style="font-size:15px">entregas/avaliacao-pares.md</span></p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>Avaliação com justificativa vazia não conta. "Ficou bom" não diz nada a quem apresentou.</p>
+        <p>O comando pares recusa resposta diferente de sim ou não, justificativa ausente ou com menos de quatro palavras e apresentação sem identificação. A correção lê as justificativas.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 15.3 · Entrega</span>
-      <span class="pag">13 / 20</span>
+      <span class="pag">17 / 26</span>
     </footer>
   </section>
-<section class="slide divisor" data-i="13">
+<section class="slide divisor" data-i="17">
       <span class="filete"></span>
       <div class="esq"><span class="rot">CICLO</span><span class="num">15.4</span></div>
       <div class="dir">
         <h2>O portfólio e o que continua</h2>
         <p class="etapas">Teoria · Demonstração · Prática · Entrega</p>
       </div>
-      <span class="pag">14 / 20</span>
+      <span class="pag">18 / 26</span>
     </section>
-<section class="slide conteudo" data-i="14">
+<section class="slide conteudo" data-i="18">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 15.4 · TEORIA</span>
+    <h2>O que continua depois da disciplina</h2>
+    <p class="sub">O que fica escrito na pasta, o que depende de uso e o que muda com as ferramentas</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:19%">GRUPO</th><th style="width:47%">O QUE INCLUI</th><th style="width:34%">CONDIÇÃO PARA CONTINUAR</th></tr>
+      <tr><td><strong>Funciona sem modelo</strong></td>
+          <td>Os scripts das atividades, o AGENTS.md, o inventário de dados, o plano de resposta a incidente e o produto. São arquivos na pasta, e os scripts rodam com Python, sem rede e sem modelo de linguagem.</td>
+          <td>Um responsável pela atualização, com o nome registrado no README.md.</td></tr>
+      <tr><td><strong>Depende de prática</strong></td>
+          <td>Escrever instrução com contexto e critério, reconhecer confabulação, escrever o critério de decisão antes de ler a resposta do modelo, conduzir teste com usuário.</td>
+          <td>Uso regular no trabalho. A conferência de dois números à mão vale para qualquer ferramenta.</td></tr>
+      <tr><td><strong>Muda com as ferramentas</strong></td>
+          <td>Modelos disponíveis, interface, preço, cota e política de dados do provedor. A regulação de IA no Brasil está em tramitação.</td>
+          <td>Conferir a política de dados do modelo e a data da informação antes de usar ou citar.</td></tr>
+    </table>
+    <div class="caixa teal" style="margin-top:14px"><span class="rot">SITUAÇÃO EM 2 DE NOVEMBRO DE 2026</span>
+      <p>A página do OpenCode Zen descreve parte dos modelos gratuitos como oferta por tempo limitado. Big Pickle, Flint 40B Free e MiMo-V2.6-Flash Free informam que os dados coletados no período gratuito podem ser usados para aprimorar o modelo. O PL 2338/2023, aprovado no Senado em dezembro de 2024, aguarda votação na Câmara, que o relator previu para depois das eleições de outubro.</p></div>
+    <p class="fonte-nota">OpenCode Zen (opencode.ai/docs/zen). Mobile Time, 24/08/2026, entrevista com o relator Aguinaldo Ribeiro. Consulta em 02/11/2026.</p></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 15.4 · Teoria</span>
+      <span class="pag">19 / 26</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="19">
+    <span class="barra"></span>
+    <span class="eyebrow">CICLO 15.4 · DEMONSTRAÇÃO</span>
+    <h2>O índice do semestre gerado pelo script</h2>
+    <p class="sub">O índice lista o que existe na pasta, agrupado por encontro, e deixa as três frases para você</p>
+    <div class="corpo"><div class="prompt compacto">
+    <span class="rot">INSTRUÇÃO DADA AO AGENTE</span>
+    <p><span class="cmd">"execute atividade_modulo15.py com o comando portfolio"</span></p>
+  </div>
+  <div class="duascol" style="--esq:1.2fr;--dir:1fr;height:auto">
+    <div class="col" style="gap:8px">
+      <pre class="terminal">PORTFOLIO GERADO
+arquivos indexados: <span class="hl">32</span>
+gravado em: saidas/portfolio.md</pre>
+      <pre class="codigo" style="line-height:1.42"><b>## O que voce produziu, por encontro</b>
+### Encontro 3 - Ambiente montado e A1
+- `AGENTS.md` (data, bytes)
+...
+<b>## Todos os arquivos da pasta, em ordem de criacao</b>
+| arquivo | data | bytes |
+...
+<b>## Tres frases suas</b>
+o_que_ficou_pronto: (...)
+o_que_eu_usaria_de_novo: (...)
+o_que_eu_abandonaria: (...)</pre>
+    </div>
+    <div class="col" style="gap:9px">
+      <div class="caixa dourado"><span class="rot">O QUE O SCRIPT LÊ</span><p>As pastas entregas, saidas, modelo e dados, mais AGENTS.md, README.md e .gitignore. Ignora .git, __pycache__ e qualquer pasta chamada restrito.</p></div>
+      <div class="caixa teal"><span class="rot">O QUE ELE GRAVA</span><p>Uma seção por encontro com os arquivos da C2, a lista de todos os arquivos com data e tamanho e os três campos para você escrever.</p></div>
+      <div class="caixa vinho"><span class="rot">O QUE ELE NÃO FAZ</span><p>Não lê o conteúdo dos arquivos nem confere as três frases. O nome de cada arquivo aparece no índice, então arquivo com dado pessoal no nome vai para dados/restrito/.</p></div>
+    </div>
+  </div>
+  <p class="fonte-nota">Saída do script sobre a pasta de teste do ciclo 15.1. Estrutura de saidas/portfolio.md abreviada.</p></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Ciclo 15.4 · Demonstração</span>
+      <span class="pag">20 / 26</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="20">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 15.4 · PRÁTICA</span>
-    <h2>O índice do semestre</h2>
-    <p class="sub">O script varre a pasta e monta a lista do que você produziu</p>
-    <div class="corpo"><div class="prompt">
-    <span class="rot">COMANDO EXECUTADO PELO AGENTE</span>
-    <p>python atividade_modulo15.py portfolio<br><br>Gera saidas/portfolio.md com todos os arquivos das pastas de entrega, agrupados por encontro, com data e tamanho, mais os espaços para você escrever o que cada bloco resolveu e o que você usaria de novo.</p>
-  </div>
-<ol class="steps cols-3" style="--linhas:1">
+    <h2>Sua vez: o portfólio e as três frases</h2>
+    <p class="sub">Individual</p>
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>O índice é seu, e não da disciplina</strong><p>Ele descreve o que você sabe fazer, com prova.</p></div>
+      <div><strong>Gere o índice</strong><p>"execute atividade_modulo15.py com o comando portfolio" e abra saidas/portfolio.md.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Escreva as três frases pedidas</strong><p>O que ficou pronto, o que você usaria de novo, o que abandonaria.</p></div>
+      <div><strong>Confira a lista contra o que você fez no semestre</strong><p>Arquivo entregue que não aparece está fora das pastas lidas ou tem outro nome. Encontro sem seção não teve arquivo encontrado.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Guarde a pasta fora do computador do laboratório</strong><p>A máquina pode ser restaurada. O repositório no GitHub, não.</p></div>
+      <div><strong>Escreva as três frases</strong><p>Nos campos o_que_ficou_pronto, o_que_eu_usaria_de_novo e o_que_eu_abandonaria, com o motivo de cada uma. Crítica à disciplina cabe na terceira.</p></div>
+    </li>
+    <li><span class="num">4</span>
+      <div><strong>Confira o repositório remoto</strong><p>Commit e Push origin pelo GitHub Desktop. Abra o repositório no navegador e confira a data do último commit.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 15.4 · Prática</span>
-      <span class="pag">15 / 20</span>
+      <span class="pag">21 / 26</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="15">
-    <span class="barra"></span>
-    <span class="eyebrow">CICLO 15.4 · FECHAMENTO</span>
-    <h2>O que continua funcionando depois daqui</h2>
-    <p class="sub">O que sobrevive à disciplina, e o que depende de você continuar</p>
-    <div class="corpo"><div class="cards cols-3">
-    <article class="card">
-      <header style="background:#D4B277">CONTINUA SOZINHO</header>
-      <h3>O que já está escrito</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O que é</span>
-          <p>Os scripts, o AGENTS.md, o inventário de dados, o plano de resposta, o produto. Tudo roda sem modelo de linguagem e sem cota.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#D4B277"></span>
-          <span class="rot">O cuidado</span>
-          <p>Um repositório sem dono para de ser atualizado no primeiro mês. Defina quem mantém.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#0AB0AB">DEPENDE DE PRÁTICA</header>
-      <h3>O que enferruja rápido</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O que é</span>
-          <p>Escrever instrução boa, reconhecer alucinação, montar critério antes da alternativa, conduzir teste com usuário.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#0AB0AB"></span>
-          <span class="rot">O cuidado</span>
-          <p>São hábitos, não conhecimentos. Um uso por semana basta para não perder.</p>
-        </div>
-    </article>
-    <article class="card">
-      <header style="background:#FEC84D">VAI MUDAR</header>
-      <h3>O que você vai ter de reaprender</h3>
-      
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que é</span>
-          <p>Modelos, interfaces, preços e limites de cota. O que você usou este semestre estará diferente no próximo ano.</p>
-        </div>
-        <div class="bloco">
-          <span class="rule" style="background:#FEC84D"></span>
-          <span class="rot">O que não muda</span>
-          <p>A pergunta sobre o erro, a exigência de fonte, o dever de conferir e a assinatura de quem decide.</p>
-        </div>
-    </article></div></div>
-    <footer>
-      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Ciclo 15.4 · Fechamento</span>
-      <span class="pag">16 / 20</span>
-    </footer>
-  </section>
-<section class="slide conteudo" data-i="16">
+<section class="slide conteudo" data-i="21">
     <span class="barra"></span>
     <span class="eyebrow">CICLO 15.4 · ENTREGA</span>
-    <h2>Entrega C2: vale 60% da nota 3</h2>
+    <h2>Entrega C2: 60% da nota 3</h2>
     <p class="sub">Encerra a disciplina</p>
     <div class="corpo"><div class="entrega">
     <section class="lista">
       <header>O QUE ENTREGAR</header>
-      <ul><li>O produto na versão 2, com os bloqueios do teste resolvidos ou declarados.</li><li>A ficha, o backlog priorizado e o registro do teste com usuário.</li><li>A apresentação feita, com demonstração ao vivo e o que não funciona dito.</li><li>O portfólio gerado, com as três frases escritas por você.</li></ul>
+      <ul><li>O produto na versão 2, com os bloqueios do teste resolvidos ou declarados.</li><li>A ficha, o backlog priorizado e o registro do teste com usuário, do encontro 15.</li><li>O roteiro da apresentação e o formulário de avaliação por pares completos.</li><li>A apresentação feita, com demonstração ao vivo e o que não funciona dito.</li><li>O portfólio gerado, com as três frases escritas por você.</li></ul>
     </section>
     <div class="lado">
       <section class="box onde">
         <span class="rot">ONDE SALVAR</span>
-        <p>A pasta do projeto, conferida por python atividade_modulo15.py c2</p>
+        <p>O repositório do projeto no GitHub, com o último commit enviado. Portfólio em <span class="mono" style="font-size:15px">saidas/portfolio.md</span></p>
       </section>
       <section class="box criterio">
         <span class="rot">COMO SERÁ CORRIGIDO</span>
-        <p>A demonstração ao vivo é obrigatória, inclusive o caso com dado errado. Produto que só funciona no slide não é produto.</p>
+        <p>O c2 confere a presença dos arquivos dos encontros 3 a 16. A correção avalia produto, caminho e apresentação pelo critério comum às seis entregas do semestre.</p>
       </section>
     </div>
   </div></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Ciclo 15.4 · Entrega</span>
-      <span class="pag">17 / 20</span>
+      <span class="pag">22 / 26</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="17">
+<section class="slide conteudo" data-i="22">
     <span class="barra"></span>
-    <span class="eyebrow">FECHAMENTO</span>
+    <span class="eyebrow">BALANÇO</span>
     <h2>O que você tem ao fim do semestre</h2>
-    <p class="sub">Quinze encontros, uma pasta, um histórico de commits</p>
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:5">
+    <p class="sub">As três notas, o que cada bloco construiu e a conferência que passou a fazer parte do trabalho</p>
+    <div class="corpo"><table class="tab apertada">
+      <tr><th style="width:13%">BLOCO</th><th style="width:31%">O QUE FOI CONSTRUÍDO</th><th style="width:32%">ARQUIVOS DE REFERÊNCIA</th><th style="width:24%">CONFERÊNCIA ADOTADA</th></tr>
+      <tr><td><strong>Nota 1</strong><span class="s">encontros 2 a 6</span></td>
+          <td>Ambiente com editor, agente e repositório. Prompts testados, AGENTS.md da área e mapa de dados da organização.</td>
+          <td class="mono" style="font-size:13.5px">AGENTS.md<br>entregas/modulo3-diario-de-alucinacao.md<br>entregas/mapa-de-dados.csv</td>
+          <td>Diário de alucinação. NÃO INFORMADO em todo campo sem fonte.</td></tr>
+      <tr><td><strong>Nota 2</strong><span class="s">encontros 7 a 11</span></td>
+          <td>Perfil da base, consultas, painel com três indicadores, fluxo automatizado com ganho medido e codificação de respostas abertas.</td>
+          <td class="mono" style="font-size:13.5px">entregas/modulo6-relatorio.md<br>entregas/painel.html<br>entregas/modulo10-codificacao.csv</td>
+          <td>Cálculo por script em saidas/ e dois números conferidos à mão. Concordância entre codificadores.</td></tr>
+      <tr><td><strong>Nota 3</strong><span class="s">encontros 12 a 16</span></td>
+          <td>Modelo comparado ao palpite simples, inventário de dados pessoais, plano de incidente, devolutiva com matriz de decisão e produto testado por usuário.</td>
+          <td class="mono" style="font-size:13.5px">modelo/resultado.md<br>entregas/inventario-dados.csv<br>entregas/devolutiva.md<br>entregas/registro-teste.md</td>
+          <td>Dado pessoal fora do que o agente lê. Critério escrito antes da resposta do modelo. Critério de aceite verificável.</td></tr>
+    </table>
+    <div class="caixa vinho" style="margin-top:12px"><span class="rot">O QUE SE REPETE NOS TRÊS BLOCOS</span>
+      <p>O pedido ao agente vira arquivo na pasta, o arquivo é conferido contra a fonte antes do uso e o commit registra quando isso foi feito.</p></div></div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Balanço do semestre</span>
+      <span class="pag">23 / 26</span>
+    </footer>
+  </section>
+<section class="slide conteudo" data-i="23">
+    <span class="barra"></span>
+    <span class="eyebrow">PRÓXIMOS PASSOS</span>
+    <h2>Depois da disciplina</h2>
+    <p class="sub">O repositório continua seu, e o produto pode continuar em uso no setor</p>
+    <div class="corpo"><ol class="steps cols-1 " style="--linhas:4">
     <li><span class="num">1</span>
-      <div><strong>Um ambiente de trabalho montado e versionado</strong><p>Editor com agente, repositório, regras escritas de uso, e a rotina de commitar o que muda.</p></div>
+      <div><strong>Confira o repositório remoto antes de sair</strong><p>A máquina do laboratório pode ser restaurada. O que foi enviado ao GitHub fica na sua conta.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>Um método para trabalhar com dado</strong><p>Perfil, atipicidade, consulta, visualização, painel. Com a decisão registrada em cada etapa.</p></div>
+      <div><strong>Rode a varredura antes de tornar o repositório público</strong><p>Para usar o repositório como portfólio, "execute atividade_modulo12.py com o comando varrer ." e confira que dados/restrito/ está no .gitignore.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>Um método para trabalhar com texto e decisão</strong><p>Extração com trecho de origem, comparação com ficha de fonte, matriz com sensibilidade, devolutiva fundamentada.</p></div>
+      <div><strong>Defina quem mantém o produto no setor</strong><p>Produto em uso precisa de um responsável, com o backlog e o registro do teste guardados junto do código.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>Um produto que outra pessoa usou</strong><p>Construído em ciclo curto, testado por alguém que não é você, com a fila do que vem depois.</p></div>
-    </li>
-    <li><span class="num">5</span>
-      <div><strong>E o hábito de perguntar como se confere</strong><p>Que é o que sobra quando as ferramentas mudarem.</p></div>
+      <div><strong>Acompanhe a nota 3 no SIGAA</strong><p>A média das três notas fecha a disciplina. A prova final segue o regimento da UFMA e cobre todo o conteúdo.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
-      <span class="centro">Fechamento</span>
-      <span class="pag">18 / 20</span>
+      <span class="centro">Próximos passos</span>
+      <span class="pag">24 / 26</span>
     </footer>
   </section>
-<section class="slide conteudo" data-i="18">
+<section class="slide conteudo" data-i="24">
     <span class="barra"></span>
     <span class="eyebrow">DÚVIDAS FREQUENTES</span>
     <h2>Perguntas do último encontro</h2>
     
-    <div class="corpo"><ol class="steps cols-1" style="--linhas:5">
+    <div class="corpo"><ol class="steps cols-2 compacto" style="--linhas:3">
     <li><span class="num">1</span>
-      <div><strong>"Meu produto ficou simples demais."</strong><p>Simples e funcionando vale mais que ambicioso e quebrado. O que se avalia é o caminho e o critério de aceite atendido.</p></div>
+      <div><strong>"Meu produto ficou simples demais."</strong><p>A avaliação considera uma história completa segundo o critério de aceite e o caminho registrado. Quantidade de funcionalidade fica fora.</p></div>
     </li>
     <li><span class="num">2</span>
-      <div><strong>"A demonstração deu erro na frente da turma."</strong><p>Mostrar o erro, ler a mensagem e dizer o que faria é uma demonstração melhor que a que corre sem susto.</p></div>
+      <div><strong>"A demonstração deu erro na frente da turma."</strong><p>Leia a mensagem, diga a causa provável e o que faria. A leitura do erro faz parte da demonstração e do bloco 4.</p></div>
     </li>
     <li><span class="num">3</span>
-      <div><strong>"Posso continuar usando isso no meu trabalho?"</strong><p>Pode, com as regras do encontro 13 sobre dado pessoal e a declaração de uso onde ela for exigida.</p></div>
+      <div><strong>"Posso usar o produto no meu trabalho?"</strong><p>Pode, com as regras do módulo 12 sobre dado pessoal e a declaração de uso de IA onde ela for exigida.</p></div>
     </li>
     <li><span class="num">4</span>
-      <div><strong>"E se eu perder o acesso ao modelo gratuito?"</strong><p>Os scripts continuam rodando. Foi por isso que nenhum deles depende de modelo de linguagem.</p></div>
+      <div><strong>"E se eu perder o acesso ao modelo gratuito?"</strong><p>Os scripts das atividades usam só Python, sem rede e sem modelo. O agente que executa os pedidos é a parte que depende do modelo.</p></div>
     </li>
     <li><span class="num">5</span>
-      <div><strong>"O que estudar depois disso?"</strong><p>Na ordem que aparece no trabalho: consulta a banco de dados, estatística aplicada, e o que a sua área exigir de norma.</p></div>
+      <div><strong>"O c2 diz que falta um arquivo que eu entreguei."</strong><p>O c2 procura o nome exato ou o início do nome, como entregas/modulo6-. Se o seu arquivo tem outro nome, mostre ao professor o arquivo e o commit.</p></div>
+    </li>
+    <li><span class="num">6</span>
+      <div><strong>"O que estudar depois?"</strong><p>Na ordem em que aparece no trabalho, consulta a banco de dados (SQL), estatística aplicada e as normas da sua área.</p></div>
     </li></ol></div>
     <footer>
       <span class="inst">UFMA · Curso de Administração · DECC0294</span>
       <span class="centro">Dúvidas frequentes</span>
-      <span class="pag">19 / 20</span>
+      <span class="pag">25 / 26</span>
     </footer>
   </section>
-<section class="slide fim" data-i="19">
+<section class="slide fim" data-i="25">
       <span class="filete"></span>
       <h1>Disciplina concluída</h1>
-      <p>O que você levou daqui não foi uma ferramenta, e sim a pergunta sobre como se confere o que ela produz. Guarde o repositório: ele é a prova do que você sabe fazer.</p>
+      <p>O repositório reúne quinze encontros de trabalho, com o pedido feito ao agente, o arquivo gerado e a conferência registrada em cada etapa. Guarde-o como registro do que você sabe fazer.</p>
       <span class="slogan">SEMPRE+ QUALIDADE INOVAÇÃO INCLUSÃO</span>
     </section>
 </div>
 <div id="barra">
   <button id="ant" title="Anterior">&#8249;</button>
-  <input id="atual" value="1" title="Ir para o slide"> <span>/ 20</span>
+  <input id="atual" value="1" title="Ir para o slide"> <span>/ 26</span>
   <button id="prox" title="Próximo">&#8250;</button>
   <button id="tela" title="Tela cheia">&#9744;</button>
 </div>

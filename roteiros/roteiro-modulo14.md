@@ -23,24 +23,24 @@ O ciclo 14.3 é o mais longo de construção do semestre e depende da cota do mo
 |---|---|---|
 | Abertura e visão geral | 10 min | 1 a 2 |
 | Ciclo 14.1 | 45 min | 3 a 8 |
-| Ciclo 14.2 | 50 min | 9 a 13 |
+| Ciclo 14.2 | 50 min | 9 a 14 |
 | Intervalo | 15 min | |
-| Ciclo 14.3 | 50 min | 14 a 17 |
+| Ciclo 14.3 | 50 min | 15 a 19 |
 | Intervalo | 10 min | |
-| Ciclo 14.4 | 55 min | 18 a 21 |
-| Fechamento | 15 min | 22 a 25 |
+| Ciclo 14.4 | 55 min | 20 a 23 |
+| Fechamento | 15 min | 24 a 27 |
 
 ## Ciclo 14.1 — De processo a produto
 
-Teoria, 15 min. A diferença entre processo e produto. As quatro perguntas: quem é o usuário pelo cargo, o que ele faz hoje e quanto custa, o que ele deixa de fazer, como se saberá que funcionou.
+Teoria, 15 min. Processo automatizado e produto digital, com a definição de MVP de Ries (2011) e a tabela que compara os dois (slide 4). As quatro perguntas da ficha ligadas aos campos do script, com o exemplo ilustrativo da Divisão de Compras: 45 minutos por processo, 12 processos por mês, 540 minutos ou 9 horas mensais (slide 5).
 
-Demonstração, 10 min. A ficha na projeção, com o corte de escopo feito ao vivo sobre um caso da turma.
+Demonstração, 10 min. A ficha na projeção, com o corte de escopo feito ao vivo sobre um caso da turma, e a saída do comando conferir sobre uma ficha com erros (slide 6). A recusa vem do comando conferir. O comando produto só cria a ficha em branco.
 
 Prática, 15 min. Cada aluno preenche a ficha.
 
 Entrega, 5 min. `entregas/ficha-produto.md`.
 
-O usuário descrito como "os gestores" é o erro previsível e o script recusa. Insista no cargo: é ele que define o que precisa estar escrito no produto e quem vai testar no ciclo 14.4.
+O usuário descrito como "os gestores" é o erro previsível e o script recusa. A comparação é com a lista exata de grupos do script, de modo que "os gestores da secretaria" passa pelo conferir e precisa ser apontado à mão. Insista no cargo: é ele que define o que precisa estar escrito no produto e quem vai testar no ciclo 14.4.
 
 A medida do caminho atual é o que permite dizer depois se o produto ajudou. Quem não mediu no encontro 10 mede por estimativa agora, e registra que é estimativa.
 
@@ -48,7 +48,7 @@ O corte de escopo é a decisão de produto do encontro. Uma tarefa completa vale
 
 ## Ciclo 14.2 — Backlog e critério de aceite
 
-Teoria, 20 min. O que a gestão ágil resolve, segundo Sutherland: requisito que muda, ciclo curto, lista priorizada, retrospectiva. Depois, o formato da história e o critério de aceite.
+Teoria, 20 min. O ciclo curto do Scrum (slide 10): três responsabilidades, cinco eventos e três artefatos do Guia do Scrum de novembro de 2020, que continua a versão oficial em nov. 2026, e o caso Sentinel do FBI relatado por Sutherland (2014, cap. 1). O Expansion Pack de 2025 é complemento e não altera o guia. Depois, a história de usuário e o critério de aceite (Cohn, 2004), com exemplos que o comando priorizar recusa ou aceita (slide 11). Por fim, o exemplo numérico de valor sobre esforço com a saída real do script sobre um backlog de seis histórias, com a dependência H2 e H1 e a H5 marcada fora do limite (slide 12). As seis histórias desse slide podem ser o backlog de exemplo pedido em Antes da aula.
 
 Prática, 25 min. Cada aluno escreve de cinco a dez histórias com critério de aceite e roda `priorizar`.
 
@@ -62,7 +62,7 @@ A ordem por valor sobre esforço é sugestão, e não decisão. Quando a marcaç
 
 ## Ciclo 14.3 — A primeira versão, construída
 
-Teoria, 10 min. Como conduzir o agente numa construção: uma história por vez com o critério de aceite junto, commit ao fim de cada uma, teste com dado errado, instrução de uso dentro do produto.
+Teoria, 10 min. Como conduzir o agente numa construção (slide 16): uma história por vez com o critério de aceite junto, teste com dado errado, critério conferido no resultado, commit ao fim de cada uma, instrução de uso dentro do produto, dado pessoal fora do que o agente lê e cálculo por código conferido à mão. Depois, o que mudou com agentes de IA até nov. 2026 (slide 17): relatório DORA de set. 2025, ensaio do METR de jul. 2025 e atualização de fev. 2026, GitHub Spec Kit e o AI and Scrum v2026.1 do Expansion Pack, com fonte e data no slide.
 
 Prática, 40 min. Construção.
 
@@ -78,7 +78,7 @@ Alunos que ficarem sem cota continuam: o que falta é ajuste, e o roteiro de cad
 
 ## Ciclo 14.4 — Teste com usuário e iteração
 
-Teoria, 12 min. Como conduzir um teste com uma pessoa só: tarefa concreta, silêncio, observação. O que registrar e como priorizar bloqueio antes de incômodo.
+Teoria, 12 min. O teste de uso com poucos usuários (slide 21). Nielsen (2000) estima que cada usuário de teste encontra em média 31% dos problemas e que cinco usuários encontram cerca de 85%. A versão anterior do slide dizia que a maior parte dos problemas aparece no primeiro usuário, o que a fonte não sustenta. Tarefa concreta, pensar em voz alta, silêncio e observação. O que registrar e como priorizar bloqueio antes de incômodo.
 
 Prática, 38 min. Em duplas, cada um usa o produto do outro. Depois, individual, o registro e a atualização do backlog.
 
