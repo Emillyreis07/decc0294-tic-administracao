@@ -5,7 +5,7 @@ UFMA, Curso de Administração. Turma T01.
 
 Quinze módulos para os encontros 2 a 16. O encontro 1 é a apresentação da disciplina, já dada.
 
-Cada módulo tem três arquivos: o deck em HTML (abre no navegador, sem instalar nada), o script autoinstrucional das atividades (Python, biblioteca padrão apenas) e o roteiro do professor.
+Cada módulo tem três arquivos: o deck em HTML na pasta `slides/` (abre no navegador, sem instalar nada), o script autoinstrucional das atividades na pasta `scripts/` (Python, biblioteca padrão apenas) e o roteiro do professor na pasta `roteiros/`.
 
 ## Os quinze módulos
 
@@ -65,13 +65,13 @@ HTML de arquivo único, abrem com duplo clique no navegador. Setas ou clique ava
 
 Paleta clara da identidade visual da UFMA: fundo branco, barra e títulos em vinho, filete dourado no rodapé. Capas, divisores e slides de encerramento em vinho sólido.
 
-Para editar um deck, altere o `build_moduloN.js` correspondente e rode `node build_moduloN.js`. O gerador é o `tema_ufma.js`.
+Os geradores `build_moduloN.js` e `tema_ufma.js` não estão nesta pasta. Enquanto não forem recuperados, os decks são editados direto no HTML, conforme `revisao/GUIA-DE-REVISAO.md`.
 
 ## O que ainda depende de você
 
 Bases de reserva para os encontros 7, 11, 12 e 14, para os alunos que chegarem sem material próprio. Cada roteiro diz qual base o encontro precisa.
 
-O endereço das oito fontes públicas usadas no módulo 4 veio da documentação oficial de cada uma, mas nenhuma chamada pôde ser executada durante a produção do material. Rode `python atividade_modulo4.py apis testar` na máquina do laboratório antes do encontro 5.
+O endereço das oito fontes públicas usadas no módulo 4 veio da documentação oficial de cada uma, mas nenhuma chamada pôde ser executada durante a produção do material. Rode `python scripts/atividade_modulo4.py apis testar` na máquina do laboratório antes do encontro 5.
 
 A carga horária no programa foi preenchida como 60 h e a unidade como Centro de Ciências Sociais, Curso de Administração. Confirme no SIGAA e corrija o `.docx` se divergir.
 

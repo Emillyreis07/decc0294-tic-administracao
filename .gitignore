@@ -16,3 +16,8 @@ entregas/
 dados/restrito/
 modelo/
 __pycache__/
+
+# documentos pessoais e materiais de outros projetos, fora do repositorio publico
+estilo-vale/
+justificativa-diarias-passagens-fora-prazo.docx
+requerimento-diarias-passagens.docx
